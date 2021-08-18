@@ -18,7 +18,7 @@ const ScrollSteps = () => {
     slides.forEach((e, index) => {
       const xPos = e.getBoundingClientRect().x;
       const prevElement = slides[index - 1];
-      if(xPos == 0){
+      if(xPos <= 0){
         e.classList.add("active");
         if(!!prevElement){
           prevElement.classList.remove("active");

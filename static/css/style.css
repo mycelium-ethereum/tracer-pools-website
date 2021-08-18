@@ -131,6 +131,14 @@ nav {
 	z-index: 999;
 	transition: none;
 	overflow: hidden;
+	transition: background 0.5s ease;
+}
+nav.solid {
+	background: rgba(61, 168, 245,0.85);
+}
+nav.solid .nav-link {
+	/* color: #000; */
+	transition: color 0.5s ease;
 }
 nav .container-xl {
 	position: static;
@@ -148,7 +156,6 @@ nav .container-xl {
 	position: absolute;
 	left: 0;
 	width: 100%;
-	opacity: 0;
 	transition: opacity 0.5s ease;
 }
 .right-nav ul {
@@ -175,6 +182,11 @@ nav .container-xl {
 	color: #fff;
 	font-family: 'Helvetica Neue Light', sans-serif;
     font-weight: 300;
+}
+.nav-link.pools:after {
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: #de3614;
 }
 /*LIGHT NAV*/
 nav.light .logo .dark {
@@ -420,7 +432,7 @@ header  .documentation-link {
     text-decoration: underline;
 }
 .spacer {
-    height: 300px;
+    height: 500px;
     width: 100vw;
     background: #fff;
 }
@@ -461,7 +473,6 @@ header  .documentation-link {
 	height: 500px;
 	background-color: #fff;
 	opacity: 0;
-	transition: opacity 0.5s ease;
 }
 .step-info small {
 	color: var(--lightblue)
@@ -508,8 +519,6 @@ header  .documentation-link {
 }
 .step-animation .step-animation__tile {
 	position: absolute;
-	top: 100px;
-	right: -200px;
 	width: 450px;
 	height: auto;
 	/* animation: hoverDown 2s linear forwards; */
@@ -519,6 +528,22 @@ header  .documentation-link {
 .step-animation .step-animation__tile img {
 	width: 100%;
 	height: auto;
+}
+#pinContainer .panel:nth-child(1) .step-animation__tile {
+	top: 120px;
+	right: -280px;
+}
+#pinContainer .panel:nth-child(2) .step-animation__tile {
+	top: 150px;
+	right: -180px;
+}
+#pinContainer .panel:nth-child(3) .step-animation__tile {
+	top: 200px;
+	right: -100px;
+}
+#pinContainer .panel:nth-child(4) .step-animation__tile {
+	top: 250px;
+	right: -50px;
 }
 /* .step-animation {
 	position: absolute;
@@ -530,7 +555,6 @@ header  .documentation-link {
 /* ACTIVE STYLES */
 .panel.active .step-info {
 	opacity: 1;
-	transition: none;
 }
 .panel.active .step-info .step-info__text {
 	animation: slideIn 0.5s linear forwards;
