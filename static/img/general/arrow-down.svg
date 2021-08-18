@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68">
+  <g id="Group_2894" data-name="Group 2894" transform="translate(-8211 -10245)">
+    <g id="Ellipse_218" data-name="Ellipse 218" transform="translate(8211 10245)" fill="rgba(255,255,255,0.14)" stroke="#fff" stroke-width="3">
+      <circle cx="34" cy="34" r="34" stroke="none"/>
+      <circle cx="34" cy="34" r="32.5" fill="none"/>
+    </g>
+    <path id="keyboard_arrow_down" d="M194.255,274.5l7.367,7.367,7.367-7.367,2.255,2.255-9.623,9.623L192,276.755Z" transform="translate(8043 9998.5)" fill="#fff"/>
+  </g>
+</svg>
