@@ -26,7 +26,7 @@ class Navbar extends Component {
   }
   render() {
     return (
-      <nav className={this.props.type}>
+      <nav>
         <div className="container-xl">
           <Link className="logo nav-link" to="/">
             <img alt="logo" src={logo} />

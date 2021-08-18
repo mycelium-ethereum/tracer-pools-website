@@ -12,7 +12,7 @@ import "/static/css/style.css";
 const Layout = ({ children }) => {
   return (
     <>
-      <Navbar type="light"/>
+      <Navbar/>
       <motion.main
         initial={{
           opacity: 0

@@ -8,12 +8,12 @@ const WebGLBackground = () => {
             
             var img = new Image();
             img.crossOrigin = 'anonymous';
-            img.src = "/static/img/home-page/banner.jpg";
+            img.src = "https://i.imgur.com/55e2yp3.jpg";
             await new Promise( r=> img.onload = r);
 
             var depth = new Image();
             depth.crossOrigin = 'anonymous';
-            depth.src = "https://i.postimg.cc/TYK3xJC6/ball-map.jpg";
+            depth.src = "https://i.imgur.com/1xQpSG7.jpg";
             await new Promise( r=> depth.onload = r);
 
             var canvas = document.createElement("canvas");
@@ -97,8 +97,9 @@ const WebGLBackground = () => {
             }
 
             var mouseLoc = gl.getUniformLocation(program, "mouse");
-            canvas.onmousemove = function (d) {
-                var mpos = [-0.5 + d.layerX / canvas.width, 0.5 - d.layerY / canvas.width]
+            var heroBanner = document.querySelector(".hero-banner");
+            heroBanner.onmousemove = function (d) {
+                var mpos = [-0.5 + d.clientX / canvas.width, 0.5 - d.clientY / canvas.width]
                 gl.uniform2fv(mouseLoc, new Float32Array(mpos));
             }
             gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);

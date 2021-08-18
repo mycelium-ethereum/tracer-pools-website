@@ -1,8 +1,10 @@
 /*--------------GENERAL STYLES--------------*/
 :root {
-  --lightblue: #3DA8F5;
   --blue: #1E6DF5;
+  --lightblue: #3DA8F5;
   --darkblue: #050CBD;
+  --grey: #E6E6E6;
+  --lightgrey: #DEDEDE;
   --darkgrey: #656565;
 }
 @font-face {
@@ -68,7 +70,7 @@ p, a, label, li {
 a {
     text-decoration: none;
 }
-b {
+b, small {
 	font-family: 'Akkurat Bold', sans-serif;
 	font-weight: bold;
 }
@@ -112,6 +114,12 @@ h1 {
     bottom: 100px;
     right: 350px;
 }
+/* section {
+	position: relative;
+	z-index: 1;
+} */
+
+
 /* NAVBAR */
 nav {
 	position: fixed;
@@ -348,6 +356,18 @@ menu.mobile-nav.display .nav-item:nth-child(5) {
 
 /* MAIN HEADER */
 
+/* WebGL background */
+canvas {
+	position: absolute;
+	top: -2.5vh;
+	left: -2.5vh;
+	display: block;
+	width: 105vw;
+    height: 105vh;
+    object-fit: cover;
+    overflow: hidden;
+	z-index: 0;
+}
 .hero-banner {
     position: relative;
     height: 100vh;
@@ -356,6 +376,9 @@ menu.mobile-nav.display .nav-item:nth-child(5) {
     background-position: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.hero-banner * {
+	z-index: 1;
 }
 .hero-banner .hero-banner__container {
     display: flex;
@@ -388,7 +411,7 @@ header .tracer-btn {
     margin-top: 48px;
 }
 header  .documentation-link {
-    display: block;
+    display: inline-block;
     margin-top: 16px;
     color: #fff;
     text-decoration: underline;
@@ -397,16 +420,6 @@ header  .documentation-link {
     height: 300px;
     width: 100vw;
     background: #fff;
-}
-canvas {
-	display: block;
-	width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    overflow: hidden;
-	position: fixed;
-	top: 0;
-	left: 0;
 }
 
 /* PERPETUAL STEPS */
@@ -429,6 +442,11 @@ canvas {
     width: 100vw;
     position: absolute;
     text-align: center;
+	/* background-color: #fff; */
+}
+.panel .container-xl {
+	height: 100%; 
+	align-items: center;
 }
 .panel span {
     position: relative;
@@ -436,22 +454,55 @@ canvas {
     top: 50%;
     font-size: 80px;
 }
-
-.panel.blue {
-    background-color: #3883d8;
+.step-info {
+	text-align: left;
 }
-
-.panel.turqoise {
-    background-color: #38ced7;
+.step-info small {
+	color: var(--lightblue)
 }
-
-.panel.green {
-    background-color: #22d659;
+.step-info h1 {
+	color: var(--darkgrey);
+	font-size: 64px;
+	margin-top: 18px;
+	margin-bottom: 38px;
 }
-
-.panel.bordeaux {
-    background-color: #953543;
+.step-info .step-info__text {
+	position: relative;
+	flex-direction: column;
+	justify-content: flex-start;
 }
+.step-info .step-info__text p {
+	margin-bottom: 5px;
+}
+.step-info .step-info__number {
+	position: absolute;
+	top: 0;
+	left: -90px;
+	font-size: 66px;
+	color: var(--lightgrey);
+}
+.step-progress {
+	display: flex;
+	justify-content: space-between;
+	width: 440px;
+	margin-top: 16px;
+	height: 13px;
+}
+.step-progress span {
+	background: var(--grey);
+	width: 25%;
+	height: 13px;
+	margin-right: 5px;
+}
+.step-progress span.active {
+	background: var(--lightblue);
+}
+/* .progress-bar span:nth-child(1) {
+	width: 25%;
+	height: 13px;
+	margin-right: 5px;
+} */
+
 
 @media only screen and (max-width: 1300px){
 
