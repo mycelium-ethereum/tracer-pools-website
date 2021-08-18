@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/tracer-pools-website',
   siteMetadata: {
     title: `Tracer Perpetual Pools`,
     description: `Tracer Perpetual Pools`,

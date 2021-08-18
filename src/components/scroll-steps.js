@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
 
@@ -8,13 +8,17 @@ import stepOne from "/static/img/home-page/steps/step-one.mp4";
 
 const ScrollSteps = () => {
   const [progress, updateProgress] = useState(0);
+  useEffect(() => {
+    document.addEventListener("scroll", function(){
+      console.log(progress);
+    });
+  });
   return (
     <Controller>
       <Scene
-        // triggerHook="onLeave"
+        triggerHook="onLeave"
         duration="300%"
         pin
-        offset={484.5}
       >
         <Timeline wrapper={<div id="pinContainer" />}>
           <section className="panel">
@@ -46,7 +50,7 @@ const ScrollSteps = () => {
             <section className="panel">
               <div className="d-flex container-xl">
                 <div className="col-6 step-info">
-                 
+                
                 </div>
                 <div className="col-6 animation">
                 {/* loop="loop"  */}
