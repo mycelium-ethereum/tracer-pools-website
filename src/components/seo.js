@@ -97,16 +97,6 @@ function SEO({ description, lang, meta, title }) {
           },
         ].concat(meta)}
       >
-      <style type="text/css">{`
-        html {
-          overflow: initial !important;
-          overflow-x: visible !important;
-        }
-        body {
-          overflow-y: scroll !important;
-          overflow-x: hidden !important;
-        }
-      `}</style>
     </Helmet>
   )
 }
@@ -114,8 +104,8 @@ function SEO({ description, lang, meta, title }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  description: `Koji is an early-stage investment firm focused on decentralised finance.`,
-  author: `Koji Finance`
+  description: `Tracer Perpetual Pools.`,
+  author: `Tracer Perpetual Pools`
 }
 
 SEO.propTypes = {

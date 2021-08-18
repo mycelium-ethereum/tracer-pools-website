@@ -114,6 +114,9 @@ h1 {
     bottom: 100px;
     right: 350px;
 }
+picture {
+	display: block;
+}
 /* section {
 	position: relative;
 	z-index: 1;
@@ -435,7 +438,6 @@ header  .documentation-link {
     position: relative;
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
 }
 #pinContainer .panel {
     height: 100vh;
@@ -456,6 +458,10 @@ header  .documentation-link {
 }
 .step-info {
 	text-align: left;
+	height: 500px;
+	background-color: #fff;
+	opacity: 0;
+	transition: opacity 0.5s ease;
 }
 .step-info small {
 	color: var(--lightblue)
@@ -470,6 +476,7 @@ header  .documentation-link {
 	position: relative;
 	flex-direction: column;
 	justify-content: flex-start;
+	opacity: 0;
 }
 .step-info .step-info__text p {
 	margin-bottom: 5px;
@@ -480,6 +487,7 @@ header  .documentation-link {
 	left: -90px;
 	font-size: 66px;
 	color: var(--lightgrey);
+	background-color: #fff;
 }
 .step-progress {
 	display: flex;
@@ -494,16 +502,91 @@ header  .documentation-link {
 	height: 13px;
 	margin-right: 5px;
 }
-.step-progress span.active {
-	background: var(--lightblue);
+.step-animation {
+	position: relative;
+	height: 100%;
 }
-/* .progress-bar span:nth-child(1) {
-	width: 25%;
-	height: 13px;
-	margin-right: 5px;
+.step-animation .step-animation__tile {
+	position: absolute;
+	top: 100px;
+	right: -200px;
+	width: 450px;
+	height: auto;
+	/* animation: hoverDown 2s linear forwards; */
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+.step-animation .step-animation__tile img {
+	width: 100%;
+	height: auto;
+}
+/* .step-animation {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
 } */
 
-
+/* ACTIVE STYLES */
+.panel.active .step-info {
+	opacity: 1;
+	transition: none;
+}
+.panel.active .step-info .step-info__text {
+	animation: slideIn 0.5s linear forwards;
+}
+.panel.active .step-animation .step-animation__tile {
+	animation: hoverUp 1.2s linear forwards;
+	/* animation-delay: 3s; */
+}
+#pinContainer .panel:nth-child(1).active .step-progress span:nth-child(1),
+#pinContainer .panel:nth-child(2).active .step-progress span:nth-child(2),
+#pinContainer .panel:nth-child(3).active .step-progress span:nth-child(3),
+#pinContainer .panel:nth-child(4).active .step-progress span:nth-child(4) {
+	background: var(--lightblue);
+}
+/* For step number */
+@keyframes slideIn {
+	0% {
+		transform: translateX(-70px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+@keyframes slideOut {
+	0% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-70px);
+		opacity: 0;
+	}
+}
+/* For hovering tile */
+@keyframes hoverUp {
+	0% {
+		transform: translateY(70px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+@keyframes hoverDown {
+	0% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(70px);
+		opacity: 0;
+	}
+}
 @media only screen and (max-width: 1300px){
 
 }
