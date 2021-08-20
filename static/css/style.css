@@ -3,13 +3,16 @@
   --blue: #1E6DF5;
   --lightblue: #3DA8F5;
   --darkblue: #050CBD;
+  --midblue: #1E23A5;
   --grey: #E6E6E6;
+  --yellow: #F8C03D;
+  --white: #FFFFFF;
   --lightgrey: #DEDEDE;
   --darkgrey: #656565;
   --midgrey: #9C9C9C;
 }
 @font-face {
-    font-family: 'Akkurat Light';
+    font-family: 'Akkurat';
     src: url('../fonts/Akkurat-Light.woff2') format('woff2'),
         url('../fonts/Akkurat-Light.woff') format('woff');
     font-weight: 300;
@@ -25,7 +28,7 @@
     font-display: swap;
 }
 @font-face {
-    font-family: 'Akkurat Bold';
+    font-family: 'Akkurat';
     src: url('../fonts/Akkurat-Bold.woff2') format('woff2'),
         url('../fonts/Akkurat-Bold.woff') format('woff');
     font-weight: bold;
@@ -37,9 +40,12 @@ body, html {
 	width: 100%;
     margin: 0;
 }
+body {
+	font-family: "Akkurat", Arial, sans-serif;
+}
 *::selection {
-	background: #EEA62B;
-	color: var(--brown);
+	background: var(--blue);
+	color: var(--white);
 }
 * {
 	-webkit-font-smoothing: antialiased;
@@ -72,7 +78,6 @@ a {
     text-decoration: none;
 }
 b, small {
-	font-family: 'Akkurat Bold', sans-serif;
 	font-weight: bold;
 }
 h1 {
@@ -98,6 +103,25 @@ h1 {
     color: #fff;
     transition: all 0.5s ease;
 }
+.tracer-btn__blue {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 190px;
+	height: 40px;
+}
+.tracer-btn__blue img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+}
+.tracer-btn__blue span {
+	position: relative;
+	z-index: 1;
+	color: var(--white);
+}
 .tracer-btn:hover {
     background: rgba(255, 255, 255, 1.0);
     color: var(--darkgrey)
@@ -114,21 +138,23 @@ h1 {
     position: absolute;
     bottom: 100px;
     right: 350px;
+	z-index: 1;
 }
 picture {
 	display: block;
 }
-/* section {
+section {
 	position: relative;
-	z-index: 1;
-} */
+	height: 100vh;
+	width: 100%;
+}
 
 
 /* NAVBAR */
 nav {
 	position: fixed;
 	width: 100%;
-	height: 120px;
+	height: 100px;
 	z-index: 999;
 	transition: none;
 	overflow: hidden;
@@ -173,12 +199,9 @@ nav .container-xl {
 	position: relative;
 	display: block;
 	color: #fff;
-	font-family: 'Helvetica Neue Light', sans-serif;
-    font-weight: 300;
 }
 .nav-link:hover {
-	color: var(--darkblue);
-	/* transition: color 0.5s ease; */
+	color: var(--blue);
 }
 .nav-item.pools {
 	position: relative;
@@ -392,23 +415,35 @@ canvas {
     overflow: hidden;
 	z-index: 0;
 }
-.hero-banner {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    /* background-image: url('../img/home-page/banner.svg'); */
-    background-position: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.hero-banner * {
+.tile-bg,
+.tile-bg__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	min-height: 100vh;
 	z-index: 1;
+	overflow: hidden;
 }
-.hero-banner .hero-banner__container {
+.tile-bg img {
+	width: 100vw;
+}
+.tile-bg__overlay {
+	background: #050bbde0;
+	z-index: 0;
+}
+.hero-banner {
+	/* overflow-x: hidden; */
+	transform: translateZ(0);
+	backface-visibility: hidden;
+}
+.hero-banner__container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 250px;
+	z-index: 1;
 }
 .hero-banner__laptop {
     position: absolute;
@@ -429,10 +464,16 @@ header h1 {
 header p {
     font-size: 20px;
     color: #fff;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
+}
+header p:last-of-type {
+	margin-top: 30px;
+}
+header b {
+    color: var(--yellow);
 }
 header .tracer-btn {
-    margin-top: 48px;
+    margin-top: 30px;
 }
 header  .documentation-link {
     display: inline-block;
@@ -443,35 +484,39 @@ header  .documentation-link {
 .spacer {
     height: 500px;
     width: 100vw;
-	background: #fbfbfb;
+	background: var(--white);
+	/* background: #fbfbfb; */
 }
 
 /* PERPETUAL STEPS */
 .scrollmagic-slides {
     /* padding-top: 600px; */
-	background: #fbfbfb;
+	/* background: #fbfbfb; */
+	background: var(--white);
 }
 .scrollmagic-slides,
 .perpetual-steps {
-	height: 250vw;
+	height: 252vw;
     width: 100vw;
 }
 #pinContainer {
     position: relative;
     height: 100vh;
     width: 100vw;
+	overflow: hidden;
+	transform: translateZ(0);
+	backface-visibility: hidden;
 }
-#pinContainer .panel {
+.panel {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: absolute;
-    text-align: center;
 }
-.panel .container-xl {
+.panel:not(.city-step) .container-xl {
 	height: 100%; 
 	align-items: center;
 }
-.panel span {
+.panel:not(.city-step) span {
     position: relative;
     display: block;
     top: 50%;
@@ -480,7 +525,7 @@ header  .documentation-link {
 .step-info {
 	text-align: left;
 	height: 500px;
-	background-color: #fbfbfb;
+	background-color: #fff;
 	opacity: 0;
 }
 .step-info small {
@@ -501,13 +546,13 @@ header  .documentation-link {
 .step-info .step-info__text p {
 	margin-bottom: 5px;
 }
-.step-info .step-info__number {
+.panel  .step-info .step-info__number {
 	position: absolute;
 	top: 0;
 	left: -90px;
 	font-size: 66px;
 	color: var(--lightgrey);
-	background-color: #fbfbfb;
+	background-color: #ffffff;
 	opacity: 0;
 	transition: opacity 0.5s ease;
 }
@@ -634,10 +679,78 @@ header  .documentation-link {
 .position-slider small {
 	font-size: 32px;
 	color: var(--midgrey);
-	font-family: "Akkurat", sans-serif;
 	font-weight: normal;
 }
 
+/*------------[staking-section animation section]------------*/
+
+.staking-section {
+	background: var(--darkblue);
+	overflow: hidden;
+}
+.staking-section__text h1 {
+	font-size: 64px;
+}
+.staking-section__text small {
+	font-size: 38px;
+	color: var(--white);
+	font-weight: normal;
+}
+.staking-section__video {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 70vw;
+}
+
+/*------------[Strategise animation section]------------*/
+
+.strategise-section {
+	background: var(--darkblue);
+	overflow: hidden;
+}
+.strategise-section__text {
+	position: relative;
+	z-index: 1;
+}
+.strategise-section__text h1 {
+	font-size: 64px;
+}
+.strategise-section__text small {
+	font-size: 38px;
+	color: var(--white);
+	font-weight: normal;
+}
+.strategise-section__video {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 100vw;
+}
+.strategise-section__gradient {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(
+		270deg
+		, rgba(232,232,232,0) 40%, var(--darkblue) 80%, var(--darkblue) 100%);
+}
+.strategise-section__video picture {
+	width: 90%;
+}
+.strategise-section__video picture {
+
+}
+.strategise-section__text .tracer-btn__blue {
+	margin-top: 60px;
+}
+#cityPinContainer {
+
+}
 @media only screen and (max-width: 1300px){
 
 }

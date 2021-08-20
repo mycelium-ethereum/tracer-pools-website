@@ -10,9 +10,10 @@ import Button from "../components/button";
 import ArrowDown from "../components/arrowdown";
 import ScrollSteps from "../components/scroll-steps";
 import WebGLBackground from "../components/webgl";
+import ScrollTracerCity from "../components/scroll-city"
 
 // Assets
-import tracerLaptop from "/static/img/home-page/laptop.svg";
+import tracer_laptop from "/static/img/home-page/laptop.svg";
 
 const Index = () => {
 
@@ -27,7 +28,10 @@ const Index = () => {
             <header>
               <h1>Perpetual Pools</h1>
               <p>
-                Leveraged exposure. <b>No margins. No liquidations.</b>
+                Leveraged exposure. 
+              </p>
+              <p>
+                <b>No margins. No liquidations.</b>
               </p>
               <p>A new derivative primitive.</p>
               <Button linkTo="#">Launch Pools</Button>
@@ -36,7 +40,7 @@ const Index = () => {
               </Link>
             </header>
             <div className="hero-banner__laptop">
-              <img src={tracerLaptop} />
+              <img src={tracer_laptop} />
             </div>
           </div>
           <ArrowDown />
@@ -51,6 +55,7 @@ const Index = () => {
             <small>That live in your wallet</small>
           </div>
         </section>
+        <ScrollTracerCity/>
       </Layout>
     </>
   );

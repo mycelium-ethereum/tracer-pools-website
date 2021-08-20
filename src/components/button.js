@@ -1,9 +1,14 @@
 import React from "react"
 
-const Button = ({children, linkTo}) => {
+import arrow_blue from "/static/img/general/arrow-blue.png";
+
+const Button = ({children, linkTo, smallButton}) => {
   return (
-    <a className="tracer-btn" href={linkTo}>
+    <a className={smallButton ? "tracer-btn__blue" : "tracer-btn"} href={linkTo}>
         {children}
+        {(smallButton) && 
+          <img src={arrow_blue}/>
+        }
     </a>
   )
 }

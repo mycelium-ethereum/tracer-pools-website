@@ -151,6 +151,11 @@ const ScrollSteps = () => {
               </div>
             </section>
           </Tween>
+          {/* Empty panel to stop scroll immediately after step 4 */}
+          <Tween from={{ x: "100%" }} to={{ x: "200%" }}>
+            <section className="panel">
+            </section>
+          </Tween>
         </Timeline>
       </Scene>
     </Controller>
