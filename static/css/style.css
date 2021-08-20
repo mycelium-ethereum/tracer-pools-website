@@ -6,6 +6,7 @@
   --grey: #E6E6E6;
   --lightgrey: #DEDEDE;
   --darkgrey: #656565;
+  --midgrey: #9C9C9C;
 }
 @font-face {
     font-family: 'Akkurat Light';
@@ -134,18 +135,10 @@ nav {
 	transition: background 0.5s ease;
 }
 nav.solid {
-	background: rgba(61, 168, 245,0.85);
-}
-nav.solid .nav-link {
-	/* color: #000; */
-	transition: color 0.5s ease;
+	background: rgb(5 12 189 / 85%);
 }
 nav .container-xl {
 	position: static;
-	display: flex;
-	justify-content: space-between;
-	flex-direction: unset;
-	padding-top: 45px;
 }
 .logo {
 	position: relative;
@@ -183,10 +176,26 @@ nav .container-xl {
 	font-family: 'Helvetica Neue Light', sans-serif;
     font-weight: 300;
 }
-.nav-link.pools:after {
-	border-top-color: transparent;
-	border-bottom-color: transparent;
-	border-left-color: #de3614;
+.nav-link:hover {
+	color: var(--darkblue);
+	/* transition: color 0.5s ease; */
+}
+.nav-item.pools {
+	position: relative;
+}
+.nav-item.pools .arrow-outline {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-left: 10px;
+	width: 180px;
+	height: 55px;
+	pointer-events: none;
+}
+.nav-item.pools .nav-link {
+	position: relative;
+	z-index: 1;
 }
 /*LIGHT NAV*/
 nav.light .logo .dark {
@@ -434,16 +443,17 @@ header  .documentation-link {
 .spacer {
     height: 500px;
     width: 100vw;
-    background: #fff;
+	background: #fbfbfb;
 }
 
 /* PERPETUAL STEPS */
 .scrollmagic-slides {
     /* padding-top: 600px; */
+	background: #fbfbfb;
 }
 .scrollmagic-slides,
 .perpetual-steps {
-    height: 100vh;
+	height: 250vw;
     width: 100vw;
 }
 #pinContainer {
@@ -456,7 +466,6 @@ header  .documentation-link {
     width: 100vw;
     position: absolute;
     text-align: center;
-	/* background-color: #fff; */
 }
 .panel .container-xl {
 	height: 100%; 
@@ -471,7 +480,7 @@ header  .documentation-link {
 .step-info {
 	text-align: left;
 	height: 500px;
-	background-color: #fff;
+	background-color: #fbfbfb;
 	opacity: 0;
 }
 .step-info small {
@@ -498,7 +507,9 @@ header  .documentation-link {
 	left: -90px;
 	font-size: 66px;
 	color: var(--lightgrey);
-	background-color: #fff;
+	background-color: #fbfbfb;
+	opacity: 0;
+	transition: opacity 0.5s ease;
 }
 .step-progress {
 	display: flex;
@@ -519,9 +530,8 @@ header  .documentation-link {
 }
 .step-animation .step-animation__tile {
 	position: absolute;
-	width: 450px;
+	width: 400px;
 	height: auto;
-	/* animation: hoverDown 2s linear forwards; */
 	opacity: 0;
 	transition: opacity 0.5s ease;
 }
@@ -545,19 +555,16 @@ header  .documentation-link {
 	top: 250px;
 	right: -50px;
 }
-/* .step-animation {
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 100%;
-} */
 
 /* ACTIVE STYLES */
 .panel.active .step-info {
 	opacity: 1;
 }
-.panel.active .step-info .step-info__text {
+.panel.active .step-info .step-info__number {
 	animation: slideIn 0.5s linear forwards;
+}
+.panel.active .step-info .step-info__text {
+	opacity: 1;
 }
 .panel.active .step-animation .step-animation__tile {
 	animation: hoverUp 1.2s linear forwards;
@@ -611,6 +618,26 @@ header  .documentation-link {
 		opacity: 0;
 	}
 }
+/*------------[Positions slider]------------*/
+
+.position-slider {
+	height: 100vh;
+	width: 100%;
+	background: #fff;
+}
+.position-slider h1 {
+	color: var(--darkgrey);
+	font-size: 70px;
+	margin-top: 150px;
+	margin-bottom: 30px;
+}
+.position-slider small {
+	font-size: 32px;
+	color: var(--midgrey);
+	font-family: "Akkurat", sans-serif;
+	font-weight: normal;
+}
+
 @media only screen and (max-width: 1300px){
 
 }

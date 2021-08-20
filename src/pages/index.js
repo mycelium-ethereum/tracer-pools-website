@@ -45,6 +45,12 @@ const Index = () => {
         <section className="scrollmagic-slides">
           <ScrollSteps/>
         </section>
+        <section className="position-slider">
+          <div className="container-xl d-flex flex-column align-items-start justify-content-start">
+            <h1>Fungible ERC20 Tokenised Positions</h1>
+            <small>That live in your wallet</small>
+          </div>
+        </section>
       </Layout>
     </>
   );

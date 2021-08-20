@@ -40,7 +40,7 @@ const ScrollSteps = () => {
     <Controller>
       <Scene
         triggerHook="onLeave"
-        duration="300%"
+        duration="400%"
         pin
       >
         <Timeline wrapper={<div id="pinContainer" />} progress>

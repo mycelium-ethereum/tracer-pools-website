@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 import logo from '../../static/img/general/logo.svg'
+import arrowOutline from '../../static/img/general/arrow-outline.svg'
 
 const routes = [
   { to: '/learn', label: 'Learn' },
@@ -12,16 +13,20 @@ const routes = [
 
 const Navbar = () => {
   const links = () => {
-    let navLinks = routes.map(({ to, label }) => {
-      return (
+    let navLinks = 
       //Use react fragment to bypass non-unique key error
       <React.Fragment key={ Math.random().toString(36).substr(2, 9) }>
         <li className="nav-item">
-          <Link className="nav-link" to={to}>{label}</Link>
+          <Link className="nav-link" to="/learn">Learn</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/govern">Govern</Link>
+        </li>
+        <li className="nav-item pools">
+          <Link className="nav-link" to="/launch-pools">Launch Pools</Link>
+          <img className="arrow-outline" src={arrowOutline} aria-hidden="true"/>
         </li>
       </React.Fragment>
-      )
-    });
     return navLinks;
   }
   
@@ -43,7 +48,7 @@ const Navbar = () => {
   })
   return (
     <nav>
-      <div className="container-xl">
+      <div className="container-xl d-flex align-items-center justify-content-between">
         <Link className="logo nav-link" to="/">
           <img alt="logo" src={logo} />
         </Link>
