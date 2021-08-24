@@ -42,6 +42,7 @@ const Navbar = () => {
   
   }
   useEffect(() => {
+    setSolidNav();
     window.addEventListener("scroll", function(){
       setSolidNav();
     });

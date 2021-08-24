@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Controller, Scene } from "react-scrollmagic";
-import { Tween, Timeline } from "react-gsap";
+import gsap from "gsap";
+import { TimelineMax, TweenMax, TweenLite } from "gsap/all";
+import ScrollMagic from "scrollmagic";
+import "scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap";
+//all the css animations need gsap as dependency
+// import { Controller, Scene } from "react-scrollmagic";
+// import { Tween, Timeline } from "react-gsap";
 
 // Image assets
 import marketTile from "/static/img/home-page/steps/market-01.svg";
@@ -11,47 +16,58 @@ import stepOne from "/static/img/home-page/steps/step-one.mp4";
 
 const ScrollSteps = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-
-  const updateActiveSlide = () => {
-    // const scrollTop = document.scrollTop;
-    const slides = document.querySelectorAll(".panel");
-    slides.forEach((e, index) => {
-      const xPos = e.getBoundingClientRect().x;
-      const prevElement = slides[index - 1];
-      if(xPos <= 0){
-        e.classList.add("active");
-        if(!!prevElement){
-          prevElement.classList.remove("active");
-        }
-      }
-      else {
-        e.classList.remove("active");
-      }
-    })
+  const updateActiveSlide = (progress) => {
+    console.log(progress);
+    const slides = document.querySelectorAll("#pinMaster .panel");
+    slides.forEach(e => e.classList.remove("active"));
+    if(progress < 0.2){
+      slides[0].classList.add("active");
+    }
+    if(progress > 0.2 && progress <= 0.4){
+      slides[1].classList.add("active");
+    }
+    if(progress > 0.4 && progress <= 0.6){
+      slides[2].classList.add("active");
+    }
+    if(progress > 0.6 && progress <= 1.0){
+      slides[3].classList.add("active");
+    }
   };
 
   useEffect(() => {
-    // const pinContainer = document.getElementById("pinContainer");
-    window.addEventListener("scroll", function(){
-      updateActiveSlide();
+    // gsap.ease = "none";
+    const controller = new ScrollMagic.Controller();
+    var tl = gsap.timeline();
+    tl.from(".panel.step-two", 1, { xPercent: 0 });
+    tl.from(".panel.step-three", 1, { xPercent: 0 });
+    tl.from(".panel.step-four", 1, { xPercent: 0 });
+
+    const scene = new ScrollMagic.Scene({
+      triggerElement: "#pinMaster",
+      triggerHook: "onLeave",
+      duration: "200%",
+    })
+      .setPin("#pinMaster")
+      .setTween(tl)
+      .addTo(controller);
+    window.addEventListener("scroll", function () {
+      updateActiveSlide(scene.progress());
     });
   });
   return (
-    <Controller>
-      <Scene
-        triggerHook="onLeave"
-        duration="400%"
-        pin
-      >
-        <Timeline wrapper={<div id="pinContainer" />} progress>
-          <section className="panel active">
+    <>
+      <div id="pinMaster">
+        <div id="pinContainer">
+          <section className="panel step-one">
             <div className="d-flex container-xl">
               <div className="col-6 step-info">
                 <small>Perpetual Pools</small>
                 <h1>Leveraged exposure in four steps</h1>
                 <div className="step-info__text d-flex col-6">
                   <span className="step-info__number">01</span>
-                  <p><b>Select side</b></p>
+                  <p>
+                    <b>Select side</b>
+                  </p>
                   <p>BTC/DAI, LINK/DAI, or ETH/DAI</p>
                 </div>
                 <div className="step-progress">
@@ -62,9 +78,9 @@ const ScrollSteps = () => {
                 </div>
               </div>
               <div className="col-6 step-animation">
-              {/* loop="loop"  */}
+                {/* loop="loop"  */}
                 <picture className="step-animation__tile">
-                  <img src={marketTile}/>
+                  <img src={marketTile} />
                 </picture>
                 <video muted autoPlay playsInline>
                   <source src={stepOne} type="video/mp4" />
@@ -72,93 +88,90 @@ const ScrollSteps = () => {
               </div>
             </div>
           </section>
-          <Tween from={{ x: "100%" }} to={{ x: "0%" }}>
-            <section className="panel">
-              <div className="d-flex container-xl">
-                <div className="col-6 step-info">
-                  <small>Perpetual Pools</small>
-                  <h1>Leveraged exposure in four steps</h1>
-                  <div className="step-info__text d-flex col-6">
-                    <span className="step-info__number">02</span>
-                    <p><b>Select market</b></p>
-                    <p>Long or short</p>
-                  </div>
-                  <div className="step-progress">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
+          <section className="panel step-two">
+            <div className="d-flex container-xl">
+              <div className="col-6 step-info">
+                <small>Perpetual Pools</small>
+                <h1>Leveraged exposure in four steps</h1>
+                <div className="step-info__text d-flex col-6">
+                  <span className="step-info__number">02</span>
+                  <p>
+                    <b>Select market</b>
+                  </p>
+                  <p>Long or short</p>
                 </div>
-                <div className="col-6 step-animation">
-                  <picture className="step-animation__tile">
-                    <img src={sideTile}/>
-                  </picture>
+                <div className="step-progress">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
               </div>
-            </section>
-          </Tween>
-          <Tween from={{ x: "100%" }} to={{ x: "0%" }}>
-            <section className="panel">
-              <div className="d-flex container-xl">
-                <div className="col-6 step-info">
-                  <small>Perpetual Pools</small>
-                  <h1>Leveraged exposure in four steps</h1>
-                  <div className="step-info__text d-flex col-6">
-                    <span className="step-info__number">03</span>
-                    <p><b>Select leverage</b></p>
-                    <p>1x, 2x, 3x, 5x, or 15x</p>
-                  </div>
-                  <div className="step-progress">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
+              <div className="col-6 step-animation">
+                <picture className="step-animation__tile">
+                  <img src={sideTile} />
+                </picture>
+              </div>
+            </div>
+          </section>
+          <section className="panel step-three">
+            <div className="d-flex container-xl">
+              <div className="col-6 step-info">
+                <small>Perpetual Pools</small>
+                <h1>Leveraged exposure in four steps</h1>
+                <div className="step-info__text d-flex col-6">
+                  <span className="step-info__number">03</span>
+                  <p>
+                    <b>Select leverage</b>
+                  </p>
+                  <p>1x, 2x, 3x, 5x, or 15x</p>
                 </div>
-                <div className="col-6 step-animation">
-                  <picture className="step-animation__tile">
-                    <img src={leverageTile}/>
-                  </picture>
+                <div className="step-progress">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
               </div>
-            </section>
-          </Tween>
-          <Tween from={{ x: "100%" }} to={{ x: "0%" }}>
-            <section className="panel">
-              <div className="d-flex container-xl">
-                <div className="col-6 step-info">
-                  <small>Perpetual Pools</small>
-                  <h1>Leveraged exposure in four steps</h1>
-                  <div className="step-info__text d-flex col-6">
-                    <span className="step-info__number">04</span>
-                    <p><b>Enter collateral</b></p>
-                    <p>Deposit collateral and press 'buy' to 
-                      gain leveraged exposure</p>
-                  </div>
-                  <div className="step-progress">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
+              <div className="col-6 step-animation">
+                <picture className="step-animation__tile">
+                  <img src={leverageTile} />
+                </picture>
+              </div>
+            </div>
+          </section>
+          <section className="panel step-four">
+            <div className="d-flex container-xl">
+              <div className="col-6 step-info">
+                <small>Perpetual Pools</small>
+                <h1>Leveraged exposure in four steps</h1>
+                <div className="step-info__text d-flex col-6">
+                  <span className="step-info__number">04</span>
+                  <p>
+                    <b>Enter collateral</b>
+                  </p>
+                  <p>
+                    Deposit collateral and press 'buy' to gain leveraged
+                    exposure
+                  </p>
                 </div>
-                <div className="col-6 step-animation">
-                  <picture className="step-animation__tile">
-                    <img src={amountTile}/>
-                  </picture>
+                <div className="step-progress">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
               </div>
-            </section>
-          </Tween>
-          {/* Empty panel to stop scroll immediately after step 4 */}
-          <Tween from={{ x: "100%" }} to={{ x: "200%" }}>
-            <section className="panel">
-            </section>
-          </Tween>
-        </Timeline>
-      </Scene>
-    </Controller>
+              <div className="col-6 step-animation">
+                <picture className="step-animation__tile">
+                  <img src={amountTile} />
+                </picture>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </>
   );
 };
 

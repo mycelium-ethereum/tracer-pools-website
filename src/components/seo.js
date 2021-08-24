@@ -6,10 +6,10 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
 
 // Images
 // import favicon from "/static/img/general/favicon.png";
@@ -27,19 +27,20 @@ function SEO({ description, lang, meta, title }) {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const metaDescription = description || site.siteMetadata.description;
+  const defaultTitle = site.siteMetadata?.title;
 
   return (
-      <Helmet
-        htmlAttributes={{
-          lang,
-        }}
-        title={title}
-        titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
-        link={[
+    <Helmet
+      htmlAttributes={{
+        lang,
+      }}
+      title={title}
+      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      link={
+        [
           // {
           //   rel: "icon",
           //   href: {favicon},
@@ -57,62 +58,62 @@ function SEO({ description, lang, meta, title }) {
           //   rel: "image",
           //   href: {logo_light}
           // }
-        ]}
-        meta={[
-          {
-            name: `description`,
-            content: metaDescription,
-          },
-          {
-            property: `og:title`,
-            content: title,
-          },
-          {
-            property: `og:description`,
-            content: metaDescription,
-          },
-          {
-            property: `og:type`,
-            content: `website`,
-          },
-          {
-            name: `twitter:card`,
-            content: `summary`,
-          },
-          {
-            name: `twitter:creator`,
-            content: site.siteMetadata?.author || ``,
-          },
-          {
-            name: `twitter:title`,
-            content: title,
-          },
-          {
-            name: `twitter:description`,
-            content: metaDescription,
-          },
-          {
-            name: `theme-color`,
-            content: `#F1AF30`,
-          },
-        ].concat(meta)}
-      >
-    </Helmet>
-  )
+        ]
+      }
+      meta={[
+        {
+          name: `description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:title`,
+          content: title,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          name: `twitter:card`,
+          content: `summary`,
+        },
+        {
+          name: `twitter:creator`,
+          content: site.siteMetadata?.author || ``,
+        },
+        {
+          name: `twitter:title`,
+          content: title,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
+        },
+        {
+          name: `theme-color`,
+          content: `#F1AF30`,
+        },
+      ].concat(meta)}
+    ></Helmet>
+  );
 }
 
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: `Tracer Perpetual Pools.`,
-  author: `Tracer Perpetual Pools`
-}
+  author: `Tracer Perpetual Pools`,
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-}
+};
 
-export default SEO
+export default SEO;

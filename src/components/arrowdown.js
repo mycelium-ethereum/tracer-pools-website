@@ -1,11 +1,11 @@
 import React from "react"
 import arrowDown from "/static/img/general/arrow-down.svg"
 
-const ArrowDown = () => {
+const ArrowDown = ({linkTo}) => {
   return (
-    <span className="arrow-down">
-        <img src={arrowDown}/>
-    </span>
+    <a href={linkTo} className="arrow-down">
+      <img src={arrowDown}/>
+    </a>
   )
 }
 

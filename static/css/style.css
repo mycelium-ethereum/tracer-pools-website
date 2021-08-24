@@ -110,6 +110,7 @@ h1 {
 	justify-content: center;
 	width: 190px;
 	height: 40px;
+	color: var(--white);
 }
 .tracer-btn__blue img {
 	position: absolute;
@@ -148,7 +149,9 @@ section {
 	height: 100vh;
 	width: 100%;
 }
-
+.scrollmagic-pin-spacer {
+	backface-visibility: hidden;
+}
 
 /* NAVBAR */
 nav {
@@ -426,7 +429,10 @@ canvas {
 	overflow: hidden;
 }
 .tile-bg img {
-	width: 100vw;
+	position: absolute;
+	top: -5vh !important;
+	left: -5vw !important;
+	width: 110vw;
 }
 .tile-bg__overlay {
 	background: #050bbde0;
@@ -492,12 +498,22 @@ header  .documentation-link {
 .scrollmagic-slides {
     /* padding-top: 600px; */
 	/* background: #fbfbfb; */
-	background: var(--white);
+	/* background: var(--white); */
 }
-.scrollmagic-slides,
+/* .scrollmagic-slides,
 .perpetual-steps {
-	height: 252vw;
+	height: 500vh;
     width: 100vw;
+} */
+.panel {
+height: 100%;
+width: 100%;
+position: absolute;
+}
+#pinMaster {
+	position: relative;
+	height: 100%;
+	z-index: 3;
 }
 #pinContainer {
     position: relative;
@@ -506,12 +522,9 @@ header  .documentation-link {
 	overflow: hidden;
 	transform: translateZ(0);
 	backface-visibility: hidden;
+	background: #fff;
 }
-.panel {
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-}
+
 .panel:not(.city-step) .container-xl {
 	height: 100%; 
 	align-items: center;
@@ -523,6 +536,7 @@ header  .documentation-link {
     font-size: 80px;
 }
 .step-info {
+	position: relative;
 	text-align: left;
 	height: 500px;
 	background-color: #fff;
@@ -554,14 +568,20 @@ header  .documentation-link {
 	color: var(--lightgrey);
 	background-color: #ffffff;
 	opacity: 0;
-	transition: opacity 0.5s ease;
+	/* transition: opacity 0.5s ease; */
+	animation: slideOut 0.5s linear forwards;
 }
 .step-progress {
+	position: absolute;
+	bottom: 150px;
+	left: 0;
 	display: flex;
 	justify-content: space-between;
 	width: 440px;
 	margin-top: 16px;
 	height: 13px;
+	/* opacity: 0; */
+	/* transition: opacity 0.5s ease; */
 }
 .step-progress span {
 	background: var(--grey);
@@ -602,14 +622,13 @@ header  .documentation-link {
 }
 
 /* ACTIVE STYLES */
-.panel.active .step-info {
+.panel.active .step-info,
+/* .panel.active .step-info .step-progress, */
+.panel.active .step-info .step-info__text {
 	opacity: 1;
 }
 .panel.active .step-info .step-info__number {
 	animation: slideIn 0.5s linear forwards;
-}
-.panel.active .step-info .step-info__text {
-	opacity: 1;
 }
 .panel.active .step-animation .step-animation__tile {
 	animation: hoverUp 1.2s linear forwards;
@@ -624,21 +643,21 @@ header  .documentation-link {
 /* For step number */
 @keyframes slideIn {
 	0% {
-		transform: translateX(-70px);
+		transform: translateY(-20px);
 		opacity: 0;
 	}
 	100% {
-		transform: translateX(0px);
+		transform: translateY(0px);
 		opacity: 1;
 	}
 }
 @keyframes slideOut {
 	0% {
-		transform: translateX(0px);
+		transform: translateY(0px);
 		opacity: 1;
 	}
 	100% {
-		transform: translateX(-70px);
+		transform: translateY(-70px);
 		opacity: 0;
 	}
 }
@@ -681,12 +700,55 @@ header  .documentation-link {
 	color: var(--midgrey);
 	font-weight: normal;
 }
-
+.slider-left {
+	width: 55vw;
+	height: 100px;
+	transform: rotate(30deg);
+	bottom: 350px;
+	left: -180px;
+}
+.slider-right {
+	width: 55vw;
+	height: 100px;
+	transform: rotate(-30deg);
+	bottom: 350px;
+	right: -180px;
+}
+.slick-slider {
+	position: relative;
+	z-index: 1;
+}
+.slick-slider .item img {
+	width: 100px;
+	height: 100px;
+}
+.slick-slider__rail {
+	bottom: -70px;
+	width: 60vw;
+	z-index: 0;
+}
+.slick-slider__rail img {
+	width: 100%;
+}
+/* FOX */
+.metamask-fox {
+	z-index: 2;
+	bottom: 100px;
+	width: 350px;
+}
+.metamask-fox picture {
+	width: 350px;
+	height: 350px;
+}
 /*------------[staking-section animation section]------------*/
 
 .staking-section {
 	background: var(--darkblue);
 	overflow: hidden;
+}
+.staking-section__text {
+	position: relative;
+	z-index: 1;
 }
 .staking-section__text h1 {
 	font-size: 64px;
@@ -698,10 +760,14 @@ header  .documentation-link {
 }
 .staking-section__video {
 	position: absolute;
-	top: 0;
+	top: -200px;
 	right: 0;
 	height: 100%;
-	width: 70vw;
+	width: 100vw;
+	max-width: 1920px;
+}
+.panel.blue {
+	background: var(--darkblue);
 }
 
 /*------------[Strategise animation section]------------*/
@@ -728,6 +794,7 @@ header  .documentation-link {
 	right: 0;
 	height: 100%;
 	width: 100vw;
+	max-width: 1920px;
 }
 .strategise-section__gradient {
 	position: absolute;
