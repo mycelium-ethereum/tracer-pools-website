@@ -1,99 +1,144 @@
 import React, { useEffect } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 // Assets
-import token_left from "/static/img/slider/token-left.svg";
-import token_right from "/static/img/slider/token-right.svg";
-import token_road_left from "/static/img/slider/token-road-left.png";
-import token_road_right from "/static/img/slider/token-road-right.png";
+import eth_left from "/static/img/slider/eth-left.svg";
+import link_left from "/static/img/slider/link-left.svg";
+import btc_left from "/static/img/slider/btc-left.svg";
+import eth_right from "/static/img/slider/eth-right.svg";
+import link_right from "/static/img/slider/link-right.svg";
+import btc_right from "/static/img/slider/btc-right.svg";
 
 const TokenSlider = ({ className }) => {
-  const createSlides = () => {
-    const slides = [];
-    const totalSlides = 8;
-    for (var i = 0; i < totalSlides; i++) {
-      slides.push(
-        <div className="item" key={i}>
-          <img
-            src={className.includes("slider-left") ? token_left : token_right}
-          />
-        </div>
-      );
-    }
-    return slides;
-  };
-  // const syncSliders = () => {
-  //   this.slider1.slickGoTo(1);
-  //   //   const sliders = document.querySelectorAll(".slick-slider");
-  //   // sliders.forEach(slider => {
-  //   //   // slider.slick(getSliderSettings());
-  //   // })
-  // };
-  // useEffect(() => {
-  //   syncSliders();
-  // });
-  const settings = {
-    speed: 5000,
-    autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: "linear",
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    infinite: true,
-    arrows: false,
-    swipeToSlide: true,
-    centerMode: true,
-    focusOnSelect: false,
-    pauseOnFocus: false,
-    pauseOnHover: false,
-    rtl: className.includes("slider-left") ? true : false,
-    // responsive: [
-    //   {
-    //     breakpoint: 991,
-    //     settings: {
-    //       slidesToShow: 4,
-    //       speed: 3000,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 750,
-    //     settings: {
-    //       slidesToShow: 3,
-    //       speed: 3000,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 480,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       speed: 2000,
-    //     },
-    //   },
-    // ],
-  };
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const tl = gsap.timeline({
+      paused: true,
+      scrollTrigger: {
+        trigger: ".position-slider",
+        endTrigger: ".build-section",
+        scrub: true,
+        markers: true,
+        start: "top",
+        end: "bottom"
+      },
+    });
+    const t2 = gsap.timeline({
+      paused: true,
+      scrollTrigger: {
+        trigger: ".position-slider",
+        endTrigger: ".build-section",
+        scrub: true,
+        markers: true,
+        start: "top",
+        end: "bottom"
+      },
+    });
+
+    tl.to(".slider-right .token-anim", { xPercent: -50, yPercent: 0 });
+    tl.to(".slider-right .token-anim", { xPercent: -25, yPercent: 0 });
+    tl.to(".slider-right .token-anim", { xPercent: 0, yPercent: 0 });
+
+    t2.to(".slider-left .token-anim", { xPercent: 50, yPercent: 0 });
+    t2.to(".slider-left .token-anim", { xPercent: 25, yPercent: 0 });
+    t2.to(".slider-left .token-anim", { xPercent: 0, yPercent: 0 });
+  });
   return (
     <>
       <div className={className}>
-        <Slider {...settings}>
-          {createSlides()}
-        </Slider>
-        <picture
-          className={
-            "slick-slider__rail d-block position-absolute " +
-            (className.includes("slider-left") ? "start-0" : "end-0")
-          }
-          // className={"slick-slider__rail d-block position-absolute"}
-        >
-          <img
-            src={
-              className.includes("slider-left")
-                ? token_road_left
-                : token_road_right
-            }
-          />
-        </picture>
+        <div className="token-anim d-flex">
+          <div className="item">
+            <img
+              src={className.includes("slider-left") ? eth_left : eth_right}
+            />
+          </div>
+          <div className="item">
+            <img
+              src={className.includes("slider-left") ? link_left : link_right}
+            />
+          </div>
+          <div className="item">
+            <img
+              src={className.includes("slider-left") ? btc_left : btc_right}
+            />
+          </div>
+          <div className="item">
+            <img
+              src={className.includes("slider-left") ? eth_left : eth_right}
+            />
+          </div>
+          <div className="item">
+            <img
+              src={className.includes("slider-left") ? link_left : link_right}
+            />
+          </div>
+          <div className="item">
+            <img
+              src={className.includes("slider-left") ? btc_left : btc_right}
+            />
+          </div>
+          <div className="item">
+            <img
+              src={className.includes("slider-left") ? eth_left : eth_right}
+            />
+          </div>
+          <div className="item">
+            <img
+              src={className.includes("slider-left") ? link_left : link_right}
+            />
+          </div>
+          <div className="item">
+            <img
+              src={className.includes("slider-left") ? btc_left : btc_right}
+            />
+          </div>
+          <div className="item">
+            <img
+              src={className.includes("slider-left") ? eth_left : eth_right}
+            />
+          </div>
+          <div className="item">
+            <img
+              src={className.includes("slider-left") ? link_left : link_right}
+            />
+          </div>
+          <div className="item">
+            <img
+              src={className.includes("slider-left") ? btc_left : btc_right}
+            />
+          </div>
+          <div className="item">
+            <img
+              src={className.includes("slider-left") ? eth_left : eth_right}
+            />
+          </div>
+          <div className="item">
+            <img
+              src={className.includes("slider-left") ? link_left : link_right}
+            />
+          </div>
+          <div className="item">
+            <img
+              src={className.includes("slider-left") ? btc_left : btc_right}
+            />
+          </div>
+          <div className="item">
+            <img
+              src={className.includes("slider-left") ? eth_left : eth_right}
+            />
+          </div>
+          <div className="item">
+            <img
+              src={className.includes("slider-left") ? link_left : link_right}
+            />
+          </div>
+          <div className="item">
+            <img
+              src={className.includes("slider-left") ? btc_left : btc_right}
+            />
+          </div>
+        </div>
       </div>
     </>
   );

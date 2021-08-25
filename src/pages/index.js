@@ -50,17 +50,22 @@ const Index = () => {
           <div className="container-xl d-flex flex-column align-items-start justify-content-start">
             <h1>Fungible ERC20 Tokenised Positions</h1>
             <small>That live in your wallet</small>
-            <TokenSlider className="slider-left position-absolute"/>
-            <div className="metamask-fox d-flex flex-column align-items-center position-absolute start-50 translate-middle-x">
-              <picture className="d-block">
+            <TokenSlider className="slider slider-left position-absolute"/>
+            <div className="metamask-fox position-absolute start-50 translate-middle-x">
+              <div className="undershadow position-absolute top-50 translate-middle-y">
+
+              </div>
+              <picture className="d-flex flex-column justify-content-center position-relative">
                 <img src={metamask_fox} />
               </picture>
-              <Button linkTo="#" smallButton>Launch Pools</Button>
+              {/* <Button linkTo="#" smallButton>Launch Pools</Button> */}
             </div>
-            <TokenSlider className="slider-right position-absolute"/>
+            <TokenSlider className="slider slider-right position-absolute d-flex"/>
           </div>
         </section>
-        <ScrollTracerCity />
+        <section className="build-section">
+          <ScrollTracerCity />
+        </section>
       </Layout>
     </>
   );

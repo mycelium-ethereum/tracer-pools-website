@@ -15,45 +15,55 @@ import amountTile from "/static/img/home-page/steps/amount-04.svg";
 import stepOne from "/static/img/home-page/steps/step-one.mp4";
 
 const ScrollSteps = () => {
-  const [activeSlide, setActiveSlide] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState("");
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [previousSlide, setPreviousSlide] = useState(0);
   const updateActiveSlide = (progress) => {
-    console.log(progress);
     const slides = document.querySelectorAll("#pinMaster .panel");
-    slides.forEach(e => e.classList.remove("active"));
-    if(progress < 0.2){
+    slides.forEach((e) => e.classList.remove("active"));
+    if (progress < 0.2) {
       slides[0].classList.add("active");
     }
-    if(progress > 0.2 && progress <= 0.4){
+    if (progress > 0.2 && progress <= 0.4) {
       slides[1].classList.add("active");
     }
-    if(progress > 0.4 && progress <= 0.6){
+    if (progress > 0.4 && progress <= 0.6) {
       slides[2].classList.add("active");
     }
-    if(progress > 0.6 && progress <= 1.0){
+    if (progress > 0.6 && progress <= 1.0) {
       slides[3].classList.add("active");
     }
   };
+  const getScrollDirection = () => {
+    const pinContainer = document.querySelector("#pinContainer");
+    console.log(currentSlide);
+    console.log(previousSlide);
+  };
 
   useEffect(() => {
-    // gsap.ease = "none";
-    const controller = new ScrollMagic.Controller();
-    var tl = gsap.timeline();
-    tl.from(".panel.step-two", 1, { xPercent: 0 });
-    tl.from(".panel.step-three", 1, { xPercent: 0 });
-    tl.from(".panel.step-four", 1, { xPercent: 0 });
+    if(typeof window !== 'undefined' && window){
+      const controller = new ScrollMagic.Controller();
+      var tl = gsap.timeline();
+      tl.from(".panel.step-two", 1, { xPercent: 0 });
+      tl.from(".panel.step-three", 1, { xPercent: 0 });
+      tl.from(".panel.step-four", 1, { xPercent: 0 });
 
-    const scene = new ScrollMagic.Scene({
-      triggerElement: "#pinMaster",
-      triggerHook: "onLeave",
-      duration: "200%",
-    })
-      .setPin("#pinMaster")
-      .setTween(tl)
-      .addTo(controller);
-    window.addEventListener("scroll", function () {
-      updateActiveSlide(scene.progress());
-    });
-  });
+      const scene = new ScrollMagic.Scene({
+        triggerElement: "#pinMaster",
+        triggerHook: "onLeave",
+        duration: "200%",
+      })
+        .setPin("#pinMaster")
+        .setTween(tl)
+        .addTo(controller);
+      
+      // getScrollDirection(scene);
+      window.addEventListener("scroll", function () {
+        updateActiveSlide(scene.progress());
+        // getScrollDirection();
+      });
+    }
+  },[]);
   return (
     <>
       <div id="pinMaster">
@@ -91,8 +101,8 @@ const ScrollSteps = () => {
           <section className="panel step-two">
             <div className="d-flex container-xl">
               <div className="col-6 step-info">
-                <small>Perpetual Pools</small>
-                <h1>Leveraged exposure in four steps</h1>
+                <small className="opacity-0">Perpetual Pools</small>
+                <h1 className="opacity-0">Leveraged exposure in four steps</h1>
                 <div className="step-info__text d-flex col-6">
                   <span className="step-info__number">02</span>
                   <p>
@@ -117,8 +127,8 @@ const ScrollSteps = () => {
           <section className="panel step-three">
             <div className="d-flex container-xl">
               <div className="col-6 step-info">
-                <small>Perpetual Pools</small>
-                <h1>Leveraged exposure in four steps</h1>
+                <small className="opacity-0">Perpetual Pools</small>
+                <h1 className="opacity-0">Leveraged exposure in four steps</h1>
                 <div className="step-info__text d-flex col-6">
                   <span className="step-info__number">03</span>
                   <p>
@@ -143,8 +153,8 @@ const ScrollSteps = () => {
           <section className="panel step-four">
             <div className="d-flex container-xl">
               <div className="col-6 step-info">
-                <small>Perpetual Pools</small>
-                <h1>Leveraged exposure in four steps</h1>
+                <small className="opacity-0">Perpetual Pools</small>
+                <h1 className="opacity-0">Leveraged exposure in four steps</h1>
                 <div className="step-info__text d-flex col-6">
                   <span className="step-info__number">04</span>
                   <p>

@@ -539,8 +539,6 @@ position: absolute;
 	position: relative;
 	text-align: left;
 	height: 500px;
-	background-color: #fff;
-	opacity: 0;
 }
 .step-info small {
 	color: var(--lightblue)
@@ -556,6 +554,7 @@ position: absolute;
 	flex-direction: column;
 	justify-content: flex-start;
 	opacity: 0;
+	animation: slideOut 0.5s linear forwards;
 }
 .step-info .step-info__text p {
 	margin-bottom: 5px;
@@ -567,9 +566,6 @@ position: absolute;
 	font-size: 66px;
 	color: var(--lightgrey);
 	background-color: #ffffff;
-	opacity: 0;
-	/* transition: opacity 0.5s ease; */
-	animation: slideOut 0.5s linear forwards;
 }
 .step-progress {
 	position: absolute;
@@ -580,8 +576,6 @@ position: absolute;
 	width: 440px;
 	margin-top: 16px;
 	height: 13px;
-	/* opacity: 0; */
-	/* transition: opacity 0.5s ease; */
 }
 .step-progress span {
 	background: var(--grey);
@@ -597,8 +591,7 @@ position: absolute;
 	position: absolute;
 	width: 400px;
 	height: auto;
-	opacity: 0;
-	transition: opacity 0.5s ease;
+	animation: hoverOut 1.2s linear forwards;
 }
 .step-animation .step-animation__tile img {
 	width: 100%;
@@ -623,16 +616,14 @@ position: absolute;
 
 /* ACTIVE STYLES */
 .panel.active .step-info,
-/* .panel.active .step-info .step-progress, */
 .panel.active .step-info .step-info__text {
 	opacity: 1;
 }
-.panel.active .step-info .step-info__number {
-	animation: slideIn 0.5s linear forwards;
+.panel.active .step-info__text {
+	animation: slideIn 0.7s linear forwards;
 }
 .panel.active .step-animation .step-animation__tile {
 	animation: hoverUp 1.2s linear forwards;
-	/* animation-delay: 3s; */
 }
 #pinContainer .panel:nth-child(1).active .step-progress span:nth-child(1),
 #pinContainer .panel:nth-child(2).active .step-progress span:nth-child(2),
@@ -640,45 +631,67 @@ position: absolute;
 #pinContainer .panel:nth-child(4).active .step-progress span:nth-child(4) {
 	background: var(--lightblue);
 }
+/* Directional animations */
+#pinContainer.up .panel .step-info__text {
+	animation: slideIn 0.5s linear forwards;
+}
+#pinContainer.up .panel.active .step-info__text {
+	animation: slideOut 0.7s linear forwards;
+}
 /* For step number */
 @keyframes slideIn {
 	0% {
-		transform: translateY(-20px);
+		transform: translateX(250px);
 		opacity: 0;
 	}
+	30% {
+		opacity: 1;
+	}
 	100% {
-		transform: translateY(0px);
+		transform: translateX(0px);
 		opacity: 1;
 	}
 }
 @keyframes slideOut {
 	0% {
-		transform: translateY(0px);
+		transform: translateX(0px);
 		opacity: 1;
 	}
-	100% {
-		transform: translateY(-70px);
+	30% {
 		opacity: 0;
+	}
+	100% {
+		transform: translateX(-250px);
 	}
 }
 /* For hovering tile */
 @keyframes hoverUp {
 	0% {
 		transform: translateY(70px);
+		transform: translateX(-70px);
+		opacity: 0;
+	}
+	30% {
 		opacity: 0;
 	}
 	100% {
 		transform: translateY(0px);
+		transform: translateX(0px);
 		opacity: 1;
 	}
 }
-@keyframes hoverDown {
+@keyframes hoverOut {
 	0% {
 		transform: translateY(0px);
+		transform: translateX(0px);
 		opacity: 1;
 	}
+	30% {
+		opacity: 0;
+	}
 	100% {
-		transform: translateY(70px);
+		transform: translateY(-70px);
+		transform: translateX(70px);
 		opacity: 0;
 	}
 }
@@ -700,45 +713,35 @@ position: absolute;
 	color: var(--midgrey);
 	font-weight: normal;
 }
-.slider-left {
+.slider {
 	width: 55vw;
-	height: 100px;
-	transform: rotate(30deg);
-	bottom: 350px;
+	bottom: 150px;
+	overflow: hidden;
+	height: 200px;
+}
+.slider-left {
 	left: -180px;
 }
 .slider-right {
-	width: 55vw;
-	height: 100px;
-	transform: rotate(-30deg);
-	bottom: 350px;
 	right: -180px;
-}
-.slick-slider {
-	position: relative;
-	z-index: 1;
-}
-.slick-slider .item img {
-	width: 100px;
-	height: 100px;
-}
-.slick-slider__rail {
-	bottom: -70px;
-	width: 60vw;
-	z-index: 0;
-}
-.slick-slider__rail img {
-	width: 100%;
 }
 /* FOX */
 .metamask-fox {
 	z-index: 2;
-	bottom: 100px;
-	width: 350px;
+	bottom: 50px;
+	width: 290px;
+}
+.undershadow {
+	box-shadow: -1px 0px 28px 0px rgba(172, 136, 136, 0.75);
+	height: 400px;
+	width: 290px;
+	border-radius: 50%;
 }
 .metamask-fox picture {
-	width: 350px;
-	height: 350px;
+	width: 290px;
+	height: 450px;
+	z-index: 1;
+	background: var(--white);
 }
 /*------------[staking-section animation section]------------*/
 
