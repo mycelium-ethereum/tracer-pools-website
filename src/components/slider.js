@@ -47,7 +47,7 @@ const TokenSlider = ({ className }) => {
   return (
     <>
       <div className={className}>
-        <div className="token-anim d-flex">
+        <div className="token-anim flex">
           <div className="item">
             <img
               src={className.includes("slider-left") ? eth_left : eth_right}

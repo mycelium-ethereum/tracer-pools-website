@@ -6,7 +6,9 @@ import Navbar from "./navbar"
 import Footer from "./footer"
 
 // Global CSS styles
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "tailwindcss/base.css";
+import "tailwindcss/components.css";
+import "tailwindcss/utilities.css";
 import "/static/css/style.css";
 
 const Layout = ({ children }) => {
@@ -28,7 +30,6 @@ const Layout = ({ children }) => {
           duration: 0.5,
           delay: 0.2
         }}
-        id="pagepiling"
       >
         {children}
       </motion.main>

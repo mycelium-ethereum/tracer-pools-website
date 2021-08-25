@@ -47,20 +47,20 @@ const Index = () => {
         <div className="spacer"></div>
         <ScrollSteps />
         <section className="position-slider">
-          <div className="container-xl d-flex flex-column align-items-start justify-content-start">
+          <div className="container-xl flex flex-col align-start justify-start">
             <h1>Fungible ERC20 Tokenised Positions</h1>
             <small>That live in your wallet</small>
-            <TokenSlider className="slider slider-left position-absolute"/>
-            <div className="metamask-fox position-absolute start-50 translate-middle-x">
-              <div className="undershadow position-absolute top-50 translate-middle-y">
+            <TokenSlider className="slider slider-left absolute"/>
+            <div className="metamask-fox absolute left-2/4 translate --tw-translate-x-2/4">
+              <div className="undershadow absolute top-2/4 translate --tw-translate-y-2/4">
 
               </div>
-              <picture className="d-flex flex-column justify-content-center position-relative">
+              <picture className="flex flex-col justify-center relative">
                 <img src={metamask_fox} />
               </picture>
               {/* <Button linkTo="#" smallButton>Launch Pools</Button> */}
             </div>
-            <TokenSlider className="slider slider-right position-absolute d-flex"/>
+            <TokenSlider className="slider slider-right absolute flex"/>
           </div>
         </section>
         <section className="build-section">
