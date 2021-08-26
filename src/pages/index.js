@@ -45,7 +45,7 @@ const Index = () => {
           <ArrowDown linkTo="#steps" />
         </section>
         <div className="spacer"></div>
-        <ScrollSteps />
+        {/*<ScrollSteps />*/}
         <section className="position-slider">
           <div className="container-xl flex flex-col align-start justify-start">
             <h1>Fungible ERC20 Tokenised Positions</h1>
