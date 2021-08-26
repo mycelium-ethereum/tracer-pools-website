@@ -13,7 +13,7 @@ const routes = [
 
 const Navbar = () => {
   const links = () => {
-    let navLinks = 
+    let navLinks =
       //Use react fragment to bypass non-unique key error
       <React.Fragment key={ Math.random().toString(36).substr(2, 9) }>
         <li className="nav-item">
@@ -24,7 +24,7 @@ const Navbar = () => {
         </li>
         <li className="nav-item pools">
           <Link className="nav-link" to="/launch-pools">Launch Pools</Link>
-          <img className="arrow-outline" src={arrowOutline} aria-hidden="true"/>
+          <img className="arrow-outline" src={arrowOutline} aria-hidden="true" alt="Arrow" />
         </li>
       </React.Fragment>
     return navLinks;

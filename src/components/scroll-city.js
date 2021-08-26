@@ -31,7 +31,7 @@ const ScrollTracerCity = () => {
                     </div>
                     <div className="staking-section__video col-7">
                         <picture>
-                        <img src={tracer_city}/>
+                        <img src={tracer_city} alt="Tracer City" />
                         </picture>
                     </div>
                     </div>
@@ -56,7 +56,7 @@ const ScrollTracerCity = () => {
                         <div className="strategise-section__video col-7">
                         <div className="strategise-section__gradient"/>
                         <picture>
-                            <img src={tracer_city_large}/>
+                            <img src={tracer_city_large} alt="Tracer City" />
                         </picture>
                         </div>
                     </div>

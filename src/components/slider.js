@@ -51,91 +51,109 @@ const TokenSlider = ({ className }) => {
           <div className="item">
             <img
               src={className.includes("slider-left") ? eth_left : eth_right}
+              alt="Eth"
             />
           </div>
           <div className="item">
             <img
               src={className.includes("slider-left") ? link_left : link_right}
+              alt="Link"
             />
           </div>
           <div className="item">
             <img
               src={className.includes("slider-left") ? btc_left : btc_right}
+              alt="BTC"
             />
           </div>
           <div className="item">
             <img
               src={className.includes("slider-left") ? eth_left : eth_right}
+              alt="Eth"
             />
           </div>
           <div className="item">
             <img
               src={className.includes("slider-left") ? link_left : link_right}
+              alt="Link"
             />
           </div>
           <div className="item">
             <img
               src={className.includes("slider-left") ? btc_left : btc_right}
+              alt="BTC"
             />
           </div>
           <div className="item">
             <img
               src={className.includes("slider-left") ? eth_left : eth_right}
+              alt="Eth"
             />
           </div>
           <div className="item">
             <img
               src={className.includes("slider-left") ? link_left : link_right}
+              alt="Link"
             />
           </div>
           <div className="item">
             <img
               src={className.includes("slider-left") ? btc_left : btc_right}
+              alt="BTC"
             />
           </div>
           <div className="item">
             <img
               src={className.includes("slider-left") ? eth_left : eth_right}
+              alt="Eth"
             />
           </div>
           <div className="item">
             <img
               src={className.includes("slider-left") ? link_left : link_right}
+              alt="Link"
             />
           </div>
           <div className="item">
             <img
               src={className.includes("slider-left") ? btc_left : btc_right}
+              alt="BTC"
             />
           </div>
           <div className="item">
             <img
               src={className.includes("slider-left") ? eth_left : eth_right}
+              alt="Eth"
             />
           </div>
           <div className="item">
             <img
               src={className.includes("slider-left") ? link_left : link_right}
+              alt="Link"
             />
           </div>
           <div className="item">
             <img
               src={className.includes("slider-left") ? btc_left : btc_right}
+              alt="BTC"
             />
           </div>
           <div className="item">
             <img
               src={className.includes("slider-left") ? eth_left : eth_right}
+              alt="Eth"
             />
           </div>
           <div className="item">
             <img
               src={className.includes("slider-left") ? link_left : link_right}
+              alt="Link"
             />
           </div>
           <div className="item">
             <img
               src={className.includes("slider-left") ? btc_left : btc_right}
+              alt="BTC"
             />
           </div>
         </div>

@@ -7,7 +7,7 @@ const Button = ({children, linkTo, smallButton}) => {
     <a className={smallButton ? "tracer-btn__blue" : "tracer-btn"} href={linkTo}>
         <span>{children}</span>
         {(smallButton) && 
-          <img src={arrow_blue}/>
+          <img src={arrow_blue} alt="Blue Arrow" />
         }
     </a>
   )

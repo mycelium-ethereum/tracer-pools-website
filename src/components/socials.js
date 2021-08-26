@@ -4,7 +4,7 @@ import socialicons from "/static/img/general/social-icons.svg"
 const Socials = () => {
   return (
     <div className="social-icons">
-    <img src={socialicons}/>
+    <img src={socialicons} alt="Social Icons" />
     </div>
   )
 }
