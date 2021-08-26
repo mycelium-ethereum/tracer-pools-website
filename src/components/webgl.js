@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
-import Parallax from "parallax-js";
+import React from "react";
+// import Parallax from "parallax-js";
 
 // Images
 import banner from "/static/img/home-page/banner.png";
 
 const WebGLBackground = () => {
-  useEffect(() => {
-    var scene = document.querySelector(".tile-bg");
-    var parallaxInstance = new Parallax(scene);
-  });
+  // useEffect(() => {
+  //   var scene = document.querySelector(".tile-bg");
+  //   var parallaxInstance = new Parallax(scene);
+  // });
   return (
     // <canvas></canvas>
     <>

@@ -5,11 +5,11 @@ import PropTypes from "prop-types"
 import logo from '../../static/img/general/logo.svg'
 import arrowOutline from '../../static/img/general/arrow-outline.svg'
 
-const routes = [
-  { to: '/learn', label: 'Learn' },
-  { to: '/govern', label: 'Govern' },
-  { to: '/launch-pools', label: 'Launch Pools' },
-];
+// const routes = [
+//   { to: '/learn', label: 'Learn' },
+//   { to: '/govern', label: 'Govern' },
+//   { to: '/launch-pools', label: 'Launch Pools' },
+// ];
 
 const Navbar = () => {
   const links = () => {
