@@ -134,13 +134,7 @@ h1 {
   background: rgba(255, 255, 255, 1);
   color: var(--darkgrey);
 }
-/* SOCIAL ICON BANNER */
-.social-icons {
-  position: fixed;
-  bottom: 100px;
-  right: -100px;
-  z-index: 10;
-}
+
 /* DOWN ARROW */
 .arrow-down {
   position: absolute;
