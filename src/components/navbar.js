@@ -3,6 +3,7 @@ import {Link} from "gatsby"
 import PropTypes from "prop-types"
 import logo from '../../static/img/general/logo.svg'
 import arrowOutline from '../../static/img/general/arrow-outline.svg'
+import Button from "./button";
 
 // const routes = [
 //   { to: '/learn', label: 'Learn' },
@@ -40,7 +41,7 @@ const Navbar = () => {
         <div className="flex items-center">
             <div className="mr-5"><Link to="/learn"><div className="text-white">Learn</div></Link></div>
             <div className="mr-5"><Link to="/govern"><div className="text-white">Govern</div></Link></div>
-          <div className="relative mr-5"><Link to="/launch-pools"><div className="absolute top-3 left-3 text-white">Launch Pools</div><img className="arrow-outline" src={arrowOutline} aria-hidden="true" alt="Arrow Box" /></Link></div>
+            <div className="mr-5"><Button linkTo="/">Launch Pools</Button></div>
         </div>
         <span className="menu-toggle">
           <button className="nav-btn">
