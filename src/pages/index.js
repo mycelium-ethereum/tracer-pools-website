@@ -32,13 +32,21 @@ const Index = () => {
           <div className="hero-banner__container container-xl">
             <header>
               <div className="text-8xl text-white">Perpetual Pools</div>
-              <div className="text-xl text-white">Leveraged exposure. No margins.</div>
-              <div className="text-xl text-white">No liquidations. A new derivative primitive.</div>
+              <div className="text-xl text-white">
+                Leveraged exposure. No margins.
+              </div>
+              <div className="text-xl text-white">
+                No liquidations. A new derivative primitive.
+              </div>
               <Button linkTo="#">Launch Pools</Button>
-              <div className="mt-2"><Link to="/"><div className="text-xl text-white">Documentation</div></Link></div>
+              <div className="mt-2">
+                <Link to="/">
+                  <div className="text-xl text-white">Documentation</div>
+                </Link>
+              </div>
             </header>
             <div className="hero-banner__laptop">
-              <img src={TracerLaptop}  alt="Tracer Laptop View" />
+              <img src={TracerLaptop} alt="Tracer Laptop View" />
             </div>
           </div>
           <ArrowDown linkTo="#steps" />

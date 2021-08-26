@@ -12,16 +12,14 @@ class NotFoundPage extends Component {
           <section className="normal-section not-found light-nav contrast-nav">
             <div className="container">
               <header>
-                <h1>
-                  This page does not exist.
-                </h1>
+                <h1>This page does not exist.</h1>
               </header>
             </div>
           </section>
         </Layout>
       </>
-    )
+    );
   }
 }
 
-export default NotFoundPage
+export default NotFoundPage;

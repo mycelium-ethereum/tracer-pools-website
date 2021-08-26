@@ -1,39 +1,39 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { motion } from "framer-motion"
+import React from "react";
+import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
-import Navbar from "./navbar"
-import Footer from "./footer"
+import Navbar from "./navbar";
+import Footer from "./footer";
 
 const Layout = ({ children }) => {
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <motion.main
         initial={{
-          opacity: 0
+          opacity: 0,
         }}
         animate={{
-          opacity: 1
+          opacity: 1,
         }}
         exit={{
-          opacity: 0
+          opacity: 0,
         }}
         transition={{
           ease: "easeOut",
           duration: 0.5,
-          delay: 0.2
+          delay: 0.2,
         }}
       >
         {children}
       </motion.main>
-      <Footer/>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
-}
+  children: PropTypes.node.isRequired,
+};
 
 export default Layout;

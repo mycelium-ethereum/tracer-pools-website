@@ -21,7 +21,7 @@ const TokenSlider = ({ className }) => {
         scrub: true,
         markers: true,
         start: "top",
-        end: "bottom"
+        end: "bottom",
       },
     });
     const t2 = gsap.timeline({
@@ -32,7 +32,7 @@ const TokenSlider = ({ className }) => {
         scrub: true,
         markers: true,
         start: "top",
-        end: "bottom"
+        end: "bottom",
       },
     });
 
