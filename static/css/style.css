@@ -35,8 +35,6 @@
     font-display: swap;
 }
 body, html {
-	height: 100%; 
-	width: 100%;
     margin: 0;
 }
 body {
@@ -158,7 +156,6 @@ nav {
 	width: 100%;
 	height: 100px;
 	z-index: 999;
-	transition: none;
 	overflow: hidden;
 	transition: background 0.5s ease;
 }
@@ -406,32 +403,15 @@ menu.mobile-nav.display .nav-item:nth-child(5) {
 /* MAIN HEADER */
 
 /* WebGL background */
-canvas {
-	position: absolute;
-	top: -2.5vh;
-	left: -2.5vh;
-	display: block;
-	width: 105vw;
-    height: 105vh;
-    object-fit: cover;
-    overflow: hidden;
-	z-index: 0;
-}
 .tile-bg,
 .tile-bg__overlay {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100vw;
-	min-height: 100vh;
+	width: calc(100vw - 7px);
+	height: 100vh;
 	z-index: 1;
 	overflow: hidden;
-}
-.tile-bg img {
-	position: absolute;
-	top: -5vh !important;
-	left: -5vw !important;
-	width: 110vw;
 }
 .tile-bg__overlay {
 	background: #050bbde0;
@@ -488,9 +468,7 @@ header  .documentation-link {
 }
 .spacer {
     height: 500px;
-    width: 100vw;
 	background: var(--white);
-	/* background: #fbfbfb; */
 }
 
 /* PERPETUAL STEPS */
@@ -505,9 +483,9 @@ header  .documentation-link {
     width: 100vw;
 } */
 .panel {
-height: 100%;
-width: 100%;
-position: absolute;
+	height: 100%;
+	width: 100%;
+	position: absolute;
 }
 #pinMaster {
 	position: relative;
@@ -517,7 +495,7 @@ position: absolute;
 #pinContainer {
     position: relative;
     height: 100vh;
-    width: 100vw;
+    width: calc(100vw - 7px);
 	overflow: hidden;
 	transform: translateZ(0);
 	backface-visibility: hidden;
@@ -698,7 +676,7 @@ position: absolute;
 
 .position-slider {
 	height: 100vh;
-	width: 100%;
+	width: calc(100vw - 7px);
 	background: #fff;
 }
 .position-slider h1 {
@@ -731,7 +709,7 @@ position: absolute;
 	width: 290px;
 }
 .undershadow {
-	box-shadow: -1px 0px 28px 0px rgba(172, 136, 136, 0.75);
+	box-shadow: -1px 0 28px 0 rgba(172, 136, 136, 0.75);
 	height: 400px;
 	width: 290px;
 	border-radius: 50%;
@@ -765,7 +743,7 @@ position: absolute;
 	top: -200px;
 	right: 0;
 	height: 100%;
-	width: 100vw;
+	width: 100%;
 	max-width: 1920px;
 }
 .panel.blue {
@@ -795,7 +773,7 @@ position: absolute;
 	top: 0;
 	right: 0;
 	height: 100%;
-	width: 100vw;
+	width: 100%;
 	max-width: 1920px;
 }
 .strategise-section__gradient {

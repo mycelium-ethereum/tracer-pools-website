@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Link } from "gatsby"
+import React, {useEffect} from "react";
+import {Link} from "gatsby"
 import PropTypes from "prop-types"
 
 import logo from '../../static/img/general/logo.svg'
@@ -13,21 +13,18 @@ import arrowOutline from '../../static/img/general/arrow-outline.svg'
 
 const Navbar = () => {
   const links = () => {
-    let navLinks =
-      //Use react fragment to bypass non-unique key error
-      <React.Fragment key={ Math.random().toString(36).substr(2, 9) }>
-        <li className="nav-item">
-          <Link className="nav-link" to="/learn">Learn</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/govern">Govern</Link>
-        </li>
-        <li className="nav-item pools">
-          <Link className="nav-link" to="/launch-pools">Launch Pools</Link>
-          <img className="arrow-outline" src={arrowOutline} aria-hidden="true" alt="Arrow" />
-        </li>
-      </React.Fragment>
-    return navLinks;
+    return <React.Fragment key={Math.random().toString(36).substr(2, 9)}>
+      <li className="nav-item">
+        <Link className="nav-link" to="/learn">Learn</Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/govern">Govern</Link>
+      </li>
+      <li className="nav-item pools">
+        <Link className="nav-link" to="/launch-pools">Launch Pools</Link>
+        <img className="arrow-outline" src={arrowOutline} aria-hidden="true" alt="Arrow"/>
+      </li>
+    </React.Fragment>;
   }
   
   const setSolidNav = () => {
@@ -60,9 +57,9 @@ const Navbar = () => {
         </div>
         <span className="menu-toggle">
           <button className="nav-btn">
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
+            <span className="bar"/>
+            <span className="bar"/>
+            <span className="bar"/>
           </button>
         </span>
       </div>

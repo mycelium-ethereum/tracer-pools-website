@@ -10,12 +10,11 @@ const WebGLBackground = () => {
   //   var parallaxInstance = new Parallax(scene);
   // });
   return (
-    // <canvas></canvas>
     <>
       <div className="tile-bg">
         <img data-depth="0.1" src={banner} alt="Banner" />
       </div>
-      <div className="tile-bg__overlay"></div>
+      <div className="tile-bg__overlay" />
     </>
   );
 };
