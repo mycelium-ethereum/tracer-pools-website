@@ -14,20 +14,24 @@ import ScrollTracerCity from "../components/scroll-city";
 // import TokenSlider from "../components/slider";
 
 // Assets
-import tracer_laptop from "/static/img/home-page/laptop.svg";
+import TracerLaptop from "/static/img/home-page/laptop.svg";
 // import metamask_fox from "/static/img/slider/metamask-fox.svg";
+
+// Global CSS
+import "/static/css/style.css";
 
 const Index = () => {
   return (
     <>
       <SEO title="Home" />
+
       <Layout>
         <Socials />
         <section role="main" className="hero-banner">
           <WebGLBackground />
           <div className="hero-banner__container container-xl">
             <header>
-              <h1>Perpetual Pools</h1>
+              <div className="text-8xl text-white">Perpetual Pools</div>
               <p>Leveraged exposure.</p>
               <p>
                 <b>No margins. No liquidations.</b>
@@ -39,7 +43,7 @@ const Index = () => {
               </Link>
             </header>
             <div className="hero-banner__laptop">
-              <img src={tracer_laptop}  alt="Tracer" />
+              <img src={TracerLaptop}  alt="Tracer Laptop View" />
             </div>
           </div>
           <ArrowDown linkTo="#steps" />
