@@ -70,6 +70,7 @@ body {
 ::-webkit-scrollbar-thumb {
   background: var(--lightblue);
 }
+
 p,
 a,
 label,
@@ -92,10 +93,6 @@ h1 {
   font-weight: normal;
   font-size: 120px;
   color: #fff;
-}
-.container-xl {
-  width: 100%;
-  height: 100%;
 }
 .tracer-btn {
   display: flex;
@@ -404,19 +401,6 @@ menu.mobile-nav.display .nav-item:nth-child(5) {
 .tile-bg__overlay {
   background: #050bbde0;
   z-index: 0;
-}
-.hero-banner {
-  /* overflow-x: hidden; */
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
-.hero-banner__container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 250px;
-  z-index: 1;
 }
 .hero-banner__laptop {
   position: absolute;
@@ -790,6 +774,18 @@ header .documentation-link {
 @media only screen and (max-width: 1300px) {
 }
 @media only screen and (max-width: 1024px) {
+  .tile-bg,
+  .tile-bg__overlay {
+    width: 100vw !important;
+  }
+
+  #pinContainer {
+    width: 100vw !important;
+  }
+
+  .position-slider {
+    width: 100vw !important;
+  }
 }
 @media only screen and (max-width: 991px) {
 }

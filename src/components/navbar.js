@@ -38,7 +38,7 @@ const Navbar = () => {
           <img className="w-40 h-32" src={TracerLogo} alt="Tracer Logo" />
         </Link>
       </div>
-      <div className="flex items-center">
+      <div className="hidden sm:flex items-center">
         <div className="mr-5">
           <Link to="/learn">
             <div className="text-white">Learn</div>

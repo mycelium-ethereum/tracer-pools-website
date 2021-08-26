@@ -27,11 +27,11 @@ const Index = () => {
 
       <Layout>
         <Socials />
-        <section role="main" className="hero-banner">
+        <section role="main">
           <WebGLBackground />
-          <div className="hero-banner__container container-xl">
+          <div className="w-full h-full relative flex justify-center items-center z-10 pb-36">
             <header>
-              <div className="text-8xl text-white">Perpetual Pools</div>
+              <div className="text-4xl sm:text-8xl text-white font-bold">Perpetual Pools</div>
               <div className="text-xl text-white">
                 Leveraged exposure. No margins.
               </div>
