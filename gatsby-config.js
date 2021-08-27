@@ -1,9 +1,9 @@
 module.exports = {
-  pathPrefix: '/tracer-pools-website',
+  pathPrefix: "/tracer-pools-website",
   siteMetadata: {
     title: `Tracer Perpetual Pools`,
     description: `Tracer Perpetual Pools`,
-    siteUrl: `http://localhost:8000`
+    siteUrl: `http://localhost:8000`,
   },
   plugins: [
     {
@@ -12,14 +12,20 @@ module.exports = {
         name: "gatsby-starter-default",
         short_name: "starter",
         start_url: "/",
-        icon: './static/img/general/favicon.png'
+        icon: "./static/img/general/favicon.png",
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: 'src',
-        path: `${__dirname}/src/`
+        name: "src",
+        path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require("tailwindcss")],
       },
     },
   ],

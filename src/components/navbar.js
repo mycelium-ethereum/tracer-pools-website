@@ -1,71 +1,65 @@
 import React, { useEffect } from "react";
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import Button from "./button";
+// const routes = [
+//   { to: '/learn', label: 'Learn' },
+//   { to: '/govern', label: 'Govern' },
+//   { to: '/launch-pools', label: 'Launch Pools' },
+// ];
 
-import logo from '../../static/img/general/logo.svg'
-import arrowOutline from '../../static/img/general/arrow-outline.svg'
-
-const routes = [
-  { to: '/learn', label: 'Learn' },
-  { to: '/govern', label: 'Govern' },
-  { to: '/launch-pools', label: 'Launch Pools' },
-];
+import TracerLogo from "../../static/img/tracer-logo.svg";
 
 const Navbar = () => {
-  const links = () => {
-    let navLinks = 
-      //Use react fragment to bypass non-unique key error
-      <React.Fragment key={ Math.random().toString(36).substr(2, 9) }>
-        <li className="nav-item">
-          <Link className="nav-link" to="/learn">Learn</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/govern">Govern</Link>
-        </li>
-        <li className="nav-item pools">
-          <Link className="nav-link" to="/launch-pools">Launch Pools</Link>
-          <img className="arrow-outline" src={arrowOutline} aria-hidden="true"/>
-        </li>
-      </React.Fragment>
-    return navLinks;
-  }
-  
   const setSolidNav = () => {
     const scrollHeight = document.documentElement.scrollTop;
-    const navbar = document.querySelector("nav");
-    if(scrollHeight > 50){
-      navbar.classList.add("solid");
+    const navbar = document.getElementById("nav");
+    if (scrollHeight > 50) {
+      navbar.style.backgroundColor = "#0000B0";
+    } else {
+      navbar.style.backgroundColor = "transparent";
     }
-    else {
-      navbar.classList.remove("solid");
-    }
-  
-  }
+  };
+
   useEffect(() => {
     setSolidNav();
-    window.addEventListener("scroll", function(){
+    window.addEventListener("scroll", function () {
       setSolidNav();
     });
-  })
+  });
+
   return (
-    <nav>
-      <div className="container-xl d-flex align-items-center justify-content-between">
-        <Link className="logo nav-link" to="/">
-          <img alt="logo" src={logo} />
+    <nav
+      id="nav"
+      className="fixed h-20 w-full flex justify-between items-center z-10"
+    >
+      <div className="ml-5">
+        <Link to="/">
+          <img className="w-40 h-32" src={TracerLogo} alt="Tracer Logo" />
         </Link>
-        <div className="right-nav">
-          <ul>
-            {links()}
-          </ul>
-        </div>
-        <span className="menu-toggle">
-          <button className="nav-btn">
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
-          </button>
-        </span>
       </div>
+      <div className="hidden sm:flex items-center">
+        <div className="mr-5">
+          <Link to="/learn">
+            <div className="text-white">Learn</div>
+          </Link>
+        </div>
+        <div className="mr-5">
+          <Link to="/govern">
+            <div className="text-white">Govern</div>
+          </Link>
+        </div>
+        <div className="mr-5">
+          <Button linkTo="/">Launch Pools</Button>
+        </div>
+      </div>
+      <span className="menu-toggle">
+        <button className="nav-btn">
+          <span className="bar" />
+          <span className="bar" />
+          <span className="bar" />
+        </button>
+      </span>
       {/* <menu className="mobile-nav">
         <span className="menu-text">Menu</span>
         <button className="close-btn">
@@ -98,10 +92,10 @@ const Navbar = () => {
       </menu> */}
     </nav>
   );
-}
+};
 
 Navbar.propTypes = {
   type: PropTypes.string,
-}
+};
 
 export default Navbar;

@@ -1,35 +1,30 @@
 const Path = require("path");
-exports.onCreateWebpackConfig = ({
-  actions,
-  plugins,
-  stage,
-  loaders,
-}) => {
+exports.onCreateWebpackConfig = ({ actions, plugins, stage, loaders }) => {
   if (stage === "build-html") {
     actions.setWebpackConfig({
-        module: {
-            rules: [
-                {
-                    test: /scrollmagic/,
-                    use: loaders.null(),
-                }
-            ],
+      module: {
+        rules: [
+          {
+            test: /scrollmagic/,
+            use: loaders.null(),
+          },
+        ],
+      },
+      resolve: {
+        alias: {
+          path: require.resolve("path-browserify"),
+          ScrollMagic: Path.resolve(
+            "node_modules",
+            "scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"
+          ),
+          "animation.gsap": Path.resolve(
+            "node_modules",
+            "scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"
+          ),
         },
-        resolve: {
-              alias: {
-                path: require.resolve("path-browserify"),
-                ScrollMagic: Path.resolve(
-                  "node_modules",
-                  "scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"
-                ),
-                "animation.gsap": Path.resolve(
-                  "node_modules",
-                  "scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"
-                ),
-              },
-            },
-    })
-}
+      },
+    });
+  }
   // actions.setWebpackConfig({
   //   module: {
   //     rules:

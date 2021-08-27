@@ -98,7 +98,7 @@ function SEO({ description, lang, meta, title }) {
           content: `#F1AF30`,
         },
       ].concat(meta)}
-    ></Helmet>
+    />
   );
 }
 
