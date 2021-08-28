@@ -1,4 +1,4 @@
-const scrollStepAnimation = (controller) => {
+const stepAnimation = (controller) => {
   var tl = gsap.timeline();
   tl.from(".panel.step-two", 1, { xPercent: 0 });
   tl.from(".panel.step-three", 1, { xPercent: 0 });
@@ -14,7 +14,7 @@ const scrollStepAnimation = (controller) => {
     .addTo(controller);
   return scene;
 };
-const scrollTokenAnimation = (controller) => {
+const tokenAnimation = (controller) => {
   var t2 = gsap.timeline();
   t2.from(".panel.wallet-one", 1, { xPercent: 0 });
   t2.from(".panel.wallet-two", 1, { xPercent: 0 });
@@ -30,7 +30,7 @@ const scrollTokenAnimation = (controller) => {
     .addTo(controller);
   return scene;
 };
-const scrollCityAnimation = (controller) => {
+const cityAnimation = (controller) => {
   var t3 = gsap.timeline();
   t3.from(".panel.staking-section", 1, { xPercent: 0, opacity: 1 });
   t3.from(".panel.strategise-section", 1, { xPercent: 0, opacity: 1 });
@@ -42,6 +42,19 @@ const scrollCityAnimation = (controller) => {
   })
     .setPin("#pinContainerCity")
     .setTween(t3)
+    .addTo(controller);
+  return scene;
+};
+const integrateAnimation = (controller) => {
+  var t4 = gsap.timeline();
+  t4.from(".integrate-section", 1, { xPercent: 0, opacity: 1 });
+
+  const scene = new ScrollMagic.Scene({
+    triggerElement: ".integrate-section",
+    triggerHook: "onLeave",
+    duration: "0%",
+  })
+    .setTween(t4)
     .addTo(controller);
   return scene;
 };
@@ -115,15 +128,26 @@ const updateActiveCitySlide = (progress) => {
     // tile.classList.add("stage-two");
   }
 };
+const updateIntegrationAnimation = (progress) => {
+  const integrationElement = document.querySelector(".integrate-section");
+  console.log(progress);
+  if (progress > 0) {
+    integrationElement.classList.add("active");
+  } else {
+    integrationElement.classList.remove("active");
+  }
+};
 window.onload = function () {
   const controller = new ScrollMagic.Controller();
-  const scene = scrollStepAnimation(controller);
-  const scene2 = scrollTokenAnimation(controller);
-  const scene3 = scrollCityAnimation(controller);
+  const scene = stepAnimation(controller);
+  const scene2 = tokenAnimation(controller);
+  const scene3 = cityAnimation(controller);
+  const scene4 = integrateAnimation(controller);
   // updateActiveStep(scene.progress());
   window.addEventListener("scroll", function () {
     updateActiveStep(scene.progress());
     updateActiveTokenSlide(scene2.progress());
     updateActiveCitySlide(scene3.progress());
+    updateIntegrationAnimation(scene4.progress());
   });
 };

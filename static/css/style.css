@@ -828,9 +828,94 @@ header .documentation-link {
   transform: scale(2.0);
   opacity: 1;
 }
-#scrollTriggerStrategise {
+
+
+
+/* --------------- INTEGRATE SECTION --------------- */
+.bg-temp {
+  width: 1800px;
+  top: -120px;
+  left: 100px;
 }
-/* --------------- MEDIA QUERIES  --------------- */
+.integrate-animation {
+  height: 950px;
+}
+.integrate-animation img {
+  position: absolute;
+  height: auto;
+  transition: all 1.3s ease;
+  mix-blend-mode: multiply;
+  opacity: 0;
+}
+/* Before active/scroll lock */
+
+/* Clear tile */
+.integrate-animation .integrate-animation__tile {
+  min-width: 1068px;
+  mix-blend-mode: unset;
+  top: 154px;
+  right: 38px;
+  z-index: 1;
+}
+/* Dark blue base */
+.integrate-animation .integrate-animation__layerone {
+  min-width: 1310px;
+  top: -640px;
+  right: -1007px;
+}
+/* Second layer (pink rectangle) */
+.integrate-animation .integrate-animation__layertwo {
+  min-width: 1999px;
+  bottom: 374px;
+  right: -1527px;
+}
+/* Third layer (arrow) */
+.integrate-animation .integrate-animation__layerthree {
+  min-width: 1700px;
+  top: 46px;
+  right: -1538px;
+}
+/* Fourth layer (arrow green) */
+.integrate-animation .integrate-animation__layerfour {
+  min-width: 988px;
+  top: -177px;
+  right: -763px;
+}
+
+/* Active styles*/
+.integrate-section.active .integrate-animation img {
+  opacity: 1;
+}
+/* Tile */
+.integrate-section.active .integrate-animation .integrate-animation__tile {
+  top: 36px;
+  right: 16px;
+  transition: all 1.3s ease 0.7s;
+}
+.integrate-section.active .integrate-animation .integrate-animation__layerone {
+  top: -341px;
+  right: -460px;
+}
+/* Second layer (pink rectangle) */
+.integrate-section.active .integrate-animation .integrate-animation__layertwo {
+  bottom: -65px;
+  right: -803px;
+}
+/* Third layer (arrow) */
+.integrate-section.active .integrate-animation .integrate-animation__layerthree {
+  top: 211px;
+  right: -1166px;
+}
+/* Fourth layer (arrow green) */
+.integrate-section.active .integrate-animation .integrate-animation__layerfour {
+  top: -124px;
+  right: -600px;
+}
+.integrate-section.active .fade-anim {
+  opacity: 1;
+}
+
+/* --------------- MEDIA QUERIES --------------- */
 @media only screen and (max-width: 1300px) {
 }
 @media only screen and (max-width: 1024px) {

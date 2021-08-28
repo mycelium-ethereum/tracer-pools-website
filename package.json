@@ -48,7 +48,6 @@
     "react-slick": "^0.28.1",
     "react-transition-group": "^4.4.2",
     "scrollmagic": "^2.0.8",
-    "scrollreveal": "^4.0.9",
     "slick-carousel": "^1.8.1"
   },
   "scripts": {
