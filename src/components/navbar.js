@@ -2,12 +2,6 @@ import React, { useEffect } from "react";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import Button from "./button";
-// const routes = [
-//   { to: '/learn', label: 'Learn' },
-//   { to: '/govern', label: 'Govern' },
-//   { to: '/launch-pools', label: 'Launch Pools' },
-// ];
-
 import TracerLogo from "../../static/img/tracer-logo.svg";
 
 const Navbar = () => {
@@ -31,35 +25,37 @@ const Navbar = () => {
   return (
     <nav
       id="nav"
-      className="fixed h-20 w-full flex justify-between items-center z-10"
+      className="fixed w-full z-50 transition ease-out duration-350"
     >
-      <div className="ml-5">
-        <Link to="/">
-          <img className="w-40 h-32" src={TracerLogo} alt="Tracer Logo" />
-        </Link>
-      </div>
-      <div className="hidden sm:flex items-center">
-        <div className="mr-5">
-          <Link to="/learn">
-            <div className="text-white">Learn</div>
+      <div className="container xl h-32 flex justify-between items-center mx-auto">
+        <div>
+          <Link to="/">
+            <img className="w-40 h-32" src={TracerLogo} alt="Tracer Logo" />
           </Link>
         </div>
-        <div className="mr-5">
-          <Link to="/govern">
-            <div className="text-white">Govern</div>
-          </Link>
+        <div className="hidden sm:flex items-center">
+          <div className="mr-5">
+            <Link to="/learn">
+              <div className="text-white">Learn</div>
+            </Link>
+          </div>
+          <div className="mr-5">
+            <Link to="/govern">
+              <div className="text-white">Govern</div>
+            </Link>
+          </div>
+          <div className="mr-5">
+            <Button linkTo="/">Launch Pools</Button>
+          </div>
         </div>
-        <div className="mr-5">
-          <Button linkTo="/">Launch Pools</Button>
-        </div>
+        <span className="menu-toggle">
+          <button className="nav-btn">
+            <span className="bar" />
+            <span className="bar" />
+            <span className="bar" />
+          </button>
+        </span>
       </div>
-      <span className="menu-toggle">
-        <button className="nav-btn">
-          <span className="bar" />
-          <span className="bar" />
-          <span className="bar" />
-        </button>
-      </span>
       {/* <menu className="mobile-nav">
         <span className="menu-text">Menu</span>
         <button className="close-btn">

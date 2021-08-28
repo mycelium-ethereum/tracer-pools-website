@@ -15,6 +15,12 @@ import { useStaticQuery, graphql } from "gatsby";
 // import favicon from "/static/img/general/favicon.png";
 // import logo_OG from "/static/img/general/og-image.jpg";
 
+// Tailwind CSS
+import "/static/css/tailwind.css";
+// Global CSS
+import "/static/css/style.css";
+
+
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
@@ -98,7 +104,14 @@ function SEO({ description, lang, meta, title }) {
           content: `#F1AF30`,
         },
       ].concat(meta)}
-    />
+    >
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+        rel="stylesheet"
+      />
+    </Helmet>
   );
 }
 

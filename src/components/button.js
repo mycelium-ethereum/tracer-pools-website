@@ -2,14 +2,18 @@ import React from "react";
 
 import arrow_blue from "/static/img/general/arrow-blue.png";
 
-const Button = ({ children, linkTo, smallButton }) => {
+const Button = ({ className, children, linkTo, outlineButton }) => {
   return (
     <a
-      className={smallButton ? "tracer-btn__blue" : "tracer-btn"}
+      className={
+        className +
+        (outlineButton ? " tracer-btn__blue" : " tracer-btn") +
+        " mx-auto rounded-lg"
+      }
       href={linkTo}
     >
-      <span>{children}</span>
-      {smallButton && <img src={arrow_blue} alt="Blue Arrow" />}
+      {children}
+      {/* {smallButton && <img src={arrow_blue} alt="Blue Arrow" />} */}
     </a>
   );
 };
