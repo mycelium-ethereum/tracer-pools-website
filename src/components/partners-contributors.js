@@ -30,7 +30,7 @@ const PartnersContributors = () => {
     <>
       <section id="pinMasterPartners" className="pin-master">
         <div id="pinContainerPartners" className="pin-container">
-          <section className="panel partners flex flex-col justify-start bg-white opacity-0 z-0 transition-all duration-1000">
+          <section className="panel absolute top-0 left-0 w-full h-full partners flex flex-col justify-start bg-white opacity-0 z-0 transition-all duration-1000">
             <div className="flex container xl mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
               <p className="2xl:text-4xl lg:text-3xl font-bold color-darkgrey 2xl:mb-4 lg:mb-2">
                 Partners</p>
@@ -38,7 +38,7 @@ const PartnersContributors = () => {
                 Ecosystem Contributors
               </p>
               <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2">In the Media</p>
-              <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center 2xl:mt-10 lg:mt-3">
+              <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center 2xl:mt-10 lg:2xl:mt-10 xl:mt-3 lg:mt-8">
                 <img className="2xl:w-60 lg:w-48 mr-10" src={Framework} />
                 <img className="2xl:w-60 lg:w-48" src={Koji} />
               </div>
@@ -56,14 +56,14 @@ const PartnersContributors = () => {
               </div>
             </div>
           </section>
-          <section className="panel contributors flex flex-col justify-start bg-white opacity-0 z-0 transition-all duration-1000">
+          <section className="panel absolute top-0 left-0 w-full h-full contributors flex flex-col justify-start bg-white opacity-0 z-0 transition-all duration-1000">
             <div className="flex container xl mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
               <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2">Partners</p>
               <p className="2xl:text-4xl lg:text-3xl font-bold color-darkgrey 2xl:mb-4 lg:mb-2">
                 Ecosystem Contributors
               </p>
               <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2">In the Media</p>
-              <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center 2xl:mt-10 lg:mt-3">
+              <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center 2xl:mt-10 lg:2xl:mt-10 xl:mt-3 lg:mt-8">
                 <img className="2xl:w-60 lg:w-48 mr-10" src={Mycelium} />
                 <img className="2xl:w-60 lg:w-48" src={Chainlink} />
               </div>
@@ -74,16 +74,16 @@ const PartnersContributors = () => {
               </div>
             </div>
           </section>
-          <section className="panel media flex flex-col justify-start bg-white opacity-0 z-0 transition-all duration-1000">
+          <section className="panel absolute top-0 left-0 w-full h-full media flex flex-col justify-start bg-white opacity-0 z-0 transition-all duration-1000">
             <div className="flex container xl mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
               <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2">Partners</p>
               <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2">
                 Ecosystem Contributors
               </p>
               <p className="2xl:text-4xl lg:text-3xl font-bold color-darkgrey 2xl:mb-4 lg:mb-2">In the Media</p>
-              <div className="flex justify-center items-start mt-3">
+              <div className="flex justify-center items-start 2xl:mt-10 xl:mt-3 lg:mt-8">
                 <div className="flex flex-col justify-start items-center text-center w-96 mr-5">
-                  <img className="2xlw-full lg:w-28" src={FinancialReview} />
+                  <img className="2xlw-full xl:w-28 lg:w-80" src={FinancialReview} />
                   <p className="mb-4 mt-6 text-xl">
                     <b className="text-semibold">Australian Financial Review</b>
                   </p>
@@ -95,7 +95,7 @@ const PartnersContributors = () => {
                   </p>
                 </div>
                 <div className="flex flex-col justify-start items-center text-center w-96 ml-5">
-                  <img className="2xlw-full lg:w-28" src={CoinTelegraph} />
+                  <img className="2xlw-full xl:w-28 lg:w-80" src={CoinTelegraph} />
                   <p className="mb-4 mt-6 text-xl">
                     <b className="text-semibold">Coin Telegraph</b>
                   </p>

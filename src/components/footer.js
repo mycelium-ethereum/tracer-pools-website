@@ -23,7 +23,7 @@ const Footer = () => {
         className="absolute top-0 left-0 h-full min-w-full z-0"
         src={FooterBackground}
       />
-      <div className="container xl mx-auto relative z-1 xl:px-24 px-12">
+      <div className="container xl mx-auto relative z-1 xl:px-24 lg:px-12 px-4">
         <div className="h-60 w-full flex justify-between items-center">
           <span className="text-4xl font-semibold text-white 2xl:w-auto lg:w-96">
             Stay updated on the latest Tracer news

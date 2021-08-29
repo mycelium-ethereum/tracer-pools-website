@@ -11,8 +11,8 @@ const WebGLBackground = () => {
   });
   return (
     <>
-      <div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden">
-        <img data-depth="0.1" src={banner} className="tile-bg" alt="Banner" />
+      <div className="absolute top-0 left-0 w-full h-full z-10 overflow-hidden tile-bg">
+        <img data-depth="0.1" src={banner} alt="Banner"/>
       </div>
       <div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden bg-darkblue" />
     </>

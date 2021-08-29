@@ -58,6 +58,7 @@ const integrateAnimation = (controller) => {
     .setTween(t4)
     .setClassToggle(".integrate-section", "active")
     .addTo(controller);
+  return scene;
 };
 const partnersAnimation = (controller) => {
   var t5 = gsap.timeline();
@@ -131,10 +132,10 @@ const updateActiveCitySlide = (progress) => {
   // const tile = document.querySelector(".step-animation__tile");
   slides.forEach((e) => e.classList.remove("active"));
 
-  if (progress < 0.33) {
+  if (progress < 0.5) {
     slides[0].classList.add("active");
   }
-  if (progress >= 0.33) {
+  if (progress >= 0.5) {
     slides[1].classList.add("active");
   }
 };
@@ -152,18 +153,57 @@ const updatePartnersSlide = (progress) => {
     slides[2].classList.add("active");
   }
 };
-window.onload = function () {
+const isMobile = () => {
+  const width = window.innerWidth;
+  if (width < 1024) {
+    return true;
+  } else {
+    return false;
+  }
+};
+const disableScrollmagic = (scene) => {
+  scene.destroy();
+};
+var initialised = false;
+const initialiseScrollMagic = () => {
+  initialised = true;
   const controller = new ScrollMagic.Controller();
   const scene = stepAnimation(controller);
   const scene2 = tokenAnimation(controller);
   const scene3 = cityAnimation(controller);
-  integrateAnimation(controller);
-  const scene4 = partnersAnimation(controller);
+  const scene4 = integrateAnimation(controller);
+  const scene5 = partnersAnimation(controller);
+  scenes.push(scene);
+  scenes.push(scene2);
+  scenes.push(scene3);
+  scenes.push(scene4);
+  scenes.push(scene5);
   // updateActiveStep(scene.progress());
   window.addEventListener("scroll", function () {
     updateActiveStep(scene.progress());
     updateActiveTokenSlide(scene2.progress());
     updateActiveCitySlide(scene3.progress());
-    updatePartnersSlide(scene4.progress());
+    updatePartnersSlide(scene5.progress());
+  });
+  window.addEventListener("scroll", function () {
+    updateActiveStep(scene.progress());
+    updateActiveTokenSlide(scene2.progress());
+    updateActiveCitySlide(scene3.progress());
+    updatePartnersSlide(scene5.progress());
+  });
+};
+const scenes = [];
+window.onload = function () {
+  if (!isMobile()) {
+    initialiseScrollMagic();
+    
+  }
+  window.addEventListener("resize", function () {
+    if(!initialised && !isMobile()){
+      initialiseScrollMagic();
+    }
+    if (isMobile() && !!scenes) {
+      scenes.forEach((e) => disableScrollmagic(e));
+    }
   });
 };

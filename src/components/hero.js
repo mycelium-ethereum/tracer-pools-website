@@ -10,9 +10,9 @@ const Hero = () => {
     <>
       <section role="main">
         <WebGLBackground />
-        <div className="w-full h-full relative flex justify-center items-center z-10 pb-36 2xl:pt-0 lg:pt-36">
+        <div className="container xl w-full h-full relative flex justify-center items-center z-20 pb-36 2xl:pt-0 xl:px-24 lg:pt-36 lg:px-12 sm:pt-18 pt-16 px-4 mx-auto">
           <header>
-            <h1 className="2xl:text-9xl text-7xl text-white font-black mb-4">
+            <h1 className="2xl:text-9xl sm:text-7xl text-4xl text-white font-black mb-4">
               Perpetual Pools
             </h1>
             <p className="text-xl text-white">
@@ -21,7 +21,7 @@ const Hero = () => {
             <div className="text-xl text-white">
               No liquidations. A new derivative primitive.
             </div>
-            <Button className="mt-6 z-11 mx-auto" linkTo="#">
+            <Button className="mt-6 mx-auto text-xl" linkTo="#">
               Launch Pools
             </Button>
             <div className="mt-2">
@@ -30,13 +30,13 @@ const Hero = () => {
               </Link>
             </div>
           </header>
-          <div className="max-w-screen-lg absolute 2xl:-bottom-96 xl:-bottom-96 lg:-bottom-60 w-3/5 sm:-bottom-32">
+          <div className="max-w-screen-lg absolute 2xl:-bottom-96 xl:-bottom-96 lg:-bottom-60 sm:w-3/5 w-4/5 -bottom-10 z-20">
             <img src={TracerLaptop} alt="Tracer Laptop View" />
           </div>
         </div>
-        <ArrowDown linkTo="#steps" />
+        <ArrowDown className="absolute 2xl:right-48 xl:right-30 lg:right-24 sm:w-16 sm:bottom-32 sm:right-16 bottom-12 right-10 w-14 z-20" linkTo="#steps" />
       </section>
-      <div className="spacer 2xl:h-96 lg:h-80 bg-white" id="steps"/>
+      <div className="spacer 2xl:h-96 lg:h-80 h-40 bg-white" id="steps"/>
     </>
   );
 };

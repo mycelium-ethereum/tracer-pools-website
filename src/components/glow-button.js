@@ -1,13 +1,11 @@
 import React from "react";
 
-const Button = ({ className, children, linkTo, outlineButton, glowButton }) => {
+const GradientButton = ({ className, children, linkTo, outlineButton, glowButton }) => {
   return (
     <a
       className={
         className +
-        " tracer-btn " +
-        ((!!outlineButton) && " blue mx-auto text-xl h-32 ") +
-        " rounded-2xl"
+        " tracer-btn glow rounded-lg"
       }
       href={linkTo}
     >
@@ -17,4 +15,4 @@ const Button = ({ className, children, linkTo, outlineButton, glowButton }) => {
   );
 };
 
-export default Button;
+export default GradientButton;

@@ -26,6 +26,7 @@
   background: linear-gradient(93.44deg, #040C5C 1.93%, #0618BA 57.28%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  line-height: normal;
 }
 .gradient-lightblue {
   background: linear-gradient(264.97deg, #0618BA 36.55%, #38C0C0 55.24%, #45AAF2 78.75%);
@@ -38,6 +39,7 @@
 body,
 html {
   margin: 0;
+  overflow-x: hidden;
 }
 body {
   font-family: "Source Sans Pro", Arial, sans-serif;
@@ -88,8 +90,9 @@ small {
 }
 h1 {
   font-weight: 900;
-  font-size: 120px;
-  color: #fff;
+}
+.tile-bg {
+  position: absolute !important;
 }
 .tracer-btn {
   display: flex;
@@ -155,7 +158,6 @@ section {
   position: relative;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
   transform: translateZ(0);
   backface-visibility: hidden;
 }
@@ -433,19 +435,12 @@ header .documentation-link {
 }
 
 /* LEVERAGE STEPS */
-.panel {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  pointer-events: none;
-}
 .panel:not(.city-step) .container-xl {
   height: 100%;
   align-items: center;
 }
 .step-info {
   position: relative;
-  text-align: left;
   height: 500px;
 }
 .step-info small {
@@ -492,7 +487,6 @@ header .documentation-link {
   height: auto;
   transition: all 1.3s ease;
   mix-blend-mode: multiply;
-  opacity: 0;
 }
 /* Before active/scroll lock */
 
@@ -572,6 +566,7 @@ header .documentation-link {
 /* ACTIVE STYLES */
 .panel.active {
   pointer-events: all;
+  z-index: 1 !important;
 }
 .panel.active .step-info,
 .panel.active .step-info .step-info__text {
@@ -646,12 +641,6 @@ header .documentation-link {
   color: var(--midgrey);
   font-weight: normal;
 }
-.slider-left {
-  left: -200px;
-}
-.slider-right {
-  right: -200px;
-}
 .slick-slider {
 	position: relative;
 	z-index: 1;
@@ -671,9 +660,6 @@ header .documentation-link {
 /* FOX */
 .undershadow {
   box-shadow: -1px 0 28px 0 rgba(172, 136, 136, 0.75);
-}
-.fade-anim {
-  opacity: 0;
 }
 /* ACTIVE STYLES */
 #pinMasterWallet .panel.active {
@@ -717,7 +703,7 @@ header .documentation-link {
   max-height: 150px;
   height: auto;
   opacity: 1;
-  transition: all 2s ease;
+  transition: all 1.3s ease, opacity 1.3s ease;
 }
 /* ACTIVE */
 .staking-section.active .city-step__animation img {
@@ -729,13 +715,14 @@ header .documentation-link {
 .staking-section.active .strategise-text {
   max-height: 0px;
   opacity: 0;
+  transition: all 1.3s ease, opacity 0.5s ease;
+  margin-bottom: 0;
 }
 
 /*------------[Strategise animation section]------------*/
 
 .panel.strategise-section {
   overflow: hidden;
-  pointer-events: none;
 }
 .strategise-section__text {
   position: relative;
@@ -888,12 +875,20 @@ header .documentation-link {
   }
 }
 @media only screen and (max-width: 1024px) {
-  #pinContainer {
-    width: 100vw !important;
+  .pin-container {
+    min-height: 100vh;
+    height: auto;
   }
-
   .wallet-anim {
     width: 100vw !important;
+  }
+  .step-info {
+    height: auto;
+  }
+  /* Token Sliders */
+  .slick-slider .item img {
+    padding-top: 20px;
+    width: 120px;
   }
 }
 @media only screen and (max-width: 991px) {

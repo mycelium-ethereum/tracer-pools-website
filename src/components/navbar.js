@@ -4,13 +4,23 @@ import PropTypes from "prop-types";
 import Button from "./button";
 import TracerLogo from "../../static/img/tracer-logo.svg";
 
+
 const Navbar = () => {
+  const isMobile = () => {
+    const width = window.innerWidth;
+    if (width < 1024) {
+      return true;
+    } else {
+      return false;
+    }
+  };
   const setSolidNav = () => {
     const scrollHeight = document.documentElement.scrollTop;
     const navbar = document.getElementById("nav");
-    if (scrollHeight > 50) {
+    const mobile = isMobile();
+    if (scrollHeight > 50 || mobile) {
       navbar.style.backgroundColor = "#0000B0";
-    } else {
+    } else if (!mobile && scrollHeight < 50) {
       navbar.style.backgroundColor = "transparent";
     }
   };
@@ -27,10 +37,14 @@ const Navbar = () => {
       id="nav"
       className="fixed w-full z-50 transition ease-out duration-350"
     >
-      <div className="container xl h-28 flex justify-between items-center mx-auto xl:px-24 px-12">
+      <div className="container xl lg:h-28 h-20 flex justify-between items-center mx-auto xl:px-24 lg:px-12 px-4">
         <div>
           <Link to="/">
-            <img className="w-40 h-28" src={TracerLogo} alt="Tracer Logo" />
+            <img
+              className="sm:w-40 w-22 h-auto"
+              src={TracerLogo}
+              alt="Tracer Logo"
+            />
           </Link>
         </div>
         <div className="hidden sm:flex items-center">

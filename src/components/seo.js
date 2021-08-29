@@ -15,7 +15,7 @@ import { useStaticQuery, graphql } from "gatsby";
 // import logo_OG from "/static/img/general/og-image.jpg";
 
 // Tailwind CSS
-import "/static/css/tailwind.css";
+import "tailwindcss/tailwind.css";
 // Global CSS
 import "/static/css/style.css";
 
