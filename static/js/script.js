@@ -131,17 +131,16 @@ const updateActiveCitySlide = (progress) => {
   // const tile = document.querySelector(".step-animation__tile");
   slides.forEach((e) => e.classList.remove("active"));
 
-  if (progress < 0.5) {
+  if (progress < 0.33) {
     slides[0].classList.add("active");
   }
-  if (progress >= 0.5) {
+  if (progress >= 0.33) {
     slides[1].classList.add("active");
   }
 };
 const updatePartnersSlide = (progress) => {
   const slides = document.querySelectorAll("#pinMasterPartners .panel");
   slides.forEach((e) => e.classList.remove("active"));
-  console.log(progress);
 
   if (progress <= 0.33) {
     slides[0].classList.add("active");

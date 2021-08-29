@@ -10,22 +10,22 @@ import LayerFour from "/static/img/home-page/integrate/layer-4-arrow.svg";
 const IntegrateAnimation = () => {
   return (
     <section className="integrate-section flex items-center h-screen">
-      <div className="flex container xl mx-auto flex items-center">
+      <div className="flex container xl mx-auto flex items-center xl:px-24 px-12">
         <div className="container xl flex justify-left">
           <div className="w-3/5 h-auto flex flex-col justify-center">
-            <small className="text-5xl font-semibold color-blue mb-2">
+            <small className="2xl:text-5xl lg:text-4xl font-semibold color-blue mb-2">
               Integrate Now
             </small>
-            <h1 className="gradient text-6xl font-bold text-white mb-4">
+            <h1 className="gradient 2xl:text-6xl lg:text-5xl font-bold text-white mb-4">
               Strategise &amp; Natively
             </h1>
-            <p className="fade-anim opacity-0 transition-all duration-500 text-4xl color-grey font-normal">
+            <p className="fade-anim opacity-0 transition-all duration-500 2xl:text-4xl lg:text-3xl color-grey font-normal">
               Seamlessly integrate into your proprietary trading interface or
               into a user-facing application.
             </p>
           </div>
         </div>
-        <div className="w-2/5 integrate-animation">
+        <div className="w-2/5 integrate-animation xl:transform xl:scale-50">
           <img className="integrate-animation__tile" src={Tile} />
           <img className="integrate-animation__layerone" src={LayerOne} />
           <img className="integrate-animation__layertwo" src={LayerTwo} />

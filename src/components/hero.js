@@ -10,9 +10,9 @@ const Hero = () => {
     <>
       <section role="main">
         <WebGLBackground />
-        <div className="w-full h-full relative flex justify-center items-center z-10 pb-36">
+        <div className="w-full h-full relative flex justify-center items-center z-10 pb-36 2xl:pt-0 lg:pt-36">
           <header>
-            <h1 className="text-4xl sm:text-9xl text-white font-black mb-4">
+            <h1 className="2xl:text-9xl text-7xl text-white font-black mb-4">
               Perpetual Pools
             </h1>
             <p className="text-xl text-white">
@@ -30,13 +30,13 @@ const Hero = () => {
               </Link>
             </div>
           </header>
-          <div className="hero-banner__laptop">
+          <div className="max-w-screen-lg absolute 2xl:-bottom-96 xl:-bottom-96 lg:-bottom-60 w-3/5 sm:-bottom-32">
             <img src={TracerLaptop} alt="Tracer Laptop View" />
           </div>
         </div>
         <ArrowDown linkTo="#steps" />
       </section>
-      <div className="spacer" />
+      <div className="spacer 2xl:h-96 lg:h-80 bg-white" id="steps"/>
     </>
   );
 };

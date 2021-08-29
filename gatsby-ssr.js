@@ -10,7 +10,7 @@ const { Helmet } = require("react-helmet");
 
 const HeadComponents = [
   <meta
-    http-equiv="cache-control"
+    httpEquiv="cache-control"
     content="private, max-age=0, no-store, must-revalidate"
   />,
 ];

@@ -27,10 +27,10 @@ const Navbar = () => {
       id="nav"
       className="fixed w-full z-50 transition ease-out duration-350"
     >
-      <div className="container xl h-32 flex justify-between items-center mx-auto">
+      <div className="container xl h-28 flex justify-between items-center mx-auto xl:px-24 px-12">
         <div>
           <Link to="/">
-            <img className="w-40 h-32" src={TracerLogo} alt="Tracer Logo" />
+            <img className="w-40 h-28" src={TracerLogo} alt="Tracer Logo" />
           </Link>
         </div>
         <div className="hidden sm:flex items-center">
@@ -44,7 +44,7 @@ const Navbar = () => {
               <div className="text-white">Govern</div>
             </Link>
           </div>
-          <div className="mr-5">
+          <div>
             <Button linkTo="/">Launch Pools</Button>
           </div>
         </div>

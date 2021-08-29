@@ -11,10 +11,10 @@ const WebGLBackground = () => {
   });
   return (
     <>
-      <div className="tile-bg">
-        <img data-depth="0.1" src={banner} alt="Banner" />
+      <div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden">
+        <img data-depth="0.1" src={banner} className="tile-bg" alt="Banner" />
       </div>
-      <div className="tile-bg__overlay" />
+      <div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden bg-darkblue" />
     </>
   );
 };
