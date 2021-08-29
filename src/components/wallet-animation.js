@@ -50,7 +50,7 @@ const WalletAnimation = () => {
             </Button>
           </div>
           <div className="w-full absolute 2xl:bottom-0 2xl:h-60 lg:h-48 lg:bottom-12 h-48 bottom-48">
-            <TokenSlider className="slider-left w-8/12 overflow-hidden bottom-0 h-full absolute lg:-left-48 -left-20 z-0" />
+            <TokenSlider className="slider-left w-2/4 overflow-hidden bottom-0 h-full absolute lg:-left-16 -left-20 z-0" />
             <div className="metamask-fox absolute 2xl:bottom-8 lg:w-96 lg:bottom-0 left-2/4 transform -translate-x-1/2 h-full w-48 z-10">
               <div className="undershadow absolute top-2/4 transform -translate-y-1/2 h-3/5 w-full rounded-full" />
               <picture className="flex flex-col justify-center items-center relative h-full bg-white">
@@ -61,7 +61,7 @@ const WalletAnimation = () => {
                 />
               </picture>
             </div>
-            <TokenSlider className="slider-right w-8/12 overflow-hidden bottom-0 h-full absolute lg:-right-48 -right-20 z-0" />
+            <TokenSlider className="slider-right w-2/4 overflow-hidden bottom-0 h-full absolute lg:-right-16 -right-20 z-0" />
           </div>
         </section>
         <section className="panel absolute top-0 left-0 w-full h-full wallet-two">

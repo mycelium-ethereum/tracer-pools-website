@@ -95,6 +95,9 @@ h1 {
 .tile-bg {
   position: absolute !important;
 }
+.tile-bg img {
+  max-width: unset;
+}
 .tracer-btn {
   display: flex;
   align-items: center;
@@ -603,7 +606,7 @@ header .documentation-link {
     transform: translateX(0px);
     opacity: 1;
   }
-  80% {
+  30% {
     opacity: 0;
   }
   100% {
