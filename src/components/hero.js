@@ -10,7 +10,7 @@ const Hero = () => {
     <>
       <section role="main">
         <WebGLBackground />
-        <div className="container xl w-full h-full relative flex justify-center items-center z-20 pb-36 2xl:pt-0 xl:px-24 lg:pt-36 lg:px-12 sm:pt-18 pt-16 px-4 mx-auto">
+        <div className="container xl w-full h-screen relative flex justify-center items-center z-20 pb-36 2xl:pt-0 xl:px-24 lg:pt-36 lg:px-12 sm:pt-18 pt-16 px-4 mx-auto">
           <header>
             <h1 className="2xl:text-9xl sm:text-7xl text-4xl text-white font-black mb-4">
               Perpetual Pools
@@ -18,9 +18,12 @@ const Hero = () => {
             <p className="text-xl text-white">
               Leveraged exposure. No margins.
             </p>
-            <div className="text-xl text-white">
-              No liquidations. A new derivative primitive.
-            </div>
+            <p className="text-xl text-white">
+              No liquidations.
+            </p>
+            <p className="text-xl text-white">
+              A new derivative primitive.
+            </p>
             <Button className="mt-6 mx-auto text-xl" linkTo="#">
               Launch Pools
             </Button>

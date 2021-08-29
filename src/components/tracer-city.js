@@ -38,7 +38,7 @@ const TracerCity = () => {
   return (
     <section id="pinMasterCity" className="pin-master">
       <div id="pinContainerCity" className="pin-container">
-        <section className="panel w-full h-full city-step staking-section flex items-center lg:absolute relative lg:pt-0 pt-24">
+        <section className="panel w-full h-screen city-step staking-section flex lg:items-center lg:absolute relative items-start lg:pt-0 pt-24">
           <div className="container xl flex justify-start mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col">
             <div className="2xl:w-5/12 lg:w-1/3 h-auto flex flex-col justify-center z-10 lg:pb-0 pb-80">
               <span className="2xl:text-3xl lg:text-2xl font-semibold color-blue mb-2 lg:block hidden">
@@ -64,7 +64,7 @@ const TracerCity = () => {
               className="w-screen absolute left-0 bottom-0 lg:hidden block"
               src={tracer_city_mobile}
             />
-            <div className="city-step__animation w-3/4 h-screen absolute z-0 transform-gpu top-0 2xl:scale-100 2xl:right-24 xl:right-0 xl:scale-75 lg:scale-50 lg:-right-32 lg:-top-16 lg:block hidden">
+            <div className="city-step__animation w-3/4 h-screen absolute z-0 transform-gpu top-0 2xl:scale-100 2xl:right-36 2xl:top-0 xl:scale-75 xl:-top-4 lg:scale-50 lg:-right-32 lg:-top-16 lg:block hidden">
               <img
                 className="h-full absolute top-0 right-0"
                 src={tracer_city}
@@ -96,7 +96,7 @@ const TracerCity = () => {
               className="w-80 lg:hidden block mb-8 mx-auto"
               src={tracer_building_mobile}
             />
-            <div className="city-step__animation w-3/4 h-screen absolute z-0 transform-gpu top-0 2xl:scale-100 2xl:right-24 xl:right-0 xl:scale-75 lg:scale-50 lg:-right-32 lg:-top-16 lg:block hidden">
+            <div className="city-step__animation w-3/4 h-screen absolute z-0 transform-gpu top-0 2xl:scale-100 2xl:right-36 2xl:top-0 xl:scale-75 xl:-top-4 lg:scale-50 lg:-right-32 lg:-top-16 lg:block hidden">
               <img
                 className="absolute right-0"
                 src={tracer_building}

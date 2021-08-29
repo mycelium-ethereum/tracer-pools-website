@@ -15,8 +15,8 @@ const LeverageSteps = () => {
       <section id="pinMaster" className="pin-master">
         <div id="pinContainer" className="pin-container bg-white lg:overflow-hidden">
           <section className="panel absolute top-0 left-0 w-full h-full step-one flex flex-col justify-center absolute w-full h-full lg:pointer-events-none pointer-events-auto">
-            <div className="flex container xl mx-auto flex lg:flex-row flex-col items-center h-full lg:pt-48 xl:px-24 lg:px-12 px-4">
-              <div className="lg:w-2/4 w-full step-info lg:text-left text-center">
+            <div className="flex container xl mx-auto lg:flex-row flex-col items-center h-full lg:pt-48 xl:px-24 lg:px-12 px-4">
+              <div className="step-info xl:pb-0 lg:pb-32 lg:w-2/4 w-full lg:text-left text-center relative">
                 <small className="2xl:text-3xl lg:text-2xl text-3xl font-extrabold">
                   Perpetual Pools
                 </small>
@@ -33,7 +33,7 @@ const LeverageSteps = () => {
                     BTC/DAI, LINK/DAI, or ETH/DAI
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-32 lg:bottom-48 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
+                <div className="step-progress absolute 2xl:bottom-32 lg:-bottom-12left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
                   <span className="active"></span>
                   <span></span>
                   <span></span>
@@ -68,12 +68,12 @@ const LeverageSteps = () => {
                 <span className="font-normal text-6xl color-lightgrey col-span-1">
                   04
                 </span>
-                <p className="font-normal text-normal col-span-3 mb-8">
+                <p className="font-normal text-normal col-span-3">
                   Enter collateral
                   <br />
                   Deposit collateral and press ‘buy’ to gain leveraged exposure.
                 </p>
-                <img className="absolute -bottom-20 left-0 min-w-full max-w-none" src={MobileSteps}/>
+                <img className="absolute -bottom-16 left-0 min-w-full max-w-none" src={MobileSteps}/>
               </div>
               <div className="w-2/4 step-animation xl:-top-24 transform xl:scale-75 xl:right-0 lg:scale-50 lg:-right-12 lg:-top-32 scale-50 lg:opacity-100 opacity-0 lg:block hidden">
                 <img
@@ -101,7 +101,7 @@ const LeverageSteps = () => {
           </section>
           <section className="panel absolute top-0 left-0 w-full h-full step-two flex flex-col justify-center absolute w-full h-full lg:pointer-events-none pointer-events-auto lg:block hidden">
             <div className="flex container xl mx-auto px-4 flex items-center h-full lg:pt-48 xl:px-24 lg:px-12 px-4">
-              <div className="w-2/4 step-info">
+              <div className="w-2/4 step-info xl:pb-0 lg:pb-32 relative">
                 <small className="2xl:text-3xl lg:text-2xl font-extrabold">
                   Perpetual Pools
                 </small>
@@ -118,7 +118,7 @@ const LeverageSteps = () => {
                     Long or short
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-32 lg:bottom-48 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
+                <div className="step-progress absolute 2xl:bottom-32 lg:-bottom-12left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
                   <span></span>
                   <span className="active"></span>
                   <span></span>
@@ -129,7 +129,7 @@ const LeverageSteps = () => {
           </section>
           <section className="panel absolute top-0 left-0 w-full h-full step-three flex flex-col justify-center absolute w-full h-full lg:pointer-events-none pointer-events-auto lg:block hidden">
             <div className="flex container xl mx-auto px-4 flex items-center h-full lg:pt-48 xl:px-24 lg:px-12 px-4">
-              <div className="w-2/4 step-info">
+              <div className="w-2/4 step-info xl:pb-0 lg:pb-32 relative">
                 <small className="2xl:text-3xl lg:text-2xl font-extrabold">
                   Perpetual Pools
                 </small>
@@ -146,7 +146,7 @@ const LeverageSteps = () => {
                     1x, 2x, 3x, 5x, or 15x
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-32 lg:bottom-48 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
+                <div className="step-progress absolute 2xl:bottom-32 lg:-bottom-12left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
                   <span></span>
                   <span></span>
                   <span className="active"></span>
@@ -162,7 +162,7 @@ const LeverageSteps = () => {
           </section>
           <section className="panel absolute top-0 left-0 w-full h-full step-four flex flex-col justify-center absolute w-full h-full lg:pointer-events-none pointer-events-auto lg:block hidden">
             <div className="flex container xl mx-auto px-4 flex items-center h-full lg:pt-48 xl:px-24 lg:px-12 px-4">
-              <div className="w-2/4 step-info">
+              <div className="w-2/4 step-info xl:pb-0 lg:pb-32 relative">
                 <small className="2xl:text-3xl lg:text-2xl font-extrabold">
                   Perpetual Pools
                 </small>
@@ -178,7 +178,7 @@ const LeverageSteps = () => {
                     leveraged exposure
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-32 lg:bottom-48 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
+                <div className="step-progress absolute 2xl:bottom-32 lg:-bottom-12left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
                   <span></span>
                   <span></span>
                   <span></span>

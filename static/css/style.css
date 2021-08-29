@@ -32,6 +32,7 @@
   background: linear-gradient(264.97deg, #0618BA 36.55%, #38C0C0 55.24%, #45AAF2 78.75%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  line-height: normal;
 }
 .bg-darkblue {
   background: #050bbde0;
@@ -143,7 +144,6 @@ picture {
 }
 section {
   position: relative;
-  height: 100vh;
   width: 100%;
 }
 .scrollmagic-pin-spacer {
@@ -417,9 +417,6 @@ header p {
   font-size: 20px;
   color: #fff;
   margin-bottom: 5px;
-}
-header p:last-of-type {
-  margin-top: 30px;
 }
 header b {
   color: var(--yellow);
@@ -723,6 +720,7 @@ header .documentation-link {
 
 .panel.strategise-section {
   overflow: hidden;
+  pointer-events: none;
 }
 .strategise-section__text {
   position: relative;
@@ -879,6 +877,13 @@ header .documentation-link {
     min-height: 100vh;
     height: auto;
   }
+  #pinContainerWallet {
+    min-height: 800px;
+    height: 800px;
+  }
+  #pinContainerPartners {
+    min-height: auto;
+  }
   .wallet-anim {
     width: 100vw !important;
   }
@@ -886,12 +891,15 @@ header .documentation-link {
     height: auto;
   }
   /* Token Sliders */
-  .slick-slider .item img {
+  .slick-slider .item img:not(.trend) {
     padding-top: 20px;
     width: 120px;
   }
 }
 @media only screen and (max-width: 991px) {
+  .panel.strategise-section {
+    pointer-events: all;
+  }
 }
 @media only screen and (max-width: 767px) {
 }

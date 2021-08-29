@@ -32,14 +32,14 @@ const TokenSlider = ({ className }) => {
       {
         breakpoint: 991,
         settings: {
-          speed: 3000,
+          speed: 1750,
         },
       },
       {
         breakpoint: 750,
         settings: {
           slidesToShow: 3,
-          speed: 1000,
+          speed: 1500,
         },
       },
       {
@@ -60,7 +60,7 @@ const TokenSlider = ({ className }) => {
               src={className.includes("slider-left") ? btc_left : btc_right}
               alt="BTC"
             />
-            <span className="text-base absolute 2xl:bottom-0 bottom-4 bottom-4 text-center lg:ml-16 ml-0 color-grey font-bold">
+            <span className="text-base absolute 2xl:bottom-0 bottom-4 bottom-4 text-center xl:ml-16 ml-0 color-grey font-bold">
               <img
                 className="trend absolute -left-4 top-1"
                 src={className.includes("slider-left") ? TrendDown : TrendUp}
@@ -78,7 +78,7 @@ const TokenSlider = ({ className }) => {
               src={className.includes("slider-left") ? eth_left : eth_right}
               alt="Eth"
             />
-            <span className="text-base absolute 2xl:bottom-0 bottom-4 bottom-4 text-center lg:ml-16 ml-0 color-grey font-bold">
+            <span className="text-base absolute 2xl:bottom-0 bottom-4 bottom-4 text-center xl:ml-16 ml-0 color-grey font-bold">
               <img
                 className="trend absolute -left-4 top-1"
                 src={className.includes("slider-left") ? TrendDown : TrendUp}
@@ -96,7 +96,7 @@ const TokenSlider = ({ className }) => {
               src={className.includes("slider-left") ? link_left : link_right}
               alt="Link"
             />
-            <span className="text-base absolute 2xl:bottom-0 bottom-4 bottom-4 text-center lg:ml-16 ml-0 color-grey font-bold">
+            <span className="text-base absolute 2xl:bottom-0 bottom-4 bottom-4 text-center xl:ml-16 ml-0 color-grey font-bold">
               <img
                 className="trend absolute -left-4 top-1"
                 src={className.includes("slider-left") ? TrendDown : TrendUp}
@@ -114,7 +114,7 @@ const TokenSlider = ({ className }) => {
               src={className.includes("slider-left") ? btc_left : btc_right}
               alt="BTC"
             />
-            <span className="text-base absolute 2xl:bottom-0 bottom-4 bottom-4 text-center lg:ml-16 ml-0 color-grey font-bold">
+            <span className="text-base absolute 2xl:bottom-0 bottom-4 bottom-4 text-center xl:ml-16 ml-0 color-grey font-bold">
               <img
                 className="trend absolute -left-4 top-1"
                 src={className.includes("slider-left") ? TrendDown : TrendUp}
@@ -132,7 +132,7 @@ const TokenSlider = ({ className }) => {
               src={className.includes("slider-left") ? eth_left : eth_right}
               alt="Eth"
             />
-            <span className="text-base absolute 2xl:bottom-0 bottom-4 bottom-4 text-center lg:ml-16 ml-0 color-grey font-bold">
+            <span className="text-base absolute 2xl:bottom-0 bottom-4 bottom-4 text-center xl:ml-16 ml-0 color-grey font-bold">
               <img
                 className="trend absolute -left-4 top-1"
                 src={className.includes("slider-left") ? TrendDown : TrendUp}
@@ -150,7 +150,7 @@ const TokenSlider = ({ className }) => {
               src={className.includes("slider-left") ? link_left : link_right}
               alt="Link"
             />
-            <span className="text-base absolute 2xl:bottom-0 bottom-4 bottom-4 text-center lg:ml-16 ml-0 color-grey font-bold">
+            <span className="text-base absolute 2xl:bottom-0 bottom-4 bottom-4 text-center xl:ml-16 ml-0 color-grey font-bold">
               <img
                 className="trend absolute -left-4 top-1"
                 src={className.includes("slider-left") ? TrendDown : TrendUp}
@@ -168,7 +168,7 @@ const TokenSlider = ({ className }) => {
               src={className.includes("slider-left") ? btc_left : btc_right}
               alt="BTC"
             />
-            <span className="text-base absolute 2xl:bottom-0 bottom-4 bottom-4 text-center lg:ml-16 ml-0 color-grey font-bold">
+            <span className="text-base absolute 2xl:bottom-0 bottom-4 bottom-4 text-center xl:ml-16 ml-0 color-grey font-bold">
               <img
                 className="trend absolute -left-4 top-1"
                 src={className.includes("slider-left") ? TrendDown : TrendUp}
@@ -186,7 +186,7 @@ const TokenSlider = ({ className }) => {
               src={className.includes("slider-left") ? eth_left : eth_right}
               alt="Eth"
             />
-            <span className="text-base absolute 2xl:bottom-0 bottom-4 bottom-4 text-center lg:ml-16 ml-0 color-grey font-bold">
+            <span className="text-base absolute 2xl:bottom-0 bottom-4 bottom-4 text-center xl:ml-16 ml-0 color-grey font-bold">
               <img
                 className="trend absolute -left-4 top-1"
                 src={className.includes("slider-left") ? TrendDown : TrendUp}
@@ -204,7 +204,7 @@ const TokenSlider = ({ className }) => {
               src={className.includes("slider-left") ? link_left : link_right}
               alt="Link"
             />
-            <span className="text-base absolute 2xl:bottom-0 bottom-4 bottom-4 text-center lg:ml-16 ml-0 color-grey font-bold">
+            <span className="text-base absolute 2xl:bottom-0 bottom-4 bottom-4 text-center xl:ml-16 ml-0 color-grey font-bold">
               <img
                 className="trend absolute -left-4 top-1"
                 src={className.includes("slider-left") ? TrendDown : TrendUp}

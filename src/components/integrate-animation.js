@@ -10,10 +10,10 @@ import LayerFour from "/static/img/home-page/integrate/layer-4-arrow.svg";
 
 const IntegrateAnimation = () => {
   return (
-    <section className="integrate-section flex items-center h-screen">
-      <div className="flex container xl mx-auto flex items-center xl:px-24 lg:px-12 px-4">
+    <section className="integrate-section flex items-center lg:h-screen h-auto lg:pb-0 pb-24">
+      <div className="flex container xl mx-auto flex items-center xl:px-24 sm:px-12 px-4">
         <div className="container xl flex lg:justify-start lg:flex-row justify-center flex-col">
-          <img src={MobileTile} className="w-full lg:hidden block"/>
+          <img src={MobileTile} className="sm:w-3/4 mx-auto w-full lg:hidden block"/>
           <div className="lg:w-2/4 w-full h-auto flex flex-col justify-center">
             <small className="2xl:text-3xl lg:text-2xl lg:text-left text-center font-extrabold text-2xl color-blue mb-1">
               Integrate Now
