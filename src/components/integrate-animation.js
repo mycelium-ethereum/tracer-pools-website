@@ -6,7 +6,6 @@ import LayerOne from "/static/img/home-page/integrate/layer-1.svg";
 import LayerTwo from "/static/img/home-page/integrate/layer-2.svg";
 import LayerThree from "/static/img/home-page/integrate/layer-3-square.svg";
 import LayerFour from "/static/img/home-page/integrate/layer-4-arrow.svg";
-import IntegrateBG from "/static/img/home-page/integrate/background.svg";
 
 const IntegrateAnimation = () => {
   return (
@@ -26,13 +25,12 @@ const IntegrateAnimation = () => {
             </p>
           </div>
         </div>
-        <div className="w-2/5 integrate-animation -top-24">
+        <div className="w-2/5 integrate-animation">
           <img className="integrate-animation__tile" src={Tile} />
           <img className="integrate-animation__layerone" src={LayerOne} />
           <img className="integrate-animation__layertwo" src={LayerTwo} />
           <img className="integrate-animation__layerthree" src={LayerThree} />
           <img className="integrate-animation__layerfour" src={LayerFour} />
-          {/* <img className="absolute h-full w-full top-0 right-0 bg-temp" src={IntegrateBG}/> */}
         </div>
       </div>
     </section>

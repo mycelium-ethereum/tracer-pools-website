@@ -53,8 +53,25 @@ const integrateAnimation = (controller) => {
     triggerElement: ".integrate-section",
     triggerHook: "onLeave",
     duration: "0%",
+    offset: -200,
   })
     .setTween(t4)
+    .setClassToggle(".integrate-section", "active")
+    .addTo(controller);
+};
+const partnersAnimation = (controller) => {
+  var t5 = gsap.timeline();
+  t5.from(".panel.partners", 1, { xPercent: 0 });
+  t5.from(".panel.contributors", 1, { xPercent: 0 });
+  t5.from(".panel.media", 1, { xPercent: 0 });
+
+  const scene = new ScrollMagic.Scene({
+    triggerElement: "#pinMasterPartners",
+    triggerHook: "onLeave",
+    duration: "200%",
+  })
+    .setPin("#pinContainerPartners")
+    .setTween(t5)
     .addTo(controller);
   return scene;
 };
@@ -114,27 +131,26 @@ const updateActiveCitySlide = (progress) => {
   // const tile = document.querySelector(".step-animation__tile");
   slides.forEach((e) => e.classList.remove("active"));
 
-  // if (progress == 0) {
-  //   // Start the step tile slide in animations
-  //   slides[0].classList.remove("start");
-  // }
   if (progress < 0.5) {
-    // Start the step tile slide in animations
     slides[0].classList.add("active");
-    // tile.classList.add("stage-one");
   }
   if (progress >= 0.5) {
     slides[1].classList.add("active");
-    // tile.classList.add("stage-two");
   }
 };
-const updateIntegrationAnimation = (progress) => {
-  const integrationElement = document.querySelector(".integrate-section");
+const updatePartnersSlide = (progress) => {
+  const slides = document.querySelectorAll("#pinMasterPartners .panel");
+  slides.forEach((e) => e.classList.remove("active"));
   console.log(progress);
-  if (progress > 0) {
-    integrationElement.classList.add("active");
-  } else {
-    integrationElement.classList.remove("active");
+
+  if (progress <= 0.33) {
+    slides[0].classList.add("active");
+  }
+  if (progress > 0.33 && progress < 0.66) {
+    slides[1].classList.add("active");
+  }
+  if (progress >= 0.66) {
+    slides[2].classList.add("active");
   }
 };
 window.onload = function () {
@@ -142,12 +158,13 @@ window.onload = function () {
   const scene = stepAnimation(controller);
   const scene2 = tokenAnimation(controller);
   const scene3 = cityAnimation(controller);
-  const scene4 = integrateAnimation(controller);
+  integrateAnimation(controller);
+  const scene4 = partnersAnimation(controller);
   // updateActiveStep(scene.progress());
   window.addEventListener("scroll", function () {
     updateActiveStep(scene.progress());
     updateActiveTokenSlide(scene2.progress());
     updateActiveCitySlide(scene3.progress());
-    updateIntegrationAnimation(scene4.progress());
+    updatePartnersSlide(scene4.progress());
   });
 };

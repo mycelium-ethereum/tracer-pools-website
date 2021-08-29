@@ -7,9 +7,9 @@ import Button from "../components/button";
 import tracer_city from "/static/img/home-page/city/tracer-city.png";
 import tracer_building from "/static/img/home-page/city/tracer-building.svg";
 
-const ScrollTracerCity = () => {
+const TracerCity = () => {
   return (
-    <div id="pinMasterCity" className="pin-master">
+    <section id="pinMasterCity" className="pin-master">
       <div id="pinContainerCity" className="pin-container">
         <section className="panel city-step staking-section flex items-center">
           <div className="container xl flex justify-center mx-auto">
@@ -17,7 +17,7 @@ const ScrollTracerCity = () => {
               <h1 className="text-5xl font-semibold color-blue mb-2">Built for DeFi...</h1>
               <h1 className="strategise-text text-6xl font-bold text-white mb-4">Strategise &amp; Natively</h1>
               <small className="text-4xl text-white font-normal">Stake and farm with the dApps you know and love.</small>
-              <Button className="ml-0 mt-6" linkTo="#" outlineButton>
+              <Button className="ml-0 mt-6" linkTo="#" glowButton>
                 Launch Docs
               </Button>
             </div>
@@ -36,8 +36,8 @@ const ScrollTracerCity = () => {
           </div>
         </section>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default ScrollTracerCity;
+export default TracerCity;

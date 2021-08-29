@@ -1,14 +1,14 @@
 import React from "react";
 
-import arrow_blue from "/static/img/general/arrow-blue.png";
-
-const Button = ({ className, children, linkTo, outlineButton }) => {
+const Button = ({ className, children, linkTo, outlineButton, glowButton }) => {
   return (
     <a
       className={
         className +
-        (outlineButton ? " tracer-btn__blue" : " tracer-btn") +
-        " mx-auto rounded-lg"
+        " tracer-btn " +
+        ((!!outlineButton) && " blue mx-auto text-xl h-32 ") +
+        ((!!glowButton) && " glow text-2xl h-48 ") +
+        " rounded-lg"
       }
       href={linkTo}
     >

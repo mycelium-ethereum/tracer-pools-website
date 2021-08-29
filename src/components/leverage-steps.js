@@ -8,11 +8,11 @@ import LayerTwo from "/static/img/home-page/steps/layer-2.svg";
 import LayerThree from "/static/img/home-page/steps/layer-3.svg";
 import LayerFour from "/static/img/home-page/steps/layer-4.svg";
 
-const ScrollSteps = () => {
+const LeverageSteps = () => {
   return (
     <>
-      <div id="pinMaster" className="pin-master">
-      <div id="pinContainer" className="pin-container">
+      <section id="pinMaster" className="pin-master">
+        <div id="pinContainer" className="pin-container">
           <section className="panel step-one">
             <div className="flex container xl mx-auto flex items-center h-full">
               <div className="w-2/4 step-info">
@@ -77,11 +77,6 @@ const ScrollSteps = () => {
                   <span></span>
                 </div>
               </div>
-              {/* <div className="col-span-2 step-animation">
-                <picture className="step-animation__tile">
-                  <img src={sideTile} />
-                </picture>
-              </div> */}
             </div>
           </section>
           <section className="panel step-three flex flex-col justify-center">
@@ -142,17 +137,12 @@ const ScrollSteps = () => {
                   <span className="active"></span>
                 </div>
               </div>
-              {/* <div className="col-span-2 step-animation">
-                <picture className="step-animation__tile">
-                  <img src={amountTile} />
-                </picture>
-              </div> */}
             </div>
           </section>
         </div>
-      </div>
+      </section>
     </>
   );
 };
 
-export default ScrollSteps;
+export default LeverageSteps;

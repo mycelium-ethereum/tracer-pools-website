@@ -12,7 +12,7 @@ const WalletAnimation = () => {
       <div id="pinContainerWallet" className="pin-container">
         <section className="panel relative wallet-one">
           <div className="container xl flex flex-col align-center justify-center h-full w-full mx-auto pb-48">
-            <h1 className="gradient fade-anim mb-4 text-center">
+            <h1 className="gradient-lightblue fade-anim mb-4 text-center">
               <span className="block text-6xl font-black">
                 Fungible ERC20
               </span>
@@ -38,7 +38,7 @@ const WalletAnimation = () => {
         </section>
         <section className="panel wallet-two">
           <div className="container xl flex flex-col align-center justify-center h-full w-full mx-auto pb-48">
-            <h1 className="gradient mb-4 text-center">
+            <h1 className="gradient-lightblue mb-4 text-center">
               <span className="block text-6xl font-black">
                 Fungible ERC20
               </span>
@@ -56,7 +56,7 @@ const WalletAnimation = () => {
         </section>
         <section className="panel wallet-three">
           <div className="container xl flex flex-col align-center justify-center h-full w-full mx-auto pb-48">
-            <h1 className="gradient mb-4 text-center">
+            <h1 className="gradient-lightblue mb-4 text-center">
               <span className="block text-6xl font-black">
                 Fungible ERC20
               </span>

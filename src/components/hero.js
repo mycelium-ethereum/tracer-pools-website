@@ -12,7 +12,7 @@ const Hero = () => {
         <WebGLBackground />
         <div className="w-full h-full relative flex justify-center items-center z-10 pb-36">
           <header>
-            <h1 className="text-4xl sm:text-8xl text-white font-black mb-4">
+            <h1 className="text-4xl sm:text-9xl text-white font-black mb-4">
               Perpetual Pools
             </h1>
             <p className="text-xl text-white">
@@ -21,7 +21,7 @@ const Hero = () => {
             <div className="text-xl text-white">
               No liquidations. A new derivative primitive.
             </div>
-            <Button className="mt-6 z-11" linkTo="#">
+            <Button className="mt-6 z-11 mx-auto" linkTo="#">
               Launch Pools
             </Button>
             <div className="mt-2">

@@ -6,10 +6,11 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
 import Socials from "../components/socials";
-import ScrollSteps from "../components/scroll-steps";
-import ScrollTracerCity from "../components/scroll-city";
+import LeverageSteps from "../components/leverage-steps";
+import TracerCity from "../components/tracer-city";
 import WalletAnimation from "../components/wallet-animation";
 import IntegrateAnimation from "../components/integrate-animation";
+import PartnersContributors from "../components/partners-contributors";
 
 const Index = () => {
   return (
@@ -17,10 +18,11 @@ const Index = () => {
       <SEO title="Home" />
       <Layout>
         <Hero />
-        <ScrollSteps />
+        <LeverageSteps />
         <WalletAnimation />
-        <ScrollTracerCity />
+        <TracerCity />
         <IntegrateAnimation />
+        <PartnersContributors/>
         <Socials />
       </Layout>
     </>
