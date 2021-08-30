@@ -37,6 +37,9 @@
 .bg-darkblue {
   background: #050bbde0;
 }
+.bg-grey {
+  background: var(--grey);
+}
 body,
 html {
   margin: 0;
@@ -44,18 +47,18 @@ html {
 }
 body {
   font-family: "Source Sans Pro", Arial, sans-serif;
-  font-smooth: always;
-  -webkit-font-smoothing: antialiased;
 }
 *::selection {
-  background: var(--blue);
+  background: var(--darkblue);
   color: var(--white);
   -webkit-background-clip: unset;
   -webkit-text-fill-color: var(--white) !important;
 }
 * {
-  -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 *:focus,
 *:hover {
@@ -102,11 +105,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #fff;
   background: rgba(255, 255, 255, 0.14);
-  width: 180px;
-  height: 50px;
-  border-radius: 7px;
   color: #fff;
   transition: all 0.5s ease;
 }
@@ -116,26 +115,25 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 190px;
   color: var(--lightblue);
   border: 2px solid var(--lightblue);
   background: transparent;
+}
+.tracer-btn.blue {
+  border: 1px solid var(--lightblue);
 }
 .tracer-btn.glow {
   border: 3px solid var(--lightblue);
   background: linear-gradient(91.48deg, rgba(61, 168, 245, 0.5) -5.68%, rgba(61, 168, 245, 0.3) 105.12%);
   box-sizing: border-box;
   box-shadow: 0px -1px 10px 3px rgba(61, 168, 245, 0.36);
-  border-radius: 10px;
 }
-.tracer-btn:hover {
+.tracer-btn:not(.blue):hover,
+.tracer-btn:not(.glow):hover {
   background: rgba(255, 255, 255, 1);
   color: var(--darkgrey);
 }
-.tracer-btn.blue:hover {
-  background: var(--lightblue);
-  color: var(--white);
-}
+.tracer-btn.blue:hover,
 .tracer-btn.glow:hover {
   background: var(--lightblue);
   color: var(--white);
@@ -453,7 +451,7 @@ header .documentation-link {
 }
 .step-info .step-info__text {
   opacity: 0;
-  animation: slideOut 1s linear forwards;
+  animation: slideOut 0.9s linear forwards;
 }
 .step-info .step-info__text p {
   line-height: 28px;
@@ -463,13 +461,6 @@ header .documentation-link {
 }
 .step-progress {
   width: 440px;
-}
-.step-progress span {
-  background: var(--grey);
-  width: 25%;
-  height: 13px;
-  margin-right: 5px;
-  transition: background 0.5s ease;
 }
 .step-progress span.active {
   background: var(--lightblue);
@@ -573,7 +564,7 @@ header .documentation-link {
   opacity: 1;
 }
 .panel.active .step-info__text {
-  animation: slideIn 1s linear forwards;
+  animation: slideIn 0.9s linear forwards;
 }
 .panel.active .step-progress {
   opacity: 1;

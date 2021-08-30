@@ -53,7 +53,7 @@ const integrateAnimation = (controller) => {
     triggerElement: ".integrate-section",
     triggerHook: "onLeave",
     duration: "0%",
-    offset: -200,
+    offset: -300,
   })
     .setTween(t4)
     .setClassToggle(".integrate-section", "active")
@@ -202,8 +202,9 @@ window.onload = function () {
     if(!initialised && !isMobile()){
       initialiseScrollMagic();
     }
-    if (isMobile() && !!scenes) {
+    if (isMobile() && scenes.length) {
       scenes.forEach((e) => disableScrollmagic(e));
+      console.log("destroyed");
     }
   });
 };

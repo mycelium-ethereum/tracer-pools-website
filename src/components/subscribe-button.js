@@ -10,7 +10,6 @@ const SubscribeButton = ({ className, children, linkTo }) => {
       href={linkTo}
     >
       {children}
-      {/* {smallButton && <img src={arrow_blue} alt="Blue Arrow" />} */}
     </a>
   );
 };

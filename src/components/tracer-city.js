@@ -54,7 +54,7 @@ const TracerCity = () => {
                 Stake and farm with the dApps you know and love.
               </small>
               <GlowButton
-                className="mt-6 text-normal text-xl font-semibold lg:ml-0 lg:mb-0 mb-8 mx-auto"
+                className="h-16 w-48 text-normal rounded-2xl text-xl font-semibold mt-6 lg:ml-0 lg:mb-0 mb-8 mx-auto"
                 linkTo="#"
               >
                 Launch Docs
@@ -86,7 +86,7 @@ const TracerCity = () => {
                 Stake and farm with the dApps you know and love.
               </small>
               <GlowButton
-                className="mt-6 text-normal text-xl font-semibold lg:ml-0 lg:mb-0 mb-8 mx-auto"
+                className="lg:h-16 h-12 w-48 mt-6 rounded-2xl text-normal text-xl font-semibold lg:ml-0 lg:mb-0 mb-8 mx-auto"
                 linkTo="#"
               >
                 Launch Docs

@@ -15,7 +15,7 @@ const IntegrateAnimation = () => {
         <div className="container xl flex lg:justify-start lg:flex-row justify-center flex-col">
           <img src={MobileTile} className="sm:w-3/4 mx-auto w-full lg:hidden block"/>
           <div className="lg:w-2/4 w-full h-auto flex flex-col justify-center">
-            <small className="2xl:text-3xl lg:text-2xl lg:text-left text-center font-extrabold text-2xl color-blue mb-1">
+            <small className="2xl:text-3xl lg:text-2xl lg:text-left text-center font-bold text-2xl color-blue mb-1">
               Integrate Now
             </small>
             <h1 className="gradient 2xl:text-6xl lg:text-5xl lg:text-left text-center text-3xl font-black text-white mb-4">

@@ -17,7 +17,7 @@ const LeverageSteps = () => {
           <section className="panel absolute top-0 left-0 w-full h-full step-one flex flex-col justify-center absolute w-full h-full lg:pointer-events-none pointer-events-auto">
             <div className="flex container xl mx-auto lg:flex-row flex-col items-center h-full lg:pt-48 xl:px-24 lg:px-12 px-4">
               <div className="step-info xl:pb-0 lg:pb-32 lg:w-2/4 w-full lg:text-left text-center relative">
-                <small className="2xl:text-3xl lg:text-2xl text-3xl font-extrabold">
+                <small className="2xl:text-3xl lg:text-2xl text-3xl font-bold">
                   Perpetual Pools
                 </small>
                 <h1 className="2xl:text-6xl lg:text-5xl text-4xl font-black lg:mt-4 mt-2 lg:mb-8 mb-6">
@@ -34,10 +34,10 @@ const LeverageSteps = () => {
                   </p>
                 </div>
                 <div className="step-progress absolute 2xl:bottom-32 lg:-bottom-12left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
-                  <span className="active"></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                  <span className="active w-1/4 mr-2 h-2.5 transition-background duration-500 ease-in-out"></span>
+                  <span className="w-1/4 mr-2 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
+                  <span className="w-1/4 mr-2 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
+                  <span className="w-1/4 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                 </div>
               </div>
               <div className="lg:hidden grid grid-cols-4 w-80 mx-auto">
@@ -102,7 +102,7 @@ const LeverageSteps = () => {
           <section className="panel absolute top-0 left-0 w-full h-full step-two flex flex-col justify-center absolute w-full h-full lg:pointer-events-none pointer-events-auto lg:block hidden">
             <div className="flex container xl mx-auto px-4 flex items-center h-full lg:pt-48 xl:px-24 lg:px-12 px-4">
               <div className="w-2/4 step-info xl:pb-0 lg:pb-32 relative">
-                <small className="2xl:text-3xl lg:text-2xl font-extrabold">
+                <small className="2xl:text-3xl lg:text-2xl font-bold">
                   Perpetual Pools
                 </small>
                 <h1 className="2xl:text-6xl lg:text-5xl font-black mt-4 mb-8">
@@ -119,10 +119,10 @@ const LeverageSteps = () => {
                   </p>
                 </div>
                 <div className="step-progress absolute 2xl:bottom-32 lg:-bottom-12left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
-                  <span></span>
-                  <span className="active"></span>
-                  <span></span>
-                  <span></span>
+                  <span className="w-1/4 mr-2 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
+                  <span className="active w-1/4 mr-2 h-2.5 transition-background duration-500 ease-in-out"></span>
+                  <span className="w-1/4 mr-2 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
+                  <span className="w-1/4 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                 </div>
               </div>
             </div>
@@ -130,7 +130,7 @@ const LeverageSteps = () => {
           <section className="panel absolute top-0 left-0 w-full h-full step-three flex flex-col justify-center absolute w-full h-full lg:pointer-events-none pointer-events-auto lg:block hidden">
             <div className="flex container xl mx-auto px-4 flex items-center h-full lg:pt-48 xl:px-24 lg:px-12 px-4">
               <div className="w-2/4 step-info xl:pb-0 lg:pb-32 relative">
-                <small className="2xl:text-3xl lg:text-2xl font-extrabold">
+                <small className="2xl:text-3xl lg:text-2xl font-bold">
                   Perpetual Pools
                 </small>
                 <h1 className="2xl:text-6xl lg:text-5xl font-black mt-4 mb-8">
@@ -147,10 +147,10 @@ const LeverageSteps = () => {
                   </p>
                 </div>
                 <div className="step-progress absolute 2xl:bottom-32 lg:-bottom-12left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
-                  <span></span>
-                  <span></span>
-                  <span className="active"></span>
-                  <span></span>
+                  <span className="w-1/4 mr-2 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
+                  <span className="w-1/4 mr-2 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
+                  <span className="active w-1/4 mr-2 h-2.5 transition-background duration-500 ease-in-out"></span>
+                  <span className="w-1/4 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                 </div>
               </div>
               {/* <div className="col-span-2 step-animation">
@@ -163,7 +163,7 @@ const LeverageSteps = () => {
           <section className="panel absolute top-0 left-0 w-full h-full step-four flex flex-col justify-center absolute w-full h-full lg:pointer-events-none pointer-events-auto lg:block hidden">
             <div className="flex container xl mx-auto px-4 flex items-center h-full lg:pt-48 xl:px-24 lg:px-12 px-4">
               <div className="w-2/4 step-info xl:pb-0 lg:pb-32 relative">
-                <small className="2xl:text-3xl lg:text-2xl font-extrabold">
+                <small className="2xl:text-3xl lg:text-2xl font-bold">
                   Perpetual Pools
                 </small>
                 <h1 className="2xl:text-6xl lg:text-5xl font-black mt-4 mb-8">
@@ -179,10 +179,10 @@ const LeverageSteps = () => {
                   </p>
                 </div>
                 <div className="step-progress absolute 2xl:bottom-32 lg:-bottom-12left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span className="active"></span>
+                  <span className="w-1/4 mr-2 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
+                  <span className="w-1/4 mr-2 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
+                  <span className="w-1/4 mr-2 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
+                  <span className="active w-1/4 h-2.5 transition-background duration-500 ease-in-out"></span>
                 </div>
               </div>
             </div>

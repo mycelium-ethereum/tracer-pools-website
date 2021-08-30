@@ -33,7 +33,7 @@ const Footer = () => {
               className="w-80 h-10 border-0 rounded-2xl pl-4 pr-4 lg:block hidden mr-10 "
               placeholder="Email"
             />
-            <SubscribeButton className="h-10 rounded-2xl text-base font-medium flex items-center justify-center bg-blue-600 text-white lg:w-32 lg:mt-0 lg:mb-0 mt-6 mb-8 w-full">
+            <SubscribeButton className="h-10 rounded-2xl font-semibold font-medium flex items-center justify-center bg-blue-600 text-white lg:w-32 lg:mt-0 lg:mb-0 mt-6 mb-8 w-full">
               Subscribe
             </SubscribeButton>
           </div>

@@ -7,7 +7,8 @@ import banner from "/static/img/home-page/banner.png";
 const WebGLBackground = () => {
   useEffect(() => {
     var scene = document.querySelector(".tile-bg");
-    var parallaxInstance = new Parallax(scene);
+    new Parallax(scene);
+    // var parallaxInstance = new Parallax(scene);
   });
   return (
     <>

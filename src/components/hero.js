@@ -12,7 +12,7 @@ const Hero = () => {
         <WebGLBackground />
         <div className="container xl w-full h-screen relative flex justify-center items-center z-20 pb-36 2xl:pt-0 xl:px-24 lg:pt-36 lg:px-12 sm:pt-18 pt-16 px-4 mx-auto">
           <header>
-            <h1 className="2xl:text-9xl sm:text-7xl text-4xl text-white font-black mb-4">
+            <h1 className="2xl:text-9xl sm:text-7xl text-5xl text-white font-black mb-4">
               Perpetual Pools
             </h1>
             <p className="text-xl text-white">
@@ -24,7 +24,7 @@ const Hero = () => {
             <p className="text-xl text-white">
               A new derivative primitive.
             </p>
-            <Button className="mt-6 mx-auto text-xl" linkTo="#">
+            <Button className="mt-6 h-12 w-48 border border-white mx-auto text-xl rounded-2xl" linkTo="#">
               Launch Pools
             </Button>
             <div className="mt-2">
