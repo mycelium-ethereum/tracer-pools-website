@@ -54,7 +54,7 @@ const TracerCity = () => {
                 Stake and farm with the dApps you know and love.
               </small>
               <GlowButton
-                className="h-16 w-48 text-normal rounded-2xl text-xl font-semibold mt-6 lg:ml-0 lg:mb-0 mb-8 mx-auto"
+                className="lg:h-16 h-12 w-48 text-normal rounded-2xl text-xl font-semibold mt-6 lg:ml-0 lg:mb-0 mb-8 mx-auto"
                 linkTo="#"
               >
                 Launch Docs
@@ -64,7 +64,7 @@ const TracerCity = () => {
               className="w-screen absolute left-0 bottom-0 lg:hidden block"
               src={tracer_city_mobile}
             />
-            <div className="city-step__animation w-3/4 h-screen absolute z-0 transform-gpu top-0 2xl:scale-100 2xl:right-36 2xl:top-0 xl:scale-75 xl:-top-4 lg:scale-50 lg:-right-32 lg:-top-16 lg:block hidden">
+            <div className="city-step__animation w-3/4 h-screen absolute z-0 transform-gpu 2xl:scale-100 2xl:right-36 xl:scale-75 xl:-right-16 lg:scale-50 lg:-right-32 top-2/4 transform -translate-y-1/2 lg:block hidden">
               <img
                 className="h-full absolute top-0 right-0"
                 src={tracer_city}
@@ -96,7 +96,7 @@ const TracerCity = () => {
               className="w-80 lg:hidden block mb-8 mx-auto"
               src={tracer_building_mobile}
             />
-            <div className="city-step__animation w-3/4 h-screen absolute z-0 transform-gpu top-0 2xl:scale-100 2xl:right-36 2xl:top-0 xl:scale-75 xl:-top-4 lg:scale-50 lg:-right-32 lg:-top-16 lg:block hidden">
+            <div className="city-step__animation w-3/4 h-screen absolute z-0 transform-gpu 2xl:scale-100 2xl:right-36 xl:scale-75 xl:-right-16 lg:scale-50 lg:-right-32 top-2/4 transform -translate-y-1/2 lg:block hidden">
               <img
                 className="absolute right-0"
                 src={tracer_building}

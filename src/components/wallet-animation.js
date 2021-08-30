@@ -32,7 +32,7 @@ const WalletAnimation = () => {
     <div id="pinMasterWallet" className="pin-master lg:z-0 z-30">
       <div id="pinContainerWallet" className="pin-container lg:pt-0 pt-32">
         <section className="panel top-0 left-0 w-full wallet-one lg:absolute lg:h-full relative h-full">
-          <div className="container xl flex flex-col align-center justify-start h-full w-full mx-auto 2xl:pt-48 lg:pt-36 xl:px-24 lg:px-12 px-4">
+          <div className="container xl flex flex-col align-center justify-start h-full w-full mx-auto 2xl:pt-48 2xl:pt-36 lg:pt-24 xl:px-24 lg:px-12 px-4">
             <h1 className="gradient-lightblue lg:block inline-block fade-anim lg:opacity-0 mb-4 text-center lg:text-6xl text-4xl font-black">
               Fungible ERC20
               <br />
@@ -55,9 +55,9 @@ const WalletAnimation = () => {
               Browse Tokens
             </Button>
           </div>
-          <div className="w-full absolute 2xl:bottom-0 2xl:h-60 lg:h-48 lg:bottom-12 h-48 bottom-48">
+          <div className="w-full absolute 2xl:bottom-0 2xl:h-60 lg:h-48 lg:bottom-6 h-48 bottom-48">
             <TokenSlider className="slider-left w-2/4 overflow-hidden bottom-0 h-full absolute lg:-left-16 -left-20 z-0" />
-            <div className="absolute 2xl:bottom-8 lg:w-96 lg:bottom-0 left-2/4 transform -translate-x-1/2 h-full w-48 z-10">
+            <div className="absolute 2xl:bottom-8 2xl:w-96 2xl:w-64 lg:w-48 lg:bottom-0 left-2/4 transform -translate-x-1/2 h-full w-48 z-10">
               <div className="undershadow absolute top-2/4 transform -translate-y-1/2 h-3/5 w-full rounded-full" />
               <picture className="flex flex-col justify-center items-center relative h-full bg-white">
                 <img
@@ -71,7 +71,7 @@ const WalletAnimation = () => {
           </div>
         </section>
         <section className="panel absolute top-0 left-0 w-full h-full wallet-two">
-          <div className="container xl flex flex-col align-center justify-start h-full w-full mx-auto 2xl:pt-48 lg:pt-36 xl:px-24 lg:px-12 px-4">
+          <div className="container xl flex flex-col align-center justify-start h-full w-full mx-auto 2xl:pt-48 2xl:pt-36 lg:pt-24 xl:px-24 lg:px-12 px-4">
             <h1 className="gradient-lightblue lg:block inline-block mb-4 text-center lg:text-6xl text-4xl font-black">
               Fungible ERC20
               <br />
@@ -90,7 +90,7 @@ const WalletAnimation = () => {
           </div>
         </section>
         <section className="panel absolute top-0 left-0 w-full h-full wallet-three">
-          <div className="container xl flex flex-col align-center justify-start h-full w-full mx-auto 2xl:pt-48 lg:pt-36 xl:px-24 lg:px-12 px-4">
+          <div className="container xl flex flex-col align-center justify-start h-full w-full mx-auto 2xl:pt-48 2xl:pt-36 lg:pt-24 xl:px-24 lg:px-12 px-4">
             <h1 className="gradient-lightblue lg:block inline-block mb-4 text-center lg:text-6xl text-4xl font-black">
               Fungible ERC20
               <br />

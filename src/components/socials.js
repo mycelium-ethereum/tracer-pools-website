@@ -8,7 +8,7 @@ import Twitter from "/static/img/twitter.png";
 
 const Socials = () => {
   return (
-    <div className="fixed lg:top-1/3 top-48 right-0 z-10 xl:transform-none transform-gpu scale-75 -right-2.5">
+    <div className="fixed lg:top-1/3 top-64 right-0 z-10 xl:transform-none transform-gpu scale-75 -right-2.5">
       <img className="-mt-8" src={Trapezoid} alt="Trapezoid" />
       <img className="absolute top-12 left-6 cursor-pointer" src={Discourse} alt="Discourse" />
       <img className="absolute top-28 left-6 cursor-pointer" src={GitHub} alt="Github" />
