@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import Button from "./button";
 import TracerLogo from "../../static/img/tracer-logo.svg";
 import SubscribeButton from "../components/subscribe-button";
+import MenuIcon from "../../static/img/general/menu.svg";
 
 const Navbar = () => {
   const isMobile = () => {
@@ -19,7 +20,7 @@ const Navbar = () => {
     const navbar = document.getElementById("nav");
     const mobile = isMobile();
     if (scrollHeight > 50 || mobile) {
-      navbar.style.backgroundColor = "#0000B0";
+      navbar.style.backgroundColor = "#011772";
     } else if (!mobile && scrollHeight < 50) {
       navbar.style.backgroundColor = "transparent";
     }
@@ -67,43 +68,11 @@ const Navbar = () => {
             </SubscribeButton>
           </div>
         </div>
-        <span className="menu-toggle">
-          <button className="nav-btn">
-            <span className="bar" />
-            <span className="bar" />
-            <span className="bar" />
-          </button>
-        </span>
-      </div>
-      {/* <menu className="mobile-nav">
-        <span className="menu-text">Menu</span>
-        <button className="close-btn">
-          <img alt="Close button" src={close_btn}/>
-        </button>
-        <div className="mobile-nav__items">
-          <ul>
-            {links()}
-            <li className="nav-item">
-            </li>
-          </ul>
-          <div className="mobile-socials">
-            <a className="social-link" target="_blank" rel="noreferrer" href="">
-              <picture>
-                <img alt="LinkedIn icon" src={linkedin_icon}/>
-              </picture>
-            </a>
-            <a className="social-link" target="_blank" rel="noreferrer" href="">
-              <picture>
-                <img alt="Telegram icon" src={telegram_icon}/>
-              </picture>
-            </a>
-            <a className="social-link" target="_blank" rel="noreferrer" href="">
-              <picture>
-                <img alt="Twitter icon" src={twitter_icon}/>
-              </picture>
-            </a>
-          </div>
+        <div className="sm:hidden block">
+          <img className="w-6 h-6" src={MenuIcon}/>
         </div>
+      </div>
+      {/* <menu>
       </menu> */}
     </nav>
   );

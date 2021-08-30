@@ -142,7 +142,7 @@ const updateActiveCitySlide = (progress) => {
 const updatePartnersSlide = (progress) => {
   const slides = document.querySelectorAll("#pinMasterPartners .panel");
   slides.forEach((e) => e.classList.remove("active"));
-
+  console.log(progress);
   if (progress <= 0.33) {
     slides[0].classList.add("active");
   }

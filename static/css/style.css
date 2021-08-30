@@ -6,6 +6,7 @@
   --grey: #e6e6e6;
   --yellow: #f8c03d;
   --white: #ffffff;
+  --black: #000000;
   --lightgrey: #D1D5DB;
   --darkgrey: #656565;
   --midgrey: #9c9c9c;
@@ -39,6 +40,9 @@
 }
 .bg-grey {
   background: var(--grey);
+}
+.duration-1500 {
+  transition-duration: 1.5s;
 }
 body,
 html {
@@ -96,7 +100,63 @@ h1 {
   font-weight: 900;
 }
 .tile-bg {
-  position: absolute !important;
+  left: 50% !important;
+  top: -8rem !important;
+  transform: translate(-50%, 0%) !important;
+  width: 1920px;
+  height: 1080px;
+}
+.tile-bg img {
+  top: unset !important;
+  left: unset !important;
+  right: unset !important;
+  bottom: unset !important;
+}
+.square-middle {
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 1500px;
+  height: 900px;
+}
+.tile-bg .blue-square {
+  top: -100px !important;
+  width: 100%;
+}
+.tile-bg .blue-arrow {
+  top: -400px !important;
+  right: -900px !important;
+  width: 1300px;
+}
+.tile-bg .green-arrow {
+  top: -100px !important;
+  right: -580px !important;
+  width: 1300px;
+}
+.tile-bg .pink-arrow {
+  top: 200px !important;
+  left: -400px !important;
+  width: 1150px;
+}
+.tile-bg .blue-square-medium {
+  top: -320px !important;
+  left: -550px !important;
+  width: 1200px;
+}
+.tile-bg .blue-arrow-down {
+  top: 175px !important;
+  left: -570px !important;
+  width: 1100px;
+}
+.tile-bg .pink-square {
+  bottom: -200px !important;
+  right: -560px !important;
+  width: 1260px;
+}
+.tile-bg .pink-rectangle {
+  bottom: -590px !important;
+  left: -990px !important;
+  width: 1680px;
 }
 .tile-bg img {
   max-width: unset;
@@ -131,7 +191,7 @@ h1 {
 .tracer-btn:not(.blue):hover,
 .tracer-btn:not(.glow):hover {
   background: rgba(255, 255, 255, 1);
-  color: var(--darkgrey);
+  color: var(--black);
 }
 .tracer-btn.blue:hover,
 .tracer-btn.glow:hover {
@@ -894,8 +954,14 @@ header .documentation-link {
   .panel.strategise-section {
     pointer-events: all;
   }
+  .tile-bg {
+    transform: translate(-50%, 0%) scale(0.75) !important;
+  }
 }
 @media only screen and (max-width: 767px) {
+  .tile-bg {
+    transform: translate(-50%, 0%) scale(0.5) !important;
+  }
 }
 @media only screen and (max-width: 479px) {
 }

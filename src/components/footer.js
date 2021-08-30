@@ -18,7 +18,7 @@ const Footer = () => {
     setCopyrightYear();
   });
   return (
-    <footer className="w-full relative overflow-hidden lg:h-72 lg:pb-0 pb-8 h-auto">
+    <footer className="w-full relative overflow-hidden lg:h-72 lg:pb-0 pb-8 h-auto z-0">
       <img
         className="absolute top-0 left-0 h-full min-w-full z-0"
         src={FooterBackground}

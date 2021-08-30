@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import WebGLBackground from "../components/webgl";
+import BackgroundParallax from "../components/parallax";
 import ArrowDown from "../components/arrow-down";
 import Button from "../components/button";
 // Assets
@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <>
       <section role="main">
-        <WebGLBackground />
+        <BackgroundParallax />
         <div className="container xl w-full h-screen relative flex justify-center items-center z-20 pb-36 2xl:pt-0 xl:px-24 lg:pt-36 lg:px-12 sm:pt-18 pt-16 px-4 mx-auto">
           <header>
             <h1 className="2xl:text-9xl sm:text-7xl text-5xl text-white font-black mb-4">
