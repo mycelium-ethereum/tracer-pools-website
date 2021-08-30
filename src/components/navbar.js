@@ -3,17 +3,12 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import Button from "./button";
 import TracerLogo from "../../static/img/tracer-logo.svg";
-import SubscribeButton from "../components/subscribe-button";
 import MenuIcon from "../../static/img/general/menu.svg";
 
 const Navbar = () => {
   const isMobile = () => {
     const width = window.innerWidth;
-    if (width < 1024) {
-      return true;
-    } else {
-      return false;
-    }
+    return width < 1024;
   };
   const setSolidNav = () => {
     const scrollHeight = document.documentElement.scrollTop;
@@ -63,9 +58,9 @@ const Navbar = () => {
             <Button className="h-12 w-32 border border-white font-semibold" linkTo="/">Launch Pools</Button>
           </div>
           <div className="mr-7">
-            <SubscribeButton className="h-12 w-32 text-white rounded-2xl font-semibold font-medium flex items-center justify-center bg-blue-600 text-whit">
+            <button className="tracer-btn.subscribe h-12 w-32 text-white rounded-2xl font-semibold font-medium flex items-center justify-center bg-blue-600 text-whit">
               Subscribe
-            </SubscribeButton>
+            </button>
           </div>
         </div>
         <div className="sm:hidden block">
