@@ -28,7 +28,7 @@ const Footer = () => {
           <span className="font-semibold text-white 2xl:w-auto lg:text-4xl lg:w-96 text-2xl">
             Stay updated on the latest Tracer news
           </span>
-          <div className="lg:w-min sm:w-64 mx-auto w-full flex justify-between">
+          <div className="lg:w-min sm:w-64 sm:ml-0 sm:mr-0 mx-auto w-full flex justify-between">
             <input
               className="w-80 h-10 border-0 rounded-2xl pl-4 pr-4 lg:block hidden mr-10 "
               placeholder="Email"

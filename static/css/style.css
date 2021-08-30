@@ -644,7 +644,7 @@ header .documentation-link {
     transform: translateX(-250px);
     opacity: 0;
   }
-  80% {
+  90% {
     opacity: 1;
   }
   100% {
@@ -948,6 +948,14 @@ header .documentation-link {
   .slick-slider .item img:not(.trend) {
     padding-top: 20px;
     width: 120px;
+  }
+  body.sm-disabled .scrollmagic-pin-spacer {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: 100vh;
+  }
+  body.sm-disabled .pin-container {
+    margin: 0 !important;
   }
 }
 @media only screen and (max-width: 991px) {

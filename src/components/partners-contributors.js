@@ -54,7 +54,7 @@ const PartnersContributors = () => {
     <>
       <section id="pinMasterPartners" className="pin-master">
         <div id="pinContainerPartners" className="pin-container">
-          <section className="panel lg:absolute relative top-0 left-0 w-full lg:h-screen h-auto partners flex flex-col justify-start bg-white opacity-0 z-0 transition-all ease-in-out linear duration-1500 lg:pb-0 pb-24">
+          <section className="panel lg:absolute relative top-0 left-0 w-full lg:h-screen h-auto partners flex flex-col justify-start bg-white opacity-0 z-0 transition-all ease-in-out linear duration-1500 lg:pb-0 sm:pb-24">
             <div className="flex container xl mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
               <p className="2xl:text-4xl lg:text-3xl font-bold color-darkgrey 2xl:mb-4 lg:mb-2 text-2xl">
                 Partners
@@ -65,7 +65,7 @@ const PartnersContributors = () => {
               <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2 text-2xl">
                 In the Media
               </p>
-              <div className="h-auto w-full h-full flex flex-col justify-center pb-24">
+              <div className="h-auto w-full h-full flex flex-col justify-center sm:pb-24">
                 <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center 2xl:mt-10 lg:2xl:mt-10 xl:mt-3 lg:mt-8 mt-6">
                   <img
                     className="2xl:w-60 lg:w-48 lg:mr-10 w-32 mr-5"
@@ -74,7 +74,7 @@ const PartnersContributors = () => {
                   <img className="2xl:w-60 lg:w-48 w-24" src={Koji} />
                 </div>
                 <div className="flex w-full 2xl:h-32 lg:h-24 lg:mt-0 mt-6 flex-wrap justify-center items-center">
-                  <img className="2xl:w-60 lg:w-48 lg:mr-10" src={DACM} />
+                  <img className="2xl:w-60 lg:w-48 lg:mr-10 mr-2" src={DACM} />
                   <img
                     className="2xl:w-60 lg:w-48 lg:mr-10 mr-5"
                     src={DistributedGlobal}
@@ -84,7 +84,7 @@ const PartnersContributors = () => {
                     src={GSR}
                   />
                 </div>
-                <div className="flex w-full 2xl:h-32 lg:h-24 lg:mt-0 mt-6 flex-wrap justify-center items-center">
+                <div className="flex w-full 2xl:h-32 lg:h-24 lg:mt-0 mt-4 flex-wrap justify-center items-center">
                   <img className="lg:w-32 lg:mr-10 w-24 mr-5" src={Maven} />
                   <img className="lg:w-32 lg:mr-10 w-24 mr-5" src={LAO} />
                   <img
@@ -108,7 +108,7 @@ const PartnersContributors = () => {
               <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2">
                 In the Media
               </p>
-              <div className="h-auto w-full h-full flex flex-col justify-center pb-24">
+              <div className="h-auto w-full h-full flex flex-col justify-center sm:pb-24">
                 <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center 2xl:mt-10 lg:2xl:mt-10 xl:mt-3 lg:mt-8">
                   <img className="2xl:w-60 lg:w-48 mr-10" src={Mycelium} />
                   <img className="2xl:w-60 lg:w-48" src={Chainlink} />
@@ -132,7 +132,7 @@ const PartnersContributors = () => {
               <p className="2xl:text-4xl lg:text-3xl font-bold color-darkgrey 2xl:mb-4 lg:mb-2">
                 In the Media
               </p>
-              <div className="h-auto w-full h-full flex flex-col justify-center pb-24">
+              <div className="h-auto w-full h-full flex flex-col justify-center sm:pb-24">
                 <div className="flex justify-center items-start 2xl:mt-10 xl:mt-3 lg:mt-8">
                   <div className="flex flex-col justify-start items-center text-center w-96 mr-5">
                     <img

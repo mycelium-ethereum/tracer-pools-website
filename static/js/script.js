@@ -142,7 +142,6 @@ const updateActiveCitySlide = (progress) => {
 const updatePartnersSlide = (progress) => {
   const slides = document.querySelectorAll("#pinMasterPartners .panel");
   slides.forEach((e) => e.classList.remove("active"));
-  console.log(progress);
   if (progress <= 0.33) {
     slides[0].classList.add("active");
   }
@@ -162,12 +161,12 @@ const isMobile = () => {
   }
 };
 const disableScrollmagic = (scene) => {
-  scene.destroy();
+  scene.enabled(false);
 };
-var initialised = false;
-const initialiseScrollMagic = () => {
-  initialised = true;
-  const controller = new ScrollMagic.Controller();
+const enableScrollmagic = (scene) => {
+  scene.enabled(true);
+};
+const initialiseScrollMagic = (controller) => {
   const scene = stepAnimation(controller);
   const scene2 = tokenAnimation(controller);
   const scene3 = cityAnimation(controller);
@@ -178,13 +177,6 @@ const initialiseScrollMagic = () => {
   scenes.push(scene3);
   scenes.push(scene4);
   scenes.push(scene5);
-  // updateActiveStep(scene.progress());
-  window.addEventListener("scroll", function () {
-    updateActiveStep(scene.progress());
-    updateActiveTokenSlide(scene2.progress());
-    updateActiveCitySlide(scene3.progress());
-    updatePartnersSlide(scene5.progress());
-  });
   window.addEventListener("scroll", function () {
     updateActiveStep(scene.progress());
     updateActiveTokenSlide(scene2.progress());
@@ -194,17 +186,29 @@ const initialiseScrollMagic = () => {
 };
 const scenes = [];
 window.onload = function () {
+  const controller = new ScrollMagic.Controller();
+  const body = document.querySelector("body");
   if (!isMobile()) {
-    initialiseScrollMagic();
-    
+    initialiseScrollMagic(controller);
   }
   window.addEventListener("resize", function () {
-    if(!initialised && !isMobile()){
-      initialiseScrollMagic();
+    if (!isMobile()) {
+      if (scenes.length) {
+        body.classList.remove("sm-disabled");
+        scenes.forEach((scene) => enableScrollmagic(scene));
+        controller.enabled(true);
+        console.log("re-enabled previously initialised ScrollMagic");
+      } else {
+        body.classList.remove("sm-disabled");
+        initialiseScrollMagic(controller);
+        console.log("resize - initialised");
+      }
     }
     if (isMobile() && scenes.length) {
-      scenes.forEach((e) => disableScrollmagic(e));
-      console.log("destroyed");
+      body.classList.add("sm-disabled");
+      scenes.forEach((scene) => disableScrollmagic(scene));
+      controller.enabled(false);
+      console.log("resize - disabled");
     }
   });
 };
