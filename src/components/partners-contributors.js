@@ -65,7 +65,7 @@ const PartnersContributors = () => {
               <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2 text-2xl">
                 In the Media
               </p>
-              <div className="h-auto w-full h-full flex flex-col justify-center sm:pb-24">
+              <div className="h-auto w-full h-full flex flex-col justify-center sm:pb-24 pb-12">
                 <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center 2xl:mt-10 lg:2xl:mt-10 xl:mt-3 lg:mt-8 mt-6">
                   <img
                     className="2xl:w-60 lg:w-48 lg:mr-10 w-32 mr-5"

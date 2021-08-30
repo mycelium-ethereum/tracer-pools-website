@@ -61,7 +61,7 @@ const TracerCity = () => {
               </GlowButton>
             </div>
             <img
-              className="w-screen absolute left-0 bottom-0 lg:hidden block"
+              className="w-screen absolute left-0 bottom-24 lg:hidden block"
               src={tracer_city_mobile}
             />
             <div className="city-step__animation w-3/4 h-screen absolute z-0 transform-gpu 2xl:scale-100 2xl:right-36 xl:scale-75 xl:-right-16 lg:scale-50 lg:-right-32 top-2/4 transform -translate-y-1/2 lg:block hidden">
@@ -73,7 +73,7 @@ const TracerCity = () => {
             </div>
           </div>
         </section>
-        <section className="panel w-full h-full city-step strategise-section flex items-center lg:absolute relative lg:pt-0 pt-24 lg:pointer-events-none pointer-events-auto">
+        <section className="panel w-full h-full city-step strategise-section flex items-center lg:absolute relative lg:pt-0 sm:pt-24 pt-0 lg:pointer-events-none pointer-events-auto">
           <div className="container xl flex justify-start mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col">
             <div className="2xl:w-5/12 lg:w-1/3 h-auto flex flex-col justify-center z-10 lg:pb-0 lg:hidden block">
               <span className="text-3xl font-bold mb-2 text-white color-blue text-center">
