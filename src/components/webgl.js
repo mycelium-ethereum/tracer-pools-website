@@ -3,11 +3,13 @@ import Parallax from "parallax-js";
 
 // Images
 import banner from "/static/img/home-page/banner.png";
+import blue-arrow from "/static/img/home-page/banner.png";
 
-const WebGLBackground = () => {
+const Parallax = () => {
   useEffect(() => {
     var scene = document.querySelector(".tile-bg");
-    var parallaxInstance = new Parallax(scene);
+    new Parallax(scene);
+    // var parallaxInstance = new Parallax(scene);
   });
   return (
     <>
@@ -19,4 +21,4 @@ const WebGLBackground = () => {
   );
 };
 
-export default WebGLBackground;
+export default Parallax;

@@ -37,7 +37,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full relative overflow-hidden lg:h-72 lg:pb-0 pb-8 h-auto">
+    <footer className="w-full relative overflow-hidden lg:h-72 lg:pb-0 pb-8 h-auto z-0">
       <img
         className="absolute top-0 left-0 h-full min-w-full z-0"
         src={FooterBackground}
@@ -55,13 +55,13 @@ const Footer = () => {
             <input type="hidden" name="m" value="0" />
             <input type="hidden" name="act" value="sub" />
             <input type="hidden" name="v" value="2" />
-            <div className="lg:w-min sm:w-64 mx-auto w-full flex justify-between">
+            <div className="lg:w-min sm:w-64 sm:ml-0 sm:mr-0 mx-auto w-full flex justify-between">
               <input
                 type="email" name="email" autoCapitalize="off" autoComplete="off" autoCorrect="off"
                 className="w-80 h-10 border-0 rounded-2xl pl-4 pr-4 lg:block hidden mr-10 "
                 placeholder="Email" required
               />
-              <button type="submit" className="tracer-btn.subscribe h-10 rounded-2xl text-base font-medium flex items-center justify-center bg-blue-600 text-white lg:w-32 lg:mt-0 lg:mb-0 mt-6 mb-8 w-full">
+              <button type="submit" className="tracer-btn.subscribe h-10 rounded-2xl font-semibold font-medium flex items-center justify-center bg-blue-600 text-white lg:w-32 lg:mt-0 lg:mb-0 mt-6 mb-8 w-full">
                 Subscribe
               </button>
             </div>
