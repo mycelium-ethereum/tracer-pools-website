@@ -19,7 +19,6 @@ import "tailwindcss/tailwind.css";
 // Global CSS
 import "/static/css/style.css";
 
-
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`

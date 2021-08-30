@@ -22,7 +22,7 @@ const Index = () => {
         <WalletAnimation />
         <TracerCity />
         <IntegrateAnimation />
-        <PartnersContributors/>
+        <PartnersContributors />
         <Socials />
       </Layout>
     </>

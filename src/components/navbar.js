@@ -55,7 +55,12 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="mr-7">
-            <Button className="h-12 w-32 border border-white font-semibold" linkTo="/">Launch Pools</Button>
+            <Button
+              className="h-12 w-32 border border-white font-semibold"
+              linkTo="/"
+            >
+              Launch Pools
+            </Button>
           </div>
           <div className="mr-7">
             <button className="tracer-btn.subscribe h-12 w-32 text-white rounded-2xl font-semibold font-medium flex items-center justify-center bg-blue-600 text-whit">
@@ -64,11 +69,9 @@ const Navbar = () => {
           </div>
         </div>
         <div className="sm:hidden block">
-          <img className="w-6 h-6" src={MenuIcon}/>
+          <img className="w-6 h-6" src={MenuIcon} alt="Menu" />
         </div>
       </div>
-      {/* <menu>
-      </menu> */}
     </nav>
   );
 };

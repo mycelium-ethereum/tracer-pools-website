@@ -10,10 +10,34 @@ const Socials = () => {
   return (
     <div className="fixed lg:top-1/3 top-64 right-0 z-10 xl:transform-none transform-gpu scale-75 -right-2.5">
       <img className="-mt-8" src={Trapezoid} alt="Trapezoid" />
-      <img className="absolute top-12 left-6 cursor-pointer" src={Discourse} alt="Discourse" />
-      <img className="absolute top-28 left-6 cursor-pointer" src={GitHub} alt="Github" />
-      <img className="absolute top-44 left-6 cursor-pointer" src={Discord} alt="Discord" />
-      <img className="absolute top-60 left-6 cursor-pointer" src={Twitter} alt="Twitter" />
+      <a href="https://discourse.tracer.finance" target="_blank">
+        <img
+          className="absolute top-12 left-6 cursor-pointer"
+          src={Discourse}
+          alt="Discourse"
+        />
+      </a>
+      <a href="https://github.com/tracer-protocol" target="_blank">
+        <img
+          className="absolute top-28 left-6 cursor-pointer"
+          src={GitHub}
+          alt="Github"
+        />
+      </a>
+      <a href="https://discord.gg/kvJEwfvyrW" target="_blank">
+        <img
+          className="absolute top-44 left-6 cursor-pointer"
+          src={Discord}
+          alt="Discord"
+        />
+      </a>
+      <a href="https://twitter.com/TracerDAO" target="_blank">
+        <img
+          className="absolute top-60 left-6 cursor-pointer"
+          src={Twitter}
+          alt="Twitter"
+        />
+      </a>
     </div>
   );
 };
