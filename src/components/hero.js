@@ -11,7 +11,7 @@ const Hero = () => {
       <section role="main">
         <BackgroundParallax />
         <div className="container xl w-full h-screen relative flex justify-center items-center z-20 pb-36 2xl:pt-0 xl:px-24 lg:pt-36 lg:px-12 sm:pt-18 pt-16 px-4 mx-auto">
-          <header>
+          <header className="text-center">
             <h1 className="2xl:text-9xl sm:text-7xl text-5xl text-white font-black mb-4">
               Perpetual Pools
             </h1>
@@ -47,7 +47,7 @@ const Hero = () => {
           linkTo="#steps"
         />
       </section>
-      <div className="spacer 2xl:h-96 lg:h-80 h-40 bg-white" id="steps" />
+      <div className="2xl:h-96 lg:h-80 h-40 background-blue" id="steps" />
     </>
   );
 };

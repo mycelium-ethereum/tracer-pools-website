@@ -52,7 +52,7 @@ const PartnersContributors = () => {
     <>
       <section id="pinMasterPartners" className="pin-master">
         <div id="pinContainerPartners" className="pin-container">
-          <section className="panel lg:absolute relative top-0 left-0 w-full lg:h-screen h-auto partners flex flex-col justify-start bg-white opacity-0 z-0 transition-all ease-in-out linear duration-1500 lg:pb-0 sm:pb-24">
+          <section className="panel lg:absolute relative top-0 left-0 w-full lg:h-screen h-auto partners flex flex-col justify-start  opacity-0 z-0 transition-all ease-in-out linear duration-1500 lg:pb-0 sm:pb-24">
             <div className="flex container xl mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
               <p className="2xl:text-4xl lg:text-3xl font-bold color-darkgrey 2xl:mb-4 lg:mb-2 text-2xl">
                 Partners
@@ -95,7 +95,7 @@ const PartnersContributors = () => {
               </div>
             </div>
           </section>
-          <section className="panel absolute top-0 left-0 w-full lg:h-screen h-auto contributors flex flex-col justify-start bg-white opacity-0 z-0 transition-all ease-in-out linear duration-1500">
+          <section className="panel absolute top-0 left-0 w-full lg:h-screen h-auto contributors flex flex-col justify-start  opacity-0 z-0 transition-all ease-in-out linear duration-1500">
             <div className="flex container xl mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
               <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2">
                 Partners
@@ -119,7 +119,7 @@ const PartnersContributors = () => {
               </div>
             </div>
           </section>
-          <section className="panel absolute top-0 left-0 w-full lg:h-screen h-auto media flex flex-col justify-start bg-white opacity-0 z-0 transition-all ease-in-out linear duration-1500">
+          <section className="panel absolute top-0 left-0 w-full lg:h-screen h-auto media flex flex-col justify-start  opacity-0 z-0 transition-all ease-in-out linear duration-1500">
             <div className="flex container xl mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
               <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2">
                 Partners

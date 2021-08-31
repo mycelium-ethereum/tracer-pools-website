@@ -21,10 +21,10 @@ const IntegrateAnimation = () => {
             <small className="2xl:text-3xl lg:text-2xl lg:text-left text-center font-bold text-2xl color-blue mb-1">
               Integrate Now
             </small>
-            <h1 className="gradient 2xl:text-6xl lg:text-5xl lg:text-left text-center text-3xl font-black text-white mb-4">
+            <h1 className="2xl:text-6xl lg:text-5xl lg:text-left text-center text-3xl font-black text-white mb-4">
               Strategise &amp; Natively
             </h1>
-            <p className="fade-anim lg:opacity-0 transition-all duration-500 2xl:text-2xl lg:text-xl lg:text-left text-center text-2xl color-grey font-normal opacity-100">
+            <p className="fade-anim lg:opacity-0 transition-all duration-500 2xl:text-2xl lg:text-xl lg:text-left text-center text-2xl text-white font-normal opacity-100">
               Seamlessly integrate into your proprietary trading interface or
               into a user-facing application.
             </p>
