@@ -40,7 +40,7 @@ const TracerCity = () => {
       <div id="pinContainerCity" className="pin-container">
         <section className="panel w-full h-screen city-step staking-section flex lg:items-center lg:absolute relative items-start lg:pt-0 pt-24">
           <div className="container xl flex justify-start mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col">
-            <div className="2xl:w-5/12 lg:w-1/3 h-auto flex flex-col justify-center z-10 lg:pb-0 pb-80">
+            <div className="2xl:w-5/12 lg:w-1/3 h-auto flex flex-col justify-center z-10 lg:pb-0 lg:mb-0 pb-80 mb-10">
               <span className="2xl:text-3xl lg:text-2xl font-semibold color-blue mb-2 lg:block hidden">
                 Built for DeFi...
               </span>

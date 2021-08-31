@@ -60,7 +60,7 @@ const LeverageSteps = () => {
                     BTC/DAI, LINK/DAI, or ETH/DAI
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-32 lg:bottom-20 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out lg:block hidden">
+                <div className="step-progress absolute 2xl:bottom-32 lg:bottom-20 left-0 justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out lg:flex hidden">
                   <span className="active w-1/4 mr-2 h-2.5 transition-background duration-500 ease-in-out"></span>
                   <span className="w-1/4 mr-2 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="w-1/4 mr-2 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>

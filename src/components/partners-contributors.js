@@ -38,10 +38,8 @@ const PartnersContributors = () => {
     const slides = document.querySelectorAll("#pinContainerPartners .panel");
     if (isMobile()) {
       slides[0].classList.add("active");
-      // slides.forEach((e) => e.classList.add("active"));
-    } else {
-      // slides.forEach((e) => e.classList.remove("active"));
-      slides[0].classList.remove("active");
+      slides[1].classList.remove("active");
+      slides[2].classList.remove("active");
     }
   };
   useEffect(() => {

@@ -15,11 +15,17 @@ const Hero = () => {
             <h1 className="2xl:text-9xl sm:text-7xl text-5xl text-white font-black mb-4">
               Perpetual Pools
             </h1>
-            <p className="text-xl text-white">
+            <p className="text-white text-xl lg:block hidden">
               Leveraged exposure. No margins.
+              <br />
+              No liquidations. A new derivative primitive.
             </p>
-            <p className="text-xl text-white">No liquidations.</p>
-            <p className="text-xl text-white">A new derivative primitive.</p>
+            <p className="text-white text-2xl lg:hidden block">
+              Leveraged exposure.
+              <br />
+              No margins. No liquidations.
+              <br />A new derivative primitive.
+            </p>
             <Button
               className="mt-6 h-12 w-48 border border-white mx-auto text-xl rounded-2xl"
               linkTo="#"

@@ -7,8 +7,8 @@ class Scripts extends Component {
       "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js",
       "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js",
       "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js",
-      "/tracer-pools-website/js/script.js",
-      // "/js/script.js",
+      // "/tracer-pools-website/js/script.js",
+      "/js/script.js",
     ];
 
     const div = this.div;

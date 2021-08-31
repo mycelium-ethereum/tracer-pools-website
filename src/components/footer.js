@@ -10,17 +10,40 @@ import Github from "/static/img/icons/github.svg";
 import Dribbble from "/static/img/icons/dribbble.svg";
 
 const Footer = () => {
+  const isMobile = () => {
+    const width = window.innerWidth;
+    if (width < 1024) {
+      return true;
+    } else {
+      return false;
+    }
+  };
   const setCopyrightYear = () => {
     document.getElementById("year").innerHTML = new Date().getFullYear();
   };
-  useEffect(() => {
-    setCopyrightYear();
-  });
 
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.target);
+  const [formOpen, setFormOpen] = useState(false);
+  const checkForm = (e) => {
+    const form = document.getElementById("subscription-form");
+    if (isMobile() && !formOpen) {
+      e.preventDefault();
+      setFormOpen(true);
+    } else if (formOpen && !isMobile()) {
+      form.submit();
+    }
+  };
+  const hideForm = (e) => {
+    const input = document.getElementById("email");
+    const button = document.getElementById("submit-btn");
+    if (formOpen && e.target !== input && e.target !== button) {
+      setFormOpen(false);
+    }
+  };
+  const [submittedText, setSubmittedText] = useState("Subscribe");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e.target);
+    const data = new FormData(e.target);
     fetch("https://mycelium.activehosted.com/proc.php", {
       method: "POST",
       body: data,
@@ -28,14 +51,19 @@ const Footer = () => {
     })
       .then((res) => {
         console.log(res);
-        setFormSubmitted(true);
+        setSubmittedText("Subscribed!");
         setTimeout(() => {
-          setFormSubmitted(false);
+          setSubmittedText("Subscribe");
         }, 5000);
       })
       .catch((error) => console.log("Request failed", error));
   };
-
+  useEffect(() => {
+    setCopyrightYear();
+    document.addEventListener("click", function (e) {
+      hideForm(e);
+    });
+  });
   return (
     <footer className="w-full relative overflow-hidden lg:h-72 lg:pb-0 pb-8 h-auto z-0">
       <img
@@ -48,7 +76,11 @@ const Footer = () => {
           <span className="font-semibold text-white 2xl:w-auto lg:text-4xl lg:w-96 text-2xl">
             Stay updated on the latest Tracer news
           </span>
-          <form onSubmit={(e) => handleSubmit(e)}>
+          <form
+            id="subscription-form"
+            className="lg:w-min sm:w-64 sm:ml-0 sm:mr-0 mx-auto w-full flex lg:flex-row lg:mt-0 mt-4 flex-col justify-between"
+            onSubmit={(e) => handleSubmit(e)}
+          >
             <input type="hidden" name="u" value="15" />
             <input type="hidden" name="f" value="15" />
             <input type="hidden" name="s" />
@@ -56,24 +88,28 @@ const Footer = () => {
             <input type="hidden" name="m" value="0" />
             <input type="hidden" name="act" value="sub" />
             <input type="hidden" name="v" value="2" />
-            <div className="lg:w-min sm:w-64 sm:ml-0 sm:mr-0 mx-auto w-full flex justify-between">
-              <input
-                type="email"
-                name="email"
-                autoCapitalize="off"
-                autoComplete="off"
-                autoCorrect="off"
-                className="w-80 h-10 border-0 rounded-2xl pl-4 pr-4 lg:block hidden mr-10 "
-                placeholder="Email"
-                required
-              />
-              <button
-                type="submit"
-                className="tracer-btn.subscribe h-10 rounded-2xl font-semibold font-medium flex items-center justify-center bg-blue-600 text-white lg:w-32 lg:mt-0 lg:mb-0 mt-6 mb-8 w-full"
-              >
-                Subscribe
-              </button>
-            </div>
+            <input
+              type="email"
+              name="email"
+              autoCapitalize="off"
+              autoComplete="off"
+              autoCorrect="off"
+              className={
+                "lg:w-80 w-full h-10 border-0 rounded-2xl lg:py-0 py-2 pl-4 pr-4 mr-10 mb-6" +
+                (formOpen ? " active" : "")
+              }
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <button
+              onClick={(e) => checkForm(e)}
+              id="submit-btn"
+              type="submit"
+              className="tracer-btn.subscribe h-10 rounded-2xl font-semibold font-medium flex items-center justify-center bg-blue-600 text-white lg:w-32 lg:mt-0 lg:mb-0 mb-8 w-full"
+            >
+              {submittedText}
+            </button>
           </form>
         </div>
         <div className="h-auto w-full flex lg:flex-row flex-col justify-between items-center">

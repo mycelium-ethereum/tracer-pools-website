@@ -165,6 +165,8 @@ const disableScrollmagic = (scene) => {
 };
 const enableScrollmagic = (scene) => {
   scene.enabled(true);
+  scene.refresh();
+  scene.update(true);
 };
 const initialiseScrollMagic = (controller) => {
   const scene = stepAnimation(controller);
