@@ -6,7 +6,7 @@ const Button = ({ className, children, linkTo, outlineButton, glowButton }) => {
       className={
         className +
         " tracer-btn " +
-        ((!!outlineButton) && " blue mx-auto text-xl") +
+        (!!outlineButton && " blue mx-auto text-xl") +
         " rounded-2xl"
       }
       href={linkTo}

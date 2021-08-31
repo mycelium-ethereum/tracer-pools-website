@@ -18,13 +18,12 @@ const Hero = () => {
             <p className="text-xl text-white">
               Leveraged exposure. No margins.
             </p>
-            <p className="text-xl text-white">
-              No liquidations.
-            </p>
-            <p className="text-xl text-white">
-              A new derivative primitive.
-            </p>
-            <Button className="mt-6 h-12 w-48 border border-white mx-auto text-xl rounded-2xl" linkTo="#">
+            <p className="text-xl text-white">No liquidations.</p>
+            <p className="text-xl text-white">A new derivative primitive.</p>
+            <Button
+              className="mt-6 h-12 w-48 border border-white mx-auto text-xl rounded-2xl"
+              linkTo="#"
+            >
               Launch Pools
             </Button>
             <div className="mt-2">
@@ -37,9 +36,12 @@ const Hero = () => {
             <img src={TracerLaptop} alt="Tracer Laptop View" />
           </div>
         </div>
-        <ArrowDown className="absolute 2xl:right-48 xl:right-30 lg:right-24 sm:w-16 sm:bottom-32 sm:right-16 bottom-12 right-10 w-14 z-20" linkTo="#steps" />
+        <ArrowDown
+          className="absolute 2xl:right-48 xl:right-30 lg:right-24 sm:w-16 sm:bottom-32 sm:right-16 bottom-12 right-10 w-14 z-20"
+          linkTo="#steps"
+        />
       </section>
-      <div className="spacer 2xl:h-96 lg:h-80 h-40 bg-white" id="steps"/>
+      <div className="spacer 2xl:h-96 lg:h-80 h-40 bg-white" id="steps" />
     </>
   );
 };
