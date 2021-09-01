@@ -4,7 +4,7 @@ import Button from "../components/button";
 
 // Images
 import MetamaskFox from "/static/img/slider/metamask-fox.svg";
-import CityBackground from "/static/img/home-page/city-background.png";
+import CityBackground from "/static/img/home-page/city-background.svg";
 import BlueBackground from "/static/img/home-page/blue-background.png";
 import CityTop from "/static/img/home-page/city/city-top.png";
 
@@ -12,20 +12,21 @@ import CityTop from "/static/img/home-page/city/city-top.png";
 const WalletAnimation = () => {
   return (
     <>
-      <section className="panel relative h-screen w-full z-0 background-blue">
+      <section className="panel relative h-screen w-full z-0 background-blue" id="token-trigger">
         <div className="container xl flex flex-col align-center justify-start h-full w-full relative z-10 mx-auto 2xl:pt-96 2xl:pt-36 xl:pt-24 lg:pt-32 xl:px-24 lg:px-12 px-4">
-          <h1 className="mb-4 text-center lg:text-6xl text-4xl font-black text-white lg:leading-snug">
+          <h1 id="fade1" className="mb-4 text-center lg:text-6xl text-4xl font-black text-white lg:leading-snug">
             Fungible ERC20
             <br />
             Tokenised Positions
           </h1>
-          <p className="text-2xl color-grey text-center font-normal color-orange">
+          <p id="fade2" className="text-2xl color-grey text-center font-normal color-orange">
             That live in your wallet
           </p>
           <Button
             className="mt-6 h-12 w-48 text-center lg:text-xl"
             outlineButton
             linkTo="#"
+            id="fade3"
           >
             Browse Tokens
           </Button>
@@ -43,8 +44,8 @@ const WalletAnimation = () => {
           </div>
           <TokenSlider className="slider-right w-2/4 overflow-hidden bottom-0 h-full absolute lg:-right-16 -right-20 z-10" />
         </div>
-        <img className="absolute top-12 left-0 w-full" src={CityBackground} />
-        <img className="absolute top-2/3 left-0 w-full" src={BlueBackground} />
+        <img className="city-top absolute top-2/4 left-0 w-full transition-all duration-500" src={CityBackground} />
+        <img className="city-background absolute top-full left-0 w-full transition-all duration-500" src={BlueBackground} />
       </section>
       <div className="large-spacer relative">
         <img

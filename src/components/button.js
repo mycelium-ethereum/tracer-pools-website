@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ className, children, linkTo, outlineButton, glowButton }) => {
+const Button = ({ className, children, linkTo, outlineButton, glowButton, id }) => {
   return (
     <a
       className={
@@ -10,6 +10,7 @@ const Button = ({ className, children, linkTo, outlineButton, glowButton }) => {
         " rounded-2xl"
       }
       href={linkTo}
+      id={id}
     >
       {children}
       {/* {smallButton && <img src={arrow_blue} alt="Blue Arrow" />} */}

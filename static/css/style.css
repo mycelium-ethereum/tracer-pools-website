@@ -26,7 +26,6 @@
 .color-orange {
   color: var(--orange);
 }
-
 .gradient {
   background: linear-gradient(93.44deg, #040C5C 1.93%, #0618BA 57.28%);
   -webkit-background-clip: text;
@@ -471,32 +470,6 @@ section {
 }
 /*------------[Positions slider]------------*/
 
-#pinMasterWallet {
-  z-index: 2;
-}
-#pinContainerWallet {
-  background: unset;
-}
-#pinMasterWallet .panel {
-  overflow: hidden;
-  z-index: 0;
-  opacity: 0;
-  background: transparent;
-}
-#pinMasterWallet .wallet-one {
-  opacity: 1;
-}
-.wallet-anim h1 {
-  color: var(--darkgrey);
-  font-size: 70px;
-  margin-top: 150px;
-  margin-bottom: 30px;
-}
-.wallet-anim small {
-  font-size: 32px;
-  color: var(--midgrey);
-  font-weight: normal;
-}
 .slick-slider {
 	position: relative;
 	z-index: 1;
@@ -518,13 +491,28 @@ section {
   box-shadow: -1px 0 28px 0 rgba(172, 136, 136, 0.75);
 }
 /* ACTIVE STYLES */
-#pinMasterWallet .panel.active {
-  z-index: 1;
-  opacity: 1;
+body:not(.steps-active) #token-trigger.active .city-top {
+  top: 0;
 }
-#pinMasterWallet .panel.active .fade-anim {
+body:not(.steps-active) #token-trigger.active .city-background {
+  top: 66%;
+}
+#token-trigger #fade1,
+#token-trigger #fade2,
+#token-trigger #fade3 {
+  opacity: 0;
+}
+#token-trigger.active #fade1 {
   opacity: 1;
-  transition: all 0.5s ease;
+  transition: opacity 0.35s ease 1s;
+}
+#token-trigger.active #fade2 {
+  opacity: 1;
+  transition: opacity 0.35s ease 2s;
+}
+#token-trigger.active #fade3 {
+  opacity: 1;
+  transition: opacity 0.35s ease 3s;
 }
 /*------------[staking-section animation section]------------*/
 
