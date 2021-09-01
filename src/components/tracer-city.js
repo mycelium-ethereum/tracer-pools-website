@@ -12,29 +12,23 @@ import CityBottom from "/static/img/home-page/city/city-bottom.png";
 const TracerCity = () => {
   return (
     <>
-      <section className="panel w-full city-step staking-section flex lg:items-center relative items-start lg:pt-0 background-blue z-10">
-        <div className="container xl flex h-screen justify-end mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col relative">
-          <div
-            className="lg:w-80 h-auto absolute left-24 mt-96 force-flex flex-col justify-center z-10 lg:pb-0 lg:mb-0 pb-80 mb-10"
-            data-stellar-ratio="1.4"
-          >
-            <span className="2xl:text-5xl lg:text-4xl font-semibold text-white mb-2 lg:block hidden">
-              Built for DeFi...
-            </span>
-            <small className="lg:text-2xl text-white font-light lg:text-left text-3xl text-center">
-              Stake and farm with the dApps you know and love.
-            </small>
-          </div>
-          <video
-            muted
-            loop="loop"
-            autoplay
-            playsinline
-            className="min-w-video absolute top-0 -right-48"
-          >
-            <source src={TracerCityVideo} type="video/mp4" />
-          </video>
-        </div>
+      <section className="panel w-full relative flex z-10">
+        {/*<div className="flex h-screen w-screen justify-end mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col relative">*/}
+        {/*  <div*/}
+        {/*    className="lg:w-80 h-auto absolute left-24 mt-96 force-flex flex-col justify-center z-10 lg:pb-0 lg:mb-0 pb-80 mb-10"*/}
+        {/*    data-stellar-ratio="1.4"*/}
+        {/*  >*/}
+        {/*    <span className="2xl:text-5xl lg:text-4xl font-semibold text-white mb-2 lg:block hidden">*/}
+        {/*      Built for DeFi...*/}
+        {/*    </span>*/}
+        {/*    <small className="lg:text-2xl text-white font-light lg:text-left text-3xl text-center">*/}
+        {/*      Stake and farm with the dApps you know and love.*/}
+        {/*    </small>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
+        <video autoPlay loop muted playsInline className="w-full">
+          <source src={TracerCityVideo} type="video/mp4" />
+        </video>
       </section>
       <section className="panel w-full h-screen city-step staking-section flex lg:items-center relative items-start lg:pt-0 pt-24 background-blue">
         <div className="container xl flex justify-between mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col relative z-10">
