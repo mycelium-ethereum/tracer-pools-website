@@ -28,15 +28,13 @@ const Hero = () => {
             </p>
             <Button
               className="mt-6 h-12 w-48 border border-white mx-auto text-xl rounded-2xl"
-              linkTo="#"
+              linkTo="/"
             >
               Launch Pools
             </Button>
-            <div className="mt-2">
-              <Link to="/">
-                <div className="text-xl text-white mt-6">Documentation</div>
-              </Link>
-            </div>
+            <Link to="/">
+              <div className="mx-auto mt-6 w-48 h-12 flex justify-center items-center text-xl text-white hover:bg-blue-400 rounded-2xl">Documentation</div>
+            </Link>
           </header>
           <div className="max-w-screen-lg absolute 2xl:-bottom-96 xl:-bottom-96 lg:-bottom-60 sm:w-3/5 w-4/5 -bottom-10 z-20">
             <img src={TracerLaptop} alt="Tracer Laptop View" />

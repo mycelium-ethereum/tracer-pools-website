@@ -12,11 +12,7 @@ import Dribbble from "/static/img/icons/dribbble.svg";
 const Footer = () => {
   const isMobile = () => {
     const width = window.innerWidth;
-    if (width < 1024) {
-      return true;
-    } else {
-      return false;
-    }
+    return width < 1024;
   };
   const setCopyrightYear = () => {
     document.getElementById("year").innerHTML = new Date().getFullYear();

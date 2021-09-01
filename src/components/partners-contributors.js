@@ -28,11 +28,7 @@ import CoinTelegraph from "/static/img/home-page/partners-contributors/media/coi
 const PartnersContributors = () => {
   const isMobile = () => {
     const width = window.innerWidth;
-    if (width < 1024) {
-      return true;
-    } else {
-      return false;
-    }
+    return width < 1024;
   };
   const toggleActiveStyles = () => {
     const slides = document.querySelectorAll("#pinContainerPartners .panel");
