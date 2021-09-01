@@ -23,7 +23,7 @@ const WalletAnimation = () => {
             That live in your wallet
           </p>
           <Button
-            className="mt-6 h-12 w-48 text-center lg:text-xl"
+            className="mt-6 h-12 w-48 text-center lg:text-xl transition-all duration-500"
             outlineButton
             linkTo="#"
             id="fade3"
@@ -47,7 +47,7 @@ const WalletAnimation = () => {
         <img className="city-top absolute top-2/4 left-0 w-full transition-all duration-500" src={CityBackground} />
         <img className="city-background absolute top-full left-0 w-full transition-all duration-500" src={BlueBackground} />
       </section>
-      <div className="large-spacer relative">
+      <div className="large-spacer relative z-10">
         <img
           className="absolute w-full bottom-0 left-2/4 transform -translate-x-1/2 z-0"
           src={CityTop}

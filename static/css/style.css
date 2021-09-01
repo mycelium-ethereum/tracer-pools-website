@@ -53,6 +53,10 @@
 .duration-1500 {
   transition-duration: 1.5s;
 }
+.min-w-video {
+  min-width: 100vw;
+  min-height: 100%;
+}
 body,
 html {
   margin: 0;
@@ -64,10 +68,8 @@ body {
   background: var(--darkblue);
 }
 *::selection {
-  background: var(--darkblue);
-  color: var(--white);
-  -webkit-background-clip: unset;
-  -webkit-text-fill-color: var(--white) !important;
+  color: var(--darkblue);
+  background: var(--white);
 }
 * {
   box-sizing: border-box;
