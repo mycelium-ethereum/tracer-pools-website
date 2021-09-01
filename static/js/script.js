@@ -127,6 +127,9 @@ window.onload = function () {
   if (!isMobile()) {
     initialiseScrollMagic(controller);
   }
+  // $.stellar()
+  $(window).stellar({horizontalScrolling: false});
+  $(window).stellar('refresh');
   window.addEventListener("resize", function () {
     if (!isMobile()) {
       if (scenes.length) {

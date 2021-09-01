@@ -6,6 +6,7 @@ import Button from "../components/button";
 import MetamaskFox from "/static/img/slider/metamask-fox.svg";
 import CityBackground from "/static/img/home-page/city-background.png";
 import BlueBackground from "/static/img/home-page/blue-background.png";
+import CityTop from "/static/img/home-page/city/city-top.png";
 
 // CityBackground
 const WalletAnimation = () => {
@@ -42,16 +43,15 @@ const WalletAnimation = () => {
           </div>
           <TokenSlider className="slider-right w-2/4 overflow-hidden bottom-0 h-full absolute lg:-right-16 -right-20 z-10" />
         </div>
-        <img
-          className="absolute top-12 left-0 w-full"
-          src={CityBackground}
-        />
-        <img
-          className="absolute top-2/3 left-0 w-full"
-          src={BlueBackground}
-        />
+        <img className="absolute top-12 left-0 w-full" src={CityBackground} />
+        <img className="absolute top-2/3 left-0 w-full" src={BlueBackground} />
       </section>
-      <div className="large-spacer" />
+      <div className="large-spacer relative">
+        <img
+          className="absolute w-full bottom-0 left-2/4 transform -translate-x-1/2 z-0"
+          src={CityTop}
+        />
+      </div>
     </>
   );
 };

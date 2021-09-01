@@ -8,15 +8,17 @@ import tracer_city from "/static/img/home-page/city/tracer-city.png";
 import tracer_building from "/static/img/home-page/city/tracer-building.png";
 import Mesh from "/static/img/home-page/city/background-3d.png";
 import MeshLarge from "/static/img/home-page/city/background-3d-large.png";
-import CityTop from "/static/img/home-page/city/city-top.png";
 import CityBottom from "/static/img/home-page/city/city-bottom.png";
 
 const TracerCity = () => {
   return (
     <>
       <section className="panel w-full h-screen city-step staking-section flex lg:items-center relative items-start lg:pt-0 background-blue z-0">
-        <div className="container xl flex justify-between mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col relative z-10">
-          <div className="lg:w-80 h-auto flex flex-col justify-center z-10 lg:pb-0 lg:mb-0 pb-80 mb-10">
+        <div className="container xl flex justify-end mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col relative z-10">
+          <div
+            className="lg:w-80 h-auto absolute left-24 mt-96 force-flex flex-col justify-center z-10 lg:pb-0 lg:mb-0 pb-80 mb-10"
+            data-stellar-ratio="1.4"
+          >
             <span className="2xl:text-5xl lg:text-4xl font-semibold text-white mb-2 lg:block hidden">
               Built for DeFi...
             </span>
@@ -36,10 +38,6 @@ const TracerCity = () => {
           className="absolute w-full h-3/4 top-2/4 left-2/4 transform -translate-x-1/2 -translate-y-1/2 z-0"
           src={Mesh}
         />
-        <img
-          className="absolute w-full -top-64 left-2/4 transform -translate-x-1/2 -translate-y-1/2 z-0"
-          src={CityTop}
-        />
       </section>
       <section className="panel w-full h-screen city-step staking-section flex lg:items-center relative items-start lg:pt-0 pt-24 background-blue">
         <div className="container xl flex justify-between mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col relative z-10">
@@ -50,7 +48,7 @@ const TracerCity = () => {
               alt="Tracer Building"
             />
           </div>
-          <div className="2xl:w-1/3 lg:w-1/3 h-auto flex flex-col justify-center z-10 lg:pb-0">
+          <div className="2xl:w-1/3 lg:w-1/3 h-auto absolute right-24 mt-96 force-flex flex-col justify-center z-10 lg:pb-0" data-stellar-ratio="1.4">
             <span className="text-5xl font-semibold mb-2 text-white color-blue">
               Built for DeFi
             </span>
@@ -72,12 +70,13 @@ const TracerCity = () => {
           className="absolute w-full h-3/4 top-2/4 left-2/4 transform -translate-x-1/2 -translate-y-1/2 z-0"
           src={MeshLarge}
         />
+      </section>
+      <div className="small-spacer relative">
         <img
-          className="absolute w-full -bottom-2/4 left-2/4 transform -translate-x-1/2 z-0"
+          className="absolute w-full top-0 left-2/4 transform -translate-x-1/2 z-0"
           src={CityBottom}
         />
-      </section>
-      <div className="small-spacer" />
+      </div>
     </>
   );
 };

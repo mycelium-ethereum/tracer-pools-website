@@ -54,7 +54,7 @@ const PartnersContributors = () => {
         <div id="pinContainerPartners" className="pin-container">
           <section className="panel lg:absolute relative top-0 left-0 w-full lg:h-screen h-auto partners flex flex-col justify-start  opacity-0 z-0 transition-all ease-in-out linear duration-1500 lg:pb-0 sm:pb-24">
             <div className="flex container xl mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
-              <p className="2xl:text-4xl lg:text-3xl font-bold color-darkgrey 2xl:mb-4 lg:mb-2 text-2xl">
+              <p className="2xl:text-4xl lg:text-3xl font-bold text-white 2xl:mb-4 lg:mb-2 text-2xl">
                 Partners
               </p>
               <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2 text-2xl">
@@ -100,7 +100,7 @@ const PartnersContributors = () => {
               <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2">
                 Partners
               </p>
-              <p className="2xl:text-4xl lg:text-3xl font-bold color-darkgrey 2xl:mb-4 lg:mb-2">
+              <p className="2xl:text-4xl lg:text-3xl font-bold text-white 2xl:mb-4 lg:mb-2">
                 Ecosystem Contributors
               </p>
               <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2">
@@ -127,14 +127,14 @@ const PartnersContributors = () => {
               <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2">
                 Ecosystem Contributors
               </p>
-              <p className="2xl:text-4xl lg:text-3xl font-bold color-darkgrey 2xl:mb-4 lg:mb-2">
+              <p className="2xl:text-4xl lg:text-3xl font-bold text-white 2xl:mb-4 lg:mb-2">
                 In the Media
               </p>
               <div className="h-auto w-full h-full flex flex-col justify-center sm:pb-24">
                 <div className="flex justify-center items-start 2xl:mt-10 xl:mt-3 lg:mt-8">
-                  <div className="flex flex-col justify-start items-center text-center w-96 mr-5">
+                  <div className="flex flex-col justify-start items-center text-center w-96 mr-5 text-white">
                     <img
-                      className="2xlw-full xl:w-28 lg:w-80"
+                      className="2xlw-full xl:w-28 lg:w-80 rounded-lg"
                       src={FinancialReview}
                     />
                     <p className="mb-4 mt-6 text-xl">
@@ -149,9 +149,9 @@ const PartnersContributors = () => {
                       jobs in Australia to build it out.
                     </p>
                   </div>
-                  <div className="flex flex-col justify-start items-center text-center w-96 ml-5">
+                  <div className="flex flex-col justify-start items-center text-center w-96 ml-5 text-white">
                     <img
-                      className="2xlw-full xl:w-28 lg:w-80"
+                      className="2xlw-full xl:w-28 lg:w-80 rounded-lg"
                       src={CoinTelegraph}
                     />
                     <p className="mb-4 mt-6 text-xl">
