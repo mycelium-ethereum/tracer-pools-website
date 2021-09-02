@@ -12,7 +12,10 @@ const IntegrateAnimation = () => {
   return (
     <section className="integrate-section flex items-center lg:h-screen h-auto lg:pb-0 pb-24">
       <div className="flex container xl mx-auto relative flex items-center justify-end xl:px-24 sm:px-12 px-4">
-        <div className="container xl w-3/5 force-flex absolute left-24 top-96 lg:justify-start lg:flex-row justify-center flex-col" data-stellar-ratio="1.2">
+        <div
+          className="container xl w-3/5 force-flex absolute left-24 top-96 lg:justify-start lg:flex-row justify-center flex-col"
+          data-stellar-ratio="1.2"
+        >
           <img
             src={MobileTile}
             className="sm:w-3/4 mx-auto w-full lg:hidden block"

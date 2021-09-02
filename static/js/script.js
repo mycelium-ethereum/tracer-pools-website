@@ -29,7 +29,7 @@ const tokenAnimation = (controller) => {
     .setTween(t2)
     .setClassToggle("#token-trigger", "active")
     .addTo(controller);
-    return scene;
+  return scene;
 };
 const cityAnimation = (controller) => {
   var t3 = gsap.timeline();
@@ -102,7 +102,7 @@ const updateActiveStep = (progress) => {
   tile.classList.remove("stage-three");
   tile.classList.remove("stage-four");
 
-  if (progress == 0) {
+  if (progress === 0) {
     // Start the step tile slide in animations
     slides[0].classList.remove("start");
   }
@@ -142,11 +142,7 @@ const updatePartnersSlide = (progress) => {
 };
 const isMobile = () => {
   const width = window.innerWidth;
-  if (width < 1024) {
-    return true;
-  } else {
-    return false;
-  }
+  return width < 1024;
 };
 const disableScrollmagic = (scene) => {
   scene.enabled(false);

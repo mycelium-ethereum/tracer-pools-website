@@ -3,16 +3,16 @@ import React, { useEffect } from "react";
 // Image assets
 
 // Partners
-import Framework from "/static/img/home-page/partners-contributors/partners/framework.svg";
-import Koji from "/static/img/home-page/partners-contributors/partners/koji.svg";
-import DACM from "/static/img/home-page/partners-contributors/partners/dacm.svg";
-import DistributedGlobal from "/static/img/home-page/partners-contributors/partners/distributed-global.svg";
-import GSR from "/static/img/home-page/partners-contributors/partners/gsr.svg";
-import Maven from "/static/img/home-page/partners-contributors/partners/maven.svg";
-import LAO from "/static/img/home-page/partners-contributors/partners/lao.svg";
-import EfficientFrontier from "/static/img/home-page/partners-contributors/partners/efficient-frontier.svg";
-import B from "/static/img/home-page/partners-contributors/partners/b.svg";
-import Apollo from "/static/img/home-page/partners-contributors/partners/apollo.svg";
+import Framework from "/static/img/home-page/partners-contributors/partners/framework.png";
+import Koji from "/static/img/home-page/partners-contributors/partners/koji.png";
+import DACM from "/static/img/home-page/partners-contributors/partners/dacm.png";
+import DistributedGlobal from "/static/img/home-page/partners-contributors/partners/distributed-global.png";
+import GSR from "/static/img/home-page/partners-contributors/partners/gsr.png";
+import Maven from "/static/img/home-page/partners-contributors/partners/maven.png";
+import LAO from "/static/img/home-page/partners-contributors/partners/lao.png";
+import EfficientFrontier from "/static/img/home-page/partners-contributors/partners/efficient-frontier.png";
+import B from "/static/img/home-page/partners-contributors/partners/b.png";
+import Apollo from "/static/img/home-page/partners-contributors/partners/apollo.png";
 
 // Contributors
 import Mycelium from "/static/img/home-page/partners-contributors/contributors/mycelium.svg";
@@ -28,11 +28,7 @@ import CoinTelegraph from "/static/img/home-page/partners-contributors/media/coi
 const PartnersContributors = () => {
   const isMobile = () => {
     const width = window.innerWidth;
-    if (width < 1024) {
-      return true;
-    } else {
-      return false;
-    }
+    return width < 1024;
   };
   const toggleActiveStyles = () => {
     const slides = document.querySelectorAll("#pinContainerPartners .panel");

@@ -12,11 +12,7 @@ import Dribbble from "/static/img/icons/dribbble.svg";
 const Footer = () => {
   const isMobile = () => {
     const width = window.innerWidth;
-    if (width < 1024) {
-      return true;
-    } else {
-      return false;
-    }
+    return width < 1024;
   };
   const setCopyrightYear = () => {
     document.getElementById("year").innerHTML = new Date().getFullYear();
@@ -117,11 +113,6 @@ const Footer = () => {
             &copy; <span id="year" /> Tracer DAO
           </span>
           <div className="w-max h-6 flex justify-between lg:mt-0 mt-8">
-            <img
-              className="w-6 h-6 cursor-pointer"
-              src={Facebook}
-              alt="Facebook"
-            />
             <a href="https://twitter.com/TracerDAO" target="_blank">
               <img
                 className="w-6 h-6 cursor-pointer ml-6"
@@ -136,11 +127,6 @@ const Footer = () => {
                 alt="GitHub"
               />
             </a>
-            <img
-              className="w-6 h-6 cursor-pointer ml-6"
-              src={Dribbble}
-              alt="Dribbble"
-            />
           </div>
           <div className="w-max h-6 flex justify-between lg:block hidden">
             <Link className="text-base font-normal text-white" to="#">

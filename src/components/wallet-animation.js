@@ -13,13 +13,13 @@ const WalletAnimation = () => {
   return (
     <>
       <section
-        className="panel relative h-screen w-full z-0 background-blue sm:pt-0 pt-48"
+        className="panel relative h-screen w-full z-0 background-blue"
         id="token-trigger"
       >
-        <div className="container xl flex flex-col align-center justify-start h-full w-full relative z-10 mx-auto 2xl:pt-96 2xl:pt-36 xl:pt-24 lg:pt-32 xl:px-24 lg:px-12 sm:pt-0 pt-12 px-4">
+        <div className="container xl flex flex-col align-center justify-start h-full w-full relative z-10 mx-auto 2xl:pt-96 2xl:pt-36 xl:pt-24 lg:pt-32 xl:px-24 lg:px-12 px-4">
           <h1
             id="fade1"
-            className="mb-4 text-center lg:text-6xl text-4xl font-black text-white lg:leading-snug sm:opacity-0"
+            className="mb-4 text-center lg:text-6xl text-4xl font-black text-white lg:leading-snug"
           >
             Fungible ERC20
             <br />
@@ -27,7 +27,7 @@ const WalletAnimation = () => {
           </h1>
           <p
             id="fade2"
-            className="text-2xl color-grey text-center font-normal color-orange sm:opacity-0"
+            className="text-2xl color-grey text-center font-normal color-orange"
           >
             That live in your wallet
           </p>
@@ -54,11 +54,11 @@ const WalletAnimation = () => {
           <TokenSlider className="slider-right w-2/4 overflow-hidden bottom-0 h-full absolute lg:-right-16 -right-16 z-10" />
         </div>
         <img
-          className="city-top absolute sm:top-2/4 top-24 left-0 w-full transition-all duration-500"
+          className="city-top absolute top-2/4 left-0 w-full transition-all duration-500"
           src={CityBackground}
         />
         <img
-          className="city-background absolute sm:top-full top-48 left-0 sm:w-full sm:h-auto h-full transition-all duration-500"
+          className="city-background absolute top-full left-0 w-full transition-all duration-500"
           src={BlueBackground}
         />
       </section>

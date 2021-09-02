@@ -13,8 +13,8 @@ import PinkRectangle from "/static/img/home-page/background/pink-rectangle.png";
 
 const BackgroundParallax = () => {
   useEffect(() => {
-    var scene = document.querySelector(".tile-bg");
-    var scene2 = document.querySelector(".square-middle");
+    const scene = document.querySelector(".tile-bg");
+    const scene2 = document.querySelector(".square-middle");
     new Parallax(scene);
     new Parallax(scene2);
     // var parallaxInstance = new Parallax(scene);
