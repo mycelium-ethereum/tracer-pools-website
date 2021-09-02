@@ -65,12 +65,12 @@ const Footer = () => {
     });
   });
   return (
-    <footer className="w-full relative overflow-hidden lg:h-72 lg:pb-0 pb-8 h-auto z-0">
-      <img
+    <footer className="w-full relative overflow-hidden lg:h-72 lg:pb-0 pb-8 h-auto z-0 bg-black">
+      {/* <img
         className="absolute top-0 left-0 h-full min-w-full z-0"
         src={FooterBackground}
         alt="Footer Background"
-      />
+      /> */}
       <div className="container xl mx-auto relative z-1 xl:px-24 lg:px-12 px-16">
         <div className="w-full flex lg:flex-row flex-col justify-between items-center lg:pt-0 lg:h-60 h-auto pt-16">
           <span className="font-semibold text-white 2xl:w-auto lg:text-4xl lg:w-96 text-2xl">
@@ -95,7 +95,7 @@ const Footer = () => {
               autoComplete="off"
               autoCorrect="off"
               className={
-                "lg:w-80 w-full h-10 border-0 rounded-2xl lg:py-0 py-2 pl-4 pr-4 mr-10 mb-6" +
+                "lg:w-80 w-full h-10 border-0 rounded-2xl lg:py-0 py-2 pl-4 pr-4 mr-10 lg:mb-0 mb-6" +
                 (formOpen ? " active" : "")
               }
               id="email"

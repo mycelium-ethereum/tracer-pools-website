@@ -1,5 +1,6 @@
 /* eslint-disable */
-import React from "react";
+import React, {useState} from "react";
+import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 // Components
 import Layout from "../components/layout";
@@ -13,17 +14,23 @@ import IntegrateAnimation from "../components/integrate-animation";
 import PartnersContributors from "../components/partners-contributors";
 
 const Index = () => {
+  const [direction, setDirection] = useState("");
   return (
     <>
       <SEO title="Home" />
       <Layout>
-        <Hero />
-        <LeverageSteps />
-        <WalletAnimation />
-        <TracerCity />
-        <IntegrateAnimation />
-        <PartnersContributors />
-        <Socials />
+        <ReactScrollWheelHandler
+          upHandler={(e) => setDirection("up")}
+          downHandler={(e) => setDirection("down")}
+        >
+          <Hero />
+          <LeverageSteps direction={direction} />
+          <WalletAnimation/>
+          <TracerCity />
+          <IntegrateAnimation />
+          <PartnersContributors />
+          <Socials />
+        </ReactScrollWheelHandler>
       </Layout>
     </>
   );

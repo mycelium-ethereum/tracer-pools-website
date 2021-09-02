@@ -12,33 +12,36 @@ import CityBottom from "/static/img/home-page/city/city-bottom.png";
 const TracerCity = () => {
   return (
     <>
-      <section className="panel w-full city-step staking-section flex lg:items-center relative items-start lg:pt-0 background-blue z-10">
+      <section
+        id="city-trigger"
+        className="panel w-full city-step staking-section flex lg:items-center relative items-start lg:pt-0 background-blue z-10"
+      >
         <div className="container xl flex h-screen justify-end mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col relative">
           <div
-            className="lg:w-80 h-auto absolute left-24 mt-96 force-flex flex-col justify-center z-10 lg:pb-0 lg:mb-0 pb-80 mb-10"
+            className="lg:w-80 h-auto absolute sm:left-24 sm:mt-96 force-flex flex-col justify-center z-10 lg:pb-0 lg:mb-0 sm:pb-80 sm:pt-0 sm:px-0 sm:transform-none transform-gpu  left-0 px-8 pt-12 mb-10 sm:text-left text-center"
             data-stellar-ratio="1.4"
           >
-            <span className="2xl:text-5xl lg:text-4xl font-semibold text-white mb-2 lg:block hidden">
+            <span className="2xl:text-5xl lg:text-4xl text-3xl font-extrabold text-white mb-2">
               Built for DeFi...
             </span>
-            <small className="lg:text-2xl text-white font-light lg:text-left text-3xl text-center">
+            <small className="lg:text-2xl text-white font-light lg:text-left text-lg text-center">
               Stake and farm with the dApps you know and love.
             </small>
           </div>
           <video
             muted
             loop="loop"
-            autoplay
-            playsinline
-            className="min-w-video absolute top-0 -right-48"
+            autoPlay
+            playsInline
+            className="min-w-video absolute top-0 sm:-right-48 sm:opacity-0 sm:left-auto -left-12 transition-opacity duration-1000"
           >
             <source src={TracerCityVideo} type="video/mp4" />
           </video>
         </div>
       </section>
-      <section className="panel w-full h-screen city-step staking-section flex lg:items-center relative items-start lg:pt-0 pt-24 background-blue">
+      <section id="building-trigger" className="panel w-full h-screen city-step staking-section flex lg:items-center relative items-start lg:pt-0 sm:pt-24 background-blue z-10">
         <div className="container xl flex justify-between mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col relative z-10">
-          <div className="w-2/4 h-screen z-0 items-center justify-center flex">
+          <div id="tracer-building" className="w-2/4 h-screen z-0 items-center justify-center flex sm:opacity-0 transition-opacity duration-1000">
             <img
               className="w-full"
               src={TracerBuilding}
@@ -46,7 +49,7 @@ const TracerCity = () => {
             />
           </div>
           <div
-            className="2xl:w-1/3 lg:w-1/3 h-auto absolute right-24 mt-96 force-flex flex-col justify-center z-10 lg:pb-0"
+            className="2xl:w-1/3 lg:w-1/3 h-auto absolute sm:right-24 sm:mt-96 sm:left-auto left-0 sm:px-0 px-4 force-flex flex-col justify-center z-10 lg:pb-0 sm:text-left text-center"
             data-stellar-ratio="1.4"
           >
             <span className="text-5xl font-semibold mb-2 text-white color-blue">

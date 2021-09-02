@@ -4,7 +4,7 @@ import BackgroundParallax from "../components/parallax";
 import ArrowDown from "../components/arrow-down";
 import Button from "../components/button";
 // Assets
-import TracerLaptop from "/static/img/home-page/laptop.svg";
+import TracerLaptop from "/static/img/home-page/laptop.png";
 const Hero = () => {
   return (
     <>
@@ -38,7 +38,7 @@ const Hero = () => {
               </Link>
             </div>
           </header>
-          <div className="max-w-screen-lg absolute 2xl:-bottom-96 xl:-bottom-96 lg:-bottom-60 sm:w-3/5 w-4/5 -bottom-10 z-20">
+          <div className="max-w-screen-xl absolute 2xl:-bottom-80 xl:-bottom-96 lg:-bottom-60 w-full px-24 -bottom-10 z-20">
             <img src={TracerLaptop} alt="Tracer Laptop View" />
           </div>
         </div>

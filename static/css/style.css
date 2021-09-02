@@ -309,20 +309,22 @@ section {
 }
 
 /* LEVERAGE STEPS */
-.panel:not(.city-step) .container-xl {
-  height: 100%;
-  align-items: center;
-}
+/* #pinContainer .panel .step-info {
+  opacity: 0;
+  transition: all 0.5s ease;
+} */
 .step-info {
   position: relative;
   height: 500px;
 }
 .step-info .step-info__text {
+  position: relative;
+  z-index: 1;
   opacity: 0;
-  animation: slideOut 0.9s linear forwards;
+  animation: slideOutLTR 0.9s linear;
 }
-.step-info .step-info__text p {
-  line-height: 28px;
+#pinContainer.up .step-info .step-info__text {
+  animation: slideOutRTL 0.9s linear;
 }
 .step-progress {
   width: 440px;
@@ -378,6 +380,79 @@ section {
   right: -1160px;
 }
 
+/* ACTIVE STYLES */
+.panel.active {
+  pointer-events: all;
+  z-index: 1 !important;
+}
+.panel.active .step-info,
+.panel.active .step-info .step-info__text {
+  opacity: 1;
+}
+.panel.active .step-info__text {
+  z-index: 2;
+  animation: slideInLTR 0.9s linear;
+}
+#pinContainer.up .panel.active .step-info__text {
+  animation: slideInRTL 0.9s linear;
+}
+.panel.active .step-progress {
+  opacity: 1;
+  z-index: 1;
+}
+/* For step number */
+@keyframes slideInLTR {
+  0% {
+    transform: translateX(-250px);
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideOutLTR {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+}
+@keyframes slideOutRTL {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-250px);
+    opacity: 0;
+  }
+}
+@keyframes slideInRTL {
+  0% {
+    transform: translateX(250px);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 /* Active styles*/
 .step-one.start .step-animation img {
   opacity: 1;
@@ -420,56 +495,6 @@ section {
   right: 238px;
 }
 
-/* ACTIVE STYLES */
-.panel.active {
-  pointer-events: all;
-  z-index: 1 !important;
-}
-.panel.active .step-info,
-.panel.active .step-info .step-info__text {
-  opacity: 1;
-}
-.panel.active .step-info__text {
-  animation: slideIn 0.9s linear forwards;
-}
-.panel.active .step-progress {
-  opacity: 1;
-  z-index: 1;
-}
-
-/* Directional animations */
-/* #pinContainer.up .panel .step-info__text {
-  animation: slideIn 0.5s linear forwards;
-}
-#pinContainer.up .panel.active .step-info__text {
-  animation: slideOut 0.7s linear forwards;
-} */
-/* For step number */
-@keyframes slideIn {
-  0% {
-    transform: translateX(-250px);
-    opacity: 0;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-@keyframes slideOut {
-  0% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-  30% {
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(250px);
-  }
-}
 /*------------[Positions slider]------------*/
 
 .slick-slider {
@@ -499,11 +524,6 @@ body:not(.steps-active) #token-trigger.active .city-top {
 body:not(.steps-active) #token-trigger.active .city-background {
   top: 66%;
 }
-#token-trigger #fade1,
-#token-trigger #fade2,
-#token-trigger #fade3 {
-  opacity: 0;
-}
 #token-trigger.active #fade1 {
   opacity: 1;
   transition: opacity 0.35s ease 1s;
@@ -516,19 +536,14 @@ body:not(.steps-active) #token-trigger.active .city-background {
   opacity: 1;
   transition: opacity 0.35s ease 3s;
 }
-/*------------[staking-section animation section]------------*/
+/*------------TRACER CITY------------*/
 
-#pinContainerCity .panel {
-  z-index: 0;
+#city-trigger.active video {
+  opacity: 1;
 }
-.city-step__animation {
-  height: 950px;
-  max-width: 930px;
-  width: 100%;
-  pointer-events: none;
+#building-trigger.active #tracer-building {
+  opacity: 1;
 }
-
-/*------------[Strategise animation section]------------*/
 
 /* --------------- INTEGRATE SECTION --------------- */
 
@@ -689,6 +704,20 @@ body:not(.steps-active) #token-trigger.active .city-background {
     max-height: 150px;
     height: auto;
     opacity: 1;
+  }
+  .large-spacer {
+    height: 200px; 
+  }
+  .medium-spacer {
+    width: 100%;
+    height: 50vh; 
+  }
+  .small-spacer {
+    width: 100%;
+    height: 50vh; 
+  }
+  div[data-stellar-ratio] {
+    top: 0 !important;
   }
 }
 @media only screen and (max-width: 479px) {

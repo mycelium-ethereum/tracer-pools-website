@@ -31,9 +31,40 @@ const tokenAnimation = (controller) => {
     .addTo(controller);
     return scene;
 };
-const integrateAnimation = (controller) => {
+const cityAnimation = (controller) => {
+  var t3 = gsap.timeline();
+  const halfScreen = window.innerHeight * 0.5;
+  t3.from("#city-trigger", 1, { xPercent: 0, opacity: 1 });
+
+  const scene = new ScrollMagic.Scene({
+    triggerElement: "#city-trigger",
+    triggerHook: "onLeave",
+    duration: "0%",
+    offset: -100,
+  })
+    .setTween(t3)
+    .setClassToggle("#city-trigger", "active")
+    .addTo(controller);
+    return scene;
+};
+const buildingAnimation = (controller) => {
   var t4 = gsap.timeline();
-  t4.from(".integrate-section", 1, { xPercent: 0, opacity: 1 });
+  t4.from("#building-trigger", 1, { xPercent: 0, opacity: 1 });
+
+  const scene = new ScrollMagic.Scene({
+    triggerElement: "#building-trigger",
+    triggerHook: "onLeave",
+    duration: "0%",
+    // offset: -100,
+  })
+    .setTween(t4)
+    .setClassToggle("#building-trigger", "active")
+    .addTo(controller);
+    return scene;
+};
+const integrateAnimation = (controller) => {
+  var t5 = gsap.timeline();
+  t5.from(".integrate-section", 1, { xPercent: 0, opacity: 1 });
 
   const scene = new ScrollMagic.Scene({
     triggerElement: ".integrate-section",
@@ -41,7 +72,7 @@ const integrateAnimation = (controller) => {
     duration: "0%",
     offset: -300,
   })
-    .setTween(t4)
+    .setTween(t5)
     .setClassToggle(".integrate-section", "active")
     .addTo(controller);
   return scene;
@@ -128,15 +159,19 @@ const enableScrollmagic = (scene) => {
 const initialiseScrollMagic = (controller) => {
   const scene = stepAnimation(controller);
   const scene2 = tokenAnimation(controller);
-  const scene4 = integrateAnimation(controller);
-  const scene5 = partnersAnimation(controller);
+  const scene3 = cityAnimation(controller);
+  const scene4 = buildingAnimation(controller);
+  const scene5 = integrateAnimation(controller);
+  const scene6 = partnersAnimation(controller);
   scenes.push(scene);
   scenes.push(scene2);
+  scenes.push(scene3);
   scenes.push(scene4);
   scenes.push(scene5);
+  scenes.push(scene6);
   window.addEventListener("scroll", function () {
     updateActiveStep(scene.progress());
-    updatePartnersSlide(scene5.progress());
+    updatePartnersSlide(scene6.progress());
   });
 };
 const scenes = [];
@@ -149,6 +184,8 @@ window.onload = function () {
   // $.stellar()
   $(window).stellar({horizontalScrolling: false});
   $(window).stellar('refresh');
+
+  // Disable ScrollMagic on resize
   window.addEventListener("resize", function () {
     if (!isMobile()) {
       if (scenes.length) {
