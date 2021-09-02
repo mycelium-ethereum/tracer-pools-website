@@ -43,20 +43,13 @@ const TracerCity = () => {
         </div>
       </div>
 
-      <section className="panel w-full h-screen city-step staking-section flex lg:items-center relative items-start lg:pt-0 pt-24 background-blue">
-        <div className="container xl flex justify-between mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col relative z-10">
-          <div className="w-2/4 h-screen z-0 items-center justify-center flex">
-            <img
-              className="w-full"
-              src={TracerBuilding}
-              alt="Tracer Building"
-            />
-          </div>
+      <div className="panel w-full relative bg-blue-1000">
+        <div className="sm:container mx-auto relative flex lg:flex-row flex-col z-10">
           <div
             className="2xl:w-1/3 lg:w-1/3 h-auto absolute right-24 mt-96 force-flex flex-col justify-center z-10 lg:pb-0"
             data-stellar-ratio="1.4"
           >
-            <span className="text-5xl font-semibold mb-2 text-white color-blue">
+            <span className="text-5xl font-bold mb-2 text-white color-blue">
               Built for DeFi
             </span>
             <h1 className="font-bold text-white mb-4 text-5xl">
@@ -66,24 +59,17 @@ const TracerCity = () => {
               Stake and farm with the dApps you know and love.
             </small>
             <GlowButton
-              className="lg:h-16 h-12 w-48 text-normal rounded-2xl text-xl font-semibold mt-6 lg:ml-0 lg:mb-0 mb-8 mx-auto"
+              className="lg:h-16 h-12 w-48 text-normal rounded-2xl text-xl font-bold mt-6 lg:ml-0 lg:mb-0 mb-8 mx-auto"
               linkTo="#"
             >
               Launch Docs
             </GlowButton>
           </div>
+          <img src={TracerBuilding} alt="Tracer Building" />
         </div>
-        <img
-          className="absolute w-full h-3/4 top-2/4 left-2/4 transform -translate-x-1/2 -translate-y-1/2 z-0"
-          src={MeshLarge}
-        />
-      </section>
-      <div className="small-spacer relative">
-        <img
-          className="absolute w-full top-0 left-2/4 transform -translate-x-1/2 z-0"
-          src={CityBottom}
-        />
+        <img className="absolute w-full h-3/4 top-2/4 left-2/4 transform -translate-x-1/2 -translate-y-1/2 z-0" src={MeshLarge} alt="Large Mesh" />
       </div>
+      <img className="w-full z-0" src={CityBottom} alt="City Bottom" />
     </>
   );
 };
