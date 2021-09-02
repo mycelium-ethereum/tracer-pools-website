@@ -6,9 +6,9 @@ module.exports = {
     extend: {
       colors: {
         blue: {
-          1000: '#0d2bd3'
+          1000: "#0d2bd3",
         },
-      }
+      },
     },
   },
   variants: {

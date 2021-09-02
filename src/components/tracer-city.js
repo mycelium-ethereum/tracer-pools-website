@@ -19,7 +19,12 @@ const TracerCity = () => {
         <div className="flex flex-col items-center text-white">
           <div className="text-3xl font-bold">Built for DeFi...</div>
           <div>Stake and farm with the dApps you know and love.</div>
-          <Button className="mt-6 h-12 w-48 border border-white text-xl rounded-2xl" linkTo="/">Launch Docs</Button>
+          <Button
+            className="mt-6 h-12 w-48 border border-white text-xl rounded-2xl"
+            linkTo="/"
+          >
+            Launch Docs
+          </Button>
         </div>
       </div>
 
@@ -27,8 +32,15 @@ const TracerCity = () => {
         {/*tracer city text desktop*/}
         <div className="hidden sm:block absolute top-28 lg:top-56 left-32 z-10 text-white">
           <div className="text-3xl font-bold">Built for DeFi...</div>
-          <div className="text-xl mt-6">Stake and farm with the dApps <br /> you know and love.</div>
-          <Button className="mt-6 h-12 w-48 border border-white text-xl rounded-2xl" linkTo="/">Launch Docs</Button>
+          <div className="text-xl mt-6">
+            Stake and farm with the dApps <br /> you know and love.
+          </div>
+          <Button
+            className="mt-6 h-12 w-48 border border-white text-xl rounded-2xl"
+            linkTo="/"
+          >
+            Launch Docs
+          </Button>
         </div>
 
         {/*tracer city video mobile*/}
@@ -46,33 +58,53 @@ const TracerCity = () => {
         </div>
       </div>
 
-
       {/*tracer building text mobile*/}
       <div className="sm:hidden h-52 flex justify-center items-center bg-blue-1000">
         <div className="flex flex-col items-center text-white">
           <div className="text-3xl font-bold">Built for DeFi...</div>
           <div>Strategise Natively</div>
-          <Button className="mt-6 h-12 w-48 border border-white text-xl rounded-2xl" linkTo="/">Launch Docs</Button>
+          <Button
+            className="mt-6 h-12 w-48 border border-white text-xl rounded-2xl"
+            linkTo="/"
+          >
+            Launch Docs
+          </Button>
         </div>
       </div>
 
       <div className="panel w-full relative bg-blue-1000">
         {/*tracer building section content*/}
         <div className="sm:container mx-auto relative flex flex-col sm:flex-row z-10">
-
           {/*tracer building image*/}
-          <img className="w-1/2 mx-auto md:mx-0" src={TracerBuilding} alt="Tracer Building" />
+          <img
+            className="w-1/2 mx-auto md:mx-0"
+            src={TracerBuilding}
+            alt="Tracer Building"
+          />
 
           {/*tracer building text desktop */}
           <div className="hidden sm:flex flex-col justify-center z-10 md:ml-20">
-            <div className="text-3xl font-bold mb-2 text-white color-blue">Built for DeFi</div>
-            <div className="font-bold text-white mb-4 text-3xl">Strategise Natively</div>
-            <GlowButton className="lg:h-16 h-12 w-48 text-normal rounded-2xl text-xl font-bold mt-6 lg:ml-0 lg:mb-0 mb-8" linkTo="#">Launch Docs</GlowButton>
+            <div className="text-3xl font-bold mb-2 text-white color-blue">
+              Built for DeFi
+            </div>
+            <div className="font-bold text-white mb-4 text-3xl">
+              Strategise Natively
+            </div>
+            <GlowButton
+              className="lg:h-16 h-12 w-48 text-normal rounded-2xl text-xl font-bold mt-6 lg:ml-0 lg:mb-0 mb-8"
+              linkTo="#"
+            >
+              Launch Docs
+            </GlowButton>
           </div>
         </div>
 
         {/*tracer building mesh background*/}
-        <img className="absolute w-full h-3/4 top-2/4 left-2/4 transform -translate-x-1/2 -translate-y-1/2 z-0" src={MeshLarge} alt="Large Mesh" />
+        <img
+          className="absolute w-full h-3/4 top-2/4 left-2/4 transform -translate-x-1/2 -translate-y-1/2 z-0"
+          src={MeshLarge}
+          alt="Large Mesh"
+        />
       </div>
 
       <img className="w-full z-0" src={CityBottom} alt="City Bottom" />
