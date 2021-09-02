@@ -9,7 +9,7 @@ import LayerTwo from "/static/img/home-page/steps/layer-2.svg";
 import LayerThree from "/static/img/home-page/steps/layer-3.svg";
 import LayerFour from "/static/img/home-page/steps/layer-4.svg";
 
-const LeverageSteps = () => {
+const LeverageSteps = (direction) => {
   var slideUp = {
     duration: 500,
     // origin: "bottom",
@@ -39,7 +39,7 @@ const LeverageSteps = () => {
       <section id="pinMaster" className="pin-master">
         <div
           id="pinContainer"
-          className="pin-container lg:overflow-hidden background-blue z-10"
+          className={"pin-container lg:overflow-hidden background-blue z-10 " + direction.direction}
         >
           <section className="panel absolute top-0 left-0 w-full h-full step-one flex flex-col justify-center absolute w-full h-full lg:pointer-events-none pointer-events-auto">
             <div className="flex container xl mx-auto lg:flex-row flex-col items-center h-full lg:pt-48 xl:px-24 lg:px-12 px-4">
@@ -54,7 +54,7 @@ const LeverageSteps = () => {
                   <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold background-blue ">
                     01
                   </span>
-                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
+                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white background-blue">
                     Select side
                     <br />
                     BTC/DAI, LINK/DAI, or ETH/DAI
@@ -151,7 +151,7 @@ const LeverageSteps = () => {
                   <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold background-blue ">
                     02
                   </span>
-                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
+                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white background-blue">
                     Select market
                     <br />
                     Long or short
@@ -179,7 +179,7 @@ const LeverageSteps = () => {
                   <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold background-blue ">
                     03
                   </span>
-                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
+                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white background-blue">
                     Select leverage
                     <br />
                     1x, 2x, 3x, 5x, or 15x
@@ -207,7 +207,7 @@ const LeverageSteps = () => {
                   <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold background-blue ">
                     04
                   </span>
-                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
+                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white background-blue">
                     Enter collateral Deposit collateral and press 'buy' to gain
                     leveraged exposure
                   </p>
