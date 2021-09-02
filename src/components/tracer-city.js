@@ -45,13 +45,10 @@ const TracerCity = () => {
 
       <div className="panel w-full relative bg-blue-1000">
         <div className="sm:container mx-auto relative flex lg:flex-row flex-col z-10">
-          <div
-            className="2xl:w-1/3 lg:w-1/3 h-auto absolute right-24 mt-96 force-flex flex-col justify-center z-10 lg:pb-0"
-            data-stellar-ratio="1.4"
-          >
-            <span className="text-5xl font-bold mb-2 text-white color-blue">
+          <div className="2xl:w-1/3 lg:w-1/3 h-auto absolute right-24 mt-96 force-flex flex-col justify-center z-10 lg:pb-0" data-stellar-ratio="1.4">
+            <div className="text-5xl font-bold mb-2 text-white color-blue">
               Built for DeFi
-            </span>
+            </div>
             <h1 className="font-bold text-white mb-4 text-5xl">
               &amp; Strategise Natively
             </h1>
