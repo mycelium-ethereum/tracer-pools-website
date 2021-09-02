@@ -1,6 +1,13 @@
 import React from "react";
 
-const Button = ({ className, children, linkTo, outlineButton, glowButton, id }) => {
+const Button = ({
+  className,
+  children,
+  linkTo,
+  outlineButton,
+  glowButton,
+  id,
+}) => {
   return (
     <a
       className={

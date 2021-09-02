@@ -29,7 +29,7 @@ const tokenAnimation = (controller) => {
     .setTween(t2)
     .setClassToggle("#token-trigger", "active")
     .addTo(controller);
-    return scene;
+  return scene;
 };
 const integrateAnimation = (controller) => {
   var t4 = gsap.timeline();
@@ -71,7 +71,7 @@ const updateActiveStep = (progress) => {
   tile.classList.remove("stage-three");
   tile.classList.remove("stage-four");
 
-  if (progress == 0) {
+  if (progress === 0) {
     // Start the step tile slide in animations
     slides[0].classList.remove("start");
   }
@@ -111,11 +111,7 @@ const updatePartnersSlide = (progress) => {
 };
 const isMobile = () => {
   const width = window.innerWidth;
-  if (width < 1024) {
-    return true;
-  } else {
-    return false;
-  }
+  return width < 1024;
 };
 const disableScrollmagic = (scene) => {
   scene.enabled(false);
@@ -147,8 +143,8 @@ window.onload = function () {
     initialiseScrollMagic(controller);
   }
   // $.stellar()
-  $(window).stellar({horizontalScrolling: false});
-  $(window).stellar('refresh');
+  $(window).stellar({ horizontalScrolling: false });
+  $(window).stellar("refresh");
   window.addEventListener("resize", function () {
     if (!isMobile()) {
       if (scenes.length) {

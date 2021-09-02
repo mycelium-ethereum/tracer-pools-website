@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 // Components
 import GlowButton from "../components/glow-button";
 
 // Image assets
 import TracerCityVideo from "/static/img/home-page/city/tracer-city.mp4";
+import TracerCityVideoMobile from "/static/img/home-page/city/tracer-city-mobile.mp4";
 import TracerBuilding from "/static/img/home-page/city/tracer-building.png";
 import MeshLarge from "/static/img/home-page/city/background-3d-large.png";
 import CityBottom from "/static/img/home-page/city/city-bottom.png";
@@ -12,24 +13,36 @@ import CityBottom from "/static/img/home-page/city/city-bottom.png";
 const TracerCity = () => {
   return (
     <>
-      <section className="panel w-full relative flex z-10">
-        {/*<div className="flex h-screen w-screen justify-end mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col relative">*/}
-        {/*  <div*/}
-        {/*    className="lg:w-80 h-auto absolute left-24 mt-96 force-flex flex-col justify-center z-10 lg:pb-0 lg:mb-0 pb-80 mb-10"*/}
-        {/*    data-stellar-ratio="1.4"*/}
-        {/*  >*/}
-        {/*    <span className="2xl:text-5xl lg:text-4xl font-semibold text-white mb-2 lg:block hidden">*/}
-        {/*      Built for DeFi...*/}
-        {/*    </span>*/}
-        {/*    <small className="lg:text-2xl text-white font-light lg:text-left text-3xl text-center">*/}
-        {/*      Stake and farm with the dApps you know and love.*/}
-        {/*    </small>*/}
-        {/*  </div>*/}
-        {/*</div>*/}
-        <video autoPlay loop muted playsInline className="w-full">
-          <source src={TracerCityVideo} type="video/mp4" />
-        </video>
-      </section>
+      {/*tracer city text mobile*/}
+      <div className="sm:hidden h-52 flex justify-center items-center bg-blue-1000">
+        <div className="text-white">
+          <div className="text-3xl font-bold">Built for DeFi...</div>
+          <div>Stake and farm with the dApps you know and love.</div>
+        </div>
+      </div>
+
+      <div className="panel relative w-full z-10">
+        {/*tracer city text desktop*/}
+        <div className="hidden sm:block absolute top-48 left-32 z-10 text-white" data-stellar-ratio="1.4">
+          <div className="text-3xl font-bold">Built for DeFi...</div>
+          <div>Stake and farm with the dApps you know and love.</div>
+        </div>
+
+        {/*tracer city video mobile*/}
+        <div className="sm:hidden">
+          <video autoPlay loop muted playsInline className="w-full">
+            <source src={TracerCityVideoMobile} type="video/mp4" />
+          </video>
+        </div>
+
+        {/*tracer city video desktop*/}
+        <div className="hidden sm:block">
+          <video autoPlay loop muted playsInline className="w-full">
+            <source src={TracerCityVideo} type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
       <section className="panel w-full h-screen city-step staking-section flex lg:items-center relative items-start lg:pt-0 pt-24 background-blue">
         <div className="container xl flex justify-between mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col relative z-10">
           <div className="w-2/4 h-screen z-0 items-center justify-center flex">
