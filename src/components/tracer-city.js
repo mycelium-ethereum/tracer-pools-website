@@ -14,100 +14,80 @@ import CityBottom from "/static/img/home-page/city/city-bottom.png";
 const TracerCity = () => {
   return (
     <>
-      {/*tracer city text mobile*/}
-      <div className="sm:hidden h-52 flex justify-center items-center bg-blue-1000">
-        <div className="flex flex-col items-center text-white">
-          <div className="text-3xl font-bold">Built for DeFi...</div>
-          <div>Stake and farm with the dApps you know and love.</div>
-          <Button
-            className="mt-6 h-12 w-48 border border-white text-xl rounded-2xl"
-            linkTo="/"
+      <section
+        id="city-trigger"
+        className="panel w-full city-step staking-section flex lg:items-center relative items-start lg:pt-0 background-blue z-10"
+      >
+        <div className="container xl flex h-screen justify-end mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col relative">
+          <div
+            className="lg:w-80 h-auto absolute sm:left-24 sm:mt-96 force-flex flex-col justify-center z-10 lg:pb-0 lg:mb-0 sm:pb-80 sm:pt-0 sm:px-0 sm:transform-none transform-gpu  left-0 px-8 pt-12 mb-10 sm:text-left text-center"
+            data-stellar-ratio="1.4"
           >
-            Launch Docs
-          </Button>
-        </div>
-      </div>
-
-      <div className="panel relative w-full z-10">
-        {/*tracer city text desktop*/}
-        <div className="hidden sm:block absolute top-28 lg:top-56 left-32 z-10 text-white">
-          <div className="text-3xl font-bold">Built for DeFi...</div>
-          <div className="text-xl mt-6">
-            Stake and farm with the dApps <br /> you know and love.
+            <span className="2xl:text-5xl lg:text-4xl text-3xl font-extrabold text-white mb-2">
+              Built for DeFi...
+            </span>
+            <small className="lg:text-2xl text-white font-light lg:text-left text-lg text-center">
+              Stake and farm with the dApps you know and love.
+            </small>
           </div>
-          <Button
-            className="mt-6 h-12 w-48 border border-white text-xl rounded-2xl"
-            linkTo="/"
+        </div>
+        <video
+          muted
+          loop="loop"
+          autoPlay
+          playsInline
+          className="min-w-video absolute top-0 sm:opacity-0 right-0 transition-opacity duration-1000"
+        >
+          <source src={TracerCityVideo} type="video/mp4" />
+        </video>
+      </section>
+      <section
+        id="building-trigger"
+        className="panel w-full h-screen city-step staking-section flex lg:items-center relative items-start lg:pt-0 sm:pt-24 background-blue z-10"
+      >
+        <div className="container xl flex justify-between mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col relative z-10">
+          <div
+            id="tracer-building"
+            className="w-2/4 h-screen z-0 items-center justify-center flex sm:opacity-0 transition-opacity duration-1000"
           >
-            Launch Docs
-          </Button>
-        </div>
-
-        {/*tracer city video mobile*/}
-        <div className="sm:hidden">
-          <video autoPlay loop muted playsInline className="w-full">
-            <source src={TracerCityVideoMobile} type="video/mp4" />
-          </video>
-        </div>
-
-        {/*tracer city video desktop*/}
-        <div className="hidden sm:block">
-          <video autoPlay loop muted playsInline className="w-full">
-            <source src={TracerCityVideo} type="video/mp4" />
-          </video>
-        </div>
-      </div>
-
-      {/*tracer building text mobile*/}
-      <div className="sm:hidden h-52 flex justify-center items-center bg-blue-1000">
-        <div className="flex flex-col items-center text-white">
-          <div className="text-3xl font-bold">Built for DeFi...</div>
-          <div>Strategise Natively</div>
-          <Button
-            className="mt-6 h-12 w-48 border border-white text-xl rounded-2xl"
-            linkTo="/"
+            <img
+              className="w-full"
+              src={TracerBuilding}
+              alt="Tracer Building"
+            />
+          </div>
+          <div
+            className="2xl:w-1/3 lg:w-1/3 h-auto absolute sm:right-24 sm:mt-96 right-0 sm:px-0 px-4 force-flex flex-col justify-center z-10 lg:pb-0 sm:text-left text-center"
+            data-stellar-ratio="1.4"
           >
-            Launch Docs
-          </Button>
-        </div>
-      </div>
-
-      <div className="panel w-full relative bg-blue-1000">
-        {/*tracer building section content*/}
-        <div className="sm:container mx-auto relative flex flex-col sm:flex-row z-10">
-          {/*tracer building image*/}
-          <img
-            className="w-1/2 mx-auto md:mx-0"
-            src={TracerBuilding}
-            alt="Tracer Building"
-          />
-
-          {/*tracer building text desktop */}
-          <div className="hidden sm:flex flex-col justify-center z-10 md:ml-20">
-            <div className="text-3xl font-bold mb-2 text-white color-blue">
+            <span className="text-5xl font-semibold mb-2 text-white color-blue">
               Built for DeFi
-            </div>
-            <div className="font-bold text-white mb-4 text-3xl">
-              Strategise Natively
-            </div>
+            </span>
+            <h1 className="font-bold text-white mb-4 text-5xl">
+              &amp; Strategise Natively
+            </h1>
+            <small className="2xl:w-72 lg:text-2xl text-white font-light lg:text-left text-3xl">
+              Stake and farm with the dApps you know and love.
+            </small>
             <GlowButton
-              className="lg:h-16 h-12 w-48 text-normal rounded-2xl text-xl font-bold mt-6 lg:ml-0 lg:mb-0 mb-8"
+              className="lg:h-16 h-12 w-48 text-normal rounded-2xl text-xl font-semibold mt-6 lg:ml-0 lg:mb-0 mb-8 mx-auto"
               linkTo="#"
             >
               Launch Docs
             </GlowButton>
           </div>
         </div>
-
-        {/*tracer building mesh background*/}
         <img
           className="absolute w-full h-3/4 top-2/4 left-2/4 transform -translate-x-1/2 -translate-y-1/2 z-0"
           src={MeshLarge}
-          alt="Large Mesh"
+        />
+      </section>
+      <div className="small-spacer relative">
+        <img
+          className="absolute w-full top-0 left-2/4 transform -translate-x-1/2 z-0"
+          src={CityBottom}
         />
       </div>
-
-      <img className="w-full z-0" src={CityBottom} alt="City Bottom" />
     </>
   );
 };
