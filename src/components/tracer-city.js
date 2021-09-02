@@ -28,16 +28,16 @@ const TracerCity = () => {
               Stake and farm with the dApps you know and love.
             </small>
           </div>
-          <video
+        </div>
+        <video
             muted
             loop="loop"
             autoPlay
             playsInline
-            className="min-w-video absolute top-0 sm:-right-48 sm:opacity-0 sm:left-auto -left-12 transition-opacity duration-1000"
+            className="min-w-video absolute top-0 sm:opacity-0 right-0 transition-opacity duration-1000"
           >
             <source src={TracerCityVideo} type="video/mp4" />
           </video>
-        </div>
       </section>
       <section id="building-trigger" className="panel w-full h-screen city-step staking-section flex lg:items-center relative items-start lg:pt-0 sm:pt-24 background-blue z-10">
         <div className="container xl flex justify-between mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col relative z-10">
@@ -49,7 +49,7 @@ const TracerCity = () => {
             />
           </div>
           <div
-            className="2xl:w-1/3 lg:w-1/3 h-auto absolute sm:right-24 sm:mt-96 sm:left-auto left-0 sm:px-0 px-4 force-flex flex-col justify-center z-10 lg:pb-0 sm:text-left text-center"
+            className="2xl:w-1/3 lg:w-1/3 h-auto absolute sm:right-24 sm:mt-96 right-0 sm:px-0 px-4 force-flex flex-col justify-center z-10 lg:pb-0 sm:text-left text-center"
             data-stellar-ratio="1.4"
           >
             <span className="text-5xl font-semibold mb-2 text-white color-blue">
