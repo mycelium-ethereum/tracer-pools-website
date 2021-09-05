@@ -44,8 +44,8 @@ const LeverageSteps = (direction) => {
             direction.direction
           }
         >
-          <section className="panel lg:absolute top-0 left-0 w-full step-one flex flex-col lg:justify-center justify-start w-full h-full lg:pointer-events-none pointer-events-auto">
-            <div className="flex container xl mx-auto lg:flex-row lg:h-full sm:h-screen flex-col items-center h-auto lg:pt-48 xl:px-24 lg:px-12 sm:pb-0 pb-72 px-4">
+          <section className="panel lg:absolute top-0 left-0 step-one flex flex-col lg:justify-center justify-start w-full h-full lg:pointer-events-none pointer-events-auto">
+            <div className="flex container xl mx-auto lg:flex-row lg:h-full lg:h-screen flex-col items-center h-auto lg:pt-48 xl:px-24 lg:px-12 px-4">
               <div className="step-info xl:pb-0 lg:pb-32 lg:w-2/4 w-full lg:text-left text-center relative">
                 <small className="2xl:text-3xl lg:text-2xl color-blue text-3xl font-bold background-blue ">
                   Perpetual Pools
@@ -113,7 +113,7 @@ const LeverageSteps = (direction) => {
                   </p>
                 </div>
                 <img
-                  className="relative sm:bottom-0 -bottom-24 left-0 min-w-full max-w-none"
+                  className="relative sm:bottom-0 -bottom-8 sm:-left-1/4 left-0 min-w-full max-w-none"
                   src={MobileSteps}
                 />
               </div>

@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import Button from "./button";
 import TracerLogo from "../../static/img/tracer-logo.svg";
+import Dropdown from "../../static/img/general/dropdown.svg";
 import MenuIcon from "../../static/img/general/menu.svg";
 import MenuCloseIcon from "../../static/img/general/menu-close.svg";
 
@@ -21,7 +22,8 @@ const Navbar = () => {
       navbar.style.backgroundColor = "transparent";
     }
   };
-  const [isOpen, setOpen] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     setSolidNav();
@@ -31,7 +33,7 @@ const Navbar = () => {
     window.addEventListener("resize", function () {
       setSolidNav();
       if (isMobile()) {
-        setOpen(false);
+        setNavOpen(false);
       }
     });
   });
@@ -42,14 +44,42 @@ const Navbar = () => {
       className="fixed w-full z-50 transition ease-out duration-500"
     >
       <div className="lg:h-24 h-20 flex justify-between items-center mx-auto xl:px-24 sm:px-12 px-4">
-        <div>
+        <div className="relative" onMouseEnter={() => setDropdownOpen(true)}>
           <Link to="/">
             <img
               className="sm:w-24 w-22 h-auto"
               src={TracerLogo}
               alt="Tracer Logo"
             />
+            <img
+              className="w-4 absolute top-1/2 -right-8 transform -translate-y-1/2 sm:block hidden h-auto"
+              src={Dropdown}
+              alt="Dropdown"
+            />
           </Link>
+          <div
+            className={
+              "dropdown absolute top-16 w-40 p-4 border border-white rounded-lg transition-opacity duration-500 " +
+              (dropdownOpen
+                ? "pointer-events-all opacity-100"
+                : "pointer-events-none opacity-0")
+            }
+            onMouseLeave={() => setDropdownOpen(false)}
+          >
+            <Link to="/perpetuals">
+              <span className="block text-white font-semibold mb-4">
+                Perpetuals
+              </span>
+            </Link>
+            <Link to="/governance">
+              <span className="block text-white font-semibold mb-4">
+                Governance
+              </span>
+            </Link>
+            <Link to="/blog">
+              <span className="block text-white font-semibold">Blog</span>
+            </Link>
+          </div>
         </div>
         <div className="hidden sm:flex items-center">
           <div className="mr-7">
@@ -57,12 +87,7 @@ const Navbar = () => {
               <span className="text-white font-semibold">Learn</span>
             </Link>
           </div>
-          <div className="mr-7">
-            <Link to="/govern">
-              <span className="text-white font-semibold">Govern</span>
-            </Link>
-          </div>
-          <div className="mr-7">
+          <div>
             <Button
               className="h-12 w-32 border border-white font-semibold"
               linkTo="/"
@@ -73,7 +98,7 @@ const Navbar = () => {
         </div>
         <div
           className="sm:hidden block"
-          onClick={() => setOpen((wasOpen) => !wasOpen)}
+          onClick={() => setNavOpen((wasOpen) => !wasOpen)}
         >
           <img className="w-6 h-6" src={MenuIcon} alt="Menu" />
         </div>
@@ -81,14 +106,14 @@ const Navbar = () => {
       <menu
         className={
           "fixed transition-opacity duration-700 h-screen w-full background-tracerblue top-0 left-0 mt-0 pl-0" +
-          (isOpen
+          (navOpen
             ? " opacity-100 pointer-events-auto"
             : " opacity-0 pointer-events-none")
         }
       >
         <button
           className="absolute top-7 right-4 w-6 h-6"
-          onClick={() => setOpen((wasOpen) => !wasOpen)}
+          onClick={() => setNavOpen((wasOpen) => !wasOpen)}
         >
           <img className="w-6 h-6" src={MenuCloseIcon} alt="Menu" />
         </button>

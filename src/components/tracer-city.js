@@ -38,7 +38,7 @@ const TracerCity = () => {
           loop="loop"
           autoPlay
           playsInline
-          className="min-w-video absolute 2xl:top-1/2 top-0 sm:opacity-0 2xl:left-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 transition-opacity duration-1000 lg:block hidden"
+          className="min-w-video absolute top-1/2 sm:opacity-0 left-1/2 transform -translate-y-1/2 -translate-x-1/2 transition-opacity duration-1000 lg:block hidden"
         >
           <source src={TracerCityVideo} type="video/mp4" />
         </video>
@@ -55,7 +55,7 @@ const TracerCity = () => {
       </section>
       <section
         id="building-trigger"
-        className="panel w-full xl:h-screen h-auto staking-section flex lg:items-center relative items-start lg:pt-0 xl:pb-12 pt-24 background-blue z-10"
+        className="panel w-full lg:h-screen h-auto staking-section flex lg:items-center relative items-start lg:pt-0 xl:pb-12 pt-24 background-blue z-10"
       >
         {/* Desktop building video */}
         <video
@@ -64,7 +64,7 @@ const TracerCity = () => {
           autoPlay
           playsInline
           id="tracer-building"
-          className="min-w-video absolute 2xl:top-1/2 top-0 2xl:left-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 transition-opacity duration-1000 sm:block sm:opacity-0 transition-opacity duration-1000 hidden"
+          className="min-w-video absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 transition-opacity duration-1000 sm:block sm:opacity-0 transition-opacity duration-1000 hidden"
         >
           <source src={TracerBuilding} type="video/mp4" />
         </video>
@@ -87,11 +87,11 @@ const TracerCity = () => {
             <h1 className="font-bold text-white xl:text-5xl lg:text-4xl lg:mb-4 mb-2 text-3xl">
               Strategise &amp; Natively
             </h1>
-            <small className="text-white font-light 2xl:w-72 lg:text-left lg:text-3xl sm:w-auto w-56 text-lg">
+            <small className="text-white font-light 2xl:w-72 lg:text-left lg:text-3xl lg:w-auto w-56 text-lg">
               Stake and farm with the dApps you know and love.
             </small>
             <GlowButton
-              className="lg:h-16 h-12 w-48 text-normal rounded-lg font-semibold mt-6 lg:ml-0 lg:mb-0 sm:text-xl text-lg mb-8 mx-auto"
+              className="lg:h-16 h-12 w-48 text-normal rounded-lg font-normal mt-6 lg:ml-0 lg:mb-0 sm:text-xl text-lg mb-8 mx-auto"
               linkTo="#"
             >
               Launch Docs
@@ -99,7 +99,7 @@ const TracerCity = () => {
           </div>
         </div>
         <img
-          className="absolute w-full h-3/4 top-2/4 left-2/4 transform -translate-x-1/2 -translate-y-1/2 z-0 sm:hidden block"
+          className="absolute w-full h-3/4 left-2/4 transform -translate-x-1/2 bottom-0 z-0 lg:hidden block"
           src={MeshLarge}
         />
       </section>
