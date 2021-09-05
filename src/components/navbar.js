@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import Button from "./button";
 import TracerLogo from "../../static/img/tracer-logo.svg";
 import MenuIcon from "../../static/img/general/menu.svg";
+import MenuCloseIcon from "../../static/img/general/menu-close.svg";
 
 const Navbar = () => {
   const isMobile = () => {
@@ -20,6 +21,7 @@ const Navbar = () => {
       navbar.style.backgroundColor = "transparent";
     }
   };
+  const [isOpen, setOpen] = useState(false);
 
   useEffect(() => {
     setSolidNav();
@@ -29,7 +31,7 @@ const Navbar = () => {
     window.addEventListener("resize", function () {
       setSolidNav();
     });
-  }, []);
+  });
 
   return (
     <nav
@@ -49,12 +51,12 @@ const Navbar = () => {
         <div className="hidden sm:flex items-center">
           <div className="mr-7">
             <Link to="/learn">
-              <div className="text-white font-semibold">Learn</div>
+              <span className="text-white font-semibold">Learn</span>
             </Link>
           </div>
           <div className="mr-7">
             <Link to="/govern">
-              <div className="text-white font-semibold">Govern</div>
+              <span className="text-white font-semibold">Govern</span>
             </Link>
           </div>
           <div className="mr-7">
@@ -65,16 +67,59 @@ const Navbar = () => {
               Launch Pools
             </Button>
           </div>
-          <div>
-            <button className="tracer-btn.subscribe h-12 w-32 text-white rounded-lg font-semibold font-medium flex items-center justify-center bg-blue-600 text-whit">
-              Subscribe
-            </button>
-          </div>
         </div>
-        <div className="sm:hidden block">
+        <div
+          className="sm:hidden block"
+          onClick={() => setOpen((wasOpen) => !wasOpen)}
+        >
           <img className="w-6 h-6" src={MenuIcon} alt="Menu" />
         </div>
       </div>
+      <menu
+        className={
+          "fixed transition-opacity duration-700 h-screen w-full background-tracerblue top-0 left-0 mt-0 pl-0" +
+          (isOpen
+            ? " opacity-0 pointer-events-none"
+            : " opacity-100 pointer-events-auto")
+        }
+      >
+        <button
+          className="absolute top-7 right-4 w-6 h-6"
+          onClick={() => setOpen((wasOpen) => !wasOpen)}
+        >
+          <img className="w-6 h-6" src={MenuCloseIcon} alt="Menu" />
+        </button>
+        <div className="flex flex-col justify-center w-60 mx-auto text-center pt-12">
+          <div className="mt-6 w-full">
+            <Link to="/learn">
+              <span className="text-white font-semibold text-lg">Learn</span>
+            </Link>
+          </div>
+          <div className="mt-6 w-full">
+            <Button
+              className="h-12 w-full border border-white font-semibold text-lg"
+              linkTo="/"
+            >
+              Launch Pools
+            </Button>
+          </div>
+          <div className="mt-6 w-full">
+            <Link to="/perpetuals">
+              <span className="text-white font-semibold text-lg">Perpetuals</span>
+            </Link>
+          </div>
+          <div className="mt-6 w-full">
+            <Link to="/govern">
+              <span className="text-white font-semibold text-lg">Govern</span>
+            </Link>
+          </div>
+          <div className="mt-6 w-full">
+            <Link to="/radar">
+              <span className="text-white font-semibold text-lg">Blog</span>
+            </Link>
+          </div>
+        </div>
+      </menu>
     </nav>
   );
 };
