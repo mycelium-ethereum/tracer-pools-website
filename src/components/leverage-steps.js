@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 // Image assets
 import MobileSteps from "/static/img/home-page/steps/mobile-steps.png";
 import ClearTile from "/static/img/home-page/steps/tile.svg";
-import BaseTile from "/static/img/home-page/steps/base.svg";
+import BaseTile from "/static/img/home-page/steps/base.png";
 import LayerTwo from "/static/img/home-page/steps/layer-2.svg";
 import LayerThree from "/static/img/home-page/steps/layer-3.svg";
 import LayerFour from "/static/img/home-page/steps/layer-4.svg";
@@ -21,7 +21,7 @@ const LeverageSteps = (direction) => {
   };
   // useEffect(() => {
   //   ScrollReveal().reveal("#mobile-steps div[data-step]", slideUp);
-  //   ScrollReveal().reveal("#mobile-steps div[data-step='1']", {
+  //   ScrollReveal().reveal("#mobile-steps div[data-step='1']", {`
   //     delay: 200,
   //   });
   //   ScrollReveal().reveal("#mobile-steps div[data-step='2']", {
@@ -39,10 +39,13 @@ const LeverageSteps = (direction) => {
       <section id="pinMaster" className="pin-master">
         <div
           id="pinContainer"
-          className={"pin-container lg:overflow-hidden background-blue z-10 " + direction.direction}
+          className={
+            "pin-container lg:overflow-hidden background-blue z-10 " +
+            direction.direction
+          }
         >
           <section className="panel absolute top-0 left-0 w-full h-full step-one flex flex-col justify-center absolute w-full h-full lg:pointer-events-none pointer-events-auto">
-            <div className="flex container xl mx-auto lg:flex-row flex-col items-center h-full lg:pt-48 xl:px-24 lg:px-12 px-4">
+            <div className="flex container xl mx-auto lg:flex-row flex-col items-center h-auto lg:pt-48 xl:px-24 lg:px-12 sm:pb-0 pb-48 px-4">
               <div className="step-info xl:pb-0 lg:pb-32 lg:w-2/4 w-full lg:text-left text-center relative">
                 <small className="2xl:text-3xl lg:text-2xl color-blue text-3xl font-bold background-blue ">
                   Perpetual Pools
@@ -110,15 +113,21 @@ const LeverageSteps = (direction) => {
                   </p>
                 </div>
                 <img
-                  className="absolute -bottom-16 left-0 min-w-full max-w-none"
+                  className="absolute -bottom-24 left-0 min-w-full max-w-none"
                   src={MobileSteps}
                 />
               </div>
               <div className="w-2/4 step-animation xl:-top-24 transform xl:scale-75 xl:right-0 lg:scale-50 lg:-right-12 lg:-top-32 scale-50 lg:opacity-100 opacity-0 lg:block hidden">
-                <img
+                {/* <img
                   className="step-animation__tile lg:opacity-0"
                   src={ClearTile}
-                />
+                /> */}
+                <div className="step-animation__tile lg:opacity-0">
+                  <img
+                    className="absolute top-0 left-0 w-full h-auto"
+                    src={BaseTile}
+                  />
+                </div>
                 <img
                   className="step-animation__base lg:opacity-0"
                   src={BaseTile}

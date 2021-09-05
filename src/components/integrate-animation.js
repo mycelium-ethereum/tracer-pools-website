@@ -1,7 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 // Image assets
-import MobileTile from "/static/img/home-page/integrate/mobile-tile.png";
 import Tile from "/static/img/home-page/integrate/tile.svg";
 import LayerOne from "/static/img/home-page/integrate/layer-1.svg";
 import LayerTwo from "/static/img/home-page/integrate/layer-2.svg";
@@ -9,36 +8,48 @@ import LayerThree from "/static/img/home-page/integrate/layer-3-square.svg";
 import LayerFour from "/static/img/home-page/integrate/layer-4-arrow.svg";
 
 const IntegrateAnimation = () => {
+  const isMobile = () => {
+    const width = window.innerWidth;
+    return width < 1024;
+  };
+  const toggleActiveStyles = () => {
+    const section = document.querySelector(".integrate-section");
+    if (isMobile()) {
+      section.classList.add("active");
+    }
+  };
+  useEffect(() => {
+    toggleActiveStyles();
+    window.addEventListener("resize", function () {
+      toggleActiveStyles();
+    });
+  });
   return (
-    <section className="integrate-section flex items-center lg:h-screen h-auto lg:pb-0 pb-24">
-      <div className="flex container xl mx-auto relative flex items-center justify-end xl:px-24 sm:px-12 px-4">
+    <section className="integrate-section flex sm:items-center items-start lg:h-screen h-auto">
+      <div className="flex container xl mx-auto relative flex items-center justify-end xl:px-24 lg:flex-row lg:pb-0 sm:px-12 sm:pb-0 pb-96 flex-col px-4">
         <div
-          className="container xl w-3/5 force-flex absolute left-24 top-96 lg:justify-start lg:flex-row justify-center flex-col"
+          className="container xl lg:w-3/5 force-flex sm:absolute left-24 top-96 lg:justify-start lg:flex-row justify-center flex-col"
           data-stellar-ratio="1.2"
         >
-          <img
-            src={MobileTile}
-            className="sm:w-3/4 mx-auto w-full lg:hidden block"
-          />
           <div className="lg:w-2/4 w-full h-auto flex flex-col justify-center">
-            <small className="2xl:text-3xl lg:text-2xl lg:text-left text-center font-bold text-2xl color-blue mb-1">
+            <small className="2xl:text-3xl lg:text-2xl lg:text-left text-center font-bold lg:text-2xl text-base color-blue sm:mb-1">
               Integrate Now
             </small>
-            <h1 className="2xl:text-6xl lg:text-5xl lg:text-left text-center text-3xl font-black text-white mb-4">
+            <h1 className="2xl:text-6xl lg:text-5xl lg:text-left text-center text-3xl font-bold text-white mb-4">
               Strategise &amp; Natively
             </h1>
-            <p className="fade-anim lg:opacity-0 transition-all duration-500 2xl:text-2xl lg:text-xl lg:text-left text-center text-2xl text-white font-normal opacity-100">
+            <p className="fade-anim transition-all duration-500 text-center 2xl:text-2xl lg:opacity-0 lg:text-xl lg:text-left sm:text-2xl sm:w-auto w-60 mx-auto text-lg text-white font-normal opacity-100">
               Seamlessly integrate into your proprietary trading interface or
               into a user-facing application.
             </p>
           </div>
         </div>
-        <div className="w-2/5 integrate-animation 2xl:scale-75 relative 2xl:-right-48 lg:transform lg:scale-50 lg:-right-24 lg:block hidden">
-          <img className="integrate-animation__tile" src={Tile} />
-          <img className="integrate-animation__layerone" src={LayerOne} />
-          <img className="integrate-animation__layertwo" src={LayerTwo} />
-          <img className="integrate-animation__layerthree" src={LayerThree} />
-          <img className="integrate-animation__layerfour" src={LayerFour} />
+        <div className="w-2/5 integrate-animation 2xl:scale-75 absolute 2xl:-right-48 transform lg:scale-50 lg:-right-24 sm:relative -right-24 -bottom-64">
+          <img className="integrate-animation__tile lg:opacity-0" src={Tile} />
+          <img className="integrate-animation__layerone lg:opacity-0" src={LayerOne} />
+          <img className="integrate-animation__layertwo lg:opacity-0" src={LayerTwo} />
+          <img className="integrate-animation__layerthree lg:opacity-0" src={LayerThree} />
+          <img className="integrate-animation__layerfour lg:opacity-0" src={LayerFour} />
         </div>
       </div>
     </section>

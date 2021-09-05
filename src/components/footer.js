@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 
 // Images
-import FooterBackground from "/static/img/general/footer-bg.png";
 import Facebook from "/static/img/icons/facebook.svg";
 import Twitter from "/static/img/icons/twitter.svg";
 import Github from "/static/img/icons/github.svg";
@@ -61,20 +60,15 @@ const Footer = () => {
     });
   });
   return (
-    <footer className="w-full relative overflow-hidden lg:h-72 lg:pb-0 pb-8 h-auto z-0 bg-black">
-      {/* <img
-        className="absolute top-0 left-0 h-full min-w-full z-0"
-        src={FooterBackground}
-        alt="Footer Background"
-      /> */}
-      <div className="container xl mx-auto relative z-1 xl:px-24 lg:px-12 px-16">
+    <footer className="w-full relative overflow-hidden lg:h-72 lg:pb-0 pb-8 h-auto z-0 background-tracerblue sm:border-0 border-b-8 border-blue">
+      <div className="container xl mx-auto relative z-1 xl:px-24 lg:px-12 px-8">
         <div className="w-full flex lg:flex-row flex-col justify-between items-center lg:pt-0 lg:h-60 h-auto pt-16">
-          <span className="font-semibold text-white 2xl:w-auto lg:text-4xl lg:w-96 text-2xl">
+          <span className="font-semibold text-white 2xl:w-auto lg:text-4xl lg:w-96 sm:text-2xl text-lg">
             Stay updated on the latest Tracer news
           </span>
           <form
             id="subscription-form"
-            className="lg:w-min sm:w-64 sm:ml-0 sm:mr-0 mx-auto w-full flex lg:flex-row lg:mt-0 mt-4 flex-col justify-between"
+            className="lg:w-min sm:w-64 sm:ml-0 sm:mr-0 mx-auto w-full flex lg:mt-0 mt-4 justify-between"
             onSubmit={(e) => handleSubmit(e)}
           >
             <input type="hidden" name="u" value="15" />
@@ -91,8 +85,7 @@ const Footer = () => {
               autoComplete="off"
               autoCorrect="off"
               className={
-                "lg:w-80 w-full h-10 border-0 rounded-2xl lg:py-0 py-2 pl-4 pr-4 mr-10 lg:mb-0 mb-6" +
-                (formOpen ? " active" : "")
+                "w-full h-10 border-0 rounded-lg lg:py-0 lg:w-80 lg:mb-0 mb-6 py-2 pl-4 pr-4 mr-4"
               }
               id="email"
               placeholder="Email"
@@ -102,7 +95,7 @@ const Footer = () => {
               onClick={(e) => checkForm(e)}
               id="submit-btn"
               type="submit"
-              className="tracer-btn.subscribe h-10 rounded-2xl font-semibold font-medium flex items-center justify-center bg-blue-600 text-white lg:w-32 lg:mt-0 lg:mb-0 mb-8 w-full"
+              className="tracer-btn.subscribe h-10 rounded-lg font-semibold font-medium flex items-center justify-center bg-blue-600 text-white lg:w-32 lg:mt-0 lg:mb-0 mb-8 w-48"
             >
               {submittedText}
             </button>
@@ -128,36 +121,36 @@ const Footer = () => {
               />
             </a>
           </div>
-          <div className="w-max h-6 flex justify-between lg:block hidden">
+          <div className="flex lg:h-6 lg:w-max sm:justify-between sm:mt-0 sm:flex-nowrap w-full justify-center flex-wrap mt-6">
             <Link className="text-base font-normal text-white" to="#">
               Privacy Policy
             </Link>
             <Link
-              className="text-base font-normal text-white xl:pl-12 pl-6"
+              className="text-base font-normal text-white xl:pl-12 sm:mb-0 pl-6 mb-4"
               to="#"
             >
               Terms of Use
             </Link>
             <Link
-              className="text-base font-normal text-white xl:pl-12 pl-6"
+              className="text-base font-normal text-white xl:pl-12 sm:mb-0 pl-6 mb-4"
               to="#"
             >
               Disclaimer
             </Link>
             <Link
-              className="text-base font-normal text-white xl:pl-12 pl-6"
+              className="text-base font-normal text-white xl:pl-12 sm:mb-0 pl-6 mb-4"
               to="#"
             >
               Docs
             </Link>
             <Link
-              className="text-base font-normal text-white xl:pl-12 pl-6"
+              className="text-base font-normal text-white xl:pl-12 sm:mb-0 pl-6 mb-4"
               to="#"
             >
               FAQs
             </Link>
             <Link
-              className="text-base font-normal text-white xl:pl-12 pl-6"
+              className="text-base font-normal text-white xl:pl-12 sm:mb-0 pl-6 mb-4"
               to="#"
             >
               Tutorials

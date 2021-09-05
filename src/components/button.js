@@ -14,7 +14,7 @@ const Button = ({
         className +
         " tracer-btn " +
         (!!outlineButton && " blue mx-auto text-xl") +
-        " rounded-2xl"
+        " rounded-lg"
       }
       href={linkTo}
       id={id}

@@ -47,59 +47,59 @@ const PartnersContributors = () => {
   return (
     <>
       <section id="pinMasterPartners" className="pin-master">
-        <div id="pinContainerPartners" className="pin-container">
+        <div id="pinContainerPartners" className="pin-container overflow-hidden">
           <section className="panel lg:absolute relative top-0 left-0 w-full lg:h-screen h-auto partners flex flex-col justify-start  opacity-0 z-0 transition-all ease-in-out linear duration-1500 lg:pb-0 sm:pb-24">
             <div className="flex container xl mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
-              <p className="2xl:text-4xl lg:text-3xl font-bold text-white 2xl:mb-4 lg:mb-2 text-2xl">
+              <p className="2xl:text-4xl lg:text-3xl font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl text-lg">
                 Partners
               </p>
-              <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2 text-2xl">
+              <p className="2xl:text-4xl lg:text-3xl color-tracerdarkblue 2xl:mb-4 lg:mb-2 sm:text-2xl text-lg">
                 Ecosystem Contributors
               </p>
-              <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2 text-2xl">
+              <p className="2xl:text-4xl lg:text-3xl color-tracerdarkblue 2xl:mb-4 lg:mb-2 sm:text-2xl text-lg">
                 In the Media
               </p>
               <div className="h-auto w-full h-full flex flex-col justify-center sm:pb-24 pb-12">
                 <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center 2xl:mt-10 lg:2xl:mt-10 xl:mt-3 lg:mt-8 mt-6">
                   <img
-                    className="2xl:w-60 lg:w-48 lg:mr-10 w-32 mr-5"
+                    className="2xl:w-60 lg:w-48 lg:mr-10 w-20 mr-5"
                     src={Framework}
                   />
-                  <img className="2xl:w-60 lg:w-48 w-24" src={Koji} />
+                  <img className="2xl:w-60 lg:w-48 w-16" src={Koji} />
                 </div>
                 <div className="flex w-full 2xl:h-32 lg:h-24 lg:mt-0 mt-6 flex-wrap justify-center items-center">
-                  <img className="2xl:w-60 lg:w-48 lg:mr-10 mr-2" src={DACM} />
+                  <img className="2xl:w-60 lg:w-48 lg:mr-10 w-1/4 mr-2" src={DACM} />
                   <img
-                    className="2xl:w-60 lg:w-48 lg:mr-10 mr-5"
+                    className="2xl:w-60 lg:w-48 lg:mr-10 w-1/4 mr-5"
                     src={DistributedGlobal}
                   />
                   <img
-                    className="2xl:w-60 lg:w-48 lg:mr-10 sm:mt-0 mt-6"
+                    className="2xl:w-60 lg:w-48 lg:mr-10 sm:mt-0 w-1/4"
                     src={GSR}
                   />
                 </div>
                 <div className="flex w-full 2xl:h-32 lg:h-24 lg:mt-0 mt-4 flex-wrap justify-center items-center">
-                  <img className="lg:w-32 lg:mr-10 w-24 mr-5" src={Maven} />
-                  <img className="lg:w-32 lg:mr-10 w-24 mr-5" src={LAO} />
+                  <img className="lg:w-32 lg:mr-10 sm:w-24 w-12 mr-5" src={Maven} />
+                  <img className="lg:w-32 lg:mr-10 sm:w-24 w-12 mr-5" src={LAO} />
                   <img
-                    className="lg:w-32 lg:mr-10 w-24"
+                    className="lg:w-32 lg:mr-10 sm:w-24 w-12 mr-5"
                     src={EfficientFrontier}
                   />
-                  <img className="lg:w-32 lg:mr-10 w-24 mr-5" src={B} />
-                  <img className="lg:w-32 w-24" src={Apollo} />
+                  <img className="lg:w-32 lg:mr-10 sm:w-24 w-12 mr-5" src={B} />
+                  <img className="lg:w-32 sm:w-24 w-12" src={Apollo} />
                 </div>
               </div>
             </div>
           </section>
           <section className="panel absolute top-0 left-0 w-full lg:h-screen h-auto contributors flex flex-col justify-start  opacity-0 z-0 transition-all ease-in-out linear duration-1500">
             <div className="flex container xl mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
-              <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2">
+              <p className="2xl:text-4xl lg:text-3xl color-tracerdarkblue 2xl:mb-4 lg:mb-2">
                 Partners
               </p>
               <p className="2xl:text-4xl lg:text-3xl font-bold text-white 2xl:mb-4 lg:mb-2">
                 Ecosystem Contributors
               </p>
-              <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2">
+              <p className="2xl:text-4xl lg:text-3xl color-tracerdarkblue 2xl:mb-4 lg:mb-2">
                 In the Media
               </p>
               <div className="h-auto w-full h-full flex flex-col justify-center sm:pb-24">
@@ -117,10 +117,10 @@ const PartnersContributors = () => {
           </section>
           <section className="panel absolute top-0 left-0 w-full lg:h-screen h-auto media flex flex-col justify-start  opacity-0 z-0 transition-all ease-in-out linear duration-1500">
             <div className="flex container xl mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
-              <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2">
+              <p className="2xl:text-4xl lg:text-3xl color-tracerdarkblue 2xl:mb-4 lg:mb-2">
                 Partners
               </p>
-              <p className="2xl:text-4xl lg:text-3xl color-lightgrey 2xl:mb-4 lg:mb-2">
+              <p className="2xl:text-4xl lg:text-3xl color-tracerdarkblue 2xl:mb-4 lg:mb-2">
                 Ecosystem Contributors
               </p>
               <p className="2xl:text-4xl lg:text-3xl font-bold text-white 2xl:mb-4 lg:mb-2">

@@ -27,23 +27,23 @@ const Hero = () => {
               <br />A new derivative primitive.
             </p>
             <Button
-              className="mt-6 h-12 w-48 border border-white mx-auto text-xl rounded-2xl"
+              className="mt-6 h-12 w-48 border border-white mx-auto text-xl rounded-lg"
               linkTo="/"
             >
               Launch Pools
             </Button>
             <Link to="/">
-              <div className="mx-auto mt-6 w-48 h-12 flex justify-center items-center text-xl text-white hover:bg-blue-400 rounded-2xl">
+              <div className="mx-auto mt-6 w-48 h-12 flex justify-center items-center text-xl text-white hover:bg-blue-400 rounded-lg">
                 Documentation
               </div>
             </Link>
           </header>
-          <div className="max-w-screen-xl absolute 2xl:-bottom-80 xl:-bottom-96 lg:-bottom-60 w-full px-24 -bottom-10 z-20">
-            <img src={TracerLaptop} alt="Tracer Laptop View" />
+          <div className="max-w-screen-xl absolute 2xl:-bottom-80 xl:-bottom-96 lg:-bottom-60 sm:px-24 px-6 w-full -bottom-10 z-20">
+            <img className="w-screen" src={TracerLaptop} alt="Tracer Laptop View" />
           </div>
         </div>
         <ArrowDown
-          className="absolute 2xl:right-48 xl:right-30 lg:right-24 sm:w-16 sm:bottom-32 sm:right-16 bottom-12 right-10 w-14 z-20"
+          className="absolute 2xl:right-48 xl:right-30 lg:right-24 sm:w-16 sm:bottom-32 sm:right-16 bottom-12 right-6 w-14 z-20"
           linkTo="#steps"
         />
       </section>
