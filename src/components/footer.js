@@ -61,16 +61,16 @@ const Footer = () => {
     });
   });
   return (
-    <footer className="w-full relative overflow-hidden lg:pb-10 h-auto z-0 sm:border-0 border-b-8 border-lightblue">
-      <img className="absolute top-0 left-0 w-full h-auto" src={CityBottomDark}/>
+    <footer className="w-full relative overflow-hidden lg:pb-10 h-auto z-0 lg:border-0 border-b-8 border-lightblue">
+      <img className="absolute top-0 left-0 w-full h-auto lg:block hidden" src={CityBottomDark}/>
       <div className="container xl mx-auto relative xl:flex flex-col justify-between z-1 xl:px-24 lg:px-12 px-8">
-        <div className="w-full flex flex-col xl:justify-center justify-between items-center lg:pt-0 h-auto pt-16">
-          <span className="font-semibold text-white lg:text-4xl lg:w-auto lg:mb-6 sm:w-96 sm:text-2xl text-lg">
+        <div className="flex flex-col xl:justify-center justify-between items-center lg:w-full lg:pt-0 sm:w-max w-full h-auto mx-auto pt-16">
+          <span className="font-semibold text-white lg:text-4xl lg:w-auto lg:mb-6 sm:text-2xl w-full text-lg">
             Stay updated on the latest Tracer news
           </span>
           <form
             id="subscription-form"
-            className="2xl:mb-96 2xl:pb-0 xl:mb-72 lg:w-min sm:w-64 sm:ml-0 sm:mr-0 mx-auto w-full flex lg:mt-0 mt-4 justify-between"
+            className="2xl:mb-96 2xl:pb-0 lg:mb-72 lg:w-min sm:ml-0 sm:mr-0 mx-auto w-full flex lg:mt-0 mt-4 justify-between"
             onSubmit={(e) => handleSubmit(e)}
           >
             <input type="hidden" name="u" value="15" />
@@ -107,7 +107,7 @@ const Footer = () => {
           <span className="text-base font-normal text-white">
             &copy; <span id="year" /> Tracer DAO
           </span>
-          <div className="w-max h-6 flex justify-between lg:mt-0 mt-8">
+          <div className="w-max h-6 flex justify-between lg:mt-0 lg:mb-0 mt-4 mb-4">
             <a href="https://twitter.com/TracerDAO" target="_blank">
               <img
                 className="w-6 h-6 cursor-pointer ml-6"
@@ -123,7 +123,7 @@ const Footer = () => {
               />
             </a>
           </div>
-          <div className="flex lg:h-6 lg:w-max sm:justify-between sm:mt-0 sm:flex-nowrap w-full justify-center flex-wrap mt-6">
+          <div className="flex w-full justify-center flex-wrap lg:h-6 lg:w-max lg:justify-between lg:flex-nowrap lg:mb-0 sm:mt-0 mt-6 mb-6">
             <Link className="text-base font-normal text-white" to="#">
               Privacy Policy
             </Link>

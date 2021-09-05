@@ -17,11 +17,11 @@ const TracerCity = () => {
     <>
       <section
         id="city-trigger"
-        className="panel w-full city-step staking-section flex lg:items-center relative items-start lg:pt-0 background-blue z-10"
+        className="panel w-full staking-section flex lg:items-center lg:flex-row flex-col relative items-start xl:pb-0 lg:pb-48 background-blue z-10"
       >
-        <div className="container xl flex sm:h-screen h-auto justify-end mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row sm:pb-0 pb-96 flex-col relative">
+        <div className="container xl flex xl:h-screen xl:px-24 lg:h-96 lg:px-12 lg:flex-row lg:pt-0 px-4 h-auto lg:justify-end mx-auto flex-col justify-start relative">
           <div
-            className="h-auto sm:absolute sm:left-24 2xl:mt-96 xl:mt-48 force-flex flex-col justify-center z-10 lg:pb-0 lg:mb-0 sm:pb-80 sm:pt-0 sm:px-0 lg:w-80 w-52 mx-auto left-0 pt-12 mb-10 sm:text-left text-center"
+            className="h-auto lg:absolute sm:left-24 2xl:mt-96 lg:mt-48 force-flex flex-col justify-center z-10 lg:pb-0 lg:mb-0 sm:pt-0 sm:px-0 lg:w-80 w-52 mx-auto left-0 pt-12 mb-10 lg:text-left text-center"
             data-stellar-ratio="1.4"
           >
             <span className="xl:text-5xl lg:text-4xl text-3xl font-extrabold text-white mb-2">
@@ -38,7 +38,7 @@ const TracerCity = () => {
           loop="loop"
           autoPlay
           playsInline
-          className="min-w-video absolute top-0 sm:opacity-0 right-0 transition-opacity duration-1000 sm:block hidden"
+          className="min-w-video absolute top-0 sm:opacity-0 right-0 transition-opacity duration-1000 lg:block hidden"
         >
           <source src={TracerCityVideo} type="video/mp4" />
         </video>
@@ -48,15 +48,16 @@ const TracerCity = () => {
           loop="loop"
           autoPlay
           playsInline
-          className="min-w-video absolute -bottom-12 right-0 transition-opacity duration-1000 sm:hidden block"
+          className="min-w-video transition-opacity duration-1000 lg:hidden block"
         >
           <source src={TracerCityMobileVideo} type="video/mp4" />
         </video>
       </section>
       <section
         id="building-trigger"
-        className="panel w-full h-screen city-step staking-section flex lg:items-center relative items-start lg:pt-0 sm:pt-24 background-blue z-10"
+        className="panel w-full lg:h-screen h-auto staking-section flex lg:items-center relative items-start lg:pt-0 pt-24 background-blue z-10"
       >
+        {/* Desktop building video */}
         <video
           muted
           loop="loop"
@@ -67,25 +68,26 @@ const TracerCity = () => {
         >
           <source src={TracerBuilding} type="video/mp4" />
         </video>
-        <div className="container xl flex justify-between mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col-reverse relative z-10">
-          <div className="w-2/4 lg:h-screen sm:w-auto w-full h-auto z-0 items-center justify-center flex">
+        <div className="container xl flex justify-between mx-auto h-full xl:px-24 lg:px-12 px-4 lg:flex-row flex-col-reverse relative z-10">
+          {/* Mobile image - full width */}
+          <div className="w-2/4 xl:h-screen sm:w-auto w-full h-auto z-0 items-center justify-center flex">
             <img
-              className="w-full sm:hidden block"
+              className="sm:w-96 w-full lg:hidden block"
               src={TracerBuildingImage}
               alt="Tracer Building"
             />
           </div>
           <div
-            className="2xl:w-1/3 lg:w-1/3 h-auto sm:absolute sm:right-24 2xl:mt-96 xl:mt-48 right-0 sm:px-0 mx-auto px-4 force-flex flex-col justify-center sm:items-start items-center z-10 lg:pb-0 sm:text-left text-center"
+            className="2xl:w-1/3 2xl:mt-96 lg:mt-48 lg:pb-0 lg:w-1/3 lg:absolute lg:right-24 lg:text-left sm:px-0 right-0 mx-auto px-4 force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
             data-stellar-ratio="1.4"
           >
-            <span className="xl:text-5xl lg:text-4xl font-semibold text-base sm:mb-2 mb-0 text-white color-blue">
+            <span className="xl:text-5xl lg:text-4xl font-semibold text-base lg:mb-2 mb-0 text-white color-blue">
               Built for DeFi
             </span>
-            <h1 className="font-bold text-white mb-4 xl:text-5xl lg:text-4xl text-3xl">
+            <h1 className="font-bold text-white xl:text-5xl lg:text-4xl lg:mb-4 mb-2 text-3xl">
               Strategise &amp; Natively
             </h1>
-            <small className="text-white font-light 2xl:w-72 lg:text-2xl lg:text-left sm:text-3xl sm:w-auto w-56 text-lg">
+            <small className="text-white font-light 2xl:w-72 lg:text-left lg:text-3xl sm:w-auto w-56 text-lg">
               Stake and farm with the dApps you know and love.
             </small>
             <GlowButton

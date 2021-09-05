@@ -1,5 +1,5 @@
 var w = window.innerWidth;
-var size = w > 1024 ? "big" : "small";
+var size = w >= 1024 ? "big" : "small";
 var controller;
 
 const stepAnimation = () => {
@@ -184,8 +184,7 @@ const initialiseScrollMagic = () => {
   partnerClick(scene6);
 };
 const handleResize = () => {
-  w = window.innerWidth;
-  var newSize = w > 1024 ? "big" : "small";
+  var newSize = !isMobile() ? "big" : "small";
   if (newSize != size) {
     size = newSize;
     if (newSize === "small") {

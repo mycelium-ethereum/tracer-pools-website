@@ -44,8 +44,8 @@ const LeverageSteps = (direction) => {
             direction.direction
           }
         >
-          <section className="panel absolute top-0 left-0 w-full h-full step-one flex flex-col justify-center absolute w-full h-full lg:pointer-events-none pointer-events-auto">
-            <div className="flex container xl mx-auto lg:flex-row flex-col items-center h-auto lg:pt-48 xl:px-24 lg:px-12 sm:pb-0 pb-48 px-4">
+          <section className="panel lg:absolute top-0 left-0 w-full lg:h-full h-screen step-one flex flex-col lg:justify-center justify-start w-full h-full lg:pointer-events-none pointer-events-auto">
+            <div className="flex container xl mx-auto lg:flex-row flex-col items-center h-auto lg:pt-48 xl:px-24 lg:px-12 sm:pb-0 pb-72 px-4">
               <div className="step-info xl:pb-0 lg:pb-32 lg:w-2/4 w-full lg:text-left text-center relative">
                 <small className="2xl:text-3xl lg:text-2xl color-blue text-3xl font-bold background-blue ">
                   Perpetual Pools
@@ -63,7 +63,7 @@ const LeverageSteps = (direction) => {
                     BTC/DAI, LINK/DAI, or ETH/DAI
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-20 left-0 justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out lg:flex hidden">
+                <div className="step-progress absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-52 left-0 justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out lg:flex hidden">
                   <span className="active w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out"></span>
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
@@ -113,7 +113,7 @@ const LeverageSteps = (direction) => {
                   </p>
                 </div>
                 <img
-                  className="absolute -bottom-24 left-0 min-w-full max-w-none"
+                  className="absolute sm:bottom-0 -bottom-24 left-0 min-w-full max-w-none"
                   src={MobileSteps}
                 />
               </div>
@@ -166,7 +166,7 @@ const LeverageSteps = (direction) => {
                     Long or short
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-20 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
+                <div className="step-progress absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-52 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="active w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out"></span>
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
@@ -194,7 +194,7 @@ const LeverageSteps = (direction) => {
                     1x, 2x, 3x, 5x, or 15x
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-20 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
+                <div className="step-progress absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-52 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="active w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out"></span>
@@ -221,7 +221,7 @@ const LeverageSteps = (direction) => {
                     leveraged exposure
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-20 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
+                <div className="step-progress absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-52 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>

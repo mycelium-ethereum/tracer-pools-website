@@ -25,10 +25,10 @@ const IntegrateAnimation = () => {
     });
   });
   return (
-    <section className="integrate-section flex sm:items-center items-start lg:h-screen h-auto">
-      <div className="flex container xl mx-auto relative flex items-center justify-end xl:px-24 lg:flex-row lg:pb-0 sm:px-12 sm:pb-0 pb-96 flex-col px-4">
+    <section className="integrate-section flex sm:items-center items-start sm:h-screen h-auto">
+      <div className="flex h-full container xl mx-auto relative flex items-center xl:px-24 lg:flex-row lg:pb-0 lg:justify-end justify-center sm:px-12 sm:pb-0 pb-96 flex-col px-4">
         <div
-          className="container xl lg:w-3/5 force-flex sm:absolute left-24 2xl:mt-96 xl:mt-48 lg:justify-start lg:flex-row justify-center flex-col"
+          className="lg:w-3/5 force-flex lg:absolute left-24 2xl:mt-96 lg:mt-48 lg:justify-start lg:flex-row sm:w-80 justify-center flex-col mx-auto"
           data-stellar-ratio="1.2"
         >
           <div className="lg:w-2/4 w-full h-auto flex flex-col justify-center">
@@ -44,7 +44,7 @@ const IntegrateAnimation = () => {
             </p>
           </div>
         </div>
-        <div className="w-2/5 integrate-animation 2xl:scale-75 absolute 2xl:-right-48 transform lg:scale-50 lg:-right-24 sm:relative -right-24 sm:bottom-0 -bottom-64">
+        <div className="w-2/5 integrate-animation 2xl:scale-75 absolute 2xl:-right-48 transform lg:scale-50 lg:-right-24 sm:relative sm:scale-50 sm:-right-64 -right-24 sm:bottom-24 -bottom-64">
           <img className="integrate-animation__tile lg:opacity-0" src={Tile} />
           <img className="integrate-animation__layerone lg:opacity-0" src={LayerOne} />
           <img className="integrate-animation__layertwo lg:opacity-0" src={LayerTwo} />

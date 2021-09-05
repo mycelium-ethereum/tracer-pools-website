@@ -38,12 +38,12 @@ const Hero = () => {
               </div>
             </Link>
           </header>
-          <div className="2xl:max-w-screen-xl xl:max-w-screen-lg 2xl:-bottom-80 xl:-bottom-96 lg:-bottom-60 sm:px-24 absolute px-6 w-full -bottom-10 z-20">
+          <div className="2xl:max-w-screen-xl xl:max-w-screen-lg 2xl:-bottom-80 xl:-bottom-96 lg:-bottom-72 sm:px-24 absolute px-6 w-full -bottom-10 z-20">
             <img className="w-screen" src={TracerLaptop} alt="Tracer Laptop View" />
           </div>
         </div>
         <ArrowDown
-          className="absolute 2xl:right-48 xl:right-30 lg:right-24 sm:w-16 sm:bottom-32 sm:right-16 bottom-12 right-6 w-14 z-20"
+          className="absolute 2xl:right-48 xl:right-30 lg:right-32 sm:w-16 sm:bottom-32 sm:right-16 bottom-12 right-6 w-14 z-20"
           linkTo="#steps"
         />
       </section>
