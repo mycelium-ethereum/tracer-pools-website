@@ -3,21 +3,21 @@ import React, { useEffect } from "react";
 // Image assets
 
 // Partners
-import Framework from "/static/img/home-page/partners-contributors/partners/framework.png";
-import Koji from "/static/img/home-page/partners-contributors/partners/koji.png";
-import DACM from "/static/img/home-page/partners-contributors/partners/dacm.png";
-import DistributedGlobal from "/static/img/home-page/partners-contributors/partners/distributed-global.png";
-import GSR from "/static/img/home-page/partners-contributors/partners/gsr.png";
-import Maven from "/static/img/home-page/partners-contributors/partners/maven.png";
-import LAO from "/static/img/home-page/partners-contributors/partners/lao.png";
-import EfficientFrontier from "/static/img/home-page/partners-contributors/partners/efficient-frontier.png";
-import B from "/static/img/home-page/partners-contributors/partners/b.png";
-import Apollo from "/static/img/home-page/partners-contributors/partners/apollo.png";
+import Framework from "/static/img/home-page/partners-contributors/partners/framework.svg";
+import Koji from "/static/img/home-page/partners-contributors/partners/koji.svg";
+import DACM from "/static/img/home-page/partners-contributors/partners/dacm.svg";
+import DistributedGlobal from "/static/img/home-page/partners-contributors/partners/distributed-global.svg";
+import GSR from "/static/img/home-page/partners-contributors/partners/gsr.svg";
+import Maven from "/static/img/home-page/partners-contributors/partners/maven.svg";
+import LAO from "/static/img/home-page/partners-contributors/partners/lao.svg";
+import EfficientFrontier from "/static/img/home-page/partners-contributors/partners/efficient-frontier.svg";
+import B from "/static/img/home-page/partners-contributors/partners/b.svg";
+import Apollo from "/static/img/home-page/partners-contributors/partners/apollo.svg";
 
 // Contributors
 import Mycelium from "/static/img/home-page/partners-contributors/contributors/mycelium.svg";
 import Chainlink from "/static/img/home-page/partners-contributors/contributors/chainlink.svg";
-import SigmaPrime from "/static/img/home-page/partners-contributors/contributors/sigma-prime.svg";
+import SigmaPrime from "/static/img/home-page/partners-contributors/contributors/sigma-prime.png";
 import RMIT from "/static/img/home-page/partners-contributors/contributors/rmit.svg";
 import EPNS from "/static/img/home-page/partners-contributors/contributors/epns.svg";
 
@@ -47,28 +47,36 @@ const PartnersContributors = () => {
   return (
     <>
       <section id="pinMasterPartners" className="pin-master">
-        <div id="pinContainerPartners" className="pin-container overflow-hidden">
-          <section className="panel lg:absolute relative top-0 left-0 w-full lg:h-screen h-auto partners flex flex-col justify-start  opacity-0 z-0 transition-all ease-in-out linear duration-1500 lg:pb-0 sm:pb-24">
+        <div
+          id="pinContainerPartners"
+          className="pin-container overflow-hidden"
+        >
+          <section className="panel lg:absolute relative top-0 left-0 w-full lg:h-screen h-auto partners flex flex-col justify-start opacity-0 z-0 transition-all ease-in-out linear duration-1000 lg:pb-0 sm:pb-24">
             <div className="flex container xl mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
-              <p className="2xl:text-4xl lg:text-3xl font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl text-lg">
-                Partners
-              </p>
-              <p className="2xl:text-4xl lg:text-3xl color-tracerdarkblue 2xl:mb-4 lg:mb-2 sm:text-2xl text-lg">
-                Ecosystem Contributors
-              </p>
-              <p className="2xl:text-4xl lg:text-3xl color-tracerdarkblue 2xl:mb-4 lg:mb-2 sm:text-2xl text-lg">
-                In the Media
-              </p>
+              <div className="flex justify-evenly">
+                <p data-section-link="0" className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl text-lg border-b-8 border-blue">
+                  Partners
+                </p>
+                <p data-section-link="1" className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-bold 2xl:mb-4 lg:mb-2 sm:text-2xl text-lg">
+                  Ecosystem Contributors
+                </p>
+                <p data-section-link="2" className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-bold 2xl:mb-4 lg:mb-2 sm:text-2xl text-lg">
+                  In the Media
+                </p>
+              </div>
               <div className="h-auto w-full h-full flex flex-col justify-center sm:pb-24 pb-12">
                 <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center 2xl:mt-10 lg:2xl:mt-10 xl:mt-3 lg:mt-8 mt-6">
                   <img
                     className="2xl:w-60 lg:w-48 lg:mr-10 w-20 mr-5"
                     src={Framework}
                   />
-                  <img className="2xl:w-60 lg:w-48 w-16" src={Koji} />
+                  <img className="2xl:w-48 lg:w-48 w-16" src={Koji} />
                 </div>
                 <div className="flex w-full 2xl:h-32 lg:h-24 lg:mt-0 mt-6 flex-wrap justify-center items-center">
-                  <img className="2xl:w-60 lg:w-48 lg:mr-10 w-1/4 mr-2" src={DACM} />
+                  <img
+                    className="2xl:w-60 lg:w-48 lg:mr-10 w-1/4 mr-2"
+                    src={DACM}
+                  />
                   <img
                     className="2xl:w-60 lg:w-48 lg:mr-10 w-1/4 mr-5"
                     src={DistributedGlobal}
@@ -79,8 +87,14 @@ const PartnersContributors = () => {
                   />
                 </div>
                 <div className="flex w-full 2xl:h-32 lg:h-24 lg:mt-0 mt-4 flex-wrap justify-center items-center">
-                  <img className="lg:w-32 lg:mr-10 sm:w-24 w-12 mr-5" src={Maven} />
-                  <img className="lg:w-32 lg:mr-10 sm:w-24 w-12 mr-5" src={LAO} />
+                  <img
+                    className="lg:w-32 lg:mr-10 sm:w-24 w-12 mr-5"
+                    src={Maven}
+                  />
+                  <img
+                    className="lg:w-32 lg:mr-10 sm:w-24 w-12 mr-5"
+                    src={LAO}
+                  />
                   <img
                     className="lg:w-32 lg:mr-10 sm:w-24 w-12 mr-5"
                     src={EfficientFrontier}
@@ -91,17 +105,19 @@ const PartnersContributors = () => {
               </div>
             </div>
           </section>
-          <section className="panel absolute top-0 left-0 w-full lg:h-screen h-auto contributors flex flex-col justify-start  opacity-0 z-0 transition-all ease-in-out linear duration-1500">
+          <section className="panel absolute top-0 left-0 w-full lg:h-screen h-auto contributors flex flex-col justify-start opacity-0 z-0 transition-all ease-in-out linear duration-1000">
             <div className="flex container xl mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
-              <p className="2xl:text-4xl lg:text-3xl color-tracerdarkblue 2xl:mb-4 lg:mb-2">
-                Partners
-              </p>
-              <p className="2xl:text-4xl lg:text-3xl font-bold text-white 2xl:mb-4 lg:mb-2">
-                Ecosystem Contributors
-              </p>
-              <p className="2xl:text-4xl lg:text-3xl color-tracerdarkblue 2xl:mb-4 lg:mb-2">
-                In the Media
-              </p>
+              <div className="flex justify-evenly">
+                <p data-section-link="0" className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-bold 2xl:mb-4 lg:mb-2 sm:text-2xl text-lg">
+                  Partners
+                </p>
+                <p data-section-link="1" className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl text-lg border-b-8 border-blue">
+                  Ecosystem Contributors
+                </p>
+                <p data-section-link="2" className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-bold 2xl:mb-4 lg:mb-2 sm:text-2xl text-lg">
+                  In the Media
+                </p>
+              </div>
               <div className="h-auto w-full h-full flex flex-col justify-center sm:pb-24">
                 <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center 2xl:mt-10 lg:2xl:mt-10 xl:mt-3 lg:mt-8">
                   <img className="2xl:w-60 lg:w-48 mr-10" src={Mycelium} />
@@ -115,17 +131,19 @@ const PartnersContributors = () => {
               </div>
             </div>
           </section>
-          <section className="panel absolute top-0 left-0 w-full lg:h-screen h-auto media flex flex-col justify-start  opacity-0 z-0 transition-all ease-in-out linear duration-1500">
+          <section className="panel absolute top-0 left-0 w-full lg:h-screen h-auto media flex flex-col justify-start opacity-0 z-0 transition-all ease-in-out linear duration-1000">
             <div className="flex container xl mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
-              <p className="2xl:text-4xl lg:text-3xl color-tracerdarkblue 2xl:mb-4 lg:mb-2">
-                Partners
-              </p>
-              <p className="2xl:text-4xl lg:text-3xl color-tracerdarkblue 2xl:mb-4 lg:mb-2">
-                Ecosystem Contributors
-              </p>
-              <p className="2xl:text-4xl lg:text-3xl font-bold text-white 2xl:mb-4 lg:mb-2">
-                In the Media
-              </p>
+              <div className="flex justify-evenly">
+                <p data-section-link="0" className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-bold 2xl:mb-4 lg:mb-2 sm:text-2xl text-lg">
+                  Partners
+                </p>
+                <p data-section-link="1" className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-bold 2xl:mb-4 lg:mb-2 sm:text-2xl text-lg">
+                  Ecosystem Contributors
+                </p>
+                <p data-section-link="2" className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl text-lg border-b-8 border-blue">
+                  In the Media
+                </p>
+              </div>
               <div className="h-auto w-full h-full flex flex-col justify-center sm:pb-24">
                 <div className="flex justify-center items-start 2xl:mt-10 xl:mt-3 lg:mt-8">
                   <div className="flex flex-col justify-start items-center text-center w-96 mr-5 text-white">

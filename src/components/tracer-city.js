@@ -25,7 +25,7 @@ const TracerCity = () => {
             data-stellar-ratio="1.4"
           >
             <span className="2xl:text-5xl lg:text-4xl text-3xl font-extrabold text-white mb-2">
-              Built for DeFi...
+              Built for DeFi
             </span>
             <small className="lg:text-2xl text-white font-light lg:text-left text-lg text-center">
               Stake and farm with the dApps you know and love.
@@ -57,28 +57,26 @@ const TracerCity = () => {
         id="building-trigger"
         className="panel w-full h-screen city-step staking-section flex lg:items-center relative items-start lg:pt-0 sm:pt-24 background-blue z-10"
       >
+        <video
+          muted
+          loop="loop"
+          autoPlay
+          playsInline
+          id="tracer-building"
+          className="min-w-video absolute top-0 left-0 transition-opacity duration-1000 sm:block sm:opacity-0 transition-opacity duration-1000 hidden"
+        >
+          <source src={TracerBuilding} type="video/mp4" />
+        </video>
         <div className="container xl flex justify-between mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row flex-col-reverse relative z-10">
-          <div
-            id="tracer-building"
-            className="w-2/4 lg:h-screen sm:w-auto w-full h-auto z-0 items-center justify-center flex sm:opacity-0 transition-opacity duration-1000"
-          >
+          <div className="w-2/4 lg:h-screen sm:w-auto w-full h-auto z-0 items-center justify-center flex">
             <img
-              className="w-full"
+              className="w-full sm:hidden block"
               src={TracerBuildingImage}
               alt="Tracer Building"
             />
-            <video
-              muted
-              loop="loop"
-              autoPlay
-              playsInline
-              className="min-w-video absolute top-0 sm:opacity-0 right-0 transition-opacity duration-1000 sm:block hidden"
-            >
-              <source src={TracerBuilding} type="video/mp4" />
-            </video>
           </div>
           <div
-            className="2xl:w-1/3 lg:w-1/3 h-auto sm:absolute sm:right-24 sm:mt-96 right-0 sm:px-0 mx-auto px-4 force-flex flex-col justify-center items-center z-10 lg:pb-0 sm:text-left text-center"
+            className="2xl:w-1/3 lg:w-1/3 h-auto sm:absolute sm:right-24 sm:mt-96 right-0 sm:px-0 mx-auto px-4 force-flex flex-col justify-center sm:items-start items-center z-10 lg:pb-0 sm:text-left text-center"
             data-stellar-ratio="1.4"
           >
             <span className="sm:text-5xl font-semibold text-base sm:mb-2 mb-0 text-white color-blue">
@@ -99,7 +97,7 @@ const TracerCity = () => {
           </div>
         </div>
         <img
-          className="absolute w-full h-3/4 top-2/4 left-2/4 transform -translate-x-1/2 -translate-y-1/2 z-0"
+          className="absolute w-full h-3/4 top-2/4 left-2/4 transform -translate-x-1/2 -translate-y-1/2 z-0 sm:hidden block"
           src={MeshLarge}
         />
       </section>

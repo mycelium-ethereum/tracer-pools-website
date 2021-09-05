@@ -45,7 +45,7 @@ const cityAnimation = (controller) => {
     .setTween(t3)
     .setClassToggle("#city-trigger", "active")
     .addTo(controller);
-    return scene;
+  return scene;
 };
 const buildingAnimation = (controller) => {
   var t4 = gsap.timeline();
@@ -60,7 +60,7 @@ const buildingAnimation = (controller) => {
     .setTween(t4)
     .setClassToggle("#building-trigger", "active")
     .addTo(controller);
-    return scene;
+  return scene;
 };
 const integrateAnimation = (controller) => {
   var t5 = gsap.timeline();
@@ -140,6 +140,26 @@ const updatePartnersSlide = (progress) => {
     slides[2].classList.add("active");
   }
 };
+const partnerClick = (scene) => {
+  const partnerSection = document.querySelector("#pinMasterPartners");
+  partnerSection.addEventListener("click", function (e) {
+    const target = e.target.dataset.sectionLink;
+    const slides = document.querySelectorAll("#pinMasterPartners .panel");
+    slides.forEach((e) => e.classList.remove("active"));
+    if (target == 0) {
+      slides[0].classList.add("active");
+      scene.progress(0);
+    }
+    if (target == 1) {
+      slides[1].classList.add("active");
+      scene.progress(0.33);
+    }
+    if (target == 2) {
+      slides[2].classList.add("active");
+      scene.progress(0.66);
+    }
+  });
+};
 const isMobile = () => {
   const width = window.innerWidth;
   return width < 1024;
@@ -169,6 +189,7 @@ const initialiseScrollMagic = (controller) => {
     updateActiveStep(scene.progress());
     updatePartnersSlide(scene6.progress());
   });
+  partnerClick(scene6);
 };
 const scenes = [];
 window.onload = function () {
@@ -178,11 +199,13 @@ window.onload = function () {
     initialiseScrollMagic(controller);
   }
   // $.stellar()
-  $(window).stellar({horizontalScrolling: false});
-  $(window).stellar('refresh');
+  $(window).stellar({ horizontalScrolling: false });
+  $(window).stellar("refresh");
 
-  // Disable ScrollMagic on resize
+  // Disable ScrollMagic on resize and refresh Stellar.js
   window.addEventListener("resize", function () {
+    $(window).stellar({ horizontalScrolling: false });
+    $(window).stellar("refresh");
     if (!isMobile()) {
       if (scenes.length) {
         body.classList.remove("sm-disabled");

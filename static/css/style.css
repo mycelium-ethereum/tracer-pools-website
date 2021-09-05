@@ -1,5 +1,5 @@
 :root {
-  --blue: #1e6df5;
+  --blue: #1633DF;
   --lightblue: #3da8f5;
   --darkblue: #0019A5;
   --tracerdarkblue: #00007a;
@@ -32,6 +32,9 @@
   color: var(--orange);
 }
 .border-blue {
+  border-color: var(--blue);
+}
+.border-lightblue {
   border-color: var(--lightblue);
 }
 .gradient {
@@ -344,7 +347,6 @@ section {
   background: var(--darkblue);
 }
 .step-animation {
-  position: relative;
   height: 950px;
 }
 .step-animation video {
@@ -672,8 +674,17 @@ body:not(.steps-active) #token-trigger.active .city-background {
 /* --------------- PARTNERS/CONTRIBUTORS SECTION --------------- */
 
 #pinContainerPartners .panel.active {
-  opacity: 1;
   z-index: 1;
+  opacity: 1;
+}
+/* #pinContainerPartners .panel.active .categories,
+#pinContainerPartners .panel.active .images {
+  opacity: 1;
+} */
+
+/* --------------- FOOTER --------------- */
+footer {
+  background: var(--midblue);
 }
 
 /* --------------- MEDIA QUERIES --------------- */
@@ -760,6 +771,9 @@ body:not(.steps-active) #token-trigger.active .city-background {
   }
   .integrate-animation { 
     transform: scale(0.33);
+  }
+  footer {
+    background: var(--tracerblue);
   }
 }
 @media only screen and (max-width: 479px) {
