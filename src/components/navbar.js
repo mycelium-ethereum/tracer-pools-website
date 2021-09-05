@@ -30,6 +30,9 @@ const Navbar = () => {
     });
     window.addEventListener("resize", function () {
       setSolidNav();
+      if (isMobile()) {
+        setOpen(false);
+      }
     });
   });
 
@@ -79,8 +82,8 @@ const Navbar = () => {
         className={
           "fixed transition-opacity duration-700 h-screen w-full background-tracerblue top-0 left-0 mt-0 pl-0" +
           (isOpen
-            ? " opacity-0 pointer-events-none"
-            : " opacity-100 pointer-events-auto")
+            ? " opacity-100 pointer-events-auto"
+            : " opacity-0 pointer-events-none")
         }
       >
         <button
@@ -105,7 +108,9 @@ const Navbar = () => {
           </div>
           <div className="mt-6 w-full">
             <Link to="/perpetuals">
-              <span className="text-white font-semibold text-lg">Perpetuals</span>
+              <span className="text-white font-semibold text-lg">
+                Perpetuals
+              </span>
             </Link>
           </div>
           <div className="mt-6 w-full">

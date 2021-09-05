@@ -55,7 +55,7 @@ const TracerCity = () => {
       </section>
       <section
         id="building-trigger"
-        className="panel w-full lg:h-screen h-auto staking-section flex lg:items-center relative items-start lg:pt-0 pt-24 background-blue z-10"
+        className="panel w-full xl:h-screen h-auto staking-section flex lg:items-center relative items-start lg:pt-0 xl:pb-12 pt-24 background-blue z-10"
       >
         {/* Desktop building video */}
         <video
