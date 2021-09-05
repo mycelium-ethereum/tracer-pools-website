@@ -16,7 +16,7 @@ const WalletAnimation = () => {
         className="panel relative lg:h-screen h-auto w-full z-0 background-blue"
         id="token-trigger"
       >
-        <div className="container xl flex flex-col align-center justify-start h-full w-full relative z-10 mx-auto 2xl:pt-36 xl:pt-60 xl:px-24 lg:px-12 lg:pt-52 lg:pb-48 pt-48 px-4">
+        <div className="container xl flex flex-col align-center justify-start h-full w-full relative z-10 mx-auto 2xl:pt-80 xl:pt-60 xl:px-24 lg:px-12 lg:pt-52 lg:pb-48 pt-48 px-4">
           <h1
             id="fade1"
             className="mb-4 text-center lg:text-6xl text-4xl font-black text-white lg:leading-snug"

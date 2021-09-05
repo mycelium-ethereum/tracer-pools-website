@@ -62,7 +62,7 @@ const Footer = () => {
   });
   return (
     <footer className="w-full relative overflow-hidden lg:pb-10 h-auto z-0 lg:border-0 border-b-8 border-lightblue">
-      <img className="absolute top-0 left-0 w-full h-auto lg:block hidden" src={CityBottomDark}/>
+      <img id="footer-bg" className="absolute top-0 left-0 w-full h-auto lg:block hidden" src={CityBottomDark}/>
       <div className="container xl mx-auto relative xl:flex flex-col justify-between z-1 xl:px-24 lg:px-12 px-8">
         <div className="flex flex-col xl:justify-center justify-between items-center lg:w-full lg:pt-0 sm:w-max w-full h-auto mx-auto pt-16">
           <span className="font-semibold text-white lg:text-4xl lg:w-auto lg:mb-6 sm:text-2xl w-full text-lg">

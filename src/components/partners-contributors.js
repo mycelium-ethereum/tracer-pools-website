@@ -200,7 +200,7 @@ const PartnersContributors = () => {
                 <div className="flex justify-center items-start 2xl:mt-10 xl:mt-3 lg:mt-8">
                   <div className="flex flex-col justify-start items-center text-center w-96 mr-5 text-white">
                     <img
-                      className="2xl:w-full xl:w-28 lg:w-52 rounded-lg"
+                      className="2xl:w-full xl:w-28 lg:w-52 rounded-2xl"
                       src={FinancialReview}
                     />
                     <p className="mb-4 mt-6 sm:text-xl text-lg">
@@ -217,7 +217,7 @@ const PartnersContributors = () => {
                   </div>
                   <div className="flex flex-col justify-start items-center text-center w-96 ml-5 text-white">
                     <img
-                      className="2xl:w-full xl:w-28 lg:w-52 rounded-lg"
+                      className="2xl:w-full xl:w-28 lg:w-52 rounded-2xl"
                       src={CoinTelegraph}
                     />
                     <p className="mb-4 mt-6 sm:text-xl text-lg">

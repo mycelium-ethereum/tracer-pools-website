@@ -68,9 +68,10 @@
   transition-duration: 1.5s;
 }
 .min-w-video {
-  min-width: 100vw;
+  max-width: 1920px;
+  width: 100%;
+  /* min-width: 100vw; */
   min-height: 100%;
-  /* max-width: 1920px; */
 }
 body,
 html {
@@ -694,6 +695,23 @@ footer {
 }
 
 /* --------------- MEDIA QUERIES --------------- */
+@media only screen and (min-width: 1800px) {
+  #token-trigger .container {
+    padding-top: 450px;
+  }
+  body:not(.steps-active) #token-trigger.active .city-background {
+    top: 700px;
+  }
+  .large-spacer {
+    height: 1000px;
+  }
+  .small-spacer {
+    height: 800px;
+  }
+  footer #footer-bg {
+    top: -320px;
+  }
+}
 @media only screen and (max-width: 1300px) {
   /* Token Sliders */
   .slick-initialized .slick-slide {
