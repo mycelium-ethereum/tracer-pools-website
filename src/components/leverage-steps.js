@@ -63,7 +63,7 @@ const LeverageSteps = (direction) => {
                     BTC/DAI, LINK/DAI, or ETH/DAI
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-40 lg:bottom-20 left-0 justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out lg:flex hidden">
+                <div className="step-progress absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-20 left-0 justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out lg:flex hidden">
                   <span className="active w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out"></span>
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
@@ -117,7 +117,7 @@ const LeverageSteps = (direction) => {
                   src={MobileSteps}
                 />
               </div>
-              <div className="w-2/4 step-animation xl:-top-24 transform xl:scale-75 xl:right-0 lg:scale-50 lg:-right-12 lg:-top-32 scale-50 lg:opacity-100 opacity-0 lg:block hidden">
+              <div className="w-2/4 step-animation relative 2xl:-top-24 lg:-top-32 xl:scale-75 xl:right-0 lg:scale-50 lg:-right-12 lg:opacity-100 opacity-0 lg:block transform scale-50  hidden">
                 {/* <img
                   className="step-animation__tile lg:opacity-0"
                   src={ClearTile}
@@ -166,7 +166,7 @@ const LeverageSteps = (direction) => {
                     Long or short
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-40 lg:bottom-20 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
+                <div className="step-progress absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-20 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="active w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out"></span>
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
@@ -194,7 +194,7 @@ const LeverageSteps = (direction) => {
                     1x, 2x, 3x, 5x, or 15x
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-40 lg:bottom-20 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
+                <div className="step-progress absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-20 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="active w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out"></span>
@@ -221,7 +221,7 @@ const LeverageSteps = (direction) => {
                     leveraged exposure
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-40 lg:bottom-20 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
+                <div className="step-progress absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-20 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>

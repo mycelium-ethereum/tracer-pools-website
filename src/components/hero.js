@@ -12,7 +12,7 @@ const Hero = () => {
         <BackgroundParallax />
         <div className="container xl w-full h-screen relative flex justify-center items-center z-20 pb-36 2xl:pt-0 xl:px-24 lg:pt-36 lg:px-12 sm:pt-18 pt-16 px-4 mx-auto">
           <header className="text-center">
-            <h1 className="2xl:text-9xl sm:text-7xl text-5xl text-white font-black mb-4">
+            <h1 className="xl:text-9xl sm:text-7xl text-5xl text-white font-black mb-4">
               Perpetual Pools
             </h1>
             <p className="text-white text-xl lg:block hidden">
@@ -38,7 +38,7 @@ const Hero = () => {
               </div>
             </Link>
           </header>
-          <div className="max-w-screen-xl absolute 2xl:-bottom-80 xl:-bottom-96 lg:-bottom-60 sm:px-24 px-6 w-full -bottom-10 z-20">
+          <div className="2xl:max-w-screen-xl xl:max-w-screen-lg 2xl:-bottom-80 xl:-bottom-96 lg:-bottom-60 sm:px-24 absolute px-6 w-full -bottom-10 z-20">
             <img className="w-screen" src={TracerLaptop} alt="Tracer Laptop View" />
           </div>
         </div>

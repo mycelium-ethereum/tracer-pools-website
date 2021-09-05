@@ -21,10 +21,10 @@ const TracerCity = () => {
       >
         <div className="container xl flex sm:h-screen h-auto justify-end mx-auto xl:px-24 lg:px-12 px-4 lg:flex-row sm:pb-0 pb-96 flex-col relative">
           <div
-            className="h-auto sm:absolute sm:left-24 sm:mt-96 force-flex flex-col justify-center z-10 lg:pb-0 lg:mb-0 sm:pb-80 sm:pt-0 sm:px-0 lg:w-80 w-52 mx-auto left-0 pt-12 mb-10 sm:text-left text-center"
+            className="h-auto sm:absolute sm:left-24 2xl:mt-96 xl:mt-48 force-flex flex-col justify-center z-10 lg:pb-0 lg:mb-0 sm:pb-80 sm:pt-0 sm:px-0 lg:w-80 w-52 mx-auto left-0 pt-12 mb-10 sm:text-left text-center"
             data-stellar-ratio="1.4"
           >
-            <span className="2xl:text-5xl lg:text-4xl text-3xl font-extrabold text-white mb-2">
+            <span className="xl:text-5xl lg:text-4xl text-3xl font-extrabold text-white mb-2">
               Built for DeFi
             </span>
             <small className="lg:text-2xl text-white font-light lg:text-left text-lg text-center">
@@ -76,13 +76,13 @@ const TracerCity = () => {
             />
           </div>
           <div
-            className="2xl:w-1/3 lg:w-1/3 h-auto sm:absolute sm:right-24 sm:mt-96 right-0 sm:px-0 mx-auto px-4 force-flex flex-col justify-center sm:items-start items-center z-10 lg:pb-0 sm:text-left text-center"
+            className="2xl:w-1/3 lg:w-1/3 h-auto sm:absolute sm:right-24 2xl:mt-96 xl:mt-48 right-0 sm:px-0 mx-auto px-4 force-flex flex-col justify-center sm:items-start items-center z-10 lg:pb-0 sm:text-left text-center"
             data-stellar-ratio="1.4"
           >
-            <span className="sm:text-5xl font-semibold text-base sm:mb-2 mb-0 text-white color-blue">
+            <span className="xl:text-5xl lg:text-4xl font-semibold text-base sm:mb-2 mb-0 text-white color-blue">
               Built for DeFi
             </span>
-            <h1 className="font-bold text-white mb-4 sm:text-5xl text-3xl">
+            <h1 className="font-bold text-white mb-4 xl:text-5xl lg:text-4xl text-3xl">
               Strategise &amp; Natively
             </h1>
             <small className="text-white font-light 2xl:w-72 lg:text-2xl lg:text-left sm:text-3xl sm:w-auto w-56 text-lg">

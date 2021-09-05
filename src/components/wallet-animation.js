@@ -4,8 +4,8 @@ import Button from "../components/button";
 
 // Images
 import MetamaskFox from "/static/img/slider/metamask-fox.svg";
-import CityBackground from "/static/img/home-page/city-background.svg";
-import BlueBackground from "/static/img/home-page/blue-background.png";
+import CityTopDark from "/static/img/home-page/city/city-top-dark.svg";
+import BlueBackground from "/static/img/home-page/city/blue-background.png";
 import CityTop from "/static/img/home-page/city/city-top.png";
 
 // CityBackground
@@ -16,7 +16,7 @@ const WalletAnimation = () => {
         className="panel relative sm:h-screen h-auto w-full z-0 background-blue"
         id="token-trigger"
       >
-        <div className="container xl flex flex-col align-center justify-start h-full w-full relative z-10 mx-auto 2xl:pt-96 2xl:pt-36 xl:pt-24 lg:pt-32 pt-48 xl:px-24 lg:px-12 px-4">
+        <div className="container xl flex flex-col align-center justify-start h-full w-full relative z-10 mx-auto 2xl:pt-36 xl:pt-60 lg:pt-32 pt-48 xl:px-24 lg:px-12 px-4">
           <h1
             id="fade1"
             className="mb-4 text-center lg:text-6xl text-4xl font-black text-white lg:leading-snug"
@@ -40,12 +40,11 @@ const WalletAnimation = () => {
             Browse Tokens
           </Button>
         </div>
-        <div className="w-full absolute 2xl:-bottom-48 2xl:h-60 lg:h-48 lg:bottom-12 h-48 -bottom-60">
+        <div className="w-full absolute 2xl:-bottom-48 2xl:h-60 lg:h-48 lg:-bottom-24 h-48 -bottom-60">
           <TokenSlider className="slider-left w-2/4 overflow-hidden bottom-0 h-full absolute lg:-left-16 -left-16 z-10" />
-          <div className="absolute 2xl:bottom-8 2xl:w-96 2xl:w-64 lg:w-48 lg:bottom-0 left-2/4 transform -translate-x-1/2 h-full w-48 z-20">
-            <picture className="flex flex-col justify-center items-center relative h-full ">
+          <div className="absolute 2xl:bottom-8 2xl:w-96 xl:w-72 lg:bottom-6 left-2/4 transform -translate-x-1/2 h-full w-48 z-20">
+            <picture className="flex flex-col justify-center items-center relative w-full">
               <img
-                className="2xl:h-96 xl:h-64 lg:h-40"
                 src={MetamaskFox}
                 alt="MetaMask"
               />
@@ -54,8 +53,8 @@ const WalletAnimation = () => {
           <TokenSlider className="slider-right w-2/4 overflow-hidden bottom-0 h-full absolute lg:-right-16 -right-16 z-10" />
         </div>
         <img
-          className="city-top absolute sm:top-2/4 top-24 left-0 w-full transition-all duration-500"
-          src={CityBackground}
+          className="city-top absolute sm:top-2/4 left-0 w-full transition-all duration-500"
+          src={CityTopDark}
         />
         <img
           className="city-background absolute lg:top-full top-48 left-0 w-full transition-all duration-500"

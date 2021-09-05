@@ -1,4 +1,8 @@
-const stepAnimation = (controller) => {
+var w = window.innerWidth;
+var size = w > 1024 ? "big" : "small";
+var controller;
+
+const stepAnimation = () => {
   var tl = gsap.timeline();
   tl.from(".panel.step-two", 1, { xPercent: 0 });
   tl.from(".panel.step-three", 1, { xPercent: 0 });
@@ -15,7 +19,7 @@ const stepAnimation = (controller) => {
     .addTo(controller);
   return scene;
 };
-const tokenAnimation = (controller) => {
+const tokenAnimation = () => {
   var t2 = gsap.timeline();
   const fourFifthsScreen = window.innerHeight * 0.8;
   t2.from("#token-trigger", 1, { xPercent: 0, opacity: 1 });
@@ -31,38 +35,39 @@ const tokenAnimation = (controller) => {
     .addTo(controller);
   return scene;
 };
-const cityAnimation = (controller) => {
+const cityAnimation = () => {
   var t3 = gsap.timeline();
-  const halfScreen = window.innerHeight * 0.5;
   t3.from("#city-trigger", 1, { xPercent: 0, opacity: 1 });
+  const oneQuarterScreen = window.innerHeight * 0.25;
 
   const scene = new ScrollMagic.Scene({
     triggerElement: "#city-trigger",
     triggerHook: "onLeave",
     duration: "0%",
-    offset: -100,
+    offset: -oneQuarterScreen,
   })
     .setTween(t3)
     .setClassToggle("#city-trigger", "active")
     .addTo(controller);
   return scene;
 };
-const buildingAnimation = (controller) => {
+const buildingAnimation = () => {
   var t4 = gsap.timeline();
   t4.from("#building-trigger", 1, { xPercent: 0, opacity: 1 });
+  const oneQuarterScreen = window.innerHeight * 0.25;
 
   const scene = new ScrollMagic.Scene({
     triggerElement: "#building-trigger",
     triggerHook: "onLeave",
     duration: "0%",
-    // offset: -100,
+    offset: -oneQuarterScreen,
   })
     .setTween(t4)
     .setClassToggle("#building-trigger", "active")
     .addTo(controller);
   return scene;
 };
-const integrateAnimation = (controller) => {
+const integrateAnimation = () => {
   var t5 = gsap.timeline();
   t5.from(".integrate-section", 1, { xPercent: 0, opacity: 1 });
 
@@ -77,7 +82,7 @@ const integrateAnimation = (controller) => {
     .addTo(controller);
   return scene;
 };
-const partnersAnimation = (controller) => {
+const partnersAnimation = () => {
   var t5 = gsap.timeline();
   t5.from(".panel.partners", 1, { xPercent: 0 });
   t5.from(".panel.contributors", 1, { xPercent: 0 });
@@ -148,7 +153,7 @@ const partnerClick = (scene) => {
     slides.forEach((e) => e.classList.remove("active"));
     if (target == 0) {
       slides[0].classList.add("active");
-      scene.progress(0);
+      scene.progress(0.01);
     }
     if (target == 1) {
       slides[1].classList.add("active");
@@ -164,41 +169,40 @@ const isMobile = () => {
   const width = window.innerWidth;
   return width < 1024;
 };
-const disableScrollmagic = (scene) => {
-  scene.enabled(false);
-};
-const enableScrollmagic = (scene) => {
-  scene.enabled(true);
-  scene.refresh();
-  scene.update(true);
-};
-const initialiseScrollMagic = (controller) => {
-  const scene = stepAnimation(controller);
-  const scene2 = tokenAnimation(controller);
-  const scene3 = cityAnimation(controller);
-  const scene4 = buildingAnimation(controller);
-  const scene5 = integrateAnimation(controller);
-  const scene6 = partnersAnimation(controller);
-  scenes.push(scene);
-  scenes.push(scene2);
-  scenes.push(scene3);
-  scenes.push(scene4);
-  scenes.push(scene5);
-  scenes.push(scene6);
+const initialiseScrollMagic = () => {
+  controller = new ScrollMagic.Controller();
+  const scene = stepAnimation();
+  const scene2 = tokenAnimation();
+  const scene3 = cityAnimation();
+  const scene4 = buildingAnimation();
+  const scene5 = integrateAnimation();
+  const scene6 = partnersAnimation();
   window.addEventListener("scroll", function () {
     updateActiveStep(scene.progress());
     updatePartnersSlide(scene6.progress());
   });
   partnerClick(scene6);
 };
-const scenes = [];
+const handleResize = () => {
+  w = window.innerWidth;
+  var newSize = w > 1024 ? "big" : "small";
+  if (newSize != size) {
+    size = newSize;
+    if (newSize === "small") {
+      console.log("Destroyed");
+      controller.destroy(true);
+    } else {
+      console.log("Initialised");
+      initialiseScrollMagic();
+    }
+  }
+};
 window.onload = function () {
-  const controller = new ScrollMagic.Controller();
   const body = document.querySelector("body");
   if (!isMobile()) {
-    initialiseScrollMagic(controller);
+    initialiseScrollMagic();
   }
-  // $.stellar()
+
   $(window).stellar({ horizontalScrolling: false });
   $(window).stellar("refresh");
 
@@ -206,23 +210,6 @@ window.onload = function () {
   window.addEventListener("resize", function () {
     $(window).stellar({ horizontalScrolling: false });
     $(window).stellar("refresh");
-    if (!isMobile()) {
-      if (scenes.length) {
-        body.classList.remove("sm-disabled");
-        scenes.forEach((scene) => enableScrollmagic(scene));
-        controller.enabled(true);
-        console.log("re-enabled previously initialised ScrollMagic");
-      } else {
-        body.classList.remove("sm-disabled");
-        initialiseScrollMagic(controller);
-        console.log("resize - initialised");
-      }
-    }
-    if (isMobile() && scenes.length) {
-      body.classList.add("sm-disabled");
-      scenes.forEach((scene) => disableScrollmagic(scene));
-      controller.enabled(false);
-      console.log("resize - disabled");
-    }
+    handleResize();
   });
 };

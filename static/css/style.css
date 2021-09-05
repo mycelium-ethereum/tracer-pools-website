@@ -203,6 +203,7 @@ h1 {
   color: var(--lightblue);
   border: 1px solid var(--lightblue);
   background: transparent;
+  transition: all 0.5s ease;
 }
 .tracer-btn.blue {
   border: 1px solid var(--lightblue);
@@ -220,8 +221,11 @@ h1 {
 }
 .tracer-btn.blue:hover,
 .tracer-btn.glow:hover {
-  background: var(--lightblue);
   color: var(--white);
+}
+.tracer-btn.glow:hover {
+  color: var(--white);
+  background: linear-gradient(91.48deg, var(--lightblue) -5.68%, var(--lightblue) 105.12%);
 }
 
 /* DOWN ARROW */
@@ -566,19 +570,21 @@ body:not(.steps-active) #token-trigger.active .city-top {
   top: 0;
 }
 body:not(.steps-active) #token-trigger.active .city-background {
-  top: 66%;
+  top: 445px;
 }
-#token-trigger.active #fade1 {
-  opacity: 1;
+#token-trigger #fade1 {
   transition: opacity 0.35s ease 1s;
 }
-#token-trigger.active #fade2 {
-  opacity: 1;
+#token-trigger #fade2 {
   transition: opacity 0.35s ease 2s;
 }
+#token-trigger #fade3 {
+  transition: all 0.5s ease, opacity 0.35s ease 3s;
+}
+#token-trigger.active #fade1,
+#token-trigger.active #fade2,
 #token-trigger.active #fade3 {
   opacity: 1;
-  transition: opacity 0.35s ease 3s;
 }
 /*------------TRACER CITY------------*/
 
@@ -695,6 +701,11 @@ footer {
   }
   .slick-slider .item img {
     width: 150px;
+  }
+}
+@media only screen and (max-width: 1536px) {
+  .large-spacer {
+    height: 650px; 
   }
 }
 @media only screen and (max-width: 1024px) {

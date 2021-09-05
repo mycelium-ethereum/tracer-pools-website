@@ -28,7 +28,7 @@ const IntegrateAnimation = () => {
     <section className="integrate-section flex sm:items-center items-start lg:h-screen h-auto">
       <div className="flex container xl mx-auto relative flex items-center justify-end xl:px-24 lg:flex-row lg:pb-0 sm:px-12 sm:pb-0 pb-96 flex-col px-4">
         <div
-          className="container xl lg:w-3/5 force-flex sm:absolute left-24 top-96 lg:justify-start lg:flex-row justify-center flex-col"
+          className="container xl lg:w-3/5 force-flex sm:absolute left-24 2xl:mt-96 xl:mt-48 lg:justify-start lg:flex-row justify-center flex-col"
           data-stellar-ratio="1.2"
         >
           <div className="lg:w-2/4 w-full h-auto flex flex-col justify-center">

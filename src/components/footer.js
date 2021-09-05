@@ -64,13 +64,13 @@ const Footer = () => {
     <footer className="w-full relative overflow-hidden lg:pb-10 h-auto z-0 sm:border-0 border-b-8 border-lightblue">
       <img className="absolute top-0 left-0 w-full h-auto" src={CityBottomDark}/>
       <div className="container xl mx-auto relative xl:flex flex-col justify-between z-1 xl:px-24 lg:px-12 px-8">
-        <div className="w-full flex flex-col xl:justify-center justify-between items-center xl:mb-64 lg:pt-0 lg:h-60 h-auto pt-16">
-          <span className="font-semibold text-white 2xl:w-auto lg:text-4xl lg:w-96 lg:mb-6 sm:text-2xl text-lg">
+        <div className="w-full flex flex-col xl:justify-center justify-between items-center lg:pt-0 h-auto pt-16">
+          <span className="font-semibold text-white lg:text-4xl lg:w-auto lg:mb-6 sm:w-96 sm:text-2xl text-lg">
             Stay updated on the latest Tracer news
           </span>
           <form
             id="subscription-form"
-            className="lg:mb-32 lg:w-min sm:w-64 sm:ml-0 sm:mr-0 mx-auto w-full flex lg:mt-0 mt-4 justify-between"
+            className="2xl:mb-96 2xl:pb-0 xl:mb-72 lg:w-min sm:w-64 sm:ml-0 sm:mr-0 mx-auto w-full flex lg:mt-0 mt-4 justify-between"
             onSubmit={(e) => handleSubmit(e)}
           >
             <input type="hidden" name="u" value="15" />
