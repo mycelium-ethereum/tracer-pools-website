@@ -401,9 +401,8 @@ section {
   right: -80px;
 }
 .step-animation__tile4 {
-  width: 100%;
-  top: 330px;
-  right: 80px;
+  top: 326px;
+  right: 113px;
 }
 
 /* App base */
@@ -589,14 +588,13 @@ section {
 #pinContainer .panel.stage-four .step-animation__empty,
 #pinContainer .panel.stage-four .step-animation__tile3 {
   opacity: 0;
-  top: 420px;
-  right: 238px;
+  top: 418px;
+  right: 270px;
 }
-#pinContainer .panel.stage-four .step-animation__empty,
 #pinContainer .panel.stage-four .step-animation__tile4 {
   opacity: 1;
-  top: 420px;
-  right: 238px;
+  top: 418px;
+  right: 310px;
 }
 
 /*------------[Positions slider]------------*/
