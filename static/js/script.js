@@ -211,6 +211,8 @@ window.onload = function () {
   window.addEventListener("resize", function () {
     $(window).stellar({ horizontalScrolling: false });
     $(window).stellar("refresh");
-    handleResize();
+    this.setTimeout(function () {
+      handleResize();
+    }, 250);
   });
 };

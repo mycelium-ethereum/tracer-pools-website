@@ -28,5 +28,12 @@ module.exports = {
         postCssPlugins: [require("tailwindcss")],
       },
     },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100,
+        duration: 700,
+      }
+    }
   ],
 };

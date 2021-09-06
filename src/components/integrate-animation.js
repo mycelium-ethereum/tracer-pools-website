@@ -44,7 +44,7 @@ const IntegrateAnimation = () => {
             </p>
           </div>
         </div>
-        <div className="w-2/5 integrate-animation 2xl:scale-75 absolute 2xl:-right-48 transform lg:scale-50 lg:-right-24 sm:relative sm:scale-50 sm:-right-64 -right-24 sm:bottom-24 -bottom-64">
+        <div className="w-2/5 integrate-animation 2xl:scale-75 absolute 2xl:-right-48 transform lg:scale-50 lg:-right-24 sm:relative sm:scale-50 sm:-right-64 sm:bottom-24 -right-28 -bottom-64">
           <img className="integrate-animation__tile lg:opacity-0" src={Tile} />
           <img className="integrate-animation__layerone lg:opacity-0" src={LayerOne} />
           <img className="integrate-animation__layertwo lg:opacity-0" src={LayerTwo} />

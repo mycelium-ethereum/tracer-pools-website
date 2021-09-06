@@ -13,6 +13,7 @@
     "framer-motion": "^4.1.17",
     "gatsby": "^2.32.13",
     "gatsby-image": "^2.5.0",
+    "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-htaccess": "^1.4.0",
     "gatsby-plugin-image": "^1.7.1",
     "gatsby-plugin-ipfs": "^2.0.2",

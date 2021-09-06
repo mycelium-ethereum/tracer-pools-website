@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "gatsby";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 import BackgroundParallax from "../components/parallax";
-import ArrowDown from "../components/arrow-down";
 import Button from "../components/button";
+
 // Assets
 import TracerLaptop from "/static/img/home-page/laptop.png";
+import ArrowDown from "/static/img/general/arrow-down.svg";
+
 const Hero = () => {
   return (
     <>
@@ -39,15 +42,21 @@ const Hero = () => {
             </Link>
           </header>
           <div className="2xl:max-w-screen-xl xl:max-w-screen-lg 2xl:-bottom-80 xl:-bottom-96 lg:-bottom-72 md:-bottom-32 sm:-bottom-32 sm:px-24 absolute px-6 w-full -bottom-10 z-20">
-            <img className="w-full" src={TracerLaptop} alt="Tracer Laptop View" />
+            <img
+              className="w-full"
+              src={TracerLaptop}
+              alt="Tracer Laptop View"
+            />
           </div>
         </div>
-        <ArrowDown
+        <AnchorLink
+          to="/#steps"
           className="absolute 2xl:right-48 xl:right-30 lg:right-32 sm:w-16 sm:bottom-32 sm:right-16 bottom-12 right-6 w-14 z-20"
-          linkTo="#steps"
-        />
+        >
+          <img src={ArrowDown} alt="Down Arrow" />
+        </AnchorLink>
       </section>
-      <div className="2xl:h-96 lg:h-80 h-40 background-blue" id="steps" />
+      <div className="2xl:h-96 lg:h-80 h-40 background-blue" />
     </>
   );
 };
