@@ -915,7 +915,7 @@ footer {
     opacity: 1;
   }
   .large-spacer {
-    height: 420px;
+    height: 500px;
   }
 }
 @media only screen and (max-width: 640px) {
