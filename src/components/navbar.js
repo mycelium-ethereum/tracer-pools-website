@@ -42,6 +42,7 @@ const Navbar = () => {
     <nav
       id="nav"
       className="fixed w-full z-50 transition ease-out duration-500"
+      onMouseLeave={() => setDropdownOpen(false)}
     >
       <div className="container xl lg:h-24 h-20 flex justify-between items-center mx-auto xl:px-24 sm:px-12 px-4">
         <div className="relative" onMouseEnter={() => setDropdownOpen(true)}>
@@ -59,12 +60,11 @@ const Navbar = () => {
           </Link>
           <div
             className={
-              "dropdown absolute top-16 w-40 p-4 border border-white rounded-lg transition-opacity duration-500 " +
+              "dropdown absolute top-14 w-40 p-4 border border-white rounded-lg transition-opacity duration-500 " +
               (dropdownOpen
                 ? "pointer-events-all opacity-100"
                 : "pointer-events-none opacity-0")
             }
-            onMouseLeave={() => setDropdownOpen(false)}
           >
             <Link to="/perpetuals">
               <span className="block text-white font-semibold mb-4">
