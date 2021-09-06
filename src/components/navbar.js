@@ -45,22 +45,27 @@ const Navbar = () => {
       onMouseLeave={() => setDropdownOpen(false)}
     >
       <div className="container lg:h-24 h-20 flex justify-between items-center mx-auto xl:px-0 px-4">
-        <div className="relative" onMouseEnter={() => setDropdownOpen(true)}>
+        <div className="relative flex" onMouseEnter={() => setDropdownOpen(true)}>
           <Link to="/">
             <img
               className="sm:w-24 w-22 h-auto"
               src={TracerLogo}
               alt="Tracer Logo"
             />
-            <img
-              className="w-4 absolute top-1/2 -right-8 transform -translate-y-1/2 sm:block hidden h-auto"
-              src={Dropdown}
-              alt="Dropdown"
-            />
           </Link>
           <div
+            className="sm:flex hidden ml-3 w-22 h-22 left-0 top-0 z-0 justify-center items-center"
+            onClick={() => setDropdownOpen(true)}
+          >
+            <img
+              className="w-4 w-4 h-auto"
+              src={Dropdown}
+              alt="Dropdown toggle"
+            />
+          </div>
+          <div
             className={
-              "dropdown absolute top-14 w-40 p-4 border border-white rounded-lg md:block hidden transition-opacity duration-500 " +
+              "dropdown absolute top-14 w-40 p-4 border border-white rounded-lg sm:block hidden transition-opacity duration-500 " +
               (dropdownOpen
                 ? "pointer-events-all opacity-100"
                 : "pointer-events-none opacity-0")
@@ -106,9 +111,7 @@ const Navbar = () => {
       <menu
         className={
           " fixed transition-all duration-700 h-screen w-full background-tracerblue top-0 left-0 mt-0 pl-0" +
-          (navOpen
-            ? " left-0"
-            : " left-full")
+          (navOpen ? " left-0" : " left-full")
         }
       >
         <button
@@ -133,9 +136,7 @@ const Navbar = () => {
           </div>
           <div className="mt-6 w-full">
             <Link to="/perpetuals">
-              <span className="text-white font-normal text-lg">
-                Perpetuals
-              </span>
+              <span className="text-white font-normal text-lg">Perpetuals</span>
             </Link>
           </div>
           <div className="mt-6 w-full">
