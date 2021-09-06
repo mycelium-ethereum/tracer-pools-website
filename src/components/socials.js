@@ -12,28 +12,28 @@ const Socials = () => {
       <img className="-mt-8" src={Trapezoid} alt="Trapezoid" />
       <a href="https://discourse.tracer.finance" target="_blank">
         <img
-          className="absolute top-12 left-6 cursor-pointer"
+          className="absolute top-12 lg:left-5 left-6 cursor-pointer"
           src={Discourse}
           alt="Discourse"
         />
       </a>
       <a href="https://github.com/tracer-protocol" target="_blank">
         <img
-          className="absolute top-28 left-6 cursor-pointer"
+          className="absolute top-28 lg:left-5 left-6 cursor-pointer"
           src={GitHub}
           alt="Github"
         />
       </a>
       <a href="https://discord.gg/kvJEwfvyrW" target="_blank">
         <img
-          className="absolute top-44 left-6 cursor-pointer"
+          className="absolute top-44 lg:left-5 left-6 cursor-pointer"
           src={Discord}
           alt="Discord"
         />
       </a>
       <a href="https://twitter.com/TracerDAO" target="_blank">
         <img
-          className="absolute top-60 left-6 cursor-pointer"
+          className="absolute top-60 lg:left-5 left-6 cursor-pointer"
           src={Twitter}
           alt="Twitter"
         />
