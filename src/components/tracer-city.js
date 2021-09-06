@@ -92,7 +92,7 @@ const TracerCity = () => {
             </small>
             <GlowButton
               className="lg:h-16 h-12 w-48 text-normal rounded-lg font-normal mt-6 lg:ml-0 lg:mb-0 sm:text-xl text-lg mb-8 mx-auto"
-              linkTo="#"
+              linkTo="https://app.gitbook.com/login/tracer-1/pool-swaps"
             >
               Launch Docs
             </GlowButton>

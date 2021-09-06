@@ -146,7 +146,7 @@ const Footer = () => {
             </Link>
             <Link
               className="text-base font-normal text-white xl:pl-12 sm:mb-0 pl-6 mb-4"
-              to="#"
+              to="https://app.gitbook.com/login/tracer-1/pool-swaps"
             >
               Docs
             </Link>

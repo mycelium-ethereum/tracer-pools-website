@@ -67,30 +67,30 @@ const Navbar = () => {
             }
           >
             <Link to="/perpetuals">
-              <span className="block text-white font-semibold mb-4">
+              <span className="block text-white font-normal mb-4">
                 Perpetuals
               </span>
             </Link>
             <Link to="/governance">
-              <span className="block text-white font-semibold mb-4">
+              <span className="block text-white font-normal mb-4">
                 Governance
               </span>
             </Link>
             <Link to="/blog">
-              <span className="block text-white font-semibold">Blog</span>
+              <span className="block text-white font-normal">Blog</span>
             </Link>
           </div>
         </div>
         <div className="hidden sm:flex items-center">
           <div className="mr-7">
             <Link to="/learn">
-              <span className="text-white font-semibold">Learn</span>
+              <span className="text-white font-normal">Learn</span>
             </Link>
           </div>
           <div>
             <Button
-              className="h-12 w-32 border border-white font-semibold"
-              linkTo="/"
+              className="h-12 w-32 border border-white font-normal"
+              linkTo="https://goofy-banach-3fbf5d.netlify.app/"
             >
               Launch Pools
             </Button>
@@ -120,12 +120,12 @@ const Navbar = () => {
         <div className="flex flex-col justify-center w-60 mx-auto text-center pt-12">
           <div className="mt-6 w-full">
             <Link to="/learn">
-              <span className="text-white font-semibold text-lg">Learn</span>
+              <span className="text-white font-normal text-lg">Learn</span>
             </Link>
           </div>
           <div className="mt-6 w-full">
             <Button
-              className="h-12 w-full border border-white font-semibold text-lg"
+              className="h-12 w-full border border-white font-normal text-lg"
               linkTo="/"
             >
               Launch Pools
@@ -133,19 +133,19 @@ const Navbar = () => {
           </div>
           <div className="mt-6 w-full">
             <Link to="/perpetuals">
-              <span className="text-white font-semibold text-lg">
+              <span className="text-white font-normal text-lg">
                 Perpetuals
               </span>
             </Link>
           </div>
           <div className="mt-6 w-full">
             <Link to="/govern">
-              <span className="text-white font-semibold text-lg">Govern</span>
+              <span className="text-white font-normal text-lg">Govern</span>
             </Link>
           </div>
           <div className="mt-6 w-full">
             <Link to="/radar">
-              <span className="text-white font-semibold text-lg">Blog</span>
+              <span className="text-white font-normal text-lg">Blog</span>
             </Link>
           </div>
         </div>

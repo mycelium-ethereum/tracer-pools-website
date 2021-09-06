@@ -30,13 +30,13 @@ const Hero = () => {
               <br />A new derivative primitive.
             </p>
             <Button
-              className="mt-12 h-12 w-48 border border-white mx-auto text-xl rounded-lg"
-              linkTo="/"
+              className="mt-12 h-12 w-48 border border-white mx-auto text-normal font-normal rounded-lg"
+              linkTo="https://goofy-banach-3fbf5d.netlify.app/"
             >
               Launch Pools
             </Button>
-            <Link to="/">
-              <div className="mx-auto mt-6 w-48 h-12 flex justify-center items-center text-xl text-white transition-colors duration-500 hover:bg-blue-400 rounded-lg">
+            <Link to="https://app.gitbook.com/login/tracer-1/pool-swaps">
+              <div className="mx-auto mt-2 w-48 h-12 flex justify-center items-center text-normal font-normal text-white hover:underline rounded-lg">
                 Documentation
               </div>
             </Link>
