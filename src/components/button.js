@@ -12,9 +12,7 @@ const Button = ({
     <a
       className={
         className +
-        " tracer-btn " +
-        (!!outlineButton && " blue mx-auto text-xl") +
-        " rounded-lg"
+        " tracer-btn rounded-lg"
       }
       href={linkTo}
       id={id}

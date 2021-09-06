@@ -146,23 +146,25 @@ const updatePartnersSlide = (progress) => {
   }
 };
 const partnerClick = (scene) => {
-  const partnerSection = document.querySelector("#pinMasterPartners");
-  partnerSection.addEventListener("click", function (e) {
-    const target = e.target.dataset.sectionLink;
-    const slides = document.querySelectorAll("#pinMasterPartners .panel");
-    slides.forEach((e) => e.classList.remove("active"));
-    if (target == 0) {
-      slides[0].classList.add("active");
-      scene.progress(0.01);
-    }
-    if (target == 1) {
-      slides[1].classList.add("active");
-      scene.progress(0.33);
-    }
-    if (target == 2) {
-      slides[2].classList.add("active");
-      scene.progress(0.66);
-    }
+  const sectionLinks = document.querySelectorAll("p[data-section-link]");
+  sectionLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      const target = e.target.dataset.sectionLink;
+      const slides = document.querySelectorAll("#pinMasterPartners .panel");
+      slides.forEach((e) => e.classList.remove("active"));
+      if (target == 0) {
+        slides[0].classList.add("active");
+        scene.progress(0.01);
+      }
+      if (target == 1) {
+        slides[1].classList.add("active");
+        scene.progress(0.33);
+      }
+      if (target == 2) {
+        slides[2].classList.add("active");
+        scene.progress(0.66);
+      }
+    });
   });
 };
 const isMobile = () => {

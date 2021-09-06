@@ -105,7 +105,7 @@ const PartnersContributors = () => {
                   />
                   <img className="2xl:w-48 lg:w-48 sm:w-24 w-16" src={Koji} />
                 </div>
-                <div className="flex w-full lg:mt-0 mt-6 justify-center items-center">
+                <div className="flex w-full mt-6 justify-center items-center">
                   <img
                     className="2xl:w-60 lg:w-48 lg:mr-10 sm:mr-8 sm:w-36 mr-4 w-24"
                     src={DACM}
@@ -115,11 +115,11 @@ const PartnersContributors = () => {
                     src={DistributedGlobal}
                   />
                   <img
-                    className="2xl:w-60 lg:w-48 lg:mr-10 sm:mr-8 sm:mt-0 sm:w-36 mr-4 w-20"
+                    className="2xl:w-48 lg:w-48 lg:mr-10 sm:mr-8 sm:mt-0 sm:w-36 mr-4 w-20"
                     src={GSR}
                   />
                 </div>
-                <div className="flex w-full lg:mt-0 mt-4 flex-wrap justify-center items-center">
+                <div className="flex w-full mt-6 flex-wrap justify-center items-center">
                   <img
                     className="lg:w-32 lg:mr-10 sm:w-24 sm:mr-8 w-12 mr-5"
                     src={Maven}
@@ -133,7 +133,7 @@ const PartnersContributors = () => {
                     src={EfficientFrontier}
                   />
                   <img
-                    className="lg:w-32 lg:mr-10 sm:w-16 sm:w-12 w-10 mr-5"
+                    className="lg:w-24 lg:mr-10 sm:w-16 sm:w-12 w-10 mr-5"
                     src={B}
                   />
                   <img className="lg:w-32 sm:w-24 w-12" src={Apollo} />

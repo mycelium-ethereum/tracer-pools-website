@@ -32,8 +32,7 @@ const WalletAnimation = () => {
             That live in your wallet
           </p>
           <Button
-            className="mt-6 h-12 w-48 text-center lg:text-xl transition-all duration-500 sm:opacity-0"
-            outlineButton
+            className="mt-6 h-12 w-48 text-center lg:text-xl transition-all duration-500 mx-auto text-xl border border-white sm:opacity-0"
             linkTo="#"
             id="fade3"
           >
