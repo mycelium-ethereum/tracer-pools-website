@@ -373,6 +373,7 @@ section {
 
 /* Clear tile */
 .step-animation .step-animation__tile {
+  display: none;
   right: -210px;
   top: 50px;
   min-width: 915px;

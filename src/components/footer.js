@@ -67,7 +67,7 @@ const Footer = () => {
         className="absolute top-0 left-0 w-full h-auto lg:block hidden 2xl:-top-24"
         src={CityBottomDark}
       />
-      <div className="container xl mx-auto relative xl:flex flex-col justify-between z-1 xl:px-24 lg:px-12 px-8">
+      <div className="container mx-auto relative xl:flex flex-col justify-between z-1 sm:px-0 px-8">
         <div className="flex flex-col xl:justify-center justify-between items-center lg:w-full lg:pt-0 sm:w-max w-full h-auto mx-auto pt-16">
           <span className="font-semibold text-white lg:text-4xl lg:w-auto lg:mb-6 lg:text-left sm:text-2xl text-center w-full text-lg">
             Stay updated on the latest Tracer news

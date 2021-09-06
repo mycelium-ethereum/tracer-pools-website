@@ -38,13 +38,13 @@ const tokenAnimation = () => {
 const cityAnimation = () => {
   var t3 = gsap.timeline();
   t3.from("#city-trigger", 1, { xPercent: 0, opacity: 1 });
-  const oneQuarterScreen = window.innerHeight * 0.25;
+  const halfScreen = window.innerHeight * 0.5;
 
   const scene = new ScrollMagic.Scene({
     triggerElement: "#city-trigger",
     triggerHook: "onLeave",
     duration: "0%",
-    offset: -oneQuarterScreen,
+    offset: -halfScreen,
   })
     .setTween(t3)
     .setClassToggle("#city-trigger", "active")

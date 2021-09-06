@@ -76,7 +76,7 @@ const PartnersContributors = () => {
           className="pin-container overflow-hidden"
         >
           <section className="panel lg:absolute relative top-0 left-0 w-full lg:h-screen h-auto partners flex flex-col justify-start opacity-0 z-0 transition-all ease-in-out linear duration-700 lg:pb-0 sm:pb-32">
-            <div className="flex container xl mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
+            <div className="flex container mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
               <div className="justify-evenly sm:flex sm:text-left text-center block">
                 <p
                   data-section-link="0"
@@ -142,7 +142,7 @@ const PartnersContributors = () => {
             </div>
           </section>
           <section className="panel absolute top-0 left-0 w-full lg:h-screen h-auto contributors flex flex-col justify-start opacity-0 z-0 transition-all ease-in-out linear duration-700">
-            <div className="flex container xl mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
+            <div className="flex container mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
               <div className="justify-evenly sm:flex sm:text-left text-center block">
                 <p
                   data-section-link="0"
@@ -192,7 +192,7 @@ const PartnersContributors = () => {
             </div>
           </section>
           <section className="panel absolute top-0 left-0 w-full lg:h-screen h-auto media flex flex-col justify-start opacity-0 z-0 transition-all ease-in-out linear duration-700">
-            <div className="flex container xl mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32 sm:px-12 px-4">
+            <div className="flex container mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32 sm:px-12 px-4">
               <div className="justify-evenly sm:flex sm:text-left text-center block">
                 <p
                   data-section-link="0"
