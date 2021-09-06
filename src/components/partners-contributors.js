@@ -103,37 +103,37 @@ const PartnersContributors = () => {
                     className="2xl:w-60 lg:w-48 lg:mr-12 sm:mr-8 sm:w-32 w-20 mr-5"
                     src={Framework}
                   />
-                  <img className="2xl:w-44 lg:w-44 sm:w-24 w-16" src={Koji} />
+                  <img className="2xl:w-44 lg:w-44 sm:w-24 w-14" src={Koji} />
                 </div>
                 <div className="flex w-full mt-10 justify-center items-center">
                   <img
-                    className="2xl:w-60 lg:w-48 lg:mr-12 sm:mr-8 sm:w-36 mr-4 w-24"
+                    className="2xl:w-60 lg:w-48 lg:mr-12 sm:mr-8 sm:w-36 mr-3 w-20"
                     src={DACM}
                   />
                   <img
-                    className="2xl:w-60 lg:w-48 lg:mr-12 sm:mr-8 sm:w-44 mr-4 w-32"
+                    className="2xl:w-60 lg:w-48 lg:mr-12 sm:mr-8 sm:w-44 mr-3 w-32"
                     src={DistributedGlobal}
                   />
                   <img
-                    className="2xl:w-44 lg:w-44 lg:mr-12 sm:mr-8 sm:mt-0 sm:w-36 mr-4 w-20"
+                    className="2xl:w-44 lg:w-44 lg:mr-12 sm:mr-8 sm:mt-0 sm:w-36 w-16"
                     src={GSR}
                   />
                 </div>
                 <div className="flex w-full mt-10 flex-wrap justify-center items-center">
                   <img
-                    className="lg:w-32 lg:mr-12 sm:w-24 sm:mr-8 w-12 mr-5"
+                    className="lg:w-32 lg:mr-12 sm:w-24 sm:mr-8 w-12 mr-3"
                     src={Maven}
                   />
                   <img
-                    className="lg:w-24 lg:mr-12 sm:w-20 sm:mr-8 w-12 mr-5"
+                    className="lg:w-24 lg:mr-12 sm:w-20 sm:mr-8 w-10 mr-3"
                     src={LAO}
                   />
                   <img
-                    className="lg:w-32 lg:mr-12 sm:w-24 sm:mr-8 w-12 mr-5"
+                    className="lg:w-32 lg:mr-12 sm:w-24 sm:mr-8 w-12 mr-3"
                     src={EfficientFrontier}
                   />
                   <img
-                    className="lg:w-20 lg:mr-12 sm:w-16 sm:w-12 w-10 mr-5"
+                    className="lg:w-20 lg:mr-12 sm:w-16 sm:w-12 w-7 mr-3"
                     src={B}
                   />
                   <img className="lg:w-40 sm:w-24 w-12" src={Apollo} />

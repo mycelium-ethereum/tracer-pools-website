@@ -21,7 +21,7 @@ const TracerCity = () => {
       >
         <div className="container xl flex xl:h-screen xl:px-24 lg:h-96 lg:px-12 lg:flex-row lg:pt-0 px-4 h-auto lg:justify-end mx-auto flex-col justify-start relative">
           <div
-            className="h-auto lg:absolute sm:left-24 2xl:mt-96 lg:mt-48 force-flex flex-col justify-center z-10 lg:pb-0 lg:mb-0 sm:pt-0 sm:px-0 lg:w-80 w-52 mx-auto left-0 pt-12 mb-10 lg:text-left text-center"
+            className="h-auto lg:absolute sm:left-24 2xl:mt-96 lg:mt-48 force-flex flex-col justify-center z-10 lg:pb-0 lg:mb-0 sm:pt-0 sm:px-0 lg:w-80 w-52 mx-auto left-0 pt-8 mb-10 lg:text-left text-center"
             data-stellar-ratio="1.4"
           >
             <span className="xl:text-5xl lg:text-4xl text-3xl font-extrabold text-white mb-2">
