@@ -163,7 +163,7 @@ const PartnersContributors = () => {
                   In the Media
                 </p>
               </div>
-              <div className="h-auto w-full h-full flex flex-col justify-center lg:mt-0 sm:pb-24 sm:px-0 px-4 mt-20 pb-12">
+              <div className="h-auto w-full h-full flex flex-col justify-center lg:mt-0 sm:pb-24 xl:px-0 px-4 mt-20 pb-12">
                 <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center 2xl:mt-10 xl:mt-3 lg:mt-8">
                   <img
                     className="2xl:w-60 lg:w-48 sm:mr-10 sm:w-48 w-24 mr-5"

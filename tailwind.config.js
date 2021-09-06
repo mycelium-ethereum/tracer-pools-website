@@ -30,7 +30,7 @@ module.exports = {
             maxWidth: "768px",
           },
           "@screen lg": {
-            maxWidth: "1240px",
+            maxWidth: "991px",
           },
           "@screen xl": {
             maxWidth: "1240px",

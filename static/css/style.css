@@ -560,7 +560,7 @@ section {
 }
 /* ACTIVE STYLES */
 body:not(.steps-active) #token-trigger.active .city-top {
-  top: 0;
+  top: -1px;
 }
 body:not(.steps-active) #token-trigger.active .city-background {
   top: 440px;

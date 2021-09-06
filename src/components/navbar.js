@@ -44,7 +44,7 @@ const Navbar = () => {
       className="fixed w-full z-50 transition ease-out duration-500"
       onMouseLeave={() => setDropdownOpen(false)}
     >
-      <div className="container lg:h-24 h-20 flex justify-between items-center mx-auto sm:px-0 px-4">
+      <div className="container lg:h-24 h-20 flex justify-between items-center mx-auto xl:px-0 px-4">
         <div className="relative" onMouseEnter={() => setDropdownOpen(true)}>
           <Link to="/">
             <img

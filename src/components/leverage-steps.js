@@ -47,7 +47,7 @@ const LeverageSteps = (direction) => {
             id="steps"
             className="panel lg:absolute top-0 left-0 step-one flex flex-col lg:justify-center justify-start w-full h-full lg:pointer-events-none pointer-events-auto"
           >
-            <div className="flex container mx-auto w-full lg:flex-row lg:h-full lg:h-screen flex-col items-center h-auto lg:pt-48 sm:px-0 px-4">
+            <div className="flex container mx-auto w-full lg:flex-row lg:h-full lg:h-screen flex-col items-center h-auto lg:pt-48 xl:px-0 px-4">
               <div className="step-info xl:pb-0 lg:pb-32 lg:w-2/4 w-full lg:text-left text-center relative">
                 <small className="2xl:text-3xl lg:text-2xl color-blue text-3xl font-bold background-blue">
                   Perpetual Pools
@@ -141,7 +141,7 @@ const LeverageSteps = (direction) => {
             </div>
           </section>
           <section className="panel absolute top-0 left-0 w-full h-full step-two flex flex-col justify-center absolute w-full h-full lg:pointer-events-none pointer-events-auto lg:block hidden">
-            <div className="flex container mx-auto px-4 flex items-center h-full lg:pt-48 sm:px-0 px-4">
+            <div className="flex container mx-auto px-4 flex items-center h-full lg:pt-48 xl:px-0 px-4">
               <div className="w-2/4 step-info xl:pb-0 lg:pb-32 relative">
                 <small className="2xl:text-3xl lg:text-2xl color-blue font-bold background-blue">
                   Perpetual Pools
@@ -169,7 +169,7 @@ const LeverageSteps = (direction) => {
             </div>
           </section>
           <section className="panel absolute top-0 left-0 w-full h-full step-three flex flex-col justify-center absolute w-full h-full lg:pointer-events-none pointer-events-auto lg:block hidden">
-            <div className="flex container mx-auto px-4 flex items-center h-full lg:pt-48 sm:px-0 px-4">
+            <div className="flex container mx-auto px-4 flex items-center h-full lg:pt-48 xl:px-0 px-4">
               <div className="w-2/4 step-info xl:pb-0 lg:pb-32 relative">
                 <small className="2xl:text-3xl lg:text-2xl color-blue font-bold background-blue">
                   Perpetual Pools
@@ -197,7 +197,7 @@ const LeverageSteps = (direction) => {
             </div>
           </section>
           <section className="panel absolute top-0 left-0 w-full h-full step-four flex flex-col justify-center absolute w-full h-full lg:pointer-events-none pointer-events-auto lg:block hidden">
-            <div className="flex container mx-auto px-4 flex items-center h-full lg:pt-48 sm:px-0 px-4">
+            <div className="flex container mx-auto px-4 flex items-center h-full lg:pt-48 xl:px-0 px-4">
               <div className="w-2/4 step-info xl:pb-0 lg:pb-32 relative">
                 <small className="2xl:text-3xl lg:text-2xl color-blue font-bold background-blue">
                   Perpetual Pools
