@@ -72,6 +72,7 @@
   width: 100%;
   /* min-width: 100vw; */
   min-height: 100%;
+  clip-path: inset(1px 1px);
 }
 body,
 html {
@@ -628,13 +629,13 @@ body:not(.steps-active) #token-trigger.active .city-background {
   top: 440px;
 }
 #token-trigger.active #fade1 {
-  transition: opacity 0.35s ease 1s;
+  transition: opacity 0.5s ease 1s;
 }
 #token-trigger.active #fade2 {
-  transition: opacity 0.35s ease 2s;
+  transition: opacity 0.5s ease 1.75s;
 }
 #token-trigger.active #fade3 {
-  transition: all 0.5s ease, opacity 0.35s ease 3s;
+  transition: all 0.5s ease, opacity 0.35s ease 2.5s;
 }
 #token-trigger.active #fade1,
 #token-trigger.active #fade2,

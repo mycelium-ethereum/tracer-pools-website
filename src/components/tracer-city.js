@@ -37,7 +37,7 @@ const TracerCity = () => {
             loop="loop"
             autoPlay
             playsInline
-            className="min-w-video absolute top-1/2 sm:opacity-0 left-1/2 transform -translate-y-1/2 -translate-x-1/2 transition-opacity duration-1000 lg:block hidden"
+            className="min-w-video absolute top-1/2 sm:opacity-0 left-1/2 transform-gpu -translate-y-1/2 -translate-x-1/2 transition-opacity duration-1000 lg:block hidden"
           >
             <source src={TracerCityVideo} type="video/mp4" />
           </video>
@@ -73,7 +73,7 @@ const TracerCity = () => {
             autoPlay
             playsInline
             id="tracer-building"
-            className="min-w-video absolute top-1/2 left-0 transform -translate-y-1/2 transition-opacity duration-1000 sm:block sm:opacity-0 transition-opacity duration-1000 hidden"
+            className="min-w-video absolute top-1/2 left-0 transform-gpu -translate-y-1/2 transition-opacity duration-1000 sm:block sm:opacity-0 transition-opacity duration-1000 hidden"
           >
             <source src={TracerBuilding} type="video/mp4" />
           </video>
@@ -99,13 +99,13 @@ const TracerCity = () => {
           </div>
         </div>
         <img
-          className="absolute w-full h-3/4 left-2/4 transform -translate-x-1/2 bottom-0 z-0 lg:hidden block"
+          className="absolute w-full h-3/4 left-2/4 transform-gpu -translate-x-1/2 bottom-0 z-0 lg:hidden block"
           src={MeshLarge}
         />
       </section>
       <div className="small-spacer relative">
         <img
-          className="absolute w-full top-0 left-2/4 transform -translate-x-1/2 z-0"
+          className="absolute w-full top-0 left-2/4 transform-gpu -translate-x-1/2 z-0"
           alt="City Bottom"
           src={CityBottom}
         />

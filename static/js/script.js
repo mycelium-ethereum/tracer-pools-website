@@ -1,6 +1,7 @@
 var w = window.innerWidth;
 var size = w >= 1024 ? "big" : "small";
 var controller;
+var prevElement;
 
 const stepAnimation = () => {
   var tl = gsap.timeline();
@@ -136,10 +137,10 @@ const updateActiveStep = (progress) => {
 const updatePartnersSlide = (progress) => {
   const slides = document.querySelectorAll("#pinMasterPartners .panel");
   slides.forEach((e) => e.classList.remove("active"));
-  if (progress <= 0.33) {
+  if (progress < 0.33) {
     slides[0].classList.add("active");
   }
-  if (progress > 0.33 && progress < 0.66) {
+  if (progress >= 0.33 && progress < 0.66) {
     slides[1].classList.add("active");
   }
   if (progress >= 0.66) {
@@ -148,22 +149,38 @@ const updatePartnersSlide = (progress) => {
 };
 const partnerClick = (scene) => {
   const sectionLinks = document.querySelectorAll("p[data-section-link]");
+  const steps = ["0.01", "0.33", "0.66"];
+  const slides = document.querySelectorAll("#pinMasterPartners .panel");
+
   sectionLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
-      const target = e.target.dataset.sectionLink;
-      const slides = document.querySelectorAll("#pinMasterPartners .panel");
-      slides.forEach((e) => e.classList.remove("active"));
-      if (target == 0) {
-        slides[0].classList.add("active");
-        scene.progress(0.01);
-      }
-      if (target == 1) {
-        slides[1].classList.add("active");
-        scene.progress(0.33);
-      }
-      if (target == 2) {
-        slides[2].classList.add("active");
-        scene.progress(0.66);
+      const target = parseInt(e.target.dataset.sectionLink);
+      const parentActive = slides[target].classList.contains("active");
+      const panelHeight = document.querySelector("#pinMasterPartners .panel")
+      .offsetHeight * 0.6;
+      if (!parentActive) {
+        slides.forEach((e) => e.classList.remove("active"));
+        if (prevElement === 0 && target === 1) {
+          document.documentElement.scrollTop += panelHeight;
+        }
+        if (prevElement === 0 && target === 2) {
+          document.documentElement.scrollTop += panelHeight * 2;
+        }
+        if (prevElement === 1 && target === 0) {
+          document.documentElement.scrollTop -= panelHeight;
+        }
+        if (prevElement === 1 && target === 2) {
+          document.documentElement.scrollTop += panelHeight;
+        }
+        if (prevElement === 2 && target === 0) {
+          document.documentElement.scrollTop -= panelHeight * 2;
+        }
+        if (prevElement === 2 && target === 1) {
+          document.documentElement.scrollTop -= panelHeight;
+        }
+        prevElement = target;
+        scene.progress(steps[target]);
+        updatePartnersSlide(scene.progress());
       }
     });
   });

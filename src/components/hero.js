@@ -36,7 +36,7 @@ const Hero = () => {
               Launch Pools
             </Button>
             <Link to="/">
-              <div className="mx-auto mt-6 w-48 h-12 flex justify-center items-center text-xl text-white hover:bg-blue-400 rounded-lg">
+              <div className="mx-auto mt-6 w-48 h-12 flex justify-center items-center text-xl text-white transition-colors duration-500 hover:bg-blue-400 rounded-lg">
                 Documentation
               </div>
             </Link>
@@ -51,9 +51,19 @@ const Hero = () => {
         </div>
         <AnchorLink
           to="/#steps"
-          className="absolute 2xl:right-48 xl:right-30 lg:right-32 sm:w-16 sm:bottom-32 sm:right-16 bottom-12 right-6 w-14 z-20"
+          className="absolute 2xl:right-48 xl:right-30 lg:right-32 sm:bottom-32 sm:right-16 border-2 border-white rounded-full bottom-12 right-6 w-14 h-14 bg-white bg-opacity-20 transition-colors duration-500 text-white hover:bg-white fill-current stroke-current hover:text-blue-400 z-20"
         >
-          <img src={ArrowDown} alt="Down Arrow" />
+          <svg
+            width="16"
+            height="10"
+            viewBox="0 0 16 10"
+            xmlns="http://www.w3.org/2000/svg"
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          >
+            <path
+              d="M1.84933 0.235229L7.69959 6.0855L13.5499 0.235229L15.3406 2.02597L7.6988 9.66775L0.0585938 2.02597L1.84933 0.235229Z"
+            />
+          </svg>
         </AnchorLink>
       </section>
       <div className="2xl:h-96 lg:h-80 h-40 background-blue" />
