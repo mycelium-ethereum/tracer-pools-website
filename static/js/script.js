@@ -21,14 +21,14 @@ const stepAnimation = () => {
 };
 const tokenAnimation = () => {
   var t2 = gsap.timeline();
-  const fourFifthsScreen = window.innerHeight * 0.8;
+  const oneFifthScreen = window.innerHeight * 0.2;
   t2.from("#token-trigger", 1, { xPercent: 0, opacity: 1 });
 
   const scene = new ScrollMagic.Scene({
     triggerElement: "#token-trigger",
     triggerHook: "onLeave",
     duration: "0%",
-    offset: -fourFifthsScreen,
+    offset: -oneFifthScreen,
   })
     .setTween(t2)
     .setClassToggle("#token-trigger", "active")

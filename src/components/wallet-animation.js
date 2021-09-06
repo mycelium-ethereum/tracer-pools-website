@@ -19,7 +19,7 @@ const WalletAnimation = () => {
         <div className="container xl flex flex-col align-center justify-start h-full w-full relative z-10 mx-auto 2xl:pt-80 xl:pt-60 xl:px-24 lg:px-12 lg:pt-52 lg:pb-48 pt-48 px-4">
           <h1
             id="fade1"
-            className="mb-4 text-center lg:text-6xl text-4xl font-black text-white lg:leading-snug"
+            className="mb-4 text-center lg:text-6xl text-4xl font-black text-white lg:opacity-0 lg:leading-snug"
           >
             Fungible ERC20
             <br />
@@ -27,12 +27,12 @@ const WalletAnimation = () => {
           </h1>
           <p
             id="fade2"
-            className="text-2xl color-grey text-center font-normal color-orange"
+            className="text-2xl color-grey text-center font-normal color-orange lg:opacity-0"
           >
             That live in your wallet
           </p>
           <Button
-            className="mt-6 h-12 w-48 text-center lg:text-xl transition-all duration-500 mx-auto text-xl border border-white sm:opacity-0"
+            className="mt-6 h-12 w-48 text-center lg:text-xl transition-all duration-500 mx-auto text-xl border border-white lg:opacity-0"
             linkTo="#"
             id="fade3"
           >
