@@ -8,7 +8,7 @@ import Twitter from "/static/img/twitter.png";
 
 const Socials = () => {
   return (
-    <div className="fixed lg:top-1/3 top-64 right-0 z-10 xl:transform-none transform-gpu scale-75 -right-2.5">
+    <div className="fixed lg:top-1/3 top-64 right-0 z-50 xl:transform-none transform-gpu scale-75 -right-2.5">
       <img className="-mt-8" src={Trapezoid} alt="Trapezoid" />
       <a href="https://discourse.tracer.finance" target="_blank">
         <img
