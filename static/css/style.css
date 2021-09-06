@@ -332,10 +332,6 @@ section {
 }
 
 /* LEVERAGE STEPS */
-/* #pinContainer .panel .step-info {
-  opacity: 0;
-  transition: all 0.5s ease;
-} */
 .step-info {
   position: relative;
   height: 500px;
@@ -368,28 +364,45 @@ section {
   height: auto;
   transition: all 1.3s ease;
   mix-blend-mode: multiply;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
 }
 /* Before active/scroll lock */
 
-/* Clear tile */
-.step-animation .step-animation__tile {
-  display: none;
-  right: -210px;
-  top: 50px;
-  min-width: 915px;
-  min-height: 915px;
-  overflow: hidden;
-  mix-blend-mode: unset;
+/* Step tiles */
+.step-animation .step-animation__base,
+#pinContainer .step-animation .step-animation__tile1,
+#pinContainer .step-animation .step-animation__tile2,
+#pinContainer .step-animation .step-animation__tile3,
+#pinContainer .step-animation .step-animation__tile4 {
   z-index: 3;
-  background-image: url("../img/home-page/steps/base.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  -webkit-mask-image: url("../img/home-page/steps/tile.svg");
-  -webkit-mask-size: 100vmin;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
+  mix-blend-mode: unset;
+  opacity: 0;
+  transition: all 1.3s ease, opacity 0.5s ease 0.3s;
+}
+#pinContainer .step-animation .step-animation__empty {
+  opacity: 0;
+  z-index: 3;
+  mix-blend-mode: unset;
+  transition: all 1.3s ease;
+}
+.step-animation__empty,
+.step-animation__tile1 {
+  top: 260px;
+  right: -210px;
+}
+.step-animation__tile2 {
+  top: 160px;
+  right: -210px;
+}
+.step-animation__tile3 {
+  top: 240px;
+  right: -80px;
+}
+.step-animation__tile4 {
+  width: 100%;
+  top: 330px;
+  right: 80px;
 }
 
 /* App base */
@@ -494,7 +507,6 @@ section {
   }
 }
 /* Active styles*/
-.step-one.start .step-animation .step-animation__tile,
 .step-one.start .step-animation img {
   opacity: 1;
 }
@@ -519,22 +531,72 @@ section {
 }
 
 /* Stages for clear tile movement */
-/* #pinContainer .panel:nth-child(1) .step-animation__tile.stage-one {
+#pinContainer .panel.start .step-animation__empty {
+  opacity: 1 !important;
+}
+/* STAGE ONE */
+#pinContainer .panel.stage-one .step-animation__empty,
+#pinContainer .panel.stage-one .step-animation__tile1 {
+  opacity: 1;
   top: 160px;
   right: -210px;
 }
-#pinContainer .panel:nth-child(1) .step-animation__tile.stage-two {
+
+/* STAGE TWO */
+#pinContainer .panel.stage-two .step-animation__empty,
+#pinContainer .panel.stage-two .step-animation__tile1 {
+  opacity: 0;
   top: 240px;
   right: -80px;
 }
-#pinContainer .panel:nth-child(1) .step-animation__tile.stage-three {
+#pinContainer .panel.stage-two .step-animation__empty,
+#pinContainer .panel.stage-two .step-animation__tile2 {
+  opacity: 1;
+  top: 240px;
+  right: -80px;
+}
+
+/* STAGE THREE */
+#pinContainer .panel.stage-three .step-animation__tile1 {
+  opacity: 0;
+  top: 240px;
+  right: -80px;
+}
+#pinContainer .panel.stage-three .step-animation__empty,
+#pinContainer .panel.stage-three .step-animation__tile2 {
+  opacity: 0;
   top: 330px;
   right: 80px;
 }
-#pinContainer .panel:nth-child(1) .step-animation__tile.stage-four {
+#pinContainer .panel.stage-three .step-animation__empty,
+#pinContainer .panel.stage-three .step-animation__tile3 {
+  opacity: 1;
+  top: 330px;
+  right: 80px;
+}
+/* STAGE FOUR */
+#pinContainer .panel.stage-four .step-animation__tile1 {
+  opacity: 0;
+  top: 240px;
+  right: -80px;
+}
+#pinContainer .panel.stage-four .step-animation__tile2 {
+  opacity: 0;
+  top: 330px;
+  right: 80px;
+}
+#pinContainer .panel.stage-four .step-animation__empty,
+#pinContainer .panel.stage-four .step-animation__tile3 {
+  opacity: 0;
   top: 420px;
   right: 238px;
-} */
+}
+#pinContainer .panel.stage-four .step-animation__empty,
+#pinContainer .panel.stage-four .step-animation__tile4 {
+  opacity: 1;
+  top: 420px;
+  right: 238px;
+}
 
 /*------------[Positions slider]------------*/
 
@@ -565,13 +627,13 @@ body:not(.steps-active) #token-trigger.active .city-top {
 body:not(.steps-active) #token-trigger.active .city-background {
   top: 440px;
 }
-#token-trigger #fade1 {
+#token-trigger.active #fade1 {
   transition: opacity 0.35s ease 1s;
 }
-#token-trigger #fade2 {
+#token-trigger.active #fade2 {
   transition: opacity 0.35s ease 2s;
 }
-#token-trigger #fade3 {
+#token-trigger.active #fade3 {
   transition: all 0.5s ease, opacity 0.35s ease 3s;
 }
 #token-trigger.active #fade1,
@@ -676,10 +738,6 @@ body:not(.steps-active) #token-trigger.active .city-background {
   z-index: 1;
   opacity: 1;
 }
-/* #pinContainerPartners .panel.active .categories,
-#pinContainerPartners .panel.active .images {
-  opacity: 1;
-} */
 
 /* --------------- FOOTER --------------- */
 footer {

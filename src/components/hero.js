@@ -18,7 +18,7 @@ const Hero = () => {
             <h1 className="xl:text-9xl sm:text-7xl text-5xl text-white font-black mb-4">
               Perpetual Pools
             </h1>
-            <p className="text-white text-xl lg:block hidden">
+            <p className="text-white text-3xl lg:block hidden leading-snug">
               Leveraged exposure. No margins.
               <br />
               No liquidations. A new derivative primitive.
@@ -30,7 +30,7 @@ const Hero = () => {
               <br />A new derivative primitive.
             </p>
             <Button
-              className="mt-6 h-12 w-48 border border-white mx-auto text-xl rounded-lg"
+              className="mt-12 h-12 w-48 border border-white mx-auto text-xl rounded-lg"
               linkTo="/"
             >
               Launch Pools

@@ -21,14 +21,14 @@ const stepAnimation = () => {
 };
 const tokenAnimation = () => {
   var t2 = gsap.timeline();
-  const oneFifthScreen = window.innerHeight * 0.2;
+  const halfScreen = window.innerHeight * 0.5;
   t2.from("#token-trigger", 1, { xPercent: 0, opacity: 1 });
 
   const scene = new ScrollMagic.Scene({
     triggerElement: "#token-trigger",
     triggerHook: "onLeave",
     duration: "0%",
-    offset: -oneFifthScreen,
+    offset: -halfScreen,
   })
     .setTween(t2)
     .setClassToggle("#token-trigger", "active")
@@ -100,16 +100,13 @@ const partnersAnimation = () => {
 };
 const updateActiveStep = (progress) => {
   const slides = document.querySelectorAll("#pinMaster .panel");
-  const tile = document.querySelector(".step-animation__tile");
+  const firstSlide = slides[0];
   slides.forEach((e) => e.classList.remove("active"));
-  tile.classList.remove("stage-one");
-  tile.classList.remove("stage-two");
-  tile.classList.remove("stage-three");
-  tile.classList.remove("stage-four");
 
   if (progress === 0) {
     // Start the step tile slide in animations
     slides[0].classList.remove("start");
+    firstSlide.classList.remove("stage-one");
   }
   if (progress > 0) {
     // Start the step tile slide in animations
@@ -117,19 +114,25 @@ const updateActiveStep = (progress) => {
   }
   if (progress < 0.2 && progress != 0) {
     slides[0].classList.add("active");
-    tile.classList.add("stage-one");
+    firstSlide.classList.add("stage-one");
+    firstSlide.classList.remove("stage-two");
   }
   if (progress > 0.2 && progress <= 0.5) {
     slides[1].classList.add("active");
-    tile.classList.add("stage-two");
+    firstSlide.classList.remove("stage-one");
+    firstSlide.classList.add("stage-two");
+    firstSlide.classList.remove("stage-three");
   }
   if (progress > 0.5 && progress <= 0.7) {
     slides[2].classList.add("active");
-    tile.classList.add("stage-three");
+    firstSlide.classList.remove("stage-two");
+    firstSlide.classList.add("stage-three");
+    firstSlide.classList.remove("stage-four");
   }
   if (progress > 0.7) {
     slides[3].classList.add("active");
-    tile.classList.add("stage-four");
+    firstSlide.classList.remove("stage-three");
+    firstSlide.classList.add("stage-four");
   }
 };
 const updatePartnersSlide = (progress) => {

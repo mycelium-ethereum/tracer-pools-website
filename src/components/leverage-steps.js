@@ -3,7 +3,11 @@ import React, { useEffect } from"react";
 
 // Image assets
 import MobileSteps from"/static/img/home-page/steps/mobile-steps.png";
-import ClearTile from"/static/img/home-page/steps/tile.svg";
+import EmptyTile from"/static/img/home-page/steps/empty.png";
+import TileOne from"/static/img/home-page/steps/tile1.png";
+import TileTwo from"/static/img/home-page/steps/tile2.png";
+import TileThree from"/static/img/home-page/steps/tile3.png";
+import TileFour from"/static/img/home-page/steps/tile4.png";
 import BaseTile from"/static/img/home-page/steps/base.png";
 import LayerTwo from"/static/img/home-page/steps/layer-2.svg";
 import LayerThree from"/static/img/home-page/steps/layer-3.svg";
@@ -52,7 +56,7 @@ const LeverageSteps = (direction) => {
                 <small className="2xl:text-3xl lg:text-2xl color-blue text-3xl font-bold background-blue">
                   Perpetual Pools
                 </small>
-                <h1 className="2xl:text-6xl text-white lg:text-5xl text-4xl font-bold background-blue  lg:mt-4 mt-2 lg:mb-10 mb-6">
+                <h1 className="2xl:text-6xl text-white lg:text-5xl text-4xl font-bold background-blue lg:mt-4 mt-2 lg:mb-10 mb-6">
                   Leveraged exposure in four steps
                 </h1>
                 <div className="step-info__text flex items-center lg:flex hidden">
@@ -119,8 +123,27 @@ const LeverageSteps = (direction) => {
                   src={MobileSteps}
                 />
               </div>
-              <div className="w-2/4 step-animation relative 2xl:-top-24 lg:-top-32 xl:scale-75 xl:right-0 lg:scale-50 lg:-right-12 lg:opacity-100 opacity-0 lg:block transform scale-50  hidden">
-                <div className="step-animation__tile lg:opacity-0" />
+              <div className="w-2/4 step-animation relative 2xl:-top-24 lg:-top-32 xl:scale-75 xl:right-0 lg:scale-50 lg:-right-12 lg:opacity-100 opacity-0 lg:block transform-gpu scale-50 hidden z-10">
+                <img
+                  className="step-animation__empty lg:opacity-0"
+                  src={EmptyTile}
+                />
+                <img
+                  className="step-animation__tile1 lg:opacity-0"
+                  src={TileOne}
+                />
+                <img
+                  className="step-animation__tile2 lg:opacity-0"
+                  src={TileTwo}
+                />
+                <img
+                  className="step-animation__tile3 lg:opacity-0"
+                  src={TileThree}
+                />
+                <img
+                  className="step-animation__tile4 lg:opacity-0"
+                  src={TileFour}
+                />
                 <img
                   className="step-animation__base lg:opacity-0"
                   src={BaseTile}
@@ -146,7 +169,7 @@ const LeverageSteps = (direction) => {
                 <small className="2xl:text-3xl lg:text-2xl color-blue font-bold background-blue">
                   Perpetual Pools
                 </small>
-                <h1 className="2xl:text-6xl text-white lg:text-5xl font-bold background-blue  mt-4 mb-10">
+                <h1 className="2xl:text-6xl text-white lg:text-5xl font-bold background-blue mt-4 mb-10">
                   Leveraged exposure in four steps
                 </h1>
                 <div className="step-info__text flex items-center">
@@ -174,7 +197,7 @@ const LeverageSteps = (direction) => {
                 <small className="2xl:text-3xl lg:text-2xl color-blue font-bold background-blue">
                   Perpetual Pools
                 </small>
-                <h1 className="2xl:text-6xl text-white lg:text-5xl font-bold background-blue  mt-4 mb-10">
+                <h1 className="2xl:text-6xl text-white lg:text-5xl font-bold background-blue mt-4 mb-10">
                   Leveraged exposure in four steps
                 </h1>
                 <div className="step-info__text flex items-center">
@@ -202,7 +225,7 @@ const LeverageSteps = (direction) => {
                 <small className="2xl:text-3xl lg:text-2xl color-blue font-bold background-blue">
                   Perpetual Pools
                 </small>
-                <h1 className="2xl:text-6xl text-white lg:text-5xl font-bold background-blue  mt-4 mb-10">
+                <h1 className="2xl:text-6xl text-white lg:text-5xl font-bold background-blue mt-4 mb-10">
                   Leveraged exposure in four steps
                 </h1>
                 <div className="step-info__text flex items-center w-4/5">
