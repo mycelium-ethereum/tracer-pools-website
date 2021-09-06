@@ -60,7 +60,7 @@ const Navbar = () => {
           </Link>
           <div
             className={
-              "dropdown absolute top-14 w-40 p-4 border border-white rounded-lg transition-opacity duration-500 " +
+              "dropdown absolute top-14 w-40 p-4 border border-white rounded-lg md:block hidden transition-opacity duration-500 " +
               (dropdownOpen
                 ? "pointer-events-all opacity-100"
                 : "pointer-events-none opacity-0")
@@ -105,10 +105,10 @@ const Navbar = () => {
       </div>
       <menu
         className={
-          "fixed transition-opacity duration-700 h-screen w-full background-tracerblue top-0 left-0 mt-0 pl-0" +
+          " fixed transition-all duration-700 h-screen w-full background-tracerblue top-0 left-0 mt-0 pl-0" +
           (navOpen
-            ? " opacity-100 pointer-events-auto"
-            : " opacity-0 pointer-events-none")
+            ? " left-0"
+            : " left-full")
         }
       >
         <button

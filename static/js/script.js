@@ -209,9 +209,9 @@ window.onload = function () {
 
   // Disable ScrollMagic on resize and refresh Stellar.js
   window.addEventListener("resize", function () {
-    $(window).stellar({ horizontalScrolling: false });
-    $(window).stellar("refresh");
     this.setTimeout(function () {
+      $(window).stellar({ horizontalScrolling: false });
+      $(window).stellar("refresh");
       handleResize();
     }, 250);
   });

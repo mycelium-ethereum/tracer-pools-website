@@ -373,38 +373,24 @@ section {
 
 /* Clear tile */
 .step-animation .step-animation__tile {
-  top: 330px;
-  left: 335px;
-  min-width: 420px;
-  min-height: 150px;
-  border-radius: 20px;
+  right: -210px;
+  top: 50px;
+  min-width: 915px;
+  min-height: 915px;
   overflow: hidden;
   mix-blend-mode: unset;
   z-index: 3;
-  /* transform: translateZ(0) rotate(30deg) skew(-30deg); */
+  background-image: url("../img/home-page/steps/base.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  -webkit-mask-image: url("../img/home-page/steps/tile.svg");
+  -webkit-mask-size: 100vmin;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
-svg {
-  display: block;
-  width: 200px;
-  height: 200px;
-  margin: 2em auto;
-}
-.c-mask-circle {
-  fill: white;
-  stroke: black;
-  stroke-width: 180;
-  animation: stroke-width 5s infinite;
-}
-.step-animation .step-animation__tile img {
-  display: none;
-  top: -120px;
-  left: -90px;
-  min-width: 631px;
-  min-height: 675px;
-  mix-blend-mode: unset;
-  clip-path: polygon(31% 0, 100% 77%, 72% 96%, 0 19%);
-  /* transform: translateZ(0) scale(1.45) rotate(-15deg) skewX(41deg) skewY(-15deg); */
-}
+
 /* App base */
 .step-animation .step-animation__base {
   top: 150px;

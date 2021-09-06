@@ -40,11 +40,13 @@ const LeverageSteps = (direction) => {
         <div
           id="pinContainer"
           className={
-            "pin-container lg:overflow-hidden background-blue z-10 " +
-            direction.direction
+            "pin-container background-blue z-10 " + direction.direction
           }
         >
-          <section id="steps" className="panel lg:absolute top-0 left-0 step-one flex flex-col lg:justify-center justify-start w-full h-full lg:pointer-events-none pointer-events-auto">
+          <section
+            id="steps"
+            className="panel lg:absolute top-0 left-0 step-one flex flex-col lg:justify-center justify-start w-full h-full lg:pointer-events-none pointer-events-auto"
+          >
             <div className="flex container xl mx-auto lg:flex-row lg:h-full lg:h-screen flex-col items-center h-auto lg:pt-48 xl:px-24 lg:px-12 px-4">
               <div className="step-info xl:pb-0 lg:pb-32 lg:w-2/4 w-full lg:text-left text-center relative">
                 <small className="2xl:text-3xl lg:text-2xl color-blue text-3xl font-bold background-blue ">
@@ -57,7 +59,7 @@ const LeverageSteps = (direction) => {
                   <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold background-blue ">
                     01
                   </span>
-                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white background-blue">
+                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
                     Select side
                     <br />
                     BTC/DAI, LINK/DAI, or ETH/DAI
@@ -118,16 +120,7 @@ const LeverageSteps = (direction) => {
                 />
               </div>
               <div className="w-2/4 step-animation relative 2xl:-top-24 lg:-top-32 xl:scale-75 xl:right-0 lg:scale-50 lg:-right-12 lg:opacity-100 opacity-0 lg:block transform scale-50  hidden">
-                {/* <img
-                  className="step-animation__tile lg:opacity-0"
-                  src={ClearTile}
-                /> */}
-                <div className="step-animation__tile lg:opacity-0">
-                  <img
-                    className="absolute top-0 left-0 w-full h-auto"
-                    src={BaseTile}
-                  />
-                </div>
+                <div className="step-animation__tile lg:opacity-0" />
                 <img
                   className="step-animation__base lg:opacity-0"
                   src={BaseTile}
@@ -160,7 +153,7 @@ const LeverageSteps = (direction) => {
                   <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold background-blue ">
                     02
                   </span>
-                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white background-blue">
+                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
                     Select market
                     <br />
                     Long or short
@@ -188,7 +181,7 @@ const LeverageSteps = (direction) => {
                   <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold background-blue ">
                     03
                   </span>
-                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white background-blue">
+                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
                     Select leverage
                     <br />
                     1x, 2x, 3x, 5x, or 15x
@@ -216,7 +209,7 @@ const LeverageSteps = (direction) => {
                   <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold background-blue ">
                     04
                   </span>
-                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white background-blue">
+                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
                     Enter collateral Deposit collateral and press 'buy' to gain
                     leveraged exposure
                   </p>

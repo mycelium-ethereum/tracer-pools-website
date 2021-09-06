@@ -17,7 +17,7 @@ const TracerCity = () => {
     <>
       <section
         id="city-trigger"
-        className="panel w-full staking-section flex lg:items-center lg:flex-row flex-col relative items-start xl:pb-0 lg:pb-48 background-blue z-10"
+        className="panel w-full staking-section flex lg:items-center lg:flex-row flex-col relative items-start xl:pb-0 lg:pb-48 background-blue overflow-hidden z-10"
       >
         <div className="container xl flex xl:h-screen xl:px-24 lg:h-96 lg:px-12 lg:flex-row lg:pt-0 px-4 h-auto lg:justify-end mx-auto flex-col justify-start relative">
           <div
@@ -55,7 +55,7 @@ const TracerCity = () => {
       </section>
       <section
         id="building-trigger"
-        className="panel w-full lg:h-screen h-auto staking-section flex lg:items-center relative items-start lg:pt-0 xl:pb-12 pt-24 background-blue z-10"
+        className="panel w-full lg:h-screen h-auto staking-section flex lg:items-center relative items-start lg:pt-0 xl:pb-12 pt-24 background-blue z-0"
       >
         {/* Desktop building video */}
         <video
@@ -78,7 +78,7 @@ const TracerCity = () => {
             />
           </div>
           <div
-            className="2xl:w-1/3 2xl:mt-96 lg:mt-48 lg:pb-0 lg:w-1/3 lg:absolute lg:right-24 lg:text-left sm:px-0 right-0 mx-auto px-4 force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
+            className="2xl:w-1/3 2xl:mt-96 lg:mt-24 lg:pb-0 lg:w-1/3 lg:absolute lg:right-24 lg:text-left sm:px-0 right-0 mx-auto px-4 force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
             data-stellar-ratio="1.4"
           >
             <span className="xl:text-5xl lg:text-4xl font-semibold text-base lg:mb-2 mb-0 text-white color-blue">
