@@ -414,7 +414,7 @@ section {
 }
 .step-animation .step-animation__blue-square {
   min-width: 1800px;
-  bottom: 200px;
+  bottom: 20  0px;
   right: -1600px;
   z-index: 0;
 }
@@ -723,7 +723,12 @@ footer {
     top: -320px;
   }
 }
-@media only screen and (max-width: 1300px) {
+@media only screen and (min-width: 1280px) {
+  .xl\:transform-none {
+    transform: none !important;
+  }
+}
+@media only screen and (max-width: 1536px) {
   /* Token Sliders */
   .slick-initialized .slick-slide {
     width: 200px !important;
@@ -731,8 +736,6 @@ footer {
   .slick-slider .item img {
     width: 150px;
   }
-}
-@media only screen and (max-width: 1536px) {
   .large-spacer {
     height: 650px; 
   }
