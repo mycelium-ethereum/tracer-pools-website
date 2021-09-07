@@ -70,7 +70,10 @@ const TokenSlider = ({ className }) => {
                     : "trending-up"
                 }
               />
-              3DOWN-BTC/DAI
+
+              {className.includes("slider-left")
+                ? "3DOWN-BTC/DAI"
+                : "3UP-BTC/DAI"}
             </span>
           </div>
           <div className="item relative">
@@ -88,7 +91,9 @@ const TokenSlider = ({ className }) => {
                     : "trending-up"
                 }
               />
-              2DOWN-ETH/DAI
+              {className.includes("slider-left")
+                ? "2DOWN-BTC/DAI"
+                : "2UP-ETH/DAI"}
             </span>
           </div>
           <div className="item relative">
@@ -106,7 +111,8 @@ const TokenSlider = ({ className }) => {
                     : "trending-up"
                 }
               />
-              5DOWN-LINK/DAI
+                            {className.includes("slider-left") ? "5DOWN-LINK/DAI" : "5UP-LINK/DAI"}
+
             </span>
           </div>
           <div className="item relative">
@@ -124,7 +130,9 @@ const TokenSlider = ({ className }) => {
                     : "trending-up"
                 }
               />
-              3DOWN-BTC/DAI
+              {className.includes("slider-left")
+                ? "3DOWN-BTC/DAI"
+                : "3UP-BTC/DAI"}
             </span>
           </div>
           <div className="item relative">
@@ -142,7 +150,9 @@ const TokenSlider = ({ className }) => {
                     : "trending-up"
                 }
               />
-              2DOWN-ETH/DAI
+              {className.includes("slider-left")
+                ? "2DOWN-BTC/DAI"
+                : "2UP-ETH/DAI"}
             </span>
           </div>
           <div className="item relative">
@@ -160,7 +170,8 @@ const TokenSlider = ({ className }) => {
                     : "trending-up"
                 }
               />
-              5DOWN-LINK/DAI
+                            {className.includes("slider-left") ? "5DOWN-LINK/DAI" : "5UP-LINK/DAI"}
+
             </span>
           </div>
           <div className="item relative">
@@ -178,7 +189,9 @@ const TokenSlider = ({ className }) => {
                     : "trending-up"
                 }
               />
-              3DOWN-BTC/DAI
+              {className.includes("slider-left")
+                ? "3DOWN-BTC/DAI"
+                : "3UP-BTC/DAI"}
             </span>
           </div>
           <div className="item relative">
@@ -196,7 +209,9 @@ const TokenSlider = ({ className }) => {
                     : "trending-up"
                 }
               />
-              2DOWN-ETH/DAI
+              {className.includes("slider-left")
+                ? "2DOWN-BTC/DAI"
+                : "2UP-ETH/DAI"}
             </span>
           </div>
           <div className="item relative">
@@ -214,7 +229,8 @@ const TokenSlider = ({ className }) => {
                     : "trending-up"
                 }
               />
-              5DOWN-LINK/DAI
+                            {className.includes("slider-left") ? "5DOWN-LINK/DAI" : "5UP-LINK/DAI"}
+
             </span>
           </div>
         </Slider>
