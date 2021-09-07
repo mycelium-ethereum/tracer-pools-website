@@ -376,7 +376,7 @@ section {
 #pinContainer .step-animation .step-animation__tile {
   top: 325px;
   right: -80px;
-  z-index: 4;
+  z-index: 6;
   opacity: 1;
   transition: all 1.3s ease;
 }
@@ -392,27 +392,31 @@ section {
 .step-animation .step-animation__base {
   top: 150px;
   min-width: 806px;
-  z-index: 3;
+  z-index: 5;
 }
-/* Second layer (blue rect) */
-.step-animation .step-animation__layertwo {
+.step-animation .step-animation__lightblue-rectangle {
   min-width: 1440px;
   top: -439px;
   right: -1583px;
-  z-index: 2;
+  z-index: 4;
 }
-/* Third layer (pink rect) */
-.step-animation .step-animation__layerthree {
+.step-animation .step-animation__pink-rectangle {
   min-width: 1700px;
   top: -430px;
   right: -1830px;
-  z-index: 1;
+  z-index: 2;
 }
-/* Fourth layer (arrow) */
-.step-animation .step-animation__layerfour {
+.step-animation .step-animation__blue-arrow {
   min-width: 988px;
   bottom: 360px;
   right: -1160px;
+  z-index: 1;
+}
+.step-animation .step-animation__blue-square {
+  min-width: 1800px;
+  bottom: 200px;
+  right: -1600px;
+  z-index: 0;
 }
 
 /* ACTIVE STYLES */
@@ -497,20 +501,21 @@ section {
   top: 80px;
   right: -180px;
 }
-/* Second layer */
-.step-one.start .step-animation .step-animation__layertwo {
+.step-one.start .step-animation .step-animation__lightblue-rectangle {
   top: -65px;
   right: -775px;
 }
-/* Third layer */
-.step-one.start .step-animation .step-animation__layerthree {
+.step-one.start .step-animation .step-animation__pink-rectangle {
   top: -120px;
   right: -1170px;
 }
-/* Fourth layer (arrow) */
-.step-one.start .step-animation .step-animation__layerfour {
+.step-one.start .step-animation .step-animation__blue-arrow {
   bottom: 200px;
   right: -990px;
+}
+.step-one.start .step-animation .step-animation__blue-square {
+  bottom: 150px;
+  right: -1320px;
 }
 
 /* Stages for tile movement */

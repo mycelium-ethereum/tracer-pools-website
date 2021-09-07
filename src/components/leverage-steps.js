@@ -9,9 +9,10 @@ import SideTile from "/static/img/home-page/steps/side-tile.png";
 import LeverageTile from "/static/img/home-page/steps/leverage-tile.png";
 import AmountTile from "/static/img/home-page/steps/amount-tile.png";
 import BaseTile from "/static/img/home-page/steps/base.png";
-import LayerTwo from "/static/img/home-page/steps/layer-2.svg";
-import LayerThree from "/static/img/home-page/steps/layer-3.svg";
-import LayerFour from "/static/img/home-page/steps/layer-4.svg";
+import LightBlueRectangle from "/static/img/home-page/steps/lightblue-rectangle.svg";
+import PinkRectangle from "/static/img/home-page/steps/pink-rectangle.svg";
+import BlueArrow from "/static/img/home-page/steps/blue-arrow.svg";
+import BlueSquare from "/static/img/home-page/steps/blue-square.png";
 
 const LeverageSteps = (direction) => {
   var slideUp = {
@@ -149,16 +150,20 @@ const LeverageSteps = (direction) => {
                   src={BaseTile}
                 />
                 <img
-                  className="step-animation__layertwo opacity-0"
-                  src={LayerTwo}
+                  className="step-animation__lightblue-rectangle opacity-0"
+                  src={LightBlueRectangle}
                 />
                 <img
-                  className="step-animation__layerthree opacity-0"
-                  src={LayerThree}
+                  className="step-animation__pink-rectangle opacity-0"
+                  src={PinkRectangle}
                 />
                 <img
-                  className="step-animation__layerfour opacity-0"
-                  src={LayerFour}
+                  className="step-animation__blue-arrow opacity-0"
+                  src={BlueArrow}
+                />
+                <img
+                  className="step-animation__blue-square opacity-0"
+                  src={BlueSquare}
                 />
               </div>
             </div>

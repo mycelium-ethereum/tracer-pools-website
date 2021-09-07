@@ -55,13 +55,13 @@ const cityAnimation = () => {
 const buildingAnimation = () => {
   var t4 = gsap.timeline();
   t4.from("#building-trigger", 1, { xPercent: 0, opacity: 1 });
-  const oneQuarterScreen = window.innerHeight * 0.25;
+  const quarterScreen = window.innerHeight * 0.25;
 
   const scene = new ScrollMagic.Scene({
     triggerElement: "#building-trigger",
     triggerHook: "onLeave",
     duration: "0%",
-    offset: -oneQuarterScreen,
+    offset: -quarterScreen,
   })
     .setTween(t4)
     .setClassToggle("#building-trigger", "active")
@@ -71,12 +71,13 @@ const buildingAnimation = () => {
 const integrateAnimation = () => {
   var t5 = gsap.timeline();
   t5.from(".integrate-section", 1, { xPercent: 0, opacity: 1 });
+  const oneFifthScreenHeight = window.innerHeight * 0.2;
 
   const scene = new ScrollMagic.Scene({
     triggerElement: ".integrate-section",
     triggerHook: "onLeave",
     duration: "0%",
-    offset: -300,
+    offset: -oneFifthScreenHeight,
   })
     .setTween(t5)
     .setClassToggle(".integrate-section", "active")

@@ -28,7 +28,7 @@ const IntegrateAnimation = () => {
     <section className="integrate-section flex sm:items-center items-start sm:h-screen h-auto">
       <div className="flex h-full w-full container mx-auto relative flex items-center lg:flex-row lg:pb-0 lg:justify-end justify-center xl:px-0 sm:pb-0 pb-96 flex-col px-4">
         <div
-          className="lg:w-80 force-flex lg:absolute 2xl:mt-96 lg:mt-48 lg:justify-start lg:flex-row sm:w-80 left-0 justify-center flex-col mx-auto z-10"
+          className="lg:w-80 force-flex lg:absolute 2xl:mt-24 lg:mt-48 lg:justify-start lg:flex-row sm:w-80 left-0 justify-center flex-col mx-auto z-10"
           data-stellar-ratio="1.2"
         >
           <div className="lg:w-full h-auto flex flex-col justify-center">
@@ -44,7 +44,7 @@ const IntegrateAnimation = () => {
             </p>
           </div>
         </div>
-        <div className="w-2/5 integrate-animation 2xl:scale-75 absolute 2xl:-right-48 transform lg:scale-50 lg:-right-24 sm:relative sm:scale-50 sm:-right-64 sm:bottom-24 -right-28 -bottom-64">
+        <div className="w-2/5 integrate-animation 2xl:scale-75 absolute 2xl:-right-48 transform-gpu lg:scale-50 lg:-right-24 sm:relative sm:scale-50 sm:-right-64 sm:bottom-24 -right-28 -bottom-64">
           <img className="integrate-animation__tile lg:opacity-0" src={Tile} />
           <img className="integrate-animation__layerone lg:opacity-0" src={LayerOne} />
           <img className="integrate-animation__layertwo lg:opacity-0" src={LayerTwo} />
