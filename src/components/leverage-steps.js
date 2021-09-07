@@ -1,17 +1,17 @@
-import React, { useEffect } from"react";
+import React, { useEffect } from "react";
 // import ScrollReveal from"scrollreveal";
 
 // Image assets
-import MobileSteps from"/static/img/home-page/steps/mobile-steps.png";
-import EmptyTile from"/static/img/home-page/steps/empty.png";
-import TileOne from"/static/img/home-page/steps/tile1.png";
-import TileTwo from"/static/img/home-page/steps/tile2.png";
-import TileThree from"/static/img/home-page/steps/tile3.png";
-import TileFour from"/static/img/home-page/steps/tile4.png";
-import BaseTile from"/static/img/home-page/steps/base.png";
-import LayerTwo from"/static/img/home-page/steps/layer-2.svg";
-import LayerThree from"/static/img/home-page/steps/layer-3.svg";
-import LayerFour from"/static/img/home-page/steps/layer-4.svg";
+import MobileSteps from "/static/img/home-page/steps/mobile-steps.png";
+import EmptyTile from "/static/img/home-page/steps/empty-tile.png";
+import MarketTile from "/static/img/home-page/steps/market-tile.png";
+import SideTile from "/static/img/home-page/steps/side-tile.png";
+import LeverageTile from "/static/img/home-page/steps/leverage-tile.png";
+import AmountTile from "/static/img/home-page/steps/amount-tile.png";
+import BaseTile from "/static/img/home-page/steps/base.png";
+import LayerTwo from "/static/img/home-page/steps/layer-2.svg";
+import LayerThree from "/static/img/home-page/steps/layer-3.svg";
+import LayerFour from "/static/img/home-page/steps/layer-4.svg";
 
 const LeverageSteps = (direction) => {
   var slideUp = {
@@ -43,9 +43,7 @@ const LeverageSteps = (direction) => {
       <section id="pinMaster" className="pin-master">
         <div
           id="pinContainer"
-          className={
-           "pin-container background-blue z-10" + direction.direction
-          }
+          className={"pin-container background-blue z-10" + direction.direction}
         >
           <section
             id="steps"
@@ -124,40 +122,42 @@ const LeverageSteps = (direction) => {
                 />
               </div>
               <div className="w-2/4 step-animation relative 2xl:-top-24 lg:-top-32 xl:scale-75 xl:right-0 lg:scale-50 lg:-right-12 lg:opacity-100 opacity-0 lg:block transform-gpu scale-50 hidden z-10">
+                <div className="absolute step-animation__tile">
+                  <img
+                    className="step-animation__empty relative top-0 right-0 w-full opacity-0"
+                    src={EmptyTile}
+                  />
+                  <img
+                    className="step-animation__market absolute top-0 right-0 w-full opacity-0"
+                    src={MarketTile}
+                  />
+                  <img
+                    className="step-animation__side absolute top-0 right-0 w-full opacity-0"
+                    src={SideTile}
+                  />
+                  <img
+                    className="step-animation__leverage absolute top-0 right-0 w-full opacity-0"
+                    src={LeverageTile}
+                  />
+                  <img
+                    className="step-animation__amount absolute top-0 right-0 w-full opacity-0"
+                    src={AmountTile}
+                  />
+                </div>
                 <img
-                  className="step-animation__empty lg:opacity-0"
-                  src={EmptyTile}
-                />
-                <img
-                  className="step-animation__tile1 lg:opacity-0"
-                  src={TileOne}
-                />
-                <img
-                  className="step-animation__tile2 lg:opacity-0"
-                  src={TileTwo}
-                />
-                <img
-                  className="step-animation__tile3 lg:opacity-0"
-                  src={TileThree}
-                />
-                <img
-                  className="step-animation__tile4 lg:opacity-0"
-                  src={TileFour}
-                />
-                <img
-                  className="step-animation__base lg:opacity-0"
+                  className="step-animation__base opacity-0"
                   src={BaseTile}
                 />
                 <img
-                  className="step-animation__layertwo lg:opacity-0"
+                  className="step-animation__layertwo opacity-0"
                   src={LayerTwo}
                 />
                 <img
-                  className="step-animation__layerthree lg:opacity-0"
+                  className="step-animation__layerthree opacity-0"
                   src={LayerThree}
                 />
                 <img
-                  className="step-animation__layerfour lg:opacity-0"
+                  className="step-animation__layerfour opacity-0"
                   src={LayerFour}
                 />
               </div>
