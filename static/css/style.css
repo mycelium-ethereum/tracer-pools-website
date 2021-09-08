@@ -561,22 +561,6 @@ section {
 
 /*------------[Positions slider]------------*/
 
-.slick-slider {
-	position: relative;
-	z-index: 1;
-}
-.slick-slider .item {
-	width: 200px !important;
-	height: 200px;
-}
-.slick-slider .item img {
-  width: 100%;
-  height: auto;
-}
-.slick-slider .item .trend {
-  width: 15px;
-  height: 15px;
-}
 /* FOX */
 .undershadow {
   box-shadow: -1px 0 28px 0 rgba(172, 136, 136, 0.75);

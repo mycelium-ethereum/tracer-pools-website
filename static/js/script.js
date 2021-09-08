@@ -158,7 +158,7 @@ const partnerClick = (scene) => {
       const target = parseInt(e.target.dataset.sectionLink);
       const parentActive = slides[target].classList.contains("active");
       const panelHeight = document.querySelector("#pinMasterPartners .panel")
-      .offsetHeight * 0.6;
+      .offsetHeight * 0.8;
       if (!parentActive) {
         slides.forEach((e) => e.classList.remove("active"));
         if (prevElement === 0 && target === 1) {

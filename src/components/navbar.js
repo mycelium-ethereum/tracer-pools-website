@@ -94,7 +94,7 @@ const Navbar = () => {
           </div>
           <div>
             <Button
-              className="h-12 w-32 border border-white font-normal"
+              className="h-12 w-48 border border-white font-normal"
               linkTo="https://goofy-banach-3fbf5d.netlify.app/"
             >
               Launch Pools

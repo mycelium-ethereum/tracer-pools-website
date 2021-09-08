@@ -4,16 +4,91 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 // Assets
-import eth_left from "/static/img/slider/eth-left.svg";
-import link_left from "/static/img/slider/link-left.svg";
-import btc_left from "/static/img/slider/btc-left.svg";
-import eth_right from "/static/img/slider/eth-right.svg";
-import link_right from "/static/img/slider/link-right.svg";
-import btc_right from "/static/img/slider/btc-right.svg";
-import TrendDown from "/static/img/slider/trend-down.svg";
-import TrendUp from "/static/img/slider/trend-up.svg";
+import CardanoToken from "/static/img/slider/cardano.svg";
+import ChainlinkToken from "/static/img/slider/chainlink.svg";
+import Bitcoin from "/static/img/slider/bitcoin.svg";
+import EthereumToken from "/static/img/slider/ethereum.svg";
+import BalancerToken from "/static/img/slider/balancer.svg";
+import CompoundToken from "/static/img/slider/compound.svg";
+import CurveDAOToken from "/static/img/slider/curve-dao.svg";
+import YearnToken from "/static/img/slider/yearn.svg";
+import SushiswapToken from "/static/img/slider/sushiswap.svg";
+import ShortPosition from "/static/img/slider/short-position.svg";
+import LongPosition from "/static/img/slider/long-position.svg";
 
 const TokenSlider = ({ className }) => {
+  const tokenImages = [
+    CardanoToken,
+    ChainlinkToken,
+    Bitcoin,
+    EthereumToken,
+    BalancerToken,
+    CompoundToken,
+    CurveDAOToken,
+    YearnToken,
+    SushiswapToken,
+  ];
+  const tokenShortPosTitles = [
+    "2DOWN-ADA/DAI",
+    "5DOWN-LINK/DAI",
+    "3DOWN-BTC/DAI",
+    "2DOWN-ETH/DAI",
+    "5DOWN-BAL/DAI",
+    "3DOWN-COMP/DAI",
+    "2DOWN-ETH/DAI",
+    "5DOWN-YFI/DAI",
+    "3DOWN-SUSHI/DAI",
+  ];
+  const tokenLongPosTitles = [
+    "2UP-ADA/DAI",
+    "5UP-LINK/DAI",
+    "3UP-BTC/DAI",
+    "2UP-ETH/DAI",
+    "5UP-BAL/DAI",
+    "3UP-COMP/DAI",
+    "2UP-ETH/DAI",
+    "5UP-YFI/DAI",
+    "3UP-SUSHI/DAI",
+  ];
+  const createSlides = () => {
+    const totalSlides = 6;
+    const generatedSlides = [];
+    for (var i = 0; i < 6; i++) {
+      generatedSlides.push(
+        <div className="item" key={i}>
+          <div className="relative">
+            <img
+              className="mx-auto"
+              src={tokenImages[i]}
+              alt={Object.keys(tokenImages[i])[0].toString()}
+            />
+            <img
+              className={
+                "trend absolute bottom-0 " +
+                (className.includes("slider-left") ? "left-5" : "right-5")
+              }
+              src={
+                className.includes("slider-left") ? ShortPosition : LongPosition
+              }
+              alt={
+                className.includes("slider-left")
+                  ? "Short position"
+                  : "Long position"
+              }
+            />
+          </div>
+          <span className="block text-white text-center mt-2">
+            {className.includes("slider-left")
+              ? tokenShortPosTitles[i]
+              : tokenLongPosTitles[i]}
+          </span>
+        </div>
+      );
+    }
+    // Clone the array to double the amount of slides
+    generatedSlides.push([...generatedSlides]);
+    return generatedSlides;
+  };
   const settings = {
     speed: 2000,
     autoplay: true,
@@ -54,186 +129,7 @@ const TokenSlider = ({ className }) => {
   return (
     <>
       <div className={className}>
-        <Slider {...settings}>
-          <div className="item relative">
-            <img
-              src={className.includes("slider-left") ? btc_left : btc_right}
-              alt="BTC"
-            />
-            <span className="text-base absolute 2xl:bottom-0 sm:bottom-4 bottom-12 text-center xl:ml-16 ml-0 text-white font-bold">
-              <img
-                className="trend absolute -left-4 top-1"
-                src={className.includes("slider-left") ? TrendDown : TrendUp}
-                alt={
-                  className.includes("slider-left")
-                    ? "trending-down"
-                    : "trending-up"
-                }
-              />
-
-              {className.includes("slider-left")
-                ? "3DOWN-BTC/DAI"
-                : "3UP-BTC/DAI"}
-            </span>
-          </div>
-          <div className="item relative">
-            <img
-              src={className.includes("slider-left") ? eth_left : eth_right}
-              alt="Eth"
-            />
-            <span className="text-base absolute 2xl:bottom-0 sm:bottom-4 bottom-12 text-center xl:ml-16 ml-0 text-white font-bold">
-              <img
-                className="trend absolute -left-4 top-1"
-                src={className.includes("slider-left") ? TrendDown : TrendUp}
-                alt={
-                  className.includes("slider-left")
-                    ? "trending-down"
-                    : "trending-up"
-                }
-              />
-              {className.includes("slider-left")
-                ? "2DOWN-BTC/DAI"
-                : "2UP-ETH/DAI"}
-            </span>
-          </div>
-          <div className="item relative">
-            <img
-              src={className.includes("slider-left") ? link_left : link_right}
-              alt="Link"
-            />
-            <span className="text-base absolute 2xl:bottom-0 sm:bottom-4 bottom-12 text-center xl:ml-16 ml-0 text-white font-bold">
-              <img
-                className="trend absolute -left-4 top-1"
-                src={className.includes("slider-left") ? TrendDown : TrendUp}
-                alt={
-                  className.includes("slider-left")
-                    ? "trending-down"
-                    : "trending-up"
-                }
-              />
-                            {className.includes("slider-left") ? "5DOWN-LINK/DAI" : "5UP-LINK/DAI"}
-
-            </span>
-          </div>
-          <div className="item relative">
-            <img
-              src={className.includes("slider-left") ? btc_left : btc_right}
-              alt="BTC"
-            />
-            <span className="text-base absolute 2xl:bottom-0 sm:bottom-4 bottom-12 text-center xl:ml-16 ml-0 text-white font-bold">
-              <img
-                className="trend absolute -left-4 top-1"
-                src={className.includes("slider-left") ? TrendDown : TrendUp}
-                alt={
-                  className.includes("slider-left")
-                    ? "trending-down"
-                    : "trending-up"
-                }
-              />
-              {className.includes("slider-left")
-                ? "3DOWN-BTC/DAI"
-                : "3UP-BTC/DAI"}
-            </span>
-          </div>
-          <div className="item relative">
-            <img
-              src={className.includes("slider-left") ? eth_left : eth_right}
-              alt="Eth"
-            />
-            <span className="text-base absolute 2xl:bottom-0 sm:bottom-4 bottom-12 text-center xl:ml-16 ml-0 text-white font-bold">
-              <img
-                className="trend absolute -left-4 top-1"
-                src={className.includes("slider-left") ? TrendDown : TrendUp}
-                alt={
-                  className.includes("slider-left")
-                    ? "trending-down"
-                    : "trending-up"
-                }
-              />
-              {className.includes("slider-left")
-                ? "2DOWN-BTC/DAI"
-                : "2UP-ETH/DAI"}
-            </span>
-          </div>
-          <div className="item relative">
-            <img
-              src={className.includes("slider-left") ? link_left : link_right}
-              alt="Link"
-            />
-            <span className="text-base absolute 2xl:bottom-0 sm:bottom-4 bottom-12 text-center xl:ml-16 ml-0 text-white font-bold">
-              <img
-                className="trend absolute -left-4 top-1"
-                src={className.includes("slider-left") ? TrendDown : TrendUp}
-                alt={
-                  className.includes("slider-left")
-                    ? "trending-down"
-                    : "trending-up"
-                }
-              />
-                            {className.includes("slider-left") ? "5DOWN-LINK/DAI" : "5UP-LINK/DAI"}
-
-            </span>
-          </div>
-          <div className="item relative">
-            <img
-              src={className.includes("slider-left") ? btc_left : btc_right}
-              alt="BTC"
-            />
-            <span className="text-base absolute 2xl:bottom-0 sm:bottom-4 bottom-12 text-center xl:ml-16 ml-0 text-white font-bold">
-              <img
-                className="trend absolute -left-4 top-1"
-                src={className.includes("slider-left") ? TrendDown : TrendUp}
-                alt={
-                  className.includes("slider-left")
-                    ? "trending-down"
-                    : "trending-up"
-                }
-              />
-              {className.includes("slider-left")
-                ? "3DOWN-BTC/DAI"
-                : "3UP-BTC/DAI"}
-            </span>
-          </div>
-          <div className="item relative">
-            <img
-              src={className.includes("slider-left") ? eth_left : eth_right}
-              alt="Eth"
-            />
-            <span className="text-base absolute 2xl:bottom-0 sm:bottom-4 bottom-12 text-center xl:ml-16 ml-0 text-white font-bold">
-              <img
-                className="trend absolute -left-4 top-1"
-                src={className.includes("slider-left") ? TrendDown : TrendUp}
-                alt={
-                  className.includes("slider-left")
-                    ? "trending-down"
-                    : "trending-up"
-                }
-              />
-              {className.includes("slider-left")
-                ? "2DOWN-BTC/DAI"
-                : "2UP-ETH/DAI"}
-            </span>
-          </div>
-          <div className="item relative">
-            <img
-              src={className.includes("slider-left") ? link_left : link_right}
-              alt="Link"
-            />
-            <span className="text-base absolute 2xl:bottom-0 sm:bottom-4 bottom-12 text-center xl:ml-16 ml-0 text-white font-bold">
-              <img
-                className="trend absolute -left-4 top-1"
-                src={className.includes("slider-left") ? TrendDown : TrendUp}
-                alt={
-                  className.includes("slider-left")
-                    ? "trending-down"
-                    : "trending-up"
-                }
-              />
-                            {className.includes("slider-left") ? "5DOWN-LINK/DAI" : "5UP-LINK/DAI"}
-
-            </span>
-          </div>
-        </Slider>
+        <Slider {...settings}>{createSlides()}</Slider>
       </div>
     </>
   );

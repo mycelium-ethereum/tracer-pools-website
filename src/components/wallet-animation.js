@@ -40,7 +40,7 @@ const WalletAnimation = () => {
           </Button>
         </div>
         <div className="w-full absolute 2xl:h-60 xl:-bottom-32 lg:h-48 lg:-bottom-12 sm:-bottom-60 h-48 -bottom-60">
-          <TokenSlider className="slider-left w-2/4 overflow-hidden bottom-0 h-full absolute lg:-left-16 -left-16 z-10" />
+          <TokenSlider className="slider-left w-2/4 overflow-hidden bottom-0 h-36 absolute lg:-left-16 -left-16 z-10" />
           <div className="absolute 2xl:bottom-8 2xl:w-96 lg:w-72 lg:bottom-6 left-2/4 transform -translate-x-1/2 h-full sm:w-60 w-48 z-20">
             <picture className="flex flex-col justify-center items-center relative w-full">
               <img
@@ -49,7 +49,7 @@ const WalletAnimation = () => {
               />
             </picture>
           </div>
-          <TokenSlider className="slider-right w-2/4 overflow-hidden bottom-0 h-full absolute lg:-right-16 -right-16 z-10" />
+          <TokenSlider className="slider-right w-2/4 overflow-hidden bottom-0 h-36 absolute lg:-right-16 -right-16 z-10" />
         </div>
         <img
           className="city-top absolute sm:top-2/4 left-0 w-full transition-all duration-500"
