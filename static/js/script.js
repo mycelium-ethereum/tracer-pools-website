@@ -110,7 +110,7 @@ const updateActiveStep = (progress) => {
   firstSlide.classList.remove("stage-four");
 
   if (progress === 0) {
-    // Start the step tile slide in animations
+    // Remove the tile 
     slides[0].classList.remove("start");
     firstSlide.classList.remove("stage-one");
   }
