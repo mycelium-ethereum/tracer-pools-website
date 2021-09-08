@@ -218,7 +218,6 @@ const handleResize = () => {
   }
 };
 window.onload = function () {
-  const body = document.querySelector("body");
   if (!isMobile()) {
     initialiseScrollMagic();
   }

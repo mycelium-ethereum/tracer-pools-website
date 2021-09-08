@@ -346,7 +346,7 @@ section {
   opacity: 0;
   animation: slideOutLTR 0.9s linear;
 }
-#pinContainer.up .step-info .step-info__text {
+.pin-container.up .panel .step-info .step-info__text {
   animation: slideOutRTL 0.9s linear;
 }
 .step-progress {
@@ -432,7 +432,7 @@ section {
   z-index: 2;
   animation: slideInLTR 0.9s linear;
 }
-#pinContainer.up .panel.active .step-info__text {
+.pin-container.up .panel.active .step-info__text {
   animation: slideInRTL 0.9s linear;
 }
 .panel.active .step-progress {

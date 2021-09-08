@@ -18,12 +18,12 @@ const Hero = () => {
             <h1 className="xl:text-9xl sm:text-7xl text-5xl text-white font-black mb-4">
               Perpetual Pools
             </h1>
-            <p className="text-white text-3xl lg:block hidden leading-snug">
+            <p className="text-white text-xl lg:block hidden leading-snug">
               Leveraged exposure. No margins.
               <br />
               No liquidations. A new derivative primitive.
             </p>
-            <p className="text-white text-2xl lg:hidden block">
+            <p className="text-white text-normal lg:hidden block">
               Leveraged exposure.
               <br />
               No margins. No liquidations.
@@ -36,7 +36,7 @@ const Hero = () => {
               Launch Pools
             </Button>
             <Link to="https://app.gitbook.com/login/tracer-1/pool-swaps">
-              <div className="mx-auto mt-2 w-48 h-12 flex justify-center items-center text-normal font-normal text-white hover:underline rounded-lg">
+              <div className="mx-auto mt-2 w-48 h-12 flex justify-center items-center text-normal font-normal text-white hover:underline">
                 Documentation
               </div>
             </Link>
