@@ -561,6 +561,10 @@ section {
 
 /*------------[Positions slider]------------*/
 
+.slick-slider .item {
+	width: 160px !important;
+	height: 160px;
+}
 /* FOX */
 .undershadow {
   box-shadow: -1px 0 28px 0 rgba(172, 136, 136, 0.75);
@@ -717,9 +721,6 @@ footer {
   .slick-initialized .slick-slide {
     width: 200px !important;
   }
-  .slick-slider .item img {
-    width: 150px;
-  }
   .large-spacer {
     height: 650px; 
   }
@@ -739,11 +740,6 @@ footer {
   }
   .wallet-anim {
     width: 100vw !important;
-  }
-  /* Token Sliders */
-  .slick-slider .item img:not(.trend) {
-    padding-top: 20px;
-    width: 120px;
   }
   body.sm-disabled .scrollmagic-pin-spacer {
     padding-top: 0 !important;
@@ -844,6 +840,9 @@ footer {
   }
   .large-spacer {
     height: 450px;
+  }
+  .slick-slide .token {
+    width: 80px;
   }
 }
 @media only screen and (max-width: 767px) {

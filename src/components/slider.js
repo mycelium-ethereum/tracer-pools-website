@@ -51,21 +51,21 @@ const TokenSlider = ({ className }) => {
     "3UP-SUSHI/DAI",
   ];
   const createSlides = () => {
-    const totalSlides = 6;
+    const totalSlides = tokenImages.length;
     const generatedSlides = [];
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < totalSlides; i++) {
       generatedSlides.push(
-        <div className="item" key={i}>
+        <div className="item flex items-start" key={i}>
           <div className="relative">
             <img
-              className="mx-auto"
+              className="token mx-auto"
               src={tokenImages[i]}
               alt={Object.keys(tokenImages[i])[0].toString()}
             />
             <img
               className={
-                "trend absolute bottom-0 " +
-                (className.includes("slider-left") ? "left-5" : "right-5")
+                "trend absolute bottom-0 w-8 h-8 " +
+                (className.includes("slider-left") ? "lg:left-5 left-9" : "lg:right-5 right-9")
               }
               src={
                 className.includes("slider-left") ? ShortPosition : LongPosition
@@ -85,14 +85,12 @@ const TokenSlider = ({ className }) => {
         </div>
       );
     }
-    // Clone the array to double the amount of slides
-    generatedSlides.push([...generatedSlides]);
     return generatedSlides;
   };
   const settings = {
     speed: 2000,
     autoplay: true,
-    autoplaySpeed: 0,
+    autoplaySpeed: 2000,
     cssEase: "linear",
     slidesToShow: 6,
     slidesToScroll: 1,
