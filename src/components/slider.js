@@ -96,7 +96,7 @@ const TokenSlider = ({ className }) => {
     slidesToScroll: 1,
     infinite: true,
     arrows: false,
-    swipeToSlide: true,
+    swipeToSlide: false,
     focusOnSelect: false,
     pauseOnFocus: false,
     pauseOnHover: false,

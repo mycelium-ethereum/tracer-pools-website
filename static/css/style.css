@@ -248,7 +248,6 @@ section {
 .pin-master {
   position: relative;
   height: 100%;
-  z-index: 3;
 }
 .pin-container {
   position: relative;
@@ -561,10 +560,10 @@ section {
 
 /*------------[Positions slider]------------*/
 
-.slick-slider .item {
+/* .slick-slider .item {
 	width: 160px !important;
 	height: 160px;
-}
+} */
 /* FOX */
 .undershadow {
   box-shadow: -1px 0 28px 0 rgba(172, 136, 136, 0.75);

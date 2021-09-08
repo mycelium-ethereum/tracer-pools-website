@@ -72,7 +72,7 @@ const LeverageSteps = (direction) => {
                   <span className="w-1/4 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                 </div>
               </div>
-              <div id="mobile-steps" className="lg:hidden w-80 mx-auto">
+              <div id="mobile-steps" className="lg:hidden w-80 mx-auto z-20">
                 <div data-step="1" className="grid grid-cols-4 w-full">
                   <span className="font-normal text-6xl text-white col-span-1">
                     01
