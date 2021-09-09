@@ -41,7 +41,7 @@ const LeverageSteps = (direction) => {
   // });
   return (
     <>
-      <section id="pinMaster" className="pin-master">
+      <section id="pinMaster" className="pin-master z-10">
         <div
           id="pinContainer"
           className={"pin-container background-blue z-10" + direction.direction}
