@@ -339,6 +339,9 @@ section {
   position: relative;
   height: 500px;
 }
+/* .step-one .step-info .step-info__text {
+  transform: translateX(-250px);
+} */
 .step-info .step-info__text {
   position: relative;
   z-index: 1;
@@ -431,10 +434,6 @@ section {
 }
 .panel.active .step-info__text {
   z-index: 2;
-  transform: translateX(0px);
-  opacity: 1;
-}
-.pin-container.up .panel.active .step-info__text {
   transform: translateX(0px);
   opacity: 1;
 }
@@ -573,39 +572,42 @@ body:not(.steps-active) #token-trigger.active .city-background {
   transition: all 1s ease;
   mix-blend-mode: multiply;
 }
+.integrate-text {
+  max-width: 450px;
+}
 /* Before active/scroll lock */
 
 /* Clear tile */
 .integrate-animation .integrate-animation__tile {
   min-width: 1068px;
   mix-blend-mode: unset;
-  top: 154px;
-  right: 38px;
+  top: 155px;
+  right: 40px;
   z-index: 1;
 }
 /* Dark blue base */
 .integrate-animation .integrate-animation__layerone {
   min-width: 1310px;
   top: -640px;
-  right: -1007px;
+  right: -1010px;
 }
 /* Second layer (pink rectangle) */
 .integrate-animation .integrate-animation__layertwo {
-  min-width: 1999px;
-  bottom: 374px;
-  right: -1527px;
+  min-width: 2000px;
+  bottom: 375px;
+  right: -1530px;
 }
 /* Third layer (arrow) */
 .integrate-animation .integrate-animation__layerthree {
   min-width: 1700px;
-  top: 46px;
-  right: -1538px;
+  top: 45px;
+  right: -1540px;
 }
 /* Fourth layer (arrow green) */
 .integrate-animation .integrate-animation__layerfour {
   min-width: 988px;
-  top: -177px;
-  right: -763px;
+  top: -175px;
+  right: -765px;
 }
 
 /* Active styles*/
@@ -614,27 +616,27 @@ body:not(.steps-active) #token-trigger.active .city-background {
 }
 /* Tile */
 .integrate-section.active .integrate-animation .integrate-animation__tile {
-  top: 36px;
-  right: 16px;
+  top: 35px;
+  right: 15px;
   transition: all 1s ease 0.7s;
 }
 .integrate-section.active .integrate-animation .integrate-animation__layerone {
-  top: -341px;
+  top: -340px;
   right: -460px;
 }
 /* Second layer (pink rectangle) */
 .integrate-section.active .integrate-animation .integrate-animation__layertwo {
-  bottom: -65px;
-  right: -803px;
+  bottom: -90px;
+  right: -930px;
 }
 /* Third layer (arrow) */
 .integrate-section.active .integrate-animation .integrate-animation__layerthree {
-  top: 211px;
-  right: -1166px;
+  top: 210px;
+  right: -1165px;
 }
 /* Fourth layer (arrow green) */
 .integrate-section.active .integrate-animation .integrate-animation__layerfour {
-  top: -124px;
+  top: -125px;
   right: -600px;
 }
 .integrate-section.active .fade-anim {
@@ -690,7 +692,7 @@ footer {
     top: 300px;
   }
   .large-spacer {
-    height: 550px; 
+    height: 750px; 
   }
 }
 @media only screen and (max-width: 1024px) {

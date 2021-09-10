@@ -103,7 +103,7 @@ const PartnersContributors = () => {
                     className="2xl:w-60 lg:w-48 lg:mr-12 sm:mr-8 sm:w-32 w-20 mr-5"
                     src={Framework}
                   />
-                  <img className="2xl:w-44 lg:w-44 sm:w-24 w-14" src={Koji} />
+                  <img className="2xl:w-44 lg:w-36 sm:w-24 w-14" src={Koji} />
                 </div>
                 <div className="flex w-full mt-10 justify-center items-center">
                   <img

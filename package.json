@@ -47,7 +47,6 @@
     "react-moment": "^1.1.1",
     "react-router-dom": "^5.2.0",
     "react-script-tag": "^1.1.2",
-    "react-scroll-wheel-handler": "^2.1.0",
     "react-slick": "^0.28.1",
     "react-transition-group": "^4.4.2",
     "scrollmagic": "^2.0.8",

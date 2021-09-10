@@ -19,9 +19,9 @@ const TracerCity = () => {
         id="city-trigger"
         className="panel w-full staking-section flex lg:items-center lg:flex-row flex-col relative items-start xl:pb-0 lg:pb-48 background-blue overflow-hidden z-10"
       >
-        <div className="container flex xl:h-screen w-full lg:h-96xl:px-0 lg:flex-row lg:pt-0 lg:px-0 px-4 h-auto lg:justify-end mx-auto flex-col justify-start relative">
+        <div className="container flex lg:h-screen w-full lg:h-96 lg:flex-row lg:pt-0 xl:px-0 px-4 h-auto lg:justify-end mx-auto flex-col justify-start relative">
           <div
-            className="h-auto lg:absolute  2xl:mt-96 lg:mt-48 force-flex flex-col justify-center z-10 lg:pb-0 lg:mb-0 sm:pt-0 xl:px-0 lg:w-80 w-52 mx-auto left-0 pt-8 mb-10 lg:text-left text-center"
+            className="h-auto lg:absolute 2xl:mt-96 lg:mt-60 force-flex flex-col justify-center z-10 xl:left-0 lg:left-4 lg:pb-0 lg:mb-0 sm:pt-0 xl:px-0 lg:w-80 w-52 mx-auto left-0 pt-8 mb-10 lg:text-left text-center"
             data-stellar-ratio="1.4"
           >
             <span className="xl:text-5xl lg:text-4xl text-3xl font-extrabold text-white mb-2">
@@ -37,7 +37,7 @@ const TracerCity = () => {
             loop="loop"
             autoPlay
             playsInline
-            className="min-w-video absolute top-1/2 sm:opacity-0 -right-24 transform-gpu -translate-y-1/2 transition-opacity duration-1000 lg:block hidden"
+            className="min-w-video absolute top-1/2 sm:opacity-0 xl:-right-24 lg:-right-12 transform-gpu -translate-y-1/2 transition-opacity duration-1000 lg:block hidden"
           >
             <source src={TracerCityVideo} type="video/mp4" />
           </video>
@@ -78,7 +78,7 @@ const TracerCity = () => {
             <source src={TracerBuilding} type="video/mp4" />
           </video>
           <div
-            className="2xl:w-auto 2xl:mt-96 lg:mt-24 lg:pb-0 lg:w-1/3 lg:absolute lg:right-24 lg:text-left xl:px-0 right-0 mx-auto px-4 force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
+            className="2xl:w-auto 2xl:mt-96 lg:mt-24 lg:pb-0 lg:w-1/3 lg:absolute lg:text-left xl:px-0 right-0 mx-auto px-4 force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
             data-stellar-ratio="1.4"
           >
             <span className="xl:text-5xl lg:text-4xl font-semibold text-base lg:mb-2 mb-0 text-white color-blue">

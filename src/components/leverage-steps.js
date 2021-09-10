@@ -65,7 +65,7 @@ const LeverageSteps = (direction) => {
                     BTC/DAI, LINK/DAI, or ETH/DAI
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-52 left-0 justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out lg:flex hidden">
+                <div className="step-progress absolute 2xl:bottom-40 lg:bottom-52 left-0 justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out lg:flex hidden">
                   <span className="active w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out"></span>
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
@@ -184,7 +184,7 @@ const LeverageSteps = (direction) => {
                     Long or short
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-52 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
+                <div className="step-progress absolute 2xl:bottom-40 lg:bottom-52 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="active w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out"></span>
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
@@ -212,7 +212,7 @@ const LeverageSteps = (direction) => {
                     1x, 2x, 3x, 5x, or 15x
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-52 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
+                <div className="step-progress absolute 2xl:bottom-40 lg:bottom-52 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="active w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out"></span>
@@ -239,7 +239,7 @@ const LeverageSteps = (direction) => {
                     leveraged exposure
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-52 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
+                <div className="step-progress absolute 2xl:bottom-40 lg:bottom-52 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                   <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
