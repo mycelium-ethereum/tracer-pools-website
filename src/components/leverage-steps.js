@@ -44,7 +44,7 @@ const LeverageSteps = (direction) => {
       <section id="pinMaster" className="pin-master z-10">
         <div
           id="pinContainer"
-          className={"pin-container background-blue z-10" + direction.direction}
+          className={"pin-container background-blue z-10 " + direction.direction}
         >
           <section className="panel lg:absolute top-0 left-0 step-one flex flex-col lg:justify-center justify-start w-full h-full lg:pointer-events-none pointer-events-auto">
             <div className="flex container mx-auto w-full lg:flex-row lg:h-full lg:h-screen flex-col items-center h-auto lg:pt-48 xl:px-0 px-4">

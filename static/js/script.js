@@ -103,14 +103,16 @@ const partnersAnimation = () => {
 const updateActiveStep = (progress) => {
   const slides = document.querySelectorAll("#pinMaster .panel");
   const firstSlide = slides[0];
-  slides.forEach((e) => e.classList.remove("active"));
+  slides.forEach((e) => {
+    e.classList.remove("active");
+  });
   firstSlide.classList.remove("stage-one");
   firstSlide.classList.remove("stage-two");
   firstSlide.classList.remove("stage-three");
   firstSlide.classList.remove("stage-four");
 
   if (progress === 0) {
-    // Remove the tile 
+    // Remove the tile
     slides[0].classList.remove("start");
     firstSlide.classList.remove("stage-one");
   }
@@ -134,6 +136,12 @@ const updateActiveStep = (progress) => {
     slides[3].classList.add("active");
     firstSlide.classList.add("stage-four");
   }
+  // Remove "inactive" class from active slides
+  slides.forEach((e) => {
+    if (e.classList.contains("active")) {
+      e.classList.remove("inactive");
+    }
+  });
 };
 const updatePartnersSlide = (progress) => {
   const slides = document.querySelectorAll("#pinMasterPartners .panel");
@@ -157,8 +165,8 @@ const partnerClick = (scene) => {
     link.addEventListener("click", function (e) {
       const target = parseInt(e.target.dataset.sectionLink);
       const parentActive = slides[target].classList.contains("active");
-      const panelHeight = document.querySelector("#pinMasterPartners .panel")
-      .offsetHeight * 0.8;
+      const panelHeight =
+        document.querySelector("#pinMasterPartners .panel").offsetHeight * 0.8;
       if (!parentActive) {
         slides.forEach((e) => e.classList.remove("active"));
         if (prevElement === 0 && target === 1) {

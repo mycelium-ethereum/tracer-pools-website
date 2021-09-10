@@ -342,11 +342,13 @@ section {
 .step-info .step-info__text {
   position: relative;
   z-index: 1;
+  transition: all 0.9s ease;
   opacity: 0;
-  animation: slideOutLTR 0.9s linear;
+  transform: translateX(250px);
 }
-.pin-container.up .panel .step-info .step-info__text {
-  animation: slideOutRTL 0.9s linear;
+.panel.inactive .step-info .step-info__text {
+  transform: translateX(-250px) !important;
+  opacity: 0 !important;
 }
 .step-progress {
   width: 440px;
@@ -429,68 +431,18 @@ section {
 }
 .panel.active .step-info__text {
   z-index: 2;
-  animation: slideInLTR 0.9s linear;
+  transform: translateX(0px);
+  opacity: 1;
 }
 .pin-container.up .panel.active .step-info__text {
-  animation: slideInRTL 0.9s linear;
+  transform: translateX(0px);
+  opacity: 1;
 }
 .panel.active .step-progress {
   opacity: 1;
   z-index: 1;
 }
-/* For step text */
-@keyframes slideInLTR {
-  0% {
-    transform: translateX(-250px);
-    opacity: 0;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-@keyframes slideOutLTR {
-  0% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-  20% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(250px);
-  }
-}
-@keyframes slideOutRTL {
-  0% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-  20% {
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(-250px);
-    opacity: 0;
-  }
-}
-@keyframes slideInRTL {
-  0% {
-    transform: translateX(250px);
-    opacity: 0;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
+
 /* Active styles*/
 .step-one.start .step-animation .step-animation__tile,
 .step-one.start .step-animation > img {
@@ -560,10 +512,9 @@ section {
 
 /*------------[Positions slider]------------*/
 
-/* .slick-slider .item {
-	width: 160px !important;
-	height: 160px;
-} */
+.slick-slide .token {
+  max-width: 117px;
+}
 /* FOX */
 .undershadow {
   box-shadow: -1px 0 28px 0 rgba(172, 136, 136, 0.75);
@@ -573,7 +524,7 @@ body:not(.steps-active) #token-trigger.active .city-top {
   top: -1px;
 }
 body:not(.steps-active) #token-trigger.active .city-background {
-  top: 440px;
+  top: 550px;
 }
 #token-trigger.active #fade1 {
   transition: opacity 0.5s ease 1s;
