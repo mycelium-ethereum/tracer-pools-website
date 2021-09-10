@@ -104,6 +104,7 @@ const updateActiveStep = (progress) => {
   const slides = document.querySelectorAll("#pinMaster .panel");
   const firstSlide = slides[0];
   slides.forEach((e) => {
+    e.classList.remove("inactive");
     e.classList.remove("active");
   });
   firstSlide.classList.remove("stage-one");
@@ -137,9 +138,11 @@ const updateActiveStep = (progress) => {
     firstSlide.classList.add("stage-four");
   }
   // Remove "inactive" class from active slides
-  slides.forEach((e) => {
-    if (e.classList.contains("active")) {
-      e.classList.remove("inactive");
+  slides.forEach((e, i) => {
+    const nextSlide = slides[i + 1];
+      // Add inactive to the next slide
+    if (e.classList.contains("active") && !!nextSlide) {
+      nextSlide.classList.add("inactive")
     }
   });
 };
