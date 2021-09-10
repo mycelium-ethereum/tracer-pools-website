@@ -123,9 +123,9 @@ const updateActiveStep = (progress) => {
   // Remove "inactive" class from active slides
   slides.forEach((e, i) => {
     const nextSlide = slides[i + 1];
-      // Add inactive to the next slide
+    // Add inactive to the next slide
     if (e.classList.contains("active") && !!nextSlide) {
-      nextSlide.classList.add("inactive")
+      nextSlide.classList.add("inactive");
     }
   });
 };
@@ -158,18 +158,21 @@ const handleResize = () => {
   }
 };
 window.onload = function () {
-  if (!isMobile()) {
-    initialiseScrollMagic();
+  const title = document.title.split(" ")[0];
+  if (title == "Home") {
+    if (!isMobile()) {
+      initialiseScrollMagic();
+    }
+
+    $(window).stellar({ horizontalScrolling: false });
+    $(window).stellar("refresh");
+
+    // Disable ScrollMagic on resize and refresh Stellar.js
+    window.addEventListener("resize", function () {
+      this.setTimeout(function () {
+        $(window).stellar("refresh");
+        handleResize();
+      }, 250);
+    });
   }
-
-  $(window).stellar({ horizontalScrolling: false });
-  $(window).stellar("refresh");
-
-  // Disable ScrollMagic on resize and refresh Stellar.js
-  window.addEventListener("resize", function () {
-    this.setTimeout(function () {
-      $(window).stellar("refresh");
-      handleResize();
-    }, 250);
-  });
 };

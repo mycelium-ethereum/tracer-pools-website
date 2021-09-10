@@ -59,9 +59,7 @@ const Hero = () => {
             xmlns="http://www.w3.org/2000/svg"
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           >
-            <path
-              d="M1.84933 0.235229L7.69959 6.0855L13.5499 0.235229L15.3406 2.02597L7.6988 9.66775L0.0585938 2.02597L1.84933 0.235229Z"
-            />
+            <path d="M1.84933 0.235229L7.69959 6.0855L13.5499 0.235229L15.3406 2.02597L7.6988 9.66775L0.0585938 2.02597L1.84933 0.235229Z" />
           </svg>
         </AnchorLink>
       </section>
