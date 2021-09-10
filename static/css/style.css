@@ -342,12 +342,12 @@ section {
 .step-info .step-info__text {
   position: relative;
   z-index: 1;
-  transition: all 0.9s ease, opacity 0.3s ease;
+  transition: all 1.3s ease, opacity 0.3s ease;
   opacity: 0;
-  transform: translateX(-250px);
+  transform: translateX(250px);
 }
 .panel.inactive .step-info .step-info__text {
-  transform: translateX(250px) !important;
+  transform: translateX(-250px) !important;
   opacity: 0 !important;
 }
 .step-progress {
