@@ -15,7 +15,6 @@ const stepAnimation = () => {
     duration: "200%",
   })
     .setPin("#pinMaster")
-    .setClassToggle("body", "steps-active")
     .setTween(tl)
     .addTo(controller);
   return scene;
