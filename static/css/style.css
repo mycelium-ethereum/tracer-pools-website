@@ -342,7 +342,7 @@ section {
 .step-info .step-info__text {
   position: relative;
   z-index: 1;
-  transition: all 0.9s ease;
+  transition: all 0.9s ease, opacity 0.3s ease;
   opacity: 0;
   transform: translateX(-250px);
 }
