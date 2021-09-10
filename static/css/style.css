@@ -70,6 +70,9 @@
 .duration-1500 {
   transition-duration: 1.5s;
 }
+.w-screen {
+  width: 100vw !important;
+}
 .min-w-video {
   max-width: 1920px;
   width: 100%;
@@ -523,6 +526,9 @@ section {
 .slick-slide .token {
   max-width: 117px;
 }
+.slick-slide[tab-index="-1"] {
+  pointer-events: none;
+}
 
 /* FOX */
 .undershadow {
@@ -680,7 +686,7 @@ footer {
 }
 @media only screen and (max-width: 1536px) {
   /* Token Sliders */
-  .slick-initialized .slick-slide {
+  .token-slider .slick-initialized .slick-slide {
     width: 200px !important;
   }
   .large-spacer {

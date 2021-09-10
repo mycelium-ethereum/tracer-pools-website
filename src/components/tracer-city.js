@@ -78,7 +78,7 @@ const TracerCity = () => {
             <source src={TracerBuilding} type="video/mp4" />
           </video>
           <div
-            className="2xl:w-auto 2xl:mt-96 lg:mt-24 lg:pb-0 lg:w-1/3 lg:absolute lg:text-left xl:px-0 right-0 mx-auto px-4 force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
+            className="2xl:w-auto 2xl:mt-96 lg:mt-48 lg:pb-0 lg:w-1/3 lg:absolute lg:text-left xl:px-0 right-0 mx-auto px-4 force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
             data-stellar-ratio="1.4"
           >
             <span className="xl:text-5xl lg:text-4xl font-semibold text-base lg:mb-2 mb-0 text-white color-blue">

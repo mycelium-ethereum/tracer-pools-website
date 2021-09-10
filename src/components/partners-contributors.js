@@ -34,7 +34,7 @@ const PartnersContributors = () => {
     slider.current.slickGoTo(slideNo);
   };
   const settings = {
-    speed: 500,
+    speed: 300,
     autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
@@ -44,34 +44,36 @@ const PartnersContributors = () => {
     arrows: false,
     touchMove: true,
     swipeToSlide: false,
+    pauseOnFocus: true,
     pauseOnHover: true,
+    waitForAnimate: false,
     fade: true,
   };
   return (
     <>
-      <div className="h-full">
+      <div className="h-full w-screen">
         <Slider {...settings} ref={slider}>
-          <section className="panel relative w-full h-auto pt-12">
-            <div className="container mx-auto flex flex-col items-center justify-start">
+          <section className="panel relative w-screen h-auto pt-12">
+            <div className="container mx-auto flex flex-col items-center justify-start sm:px-0 px-4">
               <div className="justify-evenly sm:flex sm:text-left text-center block">
                 <button
                   data-slide="0"
                   onClick={(e) => goToSlide(e)}
-                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
+                  className="block mx-auto 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
                 >
                   Partners
                 </button>
                 <button
                   data-slide="1"
                   onClick={(e) => goToSlide(e)}
-                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                  className="block mx-auto 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
                 >
                   Ecosystem Contributors
                 </button>
                 <button
                   data-slide="2"
                   onClick={(e) => goToSlide(e)}
-                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                  className="block mx-auto 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
                 >
                   In the Media
                 </button>
@@ -120,27 +122,27 @@ const PartnersContributors = () => {
               </div>
             </div>
           </section>
-          <section className="panel relative w-full h-auto pt-12">
-            <div className="container mx-auto flex flex-col items-center justify-start">
+          <section className="panel relative w-screen h-auto pt-12">
+            <div className="container mx-auto flex flex-col items-center justify-start sm:px-0 px-4">
               <div className="justify-evenly sm:flex sm:text-left text-center block">
                 <button
                   data-slide="0"
                   onClick={(e) => goToSlide(e)}
-                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                  className="block mx-auto 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
                 >
                   Partners
                 </button>
                 <button
                   data-slide="1"
                   onClick={(e) => goToSlide(e)}
-                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue"
+                  className="block mx-auto 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
                 >
                   Ecosystem Contributors
                 </button>
                 <button
                   data-slide="2"
                   onClick={(e) => goToSlide(e)}
-                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                  className="block mx-auto 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
                 >
                   In the Media
                 </button>
@@ -173,36 +175,36 @@ const PartnersContributors = () => {
               </div>
             </div>
           </section>
-          <section className="panel relative w-full h-auto pt-12">
-            <div className="container mx-auto flex flex-col items-center justify-start">
+          <section className="panel relative w-screen h-auto pt-12">
+            <div className="container mx-auto flex flex-col items-center justify-start sm:px-0 px-4">
               <div className="justify-evenly sm:flex sm:text-left text-center block">
                 <button
                   data-slide="0"
                   onClick={(e) => goToSlide(e)}
-                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                  className="block mx-auto 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
                 >
                   Partners
                 </button>
                 <button
                   data-slide="1"
                   onClick={(e) => goToSlide(e)}
-                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                  className="block mx-auto 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
                 >
                   Ecosystem Contributors
                 </button>
                 <button
                   data-slide="2"
                   onClick={(e) => goToSlide(e)}
-                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue"
+                  className="block mx-auto 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
                 >
                   In the Media
                 </button>
               </div>
               <div className="h-auto w-full h-full flex flex-col justify-center lg:mt-0 sm:pb-24 mt-12 pb-12">
                 <div className="flex justify-center items-start 2xl:mt-10 xl:mt-3 lg:mt-8">
-                  <div className="flex flex-col justify-start items-center text-center w-96 mr-5 text-white">
+                  <div className="flex flex-col justify-start items-center text-center w-96 sm:mr-5 mr-3 text-white">
                     <img
-                      className="2xl:w-full xl:w-28 lg:w-52 w-full rounded-2xl"
+                      className="2xl:w-full xl:w-28 lg:w-52 sm:w-full w-32 rounded-2xl"
                       src={FinancialReview}
                     />
                     <p className="mb-4 mt-6 sm:text-xl text-lg">
@@ -217,9 +219,9 @@ const PartnersContributors = () => {
                       jobs in Australia to build it out.
                     </p>
                   </div>
-                  <div className="flex flex-col justify-start items-center text-center w-96 ml-5 text-white">
+                  <div className="flex flex-col justify-start items-center text-center w-96 sm:ml-5 ml-3 text-white">
                     <img
-                      className="2xl:w-full xl:w-28 lg:w-52 w-full rounded-2xl"
+                      className="2xl:w-full xl:w-28 lg:w-52 sm:w-full w-32 rounded-2xl"
                       src={CoinTelegraph}
                     />
                     <p className="mb-4 mt-6 sm:text-xl text-lg">
