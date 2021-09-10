@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-// import ScrollReveal from"scrollreveal";
 
 // Image assets
 import MobileSteps from "/static/img/home-page/steps/mobile-steps.png";
@@ -15,30 +14,6 @@ import BlueArrow from "/static/img/home-page/steps/blue-arrow.svg";
 import BlueSquare from "/static/img/home-page/steps/blue-square.png";
 
 const LeverageSteps = (direction) => {
-  var slideUp = {
-    duration: 500,
-    // origin:"bottom",
-    // distance:"100px",
-    // viewFactor: 0,
-    // viewOffset: {
-    //   top: 100,
-    // },
-  };
-  // useEffect(() => {
-  //   ScrollReveal().reveal("#mobile-steps div[data-step]", slideUp);
-  //   ScrollReveal().reveal("#mobile-steps div[data-step='1']", {`
-  //     delay: 200,
-  //   });
-  //   ScrollReveal().reveal("#mobile-steps div[data-step='2']", {
-  //     delay: 400,
-  //   });
-  //   ScrollReveal().reveal("#mobile-steps div[data-step='3']", {
-  //     delay: 600,
-  //   });
-  //   ScrollReveal().reveal("#mobile-steps div[data-step='4']", {
-  //     delay: 800,
-  //   });
-  // });
   return (
     <>
       <section id="pinMaster" className="pin-master z-10">

@@ -1,5 +1,5 @@
 import React from "react";
-import TokenSlider from "../components/slider";
+import TokenSlider from "../components/token-slider";
 import Button from "../components/button";
 
 // Images

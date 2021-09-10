@@ -786,7 +786,7 @@ footer {
     top: 0;
   }
   .city-background {
-    top: 200px;
+    top: 250px;
   }
   .large-spacer {
     height: 370px;
@@ -851,7 +851,7 @@ footer {
     top: 100px;
   }
   .city-background {
-    top: 200px;
+    top: 250px;
   }
 }
 @media only screen and (max-width: 479px) {

@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
-
-// Image assets
+import React, { useRef } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 // Partners
 import Framework from "/static/img/home-page/partners-contributors/partners/framework.svg";
@@ -26,78 +27,56 @@ import FinancialReview from "/static/img/home-page/partners-contributors/media/f
 import CoinTelegraph from "/static/img/home-page/partners-contributors/media/coin-telegraph.png";
 
 const PartnersContributors = () => {
-  const isMobile = () => {
-    const width = window.innerWidth;
-    return width < 1024;
+  const slider = useRef(0);
+  const goToSlide = (e) => {
+    const slideNo = e.target.dataset.slide;
+    console.log(slideNo);
+    slider.current.slickGoTo(slideNo);
   };
-  // Make the first slide active on resize
-  const toggleActiveStyles = () => {
-    const slides = document.querySelectorAll("#pinContainerPartners .panel");
-    if (isMobile()) {
-      slides[0].classList.add("active");
-      slides[1].classList.remove("active");
-      slides[2].classList.remove("active");
-    }
+  const settings = {
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: false,
+    touchMove: true,
+    swipeToSlide: false,
+    pauseOnHover: true,
+    fade: true,
   };
-  // Handle click on partner/contributor headings on mobile
-  const partnerClick = () => {
-    const sectionLinks = document.querySelectorAll("p[data-section-link]");
-    sectionLinks.forEach((link) => {
-      link.addEventListener("click", function (e) {
-        if (isMobile()) {
-          const target = e.target.dataset.sectionLink;
-          const slides = document.querySelectorAll("#pinMasterPartners .panel");
-          slides.forEach((e) => e.classList.remove("active"));
-          if (target == 0) {
-            slides[0].classList.add("active");
-          }
-          if (target == 1) {
-            slides[1].classList.add("active");
-          }
-          if (target == 2) {
-            slides[2].classList.add("active");
-          }
-        }
-      });
-    });
-  };
-  useEffect(() => {
-    toggleActiveStyles();
-    window.addEventListener("resize", function () {
-      toggleActiveStyles();
-    });
-    partnerClick();
-  }, []);
   return (
     <>
-      <section id="pinMasterPartners" className="pin-master">
-        <div
-          id="pinContainerPartners"
-          className="pin-container overflow-hidden"
-        >
-          <section className="panel lg:absolute relative top-0 left-0 w-full lg:h-screen h-auto partners flex flex-col justify-start opacity-0 z-0 transition-all ease-in-out linear duration-700 lg:pb-0 sm:pb-32">
-            <div className="flex container mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
+      <div className="h-full">
+        <Slider {...settings} ref={slider}>
+          <section className="panel relative w-full h-auto pt-12">
+            <div className="container mx-auto flex flex-col items-center justify-start">
               <div className="justify-evenly sm:flex sm:text-left text-center block">
-                <p
-                  data-section-link="0"
+                <button
+                  data-slide="0"
+                  onClick={(e) => goToSlide(e)}
                   className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
                 >
                   Partners
-                </p>
-                <p
-                  data-section-link="1"
-                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-bold 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                </button>
+                <button
+                  data-slide="1"
+                  onClick={(e) => goToSlide(e)}
+                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
                 >
                   Ecosystem Contributors
-                </p>
-                <p
-                  data-section-link="2"
-                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-bold 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                </button>
+                <button
+                  data-slide="2"
+                  onClick={(e) => goToSlide(e)}
+                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
                 >
                   In the Media
-                </p>
+                </button>
               </div>
-              <div className="h-auto w-full h-full flex flex-col justify-center lg:mt-0 sm:pb-24 sm:mt-20 mt-12 pb-20">
+              <div className="h-auto w-full h-full flex flex-col justify-center lg:mt-6">
                 <div className="flex w-full justify-center items-center 2xl:mt-10 xl:mt-3 lg:mt-8 mt-6">
                   <img
                     className="2xl:w-60 lg:w-48 lg:mr-12 sm:mr-8 sm:w-32 w-20 mr-5"
@@ -141,27 +120,30 @@ const PartnersContributors = () => {
               </div>
             </div>
           </section>
-          <section className="panel absolute top-0 left-0 w-full lg:h-screen h-auto contributors flex flex-col justify-start opacity-0 z-0 transition-all ease-in-out linear duration-700">
-            <div className="flex container mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32">
+          <section className="panel relative w-full h-auto pt-12">
+            <div className="container mx-auto flex flex-col items-center justify-start">
               <div className="justify-evenly sm:flex sm:text-left text-center block">
-                <p
-                  data-section-link="0"
-                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-bold 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                <button
+                  data-slide="0"
+                  onClick={(e) => goToSlide(e)}
+                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
                 >
                   Partners
-                </p>
-                <p
-                  data-section-link="1"
+                </button>
+                <button
+                  data-slide="1"
+                  onClick={(e) => goToSlide(e)}
                   className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue"
                 >
                   Ecosystem Contributors
-                </p>
-                <p
-                  data-section-link="2"
-                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-bold 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                </button>
+                <button
+                  data-slide="2"
+                  onClick={(e) => goToSlide(e)}
+                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
                 >
                   In the Media
-                </p>
+                </button>
               </div>
               <div className="h-auto w-full h-full flex flex-col justify-center lg:mt-0 sm:pb-24 xl:px-0 px-4 mt-20 pb-12">
                 <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center 2xl:mt-10 xl:mt-3 lg:mt-8">
@@ -191,27 +173,30 @@ const PartnersContributors = () => {
               </div>
             </div>
           </section>
-          <section className="panel absolute top-0 left-0 w-full lg:h-screen h-auto media flex flex-col justify-start opacity-0 z-0 transition-all ease-in-out linear duration-700">
-            <div className="flex container mx-auto flex flex-col items-center justify-start h-full 2xl:pt-48 lg:pt-32 sm:px-12 px-4">
+          <section className="panel relative w-full h-auto pt-12">
+            <div className="container mx-auto flex flex-col items-center justify-start">
               <div className="justify-evenly sm:flex sm:text-left text-center block">
-                <p
-                  data-section-link="0"
-                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-bold 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                <button
+                  data-slide="0"
+                  onClick={(e) => goToSlide(e)}
+                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
                 >
                   Partners
-                </p>
-                <p
-                  data-section-link="1"
-                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-bold 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                </button>
+                <button
+                  data-slide="1"
+                  onClick={(e) => goToSlide(e)}
+                  className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
                 >
                   Ecosystem Contributors
-                </p>
-                <p
-                  data-section-link="2"
+                </button>
+                <button
+                  data-slide="2"
+                  onClick={(e) => goToSlide(e)}
                   className="2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue"
                 >
                   In the Media
-                </p>
+                </button>
               </div>
               <div className="h-auto w-full h-full flex flex-col justify-center lg:mt-0 sm:pb-24 mt-12 pb-12">
                 <div className="flex justify-center items-start 2xl:mt-10 xl:mt-3 lg:mt-8">
@@ -250,8 +235,8 @@ const PartnersContributors = () => {
               </div>
             </div>
           </section>
-        </div>
-      </section>
+        </Slider>
+      </div>
     </>
   );
 };

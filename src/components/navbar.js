@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <nav
       id="nav"
-      className="fixed w-full z-50 transition ease-out duration-500"
+      className="fixed w-full z-50 transition ease-out duration-500 cursor-pointer"
       onMouseLeave={() => setDropdownOpen(false)}
     >
       <div className="container lg:h-24 h-20 flex justify-between items-center mx-auto xl:px-0 px-4">
