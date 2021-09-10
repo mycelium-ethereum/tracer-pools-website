@@ -4,15 +4,15 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 // Assets
-import CardanoToken from "/static/img/slider/cardano.png";
-import ChainlinkToken from "/static/img/slider/chainlink.png";
-import Bitcoin from "/static/img/slider/bitcoin.png";
-import EthereumToken from "/static/img/slider/ethereum.png";
-import BalancerToken from "/static/img/slider/balancer.png";
-import CompoundToken from "/static/img/slider/compound.png";
-import CurveDAOToken from "/static/img/slider/curve-dao.png";
-import YearnToken from "/static/img/slider/yearn.png";
-import SushiswapToken from "/static/img/slider/sushiswap.png";
+import CardanoToken from "/static/img/slider/cardano.svg";
+import ChainlinkToken from "/static/img/slider/chainlink.svg";
+import Bitcoin from "/static/img/slider/bitcoin.svg";
+import EthereumToken from "/static/img/slider/ethereum.svg";
+import BalancerToken from "/static/img/slider/balancer.svg";
+import CompoundToken from "/static/img/slider/compound.svg";
+import CurveDAOToken from "/static/img/slider/curve-dao.svg";
+import YearnToken from "/static/img/slider/yearn.svg";
+import SushiswapToken from "/static/img/slider/sushiswap.svg";
 import ShortPosition from "/static/img/slider/short-position.svg";
 import LongPosition from "/static/img/slider/long-position.svg";
 
@@ -101,6 +101,8 @@ const TokenSlider = ({ className }) => {
     focusOnSelect: false,
     pauseOnFocus: false,
     pauseOnHover: false,
+    lazyLoad: 'progressive',
+    fade: false,
     rtl: className.includes("slider-left") ? true : false,
     responsive: [
       {

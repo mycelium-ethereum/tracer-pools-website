@@ -17,7 +17,7 @@ import Apollo from "/static/img/home-page/partners-contributors/partners/apollo.
 // Contributors
 import Mycelium from "/static/img/home-page/partners-contributors/contributors/mycelium.svg";
 import Chainlink from "/static/img/home-page/partners-contributors/contributors/chainlink.svg";
-import SigmaPrime from "/static/img/home-page/partners-contributors/contributors/sigma-prime.png";
+import SigmaPrime from "/static/img/home-page/partners-contributors/contributors/sigma-prime.svg";
 import RMIT from "/static/img/home-page/partners-contributors/contributors/rmit.svg";
 import EPNS from "/static/img/home-page/partners-contributors/contributors/epns.svg";
 
