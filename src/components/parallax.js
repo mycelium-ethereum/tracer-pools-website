@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Parallax from "parallax-js";
 
 // Images
-import Banner from "/static/img/home-page/banner.png";
 import BlueSquare from "/static/img/home-page/background/blue-square.svg";
 import GreenArrow from "/static/img/home-page/background/green-arrow.svg";
 import BlueArrow from "/static/img/home-page/background/blue-arrow.svg";
@@ -17,13 +16,11 @@ const BackgroundParallax = () => {
     const scene2 = document.querySelector(".square-middle");
     new Parallax(scene);
     new Parallax(scene2);
-    // var parallaxInstance = new Parallax(scene);
   });
   return (
     <>
-      <div className="absolute left-0 w-full h-full z-10 pointer-events-none sm:top-0 -top-32">
+      <div className="absolute left-0 w-full xl:transform-none xl:left-0 lg:transform-gpu lg:scale-75 lg:left-1/2 lg:-translate-x-1/2 h-full z-10 pointer-events-none sm:top-0 -top-32">
         <div className="absolute tile-bg">
-          {/* <img className="w-screen" data-depth="0.1" src={Banner} alt="Banner" /> */}
           <div className="absolute square-middle z-30">
             <img
               className="absolute opacity-50 blue-square"

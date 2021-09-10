@@ -6,7 +6,6 @@ import Button from "../components/button";
 
 // Assets
 import TracerLaptop from "/static/img/home-page/laptop.png";
-import ArrowDown from "/static/img/general/arrow-down.svg";
 
 const Hero = () => {
   return (

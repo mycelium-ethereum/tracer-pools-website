@@ -765,6 +765,9 @@ footer {
       opacity: 1;
     }
   }
+  .large-spacer {
+    height: 450px;
+  }
 }
 @media only screen and (max-width: 1023px) {
   .panel.strategise-section {
