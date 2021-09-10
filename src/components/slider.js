@@ -4,15 +4,15 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 // Assets
-import CardanoToken from "/static/img/slider/cardano.svg";
-import ChainlinkToken from "/static/img/slider/chainlink.svg";
-import Bitcoin from "/static/img/slider/bitcoin.svg";
-import EthereumToken from "/static/img/slider/ethereum.svg";
-import BalancerToken from "/static/img/slider/balancer.svg";
-import CompoundToken from "/static/img/slider/compound.svg";
+import CardanoToken from "/static/img/slider/cardano.png";
+import ChainlinkToken from "/static/img/slider/chainlink.png";
+import Bitcoin from "/static/img/slider/bitcoin.png";
+import EthereumToken from "/static/img/slider/ethereum.png";
+import BalancerToken from "/static/img/slider/balancer.png";
+import CompoundToken from "/static/img/slider/compound.png";
 import CurveDAOToken from "/static/img/slider/curve-dao.png";
-import YearnToken from "/static/img/slider/yearn.svg";
-import SushiswapToken from "/static/img/slider/sushiswap.svg";
+import YearnToken from "/static/img/slider/yearn.png";
+import SushiswapToken from "/static/img/slider/sushiswap.png";
 import ShortPosition from "/static/img/slider/short-position.svg";
 import LongPosition from "/static/img/slider/long-position.svg";
 
@@ -56,16 +56,16 @@ const TokenSlider = ({ className }) => {
     for (var i = 0; i < totalSlides; i++) {
       generatedSlides.push(
         <div className="item flex items-start" key={i}>
-          <div className="relative">
+          <div className="relative mx-auto w-min">
             <img
-              className="token mx-auto"
+              className="token"
               src={tokenImages[i]}
               alt={Object.keys(tokenImages[i])[0].toString()}
             />
             <img
               className={
                 "trend absolute bottom-0 w-8 h-8 " +
-                (className.includes("slider-left") ? "lg:left-5 left-9" : "lg:right-5 right-9")
+                (className.includes("slider-left") ? "left-0" : "right-0")
               }
               src={
                 className.includes("slider-left") ? ShortPosition : LongPosition
@@ -96,6 +96,7 @@ const TokenSlider = ({ className }) => {
     slidesToScroll: 1,
     infinite: true,
     arrows: false,
+    touchMove: false,
     swipeToSlide: false,
     focusOnSelect: false,
     pauseOnFocus: false,
@@ -111,14 +112,12 @@ const TokenSlider = ({ className }) => {
       {
         breakpoint: 750,
         settings: {
-          slidesToShow: 3,
           speed: 1500,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
           speed: 1500,
         },
       },

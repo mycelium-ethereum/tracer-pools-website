@@ -511,10 +511,13 @@ section {
 }
 
 /*------------[Positions slider]------------*/
-
+.slick-slider {
+  transform: translateZ(0);
+}
 .slick-slide .token {
   max-width: 117px;
 }
+
 /* FOX */
 .undershadow {
   box-shadow: -1px 0 28px 0 rgba(172, 136, 136, 0.75);

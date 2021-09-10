@@ -37,7 +37,7 @@ const TracerCity = () => {
             loop="loop"
             autoPlay
             playsInline
-            className="min-w-video absolute top-1/2 sm:opacity-0 left-1/2 transform-gpu -translate-y-1/2 -translate-x-1/2 transition-opacity duration-1000 lg:block hidden"
+            className="min-w-video absolute top-1/2 sm:opacity-0 -right-24 transform-gpu -translate-y-1/2 transition-opacity duration-1000 lg:block hidden"
           >
             <source src={TracerCityVideo} type="video/mp4" />
           </video>
@@ -73,7 +73,7 @@ const TracerCity = () => {
             autoPlay
             playsInline
             id="tracer-building"
-            className="min-w-video absolute top-1/2 left-0 transform-gpu -translate-y-1/2 transition-opacity duration-1000 sm:block sm:opacity-0 transition-opacity duration-1000 hidden"
+            className="min-w-video absolute top-1/2 right-0 transform-gpu -translate-y-1/2 transition-opacity duration-1000 sm:block sm:opacity-0 transition-opacity duration-1000 hidden"
           >
             <source src={TracerBuilding} type="video/mp4" />
           </video>
