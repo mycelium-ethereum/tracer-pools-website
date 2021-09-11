@@ -84,6 +84,9 @@
   min-height: 100%;
   clip-path: inset(1px 1px);
 }
+.max-w-blog {
+  max-width: 800px;
+}
 .h-fit {
   height: fit-content;
 }

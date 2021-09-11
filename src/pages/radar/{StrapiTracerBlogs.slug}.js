@@ -59,7 +59,6 @@ class BlogPostTemplate extends Component {
   render() {
     return (
       <>
-        {console.log(this.props.data)}
         <SEO title="Blog Posts" />
         <BackgroundParallax fixed />
         <Layout>

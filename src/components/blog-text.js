@@ -10,15 +10,48 @@ import DOMPurify from "dompurify";
 
 const BlogText = ({ data }) => {
   const bodyText = useRef();
-  useEffect(() => {
+  const setBodyText = () => {
     const bodyTextHTML = marked(DOMPurify.sanitize(data.body_text));
     bodyText.current.innerHTML = bodyTextHTML;
+  };
+  const applyStyles = (e) => {
+    if (e.tagName === "P") {
+      e.setAttribute("class", "text-sm mb-4");
+    }
+    if (e.tagName === "OL") {
+      e.setAttribute("class", "text-sm list-decimal list-outside pl-4 mb-4");
+    }
+    if (e.tagName === "UL") {
+      e.setAttribute("class", "text-sm list-disc list-outside pl-4 mb-4");
+    }
+    if (e.tagName === "A") {
+      e.setAttribute("class", "text-blue-500");
+    }
+    if (e.tagName === "H2") {
+      e.setAttribute("class", "text-black text-xl mt-8 mb-4 font-semibold");
+    }
+  };
+  const getTags = () => {
+    const childElements = bodyText.current.childNodes;
+    childElements.forEach((e) => {
+      const nestedChildren = e.childNodes;
+      applyStyles(e);
+      if (!!nestedChildren) {
+        nestedChildren.forEach((e) => {
+          applyStyles(e);
+        });
+      }
+    });
+  };
+  useEffect(() => {
+    setBodyText();
+    getTags();
   }, []);
   return (
     <>
       <section className="h-full w-full z-20 relative mt-16 bg-white">
         <div className="container relative w-full mx-auto pt-6 pb-6 lg:px-0 px-4">
-          <div className="flex justify-between md:flex-row flex-col md:mb-32 mb-12">
+          <div className="flex justify-between md:flex-row flex-col lg:mb-32 md:md-20 mb-12">
             <div className="flex items-center text-gray-400">
               <Link to="/">
                 <img className="w-4.5 h-4.5" src={Home} />
@@ -41,7 +74,7 @@ const BlogText = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="w-full">
+          <div className="max-w-blog mx-auto">
             <h1 className=" text-black font-semibold mb-2 md:text-3xl text-2xl sm:text-center">
               {data.title}
             </h1>
@@ -49,9 +82,7 @@ const BlogText = ({ data }) => {
             <small className="block font-normal text-gray-500 sm:text-center sm:text-xl text-base">
               {data.tagline}
             </small>
-            <div ref={bodyText} className="mt-12">
-          
-            </div>
+            <div ref={bodyText} className="mt-12"></div>
           </div>
         </div>
       </section>
