@@ -111,7 +111,7 @@ const PrivacyText = () => {
             </div>
           </aside>
           <div
-            className="col-start-5 col-span-7 md:pr-0 pr-9 text-gray-500 md:mt-0 mt-4 md:"
+            className="lg:col-start-4 lg:col-span-9 md:col-start-5 md:col-span-8 md:pr-0 pr-9 text-gray-500 md:mt-0 mt-4"
             onClick={() => {
               setProtocolDropdownOpen(false);
               setWebsiteDropdownOpen(false);
