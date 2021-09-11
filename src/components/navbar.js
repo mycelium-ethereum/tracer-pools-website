@@ -17,7 +17,6 @@ const Navbar = () => {
   };
   const setSolidNav = () => {
     const scrollHeight = document.documentElement.scrollTop;
-    const navbar = document.getElementById("nav");
     const mobile = isMobile();
     if (scrollHeight > 50 || mobile) {
       setTransparentNav(false);
@@ -53,7 +52,7 @@ const Navbar = () => {
           className="relative flex"
           onMouseEnter={() => setDropdownOpen(true)}
         >
-          <Link onClick={() => setTransparentNav(false)} to="/">
+          <Link to="/">
             <img
               className="sm:w-24 w-22 h-auto"
               src={TracerLogo}
@@ -74,34 +73,34 @@ const Navbar = () => {
                 : "pointer-events-none opacity-0")
             }
           >
-            <Link onClick={() => setTransparentNav(false)} to="/perpetuals">
+            <Link to="/perpetuals">
               <span className="block text-white font-normal mb-4">
                 Perpetuals
               </span>
             </Link>
-            <Link onClick={() => setTransparentNav(false)} to="/govern">
+            <Link to="/govern">
               <span className="block text-white font-normal mb-4">
                 Governance
               </span>
             </Link>
-            <Link onClick={() => setTransparentNav(false)} to="/radar">
+            <Link to="/radar">
               <span className="block text-white font-normal">Blog</span>
             </Link>
           </div>
         </div>
         <div className="hidden sm:flex items-center">
           <div className="mr-7">
-            <Link onClick={() => setTransparentNav(false)} to="/learn">
+            <Link to="/learn">
               <span className="text-white font-normal">Learn</span>
             </Link>
           </div>
           <div className="mr-7">
-            <Link onClick={() => setTransparentNav(false)} to="/radar">
+            <Link to="/radar">
               <span className="text-white font-normal">Radar</span>
             </Link>
           </div>
           <div className="mr-7">
-            <Link onClick={() => setTransparentNav(false)} to="/govern">
+            <Link to="/govern">
               <span className="text-white font-normal">Govern</span>
             </Link>
           </div>
@@ -135,7 +134,7 @@ const Navbar = () => {
         </button>
         <div className="flex flex-col justify-center w-60 mx-auto text-center pt-12">
           <div className="mt-6 w-full">
-            <Link onClick={() => setTransparentNav(false)} to="/learn">
+            <Link to="/learn">
               <span className="text-white font-normal text-lg">Learn</span>
             </Link>
           </div>
@@ -148,17 +147,17 @@ const Navbar = () => {
             </Button>
           </div>
           <div className="mt-6 w-full">
-            <Link onClick={() => setTransparentNav(false)} to="/perpetuals">
+            <Link to="/perpetuals">
               <span className="text-white font-normal text-lg">Perpetuals</span>
             </Link>
           </div>
           <div className="mt-6 w-full">
-            <Link onClick={() => setTransparentNav(false)} to="/govern">
+            <Link to="/govern">
               <span className="text-white font-normal text-lg">Govern</span>
             </Link>
           </div>
           <div className="mt-6 w-full">
-            <Link onClick={() => setTransparentNav(false)} to="/radar">
+            <Link to="/radar">
               <span className="text-white font-normal text-lg">Blog</span>
             </Link>
           </div>

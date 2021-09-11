@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+/* eslint-disable */
+import React from "react";
 
 // Image assets
 import MobileSteps from "/static/img/home-page/steps/mobile-steps.png";
