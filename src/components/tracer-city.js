@@ -5,12 +5,12 @@ import Button from "../components/button";
 import GlowButton from "../components/glow-button";
 
 // Image assets
-import TracerCityVideo from "/static/img/home-page/city/tracer-city.webm";
-import TracerCityMobileVideo from "/static/img/home-page/city/tracer-city-mobile.mp4";
-import TracerBuildingImage from "/static/img/home-page/city/tracer-building.png";
-import TracerBuilding from "/static/img/home-page/city/tracer-building.mp4";
+import TracerCityVideoWEBM from "/static/img/home-page/city/tracer-city.webm";
+// import TracerCityVideoMP4 from "/static/img/home-page/city/tracer-city.mp4";
+import TracerBuildingWEBM from "/static/img/home-page/city/tracer-building.webm";
+import TracerBuildingMP4 from "/static/img/home-page/city/tracer-building.mp4";
 import MeshSmall from "/static/img/home-page/city/mesh-small.png";
-import MeshLarge from "/static/img/home-page/city/background-3d-large.png";
+import MeshLarge from "/static/img/home-page/city/mesh-large.svg";
 import CityBottom from "/static/img/home-page/city/city-bottom.png";
 
 const TracerCity = () => {
@@ -38,23 +38,13 @@ const TracerCity = () => {
             loop="loop"
             autoPlay
             playsInline
-            className="min-w-video absolute top-1/2 sm:opacity-0 xl:-right-24 lg:-right-12 transform-gpu -translate-y-1/2 transition-opacity duration-1000 lg:block hidden"
+            className="opacity-0 transition-opacity duration-700 h-full w-full lg:w-1/2 lg:static lg:transform-none lg:left-none transform-gpu scale-110 relative -left-2"
           >
-            <source src={TracerCityVideo} type="video/mp4" />
+            <source src={TracerCityVideoWEBM} type="video/mp4" />
           </video>
         </div>
-        {/* Mobile video - full width */}
-        <video
-          muted
-          loop="loop"
-          autoPlay
-          playsInline
-          className="min-w-video transition-opacity duration-1000 lg:hidden block relative z-10"
-        >
-          <source src={TracerCityMobileVideo} type="video/mp4" />
-        </video>
         <img
-          className="absolute w-full h-full left-2/4 transform-gpu opacity-50 -translate-x-1/2 bottom-0 z-0 block"
+          className="absolute w-full h-full left-2/4 transform-gpu opacity-50 -translate-x-1/2 bottom-0 z-0 block min-w-max"
           src={MeshSmall}
         />
       </section>
@@ -63,24 +53,16 @@ const TracerCity = () => {
         className="panel w-full lg:h-screen h-auto staking-section flex lg:items-center relative items-start lg:pt-0 xl:pb-12 pt-24 bg-blue z-10"
       >
         <div className="container flex justify-between mx-auto w-full h-full xl:px-0 px-4 lg:flex-row flex-col-reverse relative z-10">
-          {/* Mobile image - full width */}
-          <div className="xl:h-screen sm:w-auto w-full h-auto z-0 items-center justify-center flex">
-            <img
-              className="sm:w-96 w-full lg:hidden block"
-              src={TracerBuildingImage}
-              alt="Tracer Building"
-            />
-          </div>
-          {/* Desktop building video */}
           <video
             muted
             loop="loop"
             autoPlay
             playsInline
             id="tracer-building"
-            className="min-w-video absolute top-1/2 right-0 transform-gpu -translate-y-1/2 transition-opacity duration-1000 sm:block sm:opacity-0 hidden"
+            className="opacity-0 transition-opacity duration-700 h-full w-full lg:w-1/2 lg:static lg:transform-none lg:left-none transform-gpu relative lg:scale-150 scale-125 lg:my-0 my-12"
           >
-            <source src={TracerBuilding} type="video/mp4" />
+            <source src={TracerBuildingWEBM} type="video/webm" />
+            <source src={TracerBuildingMP4} type="video/mp4" />
           </video>
           <div
             className="2xl:w-auto 2xl:mt-96 lg:mt-48 lg:pb-0 lg:w-1/3 lg:absolute lg:text-left xl:px-0 right-0 mx-auto px-4 force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
@@ -104,7 +86,7 @@ const TracerCity = () => {
           </div>
         </div>
         <img
-          className="absolute w-full h-3/4 left-2/4 transform-gpu -translate-x-1/2 bottom-0 z-0 lg:hidden block"
+          className="absolute opacity-30 w-auto h-full top-1/2 transform -translate-y-1/2 left-0 z-0 min-w-max"
           src={MeshLarge}
         />
       </section>

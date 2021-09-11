@@ -149,7 +149,7 @@ function initialiseScrollMagic() {
 }
 function handleResize() {
   this.setTimeout(function () {
-    $(window).stellar("refresh");
+    $.stellar("refresh");
     var newSize = !isMobile() ? "big" : "small";
     if (newSize != size) {
       size = newSize;
@@ -176,7 +176,7 @@ function initialiseElements() {
     // Disable ScrollMagic on resize and refresh Stellar.js
     window.addEventListener("resize", handleResize);
   } else {
-    if (!!controller) {
+    if (controller) {
       controller.destroy(true);
     }
     $.stellar("destroy");

@@ -54,7 +54,7 @@ const PartnersContributors = () => {
       <div className="h-full w-screen">
         <Slider {...settings} ref={slider}>
           <section className="panel relative w-screen h-auto pt-12">
-            <div className="container mx-auto flex flex-col items-center justify-start md:px-0 px-4">
+            <div className="container mx-auto flex flex-col items-center justify-start lg:px-0 px-4">
               <div className="justify-evenly sm:flex sm:text-left text-center block">
                 <button
                   data-slide="0"
@@ -113,17 +113,14 @@ const PartnersContributors = () => {
                     className="lg:w-32 lg:mr-12 sm:w-24 sm:mr-8 w-12 mr-3"
                     src={EfficientFrontier}
                   />
-                  <img
-                    className="lg:w-20 lg:mr-12 sm:w-12 w-7 mr-3"
-                    src={B}
-                  />
+                  <img className="lg:w-20 lg:mr-12 sm:w-12 w-7 mr-3" src={B} />
                   <img className="lg:w-40 sm:w-24 w-12" src={Apollo} />
                 </div>
               </div>
             </div>
           </section>
           <section className="panel relative w-screen h-auto pt-12">
-            <div className="container mx-auto flex flex-col items-center justify-start md:px-0 px-4">
+            <div className="container mx-auto flex flex-col items-center justify-start lg:px-0 px-4">
               <div className="justify-evenly sm:flex sm:text-left text-center block">
                 <button
                   data-slide="0"
@@ -176,7 +173,7 @@ const PartnersContributors = () => {
             </div>
           </section>
           <section className="panel relative w-screen h-auto pt-12">
-            <div className="container mx-auto flex flex-col items-center justify-start md:px-0 px-4">
+            <div className="container mx-auto flex flex-col items-center justify-start lg:px-0 px-4">
               <div className="justify-evenly sm:flex sm:text-left text-center block">
                 <button
                   data-slide="0"
@@ -202,7 +199,12 @@ const PartnersContributors = () => {
               </div>
               <div className="w-full flex flex-col justify-center lg:mt-0 sm:pb-24 mt-12 pb-12">
                 <div className="flex justify-center items-start 2xl:mt-10 xl:mt-3 lg:mt-8">
-                  <div className="flex flex-col justify-start items-center text-center w-96 sm:mr-5 mr-3 text-white">
+                  <a
+                    href="https://www.afr.com/companies/financial-services/meet-the-defi-developers-who-ve-raised-funds-for-a-derivatives-system-20210628-p5850t"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex flex-col justify-start items-center text-center w-96 sm:mr-5 mr-3 text-white"
+                  >
                     <img
                       className="2xl:w-full xl:w-28 lg:w-52 sm:w-full w-32 rounded-2xl"
                       src={FinancialReview}
@@ -218,8 +220,13 @@ const PartnersContributors = () => {
                       decentralised finance and its local developer is creating
                       jobs in Australia to build it out.
                     </p>
-                  </div>
-                  <div className="flex flex-col justify-start items-center text-center w-96 sm:ml-5 ml-3 text-white">
+                  </a>
+                  <a
+                    href="https://cointelegraph.com/news/tracer-dao-raises-4-5m-to-launch-derivatives-for-anything-with-an-oracle-feed"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex flex-col justify-start items-center text-center w-96 sm:ml-5 ml-3 text-white"
+                  >
                     <img
                       className="2xl:w-full xl:w-28 lg:w-52 sm:w-full w-32 rounded-2xl"
                       src={CoinTelegraph}
@@ -232,7 +239,7 @@ const PartnersContributors = () => {
                       announced a successful $4.5 million fundraising round to
                       expand its team and product suite.
                     </p>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>

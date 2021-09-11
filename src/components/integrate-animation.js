@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 
 // Image assets
-import Tile from "/static/img/home-page/integrate/tile.svg";
+import Base from "/static/img/home-page/integrate/base.png";
 import LayerOne from "/static/img/home-page/integrate/layer-1.svg";
 import LayerTwo from "/static/img/home-page/integrate/layer-2.svg";
 import LayerThree from "/static/img/home-page/integrate/layer-3-square.svg";
@@ -15,19 +15,26 @@ const IntegrateAnimation = () => {
     return width < 1024;
   };
   const toggleActiveStyles = () => {
-    if (isMobile()) {
-      setIsActive(true);
-    }
+    setTimeout(function () {
+      if (isMobile()) {
+        setIsActive(true);
+      }
+    }, 250);
   };
   useEffect(() => {
     toggleActiveStyles();
     window.addEventListener("resize", toggleActiveStyles());
-    return function() {
+    return function () {
       window.removeEventListener("resize", toggleActiveStyles());
     };
   }, []);
   return (
-    <section className={"integrate-section flex sm:items-center items-start sm:h-screen h-auto " + (isActive ? "active" : "")}>
+    <section
+      className={
+        "integrate-section flex sm:items-center items-start sm:h-screen h-auto " +
+        (isActive ? "active" : "")
+      }
+    >
       <div className="flex h-full w-full container mx-auto relative items-center lg:flex-row lg:pb-0 lg:justify-end justify-center xl:px-0 sm:pb-0 pb-96 flex-col px-4">
         <div
           className="force-flex lg:absolute xl:left-0 left-4 lg:mt-48 lg:justify-start lg:flex-row justify-center flex-col mx-auto z-10"
@@ -44,7 +51,7 @@ const IntegrateAnimation = () => {
           </div>
         </div>
         <div className="w-2/5 integrate-animation 2xl:scale-75 absolute 2xl:-right-48 transform-gpu 2xl:top-0 xl:top-4 lg:scale-50 lg:-right-24 sm:relative sm:scale-50 sm:-right-64 sm:bottom-24 -right-28 -bottom-64">
-          <img className="integrate-animation__tile lg:opacity-0" src={Tile} />
+          <img className="integrate-animation__tile lg:opacity-0" src={Base} />
           <img
             className="integrate-animation__layerone lg:opacity-0"
             src={LayerOne}
