@@ -26,7 +26,6 @@ const Layout = ({ children }) => {
         }}
       >
         {children}
-        <Scripts />
       </motion.main>
       <Footer />
       <Scripts />

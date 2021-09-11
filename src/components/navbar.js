@@ -8,6 +8,9 @@ import MenuIcon from "../../static/img/general/menu.svg";
 import MenuCloseIcon from "../../static/img/general/menu-close.svg";
 
 const Navbar = () => {
+  const [transparentNav, setTransparentNav] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const isMobile = () => {
     const width = window.innerWidth;
     return width < 1024;
@@ -17,13 +20,11 @@ const Navbar = () => {
     const navbar = document.getElementById("nav");
     const mobile = isMobile();
     if (scrollHeight > 50 || mobile) {
-      navbar.style.backgroundColor = "#011772";
+      setTransparentNav(false);
     } else if (!mobile && scrollHeight < 50) {
-      navbar.style.backgroundColor = "transparent";
+      setTransparentNav(true);
     }
   };
-  const [navOpen, setNavOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     setSolidNav();
@@ -41,7 +42,10 @@ const Navbar = () => {
   return (
     <nav
       id="nav"
-      className="fixed top-0 left-0 w-full z-50 transition ease-out duration-500 cursor-pointer"
+      className={
+        "fixed top-0 left-0 w-full z-50 transition-colors duration-300 cursor-pointer " +
+        (transparentNav ? "bg-transparent" : "bg-navblue")
+      }
       onMouseLeave={() => setDropdownOpen(false)}
     >
       <div className="container lg:h-24 h-20 flex justify-between items-center mx-auto xl:px-0 px-4">
@@ -49,7 +53,7 @@ const Navbar = () => {
           className="relative flex"
           onMouseEnter={() => setDropdownOpen(true)}
         >
-          <Link to="/">
+          <Link onClick={() => setTransparentNav(false)} to="/">
             <img
               className="sm:w-24 w-22 h-auto"
               src={TracerLogo}
@@ -70,34 +74,34 @@ const Navbar = () => {
                 : "pointer-events-none opacity-0")
             }
           >
-            <Link to="/perpetuals">
+            <Link onClick={() => setTransparentNav(false)} to="/perpetuals">
               <span className="block text-white font-normal mb-4">
                 Perpetuals
               </span>
             </Link>
-            <Link to="/govern">
+            <Link onClick={() => setTransparentNav(false)} to="/govern">
               <span className="block text-white font-normal mb-4">
                 Governance
               </span>
             </Link>
-            <Link to="/radar">
+            <Link onClick={() => setTransparentNav(false)} to="/radar">
               <span className="block text-white font-normal">Blog</span>
             </Link>
           </div>
         </div>
         <div className="hidden sm:flex items-center">
           <div className="mr-7">
-            <Link to="/learn">
+            <Link onClick={() => setTransparentNav(false)} to="/learn">
               <span className="text-white font-normal">Learn</span>
             </Link>
           </div>
           <div className="mr-7">
-            <Link to="/radar">
+            <Link onClick={() => setTransparentNav(false)} to="/radar">
               <span className="text-white font-normal">Radar</span>
             </Link>
           </div>
           <div className="mr-7">
-            <Link to="/govern">
+            <Link onClick={() => setTransparentNav(false)} to="/govern">
               <span className="text-white font-normal">Govern</span>
             </Link>
           </div>
@@ -119,7 +123,7 @@ const Navbar = () => {
       </div>
       <menu
         className={
-          " fixed transition-all duration-700 h-screen w-full background-tracerblue top-0 left-0 mt-0 pl-0" +
+          " fixed transition-all duration-700 h-screen w-full bg-tracerblue top-0 left-0 mt-0 pl-0" +
           (navOpen ? " left-0" : " left-full")
         }
       >
@@ -131,7 +135,7 @@ const Navbar = () => {
         </button>
         <div className="flex flex-col justify-center w-60 mx-auto text-center pt-12">
           <div className="mt-6 w-full">
-            <Link to="/learn">
+            <Link onClick={() => setTransparentNav(false)} to="/learn">
               <span className="text-white font-normal text-lg">Learn</span>
             </Link>
           </div>
@@ -144,17 +148,17 @@ const Navbar = () => {
             </Button>
           </div>
           <div className="mt-6 w-full">
-            <Link to="/perpetuals">
+            <Link onClick={() => setTransparentNav(false)} to="/perpetuals">
               <span className="text-white font-normal text-lg">Perpetuals</span>
             </Link>
           </div>
           <div className="mt-6 w-full">
-            <Link to="/govern">
+            <Link onClick={() => setTransparentNav(false)} to="/govern">
               <span className="text-white font-normal text-lg">Govern</span>
             </Link>
           </div>
           <div className="mt-6 w-full">
-            <Link to="/radar">
+            <Link onClick={() => setTransparentNav(false)} to="/radar">
               <span className="text-white font-normal text-lg">Blog</span>
             </Link>
           </div>

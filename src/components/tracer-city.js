@@ -17,7 +17,7 @@ const TracerCity = () => {
     <>
       <section
         id="city-trigger"
-        className="panel w-full staking-section flex lg:items-center lg:flex-row flex-col relative items-start xl:pb-0 lg:pb-48 background-blue overflow-hidden z-10"
+        className="panel w-full staking-section flex lg:items-center lg:flex-row flex-col relative items-start xl:pb-0 lg:pb-48 bg-blue overflow-hidden z-10"
       >
         <div className="container flex lg:h-screen w-full  lg:flex-row lg:pt-0 xl:px-0 px-4 h-auto lg:justify-end mx-auto flex-col justify-start relative">
           <div
@@ -55,7 +55,7 @@ const TracerCity = () => {
       </section>
       <section
         id="building-trigger"
-        className="panel w-full lg:h-screen h-auto staking-section flex lg:items-center relative items-start lg:pt-0 xl:pb-12 pt-24 background-blue z-10"
+        className="panel w-full lg:h-screen h-auto staking-section flex lg:items-center relative items-start lg:pt-0 xl:pb-12 pt-24 bg-blue z-10"
       >
         <div className="container flex justify-between mx-auto w-full h-full xl:px-0 px-4 lg:flex-row flex-col-reverse relative z-10">
           {/* Mobile image - full width */}

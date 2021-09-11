@@ -38,8 +38,8 @@ const BlogPosts = ({ data }) => {
               <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
                 {data.allStrapiTracerBlogs.edges
                   .sort((a, b) => (new Date(a.node.publish_date) > new Date(b.node.publish_date) ? -1 : 1))
-                  .map((node) => (
-                    <BlogPost data={node} />
+                  .map((node, i) => (
+                    <BlogPost data={node} key={i}/>
                   ))}
               </div>
             )}

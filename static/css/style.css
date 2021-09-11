@@ -7,7 +7,7 @@
   --navblue: #011772;
   --midblue: #0d2bd3;
   --grey: #e6e6e6;
-  --orange: #F89D35;
+  --orange: #8b6d4a;
   --white: #ffffff;
   --black: #000000;
   --lightgrey: #D1D5DB;
@@ -50,14 +50,17 @@
   -webkit-text-fill-color: transparent;
   line-height: normal;
 }
-.background-blue {
+.bg-blue {
   background: var(--midblue);
 }
-.background-darkblue {
+.bg-darkblue {
   background: var(--darkblue);
 }
-.background-tracerblue {
+.bg-tracerblue {
   background: var(--tracerblue);
+}
+.bg-navblue {
+  background: var(--navblue);
 }
 .bg-grey {
   background: var(--grey);

@@ -19,19 +19,19 @@ const LeverageSteps = (direction) => {
       <section id="pinMaster" className="pin-master z-10">
         <div
           id="pinContainer"
-          className={"pin-container background-blue z-10 " + direction.direction}
+          className={"pin-container bg-blue z-10 " + direction.direction}
         >
           <section className="panel lg:absolute top-0 left-0 step-one flex flex-col lg:justify-center justify-start w-full h-full lg:pointer-events-none pointer-events-auto">
             <div className="flex container mx-auto w-full lg:flex-row flex-col items-center h-auto lg:pt-48 xl:px-0 px-4">
               <div className="step-info xl:pb-0 lg:pb-32 lg:w-2/4 w-full lg:text-left text-center relative">
-                <small className="2xl:text-3xl lg:text-2xl color-blue text-3xl font-bold background-blue">
+                <small className="2xl:text-3xl lg:text-2xl color-blue text-3xl font-bold bg-blue">
                   Perpetual Pools
                 </small>
-                <h1 id="steps" className="2xl:text-6xl text-white lg:text-5xl text-4xl font-bold background-blue lg:mt-4 mt-2 lg:mb-10 mb-6">
+                <h1 id="steps" className="2xl:text-6xl text-white lg:text-5xl text-4xl font-bold bg-blue lg:mt-4 mt-2 lg:mb-10 mb-6">
                   Leveraged exposure in four steps
                 </h1>
                 <div className="step-info__text items-center lg:flex hidden">
-                  <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold background-blue">
+                  <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold bg-blue">
                     01
                   </span>
                   <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
@@ -143,14 +143,14 @@ const LeverageSteps = (direction) => {
           <section className="panel absolute top-0 left-0 w-full h-full step-two flex-col justify-center lg:pointer-events-none pointer-events-auto lg:block hidden">
             <div className="flex container mx-auto items-center h-full lg:pt-48 xl:px-0 px-4">
               <div className="w-2/4 step-info xl:pb-0 lg:pb-32 relative">
-                <small className="2xl:text-3xl lg:text-2xl color-blue font-bold background-blue">
+                <small className="2xl:text-3xl lg:text-2xl color-blue font-bold bg-blue">
                   Perpetual Pools
                 </small>
-                <h1 className="2xl:text-6xl text-white lg:text-5xl font-bold background-blue mt-4 mb-10">
+                <h1 className="2xl:text-6xl text-white lg:text-5xl font-bold bg-blue mt-4 mb-10">
                   Leveraged exposure in four steps
                 </h1>
                 <div className="step-info__text flex items-center">
-                  <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold background-blue">
+                  <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold bg-blue">
                     02
                   </span>
                   <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
@@ -171,14 +171,14 @@ const LeverageSteps = (direction) => {
           <section className="panel absolute top-0 left-0 w-full h-full step-three flex-col justify-center lg:pointer-events-none pointer-events-auto lg:block hidden">
             <div className="flex container mx-auto items-center h-full lg:pt-48 xl:px-0 px-4">
               <div className="w-2/4 step-info xl:pb-0 lg:pb-32 relative">
-                <small className="2xl:text-3xl lg:text-2xl color-blue font-bold background-blue">
+                <small className="2xl:text-3xl lg:text-2xl color-blue font-bold bg-blue">
                   Perpetual Pools
                 </small>
-                <h1 className="2xl:text-6xl text-white lg:text-5xl font-bold background-blue mt-4 mb-10">
+                <h1 className="2xl:text-6xl text-white lg:text-5xl font-bold bg-blue mt-4 mb-10">
                   Leveraged exposure in four steps
                 </h1>
                 <div className="step-info__text flex items-center">
-                  <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold background-blue">
+                  <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold bg-blue">
                     03
                   </span>
                   <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
@@ -199,14 +199,14 @@ const LeverageSteps = (direction) => {
           <section className="panel absolute top-0 left-0 w-full h-full step-four flex-col justify-center lg:pointer-events-none pointer-events-auto lg:block hidden">
             <div className="flex container mx-auto items-center h-full lg:pt-48 xl:px-0 px-4">
               <div className="w-2/4 step-info xl:pb-0 lg:pb-32 relative">
-                <small className="2xl:text-3xl lg:text-2xl color-blue font-bold background-blue">
+                <small className="2xl:text-3xl lg:text-2xl color-blue font-bold bg-blue">
                   Perpetual Pools
                 </small>
-                <h1 className="2xl:text-6xl text-white lg:text-5xl font-bold background-blue mt-4 mb-10">
+                <h1 className="2xl:text-6xl text-white lg:text-5xl font-bold bg-blue mt-4 mb-10">
                   Leveraged exposure in four steps
                 </h1>
                 <div className="step-info__text flex items-center w-4/5">
-                  <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold background-blue">
+                  <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold bg-blue">
                     04
                   </span>
                   <p className="ml-8 2xl:text-2xl xl:text-xl text-white">

@@ -40,11 +40,14 @@ const BlogPost = ({ data }) => {
         <p className="font-semibold text-2xl mb-2">
           <b>{data.node.title}</b>
         </p>
-        <p ref={postDescription} className="post-text"></p>
-        {/* <time className="font-semibold color-blue mt-2 block">August 20, 2021</time> */}
-        <time className="font-semibold color-blue mt-2 block">
-          <Moment format="Do MMMM, YYYY">{data.node.publish_date}</Moment>
-        </time>
+        {/* Overflow hidden is temporary */}
+        <p ref={postDescription} style={{height: "120px"}} className="overflow-hidden post-text"></p>
+        <Moment
+          className="font-semibold color-blue mt-2 block"
+          format="Do MMMM, YYYY"
+        >
+          {data.node.publish_date}
+        </Moment>
       </div>
     </a>
   );

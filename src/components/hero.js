@@ -63,7 +63,7 @@ const Hero = () => {
           </svg>
         </AnchorLink>
       </section>
-      <div className="2xl:h-96 lg:h-80 h-40 background-blue" />
+      <div className="2xl:h-96 lg:h-80 h-40 bg-blue" />
     </>
   );
 };

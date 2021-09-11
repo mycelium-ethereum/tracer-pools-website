@@ -61,7 +61,7 @@ const Footer = () => {
     });
   }, []);
   return (
-    <footer className="w-full relative overflow-hidden lg:pb-10 h-auto z-10 lg:border-0 border-b-8 border-lightblue background-blue">
+    <footer className="w-full relative overflow-hidden lg:pb-10 h-auto z-10 lg:border-0 border-b-8 border-lightblue bg-blue">
       <img
         id="footer-bg"
         className="absolute top-0 left-0 w-full h-auto lg:block hidden 2xl:-top-24"

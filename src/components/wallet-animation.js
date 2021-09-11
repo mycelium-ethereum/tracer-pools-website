@@ -12,7 +12,7 @@ const WalletAnimation = () => {
   return (
     <>
       <section
-        className="panel relative lg:h-screen h-auto w-full z-0 background-blue"
+        className="panel relative lg:h-screen h-auto w-full z-0 bg-blue"
         id="token-trigger"
       >
         <div className="container flex flex-col align-center justify-start h-full w-full relative z-10 mx-auto 2xl:pt-96 xl:pt-72 xl:px-0 pt-60 px-4">

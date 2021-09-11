@@ -140,24 +140,27 @@ function initialiseScrollMagic() {
   const scene3 = cityAnimation();
   const scene4 = buildingAnimation();
   const scene5 = integrateAnimation();
-  window.addEventListener("scroll", function () {
+  document.addEventListener("scroll", function () {
     updateActiveStep(scene.progress());
   });
 }
 function handleResize() {
-  var newSize = !isMobile() ? "big" : "small";
-  if (newSize != size) {
-    size = newSize;
-    if (newSize === "small") {
-      console.log("Destroyed");
-      controller.destroy(true);
-    } else {
-      console.log("Initialised");
-      initialiseScrollMagic();
+  this.setTimeout(function () {
+    $(window).stellar("refresh");
+    var newSize = !isMobile() ? "big" : "small";
+    if (newSize != size) {
+      size = newSize;
+      if (newSize === "small") {
+        console.log("Destroyed");
+        controller.destroy(true);
+      } else {
+        console.log("Initialised");
+        initialiseScrollMagic();
+      }
     }
-  }
+  }, 250);
 }
-window.onload = function () {
+function initialiseElements(){
   const title = document.title.split(" ")[0];
   if (title == "Home") {
     if (!isMobile()) {
@@ -168,11 +171,16 @@ window.onload = function () {
     $(window).stellar("refresh");
 
     // Disable ScrollMagic on resize and refresh Stellar.js
-    window.addEventListener("resize", function () {
-      this.setTimeout(function () {
-        $(window).stellar("refresh");
-        handleResize();
-      }, 250);
-    });
+    document.addEventListener("resize", handleResize);
+  } else {
+    if (!!controller) {
+      controller.destroy(true);
+    }
+    $.stellar("destroy");
+    
+    document.removeEventListener("resize", handleResize, true);
+    document.removeEventListener("scroll", updateActiveStep, true);
   }
-};
+}
+window.addEventListener('popstate', initialiseElements());
+// window.onload = initialiseElements();
