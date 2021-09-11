@@ -49,7 +49,7 @@ const TracerCity = () => {
           loop="loop"
           autoPlay
           playsInline
-          className="min-w-video transition-opacity duration-1000 lg:hidden block"
+          className="min-w-video transition-opacity duration-1000 lg:hidden block relative z-10"
         >
           <source src={TracerCityMobileVideo} type="video/mp4" />
         </video>

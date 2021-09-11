@@ -12,10 +12,10 @@ const WalletAnimation = () => {
   return (
     <>
       <section
-        className="panel relative lg:h-screen h-auto w-full z-0 bg-blue"
+        className="panel relative lg:h-full w-full z-0 bg-blue"
         id="token-trigger"
       >
-        <div className="container flex flex-col align-center justify-start h-full w-full relative z-10 mx-auto 2xl:pt-96 xl:pt-72 xl:px-0 pt-60 px-4">
+        <div className="container flex flex-col align-center justify-start h-full w-full relative z-10 mx-auto 2xl:pt-96 xl:pt-80 xl:px-0 pt-60 px-4">
           <h1
             id="fade1"
             className="mb-4 text-center 2xl:mt-12 lg:text-6xl text-4xl font-black text-white lg:opacity-0 lg:leading-snug"
@@ -38,7 +38,7 @@ const WalletAnimation = () => {
             Browse Tokens
           </Button>
         </div>
-        <div className="w-full 2xl:h-60 xl:-bottom-48 lg:h-48 lg:-bottom-12 lg:absolute sm:mt-48 relative h-48">
+        <div className="w-full relative 2xl:h-60 lg:h-48 sm:mt-48 h-48">
           <TokenSlider className="token-slider slider-left w-2/4 overflow-hidden lg:bottom-0 sm:bottom-4 bottom-10 lg:h-36 h-28 absolute -left-16 z-10" />
           <div className="absolute 2xl:bottom-8 2xl:w-96 lg:w-72 lg:bottom-6 left-2/4 bottom-0 transform -translate-x-1/2 h-full sm:w-60 w-48 z-20">
             <picture className="flex flex-col justify-center items-center relative w-full">

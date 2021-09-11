@@ -11,16 +11,15 @@ const Navbar = () => {
   const [transparentNav, setTransparentNav] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const isMobile = () => {
+  const isCollapsed = () => {
     const width = window.innerWidth;
-    return width < 1024;
+    return width < 640;
   };
   const setSolidNav = () => {
     const scrollHeight = document.documentElement.scrollTop;
-    const mobile = isMobile();
-    if (scrollHeight > 50 || mobile) {
+    if (scrollHeight > 1 || isCollapsed()) {
       setTransparentNav(false);
-    } else if (!mobile && scrollHeight < 50) {
+    } else if (!isCollapsed() && scrollHeight < 1) {
       setTransparentNav(true);
     }
   };
@@ -32,7 +31,7 @@ const Navbar = () => {
     });
     window.addEventListener("resize", function () {
       setSolidNav();
-      if (isMobile()) {
+      if (isCollapsed()) {
         setNavOpen(false);
       }
     });

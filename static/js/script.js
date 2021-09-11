@@ -174,14 +174,14 @@ function initialiseElements() {
     $(window).stellar("refresh");
 
     // Disable ScrollMagic on resize and refresh Stellar.js
-    document.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize);
   } else {
     if (!!controller) {
       controller.destroy(true);
     }
     $.stellar("destroy");
 
-    document.removeEventListener("resize", handleResize, true);
+    window.removeEventListener("resize", handleResize, true);
     document.removeEventListener("scroll", updateActiveStep, true);
   }
 }
