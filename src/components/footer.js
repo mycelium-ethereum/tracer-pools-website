@@ -61,10 +61,10 @@ const Footer = () => {
     });
   }, []);
   return (
-    <footer className="w-full relative overflow-hidden lg:pb-10 h-auto z-10 lg:border-0 border-b-8 border-lightblue bg-blue">
+    <footer className="w-full relative overflow-hidden lg:pb-10 h-auto z-10">
       <img
         id="footer-bg"
-        className="absolute top-0 left-0 w-full h-auto lg:block hidden 2xl:-top-24"
+        className="absolute -top-1 left-0 w-full h-auto 2xl:-top-24"
         src={CityBottomDark}
       />
       <div className="container mx-auto relative xl:flex flex-col justify-between z-1 xl:px-0 px-8">

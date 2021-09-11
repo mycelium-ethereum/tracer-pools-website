@@ -84,6 +84,9 @@
   min-height: 100%;
   clip-path: inset(1px 1px);
 }
+.h-fit {
+  height: fit-content;
+}
 body,
 html {
   margin: 0;
@@ -273,7 +276,7 @@ section {
 }
 .small-spacer {
   width: 100%;
-  height: 50vh; 
+  height: 500px; 
 }
 
 /* NAVBAR */
@@ -433,7 +436,6 @@ section {
 /* ACTIVE STYLES */
 .panel.active {
   pointer-events: all;
-  z-index: 1 !important;
 }
 .panel.active .step-info,
 .panel.active .step-info .step-info__text {
@@ -517,16 +519,6 @@ section {
 }
 
 /*------------[Positions slider]------------*/
-.slick-slider .slick-track,
-.slick-slider .slick-list
-{
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  transition-delay: 10ms;
-}
 .slick-slide .token {
   max-width: 117px;
 }
@@ -844,7 +836,7 @@ footer {
     opacity: 1;
   }
   .large-spacer {
-    height: 500px;
+    height: 250px;
   }
 }
 @media only screen and (max-width: 640px) {
@@ -852,7 +844,7 @@ footer {
     transform: translate(-50%, 0%) scale(0.5) !important;
   }
   .large-spacer {
-    height: 350px; 
+    height: 150px; 
   }
   .medium-spacer {
     height: 50vh; 

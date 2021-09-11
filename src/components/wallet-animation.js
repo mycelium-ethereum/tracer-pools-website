@@ -39,22 +39,22 @@ const WalletAnimation = () => {
           </Button>
         </div>
         <div className="w-full relative 2xl:h-60 lg:h-48 sm:mt-48 h-48">
-          <TokenSlider className="token-slider slider-left w-2/4 overflow-hidden lg:bottom-0 sm:bottom-4 bottom-10 lg:h-36 h-28 absolute -left-16 z-10" />
+          <TokenSlider className="slider-left -left-16" />
           <div className="absolute 2xl:bottom-8 2xl:w-96 lg:w-72 lg:bottom-6 left-2/4 bottom-0 transform -translate-x-1/2 h-full sm:w-60 w-48 z-20">
             <picture className="flex flex-col justify-center items-center relative w-full">
               <img src={MetamaskFox} alt="MetaMask" />
             </picture>
           </div>
-          <TokenSlider className="token-slider slider-right w-2/4 overflow-hidden lg:bottom-0 lg:h-36 sm:bottom-4 bottom-10 h-28 absolute -right-16 z-10" />
+          <TokenSlider className="slider-right -right-16" />
         </div>
         <img
-          className="city-top absolute sm:top-2/4 left-0 w-full transition-all duration-500"
+          className="city-top absolute sm:top-2/4 left-0 w-full transition-all duration-500 pointer-events-none"
           src={CityTopDark}
         />
       </section>
-      <div className="large-spacer pointer-events-none relative z-10">
+      <div className="large-spacer pt-12 pointer-events-none relative z-10">
         <img
-          className="absolute w-full -bottom-0.5 left-2/4 transform -translate-x-1/2 z-0"
+          className="w-full"
           src={CityTop}
         />
       </div>

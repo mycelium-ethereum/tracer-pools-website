@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -50,8 +50,8 @@ const TokenSlider = ({ className }) => {
     "5UP-YFI/DAI",
     "3UP-SUSHI/DAI",
   ];
+  const totalSlides = tokenImages.length;
   const createSlides = () => {
-    const totalSlides = tokenImages.length;
     const generatedSlides = [];
     for (var i = 0; i < totalSlides; i++) {
       generatedSlides.push(
@@ -87,9 +87,10 @@ const TokenSlider = ({ className }) => {
     }
     return generatedSlides;
   };
+  const [autoplay, setAutoplay] = useState(true)
   const settings = {
     speed: 2000,
-    autoplay: true,
+    autoplay: autoplay,
     autoplaySpeed: 2000,
     cssEase: "linear",
     slidesToShow: 6,
@@ -103,6 +104,12 @@ const TokenSlider = ({ className }) => {
     pauseOnHover: false,
     fade: false,
     rtl: className.includes("slider-left") ? true : false,
+    afterChange: (index) => {
+      if (totalSlides - 1 >= index) {
+        setAutoplay(false);
+        setAutoplay(true);
+      }
+    },
     responsive: [
       {
         breakpoint: 991,
@@ -126,8 +133,15 @@ const TokenSlider = ({ className }) => {
   };
   return (
     <>
-      <div className={className}>
-        <Slider {...settings}>{createSlides()}</Slider>
+      <div
+        className={
+          className +
+          " token-slider w-2/4 overflow-hidden lg:bottom-0 sm:bottom-4 bottom-10 lg:h-36 h-28 absolute z-10 pointer-events-none"
+        }
+      >
+        <Slider {...settings}>
+          {createSlides()}
+        </Slider>
       </div>
     </>
   );

@@ -51,29 +51,29 @@ const PartnersContributors = () => {
   };
   return (
     <>
-      <div className="h-full w-screen">
+      <section className="h-full w-screen">
         <Slider {...settings} ref={slider}>
           <section className="panel relative w-screen h-auto pt-12">
             <div className="container mx-auto flex flex-col items-center justify-start lg:px-0 px-4">
-              <div className="justify-evenly sm:flex sm:text-left text-center block">
+              <div className="justify-evenly sm:flex block">
                 <button
                   data-slide="0"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
                 >
                   Partners
                 </button>
                 <button
                   data-slide="1"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
                 >
                   Ecosystem Contributors
                 </button>
                 <button
                   data-slide="2"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
                 >
                   In the Media
                 </button>
@@ -125,21 +125,21 @@ const PartnersContributors = () => {
                 <button
                   data-slide="0"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
                 >
                   Partners
                 </button>
                 <button
                   data-slide="1"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
                 >
                   Ecosystem Contributors
                 </button>
                 <button
                   data-slide="2"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
                 >
                   In the Media
                 </button>
@@ -178,21 +178,21 @@ const PartnersContributors = () => {
                 <button
                   data-slide="0"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
                 >
                   Partners
                 </button>
                 <button
                   data-slide="1"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
                 >
                   Ecosystem Contributors
                 </button>
                 <button
                   data-slide="2"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 mx-8 font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
                 >
                   In the Media
                 </button>
@@ -245,7 +245,7 @@ const PartnersContributors = () => {
             </div>
           </section>
         </Slider>
-      </div>
+      </section>
     </>
   );
 };

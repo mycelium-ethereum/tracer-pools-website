@@ -31,7 +31,7 @@ const IntegrateAnimation = () => {
   return (
     <section
       className={
-        "integrate-section flex sm:items-center items-start sm:h-screen h-auto " +
+        "integrate-section flex sm:items-center items-start sm:h-screen h-auto md:pt-0 pt-6" +
         (isActive ? "active" : "")
       }
     >
