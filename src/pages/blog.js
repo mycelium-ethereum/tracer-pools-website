@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import BackgroundParallax from "../components/parallax";
 import Header from "../components/header";
-import BlogArticles from "../components/blog-articles";
+import BlogPosts from "../components/blog-posts";
 import Socials from "../components/socials";
 
 const Index = () => {
@@ -16,7 +16,7 @@ const Index = () => {
       <Layout>
         <BackgroundParallax fixed />
         <Header />
-        <BlogArticles />
+        <BlogPosts />
         <Socials />
       </Layout>
     </>

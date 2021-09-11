@@ -159,20 +159,18 @@ const handleResize = () => {
 };
 window.onload = function () {
   const title = document.title.split(" ")[0];
-  if (title == "Home") {
-    if (!isMobile()) {
-      initialiseScrollMagic();
-    }
-
-    $(window).stellar({ horizontalScrolling: false });
-    $(window).stellar("refresh");
-
-    // Disable ScrollMagic on resize and refresh Stellar.js
-    window.addEventListener("resize", function () {
-      this.setTimeout(function () {
-        $(window).stellar("refresh");
-        handleResize();
-      }, 250);
-    });
+  if (!isMobile()) {
+    initialiseScrollMagic();
   }
+
+  $(window).stellar({ horizontalScrolling: false });
+  $(window).stellar("refresh");
+
+  // Disable ScrollMagic on resize and refresh Stellar.js
+  window.addEventListener("resize", function () {
+    this.setTimeout(function () {
+      $(window).stellar("refresh");
+      handleResize();
+    }, 250);
+  });
 };

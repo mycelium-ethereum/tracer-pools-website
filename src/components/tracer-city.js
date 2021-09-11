@@ -19,7 +19,7 @@ const TracerCity = () => {
         id="city-trigger"
         className="panel w-full staking-section flex lg:items-center lg:flex-row flex-col relative items-start xl:pb-0 lg:pb-48 background-blue overflow-hidden z-10"
       >
-        <div className="container flex lg:h-screen w-full lg:h-96 lg:flex-row lg:pt-0 xl:px-0 px-4 h-auto lg:justify-end mx-auto flex-col justify-start relative">
+        <div className="container flex lg:h-screen w-full  lg:flex-row lg:pt-0 xl:px-0 px-4 h-auto lg:justify-end mx-auto flex-col justify-start relative">
           <div
             className="h-auto lg:absolute 2xl:mt-96 lg:mt-60 force-flex flex-col justify-center z-10 xl:left-0 lg:left-4 lg:pb-0 lg:mb-0 sm:pt-0 xl:px-0 lg:w-80 w-52 mx-auto left-0 pt-8 mb-10 lg:text-left text-center"
             data-stellar-ratio="1.4"
@@ -55,11 +55,11 @@ const TracerCity = () => {
       </section>
       <section
         id="building-trigger"
-        className="panel w-full lg:h-screen h-auto staking-section flex lg:items-center relative items-start lg:pt-0 xl:pb-12 pt-24 background-blue z-0"
+        className="panel w-full lg:h-screen h-auto staking-section flex lg:items-center relative items-start lg:pt-0 xl:pb-12 pt-24 background-blue z-10"
       >
         <div className="container flex justify-between mx-auto w-full h-full xl:px-0 px-4 lg:flex-row flex-col-reverse relative z-10">
           {/* Mobile image - full width */}
-          <div className="w-2/4 xl:h-screen sm:w-auto w-full h-auto z-0 items-center justify-center flex">
+          <div className="xl:h-screen sm:w-auto w-full h-auto z-0 items-center justify-center flex">
             <img
               className="sm:w-96 w-full lg:hidden block"
               src={TracerBuildingImage}

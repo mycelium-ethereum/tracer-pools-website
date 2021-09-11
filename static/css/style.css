@@ -658,8 +658,14 @@ section {
 }
 
 /* --------------- FOOTER --------------- */
+
 footer {
   background: var(--midblue);
+}
+/* --------------- BLOG POSTS --------------- */
+
+.post-text img {
+  display: none;
 }
 
 /* --------------- MEDIA QUERIES --------------- */
