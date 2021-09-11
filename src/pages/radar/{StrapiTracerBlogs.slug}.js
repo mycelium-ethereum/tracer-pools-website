@@ -59,7 +59,7 @@ class BlogPostTemplate extends Component {
   render() {
     return (
       <>
-        <SEO title="Blog Posts" />
+        <SEO title={this.props.data.strapiTracerBlogs.title} />
         <BackgroundParallax fixed />
         <Layout>
           <BlogText data={this.props.data.strapiTracerBlogs} />
