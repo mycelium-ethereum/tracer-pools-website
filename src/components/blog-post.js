@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import marked from "marked";
 import DOMPurify from "dompurify";
+import Moment from "react-moment";
 
 const BlogPost = ({ data }) => {
   const truncate = (str) => {
@@ -13,10 +14,14 @@ const BlogPost = ({ data }) => {
     const bodyTextHTML = marked(DOMPurify.sanitize(data.node.body_text));
     postDescription.current.innerHTML = bodyTextHTML;
     const firstTag = postDescription.current.firstChild;
-    if(firstTag.firstChild.tagName == "EM"){
+    if (firstTag.firstChild.tagName == "EM") {
       firstTag.firstChild.remove();
     }
-    if(firstTag.firstChild && firstTag.firstChild.innerText && firstTag.firstChild.innerText < 80){
+    if (
+      firstTag.firstChild &&
+      firstTag.firstChild.innerText &&
+      firstTag.firstChild.innerText < 80
+    ) {
       firstTag.firstChild.remove();
     }
     postDescription.current.innerText = truncate(
@@ -38,7 +43,7 @@ const BlogPost = ({ data }) => {
         <p ref={postDescription} className="post-text"></p>
         {/* <time className="font-semibold color-blue mt-2 block">August 20, 2021</time> */}
         <time className="font-semibold color-blue mt-2 block">
-          {data.node.publish_date}
+          <Moment format="Do MMMM, YYYY">{data.node.publish_date}</Moment>
         </time>
       </div>
     </a>

@@ -25,7 +25,6 @@ const Index = () => {
         <IntegrateAnimation />
         <PartnersContributors />
         <Socials />
-        <Scripts />
       </Layout>
     </>
   );

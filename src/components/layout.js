@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import Scripts from "./scripts";
 
 const Layout = ({ children }) => {
   return (
@@ -25,6 +26,7 @@ const Layout = ({ children }) => {
         }}
       >
         {children}
+        <Scripts />
       </motion.main>
       <Footer />
     </>

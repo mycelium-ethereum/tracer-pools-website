@@ -5,7 +5,7 @@ import Button from "../components/button";
 import GlowButton from "../components/glow-button";
 
 // Image assets
-import TracerCityVideo from "/static/img/home-page/city/tracer-city.mp4";
+import TracerCityVideo from "/static/img/home-page/city/tracer-city.webm";
 import TracerCityMobileVideo from "/static/img/home-page/city/tracer-city-mobile.mp4";
 import TracerBuildingImage from "/static/img/home-page/city/tracer-building.png";
 import TracerBuilding from "/static/img/home-page/city/tracer-building.mp4";
