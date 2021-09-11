@@ -9,6 +9,7 @@ import TracerCityVideo from "/static/img/home-page/city/tracer-city.webm";
 import TracerCityMobileVideo from "/static/img/home-page/city/tracer-city-mobile.mp4";
 import TracerBuildingImage from "/static/img/home-page/city/tracer-building.png";
 import TracerBuilding from "/static/img/home-page/city/tracer-building.mp4";
+import MeshSmall from "/static/img/home-page/city/mesh-small.png";
 import MeshLarge from "/static/img/home-page/city/background-3d-large.png";
 import CityBottom from "/static/img/home-page/city/city-bottom.png";
 
@@ -19,7 +20,7 @@ const TracerCity = () => {
         id="city-trigger"
         className="panel w-full staking-section flex lg:items-center lg:flex-row flex-col relative items-start xl:pb-0 lg:pb-48 bg-blue overflow-hidden z-10"
       >
-        <div className="container flex lg:h-screen w-full  lg:flex-row lg:pt-0 xl:px-0 px-4 h-auto lg:justify-end mx-auto flex-col justify-start relative">
+        <div className="container flex lg:h-screen w-full lg:flex-row lg:pt-0 xl:px-0 px-4 h-auto lg:justify-end mx-auto flex-col justify-start relative z-10">
           <div
             className="h-auto lg:absolute 2xl:mt-96 lg:mt-60 force-flex flex-col justify-center z-10 xl:left-0 lg:left-4 lg:pb-0 lg:mb-0 sm:pt-0 xl:px-0 lg:w-80 w-52 mx-auto left-0 pt-8 mb-10 lg:text-left text-center"
             data-stellar-ratio="1.4"
@@ -52,6 +53,10 @@ const TracerCity = () => {
         >
           <source src={TracerCityMobileVideo} type="video/mp4" />
         </video>
+        <img
+          className="absolute w-full h-full left-2/4 transform-gpu -translate-x-1/2 bottom-0 z-0 block"
+          src={MeshSmall}
+        />
       </section>
       <section
         id="building-trigger"

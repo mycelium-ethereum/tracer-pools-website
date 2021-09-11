@@ -86,48 +86,51 @@ function integrateAnimation() {
 function updateActiveStep(progress) {
   const slides = document.querySelectorAll("#pinMaster .panel");
   const firstSlide = slides[0];
-  slides.forEach((e) => {
-    e.classList.remove("inactive");
-    e.classList.remove("active");
-  });
-  firstSlide.classList.remove("stage-one");
-  firstSlide.classList.remove("stage-two");
-  firstSlide.classList.remove("stage-three");
-  firstSlide.classList.remove("stage-four");
+  if (firstSlide) {
+    slides.forEach((e) => {
+      e.classList.remove("inactive");
+      e.classList.remove("active");
+    });
 
-  if (progress === 0) {
-    // Remove the tile
-    slides[0].classList.remove("start");
     firstSlide.classList.remove("stage-one");
-  }
-  if (progress > 0) {
-    // Start the step tile slide in animations
-    slides[0].classList.add("start");
-  }
-  if (progress < 0.2 && progress != 0) {
-    slides[0].classList.add("active");
-    firstSlide.classList.add("stage-one");
-  }
-  if (progress > 0.2 && progress <= 0.5) {
-    slides[1].classList.add("active");
-    firstSlide.classList.add("stage-two");
-  }
-  if (progress > 0.5 && progress <= 0.7) {
-    slides[2].classList.add("active");
-    firstSlide.classList.add("stage-three");
-  }
-  if (progress > 0.7) {
-    slides[3].classList.add("active");
-    firstSlide.classList.add("stage-four");
-  }
-  // Remove "inactive" class from active slides
-  slides.forEach((e, i) => {
-    const nextSlide = slides[i + 1];
-    // Add inactive to the next slide
-    if (e.classList.contains("active") && !!nextSlide) {
-      nextSlide.classList.add("inactive");
+    firstSlide.classList.remove("stage-two");
+    firstSlide.classList.remove("stage-three");
+    firstSlide.classList.remove("stage-four");
+
+    if (progress === 0) {
+      // Remove the tile
+      slides[0].classList.remove("start");
+      firstSlide.classList.remove("stage-one");
     }
-  });
+    if (progress > 0) {
+      // Start the step tile slide in animations
+      slides[0].classList.add("start");
+    }
+    if (progress < 0.2 && progress != 0) {
+      slides[0].classList.add("active");
+      firstSlide.classList.add("stage-one");
+    }
+    if (progress > 0.2 && progress <= 0.5) {
+      slides[1].classList.add("active");
+      firstSlide.classList.add("stage-two");
+    }
+    if (progress > 0.5 && progress <= 0.7) {
+      slides[2].classList.add("active");
+      firstSlide.classList.add("stage-three");
+    }
+    if (progress > 0.7) {
+      slides[3].classList.add("active");
+      firstSlide.classList.add("stage-four");
+    }
+    // Remove "inactive" class from active slides
+    slides.forEach((e, i) => {
+      const nextSlide = slides[i + 1];
+      // Add inactive to the next slide
+      if (e.classList.contains("active") && !!nextSlide) {
+        nextSlide.classList.add("inactive");
+      }
+    });
+  }
 }
 function isMobile() {
   const width = window.innerWidth;
@@ -160,7 +163,7 @@ function handleResize() {
     }
   }, 250);
 }
-function initialiseElements(){
+function initialiseElements() {
   const title = document.title.split(" ")[0];
   if (title == "Home") {
     if (!isMobile()) {
@@ -177,10 +180,10 @@ function initialiseElements(){
       controller.destroy(true);
     }
     $.stellar("destroy");
-    
+
     document.removeEventListener("resize", handleResize, true);
     document.removeEventListener("scroll", updateActiveStep, true);
   }
 }
-window.addEventListener('popstate', initialiseElements());
+window.addEventListener("popstate", initialiseElements());
 // window.onload = initialiseElements();
