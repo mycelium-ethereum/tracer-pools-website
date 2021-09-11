@@ -25,12 +25,21 @@ const TracerCity = () => {
             className="h-auto lg:absolute 2xl:mt-96 lg:mt-60 force-flex flex-col justify-center z-10 xl:left-0 lg:left-4 lg:pb-0 lg:mb-0 sm:pt-0 xl:px-0 lg:w-80 w-52 mx-auto left-0 pt-8 mb-10 lg:text-left text-center"
             data-stellar-ratio="1.4"
           >
-            <span className="xl:text-5xl lg:text-4xl text-3xl font-extrabold text-white mb-2">
+            <span className="xl:text-5xl lg:text-4xl font-semibold text-base lg:mb-2 mb-0 text-white color-blue">
               Built for DeFi
             </span>
-            <small className="lg:text-2xl text-white font-light lg:text-left text-lg text-center">
+            <h1 className="font-bold text-white xl:text-5xl lg:text-4xl lg:mb-4 mb-2 text-3xl">
+              Strategise &amp; Natively
+            </h1>
+            <small className="text-white font-light 2xl:w-72 lg:text-left lg:text-2xl lg:w-auto w-56 text-lg">
               Stake and farm with the dApps you know and love.
             </small>
+            <GlowButton
+              className="lg:h-16 h-12 w-48 text-normal rounded-lg font-normal mt-6 lg:ml-0 lg:mb-0 sm:text-xl text-lg mb-8 mx-auto"
+              linkTo="https://app.gitbook.com/login/tracer-1/pool-swaps"
+            >
+              Launch Docs
+            </GlowButton>
           </div>
           {/* Desktop video */}
           <video
