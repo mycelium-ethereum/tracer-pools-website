@@ -31,7 +31,6 @@ const PartnersContributors = () => {
   const slider = useRef(0);
   const goToSlide = (e) => {
     const slideNo = e.target.dataset.slide;
-    console.log(slideNo);
     slider.current.slickGoTo(slideNo);
   };
   const settings = {

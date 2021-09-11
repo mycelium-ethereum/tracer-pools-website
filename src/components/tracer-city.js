@@ -54,7 +54,7 @@ const TracerCity = () => {
           <source src={TracerCityMobileVideo} type="video/mp4" />
         </video>
         <img
-          className="absolute w-full h-full left-2/4 transform-gpu -translate-x-1/2 bottom-0 z-0 block"
+          className="absolute w-full h-full left-2/4 transform-gpu opacity-50 -translate-x-1/2 bottom-0 z-0 block"
           src={MeshSmall}
         />
       </section>
