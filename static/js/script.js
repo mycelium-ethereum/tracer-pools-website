@@ -3,7 +3,7 @@ var size = w >= 1024 ? "big" : "small";
 var controller;
 var prevElement;
 
-const stepAnimation = () => {
+function stepAnimation() {
   var tl = gsap.timeline();
   tl.from(".panel.step-two", 1, { xPercent: 0 });
   tl.from(".panel.step-three", 1, { xPercent: 0 });
@@ -18,8 +18,8 @@ const stepAnimation = () => {
     .setTween(tl)
     .addTo(controller);
   return scene;
-};
-const tokenAnimation = () => {
+}
+function tokenAnimation() {
   var t2 = gsap.timeline();
   const halfScreen = window.innerHeight * 0.5;
   t2.from("#token-trigger", 1, { xPercent: 0, opacity: 1 });
@@ -34,8 +34,8 @@ const tokenAnimation = () => {
     .setClassToggle("#token-trigger", "active")
     .addTo(controller);
   return scene;
-};
-const cityAnimation = () => {
+}
+function cityAnimation() {
   var t3 = gsap.timeline();
   t3.from("#city-trigger", 1, { xPercent: 0, opacity: 1 });
   const halfScreen = window.innerHeight * 0.5;
@@ -50,8 +50,8 @@ const cityAnimation = () => {
     .setClassToggle("#city-trigger", "active")
     .addTo(controller);
   return scene;
-};
-const buildingAnimation = () => {
+}
+function buildingAnimation() {
   var t4 = gsap.timeline();
   t4.from("#building-trigger", 1, { xPercent: 0, opacity: 1 });
   const quarterScreen = window.innerHeight * 0.25;
@@ -66,8 +66,8 @@ const buildingAnimation = () => {
     .setClassToggle("#building-trigger", "active")
     .addTo(controller);
   return scene;
-};
-const integrateAnimation = () => {
+}
+function integrateAnimation() {
   var t5 = gsap.timeline();
   t5.from(".integrate-section", 1, { xPercent: 0, opacity: 1 });
   const oneFifthScreenHeight = window.innerHeight * 0.2;
@@ -82,8 +82,8 @@ const integrateAnimation = () => {
     .setClassToggle(".integrate-section", "active")
     .addTo(controller);
   return scene;
-};
-const updateActiveStep = (progress) => {
+}
+function updateActiveStep(progress) {
   const slides = document.querySelectorAll("#pinMaster .panel");
   const firstSlide = slides[0];
   slides.forEach((e) => {
@@ -128,12 +128,12 @@ const updateActiveStep = (progress) => {
       nextSlide.classList.add("inactive");
     }
   });
-};
-const isMobile = () => {
+}
+function isMobile() {
   const width = window.innerWidth;
   return width < 1024;
-};
-const initialiseScrollMagic = () => {
+}
+function initialiseScrollMagic() {
   controller = new ScrollMagic.Controller();
   const scene = stepAnimation();
   const scene2 = tokenAnimation();
@@ -143,8 +143,8 @@ const initialiseScrollMagic = () => {
   window.addEventListener("scroll", function () {
     updateActiveStep(scene.progress());
   });
-};
-const handleResize = () => {
+}
+function handleResize() {
   var newSize = !isMobile() ? "big" : "small";
   if (newSize != size) {
     size = newSize;
@@ -156,7 +156,7 @@ const handleResize = () => {
       initialiseScrollMagic();
     }
   }
-};
+}
 window.onload = function () {
   const title = document.title.split(" ")[0];
   if (title == "Home") {

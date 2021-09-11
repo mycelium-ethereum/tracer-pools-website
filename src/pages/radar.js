@@ -15,7 +15,10 @@ const Index = () => {
       <SEO title="Blog" />
       <Layout>
         <BackgroundParallax fixed />
-        <Header />
+        <Header
+          title={"Radar"}
+          subheading={"Read the latest news for Tracer"}
+        />
         <BlogPosts />
         <Socials />
       </Layout>

@@ -102,7 +102,7 @@ const Footer = () => {
               onClick={(e) => checkForm(e)}
               id="submit-btn"
               type="submit"
-              className="tracer-btn.subscribe h-10 rounded-lg font-semibold font-medium flex items-center justify-center bg-blue-600 text-white lg:w-32 lg:mt-0 lg:mb-0 md:w-32 mb-8 w-full max-w-xs mx-auto"
+              className="tracer-btn.subscribe h-10 rounded-lg font-medium flex items-center justify-center bg-blue-600 text-white lg:w-32 lg:mt-0 lg:mb-0 md:w-32 mb-8 w-full max-w-xs mx-auto"
             >
               {submittedText}
             </button>
@@ -129,7 +129,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex w-full justify-center flex-wrap lg:h-6 lg:w-max lg:justify-between lg:flex-nowrap lg:mb-0 sm:mt-0 mt-6 mb-6">
-            <Link className="text-base font-normal text-white" to="#">
+            <Link className="text-base font-normal text-white" to="/privacy-policy">
               Privacy Policy
             </Link>
             <Link

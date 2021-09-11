@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <nav
       id="nav"
-      className="fixed w-full z-50 transition ease-out duration-500 cursor-pointer"
+      className="fixed top-0 left-0 w-full z-50 transition ease-out duration-500 cursor-pointer"
       onMouseLeave={() => setDropdownOpen(false)}
     >
       <div className="container lg:h-24 h-20 flex justify-between items-center mx-auto xl:px-0 px-4">
@@ -58,7 +58,7 @@ const Navbar = () => {
             onClick={() => setDropdownOpen(true)}
           >
             <img
-              className="w-4 w-4 h-auto"
+              className="w-4 h-auto"
               src={Dropdown}
               alt="Dropdown toggle"
             />
@@ -76,12 +76,12 @@ const Navbar = () => {
                 Perpetuals
               </span>
             </Link>
-            <Link to="/governance">
+            <Link to="/govern">
               <span className="block text-white font-normal mb-4">
                 Governance
               </span>
             </Link>
-            <Link to="/blog">
+            <Link to="/radar">
               <span className="block text-white font-normal">Blog</span>
             </Link>
           </div>
@@ -90,6 +90,16 @@ const Navbar = () => {
           <div className="mr-7">
             <Link to="/learn">
               <span className="text-white font-normal">Learn</span>
+            </Link>
+          </div>
+          <div className="mr-7">
+            <Link to="/radar">
+              <span className="text-white font-normal">Radar</span>
+            </Link>
+          </div>
+          <div className="mr-7">
+            <Link to="/govern">
+              <span className="text-white font-normal">Govern</span>
             </Link>
           </div>
           <div>
