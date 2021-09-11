@@ -45,7 +45,10 @@ const Navbar = () => {
       onMouseLeave={() => setDropdownOpen(false)}
     >
       <div className="container lg:h-24 h-20 flex justify-between items-center mx-auto xl:px-0 px-4">
-        <div className="relative flex" onMouseEnter={() => setDropdownOpen(true)}>
+        <div
+          className="relative flex"
+          onMouseEnter={() => setDropdownOpen(true)}
+        >
           <Link to="/">
             <img
               className="sm:w-24 w-22 h-auto"
@@ -57,11 +60,7 @@ const Navbar = () => {
             className="sm:flex hidden ml-3 w-22 h-22 left-0 top-0 z-0 justify-center items-center"
             onClick={() => setDropdownOpen(true)}
           >
-            <img
-              className="w-4 h-auto"
-              src={Dropdown}
-              alt="Dropdown toggle"
-            />
+            <img className="w-4 h-auto" src={Dropdown} alt="Dropdown toggle" />
           </div>
           <div
             className={
@@ -105,7 +104,7 @@ const Navbar = () => {
           <div>
             <Button
               className="h-12 w-48 border border-white font-normal"
-              linkTo="https://goofy-banach-3fbf5d.netlify.app/"
+              linkTo="https://pools-testing.netlify.app/"
             >
               Launch Pools
             </Button>

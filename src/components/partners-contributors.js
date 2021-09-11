@@ -79,7 +79,7 @@ const PartnersContributors = () => {
                   In the Media
                 </button>
               </div>
-              <div className="h-auto w-full h-full flex flex-col justify-center lg:mt-6">
+              <div className="w-full flex flex-col justify-center lg:mt-6">
                 <div className="flex w-full justify-center items-center 2xl:mt-10 xl:mt-3 lg:mt-8 mt-6">
                   <img
                     className="2xl:w-60 lg:w-48 lg:mr-12 sm:mr-8 sm:w-32 w-20 mr-5"
@@ -115,7 +115,7 @@ const PartnersContributors = () => {
                     src={EfficientFrontier}
                   />
                   <img
-                    className="lg:w-20 lg:mr-12 sm:w-16 sm:w-12 w-7 mr-3"
+                    className="lg:w-20 lg:mr-12 sm:w-12 w-7 mr-3"
                     src={B}
                   />
                   <img className="lg:w-40 sm:w-24 w-12" src={Apollo} />
@@ -148,7 +148,7 @@ const PartnersContributors = () => {
                   In the Media
                 </button>
               </div>
-              <div className="h-auto w-full h-full flex flex-col justify-center lg:mt-0 sm:pb-24 xl:px-0 px-4 mt-20 pb-12">
+              <div className="w-full flex flex-col justify-center lg:mt-0 sm:pb-24 xl:px-0 px-4 mt-20 pb-12">
                 <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center 2xl:mt-10 xl:mt-3 lg:mt-8">
                   <img
                     className="2xl:w-60 lg:w-48 sm:mr-10 sm:w-48 w-24 mr-5"
@@ -161,7 +161,7 @@ const PartnersContributors = () => {
                 </div>
                 <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center sm:mt-8 mt-4">
                   <img
-                    className="2xl:w-60 lg:w-48 sm:w-48 sm:w-32 w-24 sm:mr-10 mr-5"
+                    className="2xl:w-60 lg:w-48 sm:w-48 w-24 sm:mr-10 mr-5"
                     src={SigmaPrime}
                   />
                   <img
@@ -201,7 +201,7 @@ const PartnersContributors = () => {
                   In the Media
                 </button>
               </div>
-              <div className="h-auto w-full h-full flex flex-col justify-center lg:mt-0 sm:pb-24 mt-12 pb-12">
+              <div className="w-full flex flex-col justify-center lg:mt-0 sm:pb-24 mt-12 pb-12">
                 <div className="flex justify-center items-start 2xl:mt-10 xl:mt-3 lg:mt-8">
                   <div className="flex flex-col justify-start items-center text-center w-96 sm:mr-5 mr-3 text-white">
                     <img

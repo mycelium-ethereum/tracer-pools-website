@@ -1,5 +1,4 @@
-/* eslint-disable */
-import React, { useState } from "react";
+import React from "react";
 
 // Components
 import Layout from "../components/layout";
@@ -11,7 +10,6 @@ import LeverageSteps from "../components/leverage-steps";
 import WalletAnimation from "../components/wallet-animation";
 import IntegrateAnimation from "../components/integrate-animation";
 import PartnersContributors from "../components/partners-contributors";
-import Scripts from "../components/scripts";
 
 const Index = () => {
   return (
