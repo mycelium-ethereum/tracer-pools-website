@@ -26,8 +26,19 @@ const Navbar = () => {
       setNavOpen(false);
     }
   };
+  const setActiveLink = () => {
+    const path = window.location.pathname;
+    const navLinks = Array.from(document.querySelectorAll(".nav-link"));
+    navLinks.forEach((e) => {
+      const href = e.getAttribute("href");
+      if (href === path) {
+        e.classList.add("active");
+      }
+    });
+  };
 
   useEffect(() => {
+    setActiveLink();
     setSolidNav();
     window.addEventListener("scroll", setSolidNav);
     window.addEventListener("resize", setSolidNav);
@@ -46,7 +57,7 @@ const Navbar = () => {
       }
       onMouseLeave={() => setDropdownOpen(false)}
     >
-      <div className="container lg:h-24 h-20 flex justify-between items-center mx-auto xl:px-0 px-4">
+      <div className="container h-16 flex justify-between items-center mx-auto xl:px-0 px-4">
         <div
           className="relative flex"
           onMouseEnter={() => setDropdownOpen(true)}
@@ -64,7 +75,7 @@ const Navbar = () => {
           >
             <img className="w-4 h-auto" src={Dropdown} alt="Dropdown toggle" />
           </div>
-          <div
+          {/* <div
             className={
               "dropdown absolute top-14 w-40 p-4 border border-white rounded-lg sm:block hidden transition-opacity duration-500 " +
               (dropdownOpen
@@ -77,35 +88,30 @@ const Navbar = () => {
                 Perpetuals
               </span>
             </Link>
-            <Link to="/govern">
-              <span className="block text-white font-normal mb-4">
-                Governance
-              </span>
-            </Link>
             <Link to="/radar">
               <span className="block text-white font-normal">Blog</span>
             </Link>
-          </div>
+          </div> */}
         </div>
         <div className="hidden sm:flex items-center">
           <div className="mr-7">
-            <Link to="/learn">
+            <Link className="nav-link p-2 rounded-lg" to="/">
+              <span className="text-white font-normal">Home</span>
+            </Link>
+          </div>
+          <div className="mr-7">
+            <Link className="nav-link p-2 rounded-lg" to="/learn">
               <span className="text-white font-normal">Learn</span>
             </Link>
           </div>
           <div className="mr-7">
-            <Link to="/radar">
+            <Link className="nav-link p-2 rounded-lg" to="/radar">
               <span className="text-white font-normal">Radar</span>
-            </Link>
-          </div>
-          <div className="mr-7">
-            <Link to="/govern">
-              <span className="text-white font-normal">Govern</span>
             </Link>
           </div>
           <div>
             <Button
-              className="h-12 w-48 border border-white font-normal"
+              className="sm:mt-0"
               linkTo="https://pools-testing.netlify.app/"
             >
               Launch Pools

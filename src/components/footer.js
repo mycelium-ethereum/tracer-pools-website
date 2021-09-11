@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 
 // Images
-import CityBottomDark from "/static/img/general/footer-bg.svg";
+import CityBottomDark from "/static/img/general/footer-bg.png";
 // import Facebook from "/static/img/icons/facebook.svg";
 import Twitter from "/static/img/icons/twitter.svg";
 import Github from "/static/img/icons/github.svg";
@@ -61,15 +61,15 @@ const Footer = () => {
     });
   }, []);
   return (
-    <footer className="w-full relative overflow-hidden lg:pb-10 h-auto z-10">
+    <footer className="w-full relative overflow-hidden lg:pb-10 h-1/2 z-10">
       <img
         id="footer-bg"
-        className="absolute -top-1 left-0 w-full h-auto 2xl:-top-24"
+        className="absolute 2xl:-top-60 xl:-top-48 -top-20 left-0 w-full h-auto "
         src={CityBottomDark}
       />
       <div className="container mx-auto relative xl:flex flex-col justify-between z-1 xl:px-0 px-8">
         <div className="flex flex-col xl:justify-center justify-between items-center lg:w-full lg:pt-8 sm:w-max w-full h-auto mx-auto pt-16">
-          <span className="font-semibold text-white lg:text-4xl lg:w-auto lg:mb-6 lg:text-left sm:text-2xl text-center w-full text-lg">
+          <span className="text-white lg:w-auto lg:mb-6 lg:text-left text-center w-full text-2xl">
             Stay updated on the latest Tracer news
           </span>
           <form

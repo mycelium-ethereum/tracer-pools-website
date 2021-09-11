@@ -25,10 +25,10 @@ const LeverageSteps = (direction) => {
           <section className="panel lg:absolute top-0 left-0 step-one flex flex-col lg:justify-center justify-start w-full h-full lg:pointer-events-none pointer-events-auto">
             <div className="flex container mx-auto w-full lg:flex-row flex-col items-center h-auto lg:pt-48 xl:px-0 px-4">
               <div className="step-info xl:pb-0 lg:pb-32 lg:w-2/4 w-full lg:text-left text-center relative">
-                <small className="2xl:text-3xl lg:text-2xl color-blue text-3xl font-bold bg-blue">
+                <small id="steps" className="2xl:text-3xl lg:text-2xl color-blue text-3xl font-bold bg-blue">
                   Perpetual Pools
                 </small>
-                <h1 id="steps" className="2xl:text-6xl text-white lg:text-5xl text-4xl font-bold bg-blue lg:mt-4 mt-2 lg:mb-10 mb-6">
+                <h1 className="2xl:text-6xl text-white lg:text-5xl text-4xl font-bold bg-blue lg:mt-4 mt-2 lg:mb-10 mb-6">
                   Leveraged exposure in four steps
                 </h1>
                 <div className="step-info__text items-center lg:flex hidden">

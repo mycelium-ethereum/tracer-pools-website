@@ -1,16 +1,16 @@
 /* eslint-disable */
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import BlogPost from "./blog-post";
 
-export const query = graphql`
+const query = graphql`
   query TracerBlogs {
     allStrapiTracerBlogs {
       edges {
         node {
           id
           title
-          body_text
+          description
           image {
             formats {
               medium {
@@ -19,12 +19,13 @@ export const query = graphql`
             }
           }
           publish_date
+          slug
         }
       }
     }
   }
 `;
-const BlogPosts = ({ data }) => {
+const BlogPosts = () => {
   return (
     <>
       <section className="h-full w-full z-20 relative bg-white">

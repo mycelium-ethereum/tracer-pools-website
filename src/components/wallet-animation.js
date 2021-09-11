@@ -31,7 +31,7 @@ const WalletAnimation = () => {
             That live in your wallet
           </p>
           <Button
-            className="mt-6 h-12 w-48 text-center transition-all duration-500 mx-auto border border-white lg:opacity-0"
+            className="mx-auto lg:opacity-0"
             linkTo="#"
             id="fade3"
           >

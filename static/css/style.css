@@ -268,7 +268,7 @@ section {
 }
 .large-spacer {
   width: 100%;
-  height: 700px; 
+  height: 550px; 
 }
 .medium-spacer {
   width: 100%;
@@ -280,68 +280,9 @@ section {
 }
 
 /* NAVBAR */
-.logo {
-  position: relative;
-}
-.logo img {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  transition: opacity 0.5s ease;
-}
-.dropdown {
-  background: rgba(255, 255, 255, 0.3);
-}
-.right-nav ul {
-  margin: 0;
-}
-.nav-item {
-  display: inline-block;
-  backface-visibility: hidden;
-}
-.nav-item:last-of-type {
-  margin-right: 0;
-}
-.nav-item.active .nav-link {
-  color: var(--blue);
-}
-.nav-item.active .nav-link:before {
-  opacity: 1;
-}
-.nav-link {
-  position: relative;
-  display: block;
-  color: #fff;
-}
-.nav-link:hover {
-  color: var(--blue);
-}
-.nav-item.pools {
-  position: relative;
-}
-.nav-item.pools .arrow-outline {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-left: 10px;
-  width: 180px;
-  height: 55px;
-  pointer-events: none;
-}
-.nav-item.pools .nav-link {
-  position: relative;
-  z-index: 1;
-}
-/* MAIN HEADER */
 
-.hero-banner__laptop {
-  position: absolute;
-  bottom: -250px;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  width: 100%;
-  max-width: 1000px;
+.nav-link.active {
+  background: rgb(0 0 122 / 50%)
 }
 
 /* LEVERAGE STEPS */
@@ -349,9 +290,6 @@ section {
   position: relative;
   height: 500px;
 }
-/* .step-one .step-info .step-info__text {
-  transform: translateX(-250px);
-} */
 .step-info .step-info__text {
   position: relative;
   z-index: 1;
@@ -572,7 +510,6 @@ section {
   position: absolute;
   height: auto;
   transition: all 1s ease;
-  mix-blend-mode: multiply;
 }
 .integrate-text {
   max-width: 450px;
@@ -585,19 +522,21 @@ section {
   mix-blend-mode: unset;
   top: 155px;
   right: 40px;
-  z-index: 1;
+  z-index: 2;
 }
 /* Dark blue base */
 .integrate-animation .integrate-animation__layerone {
   min-width: 1310px;
   top: -640px;
   right: -1010px;
+  z-index: 0;
 }
 /* Second layer (pink rectangle) */
 .integrate-animation .integrate-animation__layertwo {
   min-width: 2000px;
   bottom: 375px;
   right: -1530px;
+  z-index: 1;
 }
 /* Third layer (arrow) */
 .integrate-animation .integrate-animation__layerthree {
@@ -607,6 +546,7 @@ section {
 }
 /* Fourth layer (arrow green) */
 .integrate-animation .integrate-animation__layerfour {
+  mix-blend-mode: multiply;
   min-width: 988px;
   top: -175px;
   right: -765px;
@@ -623,13 +563,13 @@ section {
   transition: all 1s ease 0.7s;
 }
 .integrate-section.active .integrate-animation .integrate-animation__layerone {
-  top: -340px;
-  right: -460px;
+  top: -445px;
+  right: -500px;
 }
 /* Second layer (pink rectangle) */
 .integrate-section.active .integrate-animation .integrate-animation__layertwo {
-  bottom: -90px;
-  right: -930px;
+  bottom: -145px;
+  right: -760px;
 }
 /* Third layer (arrow) */
 .integrate-section.active .integrate-animation .integrate-animation__layerthree {
@@ -638,8 +578,8 @@ section {
 }
 /* Fourth layer (arrow green) */
 .integrate-section.active .integrate-animation .integrate-animation__layerfour {
-  top: -125px;
-  right: -600px;
+  top: -150px;
+  right: -530px;
 }
 .integrate-section.active .fade-anim {
   opacity: 1;

@@ -79,7 +79,7 @@ const PartnersContributors = () => {
                 </button>
               </div>
               <div className="w-full flex flex-col justify-center lg:mt-6 mt-8">
-                <div className="flex w-full justify-center items-center 2xl:mt-10 xl:mt-3 lg:mt-8 mt-6">
+                <div className="flex w-full justify-center items-center 2xl:mt-10 xl:mt-3 lg:mt-8 mt-24">
                   <img
                     className="2xl:w-60 lg:w-48 lg:mr-12 sm:mr-8 sm:w-32 w-20 mr-5"
                     src={Framework}
@@ -144,7 +144,7 @@ const PartnersContributors = () => {
                   In the Media
                 </button>
               </div>
-              <div className="w-full flex flex-col justify-center lg:mt-0 sm:pb-24 xl:px-0 px-4 mt-20 pb-12">
+              <div className="w-full flex flex-col justify-center lg:mt-0 sm:pb-24 xl:px-0 px-4 mt-32 pb-12">
                 <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center 2xl:mt-10 xl:mt-3 lg:mt-8">
                   <img
                     className="2xl:w-60 lg:w-48 sm:mr-10 sm:w-48 w-24 mr-5"

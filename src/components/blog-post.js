@@ -3,33 +3,26 @@ import React, { useEffect, useRef } from "react";
 import marked from "marked";
 import DOMPurify from "dompurify";
 import Moment from "react-moment";
+import { Link } from "gatsby";
 
 const BlogPost = ({ data }) => {
   const truncate = (str) => {
-    const maxLength = 180;
+    const maxLength = 200;
     return str.length > maxLength ? str.substring(0, maxLength) + "..." : str;
   };
   const postDescription = useRef();
   useEffect(() => {
-    const bodyTextHTML = marked(DOMPurify.sanitize(data.node.body_text));
+    const bodyTextHTML = marked(DOMPurify.sanitize(data.node.description));
     postDescription.current.innerHTML = bodyTextHTML;
-    const firstTag = postDescription.current.firstChild;
-    if (firstTag.firstChild.tagName == "EM") {
-      firstTag.firstChild.remove();
-    }
-    if (
-      firstTag.firstChild &&
-      firstTag.firstChild.innerText &&
-      firstTag.firstChild.innerText < 80
-    ) {
-      firstTag.firstChild.remove();
-    }
     postDescription.current.innerText = truncate(
       postDescription.current.innerText
     );
   }, []);
   return (
-    <a className="h-auto col-span-1 bg-white transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-xl cursor-pointer">
+    <Link
+      to={`/radar/` + data.node.slug}
+      className="h-auto col-span-1 bg-white transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-xl cursor-pointer"
+    >
       <div className="relative h-52 overflow-hidden rounded-tl-xl rounded-tr-xl">
         <img
           className="absolute top-1/2 transform -translate-y-1/2 w-full min-h-full h-auto"
@@ -41,7 +34,11 @@ const BlogPost = ({ data }) => {
           <b>{data.node.title}</b>
         </p>
         {/* Overflow hidden is temporary */}
-        <p ref={postDescription} style={{height: "120px"}} className="overflow-hidden post-text"></p>
+        <p
+          ref={postDescription}
+          style={{ height: "120px" }}
+          className="overflow-hidden post-text"
+        ></p>
         <Moment
           className="font-semibold color-blue mt-2 block"
           format="Do MMMM, YYYY"
@@ -49,7 +46,7 @@ const BlogPost = ({ data }) => {
           {data.node.publish_date}
         </Moment>
       </div>
-    </a>
+    </Link>
   );
 };
 

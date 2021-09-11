@@ -19,7 +19,7 @@ const PrivacyText = () => {
   }, []);
   return (
     <>
-      <section className="h-full w-full z-20 relative lg:mt-24 mt-20 bg-white">
+      <section className="h-full w-full z-20 relative mt-16 bg-white">
         <div className="container relative w-full mx-auto pt-6 pb-6 lg:px-0 px-4 md:grid block grid-cols-12">
           <aside class="md:w-60 w-full h-auto col-span-1">
             <button
