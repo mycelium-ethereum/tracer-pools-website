@@ -35,10 +35,12 @@ const BlogPosts = ({ data }) => {
           <StaticQuery
             query={query}
             render={(data) => (
-              <div className="grid grid-cols-3 gap-8">
-                {data.allStrapiTracerBlogs.edges.map((node) => (
-                  <BlogPost data={node} />
-                ))}
+              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+                {data.allStrapiTracerBlogs.edges
+                  .sort((a, b) => (new Date(a.node.publish_date) > new Date(b.node.publish_date) ? -1 : 1))
+                  .map((node) => (
+                    <BlogPost data={node} />
+                  ))}
               </div>
             )}
           />

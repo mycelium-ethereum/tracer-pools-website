@@ -29,10 +29,10 @@ const BlogPost = ({ data }) => {
     );
   });
   return (
-    <a className="h-auto col-span-1 bg-white shadow-lg rounded-xl">
-      <div className="h-52 overflow-hidden rounded-tl-xl rounded-tr-xl">
+    <a className="h-auto col-span-1 bg-white transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-xl cursor-pointer">
+      <div className="relative h-52 overflow-hidden rounded-tl-xl rounded-tr-xl">
         <img
-          className="w-full h-auto"
+          className="absolute top-1/2 transform -translate-y-1/2 w-full min-h-full h-auto"
           src={data.node.image[0].formats.medium.url}
         />
       </div>
