@@ -54,7 +54,7 @@ const PartnersContributors = () => {
       <div className="h-full w-screen">
         <Slider {...settings} ref={slider}>
           <section className="panel relative w-screen h-auto pt-12">
-            <div className="container mx-auto flex flex-col items-center justify-start sm:px-0 px-4">
+            <div className="container mx-auto flex flex-col items-center justify-start md:px-0 px-4">
               <div className="justify-evenly sm:flex sm:text-left text-center block">
                 <button
                   data-slide="0"
@@ -78,7 +78,7 @@ const PartnersContributors = () => {
                   In the Media
                 </button>
               </div>
-              <div className="w-full flex flex-col justify-center lg:mt-6">
+              <div className="w-full flex flex-col justify-center lg:mt-6 mt-8">
                 <div className="flex w-full justify-center items-center 2xl:mt-10 xl:mt-3 lg:mt-8 mt-6">
                   <img
                     className="2xl:w-60 lg:w-48 lg:mr-12 sm:mr-8 sm:w-32 w-20 mr-5"
@@ -123,7 +123,7 @@ const PartnersContributors = () => {
             </div>
           </section>
           <section className="panel relative w-screen h-auto pt-12">
-            <div className="container mx-auto flex flex-col items-center justify-start sm:px-0 px-4">
+            <div className="container mx-auto flex flex-col items-center justify-start md:px-0 px-4">
               <div className="justify-evenly sm:flex sm:text-left text-center block">
                 <button
                   data-slide="0"
@@ -176,7 +176,7 @@ const PartnersContributors = () => {
             </div>
           </section>
           <section className="panel relative w-screen h-auto pt-12">
-            <div className="container mx-auto flex flex-col items-center justify-start sm:px-0 px-4">
+            <div className="container mx-auto flex flex-col items-center justify-start md:px-0 px-4">
               <div className="justify-evenly sm:flex sm:text-left text-center block">
                 <button
                   data-slide="0"
