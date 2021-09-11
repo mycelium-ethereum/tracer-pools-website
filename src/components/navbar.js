@@ -29,11 +29,11 @@ const Navbar = () => {
 
   useEffect(() => {
     setSolidNav();
-    window.addEventListener("scroll", setSolidNav());
-    window.addEventListener("resize", setSolidNav());
+    window.addEventListener("scroll", setSolidNav);
+    window.addEventListener("resize", setSolidNav);
     return function () {
-      window.removeEventListener("scroll", setSolidNav());
-      window.removeEventListener("resize", setSolidNav());
+      window.removeEventListener("scroll", setSolidNav);
+      window.removeEventListener("resize", setSolidNav);
     };
   }, []);
 
