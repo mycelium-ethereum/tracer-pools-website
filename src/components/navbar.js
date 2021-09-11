@@ -8,7 +8,7 @@ import MenuIcon from "../../static/img/general/menu.svg";
 import MenuCloseIcon from "../../static/img/general/menu-close.svg";
 
 const Navbar = () => {
-  const [transparentNav, setTransparentNav] = useState(false);
+  const [transparentNav, setTransparentNav] = useState(true);
   const [navOpen, setNavOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const isCollapsed = () => {
@@ -22,20 +22,20 @@ const Navbar = () => {
     } else if (!isCollapsed() && scrollHeight < 1) {
       setTransparentNav(true);
     }
+    if (isCollapsed()) {
+      setNavOpen(false);
+    }
   };
 
   useEffect(() => {
     setSolidNav();
-    window.addEventListener("scroll", function () {
-      setSolidNav();
-    });
-    window.addEventListener("resize", function () {
-      setSolidNav();
-      if (isCollapsed()) {
-        setNavOpen(false);
-      }
-    });
-  });
+    window.addEventListener("scroll", setSolidNav());
+    window.addEventListener("resize", setSolidNav());
+    return function () {
+      window.removeEventListener("scroll", setSolidNav());
+      window.removeEventListener("resize", setSolidNav());
+    };
+  }, []);
 
   return (
     <nav

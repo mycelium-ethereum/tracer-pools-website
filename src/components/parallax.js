@@ -16,7 +16,7 @@ const BackgroundParallax = ({fixed}) => {
     const scene2 = document.querySelector(".square-middle");
     new Parallax(scene);
     new Parallax(scene2);
-  });
+  }, []);
   return (
     <>
       <div

@@ -78,7 +78,7 @@ const TracerCity = () => {
             autoPlay
             playsInline
             id="tracer-building"
-            className="min-w-video absolute top-1/2 right-0 transform-gpu -translate-y-1/2 transition-opacity duration-1000 sm:block sm:opacity-0 transition-opacity duration-1000 hidden"
+            className="min-w-video absolute top-1/2 right-0 transform-gpu -translate-y-1/2 transition-opacity duration-1000 sm:block sm:opacity-0 hidden"
           >
             <source src={TracerBuilding} type="video/mp4" />
           </video>

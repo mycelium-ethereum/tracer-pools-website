@@ -27,7 +27,7 @@ const BlogPost = ({ data }) => {
     postDescription.current.innerText = truncate(
       postDescription.current.innerText
     );
-  });
+  }, []);
   return (
     <a className="h-auto col-span-1 bg-white transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-xl cursor-pointer">
       <div className="relative h-52 overflow-hidden rounded-tl-xl rounded-tr-xl">

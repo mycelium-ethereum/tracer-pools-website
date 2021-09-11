@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 // Image assets
 import Tile from "/static/img/home-page/integrate/tile.svg";
@@ -9,27 +9,28 @@ import LayerThree from "/static/img/home-page/integrate/layer-3-square.svg";
 import LayerFour from "/static/img/home-page/integrate/layer-4-arrow.svg";
 
 const IntegrateAnimation = () => {
+  const [isActive, setIsActive] = useState(false);
   const isMobile = () => {
     const width = window.innerWidth;
     return width < 1024;
   };
   const toggleActiveStyles = () => {
-    const section = document.querySelector(".integrate-section");
     if (isMobile()) {
-      section.classList.add("active");
+      setIsActive(true);
     }
   };
   useEffect(() => {
     toggleActiveStyles();
-    window.addEventListener("resize", function () {
-      toggleActiveStyles();
-    });
-  });
+    window.addEventListener("resize", toggleActiveStyles());
+    return function() {
+      window.removeEventListener("resize", toggleActiveStyles());
+    };
+  }, []);
   return (
-    <section className="integrate-section flex sm:items-center items-start sm:h-screen h-auto">
-      <div className="flex h-full w-full container mx-auto relative flex items-center lg:flex-row lg:pb-0 lg:justify-end justify-center xl:px-0 sm:pb-0 pb-96 flex-col px-4">
+    <section className={"integrate-section flex sm:items-center items-start sm:h-screen h-auto " + (isActive ? "active" : "")}>
+      <div className="flex h-full w-full container mx-auto relative items-center lg:flex-row lg:pb-0 lg:justify-end justify-center xl:px-0 sm:pb-0 pb-96 flex-col px-4">
         <div
-          className="force-flex lg:absolute xl:left-0 left-4 lg:mt-48 lg:justify-start lg:flex-row left-0 justify-center flex-col mx-auto z-10"
+          className="force-flex lg:absolute xl:left-0 left-4 lg:mt-48 lg:justify-start lg:flex-row justify-center flex-col mx-auto z-10"
           data-stellar-ratio="1.2"
         >
           <div className="integrate-text xl:w-full lg:w-96 h-auto flex flex-col justify-center">
