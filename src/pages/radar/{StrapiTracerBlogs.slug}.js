@@ -25,6 +25,7 @@ export const query = graphql`
         }
       }
       publish_date
+      read_time
     }
     allStrapiTracerBlogs {
       edges {
@@ -43,6 +44,7 @@ export const query = graphql`
             }
           }
           publish_date
+          read_time
         }
       }
     }
