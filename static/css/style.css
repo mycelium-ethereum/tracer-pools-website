@@ -764,6 +764,11 @@ footer {
     width: 80px;
   }
 }
+@media only screen and (min-width: 768px) {
+  .md\:pt-13 {
+    padding-top: 3.3rem;
+  }
+}
 @media only screen and (max-width: 767px) {
   input[type="email"] {
     transition: all 0.5s ease;

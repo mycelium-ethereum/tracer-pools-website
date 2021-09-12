@@ -33,7 +33,7 @@ const ResearchPapers = () => {
     <>
       <section className="h-full w-full z-20 relative mt-16">
         {/* <div class="absolute top-0 left-0 w-full h-full z-0 overflow-hidden bg-blue opacity-30"></div> */}
-        <div className="container relative w-full mx-auto pb-12 xl:px-0 px-4 grid md:grid-cols-3 grid-cols-1 md:gap-8 gap-12 pt-3">
+        <div className="container relative w-full mx-auto pb-12 xl:px-0 px-4 grid md:grid-cols-3 grid-cols-1 md:gap-8 lg:pt-5 md:pt-13 pt-5 gap-12 ">
           <PaperDownload {...poolsProps}/>
           <PaperDownload {...perpetualSwapsProps}/>
           <PaperDownload {...p2pFinanceProps}/>
