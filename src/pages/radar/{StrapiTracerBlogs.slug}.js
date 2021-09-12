@@ -4,7 +4,7 @@ import React, { Component } from "react";
 // Components
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
-import BlogText from "../../components/blog-text";
+import BlogContent from "../../components/blog-template-content";
 import { graphql } from "gatsby";
 
 export const query = graphql`
@@ -61,7 +61,7 @@ class BlogPostTemplate extends Component {
       <>
         <SEO title={this.props.data.strapiTracerBlogs.title} />
         <Layout>
-          <BlogText data={this.props.data.strapiTracerBlogs} />
+          <BlogContent data={this.props.data.strapiTracerBlogs} />
         </Layout>
       </>
     );
