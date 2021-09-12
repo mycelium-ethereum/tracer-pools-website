@@ -222,25 +222,25 @@ const Navbar = () => {
           </div>
         </div>
         <div className="hidden sm:flex items-center">
-          <div className="mr-7">
+          <div className="mr-3">
             <Link
-              className="nav-link transition-colors duration-700 p-2 rounded-lg"
+              className="nav-link transition-colors duration-700 py-2 px-4 rounded-lg"
               to="/"
             >
               <span className="text-white font-normal">Home</span>
             </Link>
           </div>
-          <div className="mr-7">
+          <div className="mr-3">
             <Link
-              className="nav-link transition-colors duration-700 p-2 rounded-lg"
+              className="nav-link transition-colors duration-700 py-2 px-4 rounded-lg"
               to="/learn"
             >
               <span className="text-white font-normal">Learn</span>
             </Link>
           </div>
-          <div className="mr-7">
+          <div className="mr-3">
             <Link
-              className="nav-link transition-colors duration-700 p-2 rounded-lg"
+              className="nav-link transition-colors duration-700 py-2 px-4 rounded-lg"
               to="/radar"
             >
               <span className="text-white font-normal">Radar</span>
