@@ -11,7 +11,6 @@ const Index = () => {
   return (
     <>
       <SEO title="Privacy Policy" />
-      <BackgroundParallax fixed />
       <Layout>
         <PolicyText />
         <Socials />
