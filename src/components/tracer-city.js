@@ -21,7 +21,7 @@ const TracerCity = () => {
           <div className="col-span-3">
             <div
               data-stellar-ratio="1.4"
-              className="h-auto lg:absolute 2xl:mt-80 lg:mt-64 force-flex flex-col justify-center lg:items-start items-center z-10 xl:left-0 lg:left-4 lg:pb-0 lg:mb-0 sm:pt-0 xl:px-0 xl:w-full lg:w-80 w-full mx-auto left-0 pt-8 mb-0 lg:text-left text-center"
+              className="h-auto lg:absolute 2xl:mt-48 lg:mt-64 force-flex flex-col justify-center lg:items-start items-center z-10 xl:left-0 lg:left-4 lg:pb-0 lg:mb-0 sm:pt-0 xl:px-0 xl:w-full lg:w-80 w-full mx-auto left-0 pt-8 mb-0 lg:text-left text-center"
             >
               <span className="xl:text-5xl lg:text-4xl font-semibold text-base lg:mb-2 mb-0 text-white color-blue">
                 Built for DeFi

@@ -59,27 +59,27 @@ const PartnersContributors = () => {
                 <button
                   data-slide="0"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto font-bold text-white sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
                 >
                   Partners
                 </button>
                 <button
                   data-slide="1"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-bluegrey font-normal sm:text-2xl whitespace-nowrap text-lg"
                 >
                   Ecosystem Contributors
                 </button>
                 <button
                   data-slide="2"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-bluegrey font-normal sm:text-2xl whitespace-nowrap text-lg"
                 >
                   In the Media
                 </button>
               </div>
-              <div className="w-full flex flex-col justify-center lg:mt-6 mt-8">
-                <div className="flex w-full justify-center items-center 2xl:mt-10 xl:mt-3 lg:mt-8 mt-24">
+              <div className="w-full flex flex-col justify-center lg:mt-20 mt-12">
+                <div className="flex w-full justify-center items-center">
                   <img
                     className="2xl:w-60 lg:w-48 lg:mr-12 sm:mr-8 sm:w-32 w-20 mr-5"
                     src={Framework}
@@ -125,27 +125,27 @@ const PartnersContributors = () => {
                 <button
                   data-slide="0"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-bluegrey font-normal sm:text-2xl whitespace-nowrap text-lg"
                 >
                   Partners
                 </button>
                 <button
                   data-slide="1"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto font-bold text-white sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
                 >
                   Ecosystem Contributors
                 </button>
                 <button
                   data-slide="2"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-bluegrey font-normal sm:text-2xl whitespace-nowrap text-lg"
                 >
                   In the Media
                 </button>
               </div>
-              <div className="w-full flex flex-col justify-center lg:mt-0 sm:pb-24 xl:px-0 px-4 mt-32 pb-12">
-                <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center 2xl:mt-10 xl:mt-3 lg:mt-8">
+              <div className="w-full flex flex-col justify-center lg:mt-20 sm:pb-24 xl:px-0 mt-12 px-4 pb-12">
+                <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center">
                   <img
                     className="2xl:w-60 lg:w-48 sm:mr-10 sm:w-48 w-24 mr-5"
                     src={Mycelium}
@@ -178,27 +178,27 @@ const PartnersContributors = () => {
                 <button
                   data-slide="0"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-bluegrey font-normal sm:text-2xl whitespace-nowrap text-lg"
                 >
                   Partners
                 </button>
                 <button
                   data-slide="1"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-grey font-normal 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg"
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-bluegrey font-normal sm:text-2xl whitespace-nowrap text-lg"
                 >
                   Ecosystem Contributors
                 </button>
                 <button
                   data-slide="2"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto font-bold text-white 2xl:mb-4 lg:mb-2 sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto font-bold text-white sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
                 >
                   In the Media
                 </button>
               </div>
-              <div className="w-full flex flex-col justify-center lg:mt-12 sm:pb-24 mt-12 pb-12">
-                <div className="flex justify-center items-start 2xl:mt-10 xl:mt-3 lg:mt-8">
+              <div className="w-full flex flex-col justify-center lg:mt-20 sm:pb-24 mt-12 pb-12">
+                <div className="flex justify-center items-start">
                   <a
                     href="https://www.afr.com/companies/financial-services/meet-the-defi-developers-who-ve-raised-funds-for-a-derivatives-system-20210628-p5850t"
                     target="_blank"

@@ -12,6 +12,7 @@
   --black: #000000;
   --lightgrey: #D1D5DB;
   --darkgrey: #656565;
+  --bluegrey: #AAB2E3;
   --midgrey: #9c9c9c;
 }
 .color-lightgrey {
@@ -22,6 +23,9 @@
 }
 .color-darkgrey {
   color: var(--darkgrey);
+}
+.color-bluegrey {
+  color: var(--bluegrey);
 }
 .color-blue {
   color: var(--lightblue);

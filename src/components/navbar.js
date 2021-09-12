@@ -21,31 +21,6 @@ const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      const logo = document.getElementById("logo");
-      const toggle = document.getElementById("toggle");
-      const dropdown = document.getElementById("dropdown");
-      if (logo && toggle && dropdown) {
-        if (
-          !logo.contains(event.target) &&
-          !toggle.contains(event.target) &&
-          !dropdown.contains(event.target)
-        ) {
-          setDropdownOpen(false);
-        }
-      }
-    };
-    if (!dropdownOpen) {
-      document.removeEventListener("mousedown", handleClickOutside);
-    } else {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [dropdownOpen]);
-
   const isCollapsed = () => {
     const width = window.innerWidth;
     return width < 640;
@@ -200,12 +175,13 @@ const Navbar = () => {
                 </p>
               </span>
             </a>
-            {Icons.map((icon) => (
+            {Icons.map((icon, i) => (
               <a
                 className="flex items-center mt-5 pl-2"
                 href={icon.href}
                 target="_blank"
                 rel="noreferrer"
+                key={i}
               >
                 <span>
                   <img
