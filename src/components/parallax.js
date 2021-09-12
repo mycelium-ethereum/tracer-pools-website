@@ -35,7 +35,7 @@ const BackgroundParallax = (props) => {
       <div
         className={
           (fixed ? "fixed" : "absolute") +
-          " left-0 w-screen xl:transform-none xl:left-0 lg:transform-gpu lg:scale-75 lg:left-1/2 lg:-translate-x-1/2 h-full z-10 pointer-events-none sm:top-0 -top-32"
+          " left-0 w-screen xl:transform-none xl:left-0 lg:transform-gpu lg:scale-75 lg:left-1/2 lg:-translate-x-1/2 h-full z-10 pointer-events-none sm:top-0 -top-32 overflow-x-hidden"
         }
       >
         <div className="absolute tile-bg">

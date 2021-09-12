@@ -161,7 +161,7 @@ function handleResize() {
         initialiseScrollMagic();
       }
     }
-  }, 250);
+  }, 350);
 }
 function initialiseElements() {
   const title = document.title.split(" ")[0];
