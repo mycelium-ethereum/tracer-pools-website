@@ -17,7 +17,6 @@ const Index = () => {
         <LearnHeader />
         <ResearchPapers />
         <TracerDrop />
-        <Socials />
       </Layout>
     </>
   );

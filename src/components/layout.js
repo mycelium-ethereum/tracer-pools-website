@@ -5,12 +5,13 @@ import Navbar from "./navbar";
 import Footer from "./footer";
 import BackgroundParallax from "./parallax";
 import Scripts from "./scripts";
+import Socials from "./socials";
 
 const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <BackgroundParallax />
+      <Socials />
       <motion.main
         initial={{
           opacity: 0,
@@ -22,11 +23,12 @@ const Layout = ({ children }) => {
           opacity: 0,
         }}
         transition={{
-          ease: "easeIn",
-          duration: 0.3,
-          delay: 1,
+          ease: "linear",
+          duration: 0.7,
+          delay: 0.2,
         }}
       >
+        <BackgroundParallax />
         {children}
       </motion.main>
       <Footer />

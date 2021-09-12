@@ -31,8 +31,8 @@ const WalletAnimation = () => {
             That live in your wallet
           </p>
           <Button
-            className="mx-auto lg:opacity-0"
-            linkTo="#"
+            className="mx-auto mt-6 lg:opacity-0"
+            linkTo="https://pools-testing.netlify.app/browse/"
             id="fade3"
           >
             Browse Tokens

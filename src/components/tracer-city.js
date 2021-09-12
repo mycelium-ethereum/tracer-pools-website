@@ -32,7 +32,10 @@ const TracerCity = () => {
               <small className="text-white font-light xl:w-80 lg:text-left lg:text-2xl lg:w-auto w-56 text-lg">
                 Stake and farm with the dApps you know and love.
               </small>
-              <Button linkTo="https://app.gitbook.com/login/tracer-1/pool-swaps">
+              <Button
+                className="mt-6"
+                linkTo="https://app.gitbook.com/login/tracer-1/pool-swaps"
+              >
                 Launch Docs
               </Button>
             </div>
@@ -70,7 +73,7 @@ const TracerCity = () => {
             <source src={TracerBuildingMP4} type="video/mp4" />
           </video>
           <div
-            className="2xl:mt-60 xl:mt-80 lg:pl-12 lg:mt-48 lg:pb-0 lg:pr-12 lg:absolute lg:text-left left-1/2 mx-auto px-4 w-full force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
+            className="2xl:mt-96 xl:mt-80 lg:pl-12 lg:mt-48 lg:pb-0 lg:pr-12 lg:absolute lg:text-left left-1/2 mx-auto px-4 w-full force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
             data-stellar-ratio="1.4"
           >
             <span className="xl:text-5xl lg:text-4xl font-semibold text-base lg:mb-2 mb-0 text-white color-blue">
@@ -82,7 +85,10 @@ const TracerCity = () => {
             <small className="text-white font-light xl:w-80 lg:text-left lg:text-2xl lg:w-auto w-56 text-lg">
               Stake and farm with the dApps you know and love.
             </small>
-            <Button linkTo="https://app.gitbook.com/login/tracer-1/pool-swaps">
+            <Button
+              className="mt-6"
+              linkTo="https://app.gitbook.com/login/tracer-1/pool-swaps"
+            >
               Launch Docs
             </Button>
           </div>

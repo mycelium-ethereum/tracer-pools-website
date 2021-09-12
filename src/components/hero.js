@@ -29,7 +29,7 @@ const Hero = () => {
             </p>
             <Button
               className="mt-12 h-12 w-48 border border-white mx-auto text-normal font-normal rounded-lg"
-              linkTo="https://goofy-banach-3fbf5d.netlify.app/"
+              linkTo="https://pools-testing.netlify.app/"
             >
               Launch Pools
             </Button>

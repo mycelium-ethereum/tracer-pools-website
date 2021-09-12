@@ -2,9 +2,9 @@ var w = window.innerWidth;
 var size = w >= 1024 ? "big" : "small";
 var controller;
 var prevElement;
-const halfScreen = window.innerHeight * 0.5;
-const threeQuarterScreen = window.innerHeight * 0.75;
-const oneFifthScreenHeight = window.innerHeight * 0.2;
+var halfScreen = window.innerHeight * 0.5;
+var threeQuarterScreen = window.innerHeight * 0.75;
+var oneFifthScreenHeight = window.innerHeight * 0.2;
 
 function stepAnimation() {
   var tl = gsap.timeline();

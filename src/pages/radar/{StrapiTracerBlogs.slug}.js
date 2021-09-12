@@ -5,7 +5,6 @@ import React, { Component } from "react";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 import BlogText from "../../components/blog-text";
-import Socials from "../../components/socials";
 import { graphql } from "gatsby";
 
 export const query = graphql`
@@ -63,7 +62,6 @@ class BlogPostTemplate extends Component {
         <SEO title={this.props.data.strapiTracerBlogs.title} />
         <Layout>
           <BlogText data={this.props.data.strapiTracerBlogs} />
-          <Socials />
         </Layout>
       </>
     );

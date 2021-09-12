@@ -28,7 +28,7 @@ const query = graphql`
 const BlogPosts = () => {
   return (
     <>
-      <section className="h-full w-full z-20 relative bg-white">
+      <section className="h-full w-full z-20 relative bg-white select-dark">
         <div className="container w-full mx-auto pt-6 md:pb-24 pb-6 lg:px-0 px-4">
           <h1 className="font-semibold text-3xl text-center mb-8">
             Latest Articles

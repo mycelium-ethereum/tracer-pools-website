@@ -223,40 +223,28 @@ const Navbar = () => {
             </Link>
           </div>
           <div>
-            <Button
-              className="sm:mt-0"
-              linkTo="https://pools-testing.netlify.app/"
-            >
+            <Button className="mt-0" linkTo="https://pools-testing.netlify.app/">
               Launch Pools
             </Button>
           </div>
         </div>
-        <div
-          className="sm:hidden block"
-          onClick={() => setNavOpen((wasOpen) => !wasOpen)}
-        >
+        <div className="sm:hidden block" onClick={() => setNavOpen(!navOpen)}>
           <img className="w-6 h-6" src={MenuIcon} alt="Menu" />
         </div>
       </div>
       <menu
         className={
-          " fixed transition-all duration-700 h-screen w-full bg-tracerblue top-0 left-0 mt-0 pl-0" +
+          " fixed transition-all duration-700 h-screen w-full bg-tracerblue top-16 left-0 mt-0 pl-0" +
           (navOpen ? " left-0" : " left-full")
         }
       >
-        <button
-          className="absolute top-7 right-4 w-6 h-6"
-          onClick={() => setNavOpen((wasOpen) => !wasOpen)}
-        >
-          <img className="w-6 h-6" src={MenuCloseIcon} alt="Menu" />
-        </button>
         <div className="flex flex-col justify-center w-60 mx-auto text-center pt-12">
           <div className="mt-6 w-full">
             <Link to="/learn">
               <span className="text-white font-normal text-lg">Learn</span>
             </Link>
           </div>
-          <div className="mt-6 w-full">
+          <div className="w-full">
             <Button
               className="h-12 w-full border border-white font-normal text-lg"
               linkTo="/"

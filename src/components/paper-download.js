@@ -2,7 +2,7 @@
 import React from "react";
 import PDFIcon from "../../static/img/learn/pdf-icon.svg";
 
-const PaperDownload = ({title, header, image, downloadLink}) => {
+const PaperDownload = ({ title, header, image, link }) => {
   return (
     <>
       <div className="col-span-1 rounded-2xl overflow-hidden">
@@ -12,17 +12,22 @@ const PaperDownload = ({title, header, image, downloadLink}) => {
             src={header}
           />
           <div className="relative z-10 text-center">
-            <small className="lg:text-2xl md:text-base text-2xl text-white font-normal">Tracer</small>
-            <h1 className="lg:text-3xl md:text-lg text-2xl text-white font-bold">{title}</h1>
+            <small className="lg:text-2xl md:text-base text-2xl text-white font-normal">
+              Tracer
+            </small>
+            <h1 className="lg:text-3xl md:text-lg text-2xl text-white font-bold">
+              {title}
+            </h1>
           </div>
         </div>
         <div className="py-5 px-7 bg-white">
-          <a href={downloadLink} className="block">
+          <a href={link} className="block" download>
             <img src={image} />
           </a>
           <a
-            className="bg-blue-600 w-32 h-12 mt-10 mb-8 mx-auto rounded-xl text-white flex items-center justify-center"
-            href={downloadLink}
+            className="transition-colors duration-500 w-32 h-12 mt-10 mb-8 mx-auto rounded-xl font-semibold text-white flex items-center justify-center bg-blue-600 hover:bg-blue-800"
+            href={link}
+            download
           >
             Download
             <img className="ml-2" src={PDFIcon} />

@@ -9,6 +9,9 @@ import Twitter from "/static/img/icons/twitter.svg";
 import Github from "/static/img/icons/github.svg";
 // import Dribbble from "/static/img/icons/dribbble.svg";
 
+// Litepaper
+import PoolsPDF from "../../static/img/learn/pools/perpetual-pools.pdf";
+
 const Footer = () => {
   const isBelowBreakpoint = () => {
     const width = window.innerWidth;
@@ -132,21 +135,22 @@ const Footer = () => {
             <Link className="text-base font-normal text-white" to="/privacy-policy">
               Privacy Policy
             </Link>
-            <Link
+            <a
               className="text-base font-normal text-white xl:pl-12 sm:mb-0 pl-6 mb-4"
-              to="#"
+              href={PoolsPDF}
+              download
             >
               Litepaper
-            </Link>
+            </a>
             <Link
               className="text-base font-normal text-white xl:pl-12 sm:mb-0 pl-6 mb-4"
-              to="#"
+              to="https://app.gitbook.com/login/tracer-1/pool-swaps"
             >
               Documentation (Gitbook)
             </Link>
             <Link
               className="text-base font-normal text-white xl:pl-12 sm:mb-0 pl-6 mb-4"
-              to="#"
+              to="/radar/sigma-prime-audit"
             >
               Security Audit
             </Link>

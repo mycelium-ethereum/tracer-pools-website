@@ -7,7 +7,7 @@ import { Link } from "gatsby";
 
 const BlogPost = ({ data, className }) => {
   const truncate = (str) => {
-    const maxLength = 200;
+    const maxLength = 190;
     return str.length > maxLength ? str.substring(0, maxLength) + "..." : str;
   };
   const postDescription = useRef();
@@ -30,7 +30,7 @@ const BlogPost = ({ data, className }) => {
         <img src={data.node.image[0].formats.medium.url} />
       </div>
       {/* Set height is temporary */}
-      <div className="px-4 py-4 rounded-bl-xl rounded-br-xl flex flex-col bg-white lg:h-72 md:h-64 h-auto">
+      <div className="px-4 py-4 rounded-bl-xl rounded-br-xl flex flex-col bg-white 2xl:h-auto 2xl:pb-14 lg:h-72 md:h-64 h-auto">
         <p className="font-semibold text-2xl mb-2">
           <b>{data.node.title}</b>
         </p>

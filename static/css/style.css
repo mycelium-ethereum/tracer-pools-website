@@ -97,6 +97,10 @@
 .h-fit {
   height: fit-content;
 }
+.select-dark *::selection  {
+  color: var(--white);
+  background: var(--darkblue);
+}
 body,
 html {
   margin: 0;
@@ -106,6 +110,9 @@ body {
   position: relative;
   font-family: "Source Sans Pro", Arial, sans-serif;
   background: var(--darkblue);
+}
+img {
+  image-rendering: -webkit-optimize-contrast;
 }
 *::selection {
   color: var(--darkblue);
@@ -510,7 +517,6 @@ section {
 }
 
 /* --------------- INTEGRATE SECTION --------------- */
-
 .integrate-animation {
   height: 950px;
 }

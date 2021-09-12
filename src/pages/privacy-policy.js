@@ -13,7 +13,6 @@ const Index = () => {
       <SEO title="Privacy Policy" />
       <Layout>
         <PolicyText />
-        <Socials />
       </Layout>
     </>
   );
