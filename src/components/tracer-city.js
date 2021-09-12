@@ -21,7 +21,7 @@ const TracerCity = () => {
           <div className="col-span-3">
             <div
               data-stellar-ratio="1.4"
-              className="h-auto lg:absolute 2xl:mt-80 lg:mt-12 force-flex flex-col justify-center lg:items-start items-center z-10 xl:left-0 lg:left-4 lg:pb-0 lg:mb-0 sm:pt-0 xl:px-0 xl:w-full lg:w-80 w-full mx-auto left-0 pt-8 mb-0 lg:text-left text-center"
+              className="h-auto lg:absolute 2xl:mt-80 lg:mt-64 force-flex flex-col justify-center lg:items-start items-center z-10 xl:left-0 lg:left-4 lg:pb-0 lg:mb-0 sm:pt-0 xl:px-0 xl:w-full lg:w-80 w-full mx-auto left-0 pt-8 mb-0 lg:text-left text-center"
             >
               <span className="xl:text-5xl lg:text-4xl font-semibold text-base lg:mb-2 mb-0 text-white color-blue">
                 Built for DeFi
@@ -29,7 +29,7 @@ const TracerCity = () => {
               <h1 className="font-bold text-white xl:text-5xl lg:text-4xl lg:mb-4 mb-2 text-3xl">
                 Strategise Natively
               </h1>
-              <small className="text-white font-light 2xl:w-80 lg:text-left lg:text-2xl lg:w-auto w-56 text-lg">
+              <small className="text-white font-light xl:w-80 lg:text-left lg:text-2xl lg:w-auto w-56 text-lg">
                 Stake and farm with the dApps you know and love.
               </small>
               <Button linkTo="https://app.gitbook.com/login/tracer-1/pool-swaps">
@@ -70,7 +70,7 @@ const TracerCity = () => {
             <source src={TracerBuildingMP4} type="video/mp4" />
           </video>
           <div
-            className="2xl:w-auto 2xl:mt-60 xl:px-0 lg:mt-48 lg:pb-0 lg:w-96 lg:pr-12 lg:absolute lg:text-left lg:left-2/3 left-1/2 mx-auto px-4 force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
+            className="2xl:mt-60 xl:mt-80 lg:pl-12 lg:mt-48 lg:pb-0 lg:pr-12 lg:absolute lg:text-left left-1/2 mx-auto px-4 w-full force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
             data-stellar-ratio="1.4"
           >
             <span className="xl:text-5xl lg:text-4xl font-semibold text-base lg:mb-2 mb-0 text-white color-blue">
@@ -79,7 +79,7 @@ const TracerCity = () => {
             <h1 className="font-bold text-white xl:text-5xl lg:text-4xl lg:mb-4 mb-2 text-3xl">
               Strategise Natively
             </h1>
-            <small className="text-white font-light 2xl:w-80 lg:text-left lg:text-2xl lg:w-auto w-56 text-lg">
+            <small className="text-white font-light xl:w-80 lg:text-left lg:text-2xl lg:w-auto w-56 text-lg">
               Stake and farm with the dApps you know and love.
             </small>
             <Button linkTo="https://app.gitbook.com/login/tracer-1/pool-swaps">

@@ -761,6 +761,9 @@ footer {
   .slick-slide .token {
     width: 80px;
   }
+  .integrate-section {
+    height: 650px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
   .md\:pt-13 {
@@ -787,6 +790,9 @@ footer {
   .large-spacer {
     height: 250px;
   }
+  .integrate-section {
+    height: 700px;
+  }
 }
 @media only screen and (max-width: 640px) {
   .tile-bg {
@@ -809,6 +815,9 @@ footer {
   }
   #token-trigger .city-background {
     top: 250px;
+  }
+  .integrate-section {
+    height: 550px;
   }
 }
 @media only screen and (max-width: 479px) {

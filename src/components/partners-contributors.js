@@ -197,7 +197,7 @@ const PartnersContributors = () => {
                   In the Media
                 </button>
               </div>
-              <div className="w-full flex flex-col justify-center lg:mt-0 sm:pb-24 mt-12 pb-12">
+              <div className="w-full flex flex-col justify-center lg:mt-12 sm:pb-24 mt-12 pb-12">
                 <div className="flex justify-center items-start 2xl:mt-10 xl:mt-3 lg:mt-8">
                   <a
                     href="https://www.afr.com/companies/financial-services/meet-the-defi-developers-who-ve-raised-funds-for-a-derivatives-system-20210628-p5850t"

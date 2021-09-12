@@ -16,12 +16,12 @@ const PaperDownload = ({title, header, image, downloadLink}) => {
             <h1 className="lg:text-3xl md:text-lg text-2xl text-white font-bold">{title}</h1>
           </div>
         </div>
-        <div className="py-4 px-8 bg-white">
+        <div className="py-5 px-7 bg-white">
           <a href={downloadLink} className="block">
             <img src={image} />
           </a>
           <a
-            className="bg-blue-600 w-32 h-12 my-7 mx-auto rounded-xl text-white flex items-center justify-center"
+            className="bg-blue-600 w-32 h-12 mt-10 mb-8 mx-auto rounded-xl text-white flex items-center justify-center"
             href={downloadLink}
           >
             Download
