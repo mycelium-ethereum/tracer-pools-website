@@ -764,7 +764,7 @@ footer {
     width: 80px;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px){
   .md\:pt-13 {
     padding-top: 3.3rem;
   }
