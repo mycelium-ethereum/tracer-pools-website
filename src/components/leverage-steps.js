@@ -95,7 +95,7 @@ const LeverageSteps = (direction) => {
                   src={MobileSteps}
                 />
               </div>
-              <div className="w-2/4 step-animation relative 2xl:-top-24 lg:-top-32 xl:scale-75 xl:right-0 lg:scale-50 lg:-right-12 lg:opacity-100 opacity-0 lg:block transform-gpu scale-50 hidden z-10">
+              <div className="w-2/4 step-animation relative 2xl:-top-24 lg:-top-32 xl:scale-75 xl:right-11 lg:scale-50 lg:-right-12 lg:opacity-100 opacity-0 lg:block transform-gpu scale-50 hidden z-10">
                 <div className="absolute step-animation__tile">
                   <img
                     className="step-animation__empty relative top-0 right-0 w-full opacity-0"

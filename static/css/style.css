@@ -507,9 +507,6 @@ section {
 
 /* --------------- INTEGRATE SECTION --------------- */
 
-.integrate-section {
-  overflow: hidden;
-}
 .integrate-animation {
   height: 950px;
 }

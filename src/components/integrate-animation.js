@@ -28,13 +28,13 @@ const IntegrateAnimation = () => {
   return (
     <section
       className={
-        "integrate-section flex sm:items-center items-start sm:h-screen h-auto md:pt-0 pt-6 " +
+        "integrate-section flex sm:items-center items-start h-auto md:pt-0 pt-6 " +
         (isActive ? "active" : "")
       }
     >
-      <div className="flex h-full w-full container mx-auto relative items-center lg:flex-row lg:pb-0 lg:justify-end justify-start xl:px-0 sm:pb-0 pb-96 flex-col px-4">
+      <div className="flex h-full w-full container mx-auto relative items-center lg:flex-row lg:justify-end justify-start xl:px-0 flex-col px-4">
         <div
-          className="force-flex lg:absolute xl:left-0 left-4 2xl:mt-72 lg:mt-96 lg:justify-start lg:flex-row justify-center flex-col mx-auto z-10"
+          className="force-flex lg:absolute xl:left-0 left-4 2xl:mt-48 lg:mt-48 lg:justify-start lg:flex-row justify-center flex-col mx-auto z-10"
           data-stellar-ratio="1.2"
         >
           <div className="integrate-text xl:w-full lg:w-96 h-auto flex flex-col justify-center">
@@ -47,7 +47,7 @@ const IntegrateAnimation = () => {
             </p>
           </div>
         </div>
-        <div className="w-2/5 integrate-animation 2xl:scale-75 absolute 2xl:-right-48 transform-gpu 2xl:top-0 xl:top-4 lg:scale-50 lg:-right-24 lg:top-0 sm:scale-50 sm:-right-12 sm:-bottom-48 -right-10 -bottom-72">
+        <div className="w-2/5 integrate-animation 2xl:scale-75 relative 2xl:-right-48 transform-gpu 2xl:top-0 xl:top-4 lg:scale-50 lg:-right-24 lg:-top-0 sm:scale-50 sm:-right-48 sm:bottom-0 -right-10 -bottom-72">
           <img className="integrate-animation__tile lg:opacity-0" src={Base} />
           <img
             className="integrate-animation__layerone lg:opacity-0"

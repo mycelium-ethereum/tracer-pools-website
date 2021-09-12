@@ -2,6 +2,9 @@ var w = window.innerWidth;
 var size = w >= 1024 ? "big" : "small";
 var controller;
 var prevElement;
+const halfScreen = window.innerHeight * 0.5;
+const threeQuarterScreen = window.innerHeight * 0.75;
+const oneFifthScreenHeight = window.innerHeight * 0.2;
 
 function stepAnimation() {
   var tl = gsap.timeline();
@@ -21,7 +24,6 @@ function stepAnimation() {
 }
 function tokenAnimation() {
   var t2 = gsap.timeline();
-  const halfScreen = window.innerHeight * 0.5;
   t2.from("#token-trigger", 1, { xPercent: 0, opacity: 1 });
 
   const scene = new ScrollMagic.Scene({
@@ -38,13 +40,12 @@ function tokenAnimation() {
 function cityAnimation() {
   var t3 = gsap.timeline();
   t3.from("#city-trigger", 1, { xPercent: 0, opacity: 1 });
-  const halfScreen = window.innerHeight * 0.5;
 
   const scene = new ScrollMagic.Scene({
     triggerElement: "#city-trigger",
     triggerHook: "onLeave",
     duration: "0%",
-    offset: -halfScreen,
+    offset: -threeQuarterScreen,
   })
     .setTween(t3)
     .setClassToggle("#city-trigger", "active")
@@ -54,13 +55,12 @@ function cityAnimation() {
 function buildingAnimation() {
   var t4 = gsap.timeline();
   t4.from("#building-trigger", 1, { xPercent: 0, opacity: 1 });
-  const quarterScreen = window.innerHeight * 0.25;
 
   const scene = new ScrollMagic.Scene({
     triggerElement: "#building-trigger",
     triggerHook: "onLeave",
     duration: "0%",
-    offset: -quarterScreen,
+    offset: -halfScreen,
   })
     .setTween(t4)
     .setClassToggle("#building-trigger", "active")
@@ -70,7 +70,6 @@ function buildingAnimation() {
 function integrateAnimation() {
   var t5 = gsap.timeline();
   t5.from(".integrate-section", 1, { xPercent: 0, opacity: 1 });
-  const oneFifthScreenHeight = window.innerHeight * 0.2;
 
   const scene = new ScrollMagic.Scene({
     triggerElement: ".integrate-section",
@@ -161,7 +160,7 @@ function handleResize() {
         initialiseScrollMagic();
       }
     }
-  }, 350);
+  }, 500);
 }
 function initialiseElements() {
   const title = document.title.split(" ")[0];
