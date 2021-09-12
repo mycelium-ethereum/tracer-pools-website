@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
         transition={{
           ease: "linear",
           duration: 0.7,
-          delay: 0.2,
+          delay: 0.4,
         }}
       >
         <BackgroundParallax />
