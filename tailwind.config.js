@@ -7,6 +7,7 @@ module.exports = {
       colors: {
         blue: {
           1000: "#0d2bd3",
+          1100: "#0000b0",
         },
       },
     },
