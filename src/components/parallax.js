@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Parallax from "parallax-js";
 
 // Images
@@ -10,12 +10,25 @@ import PinkArrow from "/static/img/home-page/background/pink-arrow-right.png";
 import PinkSquare from "/static/img/home-page/background/pink-square.png";
 import PinkRectangle from "/static/img/home-page/background/pink-rectangle.png";
 
-const BackgroundParallax = ({ fixed, quarterOverlay }) => {
+const BackgroundParallax = (props) => {
+  const [fixed, setFixed] = useState(false);
+  const [quarterOverlay, setQuarterOverlay] = useState(false);
+  const checkPage = () => {
+    const currentPage = window.location.pathname;
+    if (currentPage === "/privacy-policy" || currentPage === "/radar") {
+      setFixed(true);
+    }
+    if (currentPage === "/learn") {
+      setQuarterOverlay(true);
+    }
+  };
+
   useEffect(() => {
     const scene = document.querySelector(".tile-bg");
     const scene2 = document.querySelector(".square-middle");
     new Parallax(scene);
     new Parallax(scene2);
+    checkPage();
   }, []);
   return (
     <>
@@ -79,9 +92,10 @@ const BackgroundParallax = ({ fixed, quarterOverlay }) => {
         </div>
       </div>
       <div
-        className={"absolute top-0 left-0 w-full z-0 overflow-hidden bg-blue " + (
-          quarterOverlay ? "learn-overlay" : "h-full"
-        )}
+        className={
+          "absolute top-0 left-0 w-full z-0 overflow-hidden bg-blue transition-all duration-500 " +
+          (quarterOverlay ? "learn-overlay" : "h-screen")
+        }
       />
     </>
   );

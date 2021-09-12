@@ -3,12 +3,14 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import BackgroundParallax from "./parallax";
 import Scripts from "./scripts";
 
 const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
+      <BackgroundParallax />
       <motion.main
         initial={{
           opacity: 0,

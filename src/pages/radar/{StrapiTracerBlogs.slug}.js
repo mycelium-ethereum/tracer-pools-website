@@ -4,7 +4,6 @@ import React, { Component } from "react";
 // Components
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
-import BackgroundParallax from "../../components/parallax";
 import BlogText from "../../components/blog-text";
 import Socials from "../../components/socials";
 import { graphql } from "gatsby";
@@ -60,7 +59,6 @@ class BlogPostTemplate extends Component {
     return (
       <>
         <SEO title={this.props.data.strapiTracerBlogs.title} />
-        <BackgroundParallax fixed />
         <Layout>
           <BlogText data={this.props.data.strapiTracerBlogs} />
           <Socials />
