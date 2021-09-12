@@ -5,7 +5,7 @@ import DOMPurify from "dompurify";
 import Moment from "react-moment";
 import { Link } from "gatsby";
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, className }) => {
   const truncate = (str) => {
     const maxLength = 200;
     return str.length > maxLength ? str.substring(0, maxLength) + "..." : str;
@@ -21,7 +21,7 @@ const BlogPost = ({ data }) => {
   return (
     <Link
       to={`/radar/` + data.node.slug}
-      className="h-auto col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-bl-xl rounded-br-xl cursor-pointer"
+      className={"h-auto col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-bl-xl rounded-br-xl cursor-pointer " + (className ? className : "")}
     >
       <div className="relative h-auto overflow-hidden rounded-tl-xl rounded-tr-xl">
         <img src={data.node.image[0].formats.medium.url} />
