@@ -10,7 +10,7 @@ import PinkArrow from "/static/img/home-page/background/pink-arrow-right.png";
 import PinkSquare from "/static/img/home-page/background/pink-square.png";
 import PinkRectangle from "/static/img/home-page/background/pink-rectangle.png";
 
-const BackgroundParallax = ({fixed}) => {
+const BackgroundParallax = ({ fixed, quarterOverlay }) => {
   useEffect(() => {
     const scene = document.querySelector(".tile-bg");
     const scene2 = document.querySelector(".square-middle");
@@ -22,7 +22,7 @@ const BackgroundParallax = ({fixed}) => {
       <div
         className={
           (fixed ? "fixed" : "absolute") +
-          " left-0 w-full xl:transform-none xl:left-0 lg:transform-gpu lg:scale-75 lg:left-1/2 lg:-translate-x-1/2 h-full z-10 pointer-events-none sm:top-0 -top-32"
+          " left-0 w-screen xl:transform-none xl:left-0 lg:transform-gpu lg:scale-75 lg:left-1/2 lg:-translate-x-1/2 h-full z-10 pointer-events-none sm:top-0 -top-32 overflow-x-hidden"
         }
       >
         <div className="absolute tile-bg">
@@ -78,7 +78,11 @@ const BackgroundParallax = ({fixed}) => {
           />
         </div>
       </div>
-      <div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden bg-blue" />
+      <div
+        className={"absolute top-0 left-0 w-full z-0 overflow-hidden bg-blue " + (
+          quarterOverlay ? "learn-overlay" : "h-full"
+        )}
+      />
     </>
   );
 };

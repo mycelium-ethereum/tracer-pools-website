@@ -77,6 +77,9 @@
 .w-screen {
   width: 100vw !important;
 }
+.learn-overlay {
+  height: 580px;
+}
 .min-w-video {
   max-width: 1920px;
   width: 100%;
