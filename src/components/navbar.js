@@ -7,14 +7,14 @@ import TracerLogo from "../../static/img/tracer-logo.svg";
 import Dropdown from "../../static/img/general/dropdown.svg";
 import MenuIcon from "../../static/img/general/menu.svg";
 import MenuCloseIcon from "../../static/img/general/menu-close.svg";
-import TracerBoxPurple from '../../static/img/tracer-icon-box-purple.svg';
-import TracerBoxGreen from '../../static/img/tracer-icon-box-green.svg';
-import TracerBoxBlue from '../../static/img/tracer-icon-box-blue.svg';
-import DiscourseLogo from '../../static/img/discourse-white.svg';
-import TwitterLogo from '../../static/img/twitter-white.svg';
-import GitHubLogo from '../../static/img/github-white.svg';
-import DiscordLogo from '../../static/img/discord-white.svg';
-import Folder from '../../static/img/folder.svg';
+import TracerBoxPurple from "../../static/img/tracer-icon-box-purple.svg";
+import TracerBoxGreen from "../../static/img/tracer-icon-box-green.svg";
+import TracerBoxBlue from "../../static/img/tracer-icon-box-blue.svg";
+import DiscourseLogo from "../../static/img/discourse-white.svg";
+import TwitterLogo from "../../static/img/twitter-white.svg";
+import GitHubLogo from "../../static/img/github-white.svg";
+import DiscordLogo from "../../static/img/discord-white.svg";
+import Folder from "../../static/img/folder.svg";
 
 const Navbar = () => {
   const [transparentNav, setTransparentNav] = useState(true);
@@ -23,22 +23,26 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      const logo = document.getElementById('logo');
-      const toggle = document.getElementById('toggle');
-      const dropdown = document.getElementById('dropdown');
+      const logo = document.getElementById("logo");
+      const toggle = document.getElementById("toggle");
+      const dropdown = document.getElementById("dropdown");
       if (logo && toggle && dropdown) {
-        if (!logo.contains(event.target) && !toggle.contains(event.target) && !dropdown.contains(event.target)) {
+        if (
+          !logo.contains(event.target) &&
+          !toggle.contains(event.target) &&
+          !dropdown.contains(event.target)
+        ) {
           setDropdownOpen(false);
         }
       }
     };
     if (!dropdownOpen) {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     } else {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
     }
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [dropdownOpen]);
 
@@ -81,28 +85,28 @@ const Navbar = () => {
 
   const Icons = [
     {
-      text: 'Website',
-      href: 'https://tracer.finance',
+      text: "Website",
+      href: "https://tracer.finance",
       logo: Folder,
     },
     {
-      text: 'Twitter',
-      href: 'https://twitter.com/TracerDAO',
+      text: "Twitter",
+      href: "https://twitter.com/TracerDAO",
       logo: TwitterLogo,
     },
     {
-      text: 'Discourse',
-      href: 'https://discourse.tracer.finance/',
+      text: "Discourse",
+      href: "https://discourse.tracer.finance/",
       logo: DiscourseLogo,
     },
     {
-      text: 'Github',
-      href: 'https://github.com/tracer-protocol/',
+      text: "Github",
+      href: "https://github.com/tracer-protocol/",
       logo: GitHubLogo,
     },
     {
-      text: 'Discord',
-      href: 'https://discord.gg/7rhrmYkAJs',
+      text: "Discord",
+      href: "https://discord.gg/7rhrmYkAJs",
       logo: DiscordLogo,
     },
   ];
@@ -114,84 +118,131 @@ const Navbar = () => {
         "fixed top-0 left-0 w-full z-50 transition-colors duration-300 " +
         (transparentNav ? "bg-transparent" : "bg-navblue")
       }
+      onMouseLeave={() => setDropdownOpen(false)}
     >
       <div className="container h-16 flex justify-between items-center mx-auto xl:px-0 px-4">
         <div className="relative flex">
-
-          <div
+          <Link
             id="logo"
             className="cursor-pointer"
-            onClick={() => setDropdownOpen(!dropdownOpen)}>
+            onClick={() => setDropdownOpen(!dropdownOpen)}
+            to="/"
+          >
             <img
               className="sm:w-24 w-22 h-auto"
               src={TracerLogo}
               alt="Tracer Logo"
             />
-          </div>
-
+          </Link>
           <div
             id="toggle"
             className="sm:flex hidden pl-3 w-22 h-22 left-0 top-0 z-0 justify-center items-center cursor-pointer"
-            onClick={() => setDropdownOpen(!dropdownOpen)}
+            onMouseEnter={() => setDropdownOpen(!dropdownOpen)}
           >
             <img className="w-4 h-auto" src={Dropdown} alt="Dropdown toggle" />
           </div>
-
           <div
             id="dropdown"
             className={
-              "dropdown absolute top-14 w-60 p-4 bg-blue-1100 rounded-lg sm:block hidden transition-opacity duration-500 " +
+              "dropdown absolute top-10 w-80 p-8 bg-blue-1100 rounded-lg sm:block hidden transition-opacity duration-500 " +
               (dropdownOpen
                 ? "pointer-events-all opacity-100"
                 : "pointer-events-none opacity-0")
             }
           >
-            <a className="flex mb-3" href="/" target="_blank" rel="noreferrer noopener">
-              <img className="h-12 mr-3" src={TracerBoxPurple} alt="Tracer Box" />
+            <a
+              className="flex mb-6"
+              href="/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                className="h-12 mr-3"
+                src={TracerBoxPurple}
+                alt="Tracer Box"
+              />
               <span className="block text-white font-normal my-auto">
                 <p>Tracer</p>
-                <p><b>Perpetual Pools</b></p>
+                <p>
+                  <b>Perpetual Pools</b>
+                </p>
               </span>
             </a>
-            <a className="flex mb-3" href="https://gov.tracer.finance" target="_blank" rel="noreferrer noopener">
-              <img className="h-12 mr-3" src={TracerBoxGreen} alt="Tracer Box" />
+            <a
+              className="flex mb-6"
+              href="https://gov.tracer.finance"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                className="h-12 mr-3"
+                src={TracerBoxGreen}
+                alt="Tracer Box"
+              />
               <span className="block text-white font-normal my-auto">
                 <p>Tracer</p>
-                <p><b>Governance</b></p>
+                <p>
+                  <b>Governance</b>
+                </p>
               </span>
             </a>
-            <a className="flex mb-3" href="https://docs.tracer.finance" target="_blank" rel="noreferrer noopener">
+            <a
+              className="flex mb-6"
+              href="https://docs.tracer.finance"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <img className="h-12 mr-3" src={TracerBoxBlue} alt="Tracer Box" />
               <span className="block text-white font-normal my-auto">
                 <p>Tracer</p>
-                <p><b>Documentation</b></p>
+                <p>
+                  <b>Documentation</b>
+                </p>
               </span>
             </a>
-
             {Icons.map((icon) => (
-              <a className="flex items-center mt-3 pl-2" href={icon.href} target="_blank" rel="noreferrer">
-                  <span>
-                      <img className="w-5 mr-2" src={icon.logo} alt="Logo" />
-                  </span>
-                <span className="block text-white font-normal my-auto">{icon.text}</span>
+              <a
+                className="flex items-center mt-5 pl-2"
+                href={icon.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>
+                  <img
+                    className="w-5 mr-2 opacity-70"
+                    src={icon.logo}
+                    alt="Logo"
+                  />
+                </span>
+                <span className="block text-white font-normal my-auto">
+                  {icon.text}
+                </span>
               </a>
             ))}
           </div>
-
         </div>
         <div className="hidden sm:flex items-center">
           <div className="mr-7">
-            <Link className="nav-link transition-colors duration-700 p-2 rounded-lg" to="/">
+            <Link
+              className="nav-link transition-colors duration-700 p-2 rounded-lg"
+              to="/"
+            >
               <span className="text-white font-normal">Home</span>
             </Link>
           </div>
           <div className="mr-7">
-            <Link className="nav-link transition-colors duration-700 p-2 rounded-lg" to="/learn">
+            <Link
+              className="nav-link transition-colors duration-700 p-2 rounded-lg"
+              to="/learn"
+            >
               <span className="text-white font-normal">Learn</span>
             </Link>
           </div>
           <div className="mr-7">
-            <Link className="nav-link transition-colors duration-700 p-2 rounded-lg" to="/radar">
+            <Link
+              className="nav-link transition-colors duration-700 p-2 rounded-lg"
+              to="/radar"
+            >
               <span className="text-white font-normal">Radar</span>
             </Link>
           </div>
