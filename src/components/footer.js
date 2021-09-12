@@ -136,31 +136,19 @@ const Footer = () => {
               className="text-base font-normal text-white xl:pl-12 sm:mb-0 pl-6 mb-4"
               to="#"
             >
-              Terms of Use
+              Litepaper
             </Link>
             <Link
               className="text-base font-normal text-white xl:pl-12 sm:mb-0 pl-6 mb-4"
               to="#"
             >
-              Disclaimer
-            </Link>
-            <Link
-              className="text-base font-normal text-white xl:pl-12 sm:mb-0 pl-6 mb-4"
-              to="https://app.gitbook.com/login/tracer-1/pool-swaps"
-            >
-              Docs
+              Documentation (Gitbook)
             </Link>
             <Link
               className="text-base font-normal text-white xl:pl-12 sm:mb-0 pl-6 mb-4"
               to="#"
             >
-              FAQs
-            </Link>
-            <Link
-              className="text-base font-normal text-white xl:pl-12 sm:mb-0 pl-6 mb-4"
-              to="#"
-            >
-              Tutorials
+              Security Audit
             </Link>
           </div>
         </div>

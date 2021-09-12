@@ -181,17 +181,17 @@ const Navbar = () => {
         </div>
         <div className="hidden sm:flex items-center">
           <div className="mr-7">
-            <Link className="nav-link p-2 rounded-lg" to="/">
+            <Link className="nav-link transition-colors duration-700 p-2 rounded-lg" to="/">
               <span className="text-white font-normal">Home</span>
             </Link>
           </div>
           <div className="mr-7">
-            <Link className="nav-link p-2 rounded-lg" to="/learn">
+            <Link className="nav-link transition-colors duration-700 p-2 rounded-lg" to="/learn">
               <span className="text-white font-normal">Learn</span>
             </Link>
           </div>
           <div className="mr-7">
-            <Link className="nav-link p-2 rounded-lg" to="/radar">
+            <Link className="nav-link transition-colors duration-700 p-2 rounded-lg" to="/radar">
               <span className="text-white font-normal">Radar</span>
             </Link>
           </div>

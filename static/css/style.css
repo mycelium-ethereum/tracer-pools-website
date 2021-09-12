@@ -77,6 +77,9 @@
 .w-screen {
   width: 100vw !important;
 }
+.learn-overlay {
+  height: 580px;
+}
 .min-w-video {
   max-width: 1920px;
   width: 100%;
@@ -96,6 +99,7 @@ html {
   overflow-x: hidden;
 }
 body {
+  position: relative;
   font-family: "Source Sans Pro", Arial, sans-serif;
   background: var(--darkblue);
 }
@@ -503,9 +507,6 @@ section {
 
 /* --------------- INTEGRATE SECTION --------------- */
 
-.integrate-section {
-  overflow: hidden;
-}
 .integrate-animation {
   height: 950px;
 }
@@ -759,6 +760,11 @@ footer {
   }
   .slick-slide .token {
     width: 80px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .md\:pt-13 {
+    padding-top: 3.3rem;
   }
 }
 @media only screen and (max-width: 767px) {

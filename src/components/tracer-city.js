@@ -55,7 +55,7 @@ const TracerCity = () => {
       </section>
       <section
         id="building-trigger"
-        className="panel w-full lg:h-auto h-auto staking-section flex lg:items-center relative items-start xl:pb-12 pt-24 bg-blue z-10"
+        className="panel w-full lg:h-auto h-auto staking-section flex lg:items-center relative items-start xl:pb-12 lg:pt-0 pt-24 bg-blue z-10"
       >
         <div className="container flex justify-between mx-auto w-full h-full xl:px-0 px-4 lg:flex-row flex-col-reverse relative z-10">
           <video
@@ -64,7 +64,7 @@ const TracerCity = () => {
             autoPlay
             playsInline
             id="tracer-building"
-            className="lg:opacity-0 transition-opacity duration-700 h-full lg:w-1/2 lg:mx-0 mx-auto w-3/4 md:mt-0 mt-6 lg:static lg:left-none relative"
+            className="h-fit lg:opacity-0 transition-opacity duration-700 lg:w-1/2 lg:mx-0 mx-auto w-3/4 md:mt-0 mt-6 lg:static lg:left-0 relative"
           >
             <source src={TracerBuildingWEBM} type="video/webm" />
             <source src={TracerBuildingMP4} type="video/mp4" />

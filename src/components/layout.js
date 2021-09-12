@@ -3,12 +3,14 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import BackgroundParallax from "./parallax";
 import Scripts from "./scripts";
 
 const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
+      <BackgroundParallax />
       <motion.main
         initial={{
           opacity: 0,
@@ -20,8 +22,8 @@ const Layout = ({ children }) => {
           opacity: 0,
         }}
         transition={{
-          ease: "easeOut",
-          duration: 0.5,
+          ease: "easeIn",
+          duration: 0.3,
           delay: 1,
         }}
       >
