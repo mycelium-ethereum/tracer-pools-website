@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import BlogPost from "./blog-post";
+import PostLink from "./blog-post-link";
 
 const query = graphql`
   query TracerBlogs {
@@ -45,7 +45,7 @@ const BlogPosts = () => {
                       : 1
                   )
                   .map((node, i) => (
-                    <BlogPost data={node} key={i} />
+                    <PostLink data={node} key={i} />
                   ))}
               </div>
             )}
