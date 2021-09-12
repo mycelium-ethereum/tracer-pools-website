@@ -22,8 +22,8 @@ const Layout = ({ children }) => {
           opacity: 0,
         }}
         transition={{
-          ease: "easeOut",
-          duration: 0.5,
+          ease: "easeIn",
+          duration: 0.3,
           delay: 1,
         }}
       >
