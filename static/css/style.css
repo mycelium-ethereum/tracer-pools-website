@@ -619,6 +619,28 @@ footer {
 }
 
 /* --------------- MEDIA QUERIES --------------- */
+@media only screen and (min-width: 3000px) {
+  #token-trigger .container {
+    padding-top: 450px;
+  }
+  #token-trigger .city-background {
+    top: 700px;
+  }
+  .large-spacer {
+    height: 1000px;
+  }
+  .small-spacer {
+    height: 800px;
+  }
+  footer img#footer-bg {
+    bottom: -490px;
+  }
+  /* main .parallax-tiles {
+    top: 50%;
+    left: 50%;
+    transform: scale(1.5) translate(-50%, -50%) !important;
+  } */
+}
 @media only screen and (min-width: 2000px) {
   #token-trigger .container {
     padding-top: 450px;

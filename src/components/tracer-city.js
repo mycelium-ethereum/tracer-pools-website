@@ -58,7 +58,7 @@ const TracerCity = () => {
       </section>
       <section
         id="building-trigger"
-        className="panel w-full lg:h-auto h-auto staking-section flex lg:items-center relative items-start xl:pb-12 lg:pt-0 pt-24 bg-blue z-10"
+        className="panel w-full lg:h-auto h-auto staking-section flex lg:items-center relative items-start xl:pb-12 lg:pt-0 pt-24 bg-blue z-10 overflow-hidden"
       >
         <div className="container flex justify-between mx-auto w-full h-full xl:px-0 px-4 lg:flex-row flex-col-reverse relative z-10">
           <video
