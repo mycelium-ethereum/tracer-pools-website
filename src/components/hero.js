@@ -17,9 +17,8 @@ const Hero = () => {
               Perpetual Pools
             </h1>
             <p className="text-white text-xl lg:block hidden leading-snug">
-              Leveraged exposure. No margins.
-              <br />
-              No liquidations. A new derivative primitive.
+              Leveraged exposure. No margins. No liquidations.
+              <br />A new derivative primitive.
             </p>
             <p className="text-white text-normal lg:hidden block">
               Leveraged exposure.

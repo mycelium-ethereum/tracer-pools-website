@@ -142,12 +142,12 @@ const Footer = () => {
             >
               Litepaper
             </a>
-            <Link
+            <a
               className="text-base font-normal text-white xl:pl-12 sm:mb-0 sm:pl-6 mb-4"
-              to="https://app.gitbook.com/login/tracer-1/pool-swaps"
+              href="https://app.gitbook.com/login/tracer-1/pool-swaps"
             >
               Documentation (Gitbook)
-            </Link>
+            </a>
             <Link
               className="text-base font-normal text-white xl:pl-12 sm:mb-0 sm:pl-6 mb-4"
               to="/radar/sigma-prime-audit"

@@ -16,13 +16,13 @@ const BlogText = ({ data }) => {
   };
   const applyStyles = (e) => {
     if (e.tagName === "P") {
-      e.setAttribute("class", "text-sm mb-4");
+      e.setAttribute("class", "mb-4");
     }
     if (e.tagName === "OL") {
-      e.setAttribute("class", "text-sm list-decimal list-outside pl-4 mb-4");
+      e.setAttribute("class", "list-decimal list-outside pl-4 mb-4");
     }
     if (e.tagName === "UL") {
-      e.setAttribute("class", "text-sm list-disc list-outside pl-4 mb-4");
+      e.setAttribute("class", "list-disc list-outside pl-4 mb-4");
     }
     if (e.tagName === "A") {
       e.setAttribute("class", "text-blue-500");
@@ -31,7 +31,7 @@ const BlogText = ({ data }) => {
       e.setAttribute("class", "text-black text-xl mt-8 mb-4 font-semibold");
     }
     if (e.tagName === "IMG") {
-      e.setAttribute("class", "mx-auto");
+      e.setAttribute("class", "mx-auto rounded-lg");
     }
   };
   const getTags = () => {

@@ -1,6 +1,9 @@
 /* eslint-disable */
 import React, { useEffect, useState } from "react";
 import Dropdown from "../../static/img/general/chevron-down.svg";
+import { Link } from "gatsby";
+// Litepaper
+import PoolsPDF from "../../static/img/learn/pools/perpetual-pools.pdf";
 
 const PrivacyText = () => {
   const [protocolDropdownOpen, setProtocolDropdownOpen] = useState(false);
@@ -21,7 +24,7 @@ const PrivacyText = () => {
     <>
       <section className="h-full w-full z-20 relative mt-16 bg-white">
         <div className="container relative w-full mx-auto pt-6 pb-6 lg:px-0 px-4 md:grid block grid-cols-12">
-          <aside class="md:w-60 w-full h-auto col-span-1">
+          <aside className="md:w-60 w-full h-auto col-span-1">
             <button
               className="relative md:hidden inline-flex mr-4 justify-start items-center text-base font-semibold w-28 h-11 rounded-xl bg-gray-50 pl-4"
               onClick={() => {
@@ -60,23 +63,19 @@ const PrivacyText = () => {
                 Protocol
               </span>
               <ul className="md:mt-2 md:pl-4">
+                <li className="mb-2">Privacy Policy</li>
                 <li className="mb-2">
-                  <a className="text-black text-sm" href="#">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a className="text-gray-500 text-sm" href="#">
+                  <a className="text-gray-500" href="#">
                     Disclaimer
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a className="text-gray-500 text-sm" href="#">
+                  <a className="text-gray-500" href="#">
                     Terms of Use
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a className="text-gray-500 text-sm" href="#">
+                  <a className="text-gray-500" href="#">
                     Participation Agreement
                   </a>
                 </li>
@@ -93,19 +92,22 @@ const PrivacyText = () => {
               </span>
               <ul className="md:mt-2 md:pl-4">
                 <li className="mb-2">
-                  <a className="text-gray-500 text-sm" href="#">
+                  <a href={PoolsPDF} className="text-gray-500" download>
                     Litepaper
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a className="text-gray-500 text-sm" href="#">
+                  <a
+                    className="text-gray-500"
+                    href="https://app.gitbook.com/login/tracer-1/pool-swaps"
+                  >
                     Documentation (Gitbook)
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a className="text-gray-500 text-sm" href="#">
+                  <Link className="text-gray-500" to="/radar/sigma-prime-audit">
                     Security Audit
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -120,13 +122,13 @@ const PrivacyText = () => {
             <h1 className="text-black text-4xl mb-4 font-semibold">
               Privacy Policy
             </h1>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               In this Privacy Policy, ‘us’ ‘we’ or ‘our’ means Tracer DAO. We
               are committed to respecting your privacy. Our Privacy Policy sets
               out how we collect, use, store and disclose your personal
               information.
             </p>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               This Privacy Policy applies to our services, which include the
               services we provide on https://tracer.finance/ or any other
               websites, pages, features, or content we own or operate or when
@@ -134,7 +136,7 @@ const PrivacyText = () => {
               this Privacy Policy, do not access or use the services, websites,
               or any other aspect of our business.
             </p>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               By providing personal information to us, you consent to our
               collection, use and disclosure of your personal information in
               accordance with this Privacy Policy and any other arrangements
@@ -143,19 +145,19 @@ const PrivacyText = () => {
               you to check our website periodically to ensure that you are aware
               of our current Privacy Policy.
             </p>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               Personal information includes information or an opinion about an
               individual that is reasonably identifiable.
             </p>
             <p className="mb-4 mt-8 font-semibold text-black text-lg">
               <b>How do we collect personal information?</b>
             </p>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               We may collect these types of personal information either directly
               from you, or from third parties. We may collect this information
               when you:
             </p>
-            <ul className="text-sm list-disc list-outside pl-4 mb-4">
+            <ul className="list-disc list-outside pl-4 mb-4">
               <li>register on our website or app;</li>
               <li>
                 communicate with us through correspondence, chats, email, or
@@ -169,11 +171,11 @@ const PrivacyText = () => {
             <p className="mb-4 mt-8 font-semibold text-black text-lg">
               <b>Why do we collect, use and disclose personal information?</b>
             </p>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               We may collect, hold, use and disclose your personal information
               for the following purposes:
             </p>
-            <ul className="text-sm list-disc list-outside pl-4 mb-4">
+            <ul className="list-disc list-outside pl-4 mb-4">
               <li>
                 to enable you to access and use our website, services and app;
               </li>
@@ -206,7 +208,7 @@ const PrivacyText = () => {
                 with third parties; and to consider your employment application.
               </li>
             </ul>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               We may also disclose your personal information to a trusted third
               party who also holds other information about you. This third party
               may combine that information in order to enable it and us to
@@ -217,7 +219,7 @@ const PrivacyText = () => {
             <p className="mb-4 mt-8 font-semibold text-black text-lg">
               <b>Using our website and cookies</b>
             </p>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               We may collect personal information about you when you use and
               access our website.
               <br /> While we do not use browsing information to identify you
@@ -229,7 +231,7 @@ const PrivacyText = () => {
             <p className="mb-4 mt-8 font-semibold text-black text-lg">
               <b>Integrated third party services</b>
             </p>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               Various third party services are integrated with our website,
               including MetaMask. Unless expressly stated otherwise, we are not
               responsible for the privacy practices of integrated third party
@@ -243,7 +245,7 @@ const PrivacyText = () => {
             <p className="mb-4 mt-8 font-semibold text-black text-lg">
               <b>Accessing or correcting your personal information</b>
             </p>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               You can access the personal information we hold about you by
               contacting us at hello@tracer.finance. Sometimes, we may not be
               able to provide you with access to all of your personal
@@ -256,7 +258,7 @@ const PrivacyText = () => {
             <p className="mb-4 mt-8 font-semibold text-black text-lg">
               <b>Contact Us</b>
             </p>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               For further information about our Privacy Policy or practices, or
               to access or correct your personal information, or make a
               complaint, please contact us at
@@ -265,16 +267,16 @@ const PrivacyText = () => {
             <p className="mb-4 mt-8 font-semibold text-black text-lg">
               <b>What personal information do we collect?</b>
             </p>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               For further information about our Privacy Policy or practices, or
               to access or correct your personal information, or make a
               complaint, please contact us at
               <a href="mailto:hello@tracer.finance">hello@tracer.finance</a>.
             </p>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               We may collect the following types of personal information:
             </p>
-            <ul className="text-sm list-disc list-outside pl-4 mb-4">
+            <ul className="list-disc list-outside pl-4 mb-4">
               <li>contact information, such as your email address;</li>
               <li>
                 transactional information, such as information about the
@@ -320,7 +322,7 @@ const PrivacyText = () => {
             <p className="mb-4 mt-8 font-semibold text-black text-lg">
               <b>Do we use your personal information for direct marketing?</b>
             </p>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               We and/or our carefully selected business partners may send you
               direct marketing communications and information about our service
               and products. This may take the form of emails, Discord messages,
@@ -333,11 +335,11 @@ const PrivacyText = () => {
             <p className="mb-4 mt-8 font-semibold text-black text-lg">
               <b>To whom do we disclose your personal information?</b>
             </p>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               We may disclose personal information for the purposes described in
               this privacy policy to:
             </p>
-            <ul className="text-sm list-disc list-outside pl-4 mb-4">
+            <ul className="list-disc list-outside pl-4 mb-4">
               <li>
                 third party suppliers and service providers (including providers
                 for the operation of our websites and/or our business or in
@@ -367,7 +369,7 @@ const PrivacyText = () => {
             <p className="mb-4 mt-8 font-semibold text-black text-lg">
               <b>Disclosure of personal information</b>
             </p>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               When you provide your personal information to us, you consent to
               the disclosure of your information globally. We will, however,
               take reasonable steps to ensure that any overseas recipient will
@@ -378,7 +380,7 @@ const PrivacyText = () => {
             <p className="mb-4 mt-8 font-semibold text-black text-lg">
               <b>Security</b>
             </p>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               We may hold your personal information in either electronic or hard
               copy form. We take reasonable steps to protect your personal
               information from misuse, interference and loss, as well as
@@ -390,7 +392,7 @@ const PrivacyText = () => {
             <p className="mb-4 mt-8 font-semibold text-black text-lg">
               <b>Links</b>
             </p>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               Our website may contain links to websites operated by third
               parties. Those links are provided for convenience and may not
               remain current or be maintained. Unless expressly stated
@@ -404,7 +406,7 @@ const PrivacyText = () => {
             <p className="mb-4 mt-8 font-semibold text-black text-lg">
               <b>Making a complaint</b>
             </p>
-            <p className="text-sm mb-4">
+            <p className="mb-4">
               If you think we have breached the OECD Guidelines on the
               Protection of Privacy and Transborder Flows of Personal Data, or
               you wish to make a complaint about the way we have handled your
@@ -419,7 +421,7 @@ const PrivacyText = () => {
             <p className="mb-4 mt-8 font-semibold text-black text-lg">
               <b>Effective</b>
             </p>
-            <p className="text-sm mb-4">23 April, 2021</p>
+            <p className="mb-4">23 April, 2021</p>
           </div>
         </div>
       </section>

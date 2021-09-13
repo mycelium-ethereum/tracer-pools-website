@@ -25,7 +25,10 @@ const LeverageSteps = (direction) => {
           <section className="panel lg:absolute top-0 left-0 step-one flex flex-col lg:justify-center justify-start w-full h-full lg:pointer-events-none pointer-events-auto">
             <div className="flex container mx-auto w-full lg:flex-row flex-col items-center h-auto lg:pt-48 xl:px-0 px-4">
               <div className="step-info xl:pb-0 lg:pb-32 lg:w-2/4 w-full lg:text-left text-center relative">
-                <small id="steps" className="2xl:text-3xl lg:text-2xl color-blue text-3xl font-bold bg-blue">
+                <small
+                  id="steps"
+                  className="2xl:text-3xl lg:text-2xl color-blue text-3xl font-bold bg-blue"
+                >
                   Perpetual Pools
                 </small>
                 <h1 className="2xl:text-6xl text-white lg:text-5xl text-4xl font-bold bg-blue lg:mt-4 mt-2 lg:mb-10 mb-6">
@@ -36,9 +39,9 @@ const LeverageSteps = (direction) => {
                     01
                   </span>
                   <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
-                    Select side
+                    Select market
                     <br />
-                    BTC/DAI, LINK/DAI, or ETH/DAI
+                    BTC/USDC or ETH/USDC
                   </p>
                 </div>
                 <div className="step-progress absolute 2xl:bottom-40 lg:bottom-52 left-0 justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out lg:flex hidden">
@@ -48,15 +51,15 @@ const LeverageSteps = (direction) => {
                   <span className="w-1/4 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                 </div>
               </div>
-              <div id="mobile-steps" className="lg:hidden w-80 mx-auto z-20">
+              <div id="mobile-steps" className="lg:hidden sm:w-80 w-full mx-auto z-20">
                 <div data-step="1" className="grid grid-cols-4 w-full">
                   <span className="font-normal text-6xl text-white col-span-1">
                     01
                   </span>
                   <p className="font-normal text-normal text-white col-span-3 mb-8">
-                    Select side
+                    Select market
                     <br />
-                    BTC/DAI, LINK/DAI, or ETH/DAI
+                    BTC/USDC or ETH/USDC
                   </p>
                 </div>
                 <div data-step="2" className="grid grid-cols-4 w-full">
@@ -64,7 +67,7 @@ const LeverageSteps = (direction) => {
                     02
                   </span>
                   <p className="font-normal text-normal text-white col-span-3 mb-8">
-                    Select market
+                    Select side
                     <br />
                     Long or short
                   </p>
@@ -74,9 +77,9 @@ const LeverageSteps = (direction) => {
                     03
                   </span>
                   <p className="font-normal text-normal text-white col-span-3 mb-8">
-                    Select leverage
+                    Select power leverage
                     <br />
-                    1x, 2x, 3x, 5x, or 15x
+                    1, 2, 3, 5, or 15
                   </p>
                 </div>
                 <div data-step="41" className="grid grid-cols-4 w-full">
@@ -86,8 +89,7 @@ const LeverageSteps = (direction) => {
                   <p className="font-normal text-normal text-white col-span-3">
                     Enter collateral
                     <br />
-                    Deposit collateral and press ‘buy’ to gain leveraged
-                    exposure.
+                    Enter collateral and select 'Buy' to gain leveraged exposure
                   </p>
                 </div>
                 <img
@@ -155,7 +157,7 @@ const LeverageSteps = (direction) => {
                     02
                   </span>
                   <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
-                    Select market
+                    Select side
                     <br />
                     Long or short
                   </p>
@@ -183,9 +185,9 @@ const LeverageSteps = (direction) => {
                     03
                   </span>
                   <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
-                    Select leverage
+                    Select power leverage
                     <br />
-                    1x, 2x, 3x, 5x, or 15x
+                    1, 2, 3, 5, or 15
                   </p>
                 </div>
                 <div className="step-progress absolute 2xl:bottom-40 lg:bottom-52 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
@@ -211,8 +213,7 @@ const LeverageSteps = (direction) => {
                     04
                   </span>
                   <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
-                    Enter collateral Deposit collateral and press 'buy' to gain
-                    leveraged exposure
+                    Enter collateral and select 'Buy' to gain leveraged exposure
                   </p>
                 </div>
                 <div className="step-progress absolute 2xl:bottom-40 lg:bottom-52 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
