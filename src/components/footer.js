@@ -64,15 +64,15 @@ const Footer = () => {
     });
   }, []);
   return (
-    <footer className="w-full relative overflow-hidden lg:pb-10 h-1/2 z-10">
+    <footer className="w-full relative overflow-hidden lg:py-10 h-1/2 z-10 bg-blue">
       <img
         id="footer-bg"
-        className="absolute 2xl:-top-60 xl:-top-48 -top-20 left-0 w-full h-auto "
+        className="absolute 2xl:-top-full xl:-top-96 md:-top-56 sm:-top-44 -top-10 left-0 w-full h-auto "
         src={CityBottomDark}
       />
       <div className="container mx-auto relative xl:flex flex-col justify-between z-1 xl:px-0 px-8">
-        <div className="flex flex-col xl:justify-center justify-between items-center lg:w-full lg:pt-8 sm:w-max w-full h-auto mx-auto pt-16">
-          <span className="text-white lg:w-auto lg:mb-6 lg:text-left text-center w-full text-2xl">
+        <div className="flex flex-col xl:justify-center justify-between items-center lg:w-full lg:pt-8 sm:w-max sm:px-0 w-full h-auto mx-auto pt-16 mb-20 px-2">
+          <span className="text-white lg:w-auto lg:mb-6 lg:text-left lg:text-xl font-semibold text-center w-full text-lg">
             Stay updated on the latest Tracer news
           </span>
           <form
@@ -111,45 +111,45 @@ const Footer = () => {
             </button>
           </form>
         </div>
-        <div className="h-auto w-full flex lg:flex-row flex-col justify-between items-center">
+        <div className="h-auto w-full flex lg:flex-row flex-col justify-between sm:items-center items-start">
           <span className="text-base font-normal text-white">
             &copy; <span id="year" /> Tracer DAO
           </span>
-          <div className="w-max h-6 flex justify-between lg:mt-0 lg:mb-0 mt-4 mb-4">
+          <div className="w-max h-6 flex justify-between items-center lg:mt-0 lg:mb-0 mt-4 mb-4">
             <a href="https://twitter.com/TracerDAO" target="_blank">
               <img
-                className="w-6 h-6 cursor-pointer ml-6"
+                className="w-6 h-6 cursor-pointer sm:ml-6"
                 src={Twitter}
                 alt="Twitter"
               />
             </a>
             <a href="https://github.com/tracer-protocol" target="_blank">
               <img
-                className="w-6 h-6 cursor-pointer ml-6"
+                className="w-7 h-7 cursor-pointer ml-6"
                 src={Github}
                 alt="GitHub"
               />
             </a>
           </div>
-          <div className="flex w-full justify-center flex-wrap lg:h-6 lg:w-max lg:justify-between lg:flex-nowrap lg:mb-0 sm:mt-0 mt-6 mb-6">
-            <Link className="text-base font-normal text-white" to="/privacy-policy">
+          <div className="flex w-full justify-center flex-wrap lg:h-6 lg:w-max lg:justify-between lg:flex-nowrap lg:mb-0 sm:flex-row sm:mt-0 flex-col mt-6 mb-6">
+            <Link className="text-base font-normal text-white sm:mb-0 mb-4" to="/privacy-policy">
               Privacy Policy
             </Link>
             <a
-              className="text-base font-normal text-white xl:pl-12 sm:mb-0 pl-6 mb-4"
+              className="text-base font-normal text-white xl:pl-12 sm:mb-0 sm:pl-6 mb-4"
               href={PoolsPDF}
               download
             >
               Litepaper
             </a>
             <Link
-              className="text-base font-normal text-white xl:pl-12 sm:mb-0 pl-6 mb-4"
+              className="text-base font-normal text-white xl:pl-12 sm:mb-0 sm:pl-6 mb-4"
               to="https://app.gitbook.com/login/tracer-1/pool-swaps"
             >
               Documentation (Gitbook)
             </Link>
             <Link
-              className="text-base font-normal text-white xl:pl-12 sm:mb-0 pl-6 mb-4"
+              className="text-base font-normal text-white xl:pl-12 sm:mb-0 sm:pl-6 mb-4"
               to="/radar/sigma-prime-audit"
             >
               Security Audit

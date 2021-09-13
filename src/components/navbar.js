@@ -97,12 +97,7 @@ const Navbar = () => {
     >
       <div className="container h-16 flex justify-between items-center mx-auto xl:px-0 px-4">
         <div className="relative flex">
-          <Link
-            id="logo"
-            className="cursor-pointer"
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-            to="/"
-          >
+          <Link id="logo" className="cursor-pointer" to="/">
             <img
               className="sm:w-24 w-22 h-auto"
               src={TracerLogo}
@@ -113,6 +108,7 @@ const Navbar = () => {
             id="toggle"
             className="sm:flex hidden pl-3 w-22 h-22 left-0 top-0 z-0 justify-center items-center cursor-pointer"
             onMouseEnter={() => setDropdownOpen(!dropdownOpen)}
+            onClick={() => setDropdownOpen(!dropdownOpen)}
           >
             <img className="w-4 h-auto" src={Dropdown} alt="Dropdown toggle" />
           </div>
@@ -223,14 +219,20 @@ const Navbar = () => {
             </Link>
           </div>
           <div>
-            <Button className="mt-0" linkTo="https://pools-testing.netlify.app/">
+            <Button
+              className="mt-0"
+              linkTo="https://pools-testing.netlify.app/"
+            >
               Launch Pools
             </Button>
           </div>
         </div>
-        <div className="sm:hidden block" onClick={() => setNavOpen(!navOpen)}>
+        <button
+          className="sm:hidden block cursor-pointer"
+          onClick={() => setNavOpen(!navOpen)}
+        >
           <img className="w-6 h-6" src={MenuIcon} alt="Menu" />
-        </div>
+        </button>
       </div>
       <menu
         className={
