@@ -32,11 +32,11 @@ const Hero = () => {
             >
               Launch Pools
             </Button>
-            <Link to="https://app.gitbook.com/login/tracer-1/pool-swaps">
+            <a to="https://app.gitbook.com/login/tracer-1/pool-swaps">
               <div className="mx-auto mt-2 w-48 h-12 flex justify-center items-center text-normal font-normal text-white hover:underline">
                 Documentation
               </div>
-            </Link>
+            </a>
           </header>
           <div className="2xl:max-w-screen-xl xl:max-w-screen-lg 2xl:-bottom-80 xl:-bottom-96 lg:-bottom-72 md:-bottom-32 sm:-bottom-32 sm:px-24 absolute px-6 w-full -bottom-10 z-20">
             <img
