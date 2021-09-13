@@ -59,9 +59,12 @@ const Footer = () => {
   };
   useEffect(() => {
     setCopyrightYear();
-    window.addEventListener("click", function (e) {
+    document.addEventListener("click", function (e) {
       hideForm(e);
     });
+    return function () {
+      document.removeEventListener("click", hideForm);
+    };
   }, []);
   return (
     <footer className="w-full relative overflow-hidden lg:py-10 h-1/2 z-10 bg-blue">
@@ -132,7 +135,10 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex w-full justify-center flex-wrap lg:h-6 lg:w-max lg:justify-between lg:flex-nowrap lg:mb-0 sm:flex-row sm:mt-0 flex-col mt-6 mb-6">
-            <Link className="text-base font-normal text-white sm:mb-0 mb-4" to="/privacy-policy">
+            <Link
+              className="text-base font-normal text-white sm:mb-0 mb-4"
+              to="/privacy-policy"
+            >
               Privacy Policy
             </Link>
             <a
