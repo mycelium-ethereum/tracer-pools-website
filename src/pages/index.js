@@ -4,7 +4,6 @@ import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
-import Socials from "../components/socials";
 import TracerCity from "../components/tracer-city";
 import LeverageSteps from "../components/leverage-steps";
 import WalletAnimation from "../components/wallet-animation";

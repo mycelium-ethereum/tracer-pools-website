@@ -633,7 +633,8 @@ footer {
     height: 800px;
   }
   footer #footer-bg {
-    top: -320px;
+    top: unset;
+    bottom: -150px;
   }
 }
 @media only screen and (min-width: 1280px) {
