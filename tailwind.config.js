@@ -15,7 +15,6 @@ module.exports = {
   variants: {
     extend: {},
   },
-  // plugins: [],
   corePlugins: {
     container: false,
   },
@@ -42,5 +41,6 @@ module.exports = {
         },
       });
     },
+    require("@tailwindcss/typography"),
   ],
 };

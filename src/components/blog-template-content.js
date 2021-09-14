@@ -14,14 +14,14 @@ const BlogText = ({ data }) => {
     bodyText.current.innerHTML = bodyTextHTML;
   };
   const applyStyles = (e) => {
-    if (e.tagName === "P") {
-      e.setAttribute("class", "mb-4");
-    }
+    // if (e.tagName === "P") {
+    //   e.setAttribute("class", "mb-4");
+    // }
     if (e.tagName === "OL") {
-      e.setAttribute("class", "list-decimal list-outside pl-4 mb-4");
+      e.setAttribute("class", "list-outside mb-4");
     }
     if (e.tagName === "UL") {
-      e.setAttribute("class", "list-disc list-outside pl-4 mb-4");
+      e.setAttribute("class", "list-outside mb-4");
     }
     if (e.tagName === "A") {
       e.setAttribute("class", "text-blue-500");
@@ -80,7 +80,7 @@ const BlogText = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="max-w-blog mx-auto">
+          <div className="mx-auto">
             <h1 className=" text-black font-semibold mb-2 md:text-3xl text-2xl sm:text-center">
               {data.title}
             </h1>
@@ -88,7 +88,7 @@ const BlogText = ({ data }) => {
             <small className="block font-normal text-gray-500 sm:text-center sm:text-xl text-base">
               {data.tagline}
             </small>
-            <div ref={bodyText} className="mt-12 md:pr-0 pr-8"></div>
+            <div ref={bodyText} className="mt-12 md:pr-0 pr-8 prose mx-auto"></div>
           </div>
         </div>
       </section>

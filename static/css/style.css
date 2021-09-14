@@ -91,11 +91,11 @@
   min-height: 100%;
   clip-path: inset(1px 1px);
 }
-.max-w-blog {
-  max-width: 800px;
-}
 .h-fit {
   height: fit-content;
+}
+.prose {
+  max-width: 800px;
 }
 .select-dark *::selection  {
   color: var(--white);
@@ -123,7 +123,6 @@ img {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: transparent;
 }
 *:focus,
