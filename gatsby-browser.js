@@ -14,20 +14,20 @@ exports.wrapPageElement = ({ element }) => {
 //   }
 //   window.previousPath = window.locations[window.locations.length - 2];
 // };
+const transitionDelay = 1200;
 
 exports.shouldUpdateScroll = ({
   routerProps: { location },
-  getSavedScrollPosition
+  getSavedScrollPosition,
 }) => {
-  const TRANSITION_DELAY = 0.3 * 4500 * 2
   if (location.action === "PUSH") {
-    window.setTimeout(() => window.scrollTo(0, 0), TRANSITION_DELAY)
+    window.setTimeout(() => window.scrollTo(0, 0), transitionDelay);
+  } else {
+    const savedPosition = getSavedScrollPosition(location);
+    window.setTimeout(
+      () => window.scrollTo(...(savedPosition || [0, 0])),
+      transitionDelay
+    );
   }
-
-  else {
-    const savedPosition = getSavedScrollPosition(location) || [0, 0]
-    window.setTimeout(() => window.scrollTo(...savedPosition), TRANSITION_DELAY)
-  }
-
-  return false
-}
+  return false;
+};
