@@ -137,7 +137,7 @@ const Footer = () => {
               target="_blank"
             >
               <img
-                className="social-icon w-6 h-6 sm:ml-6"
+                className="social-icon w-6 h-6 sm:ml-6 ml-4"
                 src={Twitter}
                 alt="Twitter"
               />
@@ -148,7 +148,7 @@ const Footer = () => {
               target="_blank"
             >
               <img
-                className="social-icon w-7 h-7 ml-6"
+                className="social-icon w-7 h-7 sm:ml-6 ml-4"
                 src={Github}
                 alt="GitHub"
               />
@@ -159,7 +159,7 @@ const Footer = () => {
               target="_blank"
             >
               <img
-                className="social-icon w-6 h-6 sm:ml-6"
+                className="social-icon w-6 h-6 sm:ml-6 ml-4"
                 src={Discord}
                 alt="Discord"
               />

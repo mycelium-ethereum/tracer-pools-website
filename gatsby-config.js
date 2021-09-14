@@ -16,9 +16,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-preact",
-    },
-    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "src",

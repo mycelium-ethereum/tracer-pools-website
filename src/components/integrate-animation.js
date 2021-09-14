@@ -19,11 +19,11 @@ const IntegrateAnimation = () => {
   };
   useEffect(() => {
     toggleActiveStyles();
-    window.addEventListener("resize", toggleActiveStyles);
+    window.addEventListener("resize", toggleActiveStyles());
     return function () {
       window.removeEventListener("resize", toggleActiveStyles);
     };
-  });
+  }, []);
   return (
     <section
       className={

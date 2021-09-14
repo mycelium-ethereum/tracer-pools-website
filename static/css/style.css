@@ -1016,3 +1016,8 @@ footer {
     top: 200px;
   }
 }
+@media only screen and (max-width: 320px) {
+  footer #footer-bg {
+    top: 0px;
+  }
+}

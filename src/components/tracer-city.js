@@ -43,9 +43,9 @@ const TracerCity = () => {
               data-stellar-ratio="1.4"
               className="h-auto lg:absolute 2xl:mt-48 lg:mt-64 force-flex flex-col justify-center lg:items-start items-center z-10 xl:left-0 lg:left-4 lg:pb-0 lg:mb-0 sm:pt-0 xl:px-0 xl:w-full lg:w-80 w-full mx-auto left-0 pt-8 mb-0 lg:text-left text-center"
             >
-              <span className="xl:text-5xl lg:text-4xl font-semibold text-base lg:mb-2 mb-0 text-white color-blue">
+              <h1 className="font-bold text-white xl:text-5xl lg:text-4xl lg:mb-4 mb-2 text-3xl">
                 Built for DeFi
-              </span>
+              </h1>
               <small className="text-white font-light xl:w-80 lg:text-left lg:text-2xl lg:w-auto w-56 text-lg">
                 Use pool tokens with the dApps you know and love.
               </small>
