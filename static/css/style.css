@@ -479,7 +479,7 @@ section {
 .slick-slide .token {
   max-width: 117px;
 }
-.slick-slide[tab-index="-1"] {
+.slick-slide:not(.slick-current) {
   pointer-events: none;
 }
 
