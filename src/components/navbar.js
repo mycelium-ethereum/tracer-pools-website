@@ -31,7 +31,9 @@ const Navbar = () => {
     } else if (!isCollapsed() && scrollHeight < 1) {
       setTransparentNav(true);
     }
-    setNavOpen(!isCollapsed());
+    if (!isCollapsed()) {
+      setNavOpen(false);
+    }
   };
   const setActiveLink = () => {
     const path = window.location.pathname;
