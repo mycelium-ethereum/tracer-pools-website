@@ -303,6 +303,9 @@ section {
 
 /* NAVBAR */
 
+.dropdown {
+  transition: all 0.5s ease;
+}
 .nav-link.active {
   background: rgb(0 0 122 / 50%)
 }
@@ -859,7 +862,6 @@ footer {
   }
   .dropdown {
     width: 100vw;
-    transition: all 0.5s ease;
   }
   .dropdown.active {
     height: 100vh;

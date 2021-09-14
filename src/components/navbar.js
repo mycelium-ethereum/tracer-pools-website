@@ -116,7 +116,7 @@ const Navbar = () => {
           <div
             id="dropdown"
             className={
-              "dropdown sm:absolute fixed sm:p-8 px-4 bg-navblue block sm:rounded-lg sm:top-10 sm:w-80 left-0 top-16 box-border overflow-hidden " +
+              "dropdown transition-all duration-700 sm:absolute fixed sm:p-8 px-4 bg-navblue block sm:rounded-lg sm:top-10 sm:w-80 left-0 top-16 box-border overflow-hidden " +
               (dropdownOpen
                 ? "pointer-events-all opacity-100 active"
                 : "pointer-events-none sm:opacity-0 inactive")
