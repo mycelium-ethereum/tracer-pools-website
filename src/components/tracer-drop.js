@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import BlogPost from "./blog-post";
@@ -47,7 +46,7 @@ const TracerDrop = () => {
                   .slice(0, 3)
                   .map((node, i) => {
                     //   Hide the third post on tablet and below
-                    if (i == 2) {
+                    if (i === 2) {
                         return <BlogPost className="lg:block md:hidden block" data={node} key={i} />;
                     }
                     else {

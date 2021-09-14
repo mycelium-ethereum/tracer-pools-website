@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from "react";
 import PDFIcon from "../../static/img/learn/pdf-icon.svg";
 
@@ -10,6 +9,7 @@ const PaperDownload = ({ title, header, image, link }) => {
           <img
             className="absolute top-0 left-0 z-0 min-h-full min-w-full transform-gpu scale-105"
             src={header}
+            alt="Header Background"
           />
           <div className="relative z-10 text-center">
             <small className="lg:text-2xl md:text-base text-2xl text-white font-normal">
@@ -22,7 +22,7 @@ const PaperDownload = ({ title, header, image, link }) => {
         </div>
         <div className="py-5 px-7 bg-white">
           <a href={link} className="block" download>
-            <img src={image} />
+            <img src={image} alt="Research Paper page" />
           </a>
           <a
             className="transition-colors duration-500 w-32 h-12 mt-10 mb-8 mx-auto rounded-xl font-semibold text-white flex items-center justify-center bg-blue-600 hover:bg-blue-800"
@@ -30,7 +30,7 @@ const PaperDownload = ({ title, header, image, link }) => {
             download
           >
             Download
-            <img className="ml-2" src={PDFIcon} />
+            <img className="ml-2" src={PDFIcon}  alt="PDF Download"/>
           </a>
         </div>
       </div>

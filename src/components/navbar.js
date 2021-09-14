@@ -6,7 +6,6 @@ import Button from "./button";
 import TracerLogo from "../../static/img/tracer-logo.svg";
 import Dropdown from "../../static/img/general/dropdown.svg";
 import MenuIcon from "../../static/img/general/menu.svg";
-import MenuCloseIcon from "../../static/img/general/menu-close.svg";
 import TracerBoxPurple from "../../static/img/tracer-icon-box-purple.svg";
 import TracerBoxGreen from "../../static/img/tracer-icon-box-green.svg";
 import TracerBoxBlue from "../../static/img/tracer-icon-box-blue.svg";
@@ -56,7 +55,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", setSolidNav);
       window.removeEventListener("resize", setSolidNav);
     };
-  }, []);
+  });
 
   const Icons = [
     {
@@ -87,6 +86,7 @@ const Navbar = () => {
   ];
 
   return (
+    // eslint-disable-next-line
     <nav
       id="nav"
       className={
@@ -104,14 +104,14 @@ const Navbar = () => {
               alt="Tracer Logo"
             />
           </Link>
-          <div
+          <button
             id="toggle"
             className="sm:flex hidden pl-3 w-22 h-22 left-0 top-0 z-0 justify-center items-center cursor-pointer"
             onMouseEnter={() => setDropdownOpen(!dropdownOpen)}
             onClick={() => setDropdownOpen(!dropdownOpen)}
           >
             <img className="w-4 h-auto" src={Dropdown} alt="Dropdown toggle" />
-          </div>
+          </button>
           <div
             id="dropdown"
             className={
@@ -123,9 +123,9 @@ const Navbar = () => {
           >
             <a
               className="flex mb-6"
-              href="/"
+              href="https://pools-testing.netlify.app/"
+              rel="noreferrer"
               target="_blank"
-              rel="noopener"
             >
               <img
                 className="h-12 mr-3"
@@ -142,8 +142,8 @@ const Navbar = () => {
             <a
               className="flex mb-6"
               href="https://gov.tracer.finance"
+              rel="noreferrer"
               target="_blank"
-              rel="noopener"
             >
               <img
                 className="h-12 mr-3"
@@ -160,8 +160,8 @@ const Navbar = () => {
             <a
               className="flex mb-6"
               href="https://docs.tracer.finance"
+              rel="noreferrer"
               target="_blank"
-              rel="noopener"
             >
               <img className="h-12 mr-3" src={TracerBoxBlue} alt="Tracer Box" />
               <span className="block text-white font-normal my-auto">
@@ -175,8 +175,8 @@ const Navbar = () => {
               <a
                 className="flex items-center mt-5 pl-2"
                 href={icon.href}
-                target="_blank"
                 rel="noreferrer"
+                target="_blank"
                 key={i}
               >
                 <span>

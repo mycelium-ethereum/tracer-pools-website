@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from "react";
 
 // Components
@@ -6,7 +5,6 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Header from "../components/header";
 import BlogPosts from "../components/blog-posts";
-import Socials from "../components/socials";
 
 const Index = () => {
   return (
@@ -18,7 +16,6 @@ const Index = () => {
           subheading={"Read the latest news for Tracer"}
         />
         <BlogPosts />
-        <Socials />
       </Layout>
     </>
   );

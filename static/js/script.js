@@ -31,7 +31,7 @@ function tokenAnimation() {
   const scene = new ScrollMagic.Scene({
     triggerElement: "#token-trigger",
     triggerHook: "onLeave",
-    duration: "40%",
+    duration: "45%",
     offset: -oneFifthScreenHeight
   })
     .setTween(t2)

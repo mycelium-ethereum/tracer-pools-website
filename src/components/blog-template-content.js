@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useEffect, useRef } from "react";
 import Home from "../../static/img/blog-posts/home.svg";
 import Calendar from "../../static/img/blog-posts/calendar.svg";
@@ -49,7 +48,7 @@ const BlogText = ({ data }) => {
   useEffect(() => {
     setBodyText();
     getTags();
-  }, []);
+  });
   return (
     <>
       <section className="h-full w-full z-20 relative mt-16 bg-white select-dark">
@@ -57,7 +56,7 @@ const BlogText = ({ data }) => {
           <div className="flex justify-between md:flex-row flex-col lg:mb-32 md:md-20 mb-12">
             <div className="flex items-center text-gray-400">
               <Link to="/">
-                <img className="w-4.5 h-4.5" src={Home} />
+                <img className="w-4.5 h-4.5" src={Home} alt="Home" />
               </Link>
               <span className="mx-3">/</span>
               <Link to="/radar">Radar</Link>
@@ -66,13 +65,17 @@ const BlogText = ({ data }) => {
             </div>
             <div className="flex items-center flex-wrap text-gray-400 md:mt-0 mt-3">
               <div className="flex items-center md:mb-0 mb-3">
-                <img className="w-4.5 h-4.5 mr-3" src={Calendar} />
+                <img
+                  className="w-4.5 h-4.5 mr-3"
+                  src={Calendar}
+                  alt="Calendar"
+                />
                 <Moment className="md:mr-6 mr-3" format="Do MMMM, YYYY">
                   {data.publish_date}
                 </Moment>
               </div>
               <div className="flex items-center md:mb-0 mb-3">
-                <img className="w-4.5 h-4.5 mr-3" src={Clock} />
+                <img className="w-4.5 h-4.5 mr-3" src={Clock} alt="Clock" />
                 <span>Read time: {data.read_time} minutes</span>
               </div>
             </div>

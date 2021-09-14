@@ -494,9 +494,10 @@ section {
 #token-trigger .city-background {
   top: 420px;
 }
-/* #token-trigger.active #fade1 {
-  transition: opacity 0.5s ease 1s;
+#token-trigger.active #fade1 {
+  transition: opacity 0.5s ease;
 }
+/* 
 #token-trigger.active #fade2 {
   transition: opacity 0.5s ease 1.75s;
 }

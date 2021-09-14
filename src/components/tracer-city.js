@@ -18,16 +18,13 @@ const TracerCity = () => {
     if (browser) {
       switch (browser && browser.name) {
         case "safari":
-        case "firefox":
-        case "edge":
-        case "edge-chromium":
-          console.log("chrome/firefox");
-          setWebkit(false);
+          console.log("Safari");
+          setWebkit(true);
           break;
 
         default:
-          console.log("other/Safari");
-          setWebkit(true);
+          console.log("Not Safari");
+          setWebkit(false);
       }
     }
   };
@@ -71,14 +68,15 @@ const TracerCity = () => {
             className="h-fit lg:opacity-0 transition-opacity duration-700 h-full col-span-5 lg:static lg:transform-none transform-gpu scale-110 relative"
           >
             <source
-              src={isWebkit ? TracerCityVideoWEBM : TracerCityVideoMP4}
-              type={isWebkit ? "video/webm" : "video/mp4"}
+              src={isWebkit ? TracerCityVideoMP4 : TracerCityVideoWEBM}
+              type={isWebkit ? "video/mp4" : "video/webm"}
             />
           </video>
         </div>
         <img
           className="absolute w-full h-full left-2/4 transform-gpu opacity-50 -translate-x-1/2 bottom-0 z-0 block min-w-max"
           src={MeshSmall}
+          alt="Mesh Background"
         />
       </section>
       <section
@@ -95,8 +93,8 @@ const TracerCity = () => {
             className="h-fit lg:opacity-0 transition-opacity duration-700 lg:w-1/2 lg:mx-0 mx-auto w-3/4 md:mt-0 mt-6 lg:static lg:left-0 relative"
           >
             <source
-              src={isWebkit ? TracerBuildingWEBM : TracerBuildingMP4}
-              type={isWebkit ? "video/webm" : "video/mp4"}
+              src={isWebkit ? TracerBuildingMP4 : TracerBuildingWEBM}
+              type={isWebkit ? "video/mp4" : "video/webm"}
             />
           </video>
           <div
@@ -122,6 +120,7 @@ const TracerCity = () => {
         </div>
         <img
           className="absolute opacity-30 w-full h-auto md:top-1/2 top-3/4 transform -translate-y-1/2 left-0 z-0 min-w-max"
+          alt="Mesh Background"
           src={MeshLarge}
         />
       </section>

@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useEffect, useRef } from "react";
 import marked from "marked";
 import DOMPurify from "dompurify";
@@ -17,7 +16,7 @@ const PostLink = ({ data, className }) => {
     postDescription.current.innerText = truncate(
       postDescription.current.innerText
     );
-  }, []);
+  }, [data.node.description]);
   return (
     <Link
       to={`/radar/` + data.node.slug}
@@ -27,7 +26,11 @@ const PostLink = ({ data, className }) => {
       }
     >
       <div className="h-52 overflow-hidden rounded-tl-xl rounded-tr-xl">
-        <img className="w-full h-full object-cover object-top" src={data.node.image[0].formats.medium.url} />
+        <img
+          className="w-full h-full object-cover object-top"
+          src={data.node.image[0].formats.medium.url}
+          alt="Post Header"
+        />
       </div>
       {/* Set height is temporary */}
       <div className="px-4 py-4 rounded-bl-xl rounded-br-xl flex flex-col bg-white 2xl:h-auto 2xl:pb-14 lg:h-72 md:h-64 h-auto">

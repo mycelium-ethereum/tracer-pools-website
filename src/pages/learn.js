@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from "react";
 
 // Components
@@ -7,7 +6,6 @@ import SEO from "../components/seo";
 import ResearchPapers from "../components/research-papers";
 import LearnHeader from "../components/learn-header";
 import TracerDrop from "../components/tracer-drop";
-import Socials from "../components/socials";
 
 const Index = () => {
   return (
