@@ -35,7 +35,7 @@ const BlogPosts = () => {
           <StaticQuery
             query={query}
             render={(data) => (
-              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+              <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
                 {data.allStrapiTracerBlogs.edges
                   .sort((a, b) =>
                     new Date(a.node.publish_date) >

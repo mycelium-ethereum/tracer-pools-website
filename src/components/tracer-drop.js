@@ -35,7 +35,7 @@ const TracerDrop = () => {
           <StaticQuery
             query={query}
             render={(data) => (
-              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+              <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
                 {data.allStrapiTracerBlogs.edges
                   .sort((a, b) =>
                     new Date(a.node.publish_date) >
@@ -47,7 +47,7 @@ const TracerDrop = () => {
                   .map((node, i) => {
                     //   Hide the third post on tablet and below
                     if (i === 2) {
-                        return <BlogPost className="lg:block md:hidden block" data={node} key={i} />;
+                        return <BlogPost className="lg:block sm:hidden block" data={node} key={i} />;
                     }
                     else {
                         return <BlogPost data={node} key={i} />;
