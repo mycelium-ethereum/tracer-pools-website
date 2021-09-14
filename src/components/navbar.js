@@ -99,14 +99,17 @@ const Navbar = () => {
     // eslint-disable-next-line
     <nav
       id="nav"
-      className={
-        "fixed top-0 left-0 w-full z-50 transition-colors duration-300 " +
-        (transparentNav ? "bg-transparent" : "bg-navblue")
-      }
+      className="fixed top-0 left-0 w-full z-50"
       onMouseLeave={() => setDropdownOpen(false)}
     >
+      <div
+        className={
+          "nav-backdrop absolute top-0 left-0 h-full w-full transition-opacity duration-300 " +
+          (!transparentNav ? "opacity-100" : "opacity-0")
+        }
+      />
       {/* <img className="absolute top-0 left-0 h-full lg:hidden block" src={MobileHeader} /> */}
-      <div className="container h-16 flex justify-between items-center mx-auto xl:px-0 px-4">
+      <div className="container h-16 flex justify-between items-center mx-auto xl:px-0 px-4 relative z-10">
         <div className="relative flex">
           <Link id="logo" className="cursor-pointer" to="/">
             <img

@@ -26,7 +26,9 @@ const BackgroundParallax = (props) => {
   useEffect(() => {
     const scene = document.querySelector(".tile-bg");
     const scene2 = document.querySelector(".square-middle");
-    new Parallax(scene);
+    new Parallax(scene, {
+      
+    });
     new Parallax(scene2);
     checkPage();
   }, []);
