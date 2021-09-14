@@ -128,7 +128,14 @@ const Navbar = () => {
             }}
             onClick={() => handleDropdownClick()}
           >
-            <img className={"w-4 h-auto transition-all duration-500 transform " + (dropdownOpen ? "rotate-180" : "")} src={Dropdown} alt="Dropdown toggle" />
+            <img
+              className={
+                "w-4 h-auto transition-all duration-500 transform " +
+                (dropdownOpen ? "rotate-180" : "")
+              }
+              src={Dropdown}
+              alt="Dropdown toggle"
+            />
           </button>
           <div
             id="dropdown"
