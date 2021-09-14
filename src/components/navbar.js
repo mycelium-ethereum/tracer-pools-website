@@ -115,7 +115,7 @@ const Navbar = () => {
               alt="Dropdown toggle"
             />
           </button>
-          <DropdownMenu dropdownOpen={dropdownOpen} />
+          <DropdownMenu dropdownOpen={dropdownOpen} darkerNav={darkerNav} />
         </div>
         <div className="hidden sm:flex items-center">
           <div className="mr-3">

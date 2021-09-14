@@ -26,7 +26,7 @@ const WalletAnimation = () => {
           </h1>
           <p
             id="fade2"
-            className="text-2xl color-grey text-center font-normal color-orange lg:opacity-0"
+            className="md:text-2xl text-lg color-grey text-center font-normal color-orange lg:opacity-0"
           >
             That live in your wallet
           </p>
