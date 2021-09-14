@@ -3,13 +3,14 @@ import { Link } from "gatsby";
 
 // Images
 import CityBottomDark from "/static/img/general/footer-bg.png";
-import Twitter from "/static/img/icons/twitter.svg";
-import Github from "/static/img/icons/github.svg";
-// import Facebook from "/static/img/icons/facebook.svg";
-// import Dribbble from "/static/img/icons/dribbble.svg";
+import Discourse from "/static/img/social-icons/discourse.svg";
+import Twitter from "/static/img/social-icons/twitter.svg";
+import Github from "/static/img/social-icons/github.svg";
+import Discord from "/static/img/social-icons/discord.svg";
 
 // Litepaper
-import PoolsPDF from "../../static/img/learn/pools/perpetual-pools.pdf";
+import PoolsPDF from "../../static/pdf/Perpetual Pools.pdf";
+import AuditPDF from "../../static/pdf/Sigma Prime - Tracer DAO - Perpetual Pools Smart Contract Security Assessment Report - v1.1.pdf";
 
 const Footer = () => {
   const isBelowBreakpoint = () => {
@@ -119,18 +120,48 @@ const Footer = () => {
             &copy; <span id="year" /> Tracer DAO
           </span>
           <div className="w-max h-6 flex justify-between items-center lg:mt-0 lg:mb-0 mt-4 mb-4">
-            <a href="https://twitter.com/TracerDAO" rel="noreferrer" target="_blank">
+            <a
+              href="https://discourse.tracer.finance"
+              rel="noreferrer"
+              target="_blank"
+            >
               <img
-                className="w-6 h-6 cursor-pointer sm:ml-6"
+                className="social-icon w-6 h-6 sm:ml-6"
+                src={Discourse}
+                alt="Discourse"
+              />
+            </a>
+            <a
+              href="https://twitter.com/TracerDAO"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img
+                className="social-icon w-6 h-6 sm:ml-6"
                 src={Twitter}
                 alt="Twitter"
               />
             </a>
-            <a href="https://github.com/tracer-protocol" rel="noreferrer" target="_blank">
+            <a
+              href="https://github.com/tracer-protocol"
+              rel="noreferrer"
+              target="_blank"
+            >
               <img
-                className="w-7 h-7 cursor-pointer ml-6"
+                className="social-icon w-7 h-7 ml-6"
                 src={Github}
                 alt="GitHub"
+              />
+            </a>
+            <a
+              href="https://discord.com/invite/kddBUqDVVb"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img
+                className="social-icon w-6 h-6 sm:ml-6"
+                src={Discord}
+                alt="Discord"
               />
             </a>
           </div>
@@ -150,18 +181,19 @@ const Footer = () => {
             </a>
             <a
               className="text-base font-normal text-white xl:pl-12 sm:mb-0 sm:pl-6 mb-4"
-              rel="noreferrer" 
+              rel="noreferrer"
               target="_blank"
               href="https://app.gitbook.com/login/tracer-1/pool-swaps"
             >
               Documentation (Gitbook)
             </a>
-            <Link
+            <a
               className="text-base font-normal text-white xl:pl-12 sm:mb-0 sm:pl-6 mb-4"
-              to="/radar/sigma-prime-audit"
+              href={AuditPDF}
+              download
             >
               Security Audit
-            </Link>
+            </a>
           </div>
         </div>
       </div>

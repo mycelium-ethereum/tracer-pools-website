@@ -79,7 +79,7 @@ const LeverageSteps = (direction) => {
                     03
                   </span>
                   <p className="font-normal text-normal text-white col-span-3 mb-8">
-                    Select power leverage
+                    Choose power leverage
                     <br />
                     1, 2, 3, 5, or 15
                   </p>
@@ -198,7 +198,7 @@ const LeverageSteps = (direction) => {
                     03
                   </span>
                   <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
-                    Select power leverage
+                    Choose power leverage
                     <br />
                     1, 2, 3, 5, or 15
                   </p>

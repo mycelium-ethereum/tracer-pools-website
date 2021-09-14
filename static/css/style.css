@@ -305,11 +305,15 @@ section {
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 }
+.dropdown-option:hover,
 .nav-link:hover {
   background: rgb(0 0 122 / 50%)
 }
 .nav-link.active {
   background: rgb(0 0 122 / 50%)
+}
+.dropdown {
+  min-width: 350px;
 }
 .dropdown.active {
   height: 480px;
@@ -324,6 +328,9 @@ section {
 .dropdown.inactive a {
   opacity: 0;
   transition: all 0.5s ease 0s;
+}
+.social-icon:hover {
+  filter: invert(0) sepia(0100%) saturate(2000%) hue-rotate(140deg);
 }
 .menu-icon {
   position: relative;
@@ -757,6 +764,7 @@ section {
 footer {
   background: var(--midblue);
 }
+
 /* --------------- BLOG POSTS --------------- */
 
 .post-text img {

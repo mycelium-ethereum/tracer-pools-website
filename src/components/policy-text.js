@@ -4,7 +4,8 @@ import Dropdown from "../../static/img/general/chevron-down.svg";
 import { Link } from "gatsby";
 
 // Litepaper
-import PoolsPDF from "../../static/img/learn/pools/perpetual-pools.pdf";
+import AuditPDF from "../../static/pdf/Sigma Prime - Tracer DAO - Perpetual Pools Smart Contract Security Assessment Report - v1.1.pdf";
+import PoolsPDF from "../../static/pdf/Perpetual Pools.pdf";
 
 const PrivacyText = () => {
   const [protocolDropdownOpen, setProtocolDropdownOpen] = useState(false);
@@ -106,9 +107,9 @@ const PrivacyText = () => {
                   </a>
                 </li>
                 <li className="mb-2">
-                  <Link className="text-gray-500" to="/radar/sigma-prime-audit">
+                  <a className="text-gray-500" href={AuditPDF} download>
                     Security Audit
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>

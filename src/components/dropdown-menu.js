@@ -42,7 +42,7 @@ const DropdownMenu = ({ dropdownOpen }) => {
     <div
       id="dropdown"
       className={
-        "dropdown transform-gpu transition-all sm:duration-500 duration-700 sm:absolute fixed sm:px-8 px-4 block sm:rounded-lg sm:top-11 sm:w-80 left-0 top-16 box-border overflow-hidden " +
+        "dropdown transform-gpu transition-all sm:duration-500 duration-700 sm:absolute fixed sm:px-8 px-4 block sm:rounded-lg sm:top-11 left-0 top-16 box-border overflow-hidden " +
         (dropdownOpen
           ? "active"
           : "inactive")
@@ -51,7 +51,7 @@ const DropdownMenu = ({ dropdownOpen }) => {
       <div className="backdrop absolute top-0 left-0 h-full w-full" />
       <div className="relative sm:mt-8 mt-4">
         <a
-          className="flex mb-6"
+          className="dropdown-option transition-colors duration-500 flex mb-6 rounded-lg"
           href="https://pools-testing.netlify.app/"
           rel="noreferrer"
           target="_blank"
@@ -65,8 +65,8 @@ const DropdownMenu = ({ dropdownOpen }) => {
           </span>
         </a>
         <a
-          className="flex mb-6"
-          href="https://gov.tracer.finance"
+          className="dropdown-option transition-colors duration-500 flex mb-6 rounded-lg"
+          href="https://vote.tracer.finance/#/"
           rel="noreferrer"
           target="_blank"
         >
@@ -79,7 +79,7 @@ const DropdownMenu = ({ dropdownOpen }) => {
           </span>
         </a>
         <a
-          className="flex mb-6"
+          className="dropdown-option transition-colors duration-500 flex mb-6 rounded-lg"
           href="https://docs.tracer.finance"
           rel="noreferrer"
           target="_blank"
@@ -94,14 +94,14 @@ const DropdownMenu = ({ dropdownOpen }) => {
         </a>
         {Icons.map((icon, i) => (
           <a
-            className="flex items-center mt-5 pl-2"
+            className="dropdown-option transition-colors duration-500 flex items-center mt-5 rounded-lg"
             href={icon.href}
             rel="noreferrer"
             target="_blank"
             key={i}
           >
             <span>
-              <img className="w-5 mr-2 opacity-70" src={icon.logo} alt="Logo" />
+              <img className="social-icon w-5 mr-2 opacity-70" src={icon.logo} alt="Logo" />
             </span>
             <span className="block text-white font-normal my-auto">
               {icon.text}

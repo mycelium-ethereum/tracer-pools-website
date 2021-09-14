@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Button from "./button";
 
 // Images
-import DropdownMenu from "./dropdown-menu"
+import DropdownMenu from "./dropdown-menu";
 import TracerLogo from "../../static/img/tracer-logo.svg";
 import TracerLogoMobile from "../../static/img/general/mobile-logo.svg";
 import Dropdown from "../../static/img/general/dropdown.svg";
@@ -60,8 +60,6 @@ const Navbar = () => {
     // eslint-disable-next-line
   }, []);
 
-
-
   return (
     // eslint-disable-next-line
     <nav
@@ -106,7 +104,7 @@ const Navbar = () => {
               alt="Dropdown toggle"
             />
           </button>
-          <DropdownMenu dropdownOpen={dropdownOpen}/>
+          <DropdownMenu dropdownOpen={dropdownOpen} />
         </div>
         <div className="hidden sm:flex items-center">
           <div className="mr-3">
@@ -162,38 +160,41 @@ const Navbar = () => {
       </div>
       <menu
         className={
-          " fixed transition-all duration-700 h-screen w-full bg-navblue top-16 left-0 mt-0 pl-0" +
+          " fixed transition-all duration-700 h-screen w-full top-16 left-0 mt-0 pl-0" +
           (navOpen ? " left-0" : " left-full")
         }
       >
+        <div className="backdrop absolute top-0 left-0 h-full w-full transition-opacity duration-300" />
         <div className="flex flex-col justify-center w-60 mx-auto text-center pt-12">
-          <div className="mt-6 w-full">
-            <Link to="/learn">
-              <span className="text-white font-normal text-lg">Learn</span>
-            </Link>
-          </div>
-          <div className="mt-6 w-full">
-            <Button
-              className="h-12 w-full border border-white font-normal text-lg"
-              linkTo="https://pools-testing.netlify.app/"
-            >
-              Launch Pools
-            </Button>
-          </div>
-          <div className="mt-6 w-full">
+          <div className="relative">
+            <div className="mt-6 w-full">
+              <Link to="/learn">
+                <span className="text-white font-normal text-lg">Learn</span>
+              </Link>
+            </div>
+            <div className="mt-6 w-full">
+              <Button
+                className="h-12 w-full border border-white font-normal text-lg"
+                linkTo="https://pools-testing.netlify.app/"
+              >
+                Launch Pools
+              </Button>
+            </div>
+            {/* <div className="mt-6 w-full">
             <Link to="/perpetuals">
               <span className="text-white font-normal text-lg">Perpetuals</span>
             </Link>
-          </div>
-          <div className="mt-6 w-full">
-            <Link to="/govern">
-              <span className="text-white font-normal text-lg">Govern</span>
-            </Link>
-          </div>
-          <div className="mt-6 w-full">
-            <Link to="/radar">
-              <span className="text-white font-normal text-lg">Blog</span>
-            </Link>
+          </div> */}
+            <div className="mt-6 w-full">
+              <Link to="https://vote.tracer.finance/#/">
+                <span className="text-white font-normal text-lg">Govern</span>
+              </Link>
+            </div>
+            <div className="mt-6 w-full">
+              <Link to="/radar">
+                <span className="text-white font-normal text-lg">Blog</span>
+              </Link>
+            </div>
           </div>
         </div>
       </menu>
