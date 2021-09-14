@@ -45,7 +45,7 @@ const Hero = () => {
           </div>
         </div>
         <AnchorLink
-          to="#steps"
+          to="/#steps"
           className="absolute 2xl:right-48 xl:right-30 lg:right-32 sm:bottom-32 sm:right-16 border-2 border-white rounded-full bottom-12 right-6 w-14 h-14 bg-white bg-opacity-20 transition-colors duration-500 text-white hover:bg-white fill-current stroke-current hover:text-blue-400 z-20"
         >
           <svg
