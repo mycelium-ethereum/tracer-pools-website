@@ -4,7 +4,7 @@ import Dropdown from "../../static/img/general/chevron-down.svg";
 import { Link } from "gatsby";
 
 // Litepaper
-import AuditPDF from "../../static/pdf/Sigma Prime - Tracer DAO - Perpetual Pools Smart Contract Security Assessment Report - v1.1.pdf";
+import AuditPDF from "../../static/pdf/Sigma Prime - Tracer DAO - v1.1.pdf";
 import PoolsPDF from "../../static/pdf/Perpetual Pools.pdf";
 
 const PrivacyText = () => {
