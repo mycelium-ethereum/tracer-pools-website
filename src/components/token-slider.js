@@ -121,13 +121,13 @@ const TokenSlider = ({ className }) => {
         breakpoint: 750,
         settings: {
           speed: 1000,
-          slidesToShow: 5,
+          // slidesToShow: 5,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 4,
+          // slidesToShow: 4,
           speed: 1000,
         },
       },
