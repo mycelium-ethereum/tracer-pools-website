@@ -10,7 +10,7 @@ import Bitcoin from "/static/img/slider/bitcoin.svg";
 import EthereumToken from "/static/img/slider/ethereum.svg";
 import BalancerToken from "/static/img/slider/balancer.svg";
 import CompoundToken from "/static/img/slider/compound.svg";
-import CurveDAOToken from "/static/img/slider/curve-dao.svg";
+import CurveDAOToken from "/static/img/slider/curve-dao.png";
 import YearnToken from "/static/img/slider/yearn.svg";
 import SushiswapToken from "/static/img/slider/sushiswap.svg";
 import ShortPosition from "/static/img/slider/short-position.svg";
