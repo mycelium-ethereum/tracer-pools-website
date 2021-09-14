@@ -175,7 +175,12 @@ const Navbar = () => {
           (navOpen ? " left-0" : " left-full")
         }
       >
-        <div className="backdrop absolute top-0 left-0 h-full w-full transition-opacity duration-300" />
+        <div
+          className={
+            "backdrop absolute top-0 left-0 h-full w-full transition-opacity duration-300" +
+            (darkerNav ? " darker" : "")
+          }
+        />
         <div className="flex flex-col justify-center w-60 mx-auto text-center pt-12">
           <div className="relative">
             <div className="mt-6 w-full">

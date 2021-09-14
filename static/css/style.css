@@ -302,7 +302,7 @@ section {
 
 /* NAVBAR */
 .backdrop {
-  background: rgb(1 23 114 / 40%);
+  background: rgb(1 23 114 / 50%);
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 }

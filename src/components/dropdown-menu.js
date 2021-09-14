@@ -10,7 +10,7 @@ import GitHubLogo from "../../static/img/github-white.svg";
 import DiscordLogo from "../../static/img/discord-white.svg";
 import Folder from "../../static/img/folder.svg";
 
-const DropdownMenu = ({ dropdownOpen }) => {
+const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
   const Icons = [
     {
       text: "Website",
@@ -43,12 +43,14 @@ const DropdownMenu = ({ dropdownOpen }) => {
       id="dropdown"
       className={
         "dropdown transform-gpu transition-all sm:duration-500 duration-700 sm:absolute fixed sm:px-8 px-4 block sm:rounded-lg sm:top-11 left-0 top-16 box-border overflow-hidden " +
-        (dropdownOpen
-          ? "active"
-          : "inactive")
+        (dropdownOpen ? "active" : "inactive")
       }
     >
-      <div className="backdrop absolute top-0 left-0 h-full w-full" />
+      <div
+        className={"backdrop absolute top-0 left-0 h-full w-full" + (
+          darkerNav ? " darker" : ""
+        )}
+      />
       <div className="relative sm:mt-8 mt-4">
         <a
           className="dropdown-option transition-colors duration-500 flex mb-6 rounded-lg"
@@ -101,7 +103,11 @@ const DropdownMenu = ({ dropdownOpen }) => {
             key={i}
           >
             <span>
-              <img className="social-icon w-5 mr-2 opacity-70" src={icon.logo} alt="Logo" />
+              <img
+                className="social-icon w-5 mr-2 opacity-70"
+                src={icon.logo}
+                alt="Logo"
+              />
             </span>
             <span className="block text-white font-normal my-auto">
               {icon.text}

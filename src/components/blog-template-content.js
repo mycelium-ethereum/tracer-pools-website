@@ -14,20 +14,17 @@ const BlogText = ({ data }) => {
     bodyText.current.innerHTML = bodyTextHTML;
   };
   const applyStyles = (e) => {
-    // if (e.tagName === "P") {
-    //   e.setAttribute("class", "mb-4");
-    // }
     if (e.tagName === "OL") {
-      e.setAttribute("class", "list-outside mb-4");
+      e.setAttribute("class", "list-outside");
     }
     if (e.tagName === "UL") {
-      e.setAttribute("class", "list-outside mb-4");
+      e.setAttribute("class", "list-outside");
     }
     if (e.tagName === "A") {
       e.setAttribute("class", "text-blue-500");
     }
     if (e.tagName === "H2") {
-      e.setAttribute("class", "text-black text-xl mt-8 mb-4 font-semibold");
+      e.setAttribute("class", "text-black text-xl font-semibold");
     }
     if (e.tagName === "IMG") {
       e.setAttribute("class", "mx-auto rounded-lg");
@@ -88,7 +85,7 @@ const BlogText = ({ data }) => {
             <small className="block font-normal text-gray-500 sm:text-center sm:text-xl text-base">
               {data.tagline}
             </small>
-            <div ref={bodyText} className="mt-12 md:pr-0 pr-8 prose mx-auto"></div>
+            <div ref={bodyText} className="mt-6 md:pr-0 pr-8 prose mx-auto"></div>
           </div>
         </div>
       </section>
