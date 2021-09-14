@@ -51,9 +51,9 @@ const BlogText = ({ data }) => {
       <section className="h-full w-full z-20 relative mt-16 bg-white select-dark">
         <div className="container relative w-full mx-auto pt-6 pb-6 lg:px-0 px-4">
           <div className="flex justify-between md:flex-row flex-col lg:mb-32 md:md-20 mb-12">
-            <div className="flex items-center text-gray-400">
-              <Link to="/">
-                <img className="w-4.5 h-4.5" src={Home} alt="Home" />
+            <div className="flex sm:items-center items-start text-gray-400">
+              <Link to="/" className="flex items-center w-5 h-6">
+                <img className="home-icon" src={Home} alt="Home" />
               </Link>
               <span className="mx-3">/</span>
               <Link to="/radar">Radar</Link>

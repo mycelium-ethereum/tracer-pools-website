@@ -1031,4 +1031,8 @@ footer {
   footer #footer-bg {
     top: 0px;
   }
+  .home-icon {
+    min-width: 16px;
+    min-height: 16px;
+  }
 }
