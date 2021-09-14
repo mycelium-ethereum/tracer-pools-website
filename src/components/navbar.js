@@ -107,7 +107,7 @@ const Navbar = () => {
           </Link>
           <button
             id="toggle"
-            className="sm:flex hidden pl-3 w-22 h-22 left-0 top-0 z-0 justify-center items-center cursor-pointer"
+            className="flex pl-3 w-22 h-22 left-0 top-0 z-0 justify-center items-center cursor-pointer"
             onMouseEnter={() => setDropdownOpen(!dropdownOpen)}
             onClick={() => setDropdownOpen(!dropdownOpen)}
           >
@@ -116,14 +116,14 @@ const Navbar = () => {
           <div
             id="dropdown"
             className={
-              "dropdown absolute top-10 w-80 p-8 bg-blue-1100 rounded-lg sm:block hidden transition-opacity duration-500 " +
+              "dropdown sm:absolute fixed sm:p-8 px-4 bg-navblue block sm:rounded-lg sm:top-10 sm:w-80 left-0 top-16 box-border overflow-hidden " +
               (dropdownOpen
-                ? "pointer-events-all opacity-100"
-                : "pointer-events-none opacity-0")
+                ? "pointer-events-all opacity-100 active"
+                : "pointer-events-none sm:opacity-0 inactive")
             }
           >
             <a
-              className="flex mb-6"
+              className="flex mb-6 sm:mt-0 mt-4"
               href="https://pools-testing.netlify.app/"
               rel="noreferrer"
               target="_blank"
@@ -231,14 +231,17 @@ const Navbar = () => {
         <button
           className="sm:hidden block cursor-pointer"
           // eslint-disable-next-line
-          onClick={() => setNavOpen(!navOpen)}
+          onClick={() => {
+            setNavOpen(!navOpen);
+            setDropdownOpen(false);
+          }}
         >
           <img className="w-6 h-6" src={MenuIcon} alt="Menu" />
         </button>
       </div>
       <menu
         className={
-          " fixed transition-all duration-700 h-screen w-full bg-tracerblue top-16 left-0 mt-0 pl-0" +
+          " fixed transition-all duration-700 h-screen w-full bg-navblue top-16 left-0 mt-0 pl-0" +
           (navOpen ? " left-0" : " left-full")
         }
       >
@@ -248,7 +251,7 @@ const Navbar = () => {
               <span className="text-white font-normal text-lg">Learn</span>
             </Link>
           </div>
-          <div className="w-full">
+          <div className="mt-6 w-full">
             <Button
               className="h-12 w-full border border-white font-normal text-lg"
               linkTo="/"
