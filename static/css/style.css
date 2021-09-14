@@ -910,9 +910,6 @@ footer {
   div[data-stellar-ratio] {
     top: 0 !important;
   }
-  footer {
-    background: var(--tracerblue);
-  }
   .integrate-animation { 
     transform: scale(0.4);
   }
@@ -988,6 +985,9 @@ footer {
   }
   .dropdown.inactive {
     height: 0px;
+  }
+  footer #footer-bg {
+    top: 0px;
   }
 }
 @media only screen and (max-width: 479px) {
