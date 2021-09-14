@@ -1018,6 +1018,9 @@ footer {
   footer #footer-bg {
     top: -55px;
   }
+  .min-h-body {
+    min-height: auto;
+  }
 }
 @media only screen and (max-width: 479px) {
   .large-spacer {

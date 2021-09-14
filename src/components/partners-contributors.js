@@ -133,7 +133,7 @@ const PartnersContributors = () => {
               </div>
             </div>
           </section>
-          <section className="panel relative w-screen h-auto pt-12">
+          <section className="panel relative w-screen h-auto sm:pt-12 pt-20">
             <div className="container mx-auto flex flex-col items-center justify-start lg:px-0 px-4">
               <div className="justify-evenly sm:flex sm:text-left text-center block">
                 <button
