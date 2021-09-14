@@ -702,15 +702,15 @@ section {
 /* Dark blue base */
 .integrate-animation .integrate-animation__layerone {
   min-width: 1600px;
-  top: -640px;
+  top: -700px;
   right: -1010px;
   z-index: 0;
 }
 /* Second layer (pink rectangle) */
 .integrate-animation .integrate-animation__layertwo {
   min-width: 2000px;
-  bottom: 375px;
-  right: -1530px;
+  bottom: 300px;
+  right: -1830px;
   z-index: 1;
 }
 /* Third layer (arrow) */
@@ -723,8 +723,8 @@ section {
 .integrate-animation .integrate-animation__layerfour {
   mix-blend-mode: multiply;
   min-width: 1100px;
-  top: -175px;
-  right: -765px;
+  top: -460px;
+  right: -1300px;
 }
 
 /* Active styles*/
@@ -753,8 +753,8 @@ section {
 }
 /* Fourth layer (arrow green) */
 .integrate-section.active .integrate-animation .integrate-animation__layerfour {
-  top: -95px;
-  right: -565px;
+  top: -105px;
+  right: -615px;
 }
 .integrate-section.active .fade-anim {
   opacity: 1;
