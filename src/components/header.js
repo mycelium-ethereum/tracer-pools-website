@@ -1,7 +1,6 @@
-/* eslint-disable */
 import React from "react";
 
-const Header = ({title, subheading}) => {
+const Header = ({ title, subheading }) => {
   return (
     <>
       <header className="h-72 flex z-20 relative">

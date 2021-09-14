@@ -1,12 +1,11 @@
-/* eslint-disable */
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 
 // Images
 import CityBottomDark from "/static/img/general/footer-bg.png";
-// import Facebook from "/static/img/icons/facebook.svg";
 import Twitter from "/static/img/icons/twitter.svg";
 import Github from "/static/img/icons/github.svg";
+// import Facebook from "/static/img/icons/facebook.svg";
 // import Dribbble from "/static/img/icons/dribbble.svg";
 
 // Litepaper
@@ -65,13 +64,14 @@ const Footer = () => {
     return function () {
       document.removeEventListener("click", hideForm);
     };
-  }, []);
+  });
   return (
     <footer className="w-full relative overflow-hidden lg:py-10 h-1/2 z-10 bg-blue">
       <img
         id="footer-bg"
         className="absolute 2xl:-top-full xl:-top-96 md:-top-56 sm:-top-44 -top-10 left-0 w-full h-auto "
         src={CityBottomDark}
+        alt=""
       />
       <div className="container mx-auto relative xl:flex flex-col justify-between z-1 xl:px-0 px-8">
         <div className="flex flex-col xl:justify-center justify-between items-center lg:w-full lg:pt-8 sm:w-max sm:px-0 w-full h-auto mx-auto pt-16 mb-20 px-2">
@@ -119,14 +119,14 @@ const Footer = () => {
             &copy; <span id="year" /> Tracer DAO
           </span>
           <div className="w-max h-6 flex justify-between items-center lg:mt-0 lg:mb-0 mt-4 mb-4">
-            <a href="https://twitter.com/TracerDAO" target="_blank">
+            <a href="https://twitter.com/TracerDAO" rel="noreferrer" target="_blank">
               <img
                 className="w-6 h-6 cursor-pointer sm:ml-6"
                 src={Twitter}
                 alt="Twitter"
               />
             </a>
-            <a href="https://github.com/tracer-protocol" target="_blank">
+            <a href="https://github.com/tracer-protocol" rel="noreferrer" target="_blank">
               <img
                 className="w-7 h-7 cursor-pointer ml-6"
                 src={Github}
@@ -150,6 +150,8 @@ const Footer = () => {
             </a>
             <a
               className="text-base font-normal text-white xl:pl-12 sm:mb-0 sm:pl-6 mb-4"
+              rel="noreferrer" 
+              target="_blank"
               href="https://app.gitbook.com/login/tracer-1/pool-swaps"
             >
               Documentation (Gitbook)

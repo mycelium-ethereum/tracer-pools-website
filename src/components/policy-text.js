@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Dropdown from "../../static/img/general/chevron-down.svg";
 import { Link } from "gatsby";
+
 // Litepaper
 import PoolsPDF from "../../static/img/learn/pools/perpetual-pools.pdf";
 
@@ -65,17 +66,17 @@ const PrivacyText = () => {
               <ul className="md:mt-2 md:pl-4">
                 <li className="mb-2">Privacy Policy</li>
                 <li className="mb-2">
-                  <a className="text-gray-500" href="#">
+                  <a className="text-gray-500" href="/privacy-policy">
                     Disclaimer
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a className="text-gray-500" href="#">
+                  <a className="text-gray-500" href="/privacy-policy">
                     Terms of Use
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a className="text-gray-500" href="#">
+                  <a className="text-gray-500" href="/privacy-policy">
                     Participation Agreement
                   </a>
                 </li>

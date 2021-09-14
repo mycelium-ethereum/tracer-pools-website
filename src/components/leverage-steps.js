@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from "react";
 
 // Image assets
@@ -51,7 +50,10 @@ const LeverageSteps = (direction) => {
                   <span className="w-1/4 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
                 </div>
               </div>
-              <div id="mobile-steps" className="lg:hidden sm:w-80 w-full mx-auto z-20">
+              <div
+                id="mobile-steps"
+                className="lg:hidden sm:w-80 w-full mx-auto z-20"
+              >
                 <div data-step="1" className="grid grid-cols-4 w-full">
                   <span className="font-normal text-6xl text-white col-span-1">
                     01
@@ -95,6 +97,7 @@ const LeverageSteps = (direction) => {
                 <img
                   className="relative sm:bottom-0 -bottom-8 sm:-left-1/4 left-0 min-w-full max-w-none"
                   src={MobileSteps}
+                  alt="Leverage Steps"
                 />
               </div>
               <div className="w-2/4 step-animation relative 2xl:-top-24 lg:-top-32 xl:scale-75 xl:right-11 lg:scale-50 lg:-right-12 lg:opacity-100 opacity-0 lg:block transform-gpu scale-50 hidden z-10">
@@ -102,44 +105,54 @@ const LeverageSteps = (direction) => {
                   <img
                     className="step-animation__empty relative top-0 right-0 w-full opacity-0"
                     src={EmptyTile}
+                    alt=""
                   />
                   <img
                     className="step-animation__market absolute top-0 right-0 w-full opacity-0"
                     src={MarketTile}
+                    alt=""
                   />
                   <img
                     className="step-animation__side absolute top-0 right-0 w-full opacity-0"
                     src={SideTile}
+                    alt=""
                   />
                   <img
                     className="step-animation__leverage absolute top-0 right-0 w-full opacity-0"
                     src={LeverageTile}
+                    alt=""
                   />
                   <img
                     className="step-animation__amount absolute top-0 right-0 w-full opacity-0"
                     src={AmountTile}
+                    alt=""
                   />
                 </div>
                 <img
                   className="step-animation__base opacity-0"
                   src={BaseTile}
-                />
+                  alt=""
+                  />
                 <img
                   className="step-animation__lightblue-rectangle opacity-0"
                   src={LightBlueRectangle}
-                />
+                  alt=""
+                  />
                 <img
                   className="step-animation__pink-rectangle opacity-0"
                   src={PinkRectangle}
-                />
+                  alt=""
+                  />
                 <img
                   className="step-animation__blue-arrow opacity-0"
                   src={BlueArrow}
-                />
+                  alt=""
+                  />
                 <img
                   className="step-animation__blue-square opacity-0"
                   src={BlueSquare}
-                />
+                  alt=""
+                  />
               </div>
             </div>
           </section>

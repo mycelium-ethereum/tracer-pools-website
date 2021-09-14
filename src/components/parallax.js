@@ -44,50 +44,50 @@ const BackgroundParallax = (props) => {
               className="absolute opacity-50 blue-square"
               data-depth="0.2"
               src={BlueSquare}
-              alt="Blue square"
+              alt=""
             />
           </div>
           <img
             className="absolute opacity-50 blue-arrow"
             data-depth="0.2"
             src={BlueArrow}
-            alt="Blue arrow"
+            alt=""
           />
           <img
             className="absolute opacity-50 green-arrow z-20"
             data-depth="0.4"
             src={GreenArrow}
-            alt="Green arrow"
+            alt=""
           />
           <img
             className="absolute opacity-50 pink-arrow"
             data-depth="0.3"
             src={PinkArrow}
-            alt="Pink arrow"
+            alt=""
           />
           <img
             className="absolute opacity-50 blue-square-medium"
             data-depth="0.1"
             src={BlueSquare}
-            alt="Blue square medium"
+            alt=""
           />
           <img
             className="absolute opacity-50 blue-arrow-down"
             data-depth="0.2"
             src={BlueArrowDown}
-            alt="Blue arrow down"
+            alt=""
           />
           <img
             className="absolute opacity-50 pink-square"
             data-depth="0.2"
             src={PinkSquare}
-            alt="Pink square"
+            alt=""
           />
           <img
             className="absolute opacity-50 pink-rectangle"
             data-depth="0.1"
             src={PinkRectangle}
-            alt="Pink rectangle"
+            alt=""
           />
         </div>
       </div>

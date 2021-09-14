@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, { useEffect, useRef } from "react";
 
-class Scripts extends Component {
-  componentDidMount() {
+const Scripts = () => {
+  const scriptDiv = useRef();
+  useEffect(() => {
     const scripts = [
       "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js",
       "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js",
@@ -12,23 +13,20 @@ class Scripts extends Component {
       "/js/script.js",
     ];
 
-    const div = this.div;
-    scripts.forEach(function (value, index, array) {
+    scripts.forEach(function (value) {
       const script = document.createElement("script");
       script.async = false;
       script.referrerPolicy = "no-referrer";
       script.crossOrigin = "anonymous";
       script.src = value;
-      div.appendChild(script);
+      scriptDiv.current.appendChild(script);
     });
-  }
-  render() {
-    return (
-      <div className="scripts" ref={(el) => (this.div = el)}>
-        {/* Scripts are inserted here */}
-      </div>
-    );
-  }
-}
+  });
+  return (
+    <div className="scripts" ref={scriptDiv}>
+      {/* Scripts are inserted here */}
+    </div>
+  );
+};
 
 export default Scripts;

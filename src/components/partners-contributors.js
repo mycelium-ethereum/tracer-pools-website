@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useRef } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -83,38 +82,53 @@ const PartnersContributors = () => {
                   <img
                     className="2xl:w-60 lg:w-48 lg:mr-12 sm:mr-8 sm:w-32 w-20 mr-5"
                     src={Framework}
+                    alt="Framework Logo"
                   />
-                  <img className="2xl:w-44 lg:w-36 sm:w-24 w-14" src={Koji} />
+                  <img
+                    className="2xl:w-44 lg:w-36 sm:w-24 w-14"
+                    src={Koji}
+                    alt="Koji Logo"
+                  />
                 </div>
                 <div className="flex w-full mt-10 justify-center items-center">
                   <img
                     className="2xl:w-60 lg:w-48 lg:mr-12 sm:mr-8 sm:w-36 mr-3 w-20"
                     src={DACM}
+                    alt="DACM Logo"
                   />
                   <img
                     className="2xl:w-60 lg:w-48 lg:mr-12 sm:mr-8 sm:w-44 mr-3 w-32"
                     src={DistributedGlobal}
+                    alt="DistributedGlobal Logo"
                   />
                   <img
                     className="2xl:w-44 lg:w-44 lg:mr-12 sm:mr-8 sm:mt-0 sm:w-36 w-16"
                     src={GSR}
+                    alt="GSR Logo"
                   />
                 </div>
                 <div className="flex w-full mt-10 flex-wrap justify-center items-center">
                   <img
                     className="lg:w-32 lg:mr-12 sm:w-24 sm:mr-8 w-12 mr-3"
                     src={Maven}
+                    alt="Maven Logo"
                   />
                   <img
                     className="lg:w-24 lg:mr-12 sm:w-20 sm:mr-8 w-10 mr-3"
                     src={LAO}
+                    alt="The LAO Logo"
                   />
                   <img
                     className="lg:w-32 lg:mr-12 sm:w-24 sm:mr-8 w-12 mr-3"
                     src={EfficientFrontier}
+                    alt="EfficientFrontier Logo"
                   />
-                  <img className="lg:w-20 lg:mr-12 sm:w-12 w-7 mr-3" src={B} />
-                  <img className="lg:w-40 sm:w-24 w-12" src={Apollo} />
+                  <img
+                    className="lg:w-20 lg:mr-12 sm:w-12 w-7 mr-3"
+                    src={B}
+                    alt="B Logo"
+                  />
+                  <img className="lg:w-40 sm:w-24 w-12" src={Apollo} alt="Apollo Logo" />
                 </div>
               </div>
             </div>
@@ -149,24 +163,29 @@ const PartnersContributors = () => {
                   <img
                     className="2xl:w-60 lg:w-48 sm:mr-10 sm:w-48 w-24 mr-5"
                     src={Mycelium}
+                    alt="Mycelium Logo"
                   />
                   <img
                     className="2xl:w-60 lg:w-48 sm:w-48 w-24"
                     src={Chainlink}
+                    alt="Chainlink Logo"
                   />
                 </div>
                 <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center sm:mt-8 mt-4">
                   <img
                     className="2xl:w-60 lg:w-48 sm:w-48 w-24 sm:mr-10 mr-5"
                     src={SigmaPrime}
+                    alt="SigmaPrime Logo"
                   />
                   <img
                     className="lg:w-32 sm:w-20 sm:mr-10 w-16  mr-5"
                     src={RMIT}
+                    alt=" Logo"
                   />
                   <img
                     className="2xl:w-60 lg:w-48 sm:w-32 w-24 sm:mr-10 mr-5"
                     src={EPNS}
+                    alt="EPNS Logo"
                   />
                 </div>
               </div>
@@ -208,6 +227,7 @@ const PartnersContributors = () => {
                     <img
                       className="2xl:w-full xl:w-28 lg:w-52 sm:w-full w-32 rounded-2xl"
                       src={FinancialReview}
+                      alt="AFR Logo"
                     />
                     <p className="mb-4 mt-6 sm:text-xl text-lg">
                       <b className="text-semibold">
@@ -230,6 +250,7 @@ const PartnersContributors = () => {
                     <img
                       className="2xl:w-full xl:w-28 lg:w-52 sm:w-full w-32 rounded-2xl"
                       src={CoinTelegraph}
+                      alt="Coin Telegraph Logo"
                     />
                     <p className="mb-4 mt-6 sm:text-xl text-lg">
                       <b className="text-semibold">Coin Telegraph</b>

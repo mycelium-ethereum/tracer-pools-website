@@ -4,8 +4,6 @@ const Button = ({
   className,
   children,
   linkTo,
-  outlineButton,
-  glowButton,
   id,
 }) => {
   return (

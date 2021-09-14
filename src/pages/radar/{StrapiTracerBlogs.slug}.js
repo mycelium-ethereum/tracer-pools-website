@@ -53,6 +53,7 @@ export const query = graphql`
 class BlogPostTemplate extends Component {
   constructor(props) {
     super(props);
+    this.state = { props: props };
   }
 
   render() {

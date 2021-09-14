@@ -18,12 +18,12 @@ const TracerCity = () => {
     if (browser) {
       switch (browser && browser.name) {
         case "safari":
-          console.log("Safari");
+          // console.log("Safari");
           setWebkit(true);
           break;
 
         default:
-          console.log("Not Safari");
+          // console.log("Not Safari");
           setWebkit(false);
       }
     }
