@@ -74,13 +74,13 @@ const Footer = () => {
         alt=""
       />
       <div className="container mx-auto relative xl:flex flex-col justify-between z-1 xl:px-0 px-8">
-        <div className="flex flex-col xl:justify-center justify-between items-center lg:w-full lg:pt-8 sm:w-max sm:px-0 w-full h-auto mx-auto pt-6 mb-20 px-2">
+        <div className="flex flex-col xl:justify-center justify-between items-center lg:w-full lg:pt-8 sm:w-max sm:px-0 w-full h-auto mx-auto pt-6 mb-20">
           <span className="text-white lg:w-auto lg:mb-6 lg:text-left lg:text-xl font-semibold text-center w-full text-lg">
             Stay updated on the latest Tracer news
           </span>
           <form
             id="subscription-form"
-            className="2xl:mb-96 2xl:pb-0 lg:mb-72 lg:w-min sm:ml-0 sm:mr-0 mx-auto w-full flex lg:mt-0 mt-4 justify-between md:flex-row flex-col"
+            className="2xl:mb-96 2xl:pb-0 lg:mb-72 lg:w-min sm:ml-0 sm:mr-0 mx-auto w-full flex lg:mt-0 mt-4 justify-between md:flex-row flex-col sm:px-0 px-6"
             onSubmit={(e) => handleSubmit(e)}
           >
             <input type="hidden" name="u" value="15" />

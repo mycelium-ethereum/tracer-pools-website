@@ -995,7 +995,7 @@ footer {
     transition: all 0.5s ease 0s;
   }
   footer #footer-bg {
-    top: 0px;
+    top: -55px;
   }
 }
 @media only screen and (max-width: 479px) {

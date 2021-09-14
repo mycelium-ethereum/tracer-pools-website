@@ -50,7 +50,7 @@ const TokenSlider = ({ className }) => {
     "5UP-YFI/DAI",
     "3UP-SUSHI/DAI",
   ];
-  const totalSlides = tokenImages.length;
+  const totalSlides = 5;
   const createSlides = () => {
     const generatedSlides = [];
     for (var i = 0; i < totalSlides; i++) {
@@ -87,7 +87,7 @@ const TokenSlider = ({ className }) => {
     }
     return generatedSlides;
   };
-  const [autoplay, setAutoplay] = useState(true)
+  const [autoplay, setAutoplay] = useState(true);
   const settings = {
     speed: 2000,
     autoplay: autoplay,
@@ -121,11 +121,13 @@ const TokenSlider = ({ className }) => {
         breakpoint: 750,
         settings: {
           speed: 1000,
+          slidesToShow: 5,
         },
       },
       {
         breakpoint: 480,
         settings: {
+          slidesToShow: 4,
           speed: 1000,
         },
       },
@@ -139,9 +141,7 @@ const TokenSlider = ({ className }) => {
           " token-slider w-2/4 overflow-hidden lg:bottom-0 sm:bottom-4 bottom-10 lg:h-36 h-28 absolute z-10 pointer-events-none"
         }
       >
-        <Slider {...settings}>
-          {createSlides()}
-        </Slider>
+        <Slider {...settings}>{createSlides()}</Slider>
       </div>
     </>
   );
