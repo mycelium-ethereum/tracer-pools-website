@@ -84,9 +84,6 @@
 .learn-overlay {
   height: 580px;
 }
-.min-h-body {
-  min-height: 800px;
-}
 .min-w-video {
   max-width: 1920px;
   width: 100%;
@@ -806,6 +803,9 @@ footer {
   }
   .large-spacer {
     height: 750px; 
+  }
+  .min-h-body {
+    min-height: 800px;
   }
 }
 @media only screen and (max-width: 1024px) {
