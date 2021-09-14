@@ -15,7 +15,7 @@ const PaperDownload = ({ title, header, image, link }) => {
             <small className="lg:text-2xl md:text-base text-2xl text-white font-normal">
               Tracer
             </small>
-            <h1 className="lg:text-3xl md:text-lg text-2xl text-white font-bold">
+            <h1 className="xl:text-3xl lg:text-2xl md:text-lg text-2xl text-white font-bold">
               {title}
             </h1>
           </div>

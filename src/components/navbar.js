@@ -13,6 +13,7 @@ const Navbar = () => {
   const [transparentNav, setTransparentNav] = useState(true);
   const [navOpen, setNavOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [darkerNav, setDarkerNav] = useState(false);
 
   const isCollapsed = () => {
     const width = window.innerWidth;
@@ -47,10 +48,17 @@ const Navbar = () => {
     setNavOpen(false);
     setDropdownOpen(!dropdownOpen);
   };
+  const checkPage = () => {
+    const currentPage = window.location.pathname;
+    if (currentPage.includes("radar")) {
+      setDarkerNav(true);
+    }
+  };
 
   useEffect(() => {
     setActiveLink();
     setSolidNav();
+    checkPage();
     window.addEventListener("scroll", setSolidNav);
     window.addEventListener("resize", setSolidNav);
     return function () {
@@ -70,7 +78,8 @@ const Navbar = () => {
       <div
         className={
           "backdrop absolute top-0 left-0 h-full w-full transition-opacity duration-300 " +
-          (!transparentNav ? "opacity-100" : "opacity-0")
+          (transparentNav ? "opacity-0" : "opacity-100") +
+          (darkerNav ? " darker" : "")
         }
       />
       <div className="container h-16 flex justify-between items-center mx-auto xl:px-0 px-4 relative z-10">

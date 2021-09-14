@@ -23,6 +23,7 @@ const IntegrateAnimation = () => {
     return function () {
       window.removeEventListener("resize", toggleActiveStyles);
     };
+    // eslint-disable-next-line
   }, []);
   return (
     <section
