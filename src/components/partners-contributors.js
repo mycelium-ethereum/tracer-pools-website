@@ -171,19 +171,19 @@ const PartnersContributors = () => {
                     alt="Chainlink Logo"
                   />
                 </div>
-                <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center sm:mt-8 mt-4">
+                <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center sm:mt-8 mt-6">
                   <img
                     className="2xl:w-60 lg:w-48 sm:w-48 w-24 sm:mr-10 mr-5"
                     src={SigmaPrime}
                     alt="SigmaPrime Logo"
                   />
                   <img
-                    className="lg:w-32 sm:w-20 sm:mr-10 w-16  mr-5"
+                    className="lg:w-32 sm:w-20 sm:mr-10 w-12  mr-5"
                     src={RMIT}
-                    alt=" Logo"
+                    alt="RMIT Logo"
                   />
                   <img
-                    className="2xl:w-60 lg:w-48 sm:w-32 w-24 sm:mr-10 mr-5"
+                    className="2xl:w-60 lg:w-48 sm:w-32 w-20 sm:mr-10 mr-5"
                     src={EPNS}
                     alt="EPNS Logo"
                   />

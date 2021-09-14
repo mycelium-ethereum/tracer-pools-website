@@ -105,7 +105,7 @@ const Navbar = () => {
       }
       onMouseLeave={() => setDropdownOpen(false)}
     >
-      {/* <img className="absolute top-0 left-0 w-full lg:hidden block" src={MobileHeader} /> */}
+      {/* <img className="absolute top-0 left-0 h-full lg:hidden block" src={MobileHeader} /> */}
       <div className="container h-16 flex justify-between items-center mx-auto xl:px-0 px-4">
         <div className="relative flex">
           <Link id="logo" className="cursor-pointer" to="/">
