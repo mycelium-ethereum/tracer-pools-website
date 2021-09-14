@@ -53,10 +53,7 @@ const WalletAnimation = () => {
         />
       </section>
       <div className="large-spacer pt-12 pointer-events-none relative z-10 overflow-hidden">
-        <img
-          className="w-full"
-          src={CityTop}
-        />
+        <img className="w-full" src={CityTop} />
       </div>
     </>
   );

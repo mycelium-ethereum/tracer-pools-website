@@ -24,13 +24,15 @@ function stepAnimation() {
 }
 function tokenAnimation() {
   var t2 = gsap.timeline();
-  t2.from("#token-trigger", 1, { xPercent: 0, opacity: 1 });
+  t2.to("#fade1", 1, { opacity: 0 }).to("#fade1", 1, { opacity: 1 });
+  t2.to("#fade2", 1, { opacity: 0 }).to("#fade2", 1, { opacity: 1 });
+  t2.to("#fade3", 1, { opacity: 0 }).to("#fade3", 1, { opacity: 1 });
 
   const scene = new ScrollMagic.Scene({
     triggerElement: "#token-trigger",
     triggerHook: "onLeave",
-    duration: "0%",
-    offset: -halfScreen,
+    duration: "40%",
+    offset: -oneFifthScreenHeight
   })
     .setTween(t2)
     .setClassToggle("#token-trigger", "active")

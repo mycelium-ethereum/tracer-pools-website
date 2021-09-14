@@ -125,7 +125,7 @@ const Navbar = () => {
               className="flex mb-6"
               href="/"
               target="_blank"
-              rel="noreferrer noopener"
+              rel="noopener"
             >
               <img
                 className="h-12 mr-3"
@@ -143,7 +143,7 @@ const Navbar = () => {
               className="flex mb-6"
               href="https://gov.tracer.finance"
               target="_blank"
-              rel="noreferrer noopener"
+              rel="noopener"
             >
               <img
                 className="h-12 mr-3"
@@ -161,7 +161,7 @@ const Navbar = () => {
               className="flex mb-6"
               href="https://docs.tracer.finance"
               target="_blank"
-              rel="noreferrer noopener"
+              rel="noopener"
             >
               <img className="h-12 mr-3" src={TracerBoxBlue} alt="Tracer Box" />
               <span className="block text-white font-normal my-auto">

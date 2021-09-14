@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../components/button";
+import { detect } from "detect-browser";
 
 // Image assets
 import TracerCityVideoWEBM from "/static/img/home-page/city/tracer-city.webm";
@@ -11,6 +12,28 @@ import MeshLarge from "/static/img/home-page/city/mesh-large.svg";
 import CityBottom from "/static/img/home-page/city/city-bottom.png";
 
 const TracerCity = () => {
+  const [isWebkit, setWebkit] = useState("");
+  const detectBrowser = () => {
+    const browser = detect();
+    if (browser) {
+      switch (browser && browser.name) {
+        case "safari":
+        case "firefox":
+        case "edge":
+        case "edge-chromium":
+          console.log("chrome/firefox");
+          setWebkit(false);
+          break;
+
+        default:
+          console.log("other/Safari");
+          setWebkit(true);
+      }
+    }
+  };
+  useEffect(() => {
+    detectBrowser();
+  }, []);
   return (
     <>
       <section
@@ -47,8 +70,10 @@ const TracerCity = () => {
             playsInline
             className="h-fit lg:opacity-0 transition-opacity duration-700 h-full col-span-5 lg:static lg:transform-none transform-gpu scale-110 relative"
           >
-            <source src={TracerCityVideoWEBM} type="video/webm" />
-            <source src={TracerCityVideoMP4} type="video/mp4" />
+            <source
+              src={isWebkit ? TracerCityVideoWEBM : TracerCityVideoMP4}
+              type={isWebkit ? "video/webm" : "video/mp4"}
+            />
           </video>
         </div>
         <img
@@ -69,8 +94,10 @@ const TracerCity = () => {
             id="tracer-building"
             className="h-fit lg:opacity-0 transition-opacity duration-700 lg:w-1/2 lg:mx-0 mx-auto w-3/4 md:mt-0 mt-6 lg:static lg:left-0 relative"
           >
-            <source src={TracerBuildingWEBM} type="video/webm" />
-            <source src={TracerBuildingMP4} type="video/mp4" />
+            <source
+              src={isWebkit ? TracerBuildingWEBM : TracerBuildingMP4}
+              type={isWebkit ? "video/webm" : "video/mp4"}
+            />
           </video>
           <div
             className="2xl:mt-96 xl:mt-80 lg:pl-12 lg:mt-48 lg:pb-0 lg:pr-12 lg:absolute lg:text-left left-1/2 mx-auto px-4 w-full force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
