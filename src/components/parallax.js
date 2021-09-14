@@ -93,7 +93,7 @@ const BackgroundParallax = (props) => {
       </div>
       <div
         className={
-          "absolute top-0 left-0 w-full z-0 overflow-hidden bg-blue transition-all duration-500 " +
+          "absolute top-0 left-0 w-full z-0 overflow-hidden bg-blue transition-all duration-500 min-h-body " +
           (quarterOverlay ? "learn-overlay" : "h-screen")
         }
       />

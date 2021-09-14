@@ -45,6 +45,14 @@ const Navbar = () => {
       }
     });
   };
+  const handleNavClick = () => {
+    setNavOpen(!navOpen);
+    setDropdownOpen(false);
+  };
+  const handleDropdownClick = () => {
+    setNavOpen(false);
+    setDropdownOpen(!dropdownOpen);
+  };
 
   useEffect(() => {
     setActiveLink();
@@ -108,8 +116,10 @@ const Navbar = () => {
           <button
             id="toggle"
             className="flex pl-3 w-22 h-22 left-0 top-0 z-0 justify-center items-center cursor-pointer"
-            onMouseEnter={() => setDropdownOpen(!dropdownOpen)}
-            onClick={() => setDropdownOpen(!dropdownOpen)}
+            onMouseEnter={() => {
+              if (!isCollapsed()) handleDropdownClick();
+            }}
+            onClick={() => handleDropdownClick()}
           >
             <img className="w-4 h-auto" src={Dropdown} alt="Dropdown toggle" />
           </button>
@@ -229,14 +239,21 @@ const Navbar = () => {
           </div>
         </div>
         <button
-          className="sm:hidden block cursor-pointer"
+          className={
+            "sm:hidden block cursor-pointer menu-icon " +
+            (navOpen ? "open" : "")
+          }
           // eslint-disable-next-line
           onClick={() => {
-            setNavOpen(!navOpen);
-            setDropdownOpen(false);
+            handleNavClick();
           }}
         >
-          <img className="w-6 h-6" src={MenuIcon} alt="Menu" />
+          <span />
+          <span />
+          <span />
+          <span />
+          <span />
+          <span />
         </button>
       </div>
       <menu
@@ -254,7 +271,7 @@ const Navbar = () => {
           <div className="mt-6 w-full">
             <Button
               className="h-12 w-full border border-white font-normal text-lg"
-              linkTo="/"
+              linkTo="https://pools-testing.netlify.app/"
             >
               Launch Pools
             </Button>

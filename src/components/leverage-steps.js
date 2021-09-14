@@ -52,9 +52,9 @@ const LeverageSteps = (direction) => {
               </div>
               <div
                 id="mobile-steps"
-                className="lg:hidden sm:w-80 w-full mx-auto z-20"
+                className="lg:hidden sm:w-80 w-full mx-auto z-20 sm:pl-0 pl-4"
               >
-                <div data-step="1" className="grid grid-cols-4 w-full">
+                <div data-step="1" className="grid grid-cols-4 w-full sm:gap-4 gap-8">
                   <span className="font-normal text-6xl text-white col-span-1">
                     01
                   </span>
@@ -64,7 +64,7 @@ const LeverageSteps = (direction) => {
                     BTC/USDC or ETH/USDC
                   </p>
                 </div>
-                <div data-step="2" className="grid grid-cols-4 w-full">
+                <div data-step="2" className="grid grid-cols-4 w-full sm:gap-4 gap-8">
                   <span className="font-normal text-6xl text-white col-span-1">
                     02
                   </span>
@@ -74,7 +74,7 @@ const LeverageSteps = (direction) => {
                     Long or short
                   </p>
                 </div>
-                <div data-step="3" className="grid grid-cols-4 w-full">
+                <div data-step="3" className="grid grid-cols-4 w-full sm:gap-4 gap-8">
                   <span className="font-normal text-6xl text-white col-span-1">
                     03
                   </span>
@@ -84,7 +84,7 @@ const LeverageSteps = (direction) => {
                     1, 2, 3, 5, or 15
                   </p>
                 </div>
-                <div data-step="41" className="grid grid-cols-4 w-full">
+                <div data-step="4" className="grid grid-cols-4 w-full sm:gap-4 gap-8">
                   <span className="font-normal text-6xl text-white col-span-1">
                     04
                   </span>
@@ -132,27 +132,27 @@ const LeverageSteps = (direction) => {
                   className="step-animation__base opacity-0"
                   src={BaseTile}
                   alt=""
-                  />
+                />
                 <img
                   className="step-animation__lightblue-rectangle opacity-0"
                   src={LightBlueRectangle}
                   alt=""
-                  />
+                />
                 <img
                   className="step-animation__pink-rectangle opacity-0"
                   src={PinkRectangle}
                   alt=""
-                  />
+                />
                 <img
                   className="step-animation__blue-arrow opacity-0"
                   src={BlueArrow}
                   alt=""
-                  />
+                />
                 <img
                   className="step-animation__blue-square opacity-0"
                   src={BlueSquare}
                   alt=""
-                  />
+                />
               </div>
             </div>
           </section>
