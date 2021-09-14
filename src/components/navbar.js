@@ -4,8 +4,9 @@ import PropTypes from "prop-types";
 import Button from "./button";
 
 import TracerLogo from "../../static/img/tracer-logo.svg";
+import TracerLogoMobile from "../../static/img/general/mobile-logo.svg";
 import Dropdown from "../../static/img/general/dropdown.svg";
-import MenuIcon from "../../static/img/general/menu.svg";
+import MobileHeader from "../../static/img/general/mobile-header.png";
 import TracerBoxPurple from "../../static/img/tracer-icon-box-purple.svg";
 import TracerBoxGreen from "../../static/img/tracer-icon-box-green.svg";
 import TracerBoxBlue from "../../static/img/tracer-icon-box-blue.svg";
@@ -104,12 +105,18 @@ const Navbar = () => {
       }
       onMouseLeave={() => setDropdownOpen(false)}
     >
+      {/* <img className="absolute top-0 left-0 w-full lg:hidden block" src={MobileHeader} /> */}
       <div className="container h-16 flex justify-between items-center mx-auto xl:px-0 px-4">
         <div className="relative flex">
           <Link id="logo" className="cursor-pointer" to="/">
             <img
-              className="sm:w-24 w-22 h-auto"
+              className="sm:w-24 w-22 h-auto sm:block hidden"
               src={TracerLogo}
+              alt="Tracer Logo"
+            />
+            <img
+              className="w-12 h-10 sm:hidden"
+              src={TracerLogoMobile}
               alt="Tracer Logo"
             />
           </Link>
