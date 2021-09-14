@@ -693,15 +693,15 @@ section {
 
 /* Clear tile */
 .integrate-animation .integrate-animation__tile {
-  min-width: 1068px;
+  min-width: 1025px;
   mix-blend-mode: unset;
-  top: 155px;
-  right: 40px;
+  top: 250px;
+  right: 120px;
   z-index: 2;
 }
 /* Dark blue base */
 .integrate-animation .integrate-animation__layerone {
-  min-width: 1310px;
+  min-width: 1600px;
   top: -640px;
   right: -1010px;
   z-index: 0;
@@ -722,7 +722,7 @@ section {
 /* Fourth layer (arrow green) */
 .integrate-animation .integrate-animation__layerfour {
   mix-blend-mode: multiply;
-  min-width: 988px;
+  min-width: 1100px;
   top: -175px;
   right: -765px;
 }
@@ -733,28 +733,28 @@ section {
 }
 /* Tile */
 .integrate-section.active .integrate-animation .integrate-animation__tile {
-  top: 35px;
-  right: 15px;
+  top: 160px;
+  right: 120px;
   transition: all 1s ease 0.7s;
 }
 .integrate-section.active .integrate-animation .integrate-animation__layerone {
-  top: -445px;
-  right: -500px;
+  top: -545px;
+  right: -595px;
 }
 /* Second layer (pink rectangle) */
 .integrate-section.active .integrate-animation .integrate-animation__layertwo {
-  bottom: -145px;
-  right: -760px;
+  bottom: -190px;
+  right: -860px;
 }
 /* Third layer (arrow) */
 .integrate-section.active .integrate-animation .integrate-animation__layerthree {
-  top: 210px;
-  right: -1165px;
+  top: 250px;
+  right: -1220px;
 }
 /* Fourth layer (arrow green) */
 .integrate-section.active .integrate-animation .integrate-animation__layerfour {
-  top: -150px;
-  right: -530px;
+  top: -95px;
+  right: -565px;
 }
 .integrate-section.active .fade-anim {
   opacity: 1;

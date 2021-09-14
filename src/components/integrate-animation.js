@@ -13,9 +13,7 @@ const IntegrateAnimation = () => {
     return window.innerWidth < 1024;
   };
   const toggleActiveStyles = () => {
-    setTimeout(function () {
-      setIsActive(isMobile());
-    }, 400);
+    setIsActive(isMobile());
   };
   useEffect(() => {
     toggleActiveStyles();
