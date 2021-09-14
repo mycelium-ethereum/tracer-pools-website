@@ -3,18 +3,11 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import Button from "./button";
 
+// Images
+import DropdownMenu from "./dropdown-menu"
 import TracerLogo from "../../static/img/tracer-logo.svg";
 import TracerLogoMobile from "../../static/img/general/mobile-logo.svg";
 import Dropdown from "../../static/img/general/dropdown.svg";
-import MobileHeader from "../../static/img/general/mobile-header.png";
-import TracerBoxPurple from "../../static/img/tracer-icon-box-purple.svg";
-import TracerBoxGreen from "../../static/img/tracer-icon-box-green.svg";
-import TracerBoxBlue from "../../static/img/tracer-icon-box-blue.svg";
-import DiscourseLogo from "../../static/img/discourse-white.svg";
-import TwitterLogo from "../../static/img/twitter-white.svg";
-import GitHubLogo from "../../static/img/github-white.svg";
-import DiscordLogo from "../../static/img/discord-white.svg";
-import Folder from "../../static/img/folder.svg";
 
 const Navbar = () => {
   const [transparentNav, setTransparentNav] = useState(true);
@@ -67,33 +60,7 @@ const Navbar = () => {
     // eslint-disable-next-line
   }, []);
 
-  const Icons = [
-    {
-      text: "Website",
-      href: "https://tracer.finance",
-      logo: Folder,
-    },
-    {
-      text: "Twitter",
-      href: "https://twitter.com/TracerDAO",
-      logo: TwitterLogo,
-    },
-    {
-      text: "Discourse",
-      href: "https://discourse.tracer.finance/",
-      logo: DiscourseLogo,
-    },
-    {
-      text: "Github",
-      href: "https://github.com/tracer-protocol/",
-      logo: GitHubLogo,
-    },
-    {
-      text: "Discord",
-      href: "https://discord.gg/7rhrmYkAJs",
-      logo: DiscordLogo,
-    },
-  ];
+
 
   return (
     // eslint-disable-next-line
@@ -104,11 +71,10 @@ const Navbar = () => {
     >
       <div
         className={
-          "nav-backdrop absolute top-0 left-0 h-full w-full transition-opacity duration-300 " +
+          "backdrop absolute top-0 left-0 h-full w-full transition-opacity duration-300 " +
           (!transparentNav ? "opacity-100" : "opacity-0")
         }
       />
-      {/* <img className="absolute top-0 left-0 h-full lg:hidden block" src={MobileHeader} /> */}
       <div className="container h-16 flex justify-between items-center mx-auto xl:px-0 px-4 relative z-10">
         <div className="relative flex">
           <Link id="logo" className="cursor-pointer" to="/">
@@ -140,86 +106,7 @@ const Navbar = () => {
               alt="Dropdown toggle"
             />
           </button>
-          <div
-            id="dropdown"
-            className={
-              "dropdown transition-all duration-700 sm:absolute fixed sm:p-8 px-4 bg-navblue block sm:rounded-lg sm:top-10 sm:w-80 left-0 top-16 box-border overflow-hidden " +
-              (dropdownOpen
-                ? "pointer-events-all opacity-100 active"
-                : "pointer-events-none sm:opacity-0 inactive")
-            }
-          >
-            <a
-              className="flex mb-6 sm:mt-0 mt-4"
-              href="https://pools-testing.netlify.app/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <img
-                className="h-12 mr-3"
-                src={TracerBoxPurple}
-                alt="Tracer Box"
-              />
-              <span className="block text-white font-normal my-auto">
-                <p>Tracer</p>
-                <p>
-                  <b>Perpetual Pools</b>
-                </p>
-              </span>
-            </a>
-            <a
-              className="flex mb-6"
-              href="https://gov.tracer.finance"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <img
-                className="h-12 mr-3"
-                src={TracerBoxGreen}
-                alt="Tracer Box"
-              />
-              <span className="block text-white font-normal my-auto">
-                <p>Tracer</p>
-                <p>
-                  <b>Governance</b>
-                </p>
-              </span>
-            </a>
-            <a
-              className="flex mb-6"
-              href="https://docs.tracer.finance"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <img className="h-12 mr-3" src={TracerBoxBlue} alt="Tracer Box" />
-              <span className="block text-white font-normal my-auto">
-                <p>Tracer</p>
-                <p>
-                  <b>Documentation</b>
-                </p>
-              </span>
-            </a>
-            {Icons.map((icon, i) => (
-              <a
-                className="flex items-center mt-5 pl-2"
-                href={icon.href}
-                rel="noreferrer"
-                target="_blank"
-                key={i}
-              >
-                <span>
-                  <img
-                    className="w-5 mr-2 opacity-70"
-                    src={icon.logo}
-                    alt="Logo"
-                  />
-                </span>
-                <span className="block text-white font-normal my-auto">
-                  {icon.text}
-                </span>
-              </a>
-            ))}
-          </div>
+          <DropdownMenu dropdownOpen={dropdownOpen}/>
         </div>
         <div className="hidden sm:flex items-center">
           <div className="mr-3">

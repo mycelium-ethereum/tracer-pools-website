@@ -10,7 +10,7 @@ import PinkArrow from "/static/img/home-page/background/pink-arrow-right.png";
 import PinkSquare from "/static/img/home-page/background/pink-square.png";
 import PinkRectangle from "/static/img/home-page/background/pink-rectangle.png";
 
-const BackgroundParallax = (props) => {
+const BackgroundParallax = () => {
   const [fixed, setFixed] = useState(false);
   const [quarterOverlay, setQuarterOverlay] = useState(false);
   const checkPage = () => {
@@ -26,9 +26,7 @@ const BackgroundParallax = (props) => {
   useEffect(() => {
     const scene = document.querySelector(".tile-bg");
     const scene2 = document.querySelector(".square-middle");
-    new Parallax(scene, {
-      
-    });
+    new Parallax(scene);
     new Parallax(scene2);
     checkPage();
   }, []);
@@ -37,7 +35,7 @@ const BackgroundParallax = (props) => {
       <div
         className={
           (fixed ? "fixed" : "absolute") +
-          " left-0 w-screen xl:transform-none xl:left-0 lg:transform-gpu lg:scale-75 lg:left-1/2 lg:-translate-x-1/2 h-full z-10 pointer-events-none sm:top-0 -top-32"
+          " left-0 w-screen origin-top xl:transform-none xl:left-0 lg:transform-gpu lg:scale-75 lg:left-1/2 lg:-translate-x-1/2 h-full z-10 pointer-events-none sm:top-0 -top-32"
         }
       >
         <div className="absolute tile-bg">

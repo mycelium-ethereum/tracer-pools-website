@@ -12,7 +12,6 @@ const Layout = ({ children }) => {
     <>
       <Navbar />
       <Socials />
-      <BackgroundParallax />
       <motion.main
         initial={{
           opacity: 0,
@@ -28,7 +27,9 @@ const Layout = ({ children }) => {
           duration: 0.5,
           delay: 0.4,
         }}
+        className="relative"
       >
+        <BackgroundParallax />
         {children}
         <Footer />
       </motion.main>
