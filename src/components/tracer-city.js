@@ -56,6 +56,8 @@ const TracerCity = () => {
             loop="loop"
             autoPlay
             playsInline
+            disableRemotePlayback
+            disablePictureInPicture
             className="h-fit lg:opacity-0 transition-opacity duration-700 h-full col-span-5 lg:static lg:transform-none transform-gpu scale-110 relative"
           >
             <source
@@ -80,6 +82,8 @@ const TracerCity = () => {
             loop="loop"
             autoPlay
             playsInline
+            disableRemotePlayback
+            disablePictureInPicture
             id="tracer-building"
             className="h-fit lg:opacity-0 transition-opacity duration-700 lg:w-1/2 lg:mx-0 mx-auto w-3/4 md:mt-0 mt-6 lg:static lg:left-0 relative"
           >
