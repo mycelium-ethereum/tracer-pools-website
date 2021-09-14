@@ -84,6 +84,9 @@
 .learn-overlay {
   height: 580px;
 }
+.min-h-body {
+  min-height: 800px;
+}
 .min-w-video {
   max-width: 1920px;
   width: 100%;

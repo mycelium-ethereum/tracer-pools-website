@@ -31,9 +31,7 @@ const Navbar = () => {
     } else if (!isCollapsed() && scrollHeight < 1) {
       setTransparentNav(true);
     }
-    if (isCollapsed()) {
-      setNavOpen(false);
-    }
+    setNavOpen(!isCollapsed());
   };
   const setActiveLink = () => {
     const path = window.location.pathname;
@@ -55,7 +53,8 @@ const Navbar = () => {
       window.removeEventListener("scroll", setSolidNav);
       window.removeEventListener("resize", setSolidNav);
     };
-  });
+    // eslint-disable-next-line
+  }, []);
 
   const Icons = [
     {
@@ -229,6 +228,7 @@ const Navbar = () => {
         </div>
         <button
           className="sm:hidden block cursor-pointer"
+          // eslint-disable-next-line
           onClick={() => setNavOpen(!navOpen)}
         >
           <img className="w-6 h-6" src={MenuIcon} alt="Menu" />
