@@ -3,11 +3,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 import Button from "../components/button";
 
 // Assets
-import TracerLaptop from "/static/img/home-page/laptop/Macbook@0.5x.png";
-import TracerLaptop1x from "/static/img/home-page/laptop/Macbook@1x.png";
-import TracerLaptop1_5x from "/static/img/home-page/laptop/Macbook@1.5x.png";
-import TracerLaptop2x from "/static/img/home-page/laptop/Macbook@2x.png";
-import TracerLaptop3x from "/static/img/home-page/laptop/Macbook@3x.png";
+import TracerLaptop from "/static/img/home-page/laptop/Macbook.svg";
 
 const Hero = () => {
   return (
@@ -44,7 +40,6 @@ const Hero = () => {
             <img
               className="w-full"
               src={TracerLaptop}
-              srcSet={`${TracerLaptop1x} 600w, ${TracerLaptop1_5x} 1600w, ${TracerLaptop2x} 2000w, ${TracerLaptop3x} 3000w`}
               alt="Tracer Laptop View"
             />
           </div>
