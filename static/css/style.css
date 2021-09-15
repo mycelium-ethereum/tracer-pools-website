@@ -658,18 +658,10 @@ section {
 #token-trigger.active #fade1 {
   transition: opacity 0.5s ease;
 }
-/* 
-#token-trigger.active #fade2 {
-  transition: opacity 0.5s ease 1.75s;
+/* Token Sliders */
+.token-slider .slick-initialized .slick-slide {
+  width: 200px;
 }
-#token-trigger.active #fade3 {
-  transition: all 0.5s ease, opacity 0.35s ease 2.5s;
-}
-#token-trigger.active #fade1,
-#token-trigger.active #fade2,
-#token-trigger.active #fade3 {
-  opacity: 1;
-} */
 /*------------TRACER CITY------------*/
 
 #city-trigger.active video {
@@ -829,10 +821,7 @@ footer {
   }
 }
 @media only screen and (max-width: 1536px) {
-  /* Token Sliders */
-  .token-slider .slick-initialized .slick-slide {
-    width: 200px !important;
-  }
+
   .large-spacer {
     height: 650px; 
   }
@@ -843,6 +832,10 @@ footer {
   }
   .large-spacer {
     height: 750px; 
+  }
+  body,
+  html {
+    scroll-behavior: unset;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -987,6 +980,10 @@ footer {
   }
   .integrate-section {
     height: 700px;
+  }
+   /* Token Sliders */
+  .token-slider .slick-initialized .slick-slide {
+    width: 120px !important;
   }
 }
 @media only screen and (max-width: 640px) {

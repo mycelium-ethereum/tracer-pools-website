@@ -59,7 +59,13 @@ const TokenSlider = ({ className }) => {
         </div>
       );
     }
-    generatedSlides.push([...generatedSlides])
+    // Temporary hacky fix
+    for (var j = 0; j < totalSlides; j++) {
+      generatedSlides.push(generatedSlides[j]);
+    }
+    for (var k = 0; k < totalSlides; k++) {
+      generatedSlides.push(generatedSlides[k]);
+    }
     return generatedSlides;
   };
   const settings = {
@@ -76,27 +82,15 @@ const TokenSlider = ({ className }) => {
     focusOnSelect: false,
     pauseOnFocus: false,
     pauseOnHover: false,
+    variableWidth: true,
     fade: false,
     rtl: className.includes("slider-left") ? true : false,
     responsive: [
       {
-        breakpoint: 991,
+        breakpoint: 1024,
         settings: {
           speed: 1750,
-        },
-      },
-      {
-        breakpoint: 750,
-        settings: {
-          speed: 1000,
-          // slidesToShow: 5,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          // slidesToShow: 4,
-          speed: 1000,
+          autoplay: false,
         },
       },
     ],

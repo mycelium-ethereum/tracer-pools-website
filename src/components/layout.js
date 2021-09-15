@@ -31,9 +31,9 @@ const Layout = ({ children }) => {
       >
         <BackgroundParallax />
         {children}
+        <Scripts />
         <Footer />
       </motion.main>
-      <Scripts />
     </>
   );
 };
