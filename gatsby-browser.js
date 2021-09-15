@@ -5,7 +5,7 @@ exports.wrapPageElement = ({ element }) => {
   return <AnimatePresence exitBeforeEnter>{element}</AnimatePresence>;
 };
 
-const transitionDelay = 1200;
+const transitionDelay = 900;
 
 exports.shouldUpdateScroll = ({
   routerProps: { location },

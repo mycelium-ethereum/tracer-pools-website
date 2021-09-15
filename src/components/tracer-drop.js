@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import BlogPost from "./blog-post";
+import PostLink from "./blog-post-link";
 
 const query = graphql`
   query tracerBlogs {
@@ -47,10 +47,15 @@ const TracerDrop = () => {
                   .map((node, i) => {
                     //   Hide the third post on tablet and below
                     if (i === 2) {
-                        return <BlogPost className="lg:block sm:hidden block" data={node} key={i} />;
-                    }
-                    else {
-                        return <BlogPost data={node} key={i} />;
+                      return (
+                        <PostLink
+                          className="lg:block sm:hidden block"
+                          data={node}
+                          key={i}
+                        />
+                      );
+                    } else {
+                      return <PostLink data={node} key={i} />;
                     }
                   })}
               </div>

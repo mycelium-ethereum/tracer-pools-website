@@ -90,8 +90,8 @@ const TokenSlider = ({ className }) => {
   const [autoplay, setAutoplay] = useState(true);
   const settings = {
     speed: 2000,
-    autoplay: autoplay,
-    autoplaySpeed: 2000,
+    // autoplay: autoplay,
+    // autoplaySpeed: 2000,
     cssEase: "linear",
     slidesToShow: 6,
     slidesToScroll: 1,
@@ -104,12 +104,12 @@ const TokenSlider = ({ className }) => {
     pauseOnHover: false,
     fade: false,
     rtl: className.includes("slider-left") ? true : false,
-    afterChange: (index) => {
-      if (totalSlides - 1 >= index) {
-        setAutoplay(false);
-        setAutoplay(true);
-      }
-    },
+    // afterChange: (index) => {
+    //   if (totalSlides - 1 >= index) {
+    //     setAutoplay(false);
+    //     setAutoplay(true);
+    //   }
+    // },
     responsive: [
       {
         breakpoint: 991,
