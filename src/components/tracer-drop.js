@@ -38,7 +38,7 @@ const TracerDrop = () => {
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
             <a
               className="relative h-thumbnail overflow-hidden col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-xl cursor-pointer"
-              href="https://www.youtube.com/embed/pWVY84ttx6U"
+              href="https://www.youtube.com/watch?v=pWVY84ttx6U"
               rel="noreferrer"
               target="_blank"
             >
@@ -51,7 +51,7 @@ const TracerDrop = () => {
             </a>
             <a
               className="relative h-thumbnail overflow-hidden col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-xl cursor-pointer"
-              href="https://www.youtube.com/embed/7eQjiulVY6s"
+              href="https://www.youtube.com/watch?v=7eQjiulVY6s"
               rel="noreferrer"
               target="_blank"
             >
@@ -64,7 +64,7 @@ const TracerDrop = () => {
             </a>
             <a
               className="relative h-thumbnail overflow-hidden col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-xl cursor-pointer lg:block sm:hidden block"
-              href="https://www.youtube.com/embed/iEeVb1jH0u8"
+              href="https://www.youtube.com/watch?v=iEeVb1jH0u8"
               rel="noreferrer"
               target="_blank"
             >
