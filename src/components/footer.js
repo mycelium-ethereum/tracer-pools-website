@@ -70,7 +70,8 @@ const Footer = () => {
     <footer className="w-full relative overflow-hidden lg:py-10 h-1/2 z-10 bg-blue">
       <img
         id="footer-bg"
-        className="absolute 2xl:-top-full xl:-top-96 md:-top-56 sm:-top-44 -top-10 left-0 w-full h-auto "
+        // xl:-top-96 md:-top-56 sm:-top-44 -top-10 
+        className="absolute 2xl:-bottom-52 xl:-bottom-36 lg:-bottom-6 md:-bottom-13 sm:bottom-2 sm:top-auto bottom-auto -top-14 left-0 w-full h-auto "
         src={CityBottomDark}
         alt=""
       />
@@ -81,7 +82,7 @@ const Footer = () => {
           </span>
           <form
             id="subscription-form"
-            className="2xl:mb-96 2xl:pb-0 lg:mb-72 lg:w-min sm:ml-0 sm:mr-0 mx-auto w-full flex lg:mt-0 mt-4 justify-between md:flex-row flex-col sm:px-0 px-6"
+            className="2xl:pb-0 lg:mb-48 lg:w-min sm:ml-0 sm:mr-0 mx-auto w-full flex lg:mt-0 mt-4 justify-between md:flex-row flex-col sm:px-0 px-6"
             onSubmit={(e) => handleSubmit(e)}
           >
             <input type="hidden" name="u" value="15" />

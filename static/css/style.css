@@ -819,8 +819,8 @@ footer {
     height: 800px;
   }
   footer #footer-bg {
-    top: unset;
-    bottom: -150px;
+    /* top: unset; */
+    /* bottom: -150px; */
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -1021,7 +1021,7 @@ footer {
     height: 100vh;
   }
   footer #footer-bg {
-    top: -55px;
+    /* top: -55px; */
   }
   .min-h-body {
     min-height: auto;
@@ -1041,6 +1041,7 @@ footer {
 @media only screen and (max-width: 320px) {
   footer #footer-bg {
     top: 0px;
+    bottom: unset;
   }
   .home-icon {
     min-width: 16px;
