@@ -1,5 +1,5 @@
 import React from "react";
-import PDFIcon from "../../static/img/learn/pdf-icon.svg";
+import PDFIcon from "../../static/img/learn/pdf-icon.png";
 
 const PaperDownload = ({ title, header, image, link }) => {
   return (
