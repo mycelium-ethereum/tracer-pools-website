@@ -15,7 +15,7 @@ function stepAnimation() {
   const scene = new ScrollMagic.Scene({
     triggerElement: "#pinMaster",
     triggerHook: "onLeave",
-    duration: "300%",
+    duration: "200%",
   })
     .setPin("#pinMaster")
     .setTween(tl)
