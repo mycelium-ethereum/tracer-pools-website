@@ -143,10 +143,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div>
-            <Button
-              className="mt-0"
-              href="https://pools-testing.netlify.app/"
-            >
+            <Button className="mt-0" href="https://pools-testing.netlify.app/">
               Launch Pools
             </Button>
           </div>
@@ -184,7 +181,7 @@ const Navbar = () => {
         <div className="flex flex-col justify-center w-60 mx-auto text-center pt-12">
           <div className="relative">
             <div className="mt-6 w-full">
-              <Link to="/learn">
+              <Link className="nav-link py-2 px-4 rounded-lg" to="/learn">
                 <span className="text-white font-normal text-lg">Learn</span>
               </Link>
             </div>
@@ -202,12 +199,12 @@ const Navbar = () => {
             </Link>
           </div> */}
             <div className="mt-6 w-full">
-              <a href="https://vote.tracer.finance/#/">
+              <a className="nav-link py-2 px-4 rounded-lg" href="https://vote.tracer.finance/#/">
                 <span className="text-white font-normal text-lg">Govern</span>
               </a>
             </div>
             <div className="mt-6 w-full">
-              <Link to="/radar">
+              <Link className="nav-link py-2 px-4 rounded-lg" to="/radar">
                 <span className="text-white font-normal text-lg">Radar</span>
               </Link>
             </div>
