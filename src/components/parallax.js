@@ -45,11 +45,7 @@ const BackgroundParallax = () => {
           " left-0 w-screen origin-top xl:transform-none xl:left-0 lg:transform-gpu lg:scale-75 lg:left-1/2 lg:-translate-x-1/2 h-screen z-10 pointer-events-none sm:top-0 -top-32"
         }
       >
-        <div
-          className={
-            (hideOverflow ? "overflow-hidden" : "") + " absolute tile-bg"
-          }
-        >
+        <div className="relative tile-bg">
           <div className="absolute square-middle z-30">
             <img
               className="absolute opacity-50 blue-square"

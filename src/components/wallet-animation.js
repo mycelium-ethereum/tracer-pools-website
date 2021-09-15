@@ -1,6 +1,7 @@
 import React from "react";
 import TokenSlider from "../components/token-slider";
 import Button from "../components/button";
+import { Link } from "gatsby";
 
 // Images
 import MetamaskFox from "/static/img/slider/metamask-fox.svg";
@@ -30,13 +31,20 @@ const WalletAnimation = () => {
           >
             That live in your wallet
           </p>
-          <Button
+          {/* <Button
             className="mx-auto mt-6 lg:opacity-0"
             href="https://pools.tracer.finance/browse/"
             id="fade3"
           >
             Browse Tokens
-          </Button>
+          </Button> */}
+          <Link
+            id="fade3"
+            to="/coming-soon"
+            className="tracer-btn text-normal font-normal rounded-lg h-11 w-48 text-center transition-all duration-500 border-2 border-white mx-auto mt-6 lg:opacity-0"
+          >
+            Browse Tokens
+          </Link>
         </div>
         <div className="w-full relative 2xl:h-60 lg:h-48 sm:mt-16 sm:mb-12 h-48 mt-12 mb-0">
           <TokenSlider className="slider-left -left-16" />
@@ -54,7 +62,7 @@ const WalletAnimation = () => {
         />
       </section>
       <div className="large-spacer pt-12 pointer-events-none relative z-10 overflow-hidden">
-        <img className="w-full" src={CityTop} alt="City Background"/>
+        <img className="w-full" src={CityTop} alt="City Background" />
       </div>
     </>
   );
