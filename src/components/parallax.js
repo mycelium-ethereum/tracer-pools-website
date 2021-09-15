@@ -14,7 +14,7 @@ const BackgroundParallax = () => {
   const [fixed, setFixed] = useState(false);
   const [quarterOverlay, setQuarterOverlay] = useState(false);
   const checkPage = () => {
-    const currentPage = document.title;
+    const currentPage = window.location.pathname;
     if (currentPage !== "/learn" && currentPage !== "" && currentPage !== "/") {
       setFixed(true);
     }
