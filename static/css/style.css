@@ -330,14 +330,14 @@ section {
 }
 .dropdown.active a {
   opacity: 1;
-  transition: all 0.5s ease 0.3s;
+  transition: all 0.5s ease, opacity 0.5s ease 0.3s;
 }
 .dropdown.inactive {
   height: 0px;
 }
 .dropdown.inactive a {
   opacity: 0;
-  transition: all 0.5s ease 0s;
+  transition: all 0.5s ease;
 }
 .mobile-nav.active a {
   opacity: 1;
