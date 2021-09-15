@@ -61,7 +61,7 @@ class BlogPostTemplate extends Component {
       <>
         <SEO
           title={this.props.data.strapiTracerBlogs.title}
-          image={this.props.data.strapiTracerBlogs.image.formats.medium.url}
+          image={this.props.data.strapiTracerBlogs.image[0].formats.medium.url}
           description={this.props.data.strapiTracerBlogs.description}
         />
         <Layout>
