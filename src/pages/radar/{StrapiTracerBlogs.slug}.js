@@ -59,7 +59,11 @@ class BlogPostTemplate extends Component {
   render() {
     return (
       <>
-        <SEO title={this.props.data.strapiTracerBlogs.title} />
+        <SEO
+          title={this.props.data.strapiTracerBlogs.title}
+          image={this.props.data.strapiTracerBlogs.image.formats.medium.url}
+          description={this.props.data.strapiTracerBlogs.description}
+        />
         <Layout>
           <BlogContent data={this.props.data.strapiTracerBlogs} />
         </Layout>

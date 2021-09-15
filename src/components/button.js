@@ -3,7 +3,7 @@ import React from "react";
 const Button = ({
   className,
   children,
-  linkTo,
+  href,
   id,
 }) => {
   return (
@@ -14,7 +14,7 @@ const Button = ({
       }
       rel="noreferrer"
       target="_blank"
-      href={linkTo}
+      href={href}
       id={id}
     >
       {children}

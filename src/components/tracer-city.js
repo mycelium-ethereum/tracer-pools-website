@@ -18,12 +18,10 @@ const TracerCity = () => {
     if (browser) {
       switch (browser && browser.name) {
         case "safari":
-          // console.log("Safari");
           setWebkit(true);
           break;
 
         default:
-          // console.log("Not Safari");
           setWebkit(false);
       }
     }
@@ -47,7 +45,7 @@ const TracerCity = () => {
                 Built for DeFi
               </h1>
               <small className="text-white font-light xl:w-80 lg:text-left lg:text-2xl lg:w-auto w-56 text-lg">
-                Use pool tokens with the dApps you know and love.
+                Use pool tokens with dApps you know and love
               </small>
             </div>
           </div>
@@ -96,20 +94,17 @@ const TracerCity = () => {
             className="2xl:mt-96 xl:mt-80 lg:pl-12 lg:mt-48 lg:pb-0 lg:pr-12 lg:absolute lg:text-left left-1/2 mx-auto px-4 w-full force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
             data-stellar-ratio="1.4"
           >
-            <span className="xl:text-5xl lg:text-4xl font-semibold text-base lg:mb-2 mb-0 text-white color-blue">
+            {/* <span className="xl:text-5xl lg:text-4xl font-semibold text-base lg:mb-2 mb-0 text-white color-blue">
               Built for DeFi
-            </span>
+            </span> */}
             <h1 className="font-bold text-white xl:text-5xl lg:text-4xl lg:mb-4 mb-4 text-3xl">
-              Strategise Natively
+              ...or Stake Natively
             </h1>
             <small className="text-white font-light xl:w-80 lg:text-left lg:text-2xl lg:w-auto w-56 text-lg">
-              Stake and farm with the dApps you know and love.
+              In the Tracer Farms and earn TCR.
             </small>
-            <Button
-              className="mt-6"
-              linkTo="https://app.gitbook.com/login/tracer-1/pool-swaps"
-            >
-              Launch Docs
+            <Button className="mt-6" href="#">
+              View Farms
             </Button>
           </div>
         </div>

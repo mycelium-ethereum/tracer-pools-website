@@ -32,7 +32,7 @@ const WalletAnimation = () => {
           </p>
           <Button
             className="mx-auto mt-6 lg:opacity-0"
-            linkTo="https://pools-testing.netlify.app/browse/"
+            href="https://pools-testing.netlify.app/browse/"
             id="fade3"
           >
             Browse Tokens

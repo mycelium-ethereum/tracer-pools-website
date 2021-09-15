@@ -11,15 +11,14 @@ import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
 // Images
-// import favicon from "/static/img/general/favicon.png";
-// import logo_OG from "/static/img/general/og-image.jpg";
+import OpenGraphLogo from "/static/img/general/open-graph.png";
 
 // Tailwind CSS
 import "tailwindcss/tailwind.css";
 // Global CSS
 import "/static/css/style.css";
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, image }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -43,27 +42,6 @@ function SEO({ description, lang, meta, title }) {
       }}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
-      link={
-        [
-          // {
-          //   rel: "icon",
-          //   href: {favicon},
-          // }, {
-          //   rel: "image",
-          //   href: {logo_OG}
-          // }, {
-          //   rel: "image",
-          //   href: {logo_dark}
-          // }, {
-          //   rel: "image",
-          //   href: {logo_light}
-          // },
-          // {
-          //   rel: "image",
-          //   href: {logo_light}
-          // }
-        ]
-      }
       meta={[
         {
           name: `description`,
@@ -100,6 +78,12 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `theme-color`,
           content: `#F1AF30`,
+        },
+        {
+          name: `og:image`,
+          content:
+            "https://pools-website-testing.netlify.app" +
+            (image ? image : OpenGraphLogo),
         },
       ].concat(meta)}
     >

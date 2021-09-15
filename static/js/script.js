@@ -24,7 +24,7 @@ function stepAnimation() {
 }
 function tokenAnimation() {
   var t2 = gsap.timeline();
-  t2.to("#fade1", 1, { opacity: 0 }).to("#fade1", 1, { opacity: 1 });
+  t2.to("#fade1", 1, { opacity: 0 }).to("#fade1", 1, { opacity: 1 }).to("#fade1", 1, { opacity: 1 });
   t2.to("#fade2", 1, { opacity: 0 }).to("#fade2", 1, { opacity: 1 });
   t2.to("#fade3", 1, { opacity: 0 }).to("#fade3", 1, { opacity: 1 });
 

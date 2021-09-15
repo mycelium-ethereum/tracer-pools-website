@@ -1,9 +1,8 @@
 module.exports = {
-  pathPrefix: "/tracer-pools-website",
   siteMetadata: {
     title: `Tracer Perpetual Pools`,
-    description: `Tracer Perpetual Pools`,
-    siteUrl: `http://localhost:8000`,
+    description: `Leveraged exposure. No margins. No liquidations. A new derivative primitive.`,
+    siteUrl: `https://tracer.finance`,
   },
   plugins: [
     {
