@@ -33,7 +33,7 @@ const TracerDrop = () => {
       <section className="h-full w-full z-20 relative mt-16">
         <div className="container relative w-full mx-auto pb-12 lg:px-0 px-4">
           <h1 className="font-semibold text-3xl text-center mb-8 text-white">
-            Latest Announcements
+            Tracer Drop
           </h1>
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
             <a
