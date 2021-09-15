@@ -160,7 +160,7 @@ const Footer = () => {
               target="_blank"
             >
               <img
-                className="social-icon w-6 h-6 sm:ml-6 ml-4"
+                className="social-icon h-5 sm:ml-6 ml-4"
                 src={Discord}
                 alt="Discord"
               />
