@@ -977,6 +977,39 @@ footer {
   .h-thumbnail {
     height: 183px;
   }
+  /* Force integrate animation tiles to be active */
+  .integrate-section.active .integrate-animation img {
+    opacity: 1;
+  }
+  /* Tile */
+  .integrate-section .integrate-animation .integrate-animation__tile {
+    top: 160px;
+    right: 120px;
+    transition: all 1s ease 0.7s;
+  }
+  .integrate-section .integrate-animation .integrate-animation__layerone {
+    top: -545px;
+    right: -595px;
+  }
+  /* Second layer (pink rectangle) */
+  .integrate-section .integrate-animation .integrate-animation__layertwo {
+    bottom: -190px;
+    right: -860px;
+  }
+  /* Third layer (arrow) */
+  .integrate-section .integrate-animation .integrate-animation__layerthree {
+    top: 250px;
+    right: -1220px;
+  }
+  /* Fourth layer (arrow green) */
+  .integrate-section .integrate-animation .integrate-animation__layerfour {
+    top: -105px;
+    right: -615px;
+  }
+  .integrate-section .fade-anim {
+    opacity: 1;
+  }
+
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
   .md\:pt-13 {
