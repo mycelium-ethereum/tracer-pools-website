@@ -94,6 +94,9 @@
 .h-fit {
   height: fit-content;
 }
+.w-fit {
+  width: fit-content;
+}
 /* Youtube thumbnails on Learn page */
 .h-thumbnail {
   height: 217px;

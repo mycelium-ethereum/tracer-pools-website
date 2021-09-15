@@ -54,7 +54,7 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
       />
       <div className="relative sm:mt-8 mt-4">
         <a
-          className="dropdown-option transition-colors duration-500 flex mb-6 rounded-lg"
+          className="dropdown-option pr-2 w-fit transition-colors duration-500 flex mb-6 rounded-lg"
           href="https://pools.tracer.finance/"
           rel="noreferrer"
           target="_blank"
@@ -68,7 +68,7 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
           </span>
         </a>
         <a
-          className="dropdown-option transition-colors duration-500 flex mb-6 rounded-lg"
+          className="dropdown-option pr-2 w-fit transition-colors duration-500 flex mb-6 rounded-lg"
           href="https://vote.tracer.finance/#/"
           rel="noreferrer"
           target="_blank"
@@ -82,7 +82,7 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
           </span>
         </a>
         <a
-          className="dropdown-option transition-colors duration-500 flex mb-6 rounded-lg"
+          className="dropdown-option pr-2 w-fit transition-colors duration-500 flex mb-6 rounded-lg"
           href="https://docs.tracer.finance"
           rel="noreferrer"
           target="_blank"
@@ -98,7 +98,7 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
         <div className="mt-12">
           {Icons.map((icon, i) => (
             <a
-              className="dropdown-option transition-colors duration-500 flex items-center mt-5 rounded-lg"
+              className="dropdown-option w-fit px-2 transition-colors duration-500 flex items-center mt-5 rounded-lg"
               href={icon.href}
               rel="noreferrer"
               target="_blank"
