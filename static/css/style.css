@@ -783,7 +783,7 @@ footer {
 
 /* --------------- MEDIA QUERIES --------------- */
 
-@media only screen and (min-width: 1280px) and (min-width: 400px){
+@media only screen and (max-width: 1600px) and (max-height: 600px){
   .min-h-body {
     min-height: 800px;
   }
