@@ -75,7 +75,7 @@ const BlogText = ({ data }) => {
                 <img className="w-4.5 h-4.5 mr-3" src={Clock} alt="Clock" />
                 <span>
                   Read time: {data.read_time}{" "}
-                  {data.read_time === 1 ? "minute" : "minutes"}
+                  {parseInt(data.read_time) === 1 ? "minute" : "minutes"}
                 </span>
               </div>
             </div>
