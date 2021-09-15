@@ -73,7 +73,10 @@ const BlogText = ({ data }) => {
               </div>
               <div className="flex items-center md:mb-0 mb-3">
                 <img className="w-4.5 h-4.5 mr-3" src={Clock} alt="Clock" />
-                <span>Read time: {data.read_time} minutes</span>
+                <span>
+                  Read time: {data.read_time}{" "}
+                  {data.read_time === 1 ? "minute" : "minutes"}
+                </span>
               </div>
             </div>
           </div>
@@ -85,7 +88,10 @@ const BlogText = ({ data }) => {
             <small className="block font-normal text-gray-500 sm:text-center sm:text-xl text-base">
               {data.tagline}
             </small>
-            <div ref={bodyText} className="mt-6 md:pr-0 pr-8 prose mx-auto"></div>
+            <div
+              ref={bodyText}
+              className="mt-6 md:pr-0 pr-8 prose mx-auto"
+            ></div>
           </div>
         </div>
       </section>
