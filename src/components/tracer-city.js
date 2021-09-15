@@ -91,7 +91,7 @@ const TracerCity = () => {
             />
           </video>
           <div
-            className="2xl:mt-96 xl:mt-80 lg:pl-12 lg:mt-48 lg:pb-0 lg:pr-12 lg:absolute lg:text-left left-1/2 mx-auto px-4 w-full force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
+            className="2xl:mt-72 xl:mt-80 lg:pl-12 lg:mt-48 lg:pb-0 lg:pr-12 lg:absolute lg:text-left left-1/2 mx-auto px-4 w-full force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
             data-stellar-ratio="1.4"
           >
             {/* <span className="xl:text-5xl lg:text-4xl font-semibold text-base lg:mb-2 mb-0 text-white color-blue">
@@ -109,7 +109,7 @@ const TracerCity = () => {
           </div>
         </div>
         <img
-          className="absolute opacity-30 w-full h-auto md:top-1/2 top-3/4 transform -translate-y-1/2 left-0 z-0 min-w-max"
+          className="absolute opacity-20 w-full h-auto md:top-1/2 top-3/4 transform -translate-y-1/2 left-0 z-0 min-w-max"
           alt="Mesh Background"
           src={MeshLarge}
         />
