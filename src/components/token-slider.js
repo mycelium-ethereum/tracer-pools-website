@@ -70,7 +70,7 @@ const TokenSlider = ({ className }) => {
   };
   const settings = {
     speed: 2000,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 2000,
     cssEase: "linear",
     slidesToShow: 9,
