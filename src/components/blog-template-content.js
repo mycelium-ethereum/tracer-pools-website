@@ -49,7 +49,7 @@ const BlogText = ({ data }) => {
   return (
     <>
       <section className="h-full w-full z-20 relative mt-16 bg-white select-dark">
-        <div className="container relative w-full mx-auto pt-6 pb-6 lg:px-0 px-4">
+        <div className="container relative w-full mx-auto pt-6 lg:px-0 sm:pb-24 pb-12 px-4">
           <div className="flex justify-between md:flex-row flex-col lg:mb-32 md:md-20 mb-12">
             <div className="flex sm:items-center items-start text-gray-400">
               <Link to="/" className="flex items-center w-5 h-6">

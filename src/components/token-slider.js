@@ -87,7 +87,14 @@ const TokenSlider = ({ className }) => {
     rtl: className.includes("slider-left") ? true : false,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 2000,
+        settings: {
+          speed: 1750,
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 1280,
         settings: {
           speed: 1750,
           autoplay: false,
