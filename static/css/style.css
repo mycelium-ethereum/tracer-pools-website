@@ -96,7 +96,7 @@
 }
 /* Youtube thumbnails on Learn page */
 .h-thumbnail {
-  height: 220px;
+  height: 217px;
 }
 .yt-thumbnail {
   margin-left: -1px
@@ -857,7 +857,7 @@ footer {
     scroll-behavior: unset;
   }
   .h-thumbnail {
-    height: 155px;
+    height: 147px;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -975,7 +975,7 @@ footer {
     height: 650px;
   }
   .h-thumbnail {
-    height: 182px;
+    height: 183px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){

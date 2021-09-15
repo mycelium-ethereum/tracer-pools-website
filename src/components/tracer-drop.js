@@ -45,7 +45,7 @@ const TracerDrop = () => {
               <img className="absolute bottom-0 left-0 z-20" src={Overlay08} />
               <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 z-10" />
               <img
-                className="yt-thumbnail object-cover object-top w-full h-full sm:-mt-9 -mt-12"
+                className="yt-thumbnail object-cover object-top w-full 2xl:-mt-10 md:-mt-8 -mt-14"
                 src="https://img.youtube.com/vi/pWVY84ttx6U/0.jpg"
               />
             </a>
@@ -58,7 +58,7 @@ const TracerDrop = () => {
               <img className="absolute bottom-0 left-0 z-20" src={Overlay07} />
               <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 z-10" />
               <img
-                className="yt-thumbnail object-cover object-top w-full h-full sm:-mt-9 -mt-12"
+                className="yt-thumbnail object-cover object-top w-full 2xl:-mt-10 md:-mt-8 -mt-14"
                 src="https://img.youtube.com/vi/7eQjiulVY6s/0.jpg"
               />
             </a>
@@ -71,7 +71,7 @@ const TracerDrop = () => {
               <img className="absolute bottom-0 left-0 z-20" src={Overlay06} />
               <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 z-10" />
               <img
-                className="yt-thumbnail object-cover object-top w-full h-full sm:-mt-9 -mt-12"
+                className="yt-thumbnail object-cover object-top w-full 2xl:-mt-10 md:-mt-8 -mt-14"
                 src="https://img.youtube.com/vi/iEeVb1jH0u8/0.jpg"
               />
             </a>
