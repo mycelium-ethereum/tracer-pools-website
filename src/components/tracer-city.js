@@ -98,13 +98,13 @@ const TracerCity = () => {
               Built for DeFi
             </span> */}
             <h1 className="font-bold text-white xl:text-5xl lg:text-4xl lg:mb-4 mb-4 text-3xl">
-              ...or Stake Natively
+              Stake Natively
             </h1>
-            <small className="text-white font-light xl:w-80 lg:text-left lg:text-2xl lg:w-auto w-56 text-lg">
-              In the Tracer Farms and earn TCR.
+            <small className="text-white font-light lg:text-left lg:text-2xl w-auto text-lg">
+              In the Tracer Farms and earn TCR
             </small>
             <Button className="mt-6" href="#">
-              View Farms
+              View Staking
             </Button>
           </div>
         </div>
