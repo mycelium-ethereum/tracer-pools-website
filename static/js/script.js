@@ -173,8 +173,7 @@ function initialiseElements() {
       initialiseScrollMagic();
     }
 
-    $(window).stellar({ horizontalScrolling: false });
-    $(window).stellar("refresh");
+    $.stellar();
 
     // Disable ScrollMagic on resize and refresh Stellar.js
     window.addEventListener("resize", function () {
