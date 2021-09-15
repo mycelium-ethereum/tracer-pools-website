@@ -3,7 +3,10 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 import Button from "../components/button";
 
 // Assets
-import TracerLaptop from "/static/img/home-page/laptop.png";
+import TracerLaptop1x from "/static/img/home-page/laptop/Macbook@1x.png";
+import TracerLaptop2x from "/static/img/home-page/laptop/Macbook@2x.png";
+import TracerLaptop3x from "/static/img/home-page/laptop/Macbook@3x.png";
+import TracerLaptop4x from "/static/img/home-page/laptop/Macbook@4x.png";
 
 const Hero = () => {
   return (
@@ -36,13 +39,14 @@ const Hero = () => {
               </div>
             </a>
           </header>
-          <picture className="2xl:max-w-screen-xl xl:max-w-screen-lg 2xl:-bottom-96 xl:-bottom-80 lg:-bottom-72 md:-bottom-32 sm:-bottom-32 sm:px-24 absolute px-6 w-full -bottom-36 z-20">
+          <div className="2xl:max-w-screen-xl xl:max-w-screen-lg 2xl:-bottom-96 xl:-bottom-80 lg:-bottom-72 md:-bottom-32 sm:-bottom-32 sm:px-24 absolute px-6 w-full -bottom-20 z-20">
             <img
               className="w-full"
-              src={TracerLaptop}
+              src={TracerLaptop1x}
+              srcset={`${TracerLaptop2x} 2x, ${TracerLaptop3x} 3x, ${TracerLaptop4x} 4x,`}
               alt="Tracer Laptop View"
             />
-          </picture>
+          </div>
         </div>
         <AnchorLink
           to="/#steps"
