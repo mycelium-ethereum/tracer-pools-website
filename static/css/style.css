@@ -323,7 +323,7 @@ section {
   min-width: 350px;
 }
 .dropdown.active {
-  height: 480px;
+  height: 500px;
 }
 .dropdown.active a {
   opacity: 1;
