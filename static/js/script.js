@@ -15,7 +15,7 @@ function stepAnimation() {
   const scene = new ScrollMagic.Scene({
     triggerElement: "#pinMaster",
     triggerHook: "onLeave",
-    duration: "200%",
+    duration: "300%",
   })
     .setPin("#pinMaster")
     .setTween(tl)
@@ -32,7 +32,7 @@ function tokenAnimation() {
     triggerElement: "#token-trigger",
     triggerHook: "onLeave",
     duration: "45%",
-    offset: -oneFifthScreenHeight
+    offset: -oneFifthScreenHeight,
   })
     .setTween(t2)
     .setClassToggle("#token-trigger", "active")

@@ -44,7 +44,7 @@ const Hero = () => {
             <img
               className="w-full"
               src={TracerLaptop}
-              srcset={`${TracerLaptop1x} 600w, ${TracerLaptop1_5x} 1600w, ${TracerLaptop2x} 2000w, ${TracerLaptop3x} 3000w`}
+              srcSet={`${TracerLaptop1x} 600w, ${TracerLaptop1_5x} 1600w, ${TracerLaptop2x} 2000w, ${TracerLaptop3x} 3000w`}
               alt="Tracer Laptop View"
             />
           </div>
