@@ -12,14 +12,21 @@ import PinkRectangle from "/static/img/home-page/background/pink-rectangle.png";
 
 const BackgroundParallax = () => {
   const [fixed, setFixed] = useState(false);
+  const [hideOverflow, setHideOverflow] = useState(false);
   const [quarterOverlay, setQuarterOverlay] = useState(false);
   const checkPage = () => {
-    const currentPage = window.location.pathname;
-    if (currentPage === "/privacy-policy" || currentPage === "/radar") {
+    const currentPage = document.title;
+    if (
+      currentPage.includes("Privacy Policy") ||
+      currentPage.includes("Radar")
+    ) {
       setFixed(true);
     }
-    if (currentPage === "/learn") {
+    if (currentPage.includes("learn")) {
       setQuarterOverlay(true);
+    }
+    if (currentPage.includes("404")) {
+      setHideOverflow(true);
     }
   };
 
@@ -38,7 +45,11 @@ const BackgroundParallax = () => {
           " left-0 w-screen origin-top xl:transform-none xl:left-0 lg:transform-gpu lg:scale-75 lg:left-1/2 lg:-translate-x-1/2 h-screen z-10 pointer-events-none sm:top-0 -top-32"
         }
       >
-        <div className="absolute tile-bg">
+        <div
+          className={
+            (hideOverflow ? "overflow-hidden" : "") + " absolute tile-bg"
+          }
+        >
           <div className="absolute square-middle z-30">
             <img
               className="absolute opacity-50 blue-square"
