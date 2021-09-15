@@ -1,56 +1,40 @@
-import React, { useState } from "react";
+import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 // Assets
-import CardanoToken from "/static/img/slider/cardano.svg";
-import ChainlinkToken from "/static/img/slider/chainlink.svg";
-import Bitcoin from "/static/img/slider/bitcoin.svg";
-import EthereumToken from "/static/img/slider/ethereum.svg";
-import BalancerToken from "/static/img/slider/balancer.svg";
-import CompoundToken from "/static/img/slider/compound.svg";
-import CurveDAOToken from "/static/img/slider/curve-dao.png";
-import YearnToken from "/static/img/slider/yearn.svg";
-import SushiswapToken from "/static/img/slider/sushiswap.svg";
-import ShortPosition from "/static/img/slider/short-position.svg";
-import LongPosition from "/static/img/slider/long-position.svg";
+import EthereumShort from "/static/img/home-page/slider/eth-s.svg";
+import BitcoinShort from "/static/img/home-page/slider/btc-s.svg";
+import EthereumLong from "/static/img/home-page/slider/eth-l.svg";
+import BitcoinLong from "/static/img/home-page/slider/btc-l.svg";
 
 const TokenSlider = ({ className }) => {
-  const tokenImages = [
-    CardanoToken,
-    ChainlinkToken,
-    Bitcoin,
-    EthereumToken,
-    BalancerToken,
-    CompoundToken,
-    CurveDAOToken,
-    YearnToken,
-    SushiswapToken,
+  const shortTokenImages = [
+    EthereumShort,
+    EthereumShort,
+    BitcoinShort,
+    BitcoinShort,
+  ];
+  const longTokenImages = [
+    BitcoinLong,
+    BitcoinLong,
+    EthereumLong,
+    EthereumLong,
   ];
   const tokenShortPosTitles = [
-    "2DOWN-ADA/DAI",
-    "5DOWN-LINK/DAI",
-    "3DOWN-BTC/DAI",
-    "2DOWN-ETH/DAI",
-    "5DOWN-BAL/DAI",
-    "3DOWN-COMP/DAI",
-    "2DOWN-ETH/DAI",
-    "5DOWN-YFI/DAI",
-    "3DOWN-SUSHI/DAI",
+    "3L-ETH/USDC",
+    "1L-ETH/USDC",
+    "3L-BTC/USDC",
+    "1L-BTC/USDC",
   ];
   const tokenLongPosTitles = [
-    "2UP-ADA/DAI",
-    "5UP-LINK/DAI",
-    "3UP-BTC/DAI",
-    "2UP-ETH/DAI",
-    "5UP-BAL/DAI",
-    "3UP-COMP/DAI",
-    "2UP-ETH/DAI",
-    "5UP-YFI/DAI",
-    "3UP-SUSHI/DAI",
+    "1S-BTC/USDC",
+    "3S-BTC/USDC",
+    "1S-ETH/USDC",
+    "3S-ETH/USDC",
   ];
-  const totalSlides = 5;
+  const totalSlides = shortTokenImages.length;
   const createSlides = () => {
     const generatedSlides = [];
     for (var i = 0; i < totalSlides; i++) {
@@ -59,22 +43,12 @@ const TokenSlider = ({ className }) => {
           <div className="relative mx-auto w-min">
             <img
               className="token"
-              src={tokenImages[i]}
-              alt={Object.keys(tokenImages[i])[0].toString()}
-            />
-            <img
-              className={
-                "trend absolute bottom-0 w-8 h-8 " +
-                (className.includes("slider-left") ? "left-0" : "right-0")
-              }
               src={
-                className.includes("slider-left") ? ShortPosition : LongPosition
-              }
-              alt={
                 className.includes("slider-left")
-                  ? "Short position"
-                  : "Long position"
+                  ? longTokenImages[i]
+                  : shortTokenImages[i]
               }
+              alt=""
             />
           </div>
           <span className="block text-white text-center mt-2">
@@ -85,13 +59,13 @@ const TokenSlider = ({ className }) => {
         </div>
       );
     }
+    generatedSlides.push([...generatedSlides])
     return generatedSlides;
   };
-  const [autoplay, setAutoplay] = useState(true);
   const settings = {
     speed: 2000,
-    // autoplay: autoplay,
-    // autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 2000,
     cssEase: "linear",
     slidesToShow: 6,
     slidesToScroll: 1,
@@ -104,12 +78,6 @@ const TokenSlider = ({ className }) => {
     pauseOnHover: false,
     fade: false,
     rtl: className.includes("slider-left") ? true : false,
-    // afterChange: (index) => {
-    //   if (totalSlides - 1 >= index) {
-    //     setAutoplay(false);
-    //     setAutoplay(true);
-    //   }
-    // },
     responsive: [
       {
         breakpoint: 991,
