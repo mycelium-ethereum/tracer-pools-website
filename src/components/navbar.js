@@ -45,8 +45,10 @@ const Navbar = () => {
     setDropdownOpen(false);
   };
   const handleDropdownClick = () => {
-    setNavOpen(false);
     setDropdownOpen(!dropdownOpen);
+  };
+  const closeNav = () => {
+    setNavOpen(false);
   };
   const checkPage = () => {
     const currentPage = window.location.pathname;
@@ -181,12 +183,17 @@ const Navbar = () => {
         <div className="flex flex-col justify-center w-60 mx-auto text-center pt-12">
           <div className="relative">
             <div className="mt-6 w-full">
-              <Link className="mobile-link py-2 px-4 rounded-lg" to="/learn">
+              <Link
+                onClick={() => closeNav()}
+                className="mobile-link py-2 px-4 rounded-lg"
+                to="/learn"
+              >
                 <span className="text-white font-normal text-lg">Learn</span>
               </Link>
             </div>
             <div className="mt-6 w-full">
               <Button
+                onClick={() => closeNav()}
                 className="h-12 w-full border border-white font-normal text-lg"
                 href="https://pools-testing.netlify.app/"
               >
@@ -199,12 +206,20 @@ const Navbar = () => {
             </Link>
           </div> */}
             <div className="mt-6 w-full">
-              <a className="mobile-link py-2 px-4 rounded-lg" href="https://vote.tracer.finance/#/">
+              <a
+                onClick={() => closeNav()}
+                className="mobile-link py-2 px-4 rounded-lg"
+                href="https://vote.tracer.finance/#/"
+              >
                 <span className="text-white font-normal text-lg">Govern</span>
               </a>
             </div>
             <div className="mt-6 w-full">
-              <Link className="mobile-link py-2 px-4 rounded-lg" to="/radar">
+              <Link
+                onClick={() => closeNav()}
+                className="mobile-link py-2 px-4 rounded-lg"
+                to="/radar"
+              >
                 <span className="text-white font-normal text-lg">Radar</span>
               </Link>
             </div>
