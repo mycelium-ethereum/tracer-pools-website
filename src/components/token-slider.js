@@ -73,7 +73,7 @@ const TokenSlider = ({ className }) => {
     // autoplay: true,
     autoplaySpeed: 2000,
     cssEase: "linear",
-    slidesToShow: 6,
+    slidesToShow: 9,
     slidesToScroll: 1,
     infinite: true,
     arrows: false,
