@@ -17,7 +17,7 @@ const Index = () => {
       <Layout>
         <LearnHeader />
         <ResearchPapers />
-        <TracerDrop />
+        {/* <TracerDrop /> */}
       </Layout>
     </>
   );
