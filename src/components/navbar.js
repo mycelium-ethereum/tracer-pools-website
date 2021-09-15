@@ -202,9 +202,9 @@ const Navbar = () => {
             </Link>
           </div> */}
             <div className="mt-6 w-full">
-              <Link to="https://vote.tracer.finance/#/">
+              <a href="https://vote.tracer.finance/#/">
                 <span className="text-white font-normal text-lg">Govern</span>
-              </Link>
+              </a>
             </div>
             <div className="mt-6 w-full">
               <Link to="/radar">

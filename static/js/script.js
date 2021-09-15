@@ -24,7 +24,9 @@ function stepAnimation() {
 }
 function tokenAnimation() {
   var t2 = gsap.timeline();
-  t2.to("#fade1", 1, { opacity: 0 }).to("#fade1", 1, { opacity: 1 }).to("#fade1", 1, { opacity: 1 });
+  t2.to("#fade1", 1, { opacity: 0 })
+    .to("#fade1", 1, { opacity: 1 })
+    .to("#fade1", 1, { opacity: 1 });
   t2.to("#fade2", 1, { opacity: 0 }).to("#fade2", 1, { opacity: 1 });
   t2.to("#fade3", 1, { opacity: 0 }).to("#fade3", 1, { opacity: 1 });
 
@@ -149,7 +151,7 @@ function initialiseScrollMagic() {
   });
 }
 function handleResize() {
-  this.setTimeout(function () {
+  setTimeout(function () {
     $.stellar("refresh");
     var newSize = !isMobile() ? "big" : "small";
     if (newSize != size) {
@@ -162,7 +164,7 @@ function handleResize() {
         initialiseScrollMagic();
       }
     }
-  }, 500);
+  }, 400);
 }
 function initialiseElements() {
   const title = document.title.split(" ")[0];
@@ -175,14 +177,21 @@ function initialiseElements() {
     $(window).stellar("refresh");
 
     // Disable ScrollMagic on resize and refresh Stellar.js
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", function () {
+      handleResize();
+    });
   } else {
     if (controller) {
       controller.destroy(true);
     }
     $.stellar("destroy");
-
-    window.removeEventListener("resize", handleResize, true);
+    window.removeEventListener(
+      "resize",
+      function () {
+        handleResize();
+      },
+      true
+    );
     document.removeEventListener("scroll", updateActiveStep, true);
   }
 }

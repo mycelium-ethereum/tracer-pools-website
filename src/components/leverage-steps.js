@@ -30,7 +30,7 @@ const LeverageSteps = (direction) => {
                 >
                   Perpetual Pools
                 </small>
-                <h1 className="2xl:text-6xl text-white lg:text-5xl text-3xl font-bold bg-blue lg:mt-4 mt-2 lg:mb-10 mb-6">
+                <h1 className="2xl:text-6xl text-white lg:text-5xl text-3xl font-bold bg-blue lg:mt-4 mt-0 lg:mb-10 mb-6">
                   Leveraged exposure in four steps
                 </h1>
                 <div className="step-info__text items-center lg:flex hidden">
