@@ -1078,14 +1078,8 @@ footer {
   .dropdown.active {
     height: 100vh;
   }
-  footer #footer-bg {
-    /* top: -55px; */
-  }
   .min-h-body {
-    min-height: auto;
-  }
-  .min-h-body {
-    min-height: 600px;
+    min-height: 800px;
   }
   .h-thumbnail {
     height: 220px;
@@ -1097,6 +1091,9 @@ footer {
   }
   #token-trigger .city-background {
     top: 200px;
+  }
+  .min-h-body {
+    min-height: 600px;
   }
 }
 @media only screen and (max-width: 320px) {
