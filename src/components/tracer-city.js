@@ -56,7 +56,7 @@ const TracerCity = () => {
             playsInline
             disableRemotePlayback={true}
             disablePictureInPicture
-            className="h-fit lg:opacity-0 transition-opacity duration-700 h-full col-span-5 lg:static lg:transform-none transform scale-110 relative"
+            className="h-fit lg:opacity-0 transition-opacity duration-700 h-full col-span-5 transform scale-110 relative"
           >
             <source
               src={isWebkit ? TracerCityVideoMP4 : TracerCityVideoWEBM}
