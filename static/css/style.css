@@ -94,6 +94,13 @@
 .h-fit {
   height: fit-content;
 }
+/* Youtube thumbnails on Learn page */
+.h-thumbnail {
+  height: 220px;
+}
+.yt-thumbnail {
+  margin-left: -1px
+}
 .prose {
   max-width: 800px;
 }
@@ -831,9 +838,11 @@ footer {
   }
 }
 @media only screen and (max-width: 1536px) {
-
   .large-spacer {
     height: 650px; 
+  }
+  .h-thumbnail {
+    height: 203px;
   }
 }
 @media only screen and (max-width: 1280px) {
@@ -846,6 +855,9 @@ footer {
   body,
   html {
     scroll-behavior: unset;
+  }
+  .h-thumbnail {
+    height: 155px;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -962,6 +974,9 @@ footer {
   .integrate-section {
     height: 650px;
   }
+  .h-thumbnail {
+    height: 182px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
   .md\:pt-13 {
@@ -994,6 +1009,9 @@ footer {
    /* Token Sliders */
   .token-slider .slick-initialized .slick-slide {
     width: 120px !important;
+  }
+  .h-thumbnail {
+    height: 160px;
   }
 }
 @media only screen and (max-width: 640px) {
@@ -1035,6 +1053,9 @@ footer {
   }
   .min-h-body {
     min-height: 600px;
+  }
+  .h-thumbnail {
+    height: 220px;
   }
 }
 @media only screen and (max-width: 479px) {

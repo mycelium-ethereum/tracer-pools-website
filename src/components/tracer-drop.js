@@ -1,7 +1,9 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import PostLink from "./blog-post-link";
+// import PostLink from "./blog-post-link";
+import Overlay06 from "/static/img/learn/overlay-06.svg";
 import Overlay07 from "/static/img/learn/overlay-07.svg";
+import Overlay08 from "/static/img/learn/overlay-08.svg";
 
 const query = graphql`
   query tracerBlogs {
@@ -33,34 +35,46 @@ const TracerDrop = () => {
           <h1 className="font-semibold text-3xl text-center mb-8 text-white">
             Latest Announcements
           </h1>
-
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
             <a
-              className="relative h-56 overflow-hidden col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-bl-xl rounded-br-xl cursor-pointer"
+              className="relative h-thumbnail overflow-hidden col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-xl cursor-pointer"
               href="https://www.youtube.com/embed/pWVY84ttx6U"
               rel="noreferrer"
               target="_blank"
             >
-              <img className="absolute bottom-1.5 left-0 z-10" src={Overlay07} />
-              <img className="absolute top-1/2 left-0 transform -translate-y-1/2" src="https://img.youtube.com/vi/pWVY84ttx6U/0.jpg" />
+              <img className="absolute bottom-0 left-0 z-20" src={Overlay08} />
+              <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 z-10" />
+              <img
+                className="yt-thumbnail object-cover object-top w-full h-full sm:-mt-9 -mt-12"
+                src="https://img.youtube.com/vi/pWVY84ttx6U/0.jpg"
+              />
             </a>
             <a
-              className="relative h-60 overflow-hidden col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-bl-xl rounded-br-xl cursor-pointer"
-              href="https://www.youtube.com/embed/iEeVb1jH0u8"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <img src="https://img.youtube.com/vi/iEeVb1jH0u8/0.jpg" />
-            </a>
-            <a
-              className="relative h-60 overflow-hidden col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-bl-xl rounded-br-xl cursor-pointer"
+              className="relative h-thumbnail overflow-hidden col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-xl cursor-pointer"
               href="https://www.youtube.com/embed/7eQjiulVY6s"
               rel="noreferrer"
               target="_blank"
             >
-              <img src="https://img.youtube.com/vi/7eQjiulVY6s/0.jpg" />
+              <img className="absolute bottom-0 left-0 z-20" src={Overlay07} />
+              <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 z-10" />
+              <img
+                className="yt-thumbnail object-cover object-top w-full h-full sm:-mt-9 -mt-12"
+                src="https://img.youtube.com/vi/7eQjiulVY6s/0.jpg"
+              />
             </a>
-            
+            <a
+              className="relative h-thumbnail overflow-hidden col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-xl cursor-pointer lg:block sm:hidden block"
+              href="https://www.youtube.com/embed/iEeVb1jH0u8"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img className="absolute bottom-0 left-0 z-20" src={Overlay06} />
+              <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 z-10" />
+              <img
+                className="yt-thumbnail object-cover object-top w-full h-full sm:-mt-9 -mt-12"
+                src="https://img.youtube.com/vi/iEeVb1jH0u8/0.jpg"
+              />
+            </a>
           </div>
 
           {/* <StaticQuery
