@@ -47,9 +47,10 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
       }
     >
       <div
-        className={"backdrop absolute top-0 left-0 h-full w-full" + (
-          darkerNav ? " darker" : ""
-        )}
+        className={
+          "backdrop absolute top-0 left-0 h-full w-full" +
+          (darkerNav ? " darker" : "")
+        }
       />
       <div className="relative sm:mt-8 mt-4">
         <a
@@ -94,26 +95,28 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
             </p>
           </span>
         </a>
-        {Icons.map((icon, i) => (
-          <a
-            className="dropdown-option transition-colors duration-500 flex items-center mt-5 rounded-lg"
-            href={icon.href}
-            rel="noreferrer"
-            target="_blank"
-            key={i}
-          >
-            <span>
-              <img
-                className="social-icon w-5 mr-2 opacity-70"
-                src={icon.logo}
-                alt="Logo"
-              />
-            </span>
-            <span className="block text-white font-normal my-auto">
-              {icon.text}
-            </span>
-          </a>
-        ))}
+        <div className="mt-12">
+          {Icons.map((icon, i) => (
+            <a
+              className="dropdown-option transition-colors duration-500 flex items-center mt-5 rounded-lg"
+              href={icon.href}
+              rel="noreferrer"
+              target="_blank"
+              key={i}
+            >
+              <span>
+                <img
+                  className="social-icon w-5 mr-2 opacity-70"
+                  src={icon.logo}
+                  alt="Logo"
+                />
+              </span>
+              <span className="block text-white font-normal my-auto">
+                {icon.text}
+              </span>
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );

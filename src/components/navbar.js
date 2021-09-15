@@ -208,7 +208,7 @@ const Navbar = () => {
             </div>
             <div className="mt-6 w-full">
               <Link to="/radar">
-                <span className="text-white font-normal text-lg">Blog</span>
+                <span className="text-white font-normal text-lg">Radar</span>
               </Link>
             </div>
           </div>
