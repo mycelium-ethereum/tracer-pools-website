@@ -26,7 +26,7 @@ const Hero = () => {
             </p>
             <Button
               className="mt-12 h-12 w-48 border border-white mx-auto text-normal font-normal rounded-lg"
-              href="https://pools-testing.netlify.app/"
+              href="https://pools.tracer.finance/"
             >
               Launch Pools
             </Button>

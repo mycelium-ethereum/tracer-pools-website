@@ -55,7 +55,7 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
       <div className="relative sm:mt-8 mt-4">
         <a
           className="dropdown-option transition-colors duration-500 flex mb-6 rounded-lg"
-          href="https://pools-testing.netlify.app/"
+          href="https://pools.tracer.finance/"
           rel="noreferrer"
           target="_blank"
         >

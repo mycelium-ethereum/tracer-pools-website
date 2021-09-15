@@ -145,7 +145,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div>
-            <Button className="mt-0" href="https://pools-testing.netlify.app/">
+            <Button className="mt-0" href="https://pools.tracer.finance/">
               Launch Pools
             </Button>
           </div>
@@ -195,7 +195,7 @@ const Navbar = () => {
               <Button
                 onClick={() => closeNav()}
                 className="h-12 w-full border border-white font-normal text-lg opacity-0"
-                href="https://pools-testing.netlify.app/"
+                href="https://pools.tracer.finance/"
               >
                 Launch Pools
               </Button>
