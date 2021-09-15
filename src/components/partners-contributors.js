@@ -52,7 +52,7 @@ const PartnersContributors = () => {
     <>
       <section className="h-full w-screen">
         <Slider {...settings} ref={slider}>
-          <section className="panel relative w-screen h-auto md:pt-12 pt-20">
+          <section className="panel relative w-screen h-auto md:pt-12 pt-32">
             <div className="container mx-auto flex flex-col items-center justify-start lg:px-0 px-4">
               <div className="sm:justify-evenly flex sm:flex-nowrap mx-auto justify-center flex-wrap">
                 <button
@@ -133,7 +133,7 @@ const PartnersContributors = () => {
               </div>
             </div>
           </section>
-          <section className="panel relative w-screen h-auto md:pt-12 pt-20">
+          <section className="panel relative w-screen h-auto md:pt-12 pt-32">
             <div className="container mx-auto flex flex-col items-center justify-start lg:px-0 px-4">
               <div className="sm:justify-evenly flex sm:flex-nowrap mx-auto justify-center flex-wrap sm:text-left text-center">
                 <button
@@ -191,7 +191,7 @@ const PartnersContributors = () => {
               </div>
             </div>
           </section>
-          <section className="panel relative w-screen h-auto md:pt-12 pt-20">
+          <section className="panel relative w-screen h-auto md:pt-12 pt-32">
             <div className="container mx-auto flex flex-col items-center justify-start lg:px-0 px-4">
               <div className="sm:justify-evenly flex sm:flex-nowrap mx-auto justify-center flex-wrap sm:text-left text-center">
                 <button

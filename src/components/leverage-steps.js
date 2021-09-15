@@ -55,7 +55,7 @@ const LeverageSteps = (direction) => {
                 className="lg:hidden sm:w-80 w-full mx-auto z-20 sm:pl-0 pl-4"
               >
                 <div data-step="1" className="grid grid-cols-4 w-full sm:gap-0">
-                  <span className="font-bold md:text-6xl text-4xl text-white col-span-1">
+                  <span className="font-bold md:text-6xl md:pr-0 text-4xl text-white col-span-1 flex justify-end pr-4">
                     01
                   </span>
                   <p className="font-normal text-sm text-white col-span-3 mb-8">
@@ -65,7 +65,7 @@ const LeverageSteps = (direction) => {
                   </p>
                 </div>
                 <div data-step="2" className="grid grid-cols-4 w-full sm:gap-0">
-                  <span className="font-bold md:text-6xl text-4xl text-white col-span-1">
+                  <span className="font-bold md:text-6xl md:pr-0 text-4xl text-white col-span-1 flex justify-end pr-4">
                     02
                   </span>
                   <p className="font-normal text-sm text-white col-span-3 mb-8">
@@ -75,7 +75,7 @@ const LeverageSteps = (direction) => {
                   </p>
                 </div>
                 <div data-step="3" className="grid grid-cols-4 w-full sm:gap-0">
-                  <span className="font-bold md:text-6xl text-4xl text-white col-span-1">
+                  <span className="font-bold md:text-6xl md:pr-0 text-4xl text-white col-span-1 flex justify-end pr-4">
                     03
                   </span>
                   <p className="font-normal text-sm text-white col-span-3 mb-8">
@@ -85,7 +85,7 @@ const LeverageSteps = (direction) => {
                   </p>
                 </div>
                 <div data-step="4" className="grid grid-cols-4 w-full sm:gap-0">
-                  <span className="font-bold md:text-6xl text-4xl text-white col-span-1">
+                  <span className="font-bold md:text-6xl md:pr-0 text-4xl text-white col-span-1 flex justify-end pr-4">
                     04
                   </span>
                   <p className="font-normal text-sm text-white col-span-3">
