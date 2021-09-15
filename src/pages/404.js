@@ -7,11 +7,13 @@ const NotFoundPage = () => {
   return (
     <>
       <Layout>
-        <SEO title="Coming Soon" />
+        <SEO title="404: Not found" />
         <section className="h-screen w-full relative z-10">
           <div className="container w-full h-screen min-h-body relative flex items-center justify-center xl:px-0 sm:pt-18 pt-16 px-4 mx-auto">
             <header className="text-white text-center">
-              <h1 className="sm:text-7xl text-5xl font-black">This page does not exist</h1>
+              <h1 className="sm:text-7xl text-5xl font-black">
+                This page does not exist
+              </h1>
               <Link
                 to="/"
                 className="tracer-btn text-normal font-normal rounded-lg h-11 w-48 text-center transition-all duration-500 border-2 border-white mx-auto mt-12"
