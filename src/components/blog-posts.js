@@ -37,11 +37,9 @@ const BlogPosts = () => {
             render={(data) => (
               <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
                 {data.allStrapiTracerBlogs.edges
-                  .sort((a, b) =>
-                    new Date(a.node.id) >
-                    new Date(b.node.id)
-                      ? 1
-                      : -1
+                  .sort(
+                    (a, b) =>
+                      b.node.id.match(/[0-9]+/g) - a.node.id.match(/[0-9]+/g)
                   )
                   .map((node, i) => (
                     <PostLink data={node} key={i} />
