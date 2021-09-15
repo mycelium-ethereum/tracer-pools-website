@@ -77,7 +77,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           name: `theme-color`,
-          content: `#F1AF30`,
+          content: `#011772`,
         },
         {
           name: `og:image`,
