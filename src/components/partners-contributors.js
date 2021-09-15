@@ -52,27 +52,27 @@ const PartnersContributors = () => {
     <>
       <section className="h-full w-screen">
         <Slider {...settings} ref={slider}>
-          <section className="panel relative w-screen h-auto pt-12">
+          <section className="panel relative w-screen h-auto md:pt-12 pt-20">
             <div className="container mx-auto flex flex-col items-center justify-start lg:px-0 px-4">
-              <div className="justify-evenly sm:flex block">
+              <div className="justify-evenly flex sm:flex-nowrap flex-wrap">
                 <button
                   data-slide="0"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto font-bold text-white sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8 mx-auto font-bold text-white sm:text-2xl whitespace-nowrap text-lg lg:mb-0 lg:border-b-8 md:border-b-4 mb-2 border-b-2 border-blue "
                 >
                   Partners
                 </button>
                 <button
                   data-slide="1"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-bluegrey font-normal sm:text-2xl whitespace-nowrap text-lg"
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8 mx-auto color-bluegrey font-normal sm:text-2xl whitespace-nowrap text-lg lg:mb-0 lg:border-b-8 md:border-b-4 mb-2 border-b-2 border-transparent"
                 >
                   Ecosystem Contributors
                 </button>
                 <button
                   data-slide="2"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-bluegrey font-normal sm:text-2xl whitespace-nowrap text-lg"
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8 mx-auto color-bluegrey font-normal sm:text-2xl whitespace-nowrap text-lg lg:mb-0 lg:border-b-8 md:border-b-4 mb-2 border-b-2 border-transparent"
                 >
                   In the Media
                 </button>
@@ -133,27 +133,27 @@ const PartnersContributors = () => {
               </div>
             </div>
           </section>
-          <section className="panel relative w-screen h-auto sm:pt-12 pt-20">
+          <section className="panel relative w-screen h-auto md:pt-12 pt-20">
             <div className="container mx-auto flex flex-col items-center justify-start lg:px-0 px-4">
-              <div className="justify-evenly sm:flex sm:text-left text-center block">
+              <div className="justify-evenly flex sm:flex-nowrap flex-wrap sm:text-left text-center">
                 <button
                   data-slide="0"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-bluegrey font-normal sm:text-2xl whitespace-nowrap text-lg"
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8 mx-auto color-bluegrey font-normal sm:text-2xl whitespace-nowrap text-lg lg:mb-0 lg:border-b-8 md:border-b-4 mb-2 border-b-2 border-transparent"
                 >
                   Partners
                 </button>
                 <button
                   data-slide="1"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto font-bold text-white sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8 mx-auto font-bold text-white sm:text-2xl whitespace-nowrap text-lg lg:mb-0 lg:border-b-8 md:border-b-4 mb-2 border-b-2 border-blue "
                 >
                   Ecosystem Contributors
                 </button>
                 <button
                   data-slide="2"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-bluegrey font-normal sm:text-2xl whitespace-nowrap text-lg"
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8 mx-auto color-bluegrey font-normal sm:text-2xl whitespace-nowrap text-lg lg:mb-0 lg:border-b-8 md:border-b-4 mb-2 border-b-2 border-transparent"
                 >
                   In the Media
                 </button>
@@ -191,27 +191,27 @@ const PartnersContributors = () => {
               </div>
             </div>
           </section>
-          <section className="panel relative w-screen h-auto pt-12">
+          <section className="panel relative w-screen h-auto md:pt-12 pt-20">
             <div className="container mx-auto flex flex-col items-center justify-start lg:px-0 px-4">
-              <div className="justify-evenly sm:flex sm:text-left text-center block">
+              <div className="justify-evenly flex sm:flex-nowrap flex-wrap sm:text-left text-center">
                 <button
                   data-slide="0"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-bluegrey font-normal sm:text-2xl whitespace-nowrap text-lg"
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8 mx-auto color-bluegrey font-normal sm:text-2xl whitespace-nowrap text-lg lg:mb-0 lg:border-b-8 md:border-b-4 mb-2 border-b-2 border-transparent"
                 >
                   Partners
                 </button>
                 <button
                   data-slide="1"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto color-bluegrey font-normal sm:text-2xl whitespace-nowrap text-lg"
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8 mx-auto color-bluegrey font-normal sm:text-2xl whitespace-nowrap text-lg lg:mb-0 lg:border-b-8 md:border-b-4 mb-2 border-b-2 border-transparent"
                 >
                   Ecosystem Contributors
                 </button>
                 <button
                   data-slide="2"
                   onClick={(e) => goToSlide(e)}
-                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8  mx-auto font-bold text-white sm:text-2xl whitespace-nowrap text-lg sm:border-b-8 border-blue "
+                  className="block 2xl:text-4xl lg:text-3xl cursor-pointer pb-1 sm:mx-8 mx-auto font-bold text-white sm:text-2xl whitespace-nowrap text-lg lg:mb-0 lg:border-b-8 md:border-b-4 mb-2 border-b-2 border-blue"
                 >
                   In the Media
                 </button>

@@ -22,15 +22,15 @@ const LeverageSteps = (direction) => {
           className={"pin-container bg-blue z-10 " + direction.direction}
         >
           <section className="panel lg:absolute top-0 left-0 step-one flex flex-col lg:justify-center justify-start w-full h-full lg:pointer-events-none pointer-events-auto">
-            <div className="flex container mx-auto w-full lg:flex-row flex-col items-center h-auto lg:pt-48 xl:px-0 px-4">
+            <div className="flex container mx-auto w-full lg:flex-row flex-col items-center h-auto lg:pt-48 xl:px-0 md:pt-0 pt-6 px-4">
               <div className="step-info xl:pb-0 lg:pb-32 lg:w-2/4 w-full lg:text-left text-center relative">
                 <small
                   id="steps"
-                  className="2xl:text-3xl lg:text-2xl color-blue text-3xl font-bold bg-blue"
+                  className="2xl:text-3xl lg:text-2xl color-blue text-base font-bold bg-blue"
                 >
                   Perpetual Pools
                 </small>
-                <h1 className="2xl:text-6xl text-white lg:text-5xl text-4xl font-bold bg-blue lg:mt-4 mt-2 lg:mb-10 mb-6">
+                <h1 className="2xl:text-6xl text-white lg:text-5xl text-3xl font-bold bg-blue lg:mt-4 mt-2 lg:mb-10 mb-6">
                   Leveraged exposure in four steps
                 </h1>
                 <div className="step-info__text items-center lg:flex hidden">
@@ -55,40 +55,40 @@ const LeverageSteps = (direction) => {
                 className="lg:hidden sm:w-80 w-full mx-auto z-20 sm:pl-0 pl-4"
               >
                 <div data-step="1" className="grid grid-cols-4 w-full sm:gap-4 gap-8">
-                  <span className="font-normal text-6xl text-white col-span-1">
+                  <span className="font-bold md:text-6xl text-4xl text-white col-span-1">
                     01
                   </span>
-                  <p className="font-normal text-normal text-white col-span-3 mb-8">
+                  <p className="font-normal text-sm text-white col-span-3 mb-8">
                     Select market
                     <br />
                     BTC/USDC or ETH/USDC
                   </p>
                 </div>
                 <div data-step="2" className="grid grid-cols-4 w-full sm:gap-4 gap-8">
-                  <span className="font-normal text-6xl text-white col-span-1">
+                  <span className="font-bold md:text-6xl text-4xl text-white col-span-1">
                     02
                   </span>
-                  <p className="font-normal text-normal text-white col-span-3 mb-8">
+                  <p className="font-normal text-sm text-white col-span-3 mb-8">
                     Select side
                     <br />
                     Long or short
                   </p>
                 </div>
                 <div data-step="3" className="grid grid-cols-4 w-full sm:gap-4 gap-8">
-                  <span className="font-normal text-6xl text-white col-span-1">
+                  <span className="font-bold md:text-6xl text-4xl text-white col-span-1">
                     03
                   </span>
-                  <p className="font-normal text-normal text-white col-span-3 mb-8">
+                  <p className="font-normal text-sm text-white col-span-3 mb-8">
                     Choose power leverage
                     <br />
                     1, 2, 3, 5, or 15
                   </p>
                 </div>
                 <div data-step="4" className="grid grid-cols-4 w-full sm:gap-4 gap-8">
-                  <span className="font-normal text-6xl text-white col-span-1">
+                  <span className="font-bold md:text-6xl text-4xl text-white col-span-1">
                     04
                   </span>
-                  <p className="font-normal text-normal text-white col-span-3">
+                  <p className="font-normal text-sm text-white col-span-3">
                     Enter collateral
                     <br />
                     Enter collateral and select 'Buy' to gain leveraged exposure
