@@ -157,10 +157,10 @@ function handleResize() {
     if (newSize != size) {
       size = newSize;
       if (newSize === "small") {
-        // console.log("Destroyed");
+        console.log("Destroyed");
         controller.destroy(true);
       } else {
-        // console.log("Initialised");
+        console.log("Initialised");
         initialiseScrollMagic();
       }
     }

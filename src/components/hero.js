@@ -34,13 +34,13 @@ const Hero = () => {
             >
               Launch Pools
             </Button>
-            <a href="https://app.gitbook.com/login/tracer-1/pool-swaps">
+            <a href="https://docs.tracer.finance">
               <div className="mx-auto mt-2 w-48 h-12 flex justify-center items-center text-normal font-normal text-white hover:underline">
                 Documentation
               </div>
             </a>
           </header>
-          <div className="2xl:max-w-screen-xl xl:max-w-screen-lg 2xl:-bottom-96 xl:-bottom-80 lg:-bottom-72 md:-bottom-32 sm:-bottom-32 sm:px-24 absolute px-6 w-full -bottom-20 z-20">
+          <div className="2xl:max-w-screen-xl xl:max-w-screen-lg 2xl:-bottom-96 xl:-bottom-80 lg:-bottom-72 md:-bottom-32 sm:-bottom-32 sm:px-24 absolute px-6 w-full -bottom-10 z-20">
             <img
               className="w-full"
               src={TracerLaptop}
@@ -51,7 +51,7 @@ const Hero = () => {
         </div>
         <AnchorLink
           to="/#steps"
-          className="absolute 2xl:right-48 xl:right-30 lg:right-32 sm:bottom-32 sm:right-16 border-2 border-white rounded-full bottom-12 right-6 w-14 h-14 bg-white bg-opacity-20 transition-colors duration-500 text-white hover:bg-white fill-current stroke-current hover:text-blue-400 z-20"
+          className="absolute 2xl:right-48 xl:right-30 lg:right-32 sm:bottom-32 sm:right-16 border-2 border-white rounded-full bottom-6 right-6 w-14 h-14 bg-white bg-opacity-20 transition-colors duration-500 text-white hover:bg-white fill-current stroke-current hover:text-blue-400 z-20"
         >
           <svg
             width="16"

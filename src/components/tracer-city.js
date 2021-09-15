@@ -45,7 +45,7 @@ const TracerCity = () => {
                 Built for DeFi
               </h1>
               <small className="text-white font-light xl:w-80 lg:text-left lg:text-2xl lg:w-auto w-56 text-lg">
-                Use pool tokens with dApps you know and love
+                Use Pool Tokens with dApps you know and love
               </small>
             </div>
           </div>

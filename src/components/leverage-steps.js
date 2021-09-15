@@ -54,7 +54,7 @@ const LeverageSteps = (direction) => {
                 id="mobile-steps"
                 className="lg:hidden sm:w-80 w-full mx-auto z-20 sm:pl-0 pl-4"
               >
-                <div data-step="1" className="grid grid-cols-4 w-full sm:gap-4 gap-8">
+                <div data-step="1" className="grid grid-cols-4 w-full sm:gap-0">
                   <span className="font-bold md:text-6xl text-4xl text-white col-span-1">
                     01
                   </span>
@@ -64,7 +64,7 @@ const LeverageSteps = (direction) => {
                     BTC/USDC or ETH/USDC
                   </p>
                 </div>
-                <div data-step="2" className="grid grid-cols-4 w-full sm:gap-4 gap-8">
+                <div data-step="2" className="grid grid-cols-4 w-full sm:gap-0">
                   <span className="font-bold md:text-6xl text-4xl text-white col-span-1">
                     02
                   </span>
@@ -74,17 +74,17 @@ const LeverageSteps = (direction) => {
                     Long or short
                   </p>
                 </div>
-                <div data-step="3" className="grid grid-cols-4 w-full sm:gap-4 gap-8">
+                <div data-step="3" className="grid grid-cols-4 w-full sm:gap-0">
                   <span className="font-bold md:text-6xl text-4xl text-white col-span-1">
                     03
                   </span>
                   <p className="font-normal text-sm text-white col-span-3 mb-8">
-                    Choose power leverage
+                    Choose Power Leverage
                     <br />
                     1, 2, 3, 5, or 15
                   </p>
                 </div>
-                <div data-step="4" className="grid grid-cols-4 w-full sm:gap-4 gap-8">
+                <div data-step="4" className="grid grid-cols-4 w-full sm:gap-0">
                   <span className="font-bold md:text-6xl text-4xl text-white col-span-1">
                     04
                   </span>
@@ -198,7 +198,7 @@ const LeverageSteps = (direction) => {
                     03
                   </span>
                   <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
-                    Choose power leverage
+                    Choose Power Leverage
                     <br />
                     1, 2, 3, 5, or 15
                   </p>

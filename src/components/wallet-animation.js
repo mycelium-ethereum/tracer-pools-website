@@ -18,7 +18,7 @@ const WalletAnimation = () => {
         <div className="container flex flex-col align-center justify-start h-full w-full relative z-10 mx-auto 2xl:pt-96 xl:pt-80 xl:px-0 pt-60 px-4">
           <h1
             id="fade1"
-            className="mb-4 text-center 2xl:mt-12 lg:text-6xl text-3xl font-black text-white lg:opacity-0 lg:leading-snug"
+            className="mb-4 text-center 2xl:mt-12 lg:text-5xl text-3xl font-black text-white lg:opacity-0 lg:leading-snug"
           >
             Fungible ERC-20
             <br />
@@ -38,7 +38,7 @@ const WalletAnimation = () => {
             Browse Tokens
           </Button>
         </div>
-        <div className="w-full relative 2xl:h-60 lg:h-48 sm:mt-32 sm:mb-12 h-48 mt-12 mb-0">
+        <div className="w-full relative 2xl:h-60 lg:h-48 sm:mt-16 sm:mb-12 h-48 mt-12 mb-0">
           <TokenSlider className="slider-left -left-16" />
           <div className="absolute 2xl:bottom-8 2xl:w-96 lg:w-72 lg:bottom-6 left-2/4 bottom-0 transform -translate-x-1/2 h-full sm:w-60 w-48 z-20">
             <picture className="flex flex-col justify-center items-center relative w-full">

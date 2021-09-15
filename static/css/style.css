@@ -105,7 +105,6 @@ body,
 html {
   margin: 0;
   overflow-x: hidden;
-  /* scroll-behavior: smooth; */
 }
 body {
   position: relative;
@@ -794,7 +793,7 @@ footer {
     height: 800px;
   }
   footer img#footer-bg {
-    bottom: -490px;
+    bottom: -750px;
   }
 }
 @media only screen and (min-width: 2000px) {
@@ -811,8 +810,8 @@ footer {
     height: 800px;
   }
   footer #footer-bg {
-    /* top: unset; */
-    /* bottom: -150px; */
+    top: unset;
+    bottom: -400px;
   }
 }
 @media only screen and (min-width: 1280px) {

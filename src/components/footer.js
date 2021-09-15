@@ -184,7 +184,7 @@ const Footer = () => {
               className="text-base font-normal text-white xl:pl-12 sm:mb-0 sm:pl-6 mb-4"
               rel="noreferrer"
               target="_blank"
-              href="https://app.gitbook.com/login/tracer-1/pool-swaps"
+              href="https://docs.tracer.finance"
             >
               Documentation (Gitbook)
             </a>

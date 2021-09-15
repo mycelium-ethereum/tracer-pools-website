@@ -23,16 +23,16 @@ const TokenSlider = ({ className }) => {
     EthereumLong,
   ];
   const tokenShortPosTitles = [
-    "3L-ETH/USDC",
-    "1L-ETH/USDC",
     "3L-BTC/USDC",
     "1L-BTC/USDC",
+    "3L-ETH/USDC",
+    "1L-ETH/USDC",
   ];
   const tokenLongPosTitles = [
-    "1S-BTC/USDC",
-    "3S-BTC/USDC",
     "1S-ETH/USDC",
     "3S-ETH/USDC",
+    "1S-BTC/USDC",
+    "3S-BTC/USDC",
   ];
   const totalSlides = shortTokenImages.length;
   const createSlides = () => {
@@ -63,9 +63,9 @@ const TokenSlider = ({ className }) => {
     for (var j = 0; j < totalSlides; j++) {
       generatedSlides.push(generatedSlides[j]);
     }
-    for (var k = 0; k < totalSlides; k++) {
-      generatedSlides.push(generatedSlides[k]);
-    }
+    // for (var k = 0; k < totalSlides; k++) {
+    //   generatedSlides.push(generatedSlides[k]);
+    // }
     return generatedSlides;
   };
   const settings = {
@@ -91,6 +91,12 @@ const TokenSlider = ({ className }) => {
         settings: {
           speed: 1750,
           autoplay: false,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
         },
       },
     ],

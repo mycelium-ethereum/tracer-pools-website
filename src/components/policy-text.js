@@ -101,7 +101,7 @@ const PrivacyText = () => {
                 <li className="mb-2">
                   <a
                     className="text-gray-500"
-                    href="https://app.gitbook.com/login/tracer-1/pool-swaps"
+                    href="https://docs.tracer.finance"
                   >
                     Documentation (Gitbook)
                   </a>
