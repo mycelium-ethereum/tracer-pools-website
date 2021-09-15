@@ -18,7 +18,6 @@ const Button = ({
       id={id}
     >
       {children}
-      {/* {smallButton && <img src={arrow_blue} alt="Blue Arrow" />} */}
     </a>
   );
 };

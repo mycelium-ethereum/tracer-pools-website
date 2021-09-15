@@ -7,7 +7,7 @@ import TracerCityVideoWEBM from "/static/img/home-page/city/tracer-city.webm";
 import TracerCityVideoMP4 from "/static/img/home-page/city/tracer-city.mp4";
 import TracerBuildingWEBM from "/static/img/home-page/city/tracer-building.webm";
 import TracerBuildingMP4 from "/static/img/home-page/city/tracer-building.mp4";
-import MeshSmall from "/static/img/home-page/city/mesh-small.png";
+import MeshSmall from "/static/img/home-page/city/mesh-small.svg";
 import MeshLarge from "/static/img/home-page/city/mesh-large.svg";
 import CityBottom from "/static/img/home-page/city/city-bottom.png";
 
@@ -65,7 +65,7 @@ const TracerCity = () => {
           </video>
         </div>
         <img
-          className="absolute w-full h-full left-2/4 transform-gpu opacity-50 -translate-x-1/2 bottom-0 z-0 block min-w-max"
+          className="absolute w-full h-full left-2/4 transform-gpu -translate-x-1/2 bottom-0 z-0 block min-w-max"
           src={MeshSmall}
           alt="Mesh Background"
         />
@@ -109,7 +109,7 @@ const TracerCity = () => {
           </div>
         </div>
         <img
-          className="absolute opacity-20 w-full h-auto md:top-1/2 top-3/4 transform -translate-y-1/2 left-0 z-0 min-w-max"
+          className="absolute opacity-80 w-full h-auto md:top-1/2 top-3/4 transform -translate-y-1/2 left-0 z-0 min-w-max"
           alt="Mesh Background"
           src={MeshLarge}
         />

@@ -1,10 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-class NotFoundPage extends Component {
-  render() {
+const NotFoundPage = () => {
     return (
       <>
         <Layout>
@@ -19,7 +18,6 @@ class NotFoundPage extends Component {
         </Layout>
       </>
     );
-  }
 }
 
 export default NotFoundPage;
