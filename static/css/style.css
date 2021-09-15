@@ -113,6 +113,7 @@ body {
   font-size: 16px;
 }
 img {
+  image-rendering: crisp-edges;
   image-rendering: -webkit-optimize-contrast;
 }
 *::selection {
@@ -780,6 +781,12 @@ footer {
 }
 
 /* --------------- MEDIA QUERIES --------------- */
+
+@media only screen and (min-width: 1280px) and (min-width: 400px){
+  .min-h-body {
+    min-height: 800px;
+  }
+}
 @media only screen and (min-width: 3000px) {
   #token-trigger .container {
     padding-top: 450px;
@@ -835,9 +842,6 @@ footer {
   }
   .large-spacer {
     height: 750px; 
-  }
-  .min-h-body {
-    min-height: 800px;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -1020,6 +1024,9 @@ footer {
   }
   .min-h-body {
     min-height: auto;
+  }
+  .min-h-body {
+    min-height: 480px;
   }
 }
 @media only screen and (max-width: 479px) {

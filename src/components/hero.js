@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <>
       <section role="main">
-        <div className="container w-full h-screen min-h-body relative flex justify-center items-center z-20 pb-36 2xl:pt-0 lg:pt-36 xl:px-0 sm:pt-18 pt-16 px-4 mx-auto">
+        <div className="container w-full h-screen min-h-body relative flex justify-center items-center z-20 2xl:pt-0 lg:pt-36 xl:px-0 sm:pt-18 pt-16 px-4 mx-auto">
           <header className="text-center">
             <h1 className="xl:text-9xl sm:text-7xl text-5xl text-white font-black mb-4">
               Perpetual Pools
@@ -36,13 +36,13 @@ const Hero = () => {
               </div>
             </a>
           </header>
-          <div className="2xl:max-w-screen-xl xl:max-w-screen-lg 2xl:-bottom-80 xl:-bottom-96 lg:-bottom-72 md:-bottom-32 sm:-bottom-32 sm:px-24 absolute px-6 w-full -bottom-10 z-20">
+          <picture className="2xl:max-w-screen-xl xl:max-w-screen-lg 2xl:-bottom-96 xl:-bottom-80 lg:-bottom-72 md:-bottom-32 sm:-bottom-32 sm:px-24 absolute px-6 w-full -bottom-36 z-20">
             <img
               className="w-full"
               src={TracerLaptop}
               alt="Tracer Laptop View"
             />
-          </div>
+          </picture>
         </div>
         <AnchorLink
           to="/#steps"
