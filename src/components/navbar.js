@@ -149,7 +149,7 @@ const Navbar = () => {
               Launch Pools
             </Button> */}
             <Link
-              to="/"
+              to="/coming-soon"
               className="tracer-btn text-normal font-normal rounded-lg h-11 w-48 text-center transition-all duration-500 border-2 border-white mx-auto mt-0"
             >
               Launch Pools

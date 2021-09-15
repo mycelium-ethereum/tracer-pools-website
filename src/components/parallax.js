@@ -12,21 +12,14 @@ import PinkRectangle from "/static/img/home-page/background/pink-rectangle.png";
 
 const BackgroundParallax = () => {
   const [fixed, setFixed] = useState(false);
-  const [hideOverflow, setHideOverflow] = useState(false);
   const [quarterOverlay, setQuarterOverlay] = useState(false);
   const checkPage = () => {
     const currentPage = document.title;
-    if (
-      currentPage.includes("Privacy Policy") ||
-      currentPage.includes("Radar")
-    ) {
+    if (currentPage != "/learn" || currentPage != "/") {
       setFixed(true);
     }
     if (currentPage.includes("learn")) {
       setQuarterOverlay(true);
-    }
-    if (currentPage.includes("404")) {
-      setHideOverflow(true);
     }
   };
 
