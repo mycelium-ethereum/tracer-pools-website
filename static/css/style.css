@@ -341,7 +341,7 @@ section {
 }
 .mobile-nav.active a {
   opacity: 1;
-  transition: all 0.5s ease 0.5s;
+  transition: all 0.5s ease 0.6s;
 }
 .mobile-nav.inactive a {
   opacity: 0;
