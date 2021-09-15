@@ -170,8 +170,8 @@ const Navbar = () => {
       </div>
       <menu
         className={
-          " fixed transition-all duration-700 h-screen w-full top-16 left-0 mt-0 pl-0" +
-          (navOpen ? " left-0" : " left-full")
+          "mobile-nav fixed transition-all duration-700 h-screen w-full top-16 left-0 mt-0 pl-0" +
+          (navOpen ? " left-0 active" : " left-full")
         }
       >
         <div
@@ -185,7 +185,7 @@ const Navbar = () => {
             <div className="mt-6 w-full">
               <Link
                 onClick={() => closeNav()}
-                className="mobile-link py-2 px-4 rounded-lg"
+                className="mobile-link opacity-0 py-2 px-4 rounded-lg"
                 to="/learn"
               >
                 <span className="text-white font-normal text-lg">Learn</span>
@@ -194,7 +194,7 @@ const Navbar = () => {
             <div className="mt-6 w-full">
               <Button
                 onClick={() => closeNav()}
-                className="h-12 w-full border border-white font-normal text-lg"
+                className="h-12 w-full border border-white font-normal text-lg opacity-0"
                 href="https://pools-testing.netlify.app/"
               >
                 Launch Pools
@@ -208,7 +208,7 @@ const Navbar = () => {
             <div className="mt-6 w-full">
               <a
                 onClick={() => closeNav()}
-                className="mobile-link py-2 px-4 rounded-lg"
+                className="mobile-link opacity-0 py-2 px-4 rounded-lg"
                 href="https://vote.tracer.finance/#/"
               >
                 <span className="text-white font-normal text-lg">Govern</span>
@@ -217,7 +217,7 @@ const Navbar = () => {
             <div className="mt-6 w-full">
               <Link
                 onClick={() => closeNav()}
-                className="mobile-link py-2 px-4 rounded-lg"
+                className="mobile-link opacity-0 py-2 px-4 rounded-lg"
                 to="/radar"
               >
                 <span className="text-white font-normal text-lg">Radar</span>
