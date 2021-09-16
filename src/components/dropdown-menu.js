@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 
 // Images
 import TracerBoxPurple from "../../static/img/tracer-icon-box-purple.svg";
@@ -54,7 +53,7 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
         }
       />
       <div className="relative sm:mt-8 mt-4">
-        {/* <a
+        <a
           className="dropdown-option pr-2 w-fit transition-colors duration-500 flex mb-6 rounded-lg"
           href="https://pools.tracer.finance/"
           rel="noreferrer"
@@ -67,19 +66,7 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
               <b>Perpetual Pools</b>
             </p>
           </span>
-        </a> */}
-        <Link
-          className="dropdown-option pr-2 w-fit transition-colors duration-500 flex mb-6 rounded-lg"
-          to="/coming-soon"
-        >
-          <img className="h-12 mr-3" src={TracerBoxPurple} alt="Tracer Box" />
-          <span className="block text-white font-normal my-auto">
-            <p>Tracer</p>
-            <p>
-              <b>Perpetual Pools</b>
-            </p>
-          </span>
-        </Link>
+        </a>
         <a
           className="dropdown-option pr-2 w-fit transition-colors duration-500 flex mb-6 rounded-lg"
           href="https://vote.tracer.finance/#/"

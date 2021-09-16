@@ -103,7 +103,7 @@ const TracerCity = () => {
             <small className="text-white font-light lg:text-left lg:text-2xl w-auto text-lg">
               In the Tracer Interface and earn TCR
             </small>
-            <Button className="mt-6" href="https://pools-website-testing.netlify.app/coming-soon/">
+            <Button className="mt-6" href="https://pools.tracer.finance/stake/">
               View Staking
             </Button>
           </div>
