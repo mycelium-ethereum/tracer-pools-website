@@ -15,7 +15,7 @@ const BackgroundParallax = () => {
   const [quarterOverlay, setQuarterOverlay] = useState(false);
   const checkPage = () => {
     const currentPage = window.location.pathname;
-    if (currentPage !== "/learn" && currentPage !== "" && currentPage !== "/") {
+    if (currentPage === "/radar" || currentPage === "/privacy-policy") {
       setFixed(true);
     }
     if (currentPage.includes("learn")) {

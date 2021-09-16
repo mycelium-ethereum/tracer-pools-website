@@ -1,5 +1,5 @@
 import React from "react";
-import { StaticQuery, graphql } from "gatsby";
+import { graphql } from "gatsby";
 // import PostLink from "./blog-post-link";
 import Overlay06 from "/static/img/learn/overlay-06.svg";
 import Overlay07 from "/static/img/learn/overlay-07.svg";

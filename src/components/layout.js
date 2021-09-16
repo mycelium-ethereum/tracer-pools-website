@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
           duration: 0.5,
           delay: 0.4,
         }}
-        className="relative"
+        className="relative overflow-hidden"
       >
         <BackgroundParallax />
         {children}
