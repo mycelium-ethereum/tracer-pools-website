@@ -192,20 +192,13 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="mt-6 w-full">
-              {/* <Button
+              <Button
                 onClick={() => closeNav()}
                 className="h-12 w-full border border-white font-normal text-lg opacity-0"
                 href="https://pools.tracer.finance/"
               >
                 Launch Pools
-              </Button> */}
-              <Link
-                onClick={() => closeNav()}
-                to="/coming-soon"
-                className="tracer-btn text-normal font-normal rounded-lg h-11 w-48 text-center opacity-0 transition-all duration-500 border-2 border-white mx-auto mt-0"
-              >
-                Launch Pools
-              </Link>
+              </Button>
             </div>
             {/* <div className="mt-6 w-full">
             <Link to="/perpetuals">

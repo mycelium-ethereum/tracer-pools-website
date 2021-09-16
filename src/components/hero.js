@@ -1,7 +1,6 @@
 import React from "react";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import Button from "../components/button";
-import { Link } from "gatsby";
 
 // Assets
 import TracerLaptop from "/static/img/home-page/laptop/Macbook.svg";
@@ -25,18 +24,12 @@ const Hero = () => {
               No margins. No liquidations.
               <br />A new derivative primitive.
             </p>
-            {/* <Button
+            <Button
               className="mt-12 h-12 w-48 border border-white mx-auto text-normal font-normal rounded-lg"
               href="https://pools.tracer.finance/"
             >
               Launch Pools
-            </Button> */}
-            <Link
-              to="/coming-soon"
-              className="tracer-btn text-normal font-normal rounded-lg h-11 w-48 text-center transition-all duration-500 border-2 border-white mx-auto mt-12"
-            >
-              Launch Pools
-            </Link>
+            </Button>
             <a href="https://docs.tracer.finance">
               <div className="mx-auto mt-2 w-48 h-12 flex justify-center items-center text-normal font-normal text-white hover:underline">
                 Documentation
