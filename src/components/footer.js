@@ -10,7 +10,7 @@ import Discord from "/static/img/social-icons/discord.svg";
 
 // Litepaper
 import PoolsPDF from "../../static/pdf/perpetual-pools.pdf";
-import AuditPDF from "../../static/pdf/Sigma Prime - Tracer DAO - v1.1.pdf";
+import AuditPDF from "../../static/pdf/sigma-prime-tracer-dao-v1.1.pdf";
 
 const Footer = () => {
   const isBelowBreakpoint = () => {
