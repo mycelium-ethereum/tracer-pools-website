@@ -67,7 +67,7 @@ const TracerCity = () => {
           </video>
         </div>
         <img
-          className="absolute w-full h-full left-2/4 transform-gpu -translate-x-1/2 md:bottom-0 z-0 min-w-max md:block hidden"
+          className="absolute h-full -right-48 -bottom-12 z-0 w-full md:block hidden"
           src={MeshSmall}
           alt="Mesh Background"
         />
@@ -121,7 +121,7 @@ const TracerCity = () => {
           src={MeshLargeMobile}
         />
         <img
-          className="absolute opacity-80 w-full h-auto md:top-1/2 top-3/4 transform -translate-y-1/2 left-0 z-0 min-w-max lg:block hidden"
+          className="absolute opacity-40 w-full h-auto md:top-1/2 top-3/4 transform -translate-y-1/2 left-0 z-0 min-w-max lg:block hidden"
           alt="Mesh Background"
           src={MeshLarge}
         />
