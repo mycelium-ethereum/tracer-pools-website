@@ -145,15 +145,9 @@ const Navbar = () => {
             </Link>
           </div>
           <div>
-            {/* <Button className="mt-0" href="https://pools.tracer.finance/">
+            <Button className="mt-0" href="https://pools.tracer.finance/">
               Launch Pools
-            </Button> */}
-            <Link
-              to="/coming-soon"
-              className="tracer-btn text-normal font-normal rounded-lg h-11 w-48 text-center transition-all duration-500 border-2 border-white mx-auto mt-0"
-            >
-              Launch Pools
-            </Link>
+            </Button>
           </div>
         </div>
         <button
