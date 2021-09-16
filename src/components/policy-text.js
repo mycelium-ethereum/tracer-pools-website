@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 
 // Litepaper
 import AuditPDF from "../../static/pdf/Sigma Prime - Tracer DAO - v1.1.pdf";
-import PoolsPDF from "../../static/pdf/Perpetual Pools.pdf";
+import PoolsPDF from "../../static/pdf/perpetual-pools.pdf";
 
 const PrivacyText = () => {
   const [protocolDropdownOpen, setProtocolDropdownOpen] = useState(false);

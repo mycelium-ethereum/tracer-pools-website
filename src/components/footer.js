@@ -9,7 +9,7 @@ import Github from "/static/img/social-icons/github.svg";
 import Discord from "/static/img/social-icons/discord.svg";
 
 // Litepaper
-import PoolsPDF from "../../static/pdf/Perpetual Pools.pdf";
+import PoolsPDF from "../../static/pdf/perpetual-pools.pdf";
 import AuditPDF from "../../static/pdf/Sigma Prime - Tracer DAO - v1.1.pdf";
 
 const Footer = () => {
