@@ -101,9 +101,9 @@ const TracerCity = () => {
               Stake Natively
             </h1>
             <small className="text-white font-light lg:text-left lg:text-2xl w-auto text-lg">
-              In the Tracer Farms and earn TCR
+              In the Tracer Interface and earn TCR
             </small>
-            <Button className="mt-6" href="#">
+            <Button className="mt-6" href="https://pools-website-testing.netlify.app/coming-soon/">
               View Staking
             </Button>
           </div>
