@@ -45,6 +45,7 @@ const Navbar = () => {
     setDropdownOpen(false);
   };
   const handleDropdownClick = () => {
+    setNavOpen(false);
     setDropdownOpen(!dropdownOpen);
   };
   const closeNav = () => {
