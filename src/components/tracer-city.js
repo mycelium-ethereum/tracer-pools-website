@@ -8,7 +8,9 @@ import TracerCityVideoMP4 from "/static/img/home-page/city/tracer-city.mp4";
 import TracerBuildingWEBM from "/static/img/home-page/city/tracer-building.webm";
 import TracerBuildingMP4 from "/static/img/home-page/city/tracer-building.mp4";
 import MeshSmall from "/static/img/home-page/city/mesh-small.svg";
+import MeshSmallMobile from "/static/img/home-page/city/mesh-small-mobile.svg";
 import MeshLarge from "/static/img/home-page/city/mesh-large.svg";
+import MeshLargeMobile from "/static/img/home-page/city/mesh-large-mobile.svg";
 import CityBottom from "/static/img/home-page/city/city-bottom.png";
 
 const TracerCity = () => {
@@ -65,8 +67,13 @@ const TracerCity = () => {
           </video>
         </div>
         <img
-          className="absolute w-full h-full left-2/4 transform-gpu -translate-x-1/2 bottom-0 z-0 block min-w-max"
+          className="absolute w-full h-full left-2/4 transform-gpu -translate-x-1/2 md:bottom-0 z-0 min-w-max md:block hidden"
           src={MeshSmall}
+          alt="Mesh Background"
+        />
+        <img
+          className="absolute w-full h-full opacity-40 left-2/4 transform-gpu -translate-x-1/2 -bottom-20 z-0 min-w-max md:hidden block"
+          src={MeshSmallMobile}
           alt="Mesh Background"
         />
       </section>
@@ -109,7 +116,12 @@ const TracerCity = () => {
           </div>
         </div>
         <img
-          className="absolute opacity-80 w-full h-auto md:top-1/2 top-3/4 transform -translate-y-1/2 left-0 z-0 min-w-max"
+          className="absolute opacity-40 w-full h-auto md:top-1/2 top-3/4 transform -translate-y-1/2 left-0 z-0 min-w-max lg:hidden block"
+          alt="Mesh Background"
+          src={MeshLargeMobile}
+        />
+        <img
+          className="absolute opacity-80 w-full h-auto md:top-1/2 top-3/4 transform -translate-y-1/2 left-0 z-0 min-w-max lg:block hidden"
           alt="Mesh Background"
           src={MeshLarge}
         />
