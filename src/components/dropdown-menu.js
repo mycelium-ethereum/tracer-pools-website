@@ -42,7 +42,7 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
     <div
       id="dropdown"
       className={
-        "dropdown transform-gpu transition-all sm:duration-500 duration-700 sm:absolute fixed sm:px-8 px-4 block sm:rounded-lg sm:top-11 left-0 top-16 box-border overflow-hidden " +
+        "dropdown transform-gpu transition-all duration-700 sm:absolute fixed sm:px-8 px-4 block sm:rounded-lg sm:top-11 left-0 top-16 box-border overflow-hidden " +
         (dropdownOpen ? "active" : "inactive")
       }
     >

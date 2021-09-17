@@ -292,22 +292,22 @@ section {
 .nav-link.active {
   background: rgb(0 0 122 / 50%)
 }
-.dropdown {
-  min-width: 350px;
-}
 .dropdown.active {
+  width: 350px;
   height: 460px;
 }
 .dropdown.active a {
   opacity: 1;
-  transition: all 0.5s ease, opacity 0.5s ease 0.3s;
+  transition: all 0.5s ease, opacity 0.5s ease 0.5s;
 }
 .dropdown.inactive {
   height: 0px;
+  width: 0px;
+  padding: 0px;
 }
 .dropdown.inactive a {
   opacity: 0;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 .mobile-nav.active a {
   opacity: 1;
