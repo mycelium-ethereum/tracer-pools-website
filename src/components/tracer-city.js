@@ -104,13 +104,13 @@ const TracerCity = () => {
             <small className="text-white font-light lg:text-left lg:text-2xl w-auto text-lg">
               In the Tracer Interface and earn TCR
             </small>
-            <Button className="mt-6" href="https://pools.tracer.finance/stake/">
+            <Button className="lg:ml-0 lg:mb-0 mb-12 mt-6" href="https://pools.tracer.finance/stake/">
               View Staking
             </Button>
           </div>
         </div>
         <img
-          className="absolute opacity-40 w-full h-auto md:top-1/2 top-3/4 transform -translate-y-1/2 left-0 z-0 min-w-max lg:hidden block"
+          className="absolute opacity-40 w-full h-auto top-3/4 transform -translate-y-1/2 left-0 z-0 min-w-max lg:hidden block"
           alt="Mesh Background"
           src={MeshLargeMobile}
         />
