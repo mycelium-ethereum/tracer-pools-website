@@ -1108,4 +1108,7 @@ footer {
     min-width: 16px;
     min-height: 16px;
   }
+  .h-thumbnail {
+    height: 160px;
+  }
 }
