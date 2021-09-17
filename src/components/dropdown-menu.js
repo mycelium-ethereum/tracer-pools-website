@@ -12,11 +12,11 @@ import Folder from "../../static/img/folder.svg";
 
 const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
   const Icons = [
-    {
-      text: "Website",
-      href: "https://tracer.finance",
-      logo: Folder,
-    },
+    // {
+    //   text: "Website",
+    //   href: "https://tracer.finance",
+    //   logo: Folder,
+    // },
     {
       text: "Twitter",
       href: "https://twitter.com/TracerDAO",

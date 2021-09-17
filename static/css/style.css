@@ -361,11 +361,11 @@ section {
   opacity: 0;
   transition: all 0.5s ease 0s;
 }
-@media (hover: hover) and (pointer: fine) {
+/* @media (hover: hover) and (pointer: fine) {
   .social-icon:hover {
     filter: invert(0) sepia(0100%) saturate(2000%) hue-rotate(140deg);
   }
-}
+} */
 .menu-icon {
   position: relative;
   width: 25px;
