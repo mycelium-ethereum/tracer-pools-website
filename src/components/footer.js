@@ -9,8 +9,7 @@ import Github from "/static/img/social-icons/github.svg";
 import Discord from "/static/img/social-icons/discord.svg";
 
 // Litepaper
-import PoolsPDF from "../../static/pdf/perpetual-pools.pdf";
-import AuditPDF from "../../static/pdf/sigma-prime-tracer-dao-v1.1.pdf";
+import PoolsPDF from "../../static/pdf/Tracer Perpetual Pools.pdf";
 
 const Footer = () => {
   const isBelowBreakpoint = () => {
@@ -70,7 +69,7 @@ const Footer = () => {
     <footer className="w-full relative overflow-hidden lg:py-10 h-1/2 z-10 bg-blue">
       <img
         id="footer-bg"
-        // xl:-top-96 md:-top-56 sm:-top-44 -top-10 
+        // xl:-top-96 md:-top-56 sm:-top-44 -top-10
         className="absolute 2xl:-bottom-52 xl:-bottom-36 lg:-bottom-6 md:-bottom-13 sm:bottom-2 sm:top-auto bottom-auto -top-14 left-0 w-full h-auto "
         src={CityBottomDark}
         alt=""
@@ -190,7 +189,7 @@ const Footer = () => {
             </a>
             <a
               className="text-base font-normal text-white xl:pl-12 sm:mb-0 sm:pl-6 mb-4"
-              href={AuditPDF}
+              href="/radar/sigma-prime-audit-response"
               download
             >
               Security Audit

@@ -9,9 +9,9 @@ import PoolsLitepaper from "../../static/img/learn/pools/pools-litepaper.png";
 import PerpetualSwapsPaper from "../../static/img/learn/swaps/perpetual-swaps-paper.png";
 import P2PFinancePaper from "../../static/img/learn/p2p/p2p-finance-paper.png";
 // PDFs
-import PoolsPDF from "../../static/pdf/perpetual-pools.pdf";
-import SwapsPDF from "../../static/pdf/perpetual-swaps.pdf";
-import P2PPDF from "../../static/pdf/peer-to-peer-finance.pdf";
+import PoolsPDF from "../../static/pdf/Tracer Perpetual Pools.pdf";
+import SwapsPDF from "../../static/pdf/Tracer Perpetual Swaps.pdf";
+import P2PPDF from "../../static/pdf/Tracer Peer-to-Peer Finance.pdf";
 
 const ResearchPapers = () => {
   const poolsProps = {
