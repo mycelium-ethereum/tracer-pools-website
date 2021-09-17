@@ -1006,7 +1006,11 @@ footer {
   .integrate-section .fade-anim {
     opacity: 1;
   }
-
+  #fade1,
+  #fade2,
+  #fade3 {
+    opacity: 1 !important;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
   .md\:pt-13 {
