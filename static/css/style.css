@@ -236,7 +236,6 @@ h1 {
   max-width: unset;
 }
 
-
 /* DOWN ARROW */
 picture {
   display: block;
@@ -297,7 +296,7 @@ section {
   min-width: 350px;
 }
 .dropdown.active {
-  height: 500px;
+  height: 460px;
 }
 .dropdown.active a {
   opacity: 1;
