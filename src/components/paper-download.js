@@ -30,7 +30,7 @@ const PaperDownload = ({ title, header, image, link }) => {
             download
           >
             Download
-            <img className="ml-2 w-2882" src={PDFIcon} alt="PDF Download" />
+            <img className="ml-2 w-3" src={PDFIcon} alt="PDF Download" />
           </a>
         </div>
       </div>
