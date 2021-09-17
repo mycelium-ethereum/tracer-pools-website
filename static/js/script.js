@@ -34,7 +34,7 @@ function tokenAnimation() {
     triggerElement: "#token-trigger",
     triggerHook: "onLeave",
     duration: "45%",
-    offset: -oneFifthScreenHeight,
+    offset: -halfScreen,
   })
     .setTween(t2)
     .setClassToggle("#token-trigger", "active")
