@@ -1,5 +1,5 @@
 import React from "react";
-import PDFIcon from "../../static/img/learn/pdf-icon.png";
+import PDFIcon from "../../static/img/learn/pdf-icon.svg";
 
 const PaperDownload = ({ title, header, image, link }) => {
   return (
@@ -30,7 +30,7 @@ const PaperDownload = ({ title, header, image, link }) => {
             download
           >
             Download
-            <img className="ml-2" src={PDFIcon}  alt="PDF Download"/>
+            <img className="ml-2 w-2" src={PDFIcon}  alt="PDF Download"/>
           </a>
         </div>
       </div>

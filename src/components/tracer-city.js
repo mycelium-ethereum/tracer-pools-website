@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from "../components/button";
-import { detect } from "detect-browser";
+import { isChromium } from "react-device-detect";
 
 // Image assets
 import TracerCityVideoWEBM from "/static/img/home-page/city/tracer-city.webm";
@@ -16,16 +16,10 @@ import CityBottom from "/static/img/home-page/city/city-bottom.png";
 const TracerCity = () => {
   const [isWebkit, setWebkit] = useState("");
   const detectBrowser = () => {
-    const browser = detect();
-    if (browser) {
-      switch (browser && browser.name) {
-        case "safari":
-          setWebkit(true);
-          break;
-
-        default:
-          setWebkit(false);
-      }
+    if (isChromium) {
+      setWebkit(false);
+    } else {
+      setWebkit(false);
     }
   };
   useEffect(() => {

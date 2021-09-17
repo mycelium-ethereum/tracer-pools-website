@@ -33,7 +33,7 @@ const IntegrateAnimation = () => {
     >
       <div className="flex h-full w-full container mx-auto relative items-center 2xl:pb-36 lg:flex-row lg:justify-end justify-start xl:px-0 flex-col px-4">
         <div
-          className="force-flex lg:absolute xl:left-0 left-4 2xl:mt-48 xl:mt-96 lg:mt-48 lg:justify-start lg:flex-row justify-center flex-col mx-auto z-10"
+          className="force-flex lg:absolute xl:left-0 left-4 lg:mt-48 lg:justify-start lg:flex-row justify-center flex-col mx-auto z-10"
           data-stellar-ratio="1.2"
         >
           <div className="integrate-text xl:w-full lg:w-96 h-auto flex flex-col justify-center">

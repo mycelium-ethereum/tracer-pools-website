@@ -177,6 +177,9 @@ h1 {
   width: 1920px;
   height: 1150px;
 }
+.tile-bg.fixed {
+  height: 100vh;
+}
 .tile-bg img {
   top: unset !important;
   left: unset !important;
