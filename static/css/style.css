@@ -235,50 +235,7 @@ h1 {
 .tile-bg img {
   max-width: unset;
 }
-.tracer-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.14);
-  color: #fff;
-  transition: all 0.5s ease;
-}
-.tracer-btn.blue,
-.tracer-btn.glow {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--lightblue);
-  border: 1px solid var(--lightblue);
-  background: transparent;
-  transition: all 0.5s ease;
-}
-.tracer-btn.blue {
-  border: 1px solid var(--lightblue);
-}
-.tracer-btn.glow {
-  color: var(--lightblue);
-  border: 1px solid var(--lightblue);
-  background: linear-gradient(91.48deg, rgba(61, 168, 245, 0.5) -5.68%, rgba(61, 168, 245, 0.3) 105.12%);
-  box-sizing: border-box;
-  /* box-shadow: 0 -1px 10px 3px rgba(61, 168, 245, 0.36); */
-}
-@media (hover: hover) and (pointer: fine) {
-  .tracer-btn:hover,
-  .tracer-btn:hover {
-    background: rgba(255, 255, 255, 1);
-    color: var(--lightblue);
-  }
-  .tracer-btn.blue:hover,
-  .tracer-btn.glow:hover {
-    color: var(--lightblue);
-  }
-  .tracer-btn.glow:hover {
-    color: var(--white);
-    background: linear-gradient(91.48deg, var(--lightblue) -5.68%, var(--lightblue) 105.12%);
-  }
-}
+
 
 /* DOWN ARROW */
 picture {

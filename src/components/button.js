@@ -1,16 +1,11 @@
 import React from "react";
 
-const Button = ({
-  className,
-  children,
-  href,
-  id,
-}) => {
+const Button = ({ className, children, href, id }) => {
   return (
     <a
       className={
         className +
-        " tracer-btn rounded-lg h-11 w-48 text-center transition-all duration-500 border-2 border-white"
+        " flex items-center justify-center rounded-lg h-12 w-48 transition-all duration-500 border-2 border-white text-white bg-white bg-opacity-10 mx-auto text-normal font-normal hover:bg-opacity-100 hover:text-blue-400"
       }
       rel="noreferrer"
       target="_blank"

@@ -25,7 +25,7 @@ const Hero = () => {
               <br />A new derivative primitive.
             </p>
             <Button
-              className="mt-12 h-12 w-48 border border-white mx-auto text-normal font-normal rounded-lg"
+              className="mt-12"
               href="https://pools.tracer.finance/"
             >
               Launch Pools
