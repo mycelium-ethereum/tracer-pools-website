@@ -658,7 +658,7 @@ section {
 }
 
 /*------------[Positions slider]------------*/
-.slick-slide .token {
+.token {
   max-width: 117px;
 }
 .slick-slide:not(.slick-current) {
@@ -679,10 +679,7 @@ section {
 #token-trigger.active #fade1 {
   transition: opacity 0.5s ease;
 }
-/* Token Sliders */
-.token-slider .slick-initialized .slick-slide {
-  width: 200px;
-}
+
 /*------------TRACER CITY------------*/
 
 #city-trigger.active video {
@@ -968,7 +965,7 @@ footer {
   .large-spacer {
     height: 450px;
   }
-  .slick-slide .token {
+  .token {
     width: 80px;
   }
   .integrate-section {
@@ -1038,10 +1035,6 @@ footer {
   }
   .integrate-section {
     height: 700px;
-  }
-   /* Token Sliders */
-  .token-slider .slick-initialized .slick-slide {
-    width: 120px !important;
   }
   .h-thumbnail {
     height: 160px;

@@ -1,7 +1,7 @@
 import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import Marquee from "react-fast-marquee";
 
 // Assets
 import EthereumShort from "/static/img/home-page/slider/eth-s.svg";
@@ -34,79 +34,41 @@ const TokenSlider = ({ className }) => {
     "1S-BTC/USDC",
     "3S-BTC/USDC",
   ];
-  const totalSlides = shortTokenImages.length;
+  const totalSlides = shortTokenImages.length * 2;
   const createSlides = () => {
     const generatedSlides = [];
     for (var i = 0; i < totalSlides; i++) {
+      var item = i;
+      if (i >= totalSlides / 2) {
+        item -= totalSlides / 2;
+      }
       generatedSlides.push(
-        <div className="item flex items-start" key={i}>
+        <div className="item items-start md:w-60 md:h-60 w-36 h-36 " key={i}>
           <div className="relative mx-auto w-min">
             <img
               className="token"
               src={
                 className.includes("slider-left")
-                  ? longTokenImages[i]
-                  : shortTokenImages[i]
+                  ? longTokenImages[item]
+                  : shortTokenImages[item]
               }
               alt=""
             />
           </div>
           <span className="block text-white text-center mt-2">
             {className.includes("slider-left")
-              ? tokenShortPosTitles[i]
-              : tokenLongPosTitles[i]}
+              ? tokenShortPosTitles[item]
+              : tokenLongPosTitles[item]}
           </span>
         </div>
       );
     }
-    // Temporary hacky fix
-    for (var j = 0; j < totalSlides; j++) {
-      generatedSlides.push(generatedSlides[j]);
-    }
-    // for (var k = 0; k < totalSlides; k++) {
-    //   generatedSlides.push(generatedSlides[k]);
-    // }
     return generatedSlides;
   };
   const settings = {
-    speed: 2000,
-    // autoplay: true,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
-    slidesToShow: 9,
-    slidesToScroll: 1,
-    infinite: true,
-    arrows: false,
-    touchMove: false,
-    swipeToSlide: false,
-    focusOnSelect: false,
-    pauseOnFocus: false,
-    pauseOnHover: false,
-    variableWidth: true,
-    fade: false,
-    rtl: className.includes("slider-left") ? true : false,
-    responsive: [
-      {
-        breakpoint: 2000,
-        settings: {
-          speed: 1750,
-          slidesToShow: 6,
-        },
-      },
-      {
-        breakpoint: 1280,
-        settings: {
-          speed: 1750,
-          autoplay: false,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+    gradient: false,
+    speed: 60,
+    direction: className.includes("slider-left") ? "right" : "left",
   };
   return (
     <>
@@ -116,7 +78,7 @@ const TokenSlider = ({ className }) => {
           " token-slider w-2/4 overflow-hidden lg:bottom-0 sm:bottom-4 bottom-10 lg:h-36 h-28 absolute z-10 pointer-events-none"
         }
       >
-        <Slider {...settings}>{createSlides()}</Slider>
+        <Marquee {...settings}>{createSlides()}</Marquee>
       </div>
     </>
   );
