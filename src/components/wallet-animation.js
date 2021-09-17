@@ -1,5 +1,5 @@
 import React from "react";
-import TokenSlider from "../components/token-slider";
+import TokenMarquee from "../components/token-marquee";
 import Button from "../components/button";
 
 // Images
@@ -39,13 +39,13 @@ const WalletAnimation = () => {
           </Button>
         </div>
         <div className="w-full relative 2xl:h-60 lg:h-48 sm:mt-16 sm:mb-12 h-48 mt-12 mb-0">
-          <TokenSlider className="slider-left -left-16" />
+          <TokenMarquee className="slider-left -left-16" />
           <div className="absolute 2xl:bottom-8 2xl:w-96 lg:w-72 lg:bottom-6 left-2/4 bottom-0 transform -translate-x-1/2 h-full sm:w-60 w-48 z-20">
             <picture className="flex flex-col justify-center items-center relative w-full">
               <img src={MetamaskFox} alt="MetaMask" />
             </picture>
           </div>
-          <TokenSlider className="slider-right -right-16" />
+          <TokenMarquee className="slider-right -right-16" />
         </div>
         <img
           className="city-top absolute sm:top-2/4 left-0 w-full transition-all duration-500 pointer-events-none"

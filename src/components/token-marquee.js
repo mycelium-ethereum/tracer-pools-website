@@ -55,7 +55,7 @@ const TokenMarquee = ({ className }) => {
               alt=""
             />
           </div>
-          <span className="block text-white text-center mt-2">
+          <span className="block text-white text-center mt-2 font-bold">
             {className.includes("slider-left")
               ? tokenShortPosTitles[item]
               : tokenLongPosTitles[item]}
