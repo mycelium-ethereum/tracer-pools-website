@@ -1,32 +1,32 @@
 import React from "react";
-import { graphql } from "gatsby";
+// import { graphql } from "gatsby";
 // import PostLink from "./blog-post-link";
 import Overlay06 from "/static/img/learn/overlay-06.svg";
 import Overlay07 from "/static/img/learn/overlay-07.svg";
 import Overlay08 from "/static/img/learn/overlay-08.svg";
 
-const query = graphql`
-  query tracerBlogs {
-    allStrapiTracerBlogs {
-      edges {
-        node {
-          id
-          title
-          description
-          image {
-            formats {
-              medium {
-                url
-              }
-            }
-          }
-          publish_date
-          slug
-        }
-      }
-    }
-  }
-`;
+// const query = graphql`
+//   query tracerBlogs {
+//     allStrapiTracerBlogs {
+//       edges {
+//         node {
+//           id
+//           title
+//           description
+//           image {
+//             formats {
+//               medium {
+//                 url
+//               }
+//             }
+//           }
+//           publish_date
+//           slug
+//         }
+//       }
+//     }
+//   }
+// `;
 const TracerDrop = () => {
   return (
     <>
@@ -42,9 +42,14 @@ const TracerDrop = () => {
               rel="noreferrer"
               target="_blank"
             >
-              <img className="absolute bottom-0 left-0 z-20 pointer-events-none" src={Overlay08} />
+              <img
+                className="absolute bottom-0 left-0 z-20 pointer-events-none"
+                alt="episode-overlay"
+                src={Overlay08}
+              />
               <div className="absolute top-0 left-0 w-full h-full transition-colors duration-500 bg-black bg-opacity-30 hover:bg-opacity-10 z-10" />
               <img
+                alt="episode-thumbnail"
                 className="yt-thumbnail object-cover object-top w-full 2xl:-mt-10 md:-mt-8 -mt-14"
                 src="https://img.youtube.com/vi/pWVY84ttx6U/0.jpg"
               />
@@ -55,9 +60,14 @@ const TracerDrop = () => {
               rel="noreferrer"
               target="_blank"
             >
-              <img className="absolute bottom-0 left-0 z-20 pointer-events-none" src={Overlay07} />
+              <img
+                className="absolute bottom-0 left-0 z-20 pointer-events-none"
+                alt="episode-overlay"
+                src={Overlay07}
+              />
               <div className="absolute top-0 left-0 w-full h-full transition-colors duration-500 bg-black bg-opacity-30 hover:bg-opacity-10 z-10" />
               <img
+                alt="episode-thumbnail"
                 className="yt-thumbnail object-cover object-top w-full 2xl:-mt-10 md:-mt-8 -mt-14"
                 src="https://img.youtube.com/vi/7eQjiulVY6s/0.jpg"
               />
@@ -68,9 +78,14 @@ const TracerDrop = () => {
               rel="noreferrer"
               target="_blank"
             >
-              <img className="absolute bottom-0 left-0 z-20 pointer-events-none" src={Overlay06} />
+              <img
+                className="absolute bottom-0 left-0 z-20 pointer-events-none"
+                alt="episode-overlay"
+                src={Overlay06}
+              />
               <div className="absolute top-0 left-0 w-full h-full transition-colors duration-500 bg-black bg-opacity-30 hover:bg-opacity-10 z-10" />
               <img
+                alt="episode-thumbnail"
                 className="yt-thumbnail object-cover object-top w-full 2xl:-mt-10 md:-mt-8 -mt-14"
                 src="https://img.youtube.com/vi/iEeVb1jH0u8/0.jpg"
               />

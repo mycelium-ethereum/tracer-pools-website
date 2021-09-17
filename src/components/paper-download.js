@@ -21,7 +21,7 @@ const PaperDownload = ({ title, header, image, link }) => {
           </div>
         </div>
         <div className="py-5 px-7 bg-white">
-          <a href={link} target="_blank" className="block">
+          <a href={link} rel="noreferrer" target="_blank" className="block">
             <img src={image} alt="Research Paper page" />
           </a>
           <a
@@ -30,7 +30,7 @@ const PaperDownload = ({ title, header, image, link }) => {
             download
           >
             Download
-            <img className="ml-2 w-2" src={PDFIcon}  alt="PDF Download"/>
+            <img className="ml-2 w-2882" src={PDFIcon} alt="PDF Download" />
           </a>
         </div>
       </div>
