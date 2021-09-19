@@ -44,7 +44,7 @@ const TracerCity = () => {
             className="h-fit lg:opacity-0 transition-opacity duration-700 h-full col-span-5 transform scale-110 relative rounded-xl overflow-hidden"
             // poster={TracerCityPNG}
             poster={showThumbnail ? TracerCityPNG : undefined}
-            onCanPlay={() => setShowThumbnail(false)}
+            onPlay={() => setShowThumbnail(false)}
           >
             {/* <source src={TracerCityVideoMP4} type="video/mp4; codecs='hvc1'" /> */}
             <source src={TracerCityVideoWEBM} type="video/webm" />
