@@ -128,7 +128,11 @@ const PartnersContributors = () => {
                     src={B}
                     alt="B Logo"
                   />
-                  <img className="lg:w-40 sm:w-24 w-12" src={Apollo} alt="Apollo Logo" />
+                  <img
+                    className="lg:w-40 sm:w-24 w-12"
+                    src={Apollo}
+                    alt="Apollo Logo"
+                  />
                 </div>
               </div>
             </div>

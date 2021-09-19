@@ -32,12 +32,13 @@ module.exports = {
       options: {
         offset: -100,
         duration: 1200,
-      }
+      },
     },
     {
       resolve: "gatsby-source-strapi",
       options: {
-        apiURL: process.env.API_URL || "https://mycelium-content.uc.r.appspot.com",
+        apiURL:
+          process.env.API_URL || "https://mycelium-content.uc.r.appspot.com",
         collectionTypes: ["tracer-blogs"],
       },
     },

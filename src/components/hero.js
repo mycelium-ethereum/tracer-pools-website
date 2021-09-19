@@ -24,10 +24,7 @@ const Hero = () => {
               No margins. No liquidations.
               <br />A new derivative primitive.
             </p>
-            <Button
-              className="mt-12"
-              href="https://pools.tracer.finance/"
-            >
+            <Button className="mt-12" href="https://pools.tracer.finance/">
               Launch Pools
             </Button>
             <a href="https://docs.tracer.finance">
