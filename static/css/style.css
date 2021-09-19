@@ -1038,7 +1038,7 @@ footer {
     width: 100vw;
   }
   .dropdown.active {
-    height: 100vh;
+    height: calc(100vh - 64px);
   }
   .dropdown.active a {
     transition: all 0.5s ease, opacity 0.5s ease 0.5s;
@@ -1048,6 +1048,14 @@ footer {
   }
   .h-thumbnail {
     height: 220px;
+  }
+  .backdrop {
+    opacity: 1;
+  }
+  .dropdown.active,
+  .dropdown.inactive {
+    width: 100vw;
+    padding: 0px 16px;
   }
 }
 @media only screen and (max-width: 479px) {

@@ -82,7 +82,7 @@ const Navbar = () => {
     >
       <div
         className={
-          "backdrop absolute top-0 left-0 h-full w-full transition-opacity duration-300 " +
+          "backdrop absolute top-0 left-0 h-full w-full transition-all duration-300 " +
           (transparentNav ? "opacity-0" : "opacity-100") +
           (darkerNav ? " darker" : "")
         }
