@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Button from "../components/button";
-import { isSafari } from "react-device-detect";
 
 // Image assets
 import TracerCityVideoWEBM from "/static/img/home-page/city/tracer-city.webm";
-import TracerCityVideoMP4 from "/static/img/home-page/city/tracer-city.mp4";
+import TracerCityPNG from "/static/img/home-page/city/tracer-city.png";
 import TracerBuildingWEBM from "/static/img/home-page/city/tracer-building.webm";
-import TracerBuildingMP4 from "/static/img/home-page/city/tracer-building.mp4";
+import TracerBuildingPNG from "/static/img/home-page/city/tracer-building.png";
 import MeshSmall from "/static/img/home-page/city/mesh-small.svg";
 import MeshSmallMobile from "/static/img/home-page/city/mesh-small-mobile.svg";
 import MeshLarge from "/static/img/home-page/city/mesh-large.svg";
@@ -14,17 +13,6 @@ import MeshLargeMobile from "/static/img/home-page/city/mesh-large-mobile.svg";
 import CityBottom from "/static/img/home-page/city/city-bottom.png";
 
 const TracerCity = () => {
-  const [isWebkit, setWebkit] = useState("");
-  const detectBrowser = () => {
-    if (isSafari) {
-      setWebkit(true);
-    } else {
-      setWebkit(false);
-    }
-  };
-  useEffect(() => {
-    detectBrowser();
-  }, []);
   return (
     <>
       <section
@@ -52,12 +40,11 @@ const TracerCity = () => {
             playsInline
             disableRemotePlayback={true}
             disablePictureInPicture
-            className="h-fit lg:opacity-0 transition-opacity duration-700 h-full col-span-5 transform scale-110 relative"
+            className="h-fit lg:opacity-0 transition-opacity duration-700 h-full col-span-5 transform scale-110 relative rounded-xl overflow-hidden"
+            poster={TracerCityPNG}
           >
-            <source
-              src={isWebkit ? TracerCityVideoMP4 : TracerCityVideoWEBM}
-              type={isWebkit ? "video/mp4" : "video/webm"}
-            />
+            {/* <source src={TracerCityVideoMP4} type="video/mp4; codecs='hvc1'" /> */}
+            <source src={TracerCityVideoWEBM} type="video/webm" />
           </video>
         </div>
         <img
@@ -85,11 +72,9 @@ const TracerCity = () => {
             disablePictureInPicture
             id="tracer-building"
             className="h-fit lg:opacity-0 transition-opacity duration-700 lg:w-1/2 lg:mx-0 mx-auto w-3/4 md:mt-0 mt-6 lg:static lg:left-0 relative"
+            poster={TracerBuildingPNG}
           >
-            <source
-              src={isWebkit ? TracerBuildingMP4 : TracerBuildingWEBM}
-              type={isWebkit ? "video/mp4" : "video/webm"}
-            />
+            <source src={TracerBuildingWEBM} type="video/webm" />
           </video>
           <div
             className="2xl:mt-52 xl:mt-80 lg:pl-12 lg:mt-48 lg:pb-0 lg:pr-12 lg:absolute lg:text-left left-1/2 mx-auto px-4 w-full force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
