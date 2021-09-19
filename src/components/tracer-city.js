@@ -14,6 +14,7 @@ import CityBottom from "/static/img/home-page/city/city-bottom.png";
 
 const TracerCity = () => {
   const [showThumbnail, setShowThumbnail] = useState(true);
+  const [showBuildingThumbnail, setShowBuildingThumbnail] = useState(true);
   return (
     <>
       <section
@@ -75,7 +76,8 @@ const TracerCity = () => {
             disablePictureInPicture
             id="tracer-building"
             className="h-fit lg:opacity-0 transition-opacity duration-700 lg:w-1/2 lg:mx-0 mx-auto w-3/4 md:mt-0 mt-6 lg:static lg:left-0 relative"
-            poster={TracerBuildingPNG}
+            poster={showBuildingThumbnail ? TracerBuildingPNG : undefined}
+            onPlay={() => setShowBuildingThumbnail(false)}
           >
             <source src={TracerBuildingWEBM} type="video/webm" />
           </video>
