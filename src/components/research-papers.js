@@ -36,9 +36,9 @@ const ResearchPapers = () => {
     <>
       <section className="h-full w-full z-20 relative mt-16">
         <div className="container relative w-full mx-auto pb-12 xl:px-0 px-4 grid md:grid-cols-3 grid-cols-1 md:gap-4 lg:pt-5 md:pt-13 pt-5 gap-12 ">
-          <PaperDownload {...poolsProps}/>
-          <PaperDownload {...swapsProps}/>
-          <PaperDownload {...p2pProps}/>
+          <PaperDownload {...poolsProps} />
+          <PaperDownload {...swapsProps} />
+          <PaperDownload {...p2pProps} />
         </div>
       </section>
     </>

@@ -101,7 +101,7 @@ const TokenSlider = ({ className }) => {
     focusOnSelect: false,
     pauseOnFocus: false,
     pauseOnHover: false,
-    lazyLoad: 'progressive',
+    lazyLoad: "progressive",
     fade: false,
     rtl: className.includes("slider-left") ? true : false,
     responsive: [

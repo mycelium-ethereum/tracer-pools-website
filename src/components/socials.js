@@ -10,7 +10,11 @@ const Socials = () => {
   return (
     <div className="fixed lg:top-1/3 top-64 z-50 xl:transform-none transform-gpu scale-75 -right-2.5">
       <img className="-mt-8" src={Trapezoid} alt="Trapezoid" />
-      <a href="https://discourse.tracer.finance" rel="noreferrer" target="_blank">
+      <a
+        href="https://discourse.tracer.finance"
+        rel="noreferrer"
+        target="_blank"
+      >
         <img
           className="absolute top-12 lg:left-5 left-6 cursor-pointer"
           src={Discourse}

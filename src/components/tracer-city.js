@@ -104,7 +104,10 @@ const TracerCity = () => {
             <small className="text-white font-light lg:text-left lg:text-2xl w-auto text-lg">
               In the Tracer Interface and earn TCR
             </small>
-            <Button className="lg:ml-0 lg:mb-0 mb-12 mt-6" href="https://pools.tracer.finance/stake/">
+            <Button
+              className="lg:ml-0 lg:mb-0 mb-12 mt-6"
+              href="https://pools.tracer.finance/stake/"
+            >
               View Staking
             </Button>
           </div>
