@@ -45,7 +45,7 @@ const TracerCity = () => {
             className="h-fit lg:opacity-0 transition-opacity duration-700 h-full col-span-5 transform scale-110 relative rounded-xl overflow-hidden"
             // poster={TracerCityPNG}
             poster={showThumbnail ? TracerCityPNG : undefined}
-            onPlay={() => setShowThumbnail(false)}
+            onLoadedData={() => setShowThumbnail(false)}
           >
             {/* <source src={TracerCityVideoMP4} type="video/mp4; codecs='hvc1'" /> */}
             <source src={TracerCityVideoWEBM} type="video/webm" />
@@ -77,7 +77,7 @@ const TracerCity = () => {
             id="tracer-building"
             className="h-fit lg:opacity-0 transition-opacity duration-700 lg:w-1/2 lg:mx-0 mx-auto w-3/4 md:mt-0 mt-6 lg:static lg:left-0 relative"
             poster={showBuildingThumbnail ? TracerBuildingPNG : undefined}
-            onPlay={() => setShowBuildingThumbnail(false)}
+            onLoadedData={() => setShowBuildingThumbnail(false)}
           >
             <source src={TracerBuildingWEBM} type="video/webm" />
           </video>
