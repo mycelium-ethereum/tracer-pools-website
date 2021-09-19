@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../components/button";
 
 // Image assets
@@ -13,6 +13,7 @@ import MeshLargeMobile from "/static/img/home-page/city/mesh-large-mobile.svg";
 import CityBottom from "/static/img/home-page/city/city-bottom.png";
 
 const TracerCity = () => {
+  const [showThumbnail, setShowThumbnail] = useState(true);
   return (
     <>
       <section
@@ -41,7 +42,9 @@ const TracerCity = () => {
             disableRemotePlayback={true}
             disablePictureInPicture
             className="h-fit lg:opacity-0 transition-opacity duration-700 h-full col-span-5 transform scale-110 relative rounded-xl overflow-hidden"
-            poster={TracerCityPNG}
+            // poster={TracerCityPNG}
+            poster={showThumbnail ? TracerCityPNG : undefined}
+            onCanPlay={() => setShowThumbnail(false)}
           >
             {/* <source src={TracerCityVideoMP4} type="video/mp4; codecs='hvc1'" /> */}
             <source src={TracerCityVideoWEBM} type="video/webm" />
