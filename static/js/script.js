@@ -152,7 +152,9 @@ function initialiseScrollMagic() {
 }
 function handleResize() {
   setTimeout(function () {
-    $.stellar("refresh");
+    if (!isSafari()) {
+      $.stellar("refresh");
+    }
     var newSize = !isMobile() ? "big" : "small";
     if (newSize != size) {
       size = newSize;
@@ -166,14 +168,32 @@ function handleResize() {
     }
   }, 400);
 }
+function isSafari() {
+  const navigator = window.navigator;
+  const ua = navigator.userAgent.toLowerCase();
+  const hasMediaCapabilities = !!(
+    navigator.mediaCapabilities && navigator.mediaCapabilities.decodingInfo
+  );
+  const isSafari =
+    ua.indexOf("safari") != -1 &&
+    !(ua.indexOf("chrome") != -1) &&
+    ua.indexOf("version/") != -1;
+  return isSafari && hasMediaCapabilities;
+}
 function initialiseElements() {
   const title = document.title.split(" ")[0];
   if (title == "Home") {
     if (!isMobile()) {
       initialiseScrollMagic();
     }
-
-    $.stellar({ horizontalScrolling: false });
+    if (!isSafari()) {
+      $.stellar({
+        horizontalScrolling: false,
+      });
+    }
+    else {
+      $('div[data-stellar-ratio="1.4"]').addClass("no-stellar");
+    }
 
     // Disable ScrollMagic on resize and refresh Stellar.js
     window.addEventListener("resize", function () {
@@ -183,7 +203,9 @@ function initialiseElements() {
     if (controller) {
       controller.destroy(true);
     }
-    $.stellar("destroy");
+    if (!isSafari()) {
+      $.stellar("destroy");
+    }
     window.removeEventListener(
       "resize",
       function () {

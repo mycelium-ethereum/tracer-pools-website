@@ -647,6 +647,9 @@ section {
 #building-trigger.active #tracer-building {
   opacity: 1;
 }
+.no-stellar {
+  top: 15rem;
+}
 
 /* --------------- INTEGRATE SECTION --------------- */
 .integrate-animation {
@@ -915,7 +918,7 @@ footer {
   .small-spacer {
     height: 250px;
   }
-  div[data-stellar-ratio] {
+  div[data-no-stellar-ratio] {
     top: 0 !important;
   }
   .integrate-animation { 
@@ -969,6 +972,9 @@ footer {
   #fade2,
   #fade3 {
     opacity: 1 !important;
+  }
+  .no-stellar {
+    top: unset;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){

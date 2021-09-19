@@ -24,7 +24,7 @@ const TracerCity = () => {
           <div className="col-span-3">
             <div
               data-stellar-ratio="1.4"
-              className="h-auto lg:absolute 2xl:mt-20 lg:mt-20 force-flex flex-col justify-center lg:items-start items-center z-10 xl:left-0 lg:left-4 lg:pb-0 lg:mb-0 sm:pt-0 xl:px-0 xl:w-full lg:w-80 w-full mx-auto left-0 pt-8 mb-8 lg:text-left text-center"
+              className="h-auto lg:absolute 2xl:mt-20 lg:mt-20 lg:top-60 force-flex flex-col justify-center lg:items-start items-center z-10 xl:left-0 lg:left-4 lg:pb-0 lg:mb-0 sm:pt-0 xl:px-0 xl:w-full lg:w-80 w-full mx-auto left-0 pt-8 mb-8 lg:text-left text-center"
             >
               <h1 className="font-bold text-white xl:text-5xl lg:text-4xl lg:mb-4 mb-2 text-3xl">
                 Built for DeFi
@@ -80,7 +80,7 @@ const TracerCity = () => {
             <source src={TracerBuildingWEBM} type="video/webm" />
           </video>
           <div
-            className="2xl:mt-52 xl:mt-80 lg:pl-12 lg:mt-48 lg:pb-0 lg:pr-12 lg:absolute lg:text-left left-1/2 mx-auto px-4 w-full force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
+            className="2xl:mt-52 xl:mt-80 lg:pl-12 lg:mt-48 lg:pb-0 lg:pr-12 lg:absolute lg:top-60 lg:text-left left-1/2 mx-auto px-4 w-full force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
             data-stellar-ratio="1.4"
           >
             {/* <span className="xl:text-5xl lg:text-4xl font-semibold text-base lg:mb-2 mb-0 text-white color-blue">
