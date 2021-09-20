@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../components/button";
 import { isSafari } from "react-device-detect";
 
@@ -14,8 +14,12 @@ import MeshLargeMobile from "/static/img/home-page/city/mesh-large-mobile.svg";
 import CityBottom from "/static/img/home-page/city/city-bottom.png";
 
 const TracerCity = () => {
-  const [showThumbnail, setShowThumbnail] = useState(true);
-  const [showBuildingThumbnail, setShowBuildingThumbnail] = useState(true);
+  // const [showThumbnail, setShowThumbnail] = useState(true);
+  // const [showBuildingThumbnail, setShowBuildingThumbnail] = useState(true);
+  const [isSafariBrowser, setIsSafari] = useState(true);
+  useEffect(() => {
+    setIsSafari(isSafari);
+  }, [isSafari]);
   return (
     <>
       <section
@@ -36,8 +40,7 @@ const TracerCity = () => {
               </small>
             </div>
           </div>
-          {console.log(isSafari)}
-          {isSafari ? (
+          {isSafariBrowser ? (
             <video
               muted
               loop="loop"
@@ -80,7 +83,7 @@ const TracerCity = () => {
         className="panel w-full lg:h-auto h-auto staking-section flex lg:items-center relative items-start xl:pb-12 lg:pt-0 pt-24 bg-blue z-10 overflow-hidden"
       >
         <div className="container flex justify-between mx-auto w-full h-full xl:px-0 px-4 lg:flex-row flex-col-reverse relative z-10">
-          {isSafari ? (
+          {isSafariBrowser ? (
             <video
               muted
               loop="loop"
