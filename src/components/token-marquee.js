@@ -43,7 +43,10 @@ const TokenMarquee = ({ className }) => {
         item -= totalSlides / 2;
       }
       generatedSlides.push(
-        <div className="flex flex-col justify-start items-center md:w-28 mx-6 w-24" key={i}>
+        <div
+          className="flex flex-col justify-start items-center md:w-28 mx-6 w-24"
+          key={i}
+        >
           <img
             src={
               className.includes("slider-left")
