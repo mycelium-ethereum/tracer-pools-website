@@ -52,6 +52,8 @@ const TracerCity = () => {
             {browserName !== "Safari" && (
               <source src={TracerCityVideoWEBM} type="video/webm" />
             )}
+            {console.log(browserName)}
+            {console.log(browserName !== "Safari")}
           </video>
         </div>
         <img
