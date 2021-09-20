@@ -641,7 +641,7 @@ section {
 
 /*------------TRACER CITY------------*/
 
-#city-trigger.active video {
+#city-trigger.active #tracer-city {
   opacity: 1;
 }
 #building-trigger.active #tracer-building {
