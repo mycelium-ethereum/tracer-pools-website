@@ -43,18 +43,15 @@ const TokenMarquee = ({ className }) => {
         item -= totalSlides / 2;
       }
       generatedSlides.push(
-        <div className="item items-start md:w-60 md:h-60 w-36 h-36 " key={i}>
-          <div className="relative mx-auto w-min">
-            <img
-              className="token"
-              src={
-                className.includes("slider-left")
-                  ? longTokenImages[item]
-                  : shortTokenImages[item]
-              }
-              alt=""
-            />
-          </div>
+        <div className="flex flex-col justify-start items-center md:w-28 mx-6 w-24" key={i}>
+          <img
+            src={
+              className.includes("slider-left")
+                ? longTokenImages[item]
+                : shortTokenImages[item]
+            }
+            alt=""
+          />
           <span className="block text-white text-center mt-2 font-bold">
             {className.includes("slider-left")
               ? tokenShortPosTitles[item]
@@ -75,7 +72,7 @@ const TokenMarquee = ({ className }) => {
       <div
         className={
           className +
-          " token-slider w-2/4 overflow-hidden lg:bottom-0 sm:bottom-4 bottom-10 lg:h-36 h-28 absolute z-10 pointer-events-none"
+          " token-slider w-2/4 overflow-hidden lg:bottom-0 sm:bottom-4 bottom-10 absolute z-10 pointer-events-none"
         }
       >
         <Marquee {...settings}>{createSlides()}</Marquee>
