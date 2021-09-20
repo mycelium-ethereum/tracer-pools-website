@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "../components/button";
+import { isSafari } from "react-device-detect";
 
 // Image assets
 import TracerCityVideoWEBM from "/static/img/home-page/city/tracer-city.webm";
@@ -48,7 +49,9 @@ const TracerCity = () => {
             onLoadedData={() => setShowThumbnail(false)}
           >
             {/* <source src={TracerCityVideoMP4} type="video/mp4; codecs='hvc1'" /> */}
-            <source src={TracerCityVideoWEBM} type="video/webm" />
+            {!isSafari && (
+              <source src={TracerCityVideoWEBM} type="video/webm" />
+            )}
           </video>
         </div>
         <img
@@ -79,7 +82,7 @@ const TracerCity = () => {
             poster={showBuildingThumbnail ? TracerBuildingPNG : undefined}
             onLoadedData={() => setShowBuildingThumbnail(false)}
           >
-            <source src={TracerBuildingWEBM} type="video/webm" />
+            {!isSafari && <source src={TracerBuildingWEBM} type="video/webm" />}
           </video>
           <div
             className="2xl:mt-52 xl:mt-80 lg:pl-12 lg:mt-48 lg:pb-0 lg:pr-12 lg:absolute lg:text-left left-1/2 mx-auto px-4 w-full force-flex flex-col justify-center lg:items-start items-center z-10 h-auto text-center"
