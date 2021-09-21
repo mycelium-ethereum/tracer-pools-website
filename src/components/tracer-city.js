@@ -16,7 +16,7 @@ import CityBottom from "/static/img/home-page/city/city-bottom.png";
 const TracerCity = () => {
   // const [showThumbnail, setShowThumbnail] = useState(true);
   // const [showBuildingThumbnail, setShowBuildingThumbnail] = useState(true);
-  const [isSafariBrowser, setIsSafari] = useState(true);
+  const [isSafariBrowser, setIsSafari] = useState(false);
   useEffect(() => {
     setIsSafari(isSafari);
   }, [isSafari]);
@@ -46,7 +46,7 @@ const TracerCity = () => {
               loop="loop"
               autoPlay
               playsInline
-              disableRemotePlayback={true}
+              disableRemotePlayback
               disablePictureInPicture
               className="h-fit lg:opacity-0 transition-opacity duration-700 h-full col-span-5 transform scale-110 relative rounded-xl overflow-hidden"
               poster={TracerCityPNG}
@@ -58,7 +58,7 @@ const TracerCity = () => {
               loop="loop"
               autoPlay
               playsInline
-              disableRemotePlayback={true}
+              disableRemotePlayback
               disablePictureInPicture
               className="h-fit lg:opacity-0 transition-opacity duration-700 h-full col-span-5 transform scale-110 relative rounded-xl overflow-hidden"
               id="tracer-city"
@@ -89,7 +89,7 @@ const TracerCity = () => {
               loop="loop"
               autoPlay
               playsInline
-              disableRemotePlayback={true}
+              disableRemotePlayback
               disablePictureInPicture
               id="tracer-building"
               className="h-fit lg:opacity-0 transition-opacity duration-700 lg:w-1/2 lg:mx-0 mx-auto w-3/4 md:mt-0 mt-6 lg:static lg:left-0 relative"
@@ -101,7 +101,7 @@ const TracerCity = () => {
               loop="loop"
               autoPlay
               playsInline
-              disableRemotePlayback={true}
+              disableRemotePlayback
               disablePictureInPicture
               id="tracer-building"
               className="h-fit lg:opacity-0 transition-opacity duration-700 lg:w-1/2 lg:mx-0 mx-auto w-3/4 md:mt-0 mt-6 lg:static lg:left-0 relative"
