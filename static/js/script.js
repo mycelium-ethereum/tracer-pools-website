@@ -186,14 +186,13 @@ function initialiseElements() {
     if (!isMobile()) {
       initialiseScrollMagic();
     }
-    if (!isSafari()) {
-      $.stellar({
-        horizontalScrolling: false,
-      });
-    }
-    else {
-      $('div[data-stellar-ratio="1.4"]').addClass("no-stellar");
-    }
+    $.stellar({
+      horizontalScrolling: false,
+      responsive: true,
+      positionProperty: "transform",
+      parallaxElements: true,
+      verticalOffset: isSafari() ? -threeQuarterScreen : 0,
+    });
 
     // Disable ScrollMagic on resize and refresh Stellar.js
     window.addEventListener("resize", function () {
@@ -202,9 +201,6 @@ function initialiseElements() {
   } else {
     if (controller) {
       controller.destroy(true);
-    }
-    if (!isSafari()) {
-      $.stellar("destroy");
     }
     window.removeEventListener(
       "resize",
