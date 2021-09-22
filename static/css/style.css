@@ -976,6 +976,9 @@ footer {
   .no-stellar {
     top: unset;
   }
+  div[data-stellar-ratio] {
+    transform: none !important;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
   .md\:pt-13 {
