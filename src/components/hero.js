@@ -24,17 +24,17 @@ const Hero = () => {
               No margins. No liquidations.
               <br />A new derivative primitive.
             </p>
-            <Button className="mt-12" href="https://pools.tracer.finance/">
+            <Button className="sm:mt-12 mt-6" href="https://pools.tracer.finance/">
               Launch Pools
             </Button>
             <a
               href="https://docs.tracer.finance"
-              className="mx-auto mt-8 flex justify-center items-center text-normal font-normal text-white hover:underline"
+              className="mx-auto sm:mt-8 mt-4 flex justify-center items-center text-normal font-normal text-white hover:underline"
             >
               Documentation
             </a>
           </header>
-          <div className="2xl:max-w-screen-xl xl:max-w-screen-lg 2xl:-bottom-96 xl:-bottom-80 lg:-bottom-72 md:-bottom-32 sm:-bottom-32 sm:px-24 absolute w-full -bottom-16 z-20">
+          <div className="2xl:max-w-screen-xl xl:max-w-screen-lg 2xl:-bottom-96 xl:-bottom-80 lg:-bottom-72 md:-bottom-32 sm:-bottom-20 sm:px-24 absolute w-full -bottom-10 z-20">
             <img
               className="w-full"
               src={TracerLaptop}
@@ -43,7 +43,7 @@ const Hero = () => {
           </div>
           <AnchorLink
             to="/#steps"
-            className="absolute sm:right-0 right-6 border-2 border-white rounded-full bottom-12 w-14 h-14 bg-white bg-opacity-20 transition-colors duration-500 text-white hover:bg-white fill-current stroke-current hover:text-blue-400 z-20"
+            className="absolute sm:right-0 right-6 border-2 border-white rounded-full bottom-20 w-14 h-14 bg-white bg-opacity-20 transition-colors duration-500 text-white hover:bg-white fill-current stroke-current hover:text-blue-400 z-20"
           >
             <svg
               width="16"
