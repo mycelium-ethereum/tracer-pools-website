@@ -98,7 +98,7 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
         <div className="mt-12">
           {Icons.map((icon, i) => (
             <a
-              className="dropdown-option w-fit px-2 transition-colors duration-500 flex items-center mt-5 rounded-lg"
+              className="dropdown-option w-fit sm:px-2 transition-colors duration-500 flex items-center mt-5 rounded-lg"
               href={icon.href}
               rel="noreferrer"
               target="_blank"
