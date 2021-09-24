@@ -83,7 +83,7 @@ function SEO({ description, lang, meta, title, image }) {
           name: `og:image`,
           content: image
             ? image
-            : "https://pools-website-testing.netlify.app" + OpenGraphLogo,
+            : "https://tracer.finance" + OpenGraphLogo,
         },
       ].concat(meta)}
     >
