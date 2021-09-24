@@ -42,5 +42,11 @@ module.exports = {
         collectionTypes: ["tracer-blogs"],
       },
     },
+    {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `tracer.finance`,
+      },
+    },
   ],
 };
