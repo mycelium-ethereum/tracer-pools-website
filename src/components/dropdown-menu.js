@@ -4,10 +4,10 @@ import React from "react";
 import TracerBoxPurple from "../../static/img/tracer-icon-box-purple.svg";
 import TracerBoxGreen from "../../static/img/tracer-icon-box-green.svg";
 import TracerBoxBlue from "../../static/img/tracer-icon-box-blue.svg";
-import DiscourseLogo from "../../static/img/discourse-white.svg";
-import TwitterLogo from "../../static/img/twitter-white.svg";
-import GitHubLogo from "../../static/img/github-white.svg";
-import DiscordLogo from "../../static/img/discord-white.svg";
+import DiscourseLogo from "../../static/img/social-icons/discourse-nav.svg";
+import TwitterLogo from "../../static/img/social-icons/twitter-nav.svg";
+import GitHubLogo from "../../static/img/social-icons/github-nav.svg";
+import DiscordLogo from "../../static/img/social-icons/discord-nav.svg";
 import Folder from "../../static/img/folder.svg";
 
 const DropdownMenu = ({ dropdownOpen, darkerNav }) => {

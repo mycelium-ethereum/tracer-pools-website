@@ -3,10 +3,10 @@ import { Link } from "gatsby";
 
 // Images
 import CityBottomDark from "/static/img/general/footer-bg.png";
-import Discourse from "/static/img/social-icons/discourse.svg";
-import Twitter from "/static/img/social-icons/twitter.svg";
-import Github from "/static/img/social-icons/github.svg";
-import Discord from "/static/img/social-icons/discord.svg";
+import Discourse from "/static/img/social-icons/discourse-footer.svg";
+import Twitter from "/static/img/social-icons/twitter-footer.svg";
+import Github from "/static/img/social-icons/github-footer.svg";
+import Discord from "/static/img/social-icons/discord-footer.svg";
 
 // Litepaper
 import PoolsPDF from "../../static/pdf/Tracer Perpetual Pools.pdf";
@@ -126,7 +126,7 @@ const Footer = () => {
               target="_blank"
             >
               <img
-                className="social-icon w-6 h-6 sm:ml-6"
+                className="social-icon w-5 sm:ml-6"
                 src={Discourse}
                 alt="Discourse"
               />
@@ -137,7 +137,7 @@ const Footer = () => {
               target="_blank"
             >
               <img
-                className="social-icon w-6 h-6 sm:ml-6 ml-4"
+                className="social-icon w-6 sm:ml-6 ml-4"
                 src={Twitter}
                 alt="Twitter"
               />
@@ -148,7 +148,7 @@ const Footer = () => {
               target="_blank"
             >
               <img
-                className="social-icon w-7 h-7 sm:ml-6 ml-4"
+                className="social-icon w-7 sm:ml-6 ml-4"
                 src={Github}
                 alt="GitHub"
               />
@@ -159,7 +159,7 @@ const Footer = () => {
               target="_blank"
             >
               <img
-                className="social-icon h-5 sm:ml-6 ml-4"
+                className="social-icon w-6 sm:ml-6 ml-4"
                 src={Discord}
                 alt="Discord"
               />
