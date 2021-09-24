@@ -16,7 +16,7 @@ const NotFoundPage = () => {
               </h1>
               <Link
                 to="/"
-                className="tracer-btn text-normal font-normal rounded-lg h-11 w-48 text-center transition-all duration-500 border-2 border-white mx-auto mt-12"
+                className="flex items-center justify-center text-normal font-normal rounded-lg h-11 w-48 transition-all duration-500 border-2 border-white hover:text-blue-400 hover:bg-white mx-auto mt-12"
               >
                 Back to home
               </Link>
