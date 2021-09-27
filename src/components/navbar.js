@@ -89,7 +89,14 @@ const Navbar = () => {
       />
       <div className="container h-16 flex justify-between items-center mx-auto xl:px-0 px-4 relative z-10">
         <div className="relative flex">
-          <Link id="logo" className="cursor-pointer" to="/">
+          <Link
+            id="logo"
+            className="cursor-pointer"
+            to="/"
+            onMouseEnter={() => {
+              if (!isCollapsed()) handleDropdownClick();
+            }}
+          >
             <img
               className="sm:w-24 w-22 h-auto sm:block hidden"
               src={TracerLogo}
