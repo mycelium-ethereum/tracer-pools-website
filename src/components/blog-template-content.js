@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Home from "../../static/img/blog-posts/home.svg";
 import Calendar from "../../static/img/blog-posts/calendar.svg";
 import Clock from "../../static/img/blog-posts/clock.svg";
@@ -8,6 +8,7 @@ import marked from "marked";
 import DOMPurify from "dompurify";
 
 const BlogText = ({ data }) => {
+  const [currentURL, setCurrentURL] = useState("");
   const bodyText = useRef();
   const setBodyText = () => {
     const bodyTextHTML = marked(DOMPurify.sanitize(data.body_text));
@@ -45,6 +46,7 @@ const BlogText = ({ data }) => {
   useEffect(() => {
     setBodyText();
     getTags();
+    setCurrentURL(window.location.pathname);
   });
   return (
     <>
@@ -58,7 +60,9 @@ const BlogText = ({ data }) => {
               <span className="mx-3">/</span>
               <Link to="/radar">Radar</Link>
               <span className="mx-3">/</span>
-              <span>{data.title}</span>
+              <Link to={currentURL}>
+                <span>{data.title}</span>
+              </Link>
             </div>
             <div className="flex items-center flex-wrap text-gray-400 md:mt-0 mt-3">
               <div className="flex items-center md:mb-0 mb-3">
