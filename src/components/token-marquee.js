@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Marquee from "react-fast-marquee";
@@ -10,6 +10,8 @@ import EthereumLong from "/static/img/home-page/slider/eth-l.svg";
 import BitcoinLong from "/static/img/home-page/slider/btc-l.svg";
 
 const TokenMarquee = ({ className }) => {
+  const [slideMultiplier, setSlideMultiplier] = useState(0);
+  const [slideKey, setSlideKey] = useState(0);
   const shortTokenImages = [
     EthereumShort,
     EthereumShort,
@@ -34,34 +36,37 @@ const TokenMarquee = ({ className }) => {
     "1S-BTC/USDC",
     "3S-BTC/USDC",
   ];
-  const totalSlides = shortTokenImages.length * 2;
-  const createSlides = () => {
-    const generatedSlides = [];
+  const createSlideGroup = (totalSlides, generatedSlides, key) => {
     for (var i = 0; i < totalSlides; i++) {
-      var item = i;
-      if (i >= totalSlides / 2) {
-        item -= totalSlides / 2;
-      }
       generatedSlides.push(
         <div
           className="flex flex-col justify-start items-center md:w-28 mx-6 w-24"
-          key={i}
+          // Generate key for unique elements
+          key={key + i * 3}
         >
           <img
             src={
               className.includes("slider-left")
-                ? longTokenImages[item]
-                : shortTokenImages[item]
+                ? longTokenImages[i]
+                : shortTokenImages[i]
             }
             alt=""
           />
           <span className="block text-white text-center mt-2 font-bold">
             {className.includes("slider-left")
-              ? tokenShortPosTitles[item]
-              : tokenLongPosTitles[item]}
+              ? tokenShortPosTitles[i]
+              : tokenLongPosTitles[i]}
           </span>
         </div>
       );
+    }
+  };
+  const createSlides = () => {
+    const generatedSlides = [];
+    const totalSlides = tokenShortPosTitles.length;
+    const slideMultiplier = 3;
+    for (var j = 0; j < slideMultiplier; j++) {
+      createSlideGroup(totalSlides, generatedSlides, j + 1);
     }
     return generatedSlides;
   };
@@ -75,7 +80,7 @@ const TokenMarquee = ({ className }) => {
       <div
         className={
           className +
-          " token-slider w-2/4 overflow-hidden lg:bottom-0 sm:bottom-4 bottom-10 absolute z-10 pointer-events-none"
+          " token-slider w-2/4 overflow-hidden lg:bottom-0 sm:bottom-4 bottom-10 absolute z-10"
         }
       >
         <Marquee {...settings}>{createSlides()}</Marquee>
