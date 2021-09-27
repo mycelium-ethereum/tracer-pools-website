@@ -40,11 +40,12 @@ const TokenMarquee = ({ className }) => {
     for (var i = 0; i < totalSlides; i++) {
       generatedSlides.push(
         <div
-          className="flex flex-col justify-start items-center md:w-28 mx-6 w-24"
+          className="flex flex-col justify-start items-center md:w-28 mx-6"
           // Generate key for unique elements
           key={key + i * 3}
         >
           <img
+            className="md:w-full w-20 mx-auto"
             src={
               className.includes("slider-left")
                 ? longTokenImages[i]
