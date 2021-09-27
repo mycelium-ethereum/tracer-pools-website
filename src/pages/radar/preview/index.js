@@ -6,17 +6,8 @@ import SEO from "../../../components/seo";
 import BlogContent from "../../../components/blog-template-content";
 
 const Preview = (props) => {
-  const [postPreview, setPostPreview] = useState({
-    title: "",
-    image: {
-      formats: {
-        medium: {
-          url: "",
-        },
-      },
-    },
-    description: "",
-  });
+  const [blogPreview, setBlogPreview] = useState(false);
+  const [blogContent, setBlogContent] = useState(false);
   async function getPost() {
     // Get blog post ID from URL parameters
     const params = new URLSearchParams(props.location.search);
@@ -28,26 +19,32 @@ const Preview = (props) => {
       .catch((err) => console.error(err));
     for (let i = 0; i < data.length; i++) {
       if (data[i].id === id) {
-        setPostPreview(data[i]);
+        setBlogPreview(data[i]);
         break;
       }
     }
   }
+  const createContent = (data) => {
+    if (!!data) {
+      setBlogContent(
+        <>
+          <SEO
+            title={data.title}
+            image={data.image[0].formats.medium.url}
+            description={data.description}
+          />
+          <Layout>
+            <BlogContent data={data} />
+          </Layout>
+        </>
+      );
+    }
+  };
+  getPost();
   useEffect(() => {
-    getPost();
-  }, []);
-  return (
-    <>
-      <SEO
-        title={postPreview.title}
-        // image={postPreview.image[0].formats.medium.url}
-        // description={postPreview.description}
-      />
-      <Layout>
-        <BlogContent data={postPreview} />
-      </Layout>
-    </>
-  );
+    createContent(blogPreview);
+  }, [blogPreview]);
+  return <>{blogContent}</>;
 };
 
 export default Preview;
