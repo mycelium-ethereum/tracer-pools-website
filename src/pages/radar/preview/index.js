@@ -12,6 +12,7 @@ const Preview = (props) => {
     // Get blog post ID from URL parameters
     const params = new URLSearchParams(props.location.search);
     const key = params.get("key");
+    let found = false;
     const data = await fetch(
       "https://mycelium-content.uc.r.appspot.com/tracer-blogs?_publicationState=preview&published_at_null=true"
     )
@@ -20,8 +21,12 @@ const Preview = (props) => {
     for (let i = 0; i < data.length; i++) {
       if (data[i].slug === key) {
         setBlogPreview(data[i]);
+        found = true;
         break;
       }
+    }
+    if(!found && data){
+      window.location.href = "/404";
     }
   }
   const createContent = (data) => {
