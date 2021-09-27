@@ -12,14 +12,10 @@ import PinkRectangle from "/static/img/home-page/background/pink-rectangle.png";
 
 const BackgroundParallax = () => {
   const [fixed, setFixed] = useState(false);
-  const [quarterOverlay, setQuarterOverlay] = useState(false);
   const checkPage = () => {
     const currentPage = window.location.pathname;
     if (currentPage === "/radar" || currentPage === "/privacy-policy") {
       setFixed(true);
-    }
-    if (currentPage.includes("learn")) {
-      setQuarterOverlay(true);
     }
   };
 
@@ -91,12 +87,7 @@ const BackgroundParallax = () => {
           />
         </div>
       </div>
-      <div
-        className={
-          "absolute top-0 left-0 w-full z-0 overflow-hidden bg-blue transition-all duration-500 min-h-body " +
-          (quarterOverlay ? "learn-overlay" : "h-screen")
-        }
-      />
+      <div className="absolute top-0 left-0 w-full z-0 overflow-hidden bg-blue transition-all duration-500 min-h-body h-screen" />
     </>
   );
 };
