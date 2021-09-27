@@ -11,7 +11,7 @@ const Hero = () => {
       <section role="main">
         <div className="container w-full h-screen min-h-body relative flex justify-center items-center z-20 2xl:pt-0 lg:pt-36 xl:px-0 sm:pt-18 pt-16 px-4 mx-auto">
           <header className="text-center">
-            <h1 className="xl:text-9xl sm:text-7xl text-5xl text-white font-black mb-4">
+            <h1 className="transition-all duration-500 xl:text-9xl sm:text-7xl text-5xl text-white font-black mb-4">
               Perpetual Pools
             </h1>
             <p className="text-white text-xl lg:block hidden leading-snug">
