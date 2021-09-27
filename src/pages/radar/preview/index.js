@@ -40,7 +40,9 @@ const Preview = (props) => {
       );
     }
   };
-  getPost();
+  useEffect(() => {
+    getPost();
+  }, []);
   useEffect(() => {
     createContent(blogPreview);
   }, [blogPreview]);
