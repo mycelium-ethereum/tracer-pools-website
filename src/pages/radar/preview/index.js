@@ -11,14 +11,14 @@ const Preview = (props) => {
   async function getPost() {
     // Get blog post ID from URL parameters
     const params = new URLSearchParams(props.location.search);
-    const id = parseInt(params.get("id"));
+    const slug = parseInt(params.get("slug"));
     const data = await fetch(
       "https://mycelium-content.uc.r.appspot.com/tracer-blogs?_publicationState=preview&published_at_null=true"
     )
       .then((res) => res.json())
       .catch((err) => console.error(err));
     for (let i = 0; i < data.length; i++) {
-      if (data[i].id === id) {
+      if (data[i].slug === slug) {
         setBlogPreview(data[i]);
         break;
       }
