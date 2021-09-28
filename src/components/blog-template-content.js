@@ -1,11 +1,15 @@
 import React, { useEffect, useState, useRef } from "react";
-import Home from "../../static/img/blog-posts/home.svg";
-import Calendar from "../../static/img/blog-posts/calendar.svg";
-import Clock from "../../static/img/blog-posts/clock.svg";
 import { Link } from "gatsby";
 import Moment from "react-moment";
 import marked from "marked";
 import DOMPurify from "dompurify";
+import SolidButton from "./solid-button";
+
+// Images
+import Home from "../../static/img/blog-posts/home.svg";
+import Calendar from "../../static/img/blog-posts/calendar.svg";
+import Clock from "../../static/img/blog-posts/clock.svg";
+import CTABackground from "../../static/img/blog-posts/cta-bg.svg";
 
 const BlogText = ({ data }) => {
   const [currentURL, setCurrentURL] = useState("");
@@ -84,15 +88,40 @@ const BlogText = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="mx-auto prose md:pr-0 pr-8">
-            <h1 className=" text-black font-semibold mb-2 md:text-3xl text-2xl sm:text-center">
+          <div className="md:pr-0 pr-8 mx-auto max-w-blog">
+            <h1 className=" text-black font-semibold mb-2 md:text-4xl text-3xl sm:text-center">
               {data.title}
             </h1>
             {/* Tagline */}
             <small className="block font-normal text-gray-500 sm:text-center sm:text-xl text-base">
               {data.tagline}
             </small>
-            <div ref={bodyText} className="mt-6"></div>
+            <div ref={bodyText} className="mt-6 prose mx-auto"></div>
+            <div className="w-full relative sm:px-12 sm:py-14 px-6 py-9 overflow-hidden rounded-xl mt-20">
+              <img
+                className="w-full absolute bottom-0 right-0"
+                src={CTABackground}
+              />
+              <div className="relative z-0 text-white font-normal">
+                <p className="xl:text-2xl sm:text-xl sm:text-left text-center text-base">
+                  Tracer Perpetual Pools is now live on Arbitrum One. Fully
+                  fungible, leveraged tokens for the DeFi economy, with no
+                  margin requirements and no liquidations.
+                  <Link
+                    to="/radar/perpetual-pools-launch"
+                    className="ml-2 underline"
+                  >
+                    Read more
+                  </Link>
+                </p>
+                <SolidButton
+                  className="sm:ml-0 mx-auto mt-9 sm:w-56 sm:px-0 whitespace-nowrap"
+                  href="https://pools.tracer.finance/"
+                >
+                  Launch Perpetual Pools
+                </SolidButton>
+              </div>
+            </div>
           </div>
         </div>
       </section>
