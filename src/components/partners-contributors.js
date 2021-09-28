@@ -2,29 +2,9 @@ import React, { useRef } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-
-// Partners
-import Framework from "/static/img/home-page/partners-contributors/partners/framework.svg";
-import Koji from "/static/img/home-page/partners-contributors/partners/koji.svg";
-import DACM from "/static/img/home-page/partners-contributors/partners/dacm.svg";
-import DistributedGlobal from "/static/img/home-page/partners-contributors/partners/distributed-global.svg";
-import GSR from "/static/img/home-page/partners-contributors/partners/gsr.svg";
-import Maven from "/static/img/home-page/partners-contributors/partners/maven.svg";
-import LAO from "/static/img/home-page/partners-contributors/partners/lao.svg";
-import EfficientFrontier from "/static/img/home-page/partners-contributors/partners/efficient-frontier.svg";
-import B from "/static/img/home-page/partners-contributors/partners/b.svg";
-import Apollo from "/static/img/home-page/partners-contributors/partners/apollo.svg";
-
-// Contributors
-import Mycelium from "/static/img/home-page/partners-contributors/contributors/mycelium.svg";
-import Chainlink from "/static/img/home-page/partners-contributors/contributors/chainlink.svg";
-import SigmaPrime from "/static/img/home-page/partners-contributors/contributors/sigma-prime.svg";
-import RMIT from "/static/img/home-page/partners-contributors/contributors/rmit.svg";
-import EPNS from "/static/img/home-page/partners-contributors/contributors/epns.svg";
+import { StaticImage } from "gatsby-plugin-image";
 
 // Media
-import FinancialReview from "/static/img/home-page/partners-contributors/media/financial-review.png";
-import CoinTelegraph from "/static/img/home-page/partners-contributors/media/coin-telegraph.png";
 
 const PartnersContributors = () => {
   const slider = useRef(0);
@@ -34,7 +14,7 @@ const PartnersContributors = () => {
   };
   const settings = {
     speed: 300,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
     slidesToShow: 1,
@@ -79,58 +59,78 @@ const PartnersContributors = () => {
               </div>
               <div className="w-full flex flex-col justify-center lg:mt-20 mt-12">
                 <div className="flex w-full justify-center items-center">
-                  <img
+                  <StaticImage
+                    placeholder="blurred"
+                    objectFit="contain"
                     className="2xl:w-60 lg:w-48 lg:mr-12 sm:mr-8 sm:w-32 w-20 mr-5"
-                    src={Framework}
+                    src="../../static/img/home-page/partners-contributors/partners/framework.svg"
                     alt="Framework Logo"
                   />
-                  <img
+                  <StaticImage
+                    placeholder="blurred"
+                    objectFit="contain"
                     className="2xl:w-44 lg:w-36 sm:w-24 w-14"
-                    src={Koji}
+                    src="../../static/img/home-page/partners-contributors/partners/koji.svg"
                     alt="Koji Logo"
                   />
                 </div>
                 <div className="flex w-full mt-10 justify-center items-center">
-                  <img
+                  <StaticImage
+                    placeholder="blurred"
+                    objectFit="contain"
                     className="2xl:w-60 lg:w-48 lg:mr-12 sm:mr-8 sm:w-36 mr-3 w-20"
-                    src={DACM}
+                    src="../../static/img/home-page/partners-contributors/partners/dacm.svg"
                     alt="DACM Logo"
                   />
-                  <img
+                  <StaticImage
+                    placeholder="blurred"
+                    objectFit="contain"
                     className="2xl:w-60 lg:w-48 lg:mr-12 sm:mr-8 sm:w-44 mr-3 w-32"
-                    src={DistributedGlobal}
+                    src="../../static/img/home-page/partners-contributors/partners/distributed-global.svg"
                     alt="DistributedGlobal Logo"
                   />
-                  <img
+                  <StaticImage
+                    placeholder="blurred"
+                    objectFit="contain"
                     className="2xl:w-44 lg:w-44 lg:mr-12 sm:mr-8 sm:mt-0 sm:w-36 w-16"
-                    src={GSR}
+                    src="../../static/img/home-page/partners-contributors/partners/gsr.svg"
                     alt="GSR Logo"
                   />
                 </div>
                 <div className="flex w-full mt-10 flex-wrap justify-center items-center">
-                  <img
+                  <StaticImage
+                    placeholder="blurred"
+                    objectFit="contain"
                     className="lg:w-32 lg:mr-12 sm:w-24 sm:mr-8 w-12 mr-3"
-                    src={Maven}
+                    src="../../static/img/home-page/partners-contributors/partners/maven.svg"
                     alt="Maven Logo"
                   />
-                  <img
+                  <StaticImage
+                    placeholder="blurred"
+                    objectFit="contain"
                     className="lg:w-24 lg:mr-12 sm:w-20 sm:mr-8 w-10 mr-3"
-                    src={LAO}
+                    src="../../static/img/home-page/partners-contributors/partners/lao.svg"
                     alt="The LAO Logo"
                   />
-                  <img
+                  <StaticImage
+                    placeholder="blurred"
+                    objectFit="contain"
                     className="lg:w-32 lg:mr-12 sm:w-24 sm:mr-8 w-12 mr-3"
-                    src={EfficientFrontier}
+                    src="../../static/img/home-page/partners-contributors/partners/efficient-frontier.svg"
                     alt="EfficientFrontier Logo"
                   />
-                  <img
+                  <StaticImage
+                    placeholder="blurred"
+                    objectFit="contain"
                     className="lg:w-20 lg:mr-12 sm:w-12 w-7 mr-3"
-                    src={B}
+                    src="../../static/img/home-page/partners-contributors/partners/b.svg"
                     alt="B Logo"
                   />
-                  <img
+                  <StaticImage
+                    placeholder="blurred"
+                    objectFit="contain"
                     className="lg:w-40 sm:w-24 w-12"
-                    src={Apollo}
+                    src="../../static/img/home-page/partners-contributors/partners/apollo.svg"
                     alt="Apollo Logo"
                   />
                 </div>
@@ -164,31 +164,41 @@ const PartnersContributors = () => {
               </div>
               <div className="w-full flex flex-col justify-center lg:mt-20 sm:pb-24 xl:px-0 mt-12 px-4 pb-12">
                 <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center">
-                  <img
+                  <StaticImage
+                    placeholder="blurred"
+                    objectFit="contain"
                     className="2xl:w-60 lg:w-48 sm:mr-10 sm:w-48 w-24 mr-5"
-                    src={Mycelium}
+                    src="../../static/img/home-page/partners-contributors/contributors/mycelium.svg"
                     alt="Mycelium Logo"
                   />
-                  <img
+                  <StaticImage
+                    placeholder="blurred"
+                    objectFit="contain"
                     className="2xl:w-60 lg:w-48 sm:w-48 w-24"
-                    src={Chainlink}
+                    src="../../static/img/home-page/partners-contributors/contributors/chainlink.svg"
                     alt="Chainlink Logo"
                   />
                 </div>
                 <div className="flex w-full 2xl:h-32 lg:h-24 justify-center items-center sm:mt-8 mt-6">
-                  <img
+                  <StaticImage
+                    placeholder="blurred"
+                    objectFit="contain"
                     className="2xl:w-60 lg:w-48 sm:w-48 w-24 sm:mr-10 mr-5"
-                    src={SigmaPrime}
+                    src="../../static/img/home-page/partners-contributors/contributors/sigma-prime.svg"
                     alt="SigmaPrime Logo"
                   />
-                  <img
+                  <StaticImage
+                    placeholder="blurred"
+                    objectFit="contain"
                     className="lg:w-32 sm:w-20 sm:mr-10 w-12  mr-5"
-                    src={RMIT}
+                    src="../../static/img/home-page/partners-contributors/contributors/rmit.svg"
                     alt="RMIT Logo"
                   />
-                  <img
+                  <StaticImage
+                    placeholder="blurred"
+                    objectFit="contain"
                     className="2xl:w-60 lg:w-48 sm:w-32 w-20 sm:mr-10 mr-5"
-                    src={EPNS}
+                    src="../../static/img/home-page/partners-contributors/contributors/epns.svg"
                     alt="EPNS Logo"
                   />
                 </div>
@@ -228,9 +238,10 @@ const PartnersContributors = () => {
                     rel="noreferrer"
                     className="flex flex-col justify-start items-center text-center w-96 sm:mr-5 mr-3 text-white"
                   >
-                    <img
+                    <StaticImage
+                      placeholder="blurred"
                       className="2xl:w-full xl:w-28 lg:w-52 sm:w-full w-32 rounded-2xl"
-                      src={FinancialReview}
+                      src="../../static/img/home-page/partners-contributors/media/financial-review.png"
                       alt="AFR Logo"
                     />
                     <p className="mb-4 mt-6 sm:text-xl text-lg">
@@ -251,9 +262,10 @@ const PartnersContributors = () => {
                     rel="noreferrer"
                     className="flex flex-col justify-start items-center text-center w-96 sm:ml-5 ml-3 text-white"
                   >
-                    <img
+                    <StaticImage
+                      placeholder="blurred"
                       className="2xl:w-full xl:w-28 lg:w-52 sm:w-full w-32 rounded-2xl"
-                      src={CoinTelegraph}
+                      src="../../static/img/home-page/partners-contributors/media/coin-telegraph.png"
                       alt="Coin Telegraph Logo"
                     />
                     <p className="mb-4 mt-6 sm:text-xl text-lg">

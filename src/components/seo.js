@@ -81,15 +81,15 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           name: `og:image`,
-          content: image
-            ? image
-            : "https://tracer.finance" + OpenGraphLogo,
+          content: image ? image : "https://tracer.finance" + OpenGraphLogo,
         },
       ].concat(meta)}
     >
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
       <link
+        media="print"
+        onload="this.onload=null;this.removeAttribute('media');"
         href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
         rel="stylesheet"
       />

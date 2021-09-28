@@ -20,6 +20,10 @@ module.exports = {
         name: "src",
         path: `${__dirname}/src/`,
       },
+      options: {
+        name: "images",
+        path: `${__dirname}/static/img/`,
+      },
     },
     {
       resolve: `gatsby-plugin-postcss`,
@@ -47,6 +51,30 @@ module.exports = {
       options: {
         domain: `tracer.finance`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-image`,
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `dominantColor`,
+          quality: 100,
+          // breakpoints: [750, 1080, 1366, 1920],
+          // backgroundColor: `transparent`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        },
+      },
+    },
+    {
+      resolve: `gatsby-transformer-sharp`,
     },
   ],
 };
