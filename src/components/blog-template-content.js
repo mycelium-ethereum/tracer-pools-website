@@ -84,7 +84,7 @@ const BlogText = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="mx-auto">
+          <div className="mx-auto prose md:pr-0 pr-8">
             <h1 className=" text-black font-semibold mb-2 md:text-3xl text-2xl sm:text-center">
               {data.title}
             </h1>
@@ -92,10 +92,7 @@ const BlogText = ({ data }) => {
             <small className="block font-normal text-gray-500 sm:text-center sm:text-xl text-base">
               {data.tagline}
             </small>
-            <div
-              ref={bodyText}
-              className="mt-6 md:pr-0 pr-8 prose mx-auto"
-            ></div>
+            <div ref={bodyText} className="mt-6"></div>
           </div>
         </div>
       </section>
