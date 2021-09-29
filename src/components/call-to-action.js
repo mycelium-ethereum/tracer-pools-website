@@ -17,7 +17,7 @@ const CallToAction = () => {
           <Link
             to="/radar/perpetual-pools-launch"
             className="ml-2 underline"
-            data-analytics='"CTAReadMoreClick", {"props":{"plan":"Navigation"}}'
+            data-analytics='"RadarReadMoreCTA", {"props":{"plan":"Navigation"}}'
           >
             Read more
           </Link>
@@ -25,7 +25,7 @@ const CallToAction = () => {
         <SolidButton
           className="sm:ml-0 mx-auto mt-9 sm:w-56 sm:px-0 whitespace-nowrap"
           href="https://pools.tracer.finance/"
-          data-analytics='"CTAPoolsClick", {"props":{"plan":"Navigation"}}'
+          data-analytics='"RadarPoolsFooterCTA", {"props":{"plan":"Navigation"}}'
         >
           Launch Perpetual Pools
         </SolidButton>
