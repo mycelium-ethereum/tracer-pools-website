@@ -96,7 +96,7 @@ const BlogText = ({ data }) => {
               {data.tagline}
             </small>
             <div ref={bodyText} className="mt-6 prose mx-auto"></div>
-            <CallToAction/>
+            <CallToAction />
           </div>
         </div>
       </section>
