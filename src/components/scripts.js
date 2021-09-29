@@ -11,6 +11,7 @@ const Scripts = () => {
       "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js",
       "https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.1/jquery.stellar.min.js",
       "/js/script.js",
+      "/js/plausible-track.js",
     ];
 
     scripts.forEach(function (value) {

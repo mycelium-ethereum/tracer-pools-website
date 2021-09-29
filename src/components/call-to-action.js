@@ -1,4 +1,3 @@
-
 import React from "react";
 import SolidButton from "./solid-button";
 import { Link } from "gatsby";
@@ -21,6 +20,7 @@ const CallToAction = () =>{
                   <Link
                     to="/radar/perpetual-pools-launch"
                     className="ml-2 underline"
+                    data-analytics='"CTAClick", {"props":{"plan":"Navigation"}}'
                   >
                     Read more
                   </Link>
