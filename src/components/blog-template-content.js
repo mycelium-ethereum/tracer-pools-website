@@ -3,13 +3,12 @@ import { Link } from "gatsby";
 import Moment from "react-moment";
 import marked from "marked";
 import DOMPurify from "dompurify";
-import SolidButton from "./solid-button";
+import CallToAction from "./call-to-action";
 
 // Images
 import Home from "../../static/img/blog-posts/home.svg";
 import Calendar from "../../static/img/blog-posts/calendar.svg";
 import Clock from "../../static/img/blog-posts/clock.svg";
-import CTABackground from "../../static/img/blog-posts/cta-bg.svg";
 
 const BlogText = ({ data }) => {
   const [currentURL, setCurrentURL] = useState("");
@@ -55,7 +54,7 @@ const BlogText = ({ data }) => {
   return (
     <>
       <section className="h-full w-full z-20 relative mt-16 bg-white select-dark">
-        <div className="container relative w-full mx-auto pt-6 lg:px-0 sm:pb-24 pb-12 px-4">
+        <div className="container relative w-full mx-auto pt-6 lg:px-0 sm:pb-24 pb-24 px-4">
           <div className="flex justify-between md:flex-row flex-col lg:mb-32 md:md-20 mb-12">
             <div className="flex sm:items-center items-start text-gray-400">
               <Link to="/" className="flex items-center w-5 h-6">
@@ -97,31 +96,7 @@ const BlogText = ({ data }) => {
               {data.tagline}
             </small>
             <div ref={bodyText} className="mt-6 prose mx-auto"></div>
-            <div className="w-full relative sm:px-12 sm:py-14 px-6 py-9 overflow-hidden rounded-xl mt-20">
-              <img
-                className="w-full absolute bottom-0 right-0"
-                src={CTABackground}
-              />
-              <div className="relative z-0 text-white font-normal">
-                <p className="xl:text-2xl sm:text-xl sm:text-left text-center text-base">
-                  Tracer Perpetual Pools is now live on Arbitrum One. Fully
-                  fungible, leveraged tokens for the DeFi economy, with no
-                  margin requirements and no liquidations.
-                  <Link
-                    to="/radar/perpetual-pools-launch"
-                    className="ml-2 underline"
-                  >
-                    Read more
-                  </Link>
-                </p>
-                <SolidButton
-                  className="sm:ml-0 mx-auto mt-9 sm:w-56 sm:px-0 whitespace-nowrap"
-                  href="https://pools.tracer.finance/"
-                >
-                  Launch Perpetual Pools
-                </SolidButton>
-              </div>
-            </div>
+            <CallToAction/>
           </div>
         </div>
       </section>
