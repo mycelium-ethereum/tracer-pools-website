@@ -54,7 +54,7 @@ const Navbar = () => {
   const checkPage = () => {
     const currentPage = window.location.pathname;
     const notHome =
-      currentPage.includes("/learn") || currentPage.includes("/radar");
+      currentPage.includes("/learn") || currentPage.includes("/radar") || currentPage.includes("/privacy-policy");
     if (notHome) {
       setDarkerNav(true);
     }

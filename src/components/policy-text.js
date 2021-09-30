@@ -27,7 +27,7 @@ const PrivacyText = () => {
       <section className="h-full w-full z-20 relative mt-16 bg-white">
         <div className="container relative w-full mx-auto pt-6 pb-6 lg:px-0 px-4 md:grid block grid-cols-12">
           <aside className="md:w-60 w-full h-auto col-span-1">
-            <button
+            {/* <button
               className="relative md:hidden inline-flex mr-4 justify-start items-center text-base font-semibold w-28 h-11 rounded-xl bg-gray-50 pl-4"
               onClick={() => {
                 setProtocolDropdownOpen((wasOpen) => !wasOpen);
@@ -40,7 +40,7 @@ const PrivacyText = () => {
                 src={Dropdown}
                 alt="Dropdown toggle"
               />
-            </button>
+            </button> */}
             <button
               className="relative md:hidden inline-flex justify-start items-center text-base font-semibold w-28 h-11 rounded-xl bg-gray-50 pl-4"
               onClick={() => {
@@ -55,7 +55,7 @@ const PrivacyText = () => {
                 alt="Dropdown toggle"
               />
             </button>
-            <div
+            {/* <div
               className={
                 "md:static md:block absolute top-18 md:rounded-none md:p-0 md:shadow-none shadow p-4 rounded-xl md:bg-transparent bg-white " +
                 (protocolDropdownOpen ? "block" : "hidden")
@@ -82,10 +82,11 @@ const PrivacyText = () => {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
+            {/* mt-12 for div below */}
             <div
               className={
-                "mt-12 md:static md:block absolute left-36 top-5 md:rounded-none md:p-0 md:shadow-none shadow p-4 rounded-xl md:bg-transparent bg-white " +
+                "md:static md:block absolute left-36 top-5 md:rounded-none md:p-0 md:shadow-none shadow p-4 rounded-xl md:bg-transparent bg-white " +
                 (websiteDropdownOpen ? "block" : "hidden")
               }
             >
