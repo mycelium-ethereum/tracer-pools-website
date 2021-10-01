@@ -157,7 +157,7 @@ main {
   background: var(--navblue);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--lightblue);
+  background: var(--white);
 }
 
 p,
