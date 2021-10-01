@@ -25,6 +25,12 @@ const query = graphql`
   }
 `;
 const BlogPosts = () => {
+  const sortByDate = (a, b) => {
+    return (
+      new Date(b.node.publish_date).getTime() -
+      new Date(a.node.publish_date).getTime()
+    );
+  };
   return (
     <>
       <section className="h-full w-full z-20 relative bg-white select-dark">
@@ -37,10 +43,7 @@ const BlogPosts = () => {
             render={(data) => (
               <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
                 {data.allStrapiTracerBlogs.edges
-                  .sort(
-                    (a, b) =>
-                      b.node.id.match(/[0-9]+/g) - a.node.id.match(/[0-9]+/g)
-                  )
+                  .sort((a, b) => sortByDate(a, b))
                   .map((node, i) => (
                     <PostLink data={node} key={i} />
                   ))}
