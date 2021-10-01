@@ -149,7 +149,7 @@ const Navbar = () => {
               className="nav-link transition-colors duration-700 py-2 px-4 rounded-lg"
               to="/radar"
             >
-              <span className="text-white font-normal">Radar</span>
+              <span className="text-white font-normal">Blog</span>
             </Link>
           </div>
           <div>
@@ -228,7 +228,7 @@ const Navbar = () => {
                 className="mobile-link opacity-0 py-2 px-4 rounded-lg"
                 to="/radar"
               >
-                <span className="text-white font-normal text-lg">Radar</span>
+                <span className="text-white font-normal text-lg">Blog</span>
               </Link>
             </div>
           </div>

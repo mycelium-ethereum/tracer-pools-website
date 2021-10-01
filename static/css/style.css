@@ -107,6 +107,9 @@
 .prose {
   max-width: 800px;
 }
+.max-w-blog {
+  max-width: 800px;
+}
 .select-dark *::selection  {
   color: var(--white);
   background: var(--darkblue);
@@ -126,6 +129,9 @@ body {
 img {
   image-rendering: crisp-edges;
   image-rendering: -webkit-optimize-contrast;
+}
+main {
+  min-width: 320px;
 }
 *::selection {
   color: var(--darkblue);
