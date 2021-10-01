@@ -9,11 +9,11 @@ import BlogPosts from "../components/blog-posts";
 const Index = () => {
   return (
     <>
-      <SEO title="Radar" description="Read the latest news for Tracer." />
+      <SEO title="Blog" description="Read the latest news for Tracer." />
       <Layout>
         <Header
           title={"Radar"}
-          subheading={"Read the latest news for Tracer"}
+          subheading={"Read the latest news on the Tracer Blog"}
         />
         <BlogPosts />
       </Layout>
