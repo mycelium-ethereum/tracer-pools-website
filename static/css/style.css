@@ -532,7 +532,7 @@ section {
 }
 .step-animation .step-animation__blue-square {
   min-width: 1800px;
-  bottom: 20  0px;
+  bottom: 200px;
   right: -1600px;
   z-index: 0;
 }
