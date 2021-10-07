@@ -1,6 +1,6 @@
 import React from "react";
 
-const SolidButton = ({ className, children, href }) => {
+const SolidButton = ({ className, children, href, analytics }) => {
   return (
     <a
       className={
@@ -10,6 +10,7 @@ const SolidButton = ({ className, children, href }) => {
       rel="noreferrer"
       target="_blank"
       href={href}
+      data-analytics={analytics}
     >
       {children}
     </a>

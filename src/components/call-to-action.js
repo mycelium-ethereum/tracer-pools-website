@@ -25,7 +25,7 @@ const CallToAction = () => {
         <SolidButton
           className="sm:ml-0 mx-auto mt-9 sm:w-56 sm:px-0 whitespace-nowrap"
           href="https://pools.tracer.finance/"
-          data-analytics='"RadarPoolsFooterCTA", {"props":{"plan":"Navigation"}}'
+          analytics='"RadarPoolsFooterCTA", {"props":{"plan":"Navigation"}}'
         >
           Launch Perpetual Pools
         </SolidButton>

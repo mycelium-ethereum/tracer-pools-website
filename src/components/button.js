@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ className, children, href, id }) => {
+const Button = ({ className, children, href, id, analytics }) => {
   return (
     <a
       className={
@@ -11,6 +11,7 @@ const Button = ({ className, children, href, id }) => {
       target="_blank"
       href={href}
       id={id}
+      data-analytics={analytics}
     >
       {children}
     </a>

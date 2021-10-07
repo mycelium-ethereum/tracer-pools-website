@@ -155,7 +155,11 @@ const Navbar = () => {
             </Link>
           </div>
           <div>
-            <Button className="mt-0" href="https://pools.tracer.finance/">
+            <Button
+              className="mt-0"
+              href="https://pools.tracer.finance/"
+              analytics='"LaunchPoolsNavCTA", {"props":{"plan":"Navigation"}}'
+            >
               Launch Pools
             </Button>
           </div>
@@ -206,6 +210,7 @@ const Navbar = () => {
                 onClick={() => closeNav()}
                 className="h-12 w-full border border-white font-normal text-lg opacity-0"
                 href="https://pools.tracer.finance/"
+                analytics='"LaunchPoolsNavCTA", {"props":{"plan":"Navigation"}}'
               >
                 Launch Pools
               </Button>
