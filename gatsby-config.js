@@ -49,7 +49,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-plausible`,
       options: {
-        domain: `tracer.finance`,
+        customDomain: `tracer.finance`,
       },
     },
     {
