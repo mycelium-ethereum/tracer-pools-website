@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Marquee from "react-fast-marquee";
@@ -10,8 +10,6 @@ import EthereumLong from "/static/img/home-page/slider/eth-l.svg";
 import BitcoinLong from "/static/img/home-page/slider/btc-l.svg";
 
 const TokenMarquee = ({ className }) => {
-  const [slideMultiplier, setSlideMultiplier] = useState(0);
-  const [slideKey, setSlideKey] = useState(0);
   const shortTokenImages = [
     EthereumShort,
     EthereumShort,
