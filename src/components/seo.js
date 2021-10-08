@@ -92,7 +92,7 @@ function SEO({ description, lang, meta, title, image }) {
         rel="stylesheet"
       />
       {/* <Plausible /> */}
-      <script defer data-domain="tracer.finance" src="/js/redirect.js" />
+      <script defer data-domain="tracer.finance" src="/js/redirect.js" type="text/javascript"/>
     </Helmet>
   );
 }
