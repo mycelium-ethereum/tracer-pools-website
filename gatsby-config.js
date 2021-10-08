@@ -47,12 +47,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-plausible`,
-      options: {
-        domain: `tracer.finance`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-image`,
     },
     {

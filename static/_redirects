@@ -1,3 +1,5 @@
 /exchange /
 /radar/dao-participation /radar/tracer-dao-agreement
-/media/white-papers/perp-pools/perpetual-pools.pdf /static/perpetual-pools-efc7c29f638cb788832aafe0f41c07bd.pdf
+/media/white-papers/perp-pools/perpetual-pools.pdf /static/Tracer%20Perpetual%20Pools-ded3c8351f5452c1f8ec58b30cdc943b.pdf
+/js/redirect.js https://plausible.io/js/plausible.js 200
+/api/event https://plausible.io/api/event 202
