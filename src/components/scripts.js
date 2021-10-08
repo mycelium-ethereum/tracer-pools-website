@@ -22,6 +22,15 @@ const Scripts = () => {
       script.src = value;
       scriptDiv.current.appendChild(script);
     });
+
+    // Create plausible script tag
+    const plausible = "/js/redirect.js";
+    const plausibleScript = document.createElement("script");
+    plausibleScript.async = false;
+    plausibleScript.defer = true;
+    plausibleScript.src = plausible;
+    plausibleScript.dataDomain = "tracer.finance";
+    scriptDiv.current.appendChild(plausibleScript);
   });
   return (
     <div className="scripts" ref={scriptDiv}>
