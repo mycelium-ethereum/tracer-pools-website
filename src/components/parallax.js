@@ -1,14 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Parallax from "parallax-js";
-
-// Images
-import BlueSquare from "/static/img/home-page/background/blue-square.svg";
-import GreenArrow from "/static/img/home-page/background/green-arrow.svg";
-import BlueArrow from "/static/img/home-page/background/blue-arrow.svg";
-import BlueArrowDown from "/static/img/home-page/background/blue-arrow-down.png";
-import PinkArrow from "/static/img/home-page/background/pink-arrow-right.png";
-import PinkSquare from "/static/img/home-page/background/pink-square.png";
-import PinkRectangle from "/static/img/home-page/background/pink-rectangle.png";
+import { StaticImage } from "gatsby-plugin-image";
 
 const BackgroundParallax = () => {
   const [fixed, setFixed] = useState(false);
@@ -18,12 +10,27 @@ const BackgroundParallax = () => {
       setFixed(true);
     }
   };
-
-  useEffect(() => {
+  const applyDepth = () => {
+    const images = document.querySelectorAll(".tile-bg .gatsby-image-wrapper");
+    const depths = [0.2, 0.2, 0.4, 0.3, 0.1, 0.2, 0.2, 0.1];
+    images.forEach((image, i) => {
+      image.setAttribute("data-depth", depths[i]);
+      image.style.opacity = 0.5;
+    });
+    createParallax();
+  };
+  const createParallax = () => {
     const scene = document.querySelector(".tile-bg");
-    const scene2 = document.querySelector(".square-middle");
+    const tiles = document.querySelectorAll(".parallax-img");
     new Parallax(scene);
-    new Parallax(scene2);
+    tiles.forEach((tile) => {
+      new Parallax(tile);
+    });
+  };
+  useEffect(() => {
+    window.onload = function () {
+      applyDepth();
+    };
     checkPage();
   }, []);
   return (
@@ -35,54 +42,87 @@ const BackgroundParallax = () => {
         }
       >
         <div className="relative tile-bg">
-          <div className="absolute square-middle z-30">
-            <img
-              className="absolute opacity-50 blue-square"
-              data-depth="0.2"
-              src={BlueSquare}
+          <div
+            className="parallax-img absolute square-middle z-30"
+            data-set-depth="0.2"
+          >
+            <StaticImage
+              placeholder="none"
+              loading="eager"
+              objectFit="contain"
+              imgClassName="absolute opacity-50 blue-square"
+              src="../../static/img/home-page/background/blue-square.svg"
               alt=""
             />
           </div>
-          <img
-            className="absolute opacity-50 blue-arrow"
-            data-depth="0.2"
-            src={BlueArrow}
+          <StaticImage
+            placeholder="none"
+            loading="eager"
+            objectFit="contain"
+            imgClassName="absolute opacity-50 blue-arrow"
+            className="parallax-img"
+            data-set-depth="0.2"
+            src="../../static/img/home-page/background/blue-arrow.svg"
             alt=""
           />
-          <img
-            className="absolute opacity-50 green-arrow z-20"
-            data-depth="0.4"
-            src={GreenArrow}
+          <StaticImage
+            placeholder="none"
+            loading="eager"
+            objectFit="contain"
+            imgClassName="absolute opacity-50 green-arrow z-20"
+            className="parallax-img"
+            data-set-depth="0.2"
+            src="../../static/img/home-page/background/green-arrow.svg"
             alt=""
           />
-          <img
-            className="absolute opacity-50 pink-arrow"
-            data-depth="0.3"
-            src={PinkArrow}
+          <StaticImage
+            placeholder="none"
+            loading="eager"
+            objectFit="contain"
+            imgClassName="absolute opacity-50 pink-arrow"
+            className="parallax-img"
+            data-set-depth="0.3"
+            src="../../static/img/home-page/background/pink-arrow-right.png"
             alt=""
           />
-          <img
-            className="absolute opacity-50 blue-square-medium"
-            data-depth="0.1"
-            src={BlueSquare}
+          <StaticImage
+            placeholder="none"
+            loading="eager"
+            objectFit="contain"
+            imgClassName="absolute opacity-50 blue-square-medium"
+            className="parallax-img"
+            data-set-depth="0.1"
+            src="../../static/img/home-page/background/blue-square.svg"
             alt=""
           />
-          <img
-            className="absolute opacity-50 blue-arrow-down"
-            data-depth="0.2"
-            src={BlueArrowDown}
+          <StaticImage
+            placeholder="none"
+            loading="eager"
+            objectFit="contain"
+            imgClassName="absolute opacity-50 blue-arrow-down"
+            className="parallax-img"
+            data-set-depth="0.2"
+            src="../../static/img/home-page/background/blue-arrow-down.png"
             alt=""
           />
-          <img
-            className="absolute opacity-50 pink-square"
-            data-depth="0.2"
-            src={PinkSquare}
+          <StaticImage
+            placeholder="none"
+            loading="eager"
+            objectFit="contain"
+            imgClassName="absolute opacity-50 pink-square"
+            className="parallax-img"
+            data-set-depth="0.2"
+            src="../../static/img/home-page/background/pink-square.png"
             alt=""
           />
-          <img
-            className="absolute opacity-50 pink-rectangle"
-            data-depth="0.1"
-            src={PinkRectangle}
+          <StaticImage
+            placeholder="none"
+            loading="eager"
+            objectFit="contain"
+            imgClassName="absolute opacity-50 pink-rectangle"
+            className="parallax-img"
+            data-set-depth="0.1"
+            src="../../static/img/home-page/background/pink-rectangle.png"
             alt=""
           />
         </div>
