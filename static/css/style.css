@@ -193,14 +193,14 @@ h1 {
   bottom: unset !important;
 }
 /* Lazy loaded images */
-.gatsby-image-wrapper {
+.tile-bg .gatsby-image-wrapper {
   height: 100%;
   width: 100%;
   right: 0 !important;
   left: unset !important;
   overflow: unset !important;
 }
-.gatsby-image-wrapper picture {
+.tile-bg .gatsby-image-wrapper picture {
   width: 100%;
   height: 100%;
 }
