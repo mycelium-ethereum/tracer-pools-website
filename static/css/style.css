@@ -178,7 +178,7 @@ h1 {
 }
 .tile-bg {
   left: 50% !important;
-  top: -8rem !important;
+  top: -16rem !important;
   transform: translate(-50%, 0%) !important;
   width: 1920px;
   height: 1150px;
@@ -210,6 +210,9 @@ h1 {
   transform: translate(-50%, -50%) !important;
   width: 1500px;
   height: 900px;
+}
+script[type="module"] {
+  display: none !important;
 }
 .tile-bg .blue-square {
   top: -100px !important;
