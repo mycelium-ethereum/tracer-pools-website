@@ -178,7 +178,7 @@ h1 {
 }
 .tile-bg {
   left: 50% !important;
-  top: -16rem !important;
+  top: -8rem !important;
   transform: translate(-50%, 0%) !important;
   width: 1920px;
   height: 1150px;
@@ -192,18 +192,6 @@ h1 {
   right: unset !important;
   bottom: unset !important;
 }
-/* Lazy loaded images */
-.tile-bg .gatsby-image-wrapper {
-  height: 100%;
-  width: 100%;
-  right: 0 !important;
-  left: unset !important;
-  overflow: unset !important;
-}
-.tile-bg .gatsby-image-wrapper picture {
-  width: 100%;
-  height: 100%;
-}
 .square-middle {
   top: 50% !important;
   left: 50% !important;
@@ -211,51 +199,49 @@ h1 {
   width: 1500px;
   height: 900px;
 }
-script[type="module"] {
-  display: none !important;
-}
 .tile-bg .blue-square {
   top: -100px !important;
   width: 100%;
 }
 .tile-bg .blue-arrow {
-  top: -600px !important;
+  top: -400px !important;
   right: -900px !important;
   width: 1300px;
 }
 .tile-bg .green-arrow {
-  top: -300px !important;
+  top: -100px !important;
   right: -580px !important;
   width: 1300px;
 }
 .tile-bg .pink-arrow {
-  top: 0px !important;
+  top: 200px !important;
   left: -400px !important;
   width: 1150px;
 }
 .tile-bg .blue-square-medium {
-  top: -520px !important;
+  top: -320px !important;
   left: -550px !important;
   width: 1200px;
 }
 .tile-bg .blue-arrow-down {
-  top: -25px !important;
+  top: 175px !important;
   left: -570px !important;
   width: 1100px;
 }
 .tile-bg .pink-square {
-  bottom: -400px !important;
+  bottom: -200px !important;
   right: -560px !important;
   width: 1260px;
 }
 .tile-bg .pink-rectangle {
-  bottom: -690px !important;
+  bottom: -590px !important;
   left: -990px !important;
   width: 1680px;
 }
 .tile-bg img {
   max-width: unset;
 }
+
 
 /* DOWN ARROW */
 picture {
