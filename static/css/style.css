@@ -72,9 +72,6 @@
 .transform-gpu {
   transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) translateZ(0) perspective(999px)
 }
-.force-flex {
-  display: flex !important;
-}
 .duration-1500 {
   transition-duration: 1.5s;
 }
@@ -186,7 +183,7 @@ h1 {
 .tile-bg.fixed {
   height: 100vh;
 }
-.tile-bg img {
+.tile-bg picture {
   top: unset !important;
   left: unset !important;
   right: unset !important;
@@ -197,51 +194,58 @@ h1 {
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
   width: 1500px;
-  height: 900px;
 }
 .tile-bg .blue-square {
   top: -100px !important;
   width: 100%;
+  height: 795px;
 }
 .tile-bg .blue-arrow {
   top: -400px !important;
   right: -900px !important;
   width: 1300px;
+  height: 795px;
 }
 .tile-bg .green-arrow {
   top: -100px !important;
   right: -580px !important;
   width: 1300px;
+  height: 785px;
 }
 .tile-bg .pink-arrow {
   top: 200px !important;
   left: -400px !important;
   width: 1150px;
+  height: 700px;
 }
 .tile-bg .blue-square-medium {
   top: -320px !important;
   left: -550px !important;
   width: 1200px;
+  height: 724px;
 }
 .tile-bg .blue-arrow-down {
   top: 175px !important;
   left: -570px !important;
   width: 1100px;
+  height: 670px;
 }
 .tile-bg .pink-square {
   bottom: -200px !important;
   right: -560px !important;
   width: 1260px;
+  height: 730px;
 }
 .tile-bg .pink-rectangle {
   bottom: -590px !important;
   left: -990px !important;
   width: 1680px;
+  height: 990px;
 }
 .tile-bg img {
-  max-width: unset;
+  width: 100%;
+  height: auto;
 }
-
 
 /* DOWN ARROW */
 picture {

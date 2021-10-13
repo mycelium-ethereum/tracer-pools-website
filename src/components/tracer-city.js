@@ -30,12 +30,12 @@ const TracerCity = () => {
           <div className="col-span-3">
             <div
               data-stellar-ratio="1.4"
-              className="h-auto lg:absolute 2xl:mt-20 lg:mt-20 force-flex flex-col justify-center lg:items-start items-center z-10 xl:left-0 lg:left-4 lg:pb-0 lg:mb-0 sm:pt-0 xl:px-0 xl:w-full lg:w-80 w-full mx-auto left-0 pt-8 mb-8 lg:text-left text-center"
+              className="h-auto lg:absolute 2xl:mt-20 lg:mt-20 force-flex flex-col justify-center lg:items-start items-center z-10 xl:left-0 lg:left-4 lg:pb-0 lg:mb-0 sm:pt-0 xl:px-0 lg:w-80 lg:text-left w-56 mx-auto left-0 pt-8 mb-8 text-center"
             >
               <h1 className="font-bold text-white xl:text-5xl lg:text-4xl lg:mb-4 mb-2 text-3xl">
                 Built for DeFi
               </h1>
-              <small className="text-white font-light xl:w-80 lg:text-left lg:text-2xl lg:w-auto w-56 text-lg">
+              <small className="text-white font-light lg:text-left lg:text-2xl lg:w-auto text-lg">
                 Use Pool Tokens with dApps you know and love
               </small>
             </div>

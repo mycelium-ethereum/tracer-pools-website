@@ -37,7 +37,7 @@ const LeverageSteps = (direction) => {
                   <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold bg-blue">
                     01
                   </span>
-                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
+                  <p className="ml-8 2xl:text-2xl lg:text-xl text-white">
                     Select market
                     <br />
                     BTC/USDC or ETH/USDC
@@ -55,7 +55,7 @@ const LeverageSteps = (direction) => {
                 className="lg:hidden sm:w-80 w-full mx-auto z-20 sm:pl-0 pl-4"
               >
                 <div data-step="1" className="grid grid-cols-4 w-full sm:gap-0">
-                  <span className="font-bold md:text-6xl md:pr-0 text-4xl text-white col-span-1 flex justify-end pr-4">
+                  <span className="font-bold md:text-5xl md:pr-2 text-4xl text-white col-span-1 flex justify-end pr-4">
                     01
                   </span>
                   <p className="font-normal text-sm text-white col-span-3 mb-8">
@@ -65,7 +65,7 @@ const LeverageSteps = (direction) => {
                   </p>
                 </div>
                 <div data-step="2" className="grid grid-cols-4 w-full sm:gap-0">
-                  <span className="font-bold md:text-6xl md:pr-0 text-4xl text-white col-span-1 flex justify-end pr-4">
+                  <span className="font-bold md:text-5xl md:pr-2 text-4xl text-white col-span-1 flex justify-end pr-4">
                     02
                   </span>
                   <p className="font-normal text-sm text-white col-span-3 mb-8">
@@ -75,7 +75,7 @@ const LeverageSteps = (direction) => {
                   </p>
                 </div>
                 <div data-step="3" className="grid grid-cols-4 w-full sm:gap-0">
-                  <span className="font-bold md:text-6xl md:pr-0 text-4xl text-white col-span-1 flex justify-end pr-4">
+                  <span className="font-bold md:text-5xl md:pr-2 text-4xl text-white col-span-1 flex justify-end pr-4">
                     03
                   </span>
                   <p className="font-normal text-sm text-white col-span-3 mb-8">
@@ -85,7 +85,7 @@ const LeverageSteps = (direction) => {
                   </p>
                 </div>
                 <div data-step="4" className="grid grid-cols-4 w-full sm:gap-0">
-                  <span className="font-bold md:text-6xl md:pr-0 text-4xl text-white col-span-1 flex justify-end pr-4">
+                  <span className="font-bold md:text-5xl md:pr-2 text-4xl text-white col-span-1 flex justify-end pr-4">
                     04
                   </span>
                   <p className="font-normal text-sm text-white col-span-3">
@@ -169,7 +169,7 @@ const LeverageSteps = (direction) => {
                   <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold bg-blue">
                     02
                   </span>
-                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
+                  <p className="ml-8 2xl:text-2xl lg:text-xl text-white">
                     Select side
                     <br />
                     Long or short
@@ -197,7 +197,7 @@ const LeverageSteps = (direction) => {
                   <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold bg-blue">
                     03
                   </span>
-                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
+                  <p className="ml-8 2xl:text-2xl lg:text-xl text-white">
                     Choose Power Leverage
                     <br />
                     1, 2, 3, 5, or 15
@@ -225,7 +225,7 @@ const LeverageSteps = (direction) => {
                   <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold bg-blue">
                     04
                   </span>
-                  <p className="ml-8 2xl:text-2xl xl:text-xl text-white">
+                  <p className="ml-8 2xl:text-2xl lg:text-xl text-white">
                     Enter collateral and select 'Buy' to gain leveraged exposure
                   </p>
                 </div>
