@@ -501,7 +501,6 @@ section {
   right: -80px;
   z-index: 6;
   opacity: 1;
-  transition: all 1.3s ease;
 }
 .step-animation__tile {
   min-width: 390px;
@@ -514,6 +513,7 @@ section {
 /* App base */
 .step-animation .step-animation__base {
   top: 150px;
+  right: -180px;
   min-width: 806px;
   z-index: 5;
 }
