@@ -49,7 +49,7 @@ const BackgroundParallax = () => {
             >
               <source srcset={BlueSquareWEBP} type="image/webp" />
               <source srcset={BlueSquare} type="image/png" />
-              <img src={BlueSquare} alt={""} />
+              <img src={BlueSquare} alt={""} loading="lazy" />
             </picture>
           </div>
           <picture className="absolute opacity-50 blue-arrow" data-depth="0.2">
