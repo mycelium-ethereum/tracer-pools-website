@@ -49,13 +49,13 @@ const BackgroundParallax = () => {
             >
               <source srcset={BlueSquareWEBP} type="image/webp" />
               <source srcset={BlueSquare} type="image/png" />
-              <img src={BlueSquare} alt="" />
+              <img src={BlueSquare} alt={""} />
             </picture>
           </div>
           <picture className="absolute opacity-50 blue-arrow" data-depth="0.2">
-            <source srcset={BlueSquareWEBP} type="image/webp" />
+            <source srcset={BlueArrowWEBP} type="image/webp" />
             <source srcset={BlueArrow} type="image/png" />
-            <img src={BlueArrow} alt="" loading="lazy" />
+            <img src={BlueArrow} alt={""} loading="lazy" />
           </picture>
           <picture
             className="absolute opacity-50 green-arrow z-20"
@@ -63,12 +63,12 @@ const BackgroundParallax = () => {
           >
             <source srcset={GreenArrowWEBP} type="image/webp" />
             <source srcset={GreenArrow} type="image/png" />
-            <img src={GreenArrow} alt="" loading="lazy" />
+            <img src={GreenArrow} alt={""} loading="lazy" />
           </picture>
           <picture className="absolute opacity-50 pink-arrow" data-depth="0.3">
             <source srcset={PinkArrowWEBP} type="image/webp" />
             <source srcset={PinkArrow} type="image/png" />
-            <img src={PinkArrow} alt="" loading="lazy" />
+            <img src={PinkArrow} alt={""} loading="lazy" />
           </picture>
           <picture
             className="absolute opacity-50 blue-square-medium"
@@ -76,7 +76,7 @@ const BackgroundParallax = () => {
           >
             <source srcset={BlueSquareWEBP} type="image/webp" />
             <source srcset={BlueSquare} type="image/png" />
-            <img src={BlueSquare} alt="" loading="lazy" />
+            <img src={BlueSquare} alt={""} loading="lazy" />
           </picture>
           <picture
             className="absolute opacity-50 blue-arrow-down"
@@ -84,12 +84,12 @@ const BackgroundParallax = () => {
           >
             <source srcset={BlueArrowDownWEBP} type="image/webp" />
             <source srcset={PinkRectangle} type="image/png" />
-            <img src={BlueArrowDown} alt="" loading="lazy" />
+            <img src={BlueArrowDown} alt={""} loading="lazy" />
           </picture>
           <picture className="absolute opacity-50 pink-square" data-depth="0.2">
             <source srcset={PinkSquareWEBP} type="image/webp" />
             <source srcset={PinkRectangle} type="image/png" />
-            <img src={PinkSquare} alt="" loading="lazy" />
+            <img src={PinkSquare} alt={""} loading="lazy" />
           </picture>
           <picture
             className="absolute opacity-50 pink-rectangle"
@@ -97,7 +97,7 @@ const BackgroundParallax = () => {
           >
             <source srcset={PinkRectangleWEBP} type="image/webp" />
             <source srcset={PinkRectangle} type="image/png" />
-            <img src={PinkRectangle} alt="" loading="lazy" />
+            <img src={PinkRectangle} alt={""} loading="lazy" />
           </picture>
         </div>
       </div>
