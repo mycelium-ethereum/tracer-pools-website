@@ -49,6 +49,7 @@ const TokenMarquee = ({ className }) => {
                 ? longTokenImages[i]
                 : shortTokenImages[i]
             }
+            loading="lazy"
             alt=""
           />
           <span className="block text-white text-center mt-2 font-bold">

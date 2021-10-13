@@ -62,6 +62,7 @@ const TracerCity = () => {
               disablePictureInPicture
               className="h-fit lg:opacity-0 transition-opacity duration-700 h-full col-span-5 transform scale-110 relative rounded-xl overflow-hidden"
               id="tracer-city"
+              preload="none"
             >
               <source src={TracerCityVideoWEBM} type="video/webm" />
             </video>
@@ -71,11 +72,13 @@ const TracerCity = () => {
           className="absolute h-full -right-48 -bottom-12 z-0 w-full md:block hidden"
           src={MeshSmall}
           alt="Mesh Background"
+          loading="lazy"
         />
         <img
           className="absolute w-full h-full opacity-40 left-2/4 transform-gpu -translate-x-1/2 -bottom-20 z-0 min-w-max md:hidden block"
           src={MeshSmallMobile}
           alt="Mesh Background"
+          loading="lazy"
         />
       </section>
       <section
@@ -105,6 +108,7 @@ const TracerCity = () => {
               disablePictureInPicture
               id="tracer-building"
               className="h-fit lg:opacity-0 transition-opacity duration-700 lg:w-1/2 lg:mx-0 mx-auto w-3/4 md:mt-0 mt-6 lg:static lg:left-0 relative"
+              preload="none"
             >
               <source src={TracerBuildingWEBM} type="video/webm" />
             </video>
@@ -134,11 +138,13 @@ const TracerCity = () => {
           className="absolute opacity-40 w-full h-auto top-3/4 transform -translate-y-1/2 left-0 z-0 min-w-max lg:hidden block"
           alt="Mesh Background"
           src={MeshLargeMobile}
+          loading="lazy"
         />
         <img
           className="absolute opacity-40 w-full h-auto md:top-1/2 top-3/4 transform -translate-y-1/2 left-0 z-0 min-w-max lg:block hidden"
           alt="Mesh Background"
           src={MeshLarge}
+          loading="lazy"
         />
       </section>
       <div className="small-spacer relative">
@@ -146,6 +152,7 @@ const TracerCity = () => {
           className="absolute w-full bottom-0"
           alt="City Bottom"
           src={CityBottom}
+          loading="lazy"
         />
       </div>
     </>

@@ -95,6 +95,7 @@ const LeverageSteps = (direction) => {
                   </p>
                 </div>
                 <img
+                  loading="lazy"
                   className="relative sm:bottom-0 -bottom-8 sm:-left-1/4 left-0 min-w-full max-w-none"
                   src={MobileSteps}
                   alt="Leverage Steps"
@@ -103,52 +104,62 @@ const LeverageSteps = (direction) => {
               <div className="w-2/4 step-animation relative 2xl:-top-24 lg:-top-32 xl:scale-75 xl:right-11 lg:scale-50 lg:-right-12 lg:opacity-100 opacity-0 lg:block transform-gpu scale-50 hidden z-10">
                 <div className="absolute step-animation__tile">
                   <img
+                    loading="lazy"
                     className="step-animation__empty relative top-0 right-0 w-full opacity-0"
                     src={EmptyTile}
                     alt=""
                   />
                   <img
+                    loading="lazy"
                     className="step-animation__market absolute top-0 right-0 w-full opacity-0"
                     src={MarketTile}
                     alt=""
                   />
                   <img
+                    loading="lazy"
                     className="step-animation__side absolute top-0 right-0 w-full opacity-0"
                     src={SideTile}
                     alt=""
                   />
                   <img
+                    loading="lazy"
                     className="step-animation__leverage absolute top-0 right-0 w-full opacity-0"
                     src={LeverageTile}
                     alt=""
                   />
                   <img
+                    loading="lazy"
                     className="step-animation__amount absolute top-0 right-0 w-full opacity-0"
                     src={AmountTile}
                     alt=""
                   />
                 </div>
                 <img
+                  loading="lazy"
                   className="step-animation__base opacity-0"
                   src={BaseTile}
                   alt=""
                 />
                 <img
+                  loading="lazy"
                   className="step-animation__lightblue-rectangle opacity-0"
                   src={LightBlueRectangle}
                   alt=""
                 />
                 <img
+                  loading="lazy"
                   className="step-animation__pink-rectangle opacity-0"
                   src={PinkRectangle}
                   alt=""
                 />
                 <img
+                  loading="lazy"
                   className="step-animation__blue-arrow opacity-0"
                   src={BlueArrow}
                   alt=""
                 />
                 <img
+                  loading="lazy"
                   className="step-animation__blue-square opacity-0"
                   src={BlueSquare}
                   alt=""
