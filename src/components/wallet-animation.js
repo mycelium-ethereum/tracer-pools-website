@@ -51,7 +51,7 @@ const WalletAnimation = () => {
           className="city-top absolute sm:top-2/4 left-0 w-full transition-all duration-500 pointer-events-none"
           src={CityTopDark}
           alt="City Background"
-          loading="lazy"
+          loading="eager"
         />
       </section>
       <div className="large-spacer pt-12 pointer-events-none relative z-10 overflow-hidden">
