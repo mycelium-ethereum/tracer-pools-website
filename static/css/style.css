@@ -989,6 +989,7 @@ footer {
   }
   div[data-stellar-ratio] {
     transform: none !important;
+    display: block !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
