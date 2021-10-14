@@ -14,11 +14,16 @@ import MeshLargeMobile from "/static/img/home-page/city/mesh-large-mobile.svg";
 import CityBottom from "/static/img/home-page/city/city-bottom.png";
 
 const TracerCity = () => {
-  // const [showThumbnail, setShowThumbnail] = useState(true);
-  // const [showBuildingThumbnail, setShowBuildingThumbnail] = useState(true);
   const [isSafariBrowser, setIsSafari] = useState(false);
+  const playVideos = () => {
+    const videos = document.querySelectorAll("video");
+    videos.forEach((video) => {
+      video.play();
+    });
+  };
   useEffect(() => {
     setIsSafari(isSafari);
+    playVideos();
   }, [isSafari]);
   return (
     <>
@@ -42,9 +47,8 @@ const TracerCity = () => {
           </div>
           {isSafariBrowser ? (
             <video
-              muted
               loop="loop"
-              autoPlay
+              muted
               playsInline
               disableRemotePlayback
               disablePictureInPicture
@@ -54,9 +58,8 @@ const TracerCity = () => {
             ></video>
           ) : (
             <video
-              muted
               loop="loop"
-              autoPlay
+              muted
               playsInline
               disableRemotePlayback
               disablePictureInPicture
@@ -90,7 +93,6 @@ const TracerCity = () => {
             <video
               muted
               loop="loop"
-              autoPlay
               playsInline
               disableRemotePlayback
               disablePictureInPicture
@@ -102,7 +104,6 @@ const TracerCity = () => {
             <video
               muted
               loop="loop"
-              autoPlay
               playsInline
               disableRemotePlayback
               disablePictureInPicture
