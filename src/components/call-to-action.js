@@ -18,13 +18,13 @@ const CallToAction = () => {
           Tracer Perpetual Pools is now live on Arbitrum One. Fully fungible,
           leveraged tokens for the DeFi economy, with no margin requirements and
           no liquidations.
-          <Link
-            to="/radar/perpetual-pools-launch"
+          <a
+            href="/radar/perpetual-pools-launch"
             className="ml-2 underline"
             data-analytics='"RadarReadMoreCTA", {"props":{"plan":"Navigation"}}'
           >
             Read more
-          </Link>
+          </a>
         </p>
         <SolidButton
           className="sm:ml-0 mx-auto mt-9 sm:w-56 sm:px-0 whitespace-nowrap"

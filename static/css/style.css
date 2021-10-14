@@ -104,6 +104,9 @@
 .prose {
   max-width: 800px;
 }
+.prose h1 {
+  font-weight: 600;
+}
 .max-w-blog {
   max-width: 800px;
 }
