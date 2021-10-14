@@ -55,7 +55,7 @@ const BackgroundParallax = () => {
           <picture className="absolute opacity-50 blue-arrow" data-depth="0.2">
             <source srcSet={BlueArrowWEBP} type="image/webp" />
             <source srcSet={BlueArrow} type="image/png" />
-            <img src={BlueArrow} alt={""} loading="lazy" />
+            <img src={BlueArrow} alt={""} loading="eager" />
           </picture>
           <picture
             className="absolute opacity-50 green-arrow z-20"
@@ -63,7 +63,7 @@ const BackgroundParallax = () => {
           >
             <source srcSet={GreenArrowWEBP} type="image/webp" />
             <source srcSet={GreenArrow} type="image/png" />
-            <img src={GreenArrow} alt={""} loading="lazy" />
+            <img src={GreenArrow} alt={""} loading="eager" />
           </picture>
           <picture className="absolute opacity-50 pink-arrow" data-depth="0.3">
             <source srcSet={PinkArrowWEBP} type="image/webp" />

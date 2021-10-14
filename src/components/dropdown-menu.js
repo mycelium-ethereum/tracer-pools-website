@@ -8,15 +8,9 @@ import DiscourseLogo from "../../static/img/social-icons/discourse-nav.svg";
 import TwitterLogo from "../../static/img/social-icons/twitter-nav.svg";
 import GitHubLogo from "../../static/img/social-icons/github-nav.svg";
 import DiscordLogo from "../../static/img/social-icons/discord-nav.svg";
-import Folder from "../../static/img/folder.svg";
 
 const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
   const Icons = [
-    // {
-    //   text: "Website",
-    //   href: "https://tracer.finance",
-    //   logo: Folder,
-    // },
     {
       text: "Twitter",
       href: "https://twitter.com/TracerDAO",

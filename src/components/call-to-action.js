@@ -8,7 +8,11 @@ import CTABackground from "../../static/img/blog-posts/cta-bg.svg";
 const CallToAction = () => {
   return (
     <div className="w-full relative sm:px-12 sm:py-14 px-6 py-9 overflow-hidden rounded-xl sm:mt-20 mt-12">
-      <img className="w-full absolute bottom-0 right-0" src={CTABackground} />
+      <img
+        className="w-full absolute bottom-0 right-0"
+        src={CTABackground}
+        alt=""
+      />
       <div className="relative z-0 text-white font-normal">
         <p className="xl:text-2xl sm:text-xl sm:text-left text-center text-base">
           Tracer Perpetual Pools is now live on Arbitrum One. Fully fungible,
