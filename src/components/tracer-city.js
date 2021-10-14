@@ -15,10 +15,15 @@ import CityBottom from "/static/img/home-page/city/city-bottom.png";
 
 const TracerCity = () => {
   const [isSafariBrowser, setIsSafari] = useState(false);
-  const [autoPlay, setAutoPlay] = useState(false);
+  const playVideos = () => {
+    const videos = document.querySelectorAll("video");
+    videos.forEach((video) => {
+      video.play();
+    });
+  };
   useEffect(() => {
     setIsSafari(isSafari);
-    setAutoPlay(true);
+    playVideos();
   }, [isSafari]);
   return (
     <>
@@ -43,7 +48,6 @@ const TracerCity = () => {
           {isSafariBrowser ? (
             <video
               loop="loop"
-              autoPlay={autoPlay}
               muted
               playsInline
               disableRemotePlayback
@@ -55,7 +59,6 @@ const TracerCity = () => {
           ) : (
             <video
               loop="loop"
-              autoPlay={autoPlay}
               muted
               playsInline
               disableRemotePlayback
@@ -90,7 +93,6 @@ const TracerCity = () => {
             <video
               muted
               loop="loop"
-              autoPlay={autoPlay}
               playsInline
               disableRemotePlayback
               disablePictureInPicture
@@ -102,7 +104,6 @@ const TracerCity = () => {
             <video
               muted
               loop="loop"
-              autoPlay={autoPlay}
               playsInline
               disableRemotePlayback
               disablePictureInPicture
