@@ -50,6 +50,9 @@ module.exports = {
       resolve: `gatsby-plugin-image`,
     },
     {
+      resolve: `gatsby-plugin-netlify`,
+    },
+    {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {

@@ -68,7 +68,7 @@ function handleFormEvent(event) {
 function registerEvent(data) {
     // break into array
     let attributes = data.split(/,(.+)/);
-
+    console.log(data);
     // Parse it to object
     let events = [JSON.parse(attributes[0]), JSON.parse(attributes[1] || '{}')];
 

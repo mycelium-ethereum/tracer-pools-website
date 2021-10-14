@@ -47,56 +47,56 @@ const BackgroundParallax = () => {
               className="absolute opacity-50 blue-square"
               data-depth="0.2"
             >
-              <source srcset={BlueSquareWEBP} type="image/webp" />
-              <source srcset={BlueSquare} type="image/png" />
+              <source srcSet={BlueSquareWEBP} type="image/webp" />
+              <source srcSet={BlueSquare} type="image/png" />
               <img src={BlueSquare} alt={""} loading="lazy" />
             </picture>
           </div>
           <picture className="absolute opacity-50 blue-arrow" data-depth="0.2">
-            <source srcset={BlueArrowWEBP} type="image/webp" />
-            <source srcset={BlueArrow} type="image/png" />
+            <source srcSet={BlueArrowWEBP} type="image/webp" />
+            <source srcSet={BlueArrow} type="image/png" />
             <img src={BlueArrow} alt={""} loading="lazy" />
           </picture>
           <picture
             className="absolute opacity-50 green-arrow z-20"
             data-depth="0.4"
           >
-            <source srcset={GreenArrowWEBP} type="image/webp" />
-            <source srcset={GreenArrow} type="image/png" />
+            <source srcSet={GreenArrowWEBP} type="image/webp" />
+            <source srcSet={GreenArrow} type="image/png" />
             <img src={GreenArrow} alt={""} loading="lazy" />
           </picture>
           <picture className="absolute opacity-50 pink-arrow" data-depth="0.3">
-            <source srcset={PinkArrowWEBP} type="image/webp" />
-            <source srcset={PinkArrow} type="image/png" />
+            <source srcSet={PinkArrowWEBP} type="image/webp" />
+            <source srcSet={PinkArrow} type="image/png" />
             <img src={PinkArrow} alt={""} loading="lazy" />
           </picture>
           <picture
             className="absolute opacity-50 blue-square-medium"
             data-depth="0.1"
           >
-            <source srcset={BlueSquareWEBP} type="image/webp" />
-            <source srcset={BlueSquare} type="image/png" />
+            <source srcSet={BlueSquareWEBP} type="image/webp" />
+            <source srcSet={BlueSquare} type="image/png" />
             <img src={BlueSquare} alt={""} loading="lazy" />
           </picture>
           <picture
             className="absolute opacity-50 blue-arrow-down"
             data-depth="0.2"
           >
-            <source srcset={BlueArrowDownWEBP} type="image/webp" />
-            <source srcset={PinkRectangle} type="image/png" />
+            <source srcSet={BlueArrowDownWEBP} type="image/webp" />
+            <source srcSet={BlueArrowDown} type="image/png" />
             <img src={BlueArrowDown} alt={""} loading="lazy" />
           </picture>
           <picture className="absolute opacity-50 pink-square" data-depth="0.2">
-            <source srcset={PinkSquareWEBP} type="image/webp" />
-            <source srcset={PinkRectangle} type="image/png" />
+            <source srcSet={PinkSquareWEBP} type="image/webp" />
+            <source srcSet={PinkSquare} type="image/png" />
             <img src={PinkSquare} alt={""} loading="lazy" />
           </picture>
           <picture
             className="absolute opacity-50 pink-rectangle"
             data-depth="0.1"
           >
-            <source srcset={PinkRectangleWEBP} type="image/webp" />
-            <source srcset={PinkRectangle} type="image/png" />
+            <source srcSet={PinkRectangleWEBP} type="image/webp" />
+            <source srcSet={PinkRectangle} type="image/png" />
             <img src={PinkRectangle} alt={""} loading="lazy" />
           </picture>
         </div>
