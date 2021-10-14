@@ -14,11 +14,11 @@ import MeshLargeMobile from "/static/img/home-page/city/mesh-large-mobile.svg";
 import CityBottom from "/static/img/home-page/city/city-bottom.png";
 
 const TracerCity = () => {
-  // const [showThumbnail, setShowThumbnail] = useState(true);
-  // const [showBuildingThumbnail, setShowBuildingThumbnail] = useState(true);
   const [isSafariBrowser, setIsSafari] = useState(false);
+  const [autoPlay, setAutoPlay] = useState(false);
   useEffect(() => {
     setIsSafari(isSafari);
+    setAutoPlay(true);
   }, [isSafari]);
   return (
     <>
@@ -42,9 +42,9 @@ const TracerCity = () => {
           </div>
           {isSafariBrowser ? (
             <video
-              muted
               loop="loop"
-              autoPlay
+              autoPlay={autoPlay}
+              muted
               playsInline
               disableRemotePlayback
               disablePictureInPicture
@@ -54,9 +54,9 @@ const TracerCity = () => {
             ></video>
           ) : (
             <video
-              muted
               loop="loop"
-              autoPlay
+              autoPlay={autoPlay}
+              muted
               playsInline
               disableRemotePlayback
               disablePictureInPicture
@@ -90,7 +90,7 @@ const TracerCity = () => {
             <video
               muted
               loop="loop"
-              autoPlay
+              autoPlay={autoPlay}
               playsInline
               disableRemotePlayback
               disablePictureInPicture
@@ -102,7 +102,7 @@ const TracerCity = () => {
             <video
               muted
               loop="loop"
-              autoPlay
+              autoPlay={autoPlay}
               playsInline
               disableRemotePlayback
               disablePictureInPicture
