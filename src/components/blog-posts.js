@@ -80,7 +80,7 @@ const BlogPosts = () => {
             />
             {currentPosts}
           </div>
-          <hr className="mt-12 color-paginationrulegrey" />
+          <hr className="mt-16 color-paginationrulegrey" />
           <ReactPaginate
             previousLabel={"Previous"}
             nextLabel={"Next"}
