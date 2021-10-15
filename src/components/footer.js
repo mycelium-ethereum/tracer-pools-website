@@ -61,7 +61,7 @@ const Footer = () => {
     document.addEventListener("click", function (e) {
       hideForm(e);
     });
-    return function () {
+    return () => {
       document.removeEventListener("click", hideForm);
     };
   });

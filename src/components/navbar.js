@@ -68,7 +68,7 @@ const Navbar = () => {
     checkPage();
     window.addEventListener("scroll", setSolidNav);
     window.addEventListener("resize", setSolidNav);
-    return function () {
+    return () => {
       window.removeEventListener("scroll", setSolidNav);
       window.removeEventListener("resize", setSolidNav);
     };

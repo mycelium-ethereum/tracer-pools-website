@@ -19,7 +19,7 @@ const IntegrateAnimation = () => {
   useEffect(() => {
     toggleActiveStyles();
     window.addEventListener("resize", toggleActiveStyles());
-    return function () {
+    return () => {
       window.removeEventListener("resize", toggleActiveStyles);
     };
     // eslint-disable-next-line

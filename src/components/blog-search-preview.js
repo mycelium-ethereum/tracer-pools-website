@@ -4,7 +4,7 @@ import DOMPurify from "dompurify";
 import Moment from "react-moment";
 import { Link } from "gatsby";
 
-const PostLink = ({ data, className }) => {
+const SearchResult = ({ data, className }) => {
   const truncate = (str) => {
     const maxLength = 190;
     return str.length > maxLength ? str.substring(0, maxLength) + "..." : str;
@@ -20,10 +20,7 @@ const PostLink = ({ data, className }) => {
   return (
     <Link
       to={`/radar/` + data.node.slug}
-      className={
-        "post-link relative h-auto col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-bl-xl rounded-br-xl cursor-pointer " +
-        (className ? className : "")
-      }
+      className="relative h-auto transition-shadow duration-700 hover:shadow-2xl cursor-pointer"
     >
       <div className="h-52 overflow-hidden rounded-tl-xl rounded-tr-xl">
         <img
@@ -49,4 +46,4 @@ const PostLink = ({ data, className }) => {
   );
 };
 
-export default PostLink;
+export default SearchResult;
