@@ -82,15 +82,15 @@ const BlogPosts = () => {
           </div>
           <hr className="mt-12 color-paginationrulegrey" />
           <ReactPaginate
-            previousLabel={"← Previous"}
-            nextLabel={"Next →"}
+            previousLabel={"Previous"}
+            nextLabel={"Next"}
             pageCount={pageCount}
             onPageChange={handlePageClick}
             containerClassName={"relative box-border flex justify-center pl-0 mb-12 w-full"}
             // pageClassName={"relative flex items-center justify-center color-paginationgrey w-9 h-12 transition-colors inactive-link"}
             pageLinkClassName={"relative flex items-center justify-center color-paginationgrey w-9 h-12 transition-colors inactive-link"}
-            previousLinkClassName={"absolute left-0 py-2"}
-            nextLinkClassName={"absolute right-0 py-2"}
+            previousLinkClassName={"prev-arrow absolute left-0 py-2 pl-8"}
+            nextLinkClassName={"next-arrow absolute right-0 py-2 pr-8"}
             disabledClassName={"disabled"}
             activeLinkClassName={"active-link relative color-tracerdarkblue"}
           />
