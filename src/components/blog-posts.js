@@ -63,7 +63,7 @@ const BlogPosts = () => {
   return (
     <>
       <section className="h-full w-full z-20 relative bg-white select-dark">
-        <div className="container w-full mx-auto pt-6 md:pb-24 pb-6 lg:px-0 px-4">
+        <div className="container w-full mx-auto pt-6 md:pb-16 pb-6 lg:px-0 px-4">
           <h1 className="font-semibold text-3xl text-center mb-8">
             Latest Articles
           </h1>
@@ -86,7 +86,7 @@ const BlogPosts = () => {
             nextLabel={"Next"}
             pageCount={pageCount}
             onPageChange={handlePageClick}
-            containerClassName={"relative box-border flex justify-center pl-0 mb-12 w-full"}
+            containerClassName={"relative box-border flex justify-center pl-0 w-full"}
             // pageClassName={"relative flex items-center justify-center color-paginationgrey w-9 h-12 transition-colors inactive-link"}
             pageLinkClassName={"relative flex items-center justify-center color-paginationgrey w-9 h-12 transition-colors inactive-link"}
             previousLinkClassName={"prev-arrow absolute left-0 py-2 pl-8"}
