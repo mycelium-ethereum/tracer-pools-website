@@ -13,6 +13,8 @@
   --lightgrey: #D1D5DB;
   --darkgrey: #656565;
   --bluegrey: #AAB2E3;
+  --pagination-numbers: #6E6E75;
+  --pagination-rule: #D4D4D8;
   --midgrey: #9c9c9c;
 }
 .color-lightgrey {
@@ -20,6 +22,12 @@
 }
 .color-grey {
   color: var(--midgrey);
+}
+.color-paginationgrey {
+  color: var(--pagination-numbers);
+}
+.color-paginationrulegrey {
+  color: var(--pagination-numbers);
 }
 .color-darkgrey {
   color: var(--darkgrey);
@@ -765,6 +773,25 @@ footer {
 
 .post-text img {
   display: none;
+}
+.active-link {
+  color: var(--tracerdarkblue);
+}
+.inactive-link:after,
+.active-link:after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+.inactive-link:after {
+  background-color: var(--pagination-rule);
+}
+.active-link:after {
+  background-color: var(--tracerdarkblue);
 }
 
 /* --------------- MEDIA QUERIES --------------- */
