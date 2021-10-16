@@ -824,6 +824,14 @@ footer {
   transform: scaleX(-1) translateX(-3px);
 }
 
+/* Category buttons */
+button[data-category]:not(.category-dropdown).active {
+  background: var(--blogcategory-blue);
+  color: #fff;
+}
+button[data-category].category-dropdown.active {
+  color: #000;
+}
 /* BLOG SEARCH */
 
 /* Search icon */
@@ -1132,6 +1140,9 @@ footer {
   }
   .h-thumbnail {
     height: 160px;
+  }
+  .search-results {
+    height: calc(100vh - 150px);
   }
 }
 @media only screen and (max-width: 640px) {

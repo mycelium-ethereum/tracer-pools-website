@@ -33,13 +33,15 @@ const BlogSearch = ({ setShowSearch, showSearch, posts }) => {
     setShowSearch(false);
   };
   const enableScroll = () => {
-    document.body.style.overflow = "unset";
+    document.documentElement.style.overflow = "unset";
   };
   const focusSearch = () => {
     searchBox.current.focus();
   };
   useEffect(() => {
-    focusSearch();
+    if (showSearch) {
+      focusSearch();
+    }
     searchBox.current.addEventListener("input", searchPosts);
     return () => {
       if (searchBox && searchBox.current) {
@@ -61,13 +63,13 @@ const BlogSearch = ({ setShowSearch, showSearch, posts }) => {
         }
       >
         <button
-          className="absolute top-6 right-6"
+          className="absolute md:top-6 md:right-6 top-3 right-3"
           onClick={() => closeSearch()}
         >
           <img className="w-6 h-6" src={CloseIcon} />
         </button>
-        <div className="container max-w-blog mx-auto pt-32 md:pb-16 pb-6 lg:px-0 px-4">
-          <div className="relative flex flex-row-reverse items-center w-full h-14 mb-11">
+        <div className="container max-w-blog mx-auto md:pt-32 pt-14 md:pb-16 pb-6 lg:px-0 px-4">
+          <div className="relative flex flex-row-reverse items-center w-full md:h-14 md:mb-11 h-10 mb-8">
             <input
               className="search-box bg-transparent w-full h-full bg-searchgrey rounded-2xl pl-12"
               placeholder="Search"
@@ -91,7 +93,7 @@ const BlogSearch = ({ setShowSearch, showSearch, posts }) => {
             </svg>
           </div>
           <div
-            className="search-results overflow-y-scroll overflow-x-hidden"
+            className="search-results overflow-y-scroll overflow-x-hidden md:block sm:grid-cols-2 grid grid-cols-1 gap-8 pr-4 pb-8"
             ref={searchResults}
           >
             {postResults}
