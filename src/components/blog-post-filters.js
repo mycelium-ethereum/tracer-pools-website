@@ -31,46 +31,46 @@ const PostFilters = ({ setShowSearch, setCategory }) => {
     document.body.style.overflow = "hidden";
   };
 
+  const CategoryInfo = [
+    {
+      name: "announcements",
+      text: "Announcements",
+    },
+    // {
+    //   name: "ama",
+    //   text: "AMA",
+    // },
+    {
+      name: "education",
+      text: "Education",
+    },
+    {
+      name: "partnerships",
+      text: "Partnerships",
+    },
+    {
+      name: "all",
+      text: "All",
+    },
+  ];
+
   return (
     <div
       className="relative flex md:justify-center items-center w-full h-11 md:mt-14 md:mb-16 mt-6 mb-8 z-10"
       id="top"
     >
-      <button
-        className="justify-center items-center h-full w-auto transition-colors duration-500 py-2.5 px-6 mr-6 rounded-3xl bg-gray-200 text-black font-semibold md:flex hidden"
-        data-category="announcements"
-        onClick={selectCategory}
-      >
-        Announcements
-      </button>
-      {/* <button
-        className="justify-center items-center h-full w-auto transition-colors duration-500 py-2.5 px-6 mr-6 rounded-3xl bg-gray-200 text-black font-semibold md:flex hidden"
-        data-category="ama"
-        onClick={selectCategory}
-      >
-        AMA
-      </button> */}
-      <button
-        className="justify-center items-center h-full w-auto transition-colors duration-500 py-2.5 px-6 mr-6 rounded-3xl bg-gray-200 text-black font-semibold md:flex hidden"
-        data-category="education"
-        onClick={selectCategory}
-      >
-        Education
-      </button>
-      <button
-        className="justify-center items-center h-full w-auto transition-colors duration-500 py-2.5 px-6 mr-6 rounded-3xl bg-gray-200 text-black font-semibold md:flex hidden"
-        data-category="partnerships"
-        onClick={selectCategory}
-      >
-        Partnerships
-      </button>
-      <button
-        className="justify-center items-center h-full w-auto transition-colors duration-500 py-2.5 px-6 mr-6 rounded-3xl bg-gray-200 text-black font-semibold md:flex hidden active"
-        data-category="all"
-        onClick={selectCategory}
-      >
-        All
-      </button>
+      {CategoryInfo.map((category, i) => (
+        <button
+          className={
+            "justify-center items-center h-full w-auto transition-colors duration-500 py-2.5 px-6 mr-6 rounded-3xl bg-gray-200 text-black font-semibold md:flex hidden " +
+            (i === CategoryInfo.length - 1 ? "active" : "")
+          }
+          data-category={category.name}
+          onClick={selectCategory}
+        >
+          {category.text}
+        </button>
+      ))}
       <button
         className="relative md:hidden inline-flex mr-4 justify-start items-center text-base font-semibold w-32 h-11 rounded-xl bg-gray-50 pl-4"
         onClick={() => {
@@ -94,51 +94,19 @@ const PostFilters = ({ setShowSearch, setCategory }) => {
       >
         <span className="text-3xl font-semibold md:block hidden">Protocol</span>
         <ul className="md:mt-2 md:pl-4">
-          <li className="mb-2">
-            <button
-              data-category="announcements"
-              onClick={selectCategory}
-              className="category-dropdown transition-colors duration-500 text-gray-400"
-            >
-              Announcements
-            </button>
-          </li>
-          <li className="mb-2">
-            <button
-              data-category="ama"
-              onClick={selectCategory}
-              className="category-dropdown transition-colors duration-500 text-gray-400"
-            >
-              AMA
-            </button>
-          </li>
-          <li className="mb-2">
-            <button
-              data-category="education"
-              onClick={selectCategory}
-              className="category-dropdown transition-colors duration-500 text-gray-400"
-            >
-              Education
-            </button>
-          </li>
-          <li className="mb-2">
-            <button
-              data-category="partnerships"
-              onClick={selectCategory}
-              className="category-dropdown transition-colors duration-500 text-gray-400"
-            >
-              partnerships
-            </button>
-          </li>
-          <li className="mb-2">
-            <button
-              data-category="all"
-              onClick={selectCategory}
-              className="category-dropdown transition-colors duration-500 text-gray-400 active"
-            >
-              All
-            </button>
-          </li>
+          {CategoryInfo.map((category, i) => (
+            <li className="mb-2">
+              <button
+                data-category={category.name}
+                onClick={selectCategory}
+                className={`category-dropdown transition-colors duration-500 text-gray-400 ${
+                  i === CategoryInfo.length - 1 ? "active" : ""
+                }`}
+              >
+                {category.text}
+              </button>
+            </li>
+          ))}
         </ul>
       </div>
       <button onClick={() => openSearch()}>
