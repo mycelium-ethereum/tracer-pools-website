@@ -31,7 +31,7 @@ const query = graphql`
 `;
 const BlogPosts = () => {
   const [currentPage, setCurrentPage] = useState(0);
-  const [currentPosts, setCurrentPosts] = useState(0);
+  const [currentPosts, setCurrentPosts] = useState([]);
   const [pageCount, setPageCount] = useState(0);
   const [posts, setPosts] = useState([]);
   const [category, setCategory] = useState("all");
@@ -63,10 +63,13 @@ const BlogPosts = () => {
     }
     postContainer.current.classList.add("opacity-0");
     setTimeout(() => {
-      setCurrentPosts(postData ? curPosts : posts);
-      setPageCount(
-        Math.ceil((postData ? postData.length : posts.length) / perPage)
-      );
+      if (postData.length) {
+        setCurrentPosts(curPosts);
+        setPageCount(Math.ceil(postData.length / perPage));
+      } else {
+        setCurrentPosts(curPosts);
+        setPageCount(Math.ceil(posts.length / perPage));
+      }
     }, 600);
     setTimeout(() => {
       postContainer.current.classList.remove("opacity-0");
@@ -139,7 +142,7 @@ const BlogPosts = () => {
           />
           <div
             ref={postContainer}
-            className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 transition-opacity duration-500"
+            className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 transition-all duration-500"
           >
             <StaticQuery
               query={query}
@@ -178,7 +181,6 @@ const BlogPosts = () => {
             containerClassName={
               "relative box-border flex justify-center pl-0 w-full"
             }
-            // pageClassName={"relative flex items-center justify-center color-paginationgrey w-9 h-12 transition-colors inactive-link"}
             pageLinkClassName={
               "relative flex items-center justify-center color-paginationgrey w-9 h-12 transition-colors inactive-link"
             }
@@ -186,9 +188,6 @@ const BlogPosts = () => {
             nextLinkClassName={"next-arrow absolute right-0 py-2 pr-8"}
             disabledClassName={"disabled"}
             activeLinkClassName={"active-link relative color-tracerdarkblue"}
-            // hrefBuilder={() => {
-            //   return "#top";
-            // }}
           />
         </div>
       </section>
