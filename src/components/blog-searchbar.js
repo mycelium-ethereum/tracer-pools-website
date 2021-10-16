@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Trie from "./trie";
 
 const SearchBar = ({ postTitles, searchResults, setSearchTerm }) => {
   const [prefix, setPrefix] = useState("");
   const [suggestion, setSuggestion] = useState("");
+  const searchBar = useRef();
   const myTrie = new Trie();
-  const animateSearch = (e) => {
+  const animateSearch = () => {
+    const value = searchBar.current.value.toLowerCase();
     searchResults.current.classList.add("opacity-0");
-    onChange(e);
+    onChange(value);
     setTimeout(() => {
-      setSearchTerm(e.target.value.toLowerCase());
+      setSearchTerm(value);
       searchResults.current.classList.remove("opacity-0");
     }, 500);
   };
@@ -20,8 +22,7 @@ const SearchBar = ({ postTitles, searchResults, setSearchTerm }) => {
       myTrie.insert(word);
     }
   })();
-  const onChange = (e) => {
-    let value = e.target.value;
+  const onChange = (value) => {
     setPrefix(value);
     let words = value.split(" ");
     let trie_prefix = words[words.length - 1].toLowerCase();
@@ -55,15 +56,16 @@ const SearchBar = ({ postTitles, searchResults, setSearchTerm }) => {
         className="search-box bg-transparent w-full h-full bg-searchgrey rounded-2xl md:pl-14 pl-11 z-0 font-normal text-gray-800"
         placeholder="Search"
         name="search-bar"
+        ref={searchBar}
         type="text"
-        onChange={(e) => animateSearch(e)}
-        onKeyDown={(e) => handleKeydown(e)}
+        onChange={animateSearch}
+        onKeyDown={handleKeydown}
         value={prefix}
       />
       <input
         type="text"
         name="search-bar"
-        className="absolute top-0 md:left-8 left-2 bg-transparent w-full h-full rounded-2xl md:pl-14 pl-11 font-normal pointer-events-none z-10 opacity-40"
+        className="absolute top-0 md:left-8 left-0 bg-transparent w-full h-full rounded-2xl md:pl-14 pl-11 font-normal pointer-events-none z-10 opacity-40"
         value={suggestion}
       />
       <svg
