@@ -15,6 +15,7 @@ const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
     setPostResults(postElements);
   };
   const searchPosts = (e) => {
+    console.log(e);
     const searchTerm = e.target.value.toLowerCase();
     if (searchTerm) {
       const postElements = posts.map((data, i) => {
