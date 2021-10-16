@@ -56,8 +56,8 @@ const SearchBar = ({ postTitles, searchResults, setSearchTerm }) => {
         placeholder="Search"
         name="search-bar"
         type="text"
-        onChange={(e) => animateSearch(e)}
-        onKeyDown={(e) => handleKeydown(e)}
+        onChange={animateSearch}
+        onKeyDown={handleKeydown}
         value={prefix}
       />
       <input

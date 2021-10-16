@@ -863,9 +863,6 @@ button[data-category].category-dropdown.active {
 .search-box::placeholder {
   color: var(--cool-gray);
 }
-#search-hidden {
-  left: -0.5px;
-}
 
 /* Results */
 .search-results {

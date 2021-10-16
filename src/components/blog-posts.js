@@ -4,8 +4,7 @@ import { StaticQuery, graphql } from "gatsby";
 import ReactPaginate from "react-paginate";
 import PostLink from "./blog-post-link";
 import BlogSearch from "./blog-search";
-import SearchIcon from "../../static/img/blog-posts/search-large.svg";
-import Dropdown from "../../static/img/general/chevron-down.svg";
+import PostFilters from "./blog-post-filters";
 
 const query = graphql`
   query TracerBlogs {
@@ -15,6 +14,7 @@ const query = graphql`
           id
           title
           description
+          category
           image {
             formats {
               medium {
@@ -34,22 +34,50 @@ const BlogPosts = () => {
   const [currentPosts, setCurrentPosts] = useState(0);
   const [pageCount, setPageCount] = useState(0);
   const [posts, setPosts] = useState([]);
+  const [category, setCategory] = useState("all");
   const [showSearch, setShowSearch] = useState(false);
   const [perPage, setPerPage] = useState(9);
-  const [categoryDropdownOpen, setCategoryDropdownOpen] = useState(false);
-
   const postContainer = useRef();
   const offset = currentPage * perPage;
-
-  const loadData = (data) => {
-    const curPosts = data
-      .slice(offset, offset + perPage)
-      .map((node, i) => <PostLink data={node} key={i} />);
-    setCurrentPosts(curPosts);
-    setPageCount(Math.ceil(data.length / perPage));
+  const postTitles = {
+    words: [],
   };
 
-  const handlePageClick = ({ selected: selectedPage, e }) => {
+  const loadData = () => {
+    let curPosts = [];
+    const postData = [];
+    if (category != "all") {
+      postContainer.current.classList.add("opacity-0");
+      posts.map((data, i) => {
+        const postCategory = data.node.category;
+        if (!!postCategory && postCategory === category) {
+          postData.push(data);
+        }
+      });
+      postData
+        .slice(offset, offset + perPage)
+        .map((data, i) => curPosts.push(<PostLink data={data} key={i} />));
+    } else {
+      posts
+        .slice(offset, offset + perPage)
+        .map((data, i) => curPosts.push(<PostLink data={data} key={i} />));
+    }
+
+    if (postData) {
+      setTimeout(function () {
+        setCurrentPosts(curPosts);
+        setPageCount(Math.ceil(postData.length / perPage));
+      }, 600);
+      setTimeout(function () {
+        postContainer.current.classList.remove("opacity-0");
+      }, 800);
+    } else {
+      setCurrentPosts(curPosts);
+      setPageCount(Math.ceil(posts.length / perPage));
+    }
+  };
+
+  const handlePageClick = ({ selected: selectedPage }) => {
     // Scroll to top of posts
     document.getElementById("top").scrollIntoView({
       behavior: "smooth",
@@ -62,7 +90,7 @@ const BlogPosts = () => {
     }, 1100);
     setTimeout(function () {
       postContainer.current.classList.remove("opacity-0");
-    }, 1300);
+    }, 1400);
   };
 
   const sortByDate = (a, b) => {
@@ -70,16 +98,6 @@ const BlogPosts = () => {
       new Date(b.node.publish_date).getTime() -
       new Date(a.node.publish_date).getTime()
     );
-  };
-
-  const disableScroll = () => {
-    document.documentElement.style.overflow = "hidden";
-    document.body.style.overflow = "hidden";
-  };
-
-  const openSearch = () => {
-    setShowSearch(true);
-    disableScroll();
   };
 
   const adjustPostAmount = () => {
@@ -94,30 +112,11 @@ const BlogPosts = () => {
     setPerPage(amount);
   };
 
-  const selectCategory = (e) => {
-    const category = e.target.dataset.category;
-    const buttons = document.querySelectorAll("button[data-category]");
-    buttons.forEach((e) => {
-      if (category != e.dataset.category) {
-        e.classList.remove("active");
-      } else {
-        e.classList.add("active");
-      }
-    });
-    setTimeout(function () {
-      setCategoryDropdownOpen(false);
-    }, 500);
-  };
-
   const listenEscapeKey = (e) => {
     const key = e.which || e.keyCode;
     if (key == 27) {
       setShowSearch(false);
     }
-  };
-
-  const postTitles = {
-    words: [],
   };
 
   useEffect(() => {
@@ -131,8 +130,8 @@ const BlogPosts = () => {
   }, []);
 
   useEffect(() => {
-    loadData(posts);
-  }, [posts, currentPage, perPage]);
+    loadData();
+  }, [posts, currentPage, perPage, category]);
 
   return (
     <>
@@ -147,122 +146,10 @@ const BlogPosts = () => {
           <h1 className="font-semibold text-3xl text-center mb-8 md:block hidden">
             Latest Articles
           </h1>
-          <div
-            className="relative flex md:justify-center items-center w-full h-11 md:mt-14 md:mb-16 mt-6 mb-8 z-10"
-            id="top"
-          >
-            <button
-              className="justify-center items-center h-full w-auto transition-colors duration-500 py-2.5 px-6 mr-6 rounded-3xl bg-gray-200 text-black font-semibold md:flex hidden"
-              data-category="announcements"
-              onClick={selectCategory}
-            >
-              Announcements
-            </button>
-            <button
-              className="justify-center items-center h-full w-auto transition-colors duration-500 py-2.5 px-6 mr-6 rounded-3xl bg-gray-200 text-black font-semibold md:flex hidden"
-              data-category="ama"
-              onClick={selectCategory}
-            >
-              AMA
-            </button>
-            <button
-              className="justify-center items-center h-full w-auto transition-colors duration-500 py-2.5 px-6 mr-6 rounded-3xl bg-gray-200 text-black font-semibold md:flex hidden"
-              data-category="education"
-              onClick={selectCategory}
-            >
-              Education
-            </button>
-            <button
-              className="justify-center items-center h-full w-auto transition-colors duration-500 py-2.5 px-6 mr-6 rounded-3xl bg-gray-200 text-black font-semibold md:flex hidden"
-              data-category="partnership"
-              onClick={selectCategory}
-            >
-              Partnership
-            </button>
-            <button
-              className="justify-center items-center h-full w-auto transition-colors duration-500 py-2.5 px-6 mr-6 rounded-3xl bg-gray-200 text-black font-semibold md:flex hidden active"
-              data-category="all"
-              onClick={selectCategory}
-            >
-              All
-            </button>
-            <button
-              className="relative md:hidden inline-flex mr-4 justify-start items-center text-base font-semibold w-32 h-11 rounded-xl bg-gray-50 pl-4"
-              onClick={() => {
-                setCategoryDropdownOpen((wasOpen) => !wasOpen);
-              }}
-            >
-              Categories
-              <img
-                className="absolute top-1/2 transform -translate-y-1/2 right-2 w-4 h-auto"
-                src={Dropdown}
-                alt="Dropdown toggle"
-              />
-            </button>
-            <div
-              className={
-                "absolute left-0 top-12 md:rounded-none md:p-0 md:shadow-none shadow p-4 rounded-xl md:bg-transparent bg-white transition-opacity duration-500 " +
-                (categoryDropdownOpen
-                  ? "opacity-100 pointer-events-auto"
-                  : "opacity-0 pointer-events-none")
-              }
-            >
-              <span className="text-3xl font-semibold md:block hidden">
-                Protocol
-              </span>
-              <ul className="md:mt-2 md:pl-4">
-                <li className="mb-2">
-                  <button
-                    data-category="announcements"
-                    onClick={selectCategory}
-                    className="category-dropdown transition-colors duration-500 text-gray-400"
-                  >
-                    Announcements
-                  </button>
-                </li>
-                <li className="mb-2">
-                  <button
-                    data-category="ama"
-                    onClick={selectCategory}
-                    className="category-dropdown transition-colors duration-500 text-gray-400"
-                  >
-                    AMA
-                  </button>
-                </li>
-                <li className="mb-2">
-                  <button
-                    data-category="education"
-                    onClick={selectCategory}
-                    className="category-dropdown transition-colors duration-500 text-gray-400"
-                  >
-                    Education
-                  </button>
-                </li>
-                <li className="mb-2">
-                  <button
-                    data-category="partnership"
-                    onClick={selectCategory}
-                    className="category-dropdown transition-colors duration-500 text-gray-400"
-                  >
-                    Partnership
-                  </button>
-                </li>
-                <li className="mb-2">
-                  <button
-                    data-category="all"
-                    onClick={selectCategory}
-                    className="category-dropdown transition-colors duration-500 text-gray-400 active"
-                  >
-                    All
-                  </button>
-                </li>
-              </ul>
-            </div>
-            <button onClick={() => openSearch()}>
-              <img className="w-5 h-5" src={SearchIcon} />
-            </button>
-          </div>
-
+          <PostFilters
+            setShowSearch={setShowSearch}
+            setCategory={setCategory}
+          />
           <div
             ref={postContainer}
             className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 transition-opacity duration-500"
