@@ -853,12 +853,13 @@ button[data-category].category-dropdown.active {
 
 /* Input */
 .search-box {
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
   border: 1px solid transparent;
 }
 .search-box:focus,
 .search-box:hover {
   border: 1px solid #1C64F2;
+  background: #fff;
 }
 .search-box::placeholder {
   color: var(--cool-gray);

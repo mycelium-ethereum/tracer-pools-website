@@ -177,7 +177,7 @@ const BlogPosts = () => {
             onPageChange={handlePageClick}
             pageRangeDisplayed={1}
             breakLabel={"..."}
-            breakClassName={"break"}
+            breakClassName={"flex items-center"}
             containerClassName={
               "relative box-border flex justify-center pl-0 w-full"
             }

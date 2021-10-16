@@ -70,7 +70,7 @@ const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
     <>
       <section
         className={
-          "fixed h-screen w-full z-50 bg-white select-dark top-0 left-0 transition-all duration-500 " +
+          "fixed h-screen w-full z-50 bg-white select-dark top-0 left-0 transition-opacity duration-500 " +
           (showSearch
             ? "pointer-events-all opacity-100"
             : "pointer-events-none opacity-0")
