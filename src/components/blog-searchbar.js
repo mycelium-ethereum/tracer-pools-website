@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Trie from "./trie";
 
-const SearchBar = ({ searchResults, searchPosts, postTitles }) => {
+const SearchBar = ({ postTitles, searchResults, setSearchTerm }) => {
   const [prefix, setPrefix] = useState("");
   const [suggestion, setSuggestion] = useState("");
   const myTrie = new Trie();
@@ -9,7 +9,7 @@ const SearchBar = ({ searchResults, searchPosts, postTitles }) => {
     searchResults.current.classList.add("opacity-0");
     onChange(event);
     setTimeout(() => {
-      searchPosts(event);
+      setSearchTerm(event.target.value);
       searchResults.current.classList.remove("opacity-0");
     }, 500);
   };
@@ -56,9 +56,9 @@ const SearchBar = ({ searchResults, searchPosts, postTitles }) => {
         placeholder="Search"
         name="search-bar"
         type="text"
+        onChange={(e) => animateSearch(e)}
+        onKeyDown={(e) => handleKeydown(e)}
         value={prefix}
-        onChange={animateSearch}
-        onKeyDown={handleKeydown}
       />
       <input
         type="text"

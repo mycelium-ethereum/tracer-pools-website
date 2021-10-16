@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import SearchResult from "./blog-search-result";
 import SearchBar from "./blog-searchbar";
-import Trie from "./trie";
 import CloseIcon from "../../static/img/blog-posts/close.svg";
 
 const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
   const [postResults, setPostResults] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
   const searchResults = useRef();
   const MAX_RESULTS = 4;
   const getRecentPosts = () => {
@@ -14,9 +14,7 @@ const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
       .map((node, i) => <SearchResult data={node} key={i} />);
     setPostResults(postElements);
   };
-  const searchPosts = (e) => {
-    console.log(e);
-    const searchTerm = e.target.value.toLowerCase();
+  const searchPosts = () => {
     if (searchTerm) {
       const postElements = posts.map((data, i) => {
         const postTitle = data.node.title.toLowerCase();
@@ -47,6 +45,9 @@ const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
     }
   }, []);
   useEffect(() => {
+    searchPosts();
+  }, [searchTerm]);
+  useEffect(() => {
     getRecentPosts();
     return () => {
       enableScroll();
@@ -73,7 +74,7 @@ const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
             <SearchBar
               postTitles={postTitles}
               searchResults={searchResults}
-              searchPosts={searchPosts}
+              setSearchTerm={setSearchTerm}
             />
             <svg
               width="19"
