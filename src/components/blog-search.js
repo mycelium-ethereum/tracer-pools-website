@@ -107,7 +107,7 @@ const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
           <img className="w-6 h-6" src={CloseIcon} />
         </button>
         <div className="container max-w-blog mx-auto md:pt-32 pt-14 md:pb-16 pb-6 lg:px-0 px-4">
-          <div className="relative flex flex-row-reverse items-center w-full md:h-14 md:mb-11 h-10 mb-8">
+          <div className="relative flex flex-row-reverse items-center w-full md:h-14 md:mb-11 h-10 mb-8 md:px-0 px-2">
             <SearchBar
               postTitles={postTitles}
               searchResults={searchResults}
@@ -132,7 +132,7 @@ const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
           </div>
           <div className="overflow-hidden md:rounded-none rounded-tl-2xl rounded-tr-2xl">
             <div
-              className="search-results overflow-y-scroll overflow-x-hidden transition-opacity duration-500 md:block sm:grid-cols-2 grid grid-cols-1 gap-8 pb-8 px-1"
+              className="search-results overflow-y-scroll overflow-x-hidden transition-opacity duration-500 md:block sm:grid-cols-2 grid grid-cols-1 gap-8 pb-8 px-2"
               ref={searchResults}
             >
               {postResults}

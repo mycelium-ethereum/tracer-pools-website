@@ -44,6 +44,7 @@ const SearchBar = ({ searchResults, searchPosts, postTitles }) => {
   };
   const handleKeydown = (e) => {
     if (e.keyCode === 39 || e.keyCode === 9) {
+      e.preventDefault();
       // if right arrow or tab is pressed
       setPrefix(suggestion);
     }
@@ -51,7 +52,7 @@ const SearchBar = ({ searchResults, searchPosts, postTitles }) => {
   return (
     <>
       <input
-        className="search-box bg-transparent w-full h-full bg-searchgrey rounded-2xl pl-12 z-0 font-normal text-gray-400"
+        className="search-box bg-transparent w-full h-full bg-searchgrey rounded-2xl pl-12 z-0 font-normal text-gray-800"
         placeholder="Search"
         name="search-bar"
         type="text"
@@ -62,7 +63,7 @@ const SearchBar = ({ searchResults, searchPosts, postTitles }) => {
       <input
         type="text"
         name="search-bar"
-        className="absolute top-0 bg-transparent w-full h-full rounded-2xl pl-12 font-normal pointer-events-none z-10"
+        className="absolute top-0 md:left-0 left-2 bg-transparent w-full h-full rounded-2xl pl-12 font-normal pointer-events-none z-10 opacity-50"
         value={suggestion}
       />
     </>
