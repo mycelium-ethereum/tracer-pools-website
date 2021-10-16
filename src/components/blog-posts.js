@@ -116,6 +116,10 @@ const BlogPosts = () => {
     }
   };
 
+  const postTitles = {
+    words: [],
+  };
+
   useEffect(() => {
     adjustPostAmount();
     window.addEventListener("resize", adjustPostAmount);
@@ -136,6 +140,7 @@ const BlogPosts = () => {
         setShowSearch={setShowSearch}
         showSearch={showSearch}
         posts={posts}
+        postTitles={postTitles}
       />
       <section className="h-full w-full z-20 relative bg-white select-dark">
         <div className="container w-full mx-auto pt-6 md:pb-16 pb-6 lg:px-0 sm:px-4 pl-4 pr-11">
@@ -264,13 +269,26 @@ const BlogPosts = () => {
           >
             <StaticQuery
               query={query}
-              render={(data) =>
+              render={(data) => {
                 setPosts(
                   data.allStrapiTracerBlogs.edges.sort((a, b) =>
                     sortByDate(a, b)
                   )
-                )
-              }
+                );
+                data.allStrapiTracerBlogs.edges.map((data) => {
+                  const splitTitle = data.node.title
+                    .replace("-", " ")
+                    .split(" ");
+                  // Add words as they were, with uppercase letters
+                  for (let i = 0; i < splitTitle.length; i++) {
+                    postTitles.words.push(splitTitle[i]);
+                  }
+                  // Convert the words to lowercase as well
+                  for (let i = 0; i < splitTitle.length; i++) {
+                    postTitles.words.push(splitTitle[i].toLowerCase());
+                  }
+                });
+              }}
             />
             {currentPosts}
           </div>

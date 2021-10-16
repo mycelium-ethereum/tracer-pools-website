@@ -1,11 +1,15 @@
 import React, { useEffect, useState, useRef } from "react";
 import SearchResult from "./blog-search-result";
+import SearchBar from "./blog-searchbar";
+import Trie from "./trie";
 import CloseIcon from "../../static/img/blog-posts/close.svg";
 
-const BlogSearch = ({ setShowSearch, showSearch, posts }) => {
+const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
   const [postResults, setPostResults] = useState([]);
+  const [prefix, setPrefix] = useState("");
+  const [suggestion, setSuggestion] = useState("");
+  const myTrie = new Trie();
   const searchResults = useRef();
-  const searchBox = useRef();
   const MAX_RESULTS = 4;
   const getRecentPosts = () => {
     const postElements = posts
@@ -29,13 +33,6 @@ const BlogSearch = ({ setShowSearch, showSearch, posts }) => {
     }
   };
 
-  const animateSearch = (e) => {
-    searchResults.current.classList.add("opacity-0");
-    setTimeout(function () {
-      searchPosts(e);
-      searchResults.current.classList.remove("opacity-0");
-    }, 500);
-  };
   const closeSearch = () => {
     enableScroll();
     setShowSearch(false);
@@ -45,20 +42,49 @@ const BlogSearch = ({ setShowSearch, showSearch, posts }) => {
     document.body.style.overflow = "unset";
   };
   const focusSearch = () => {
-    searchBox.current.focus();
+    document.querySelector(".search-box").focus();
   };
-  useEffect(() => {
-    searchBox.current.addEventListener("input", animateSearch);
-    return () => {
-      if (searchBox && searchBox.current) {
-        searchBox.current.removeEventListener("input", animateSearch);
+  (async () => {
+    let words = postTitles.words;
+    for (let i = 0; i < words.length; i++) {
+      const word = words[i];
+      myTrie.insert(word);
+    }
+  })();
+  const onChange = (e) => {
+    let value = e.target.value;
+    setPrefix(value);
+    let words = value.split(" ");
+    let trie_prefix = words[words.length - 1].toLowerCase();
+    let found_words = myTrie.find(trie_prefix).sort((a, b) => {
+      return a.length - b.length;
+    });
+    let first_word = found_words[0];
+    if (
+      found_words.length !== 0 &&
+      value !== "" &&
+      value[value.length - 1] !== " "
+    ) {
+      if (first_word != null) {
+        let remainder = first_word.slice(trie_prefix.length);
+        setSuggestion(value + remainder);
       }
-    };
-  });
+    } else {
+      setSuggestion(value);
+    }
+  };
+  const handleKeydown = (e) => {
+    if (e.keyCode === 39) {
+      // if right arrow is pressed
+      setPrefix(suggestion);
+    }
+  };
   useEffect(() => {
     if (showSearch) {
       focusSearch();
     }
+  }, []);
+  useEffect(() => {
     getRecentPosts();
     return () => {
       enableScroll();
@@ -82,10 +108,10 @@ const BlogSearch = ({ setShowSearch, showSearch, posts }) => {
         </button>
         <div className="container max-w-blog mx-auto md:pt-32 pt-14 md:pb-16 pb-6 lg:px-0 px-4">
           <div className="relative flex flex-row-reverse items-center w-full md:h-14 md:mb-11 h-10 mb-8">
-            <input
-              className="search-box bg-transparent w-full h-full bg-searchgrey rounded-2xl pl-12"
-              placeholder="Search"
-              ref={searchBox}
+            <SearchBar
+              postTitles={postTitles}
+              searchResults={searchResults}
+              searchPosts={searchPosts}
             />
             <svg
               width="19"
