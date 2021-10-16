@@ -47,6 +47,7 @@ const BlogSearch = ({ setShowSearch, showSearch, posts }) => {
       if (searchBox && searchBox.current) {
         searchBox.current.removeEventListener("input", searchPosts);
       }
+      document.documentElement.style.overflow = "unset";
     };
   });
   useEffect(() => {
