@@ -6,9 +6,6 @@ import CloseIcon from "../../static/img/blog-posts/close.svg";
 
 const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
   const [postResults, setPostResults] = useState([]);
-  const [prefix, setPrefix] = useState("");
-  const [suggestion, setSuggestion] = useState("");
-  const myTrie = new Trie();
   const searchResults = useRef();
   const MAX_RESULTS = 4;
   const getRecentPosts = () => {
@@ -32,7 +29,6 @@ const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
       getRecentPosts();
     }
   };
-
   const closeSearch = () => {
     enableScroll();
     setShowSearch(false);
@@ -43,41 +39,6 @@ const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
   };
   const focusSearch = () => {
     document.querySelector(".search-box").focus();
-  };
-  (async () => {
-    let words = postTitles.words;
-    for (let i = 0; i < words.length; i++) {
-      const word = words[i];
-      myTrie.insert(word);
-    }
-  })();
-  const onChange = (e) => {
-    let value = e.target.value;
-    setPrefix(value);
-    let words = value.split(" ");
-    let trie_prefix = words[words.length - 1].toLowerCase();
-    let found_words = myTrie.find(trie_prefix).sort((a, b) => {
-      return a.length - b.length;
-    });
-    let first_word = found_words[0];
-    if (
-      found_words.length !== 0 &&
-      value !== "" &&
-      value[value.length - 1] !== " "
-    ) {
-      if (first_word != null) {
-        let remainder = first_word.slice(trie_prefix.length);
-        setSuggestion(value + remainder);
-      }
-    } else {
-      setSuggestion(value);
-    }
-  };
-  const handleKeydown = (e) => {
-    if (e.keyCode === 39) {
-      // if right arrow is pressed
-      setPrefix(suggestion);
-    }
   };
   useEffect(() => {
     if (showSearch) {

@@ -5,11 +5,11 @@ const SearchBar = ({ searchResults, searchPosts, postTitles }) => {
   const [prefix, setPrefix] = useState("");
   const [suggestion, setSuggestion] = useState("");
   const myTrie = new Trie();
-  const animateSearch = (e) => {
+  const animateSearch = (event) => {
     searchResults.current.classList.add("opacity-0");
-    onChange(e);
-    setTimeout(function () {
-      searchPosts(e);
+    onChange(event);
+    setTimeout(() => {
+      searchPosts(event);
       searchResults.current.classList.remove("opacity-0");
     }, 500);
   };
@@ -63,7 +63,7 @@ const SearchBar = ({ searchResults, searchPosts, postTitles }) => {
       <input
         type="text"
         name="search-bar"
-        className="absolute top-0 md:left-0 left-2 bg-transparent w-full h-full rounded-2xl pl-12 font-normal pointer-events-none z-10 opacity-50"
+        className="absolute top-0 md:left-0 left-2 bg-transparent w-full h-full rounded-2xl pl-12 font-normal pointer-events-none z-10 opacity-40"
         value={suggestion}
       />
     </>
