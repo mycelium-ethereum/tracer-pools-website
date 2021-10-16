@@ -13,7 +13,7 @@ const SearchBar = ({ postTitles, searchResults, setSearchTerm }) => {
     setTimeout(() => {
       setSearchTerm(value);
       searchResults.current.classList.remove("opacity-0");
-    }, 500);
+    }, 700);
   };
   (async () => {
     let words = postTitles.words;
@@ -43,11 +43,18 @@ const SearchBar = ({ postTitles, searchResults, setSearchTerm }) => {
       setSuggestion(value);
     }
   };
+  const unFocusSearch = () => {
+    searchBar.current.blur();
+  };
   const handleKeydown = (e) => {
+    // If right arrow or tab is pressed
     if (e.keyCode === 39 || e.keyCode === 9) {
       e.preventDefault();
-      // if right arrow or tab is pressed
       setPrefix(suggestion);
+    }
+    // If enter key pressed
+    if (e.keyCode === 13) {
+      unFocusSearch();
     }
   };
   return (
