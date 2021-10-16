@@ -94,7 +94,7 @@ const BlogSearch = ({ setShowSearch, showSearch, posts }) => {
             </svg>
           </div>
           <div
-            className="search-results overflow-y-scroll overflow-x-hidden md:block sm:grid-cols-2 grid grid-cols-1 gap-8 pr-4 pb-8"
+            className="search-results overflow-y-scroll overflow-x-hidden md:block sm:grid-cols-2 grid grid-cols-1 gap-8 pb-8"
             ref={searchResults}
           >
             {postResults}

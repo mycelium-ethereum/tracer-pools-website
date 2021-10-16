@@ -36,7 +36,7 @@ const SearchResult = ({ data, className }) => {
           </p>
           <p
             ref={postDescription}
-            className="post-text color-paginationrulegrey mb-6"
+            className="post-text md:text-gray-400 text-black mb-6"
           ></p>
           <Moment
             className="font-semibold color-blue block text-sm"

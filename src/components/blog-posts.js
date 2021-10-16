@@ -62,7 +62,7 @@ const BlogPosts = () => {
     }, 1100);
     setTimeout(function () {
       postContainer.current.classList.remove("opacity-0");
-    }, 1200);
+    }, 1300);
   };
 
   const sortByDate = (a, b) => {
@@ -108,11 +108,20 @@ const BlogPosts = () => {
     }, 500);
   };
 
+  const listenEscapeKey = (e) => {
+    const key = e.which || e.keyCode;
+    if (key == 27) {
+      setShowSearch(false);
+    }
+  };
+
   useEffect(() => {
     adjustPostAmount();
     window.addEventListener("resize", adjustPostAmount);
+    document.addEventListener("keyup", listenEscapeKey);
     return () => {
       window.removeEventListener("resize", adjustPostAmount);
+      document.removeEventListener("keyup", listenEscapeKey);
     };
   }, []);
 
@@ -129,10 +138,13 @@ const BlogPosts = () => {
       />
       <section className="h-full w-full z-20 relative bg-white select-dark">
         <div className="container w-full mx-auto pt-6 md:pb-16 pb-6 lg:px-0 px-4">
-          <h1 className="font-semibold text-3xl text-center mb-8" id="top">
+          <h1 className="font-semibold text-3xl text-center mb-8 md:block hidden">
             Latest Articles
           </h1>
-          <div className="relative flex md:justify-center items-center w-full h-11 mt-14 mb-16 z-10">
+          <div
+            className="relative flex md:justify-center items-center w-full h-11 md:mt-14 md:mb-16 mt-6 mb-8 z-10"
+            id="top"
+          >
             <button
               className="justify-center items-center h-full w-auto transition-colors duration-500 py-2.5 px-6 mr-6 rounded-3xl bg-gray-200 text-black font-semibold md:flex hidden"
               data-category="announcements"
@@ -261,13 +273,13 @@ const BlogPosts = () => {
             />
             {currentPosts}
           </div>
-          <hr className="mt-16 color-paginationrulegrey" />
+          <hr className="mt-16 border-paginationrulegrey" />
           <ReactPaginate
             previousLabel={"Previous"}
             nextLabel={"Next"}
             pageCount={pageCount}
             onPageChange={handlePageClick}
-            pageRangeDisplayed={2}
+            pageRangeDisplayed={1}
             breakLabel={"..."}
             breakClassName={"break"}
             containerClassName={
