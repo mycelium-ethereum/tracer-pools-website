@@ -27,8 +27,10 @@ const PostFilters = ({ setShowSearch, setCategory }) => {
   };
 
   const disableScroll = () => {
-    document.documentElement.style.overflow = "hidden";
-    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflowY = "hidden";
+    document.documentElement.style.overflowX = "hidden";
+    document.body.style.overflowY = "hidden";
+    document.body.style.overflowX = "hidden";
   };
 
   const CategoryInfo = [

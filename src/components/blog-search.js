@@ -33,8 +33,10 @@ const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
     setShowSearch(false);
   };
   const enableScroll = () => {
-    document.documentElement.style.overflow = "unset";
-    document.body.style.overflow = "unset";
+    document.documentElement.style.overflowY = "unset";
+    document.documentElement.style.overflowX = "hidden";
+    document.body.style.overflowY = "unset";
+    document.body.style.overflowX = "hidden";
   };
   const focusSearch = () => {
     document.querySelector(".search-box").focus();
