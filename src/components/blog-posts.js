@@ -108,20 +108,11 @@ const BlogPosts = () => {
     setPerPage(amount);
   };
 
-  const listenEscapeKey = (e) => {
-    const key = e.which || e.keyCode;
-    if (key == 27) {
-      setShowSearch(false);
-    }
-  };
-
   useEffect(() => {
     adjustPostAmount();
     window.addEventListener("resize", adjustPostAmount);
-    document.addEventListener("keyup", listenEscapeKey);
     return () => {
       window.removeEventListener("resize", adjustPostAmount);
-      document.removeEventListener("keyup", listenEscapeKey);
     };
   }, []);
 

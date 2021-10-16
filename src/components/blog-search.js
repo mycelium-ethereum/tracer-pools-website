@@ -39,10 +39,21 @@ const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
   const focusSearch = () => {
     document.querySelector(".search-box").focus();
   };
+  const listenForEscape = (e) => {
+    const key = e.which || e.keyCode;
+    if (key == 27) {
+      setShowSearch(false);
+      enableScroll();
+    }
+  };
   useEffect(() => {
     if (showSearch) {
       focusSearch();
     }
+    document.addEventListener("keyup", listenForEscape);
+    return () => {
+      document.removeEventListener("keyup", listenForEscape);
+    };
   }, []);
   useEffect(() => {
     searchPosts();
