@@ -5,11 +5,11 @@ const SearchBar = ({ postTitles, searchResults, setSearchTerm }) => {
   const [prefix, setPrefix] = useState("");
   const [suggestion, setSuggestion] = useState("");
   const myTrie = new Trie();
-  const animateSearch = (event) => {
+  const animateSearch = (e) => {
     searchResults.current.classList.add("opacity-0");
-    onChange(event);
+    onChange(e);
     setTimeout(() => {
-      setSearchTerm(event.target.value.toLowerCase());
+      setSearchTerm(e.target.value.toLowerCase());
       searchResults.current.classList.remove("opacity-0");
     }, 500);
   };
@@ -56,8 +56,8 @@ const SearchBar = ({ postTitles, searchResults, setSearchTerm }) => {
         placeholder="Search"
         name="search-bar"
         type="text"
-        onChange={animateSearch}
-        onKeyDown={handleKeydown}
+        onChange={(e) => animateSearch(e)}
+        onKeyDown={(e) => handleKeydown(e)}
         value={prefix}
       />
       <input
