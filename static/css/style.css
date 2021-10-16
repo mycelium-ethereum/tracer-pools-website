@@ -848,7 +848,7 @@ button[data-category].category-dropdown.active {
 }
 .search-box:focus ~ svg,
 .search-box:hover ~ svg {
-  left: 12px;
+  left: 50px;
 }
 
 /* Input */
@@ -1151,6 +1151,10 @@ button[data-category].category-dropdown.active {
   }
   .search-results {
     height: calc(100vh - 150px);
+  }
+  .search-box:focus ~ svg,
+  .search-box:hover ~ svg {
+    left: 13px;
   }
 }
 @media only screen and (max-width: 640px) {
