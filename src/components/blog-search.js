@@ -28,30 +28,41 @@ const BlogSearch = ({ setShowSearch, showSearch, posts }) => {
       getRecentPosts();
     }
   };
+
+  const animateSearch = (e) => {
+    searchResults.current.classList.add("opacity-0");
+    setTimeout(function () {
+      searchPosts(e);
+      searchResults.current.classList.remove("opacity-0");
+    }, 500);
+  };
   const closeSearch = () => {
     enableScroll();
     setShowSearch(false);
   };
   const enableScroll = () => {
     document.documentElement.style.overflow = "unset";
+    document.body.style.overflow = "unset";
   };
   const focusSearch = () => {
     searchBox.current.focus();
   };
   useEffect(() => {
-    if (showSearch) {
-      focusSearch();
-    }
-    searchBox.current.addEventListener("input", searchPosts);
+    searchBox.current.addEventListener("input", animateSearch);
     return () => {
       if (searchBox && searchBox.current) {
-        searchBox.current.removeEventListener("input", searchPosts);
+        searchBox.current.removeEventListener("input", animateSearch);
       }
-      document.documentElement.style.overflow = "unset";
     };
   });
   useEffect(() => {
+    if (showSearch) {
+      focusSearch();
+    }
     getRecentPosts();
+    return () => {
+      enableScroll();
+    };
   }, [posts]);
   return (
     <>
@@ -93,11 +104,13 @@ const BlogSearch = ({ setShowSearch, showSearch, posts }) => {
               />
             </svg>
           </div>
-          <div
-            className="search-results overflow-y-scroll overflow-x-hidden md:block sm:grid-cols-2 grid grid-cols-1 gap-8 pb-8"
-            ref={searchResults}
-          >
-            {postResults}
+          <div className="overflow-hidden md:rounded-none rounded-tl-2xl rounded-tr-2xl">
+            <div
+              className="search-results overflow-y-scroll overflow-x-hidden transition-opacity duration-500 md:block sm:grid-cols-2 grid grid-cols-1 gap-8 pb-8 px-1"
+              ref={searchResults}
+            >
+              {postResults}
+            </div>
           </div>
         </div>
       </section>

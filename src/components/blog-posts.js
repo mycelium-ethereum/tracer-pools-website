@@ -74,6 +74,7 @@ const BlogPosts = () => {
 
   const disableScroll = () => {
     document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
   };
 
   const openSearch = () => {
@@ -137,7 +138,7 @@ const BlogPosts = () => {
         posts={posts}
       />
       <section className="h-full w-full z-20 relative bg-white select-dark">
-        <div className="container w-full mx-auto pt-6 md:pb-16 pb-6 lg:px-0 px-4">
+        <div className="container w-full mx-auto pt-6 md:pb-16 pb-6 lg:px-0 sm:px-4 pl-4 pr-11">
           <h1 className="font-semibold text-3xl text-center mb-8 md:block hidden">
             Latest Articles
           </h1>

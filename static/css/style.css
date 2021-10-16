@@ -868,6 +868,11 @@ button[data-category].category-dropdown.active {
 .search-results {
   height: calc(100vh - 300px);
 }
+/* Hide scrollbar */
+.search-results::-webkit-scrollbar {
+  height: 0px;
+  width: 0px;
+}
 .search-results::-webkit-scrollbar-track {
   background: #fff;
 }
@@ -1210,6 +1215,9 @@ button[data-category].category-dropdown.active {
   .prev-arrow,
   .next-arrow {
     color: transparent;
+  }
+  .search-result .post-image {
+    min-width: 100%;
   }
 }
 @media only screen and (max-width: 320px) {
