@@ -12,6 +12,8 @@ const SearchBar = ({ postTitles, searchResults, setSearchTerm }) => {
     onChange(value);
     setTimeout(() => {
       setSearchTerm(value);
+    }, 500);
+    setTimeout(() => {
       searchResults.current.classList.remove("opacity-0");
     }, 700);
   };

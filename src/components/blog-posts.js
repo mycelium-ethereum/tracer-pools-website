@@ -89,7 +89,7 @@ const BlogPosts = () => {
     }, 1100);
     setTimeout(function () {
       postContainer.current.classList.remove("opacity-0");
-    }, 1400);
+    }, 1800);
   };
 
   const sortByDate = (a, b) => {
