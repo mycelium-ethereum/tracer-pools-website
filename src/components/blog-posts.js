@@ -47,7 +47,6 @@ const BlogPosts = () => {
     let curPosts = [];
     const postData = [];
     if (category != "all") {
-      postContainer.current.classList.add("opacity-0");
       posts.map((data, i) => {
         const postCategory = data.node.category;
         if (!!postCategory && postCategory === category) {
@@ -62,19 +61,16 @@ const BlogPosts = () => {
         .slice(offset, offset + perPage)
         .map((data, i) => curPosts.push(<PostLink data={data} key={i} />));
     }
-
-    if (postData) {
-      setTimeout(function () {
-        setCurrentPosts(curPosts);
-        setPageCount(Math.ceil(postData.length / perPage));
-      }, 600);
-      setTimeout(function () {
-        postContainer.current.classList.remove("opacity-0");
-      }, 800);
-    } else {
-      setCurrentPosts(curPosts);
-      setPageCount(Math.ceil(posts.length / perPage));
-    }
+    postContainer.current.classList.add("opacity-0");
+    setTimeout(() => {
+      setCurrentPosts(postData ? curPosts : posts);
+      setPageCount(
+        Math.ceil((postData ? postData.length : posts.length) / perPage)
+      );
+    }, 600);
+    setTimeout(() => {
+      postContainer.current.classList.remove("opacity-0");
+    }, 800);
   };
 
   const handlePageClick = ({ selected: selectedPage }) => {
