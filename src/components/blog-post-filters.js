@@ -3,7 +3,8 @@ import SearchIcon from "../../static/img/blog-posts/search-large.svg";
 import Dropdown from "../../static/img/general/chevron-down.svg";
 
 const PostFilters = ({ setShowSearch, setCategory }) => {
-  const [categoryDropdownOpen, setCategoryDropdownOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownText, setDropdownText] = useState("");
 
   const selectCategory = (e) => {
     const category = e.target.dataset.category;
@@ -16,7 +17,8 @@ const PostFilters = ({ setShowSearch, setCategory }) => {
       }
     });
     setTimeout(function () {
-      setCategoryDropdownOpen(false);
+      setDropdownOpen(false);
+      setDropdownText(category.charAt(0).toUpperCase() + category.slice(1));
     }, 500);
     setCategory(category);
   };
@@ -74,12 +76,12 @@ const PostFilters = ({ setShowSearch, setCategory }) => {
         </button>
       ))}
       <button
-        className="relative md:hidden inline-flex mr-4 justify-start items-center text-base font-semibold w-32 h-11 rounded-xl bg-gray-50 pl-4"
+        className="relative md:hidden inline-flex mr-4 justify-start items-center text-base font-semibold px-8 w-auto h-11 rounded-xl bg-gray-50 pl-4"
         onClick={() => {
-          setCategoryDropdownOpen((wasOpen) => !wasOpen);
+          setDropdownOpen((wasOpen) => !wasOpen);
         }}
       >
-        Categories
+        {dropdownText.length ? dropdownText : "Categories"}
         <img
           className="absolute top-1/2 transform -translate-y-1/2 right-2 w-4 h-auto"
           src={Dropdown}
@@ -89,7 +91,7 @@ const PostFilters = ({ setShowSearch, setCategory }) => {
       <div
         className={
           "absolute left-0 top-12 md:rounded-none md:p-0 md:shadow-none shadow p-4 rounded-xl md:bg-transparent bg-white transition-opacity duration-500 " +
-          (categoryDropdownOpen
+          (dropdownOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none")
         }
