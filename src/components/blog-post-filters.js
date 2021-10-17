@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SearchIcon from "../../static/img/blog-posts/search-large.svg";
 import Dropdown from "../../static/img/general/chevron-down.svg";
 
-const PostFilters = ({ setShowSearch, setCategory }) => {
+const PostFilters = ({ setShowSearch, setCurrentPage, setCategory }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [dropdownText, setDropdownText] = useState("");
 
@@ -21,6 +21,7 @@ const PostFilters = ({ setShowSearch, setCategory }) => {
       setDropdownText(category.charAt(0).toUpperCase() + category.slice(1));
     }, 500);
     setCategory(category);
+    setCurrentPage(0);
   };
 
   const openSearch = () => {

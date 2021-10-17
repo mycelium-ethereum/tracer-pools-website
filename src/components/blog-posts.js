@@ -139,6 +139,7 @@ const BlogPosts = () => {
           <PostFilters
             setShowSearch={setShowSearch}
             setCategory={setCategory}
+            setCurrentPage={setCurrentPage}
           />
           <div
             ref={postContainer}
