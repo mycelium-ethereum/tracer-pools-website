@@ -147,7 +147,6 @@ body {
   font-size: 16px;
 }
 img {
-  image-rendering: crisp-edges;
   image-rendering: -webkit-optimize-contrast;
 }
 main {
