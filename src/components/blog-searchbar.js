@@ -7,11 +7,11 @@ const SearchBar = ({ postTitles, searchResults, setSearchTerm }) => {
   const searchBar = useRef();
   const myTrie = new Trie();
   const animateSearch = () => {
-    const value = searchBar.current.value.toLowerCase();
+    let value = searchBar.current.value;
     searchResults.current.classList.add("opacity-0");
     onChange(value);
     setTimeout(() => {
-      setSearchTerm(value);
+      setSearchTerm(value.toLowerCase());
     }, 500);
     setTimeout(() => {
       searchResults.current.classList.remove("opacity-0");
