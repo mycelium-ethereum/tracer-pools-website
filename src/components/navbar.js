@@ -89,7 +89,7 @@ const Navbar = () => {
           (darkerNav ? " darker" : "")
         }
       />
-      <div className="container h-16 flex justify-between items-center mx-auto xl:px-0 px-4 relative z-10">
+      <div className="container h-16 flex justify-between items-center mx-auto xl:pl-2.5 lg:px-0 px-4 relative z-10">
         <div className="relative flex">
           <Link
             id="logo"

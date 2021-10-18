@@ -33,7 +33,7 @@ const PostLink = ({ data, className }) => {
         />
       </div>
       {/* Set height is temporary */}
-      <div className="px-4 py-4 rounded-bl-xl rounded-br-xl flex flex-col transition-all duration-500 bg-white 2xl:h-60 lg:h-80 md:h-64 sm:h-80 h-auto">
+      <div className="px-4 py-4 rounded-bl-xl rounded-br-xl flex flex-col transition-all duration-500 bg-white 2xl:h-60 lg:h-80 md:h-68 sm:h-80 h-auto">
         <p className="font-semibold text-2xl mb-2">
           <b>{data.node.title}</b>
         </p>
