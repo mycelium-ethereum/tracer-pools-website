@@ -170,7 +170,8 @@ const BlogPosts = () => {
                 });
               }}
             />
-            {currentPosts}
+            {/* Add in empty div as placeholder to provide more vertical height before posts load */}
+            {currentPosts.length ? currentPosts : <div className="py-96" />}
           </div>
           <hr className="mt-16 border-paginationrulegrey" />
           <ReactPaginate

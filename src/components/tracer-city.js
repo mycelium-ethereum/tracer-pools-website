@@ -153,7 +153,7 @@ const TracerCity = () => {
           className="absolute w-full bottom-0"
           alt="City Bottom"
           src={CityBottom}
-          loading="lazy"
+          loading="eager"
         />
       </div>
     </>

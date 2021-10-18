@@ -954,7 +954,7 @@ button[data-category].category-dropdown.active {
     height: 750px; 
   }
   .h-thumbnail {
-    height: 147px;
+    height: 151px;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -1196,7 +1196,7 @@ button[data-category].category-dropdown.active {
     min-height: 900px;
   }
   .h-thumbnail {
-    height: 220px;
+    height: 218px;
   }
   .backdrop {
     opacity: 1;
