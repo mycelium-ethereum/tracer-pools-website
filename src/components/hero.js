@@ -38,7 +38,7 @@ const Hero = () => {
               Documentation
             </a>
           </header>
-          <div className="2xl:max-w-screen-xl xl:max-w-screen-lg 2xl:-bottom-96 xl:-bottom-80 lg:-bottom-72 md:-bottom-32 sm:-bottom-20 sm:px-24 absolute w-full -bottom-10 z-20">
+          <div className="2xl:max-w-screen-xl xl:max-w-screen-lg 2xl:-bottom-96 xl:-bottom-80 lg:-bottom-72 md:-bottom-32 sm:-bottom-20 sm:px-24 absolute w-full -bottom-14 z-20">
             <img
               className="w-full"
               src={TracerLaptop}
