@@ -1,9 +1,9 @@
 import React from "react";
 // import { graphql } from "gatsby";
 // import PostLink from "./blog-post-link";
-import Overlay06 from "/static/img/learn/overlay-06.svg";
-import Overlay07 from "/static/img/learn/overlay-07.svg";
 import Overlay08 from "/static/img/learn/overlay-08.svg";
+import Overlay09 from "/static/img/learn/overlay-09.svg";
+import Overlay10 from "/static/img/learn/overlay-10.svg";
 
 // const query = graphql`
 //   query tracerBlogs {
@@ -38,6 +38,42 @@ const TracerDrop = () => {
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
             <a
               className="relative h-thumbnail overflow-hidden col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-xl cursor-pointer"
+              href="https://www.youtube.com/watch?v=pkt2qgS3BFA"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img
+                className="absolute bottom-0 left-0 z-20 pointer-events-none"
+                alt="episode-overlay"
+                src={Overlay10}
+              />
+              <div className="absolute top-0 left-0 w-full h-full transition-colors duration-500 bg-black bg-opacity-30 hover:bg-opacity-10 z-10" />
+              <img
+                alt="episode-thumbnail"
+                className="yt-thumbnail object-cover object-top w-full 2xl:-mt-10 xl:-mt-9 md:-mt-8 -mt-14"
+                src="https://img.youtube.com/vi/pkt2qgS3BFA/0.jpg"
+              />
+            </a>
+            <a
+              className="relative h-thumbnail overflow-hidden col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-xl cursor-pointer"
+              href="https://www.youtube.com/watch?v=bZUzk77tgko"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img
+                className="absolute bottom-0 left-0 z-20 pointer-events-none"
+                alt="episode-overlay"
+                src={Overlay09}
+              />
+              <div className="absolute top-0 left-0 w-full h-full transition-colors duration-500 bg-black bg-opacity-30 hover:bg-opacity-10 z-10" />
+              <img
+                alt="episode-thumbnail"
+                className="yt-thumbnail object-cover object-top w-full 2xl:-mt-10 xl:-mt-9 md:-mt-8 -mt-14"
+                src="https://img.youtube.com/vi/bZUzk77tgko/0.jpg"
+              />
+            </a>
+            <a
+              className="relative h-thumbnail overflow-hidden col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-xl cursor-pointer lg:block sm:hidden block"
               href="https://www.youtube.com/watch?v=pWVY84ttx6U"
               rel="noreferrer"
               target="_blank"
@@ -50,44 +86,8 @@ const TracerDrop = () => {
               <div className="absolute top-0 left-0 w-full h-full transition-colors duration-500 bg-black bg-opacity-30 hover:bg-opacity-10 z-10" />
               <img
                 alt="episode-thumbnail"
-                className="yt-thumbnail object-cover object-top w-full 2xl:-mt-10 md:-mt-8 -mt-14"
+                className="yt-thumbnail object-cover object-top w-full 2xl:-mt-10 xl:-mt-9 md:-mt-8 -mt-14"
                 src="https://img.youtube.com/vi/pWVY84ttx6U/0.jpg"
-              />
-            </a>
-            <a
-              className="relative h-thumbnail overflow-hidden col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-xl cursor-pointer"
-              href="https://www.youtube.com/watch?v=7eQjiulVY6s"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <img
-                className="absolute bottom-0 left-0 z-20 pointer-events-none"
-                alt="episode-overlay"
-                src={Overlay07}
-              />
-              <div className="absolute top-0 left-0 w-full h-full transition-colors duration-500 bg-black bg-opacity-30 hover:bg-opacity-10 z-10" />
-              <img
-                alt="episode-thumbnail"
-                className="yt-thumbnail object-cover object-top w-full 2xl:-mt-10 md:-mt-8 -mt-14"
-                src="https://img.youtube.com/vi/7eQjiulVY6s/0.jpg"
-              />
-            </a>
-            <a
-              className="relative h-thumbnail overflow-hidden col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-xl cursor-pointer lg:block sm:hidden block"
-              href="https://www.youtube.com/watch?v=iEeVb1jH0u8"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <img
-                className="absolute bottom-0 left-0 z-20 pointer-events-none"
-                alt="episode-overlay"
-                src={Overlay06}
-              />
-              <div className="absolute top-0 left-0 w-full h-full transition-colors duration-500 bg-black bg-opacity-30 hover:bg-opacity-10 z-10" />
-              <img
-                alt="episode-thumbnail"
-                className="yt-thumbnail object-cover object-top w-full 2xl:-mt-10 md:-mt-8 -mt-14"
-                src="https://img.youtube.com/vi/iEeVb1jH0u8/0.jpg"
               />
             </a>
           </div>

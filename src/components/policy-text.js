@@ -1,7 +1,6 @@
 /* eslint-disable */
 import React, { useEffect, useState } from "react";
 import Dropdown from "../../static/img/general/chevron-down.svg";
-import { Link } from "gatsby";
 
 // Litepaper
 import AuditPDF from "../../static/pdf/Sigma Prime Tracer DAO v1.1.pdf";
