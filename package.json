@@ -56,8 +56,8 @@
     "react-transition-group": "^4.4.2",
     "scrollmagic": "^2.0.8",
     "scrollreveal": "^4.0.9",
-    "seamless-scroll-polyfill": "^2.1.4",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "smooth-scroll-into-view-if-needed": "^1.1.32"
   },
   "scripts": {
     "build": "gatsby build --prefix-paths",

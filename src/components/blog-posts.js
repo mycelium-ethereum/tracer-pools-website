@@ -5,7 +5,7 @@ import ReactPaginate from "react-paginate";
 import PostLink from "./blog-post-link";
 import BlogSearch from "./blog-search";
 import PostFilters from "./blog-post-filters";
-import { elementScrollIntoViewPolyfill } from "seamless-scroll-polyfill";
+import scrollIntoView from "smooth-scroll-into-view-if-needed";
 
 const query = graphql`
   query TracerBlogs {
@@ -71,17 +71,17 @@ const BlogPosts = () => {
         setCurrentPosts(curPosts);
         setPageCount(Math.ceil(posts.length / perPage));
       }
-    }, 600);
+    }, 500);
     setTimeout(() => {
       postContainer.current.classList.remove("opacity-0");
-    }, 800);
+    }, 700);
   };
 
   const handlePageClick = ({ selected: selectedPage }) => {
     // Scroll to top of posts
-    elementScrollIntoViewPolyfill();
-    document.getElementById("top").scrollIntoView({
+    scrollIntoView(document.getElementById("top"), {
       behavior: "smooth",
+      scrollMode: "if-needed",
     });
     setTimeout(function () {
       postContainer.current.classList.add("opacity-0");
