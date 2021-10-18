@@ -5,6 +5,7 @@ import ReactPaginate from "react-paginate";
 import PostLink from "./blog-post-link";
 import BlogSearch from "./blog-search";
 import PostFilters from "./blog-post-filters";
+import { elementScrollIntoViewPolyfill } from "seamless-scroll-polyfill";
 
 const query = graphql`
   query TracerBlogs {
@@ -78,6 +79,7 @@ const BlogPosts = () => {
 
   const handlePageClick = ({ selected: selectedPage }) => {
     // Scroll to top of posts
+    elementScrollIntoViewPolyfill();
     document.getElementById("top").scrollIntoView({
       behavior: "smooth",
     });
