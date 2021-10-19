@@ -12,6 +12,7 @@ import Clock from "../../static/img/blog-posts/clock.svg";
 
 const BlogText = ({ data }) => {
   const [currentURL, setCurrentURL] = useState("");
+  const breadcrumbTitle = useRef();
   const bodyText = useRef();
   const setBodyText = () => {
     const bodyTextHTML = marked(DOMPurify.sanitize(data.body_text));
@@ -46,10 +47,17 @@ const BlogText = ({ data }) => {
       }
     });
   };
+  const concatenateTitle = () => {
+    // breadcrumbTitle.current.
+  };
   useEffect(() => {
     setBodyText();
     getTags();
     setCurrentURL(window.location.pathname);
+    window.addEventListener("resize", concatenateTitle);
+    return () => {
+      window.removeEventListener("resize", concatenateTitle);
+    };
   });
   return (
     <>
@@ -64,7 +72,7 @@ const BlogText = ({ data }) => {
               <Link to="/radar">Radar</Link>
               <span className="mx-3">/</span>
               <Link to={currentURL}>
-                <span>{data.title}</span>
+                <span ref={breadcrumbTitle}>{data.title}</span>
               </Link>
             </div>
             <div className="flex items-center flex-wrap text-gray-400 md:mt-0 mt-3">

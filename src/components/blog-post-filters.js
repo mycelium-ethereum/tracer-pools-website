@@ -95,21 +95,20 @@ const PostFilters = ({ setShowSearch, setCurrentPage, setCategory }) => {
       </button>
       <div
         className={
-          "absolute left-0 top-12 md:rounded-none md:p-0 md:shadow-none shadow p-4 rounded-xl md:bg-transparent bg-white transition-opacity duration-500 " +
+          "absolute left-0 top-12 md:rounded-none md:p-0 md:shadow-none shadow rounded-md md:bg-transparent bg-white transition-opacity duration-500 overflow-hidden " +
           (dropdownOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none")
         }
       >
-        <span className="text-3xl font-semibold md:block hidden">Protocol</span>
-        <ul className="md:mt-2 md:pl-4">
+        <ul className="md:mt-2">
           {CategoryInfo.map((category, i) => (
-            <li className="mb-2">
+            <li>
               <button
                 data-category={category.name}
                 onClick={selectCategory}
-                className={`category-dropdown transition-colors duration-500 text-gray-400 ${
-                  i === CategoryInfo.length - 1 ? "active" : ""
+                className={`category-dropdown py-1 px-4 text-left w-full transition-colors duration-500 text-black ${
+                  i === CategoryInfo.length - 1 ? "pb-1 active" : ""
                 }`}
               >
                 {category.text}

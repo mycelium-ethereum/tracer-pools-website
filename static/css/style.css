@@ -832,7 +832,7 @@ button[data-category]:not(.category-dropdown).active {
   color: #fff;
 }
 button[data-category].category-dropdown.active {
-  color: #000;
+  background: #E5E7EB;
 }
 /* BLOG SEARCH */
 
