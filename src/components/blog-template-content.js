@@ -64,7 +64,7 @@ const BlogText = ({ data }) => {
               <Link to="/radar">Radar</Link>
               <span className="mx-3">/</span>
               <Link to={currentURL}>
-                <span className="block truncate">
+                <span className="block sm:whitespace-normal truncate">
                   {data.title}
                 </span>
               </Link>
