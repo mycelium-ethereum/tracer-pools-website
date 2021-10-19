@@ -23,9 +23,13 @@ const PostFilters = ({ setShowSearch, setCurrentPage, setCategory }) => {
     setCategory(category);
     setCurrentPage(0);
   };
+  const focusSearch = () => {
+    document.querySelector(".search-box").focus();
+  };
 
   const openSearch = () => {
     setShowSearch(true);
+    focusSearch();
     disableScroll();
   };
 
