@@ -12,7 +12,6 @@ import Clock from "../../static/img/blog-posts/clock.svg";
 
 const BlogText = ({ data }) => {
   const [currentURL, setCurrentURL] = useState("");
-  const breadcrumbTitle = useRef();
   const bodyText = useRef();
   const setBodyText = () => {
     const bodyTextHTML = marked(DOMPurify.sanitize(data.body_text));
@@ -47,24 +46,17 @@ const BlogText = ({ data }) => {
       }
     });
   };
-  const concatenateTitle = () => {
-    // breadcrumbTitle.current.
-  };
   useEffect(() => {
     setBodyText();
     getTags();
     setCurrentURL(window.location.pathname);
-    window.addEventListener("resize", concatenateTitle);
-    return () => {
-      window.removeEventListener("resize", concatenateTitle);
-    };
   });
   return (
     <>
       <section className="h-full w-full z-20 relative mt-16 bg-white select-dark">
         <div className="container relative w-full mx-auto pt-6 lg:px-0 sm:pb-24 pb-24 px-4">
           <div className="flex justify-between md:flex-row flex-col lg:mb-32 md:md-20 mb-12">
-            <div className="flex lg:items-center items-start text-gray-400 mr-6">
+            <div className="flex lg:items-center items-start text-gray-400 sm:mr-6">
               <Link to="/" className="flex items-center w-5 h-6">
                 <img className="home-icon" src={Home} alt="Home" />
               </Link>
@@ -72,7 +64,9 @@ const BlogText = ({ data }) => {
               <Link to="/radar">Radar</Link>
               <span className="mx-3">/</span>
               <Link to={currentURL}>
-                <span ref={breadcrumbTitle}>{data.title}</span>
+                <span className="block truncate">
+                  {data.title}
+                </span>
               </Link>
             </div>
             <div className="flex items-center flex-wrap text-gray-400 md:mt-0 mt-3">

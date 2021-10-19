@@ -1205,6 +1205,9 @@ button[data-category].category-dropdown.active {
     width: 100vw;
     padding: 0px 16px;
   }
+  .truncate {
+    max-width: 170px;
+  }
 }
 @media only screen and (max-width: 479px) {
   .large-spacer {
