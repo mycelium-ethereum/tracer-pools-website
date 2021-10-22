@@ -149,6 +149,9 @@ body {
 img {
   image-rendering: -webkit-optimize-contrast;
 }
+.enlarge {
+  transform:scale(2);
+}
 main {
   min-width: 320px;
 }

@@ -47,7 +47,7 @@ const BlogPosts = () => {
   const loadData = () => {
     let curPosts = [];
     const postData = [];
-    if (category != "all") {
+    if (category !== "all") {
       posts.map((data, i) => {
         const postCategory = data.node.category;
         if (!!postCategory && postCategory === category) {

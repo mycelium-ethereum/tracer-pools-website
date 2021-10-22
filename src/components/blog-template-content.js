@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "gatsby";
 import Moment from "react-moment";
 import marked from "marked";
@@ -14,9 +14,9 @@ const BlogText = ({ data }) => {
   const [currentURL, setCurrentURL] = useState("");
   const bodyText = useRef();
   const setBodyText = () => {
-    const bodyTextHTML = marked(DOMPurify.sanitize(data.body_text));
-    bodyText.current.innerHTML = bodyTextHTML;
+    bodyText.current.innerHTML = marked(DOMPurify.sanitize(data.body_text));
   };
+
   const applyStyles = (e) => {
     if (e.tagName === "OL") {
       e.setAttribute("class", "list-outside");
@@ -32,8 +32,12 @@ const BlogText = ({ data }) => {
     }
     if (e.tagName === "IMG") {
       e.setAttribute("class", "mx-auto rounded-lg");
+      e.onclick = function(){
+        this.classList.toggle("enlarge");
+      }
     }
   };
+
   const getTags = () => {
     const childElements = bodyText.current.childNodes;
     childElements.forEach((e) => {
@@ -97,7 +101,7 @@ const BlogText = ({ data }) => {
             <small className="block font-normal text-gray-500 sm:text-center sm:text-xl text-base">
               {data.tagline}
             </small>
-            <div ref={bodyText} className="mt-6 prose mx-auto"></div>
+            <div ref={bodyText} className="mt-6 prose mx-auto" />
             <CallToAction />
           </div>
         </div>
