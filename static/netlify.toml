@@ -1,11 +1,11 @@
 # The following redirect is intended for use with most SPAs that handle
 # routing internally.
 [[redirects]]
-  from = "/tokens.json"
+  from = "/tokens"
   to = "/tokens.json"
   status = 200
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
-  for = "/tokens.json"
+  for = "/tokens"
     [headers.values]
     Access-Control-Allow-Origin = "*"
