@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link } from "gatsby";
 
 // Images
@@ -15,24 +15,8 @@ const Footer = () => {
   const setCopyrightYear = () => {
     document.getElementById("year").innerHTML = new Date().getFullYear();
   };
-
-  const [formOpen, setFormOpen] = useState(false);
-  const hideForm = (e) => {
-    const input = document.getElementById("email");
-    const button = document.getElementById("submit-btn");
-    const target = e.target;
-    if (!formOpen && target !== input && target !== button) {
-      setFormOpen(false);
-    }
-  };
   useEffect(() => {
     setCopyrightYear();
-    document.addEventListener("click", function (e) {
-      hideForm(e);
-    });
-    return () => {
-      document.removeEventListener("click", hideForm);
-    };
   });
   return (
     <footer className="w-full relative overflow-hidden lg:py-10 h-1/2 z-10 bg-blue">
