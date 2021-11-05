@@ -27,6 +27,7 @@ const Footer = () => {
         alt=""
       />
       <div className="container mx-auto relative xl:flex flex-col justify-between z-1 xl:px-0 px-8">
+        <div className="h-60" />
         <div className="h-auto w-full flex lg:flex-row flex-col justify-between sm:items-center items-start">
           <span className="text-base font-normal text-white">
             &copy; <span id="year" /> Tracer DAO
