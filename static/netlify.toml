@@ -2,7 +2,7 @@
 # routing internally.
 [[redirects]]
   from = "/tokens"
-  to = "/tokens.json"
+  to = "https://raw.githubusercontent.com/dospore/tracer-balancer-token-list/master/tokens.json"
   status = 200
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
