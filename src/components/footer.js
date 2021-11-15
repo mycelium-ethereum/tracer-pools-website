@@ -88,7 +88,7 @@ const Footer = () => {
             <a
               className="text-base font-normal text-white xl:pl-12 sm:mb-0 sm:pl-6 mb-4"
               href={PoolsPDF}
-              download
+              target={"_blank"}
             >
               Litepaper
             </a>
@@ -103,6 +103,7 @@ const Footer = () => {
             <a
               className="text-base font-normal text-white xl:pl-12 sm:mb-0 sm:pl-6 mb-4"
               href="/radar/sigma-prime-audit-response"
+              target={"_blank"}
             >
               Security Audit
             </a>
