@@ -7,7 +7,7 @@ const PaperDownload = ({ title, header, image, link }) => {
       <div className="col-span-1 overflow-hidden">
         <div className="relative w-full lg:h-28 md:h-20 h-28 flex flex-col items-center justify-center border-0 overflow-hidden">
           <div className="relative z-10 text-center">
-            <small className="lg:text-2xl md:text-base text-2xl text-g font-normal">
+            <small className="lg:text-2xl md:text-base text-2xl text-tracer-300 font-normal">
               Tracer
             </small>
             <h1 className="xl:text-2xl md:text-xl text-2xl text-white font-bold">
