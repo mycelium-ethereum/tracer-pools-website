@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import PDFIcon from "../../static/img/learn/pdf-icon.svg";
 
 const PaperDownload = ({ title, header, image, link }) => {
+  const [showDownload, setShowDownload] = useState(false);
   return (
     <>
       <div className="col-span-1 overflow-hidden">
@@ -15,12 +16,12 @@ const PaperDownload = ({ title, header, image, link }) => {
             </h1>
           </div>
         </div>
-        <div className="relative py-5 px-7 bg-white">
+        <div className="relative" onMouseEnter={() => setShowDownload(true)} onMouseLeave={() => setShowDownload(false)}>
           <a href={link} rel="noreferrer" target="_blank" className="block">
             <img src={image} alt="Research Paper page" />
           </a>
           <a
-            className="absolute inset-0 m-auto transition-colors duration-500 w-32 h-12 rounded-xl font-semibold text-white flex items-center justify-center bg-blue-600 hover:bg-blue-800"
+            className={`${showDownload ? 'flex' : 'hidden'} absolute inset-0 m-auto transition-colors duration-500 w-32 h-12 rounded-xl font-semibold text-white items-center justify-center bg-blue-600 hover:bg-blue-800`}
             href={link}
             download
           >
