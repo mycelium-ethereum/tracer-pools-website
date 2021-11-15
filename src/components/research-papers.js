@@ -43,7 +43,7 @@ const ResearchPapers = () => {
   return (
     <>
       <section className="h-full w-full z-20 relative mt-16">
-        <div className="container relative w-full mx-auto pb-12 xl:px-0 px-4 grid md:grid-cols-4 grid-cols-2 md:gap-20 lg:pt-5 md:pt-13 pt-5 gap-12">
+        <div className="container relative w-full mx-auto pb-12 xl:px-0 px-4 grid lg:grid-cols-4 md:grid-cols-2 md:gap-20 lg:pt-5 md:pt-13 pt-5 gap-12">
           <PaperDownload {...purchaseProps} />
           <PaperDownload {...poolsProps} />
           <PaperDownload {...swapsProps} />
