@@ -94,7 +94,11 @@ const PrivacyText = () => {
               </span>
               <ul className="md:mt-2 md:pl-4">
                 <li className="mb-2">
-                  <a className="text-gray-500" href={PoolsPDF} target={"_blank"}>
+                  <a
+                    className="text-gray-500"
+                    href={PoolsPDF}
+                    target={"_blank"}
+                  >
                     Litepaper
                   </a>
                 </li>
@@ -108,7 +112,11 @@ const PrivacyText = () => {
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a className="text-gray-500" href={AuditPDF} target={"_blank"}>
+                  <a
+                    className="text-gray-500"
+                    href={AuditPDF}
+                    target={"_blank"}
+                  >
                     Security Audit
                   </a>
                 </li>

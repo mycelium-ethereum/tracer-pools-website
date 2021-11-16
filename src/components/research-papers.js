@@ -21,7 +21,7 @@ const ResearchPapers = () => {
     header: PoolsHeader,
     image: PurchasePaper,
     link: PurchasePDF,
-  }
+  };
   const poolsProps = {
     title: "Perpetual Pools",
     header: PoolsHeader,

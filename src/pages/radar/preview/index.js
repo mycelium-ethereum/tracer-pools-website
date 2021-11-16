@@ -25,7 +25,7 @@ const Preview = (props) => {
         break;
       }
     }
-    if(!found && data){
+    if (!found && data) {
       window.location.href = "/404";
     }
   }
