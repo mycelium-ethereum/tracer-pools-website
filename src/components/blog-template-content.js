@@ -32,9 +32,9 @@ const BlogText = ({ data }) => {
     }
     if (e.tagName === "IMG") {
       e.setAttribute("class", "mx-auto rounded-lg");
-      e.onclick = function(){
+      e.onclick = function () {
         this.classList.toggle("enlarge");
-      }
+      };
     }
   };
 

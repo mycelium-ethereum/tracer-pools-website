@@ -16,12 +16,18 @@ const PaperDownload = ({ title, header, image, link }) => {
             </h1>
           </div>
         </div>
-        <div className="relative" onMouseEnter={() => setShowDownload(true)} onMouseLeave={() => setShowDownload(false)}>
+        <div
+          className="relative"
+          onMouseEnter={() => setShowDownload(true)}
+          onMouseLeave={() => setShowDownload(false)}
+        >
           <a href={link} rel="noreferrer" target="_blank" className="block">
             <img src={image} alt="Research Paper page" />
           </a>
           <a
-            className={`${showDownload ? 'flex' : 'hidden'} absolute inset-0 m-auto transition-colors duration-500 w-32 h-12 rounded-xl font-semibold text-white items-center justify-center bg-blue-600 hover:bg-blue-800`}
+            className={`${
+              showDownload ? "flex" : "hidden"
+            } absolute inset-0 m-auto transition-colors duration-500 w-32 h-12 rounded-xl font-semibold text-white items-center justify-center bg-blue-600 hover:bg-blue-800`}
             href={link}
             download
           >

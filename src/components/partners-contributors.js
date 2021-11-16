@@ -4,23 +4,23 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 // Images
-import FrameworkLogo from "/static/img/home-page/partners-contributors/partners/framework.svg"
-import KojiLogo from "/static/img/home-page/partners-contributors/partners/koji.svg"
-import DACMLogo from "/static/img/home-page/partners-contributors/partners/dacm.svg"
-import DistributedGlobalLogo from "/static/img/home-page/partners-contributors/partners/distributed-global.svg"
-import GSRLogo from "/static/img/home-page/partners-contributors/partners/gsr.svg"
-import MavenLogo from "/static/img/home-page/partners-contributors/partners/maven.svg"
-import LAOLogo from "/static/img/home-page/partners-contributors/partners/lao.svg"
-import EfficientFrontier from "/static/img/home-page/partners-contributors/partners/efficient-frontier.svg"
-import BLogo from "/static/img/home-page/partners-contributors/partners/b.svg"
-import ApolloLogo from "/static/img/home-page/partners-contributors/partners/apollo.svg"
-import MyceliumLogo from "/static/img/home-page/partners-contributors/contributors/mycelium.svg"
-import ChainlinkLogo from "/static/img/home-page/partners-contributors/contributors/chainlink.svg"
-import SigmaPrimeLogo from "/static/img/home-page/partners-contributors/contributors/sigma-prime.svg"
-import RMITLogo from "/static/img/home-page/partners-contributors/contributors/rmit.svg"
-import EPNSLogo from "/static/img/home-page/partners-contributors/contributors/epns.svg"
-import AFRLogo from "/static/img/home-page/partners-contributors/media/financial-review.png"
-import CoinTelegraphLogo from "/static/img/home-page/partners-contributors/media/coin-telegraph.png"
+import FrameworkLogo from "/static/img/home-page/partners-contributors/partners/framework.svg";
+import KojiLogo from "/static/img/home-page/partners-contributors/partners/koji.svg";
+import DACMLogo from "/static/img/home-page/partners-contributors/partners/dacm.svg";
+import DistributedGlobalLogo from "/static/img/home-page/partners-contributors/partners/distributed-global.svg";
+import GSRLogo from "/static/img/home-page/partners-contributors/partners/gsr.svg";
+import MavenLogo from "/static/img/home-page/partners-contributors/partners/maven.svg";
+import LAOLogo from "/static/img/home-page/partners-contributors/partners/lao.svg";
+import EfficientFrontier from "/static/img/home-page/partners-contributors/partners/efficient-frontier.svg";
+import BLogo from "/static/img/home-page/partners-contributors/partners/b.svg";
+import ApolloLogo from "/static/img/home-page/partners-contributors/partners/apollo.svg";
+import MyceliumLogo from "/static/img/home-page/partners-contributors/contributors/mycelium.svg";
+import ChainlinkLogo from "/static/img/home-page/partners-contributors/contributors/chainlink.svg";
+import SigmaPrimeLogo from "/static/img/home-page/partners-contributors/contributors/sigma-prime.svg";
+import RMITLogo from "/static/img/home-page/partners-contributors/contributors/rmit.svg";
+import EPNSLogo from "/static/img/home-page/partners-contributors/contributors/epns.svg";
+import AFRLogo from "/static/img/home-page/partners-contributors/media/financial-review.png";
+import CoinTelegraphLogo from "/static/img/home-page/partners-contributors/media/coin-telegraph.png";
 
 const PartnersContributors = () => {
   const slider = useRef(0);

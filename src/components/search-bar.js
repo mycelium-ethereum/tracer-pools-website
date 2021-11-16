@@ -51,22 +51,21 @@ const SearchBar = ({ postTitles }) => {
   return (
     <>
       <input
-className="search-box bg-transparent w-full h-full bg-searchgrey rounded-2xl pl-12 z-0 font-normal"
-placeholder="Search"
-name="search-bar"
-type="text"
-value={prefix}
-onChange={animateSearch}
-onKeyDown={handleKeydown}
-/>
-<input
-type="text"
-name="search-bar"
-className="absolute left-0 top-0 bg-transparent w-full h-full rounded-2xl pl-12 font-normal pointer-events-none z-10"
-id="search-hidden"
-value={suggestion}
-/>
-
+        className="search-box bg-transparent w-full h-full bg-searchgrey rounded-2xl pl-12 z-0 font-normal"
+        placeholder="Search"
+        name="search-bar"
+        type="text"
+        value={prefix}
+        onChange={animateSearch}
+        onKeyDown={handleKeydown}
+      />
+      <input
+        type="text"
+        name="search-bar"
+        className="absolute left-0 top-0 bg-transparent w-full h-full rounded-2xl pl-12 font-normal pointer-events-none z-10"
+        id="search-hidden"
+        value={suggestion}
+      />
     </>
   );
 };
