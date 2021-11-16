@@ -5,8 +5,8 @@ const PaperDownload = ({ title, header, image, link }) => {
   const [showDownload, setShowDownload] = useState(false);
   return (
     <>
-      <div className="col-span-1 overflow-hidden">
-        <div className="relative w-full lg:h-28 md:h-20 h-28 flex flex-col items-center justify-center border-0 overflow-hidden">
+      <div className="col-span-1">
+        <div className="relative w-full lg:h-28 md:h-20 h-28 flex flex-col items-center justify-center border-0">
           <div className="relative z-10 text-center">
             <h1 className="xl:text-2xl md:text-xl text-2xl text-white font-bold">
               {title}
@@ -14,12 +14,12 @@ const PaperDownload = ({ title, header, image, link }) => {
           </div>
         </div>
         <div
-          className="relative filter drop-shadow-2xl"
+          className="relative"
           onMouseEnter={() => setShowDownload(true)}
           onMouseLeave={() => setShowDownload(false)}
         >
           <a href={link} rel="noreferrer" target="_blank" className="block">
-            <img src={image} alt="Research Paper page" />
+            <img className={"shadow-2xl"} src={image} alt="Research Paper page" />
           </a>
           <a
             className={`${

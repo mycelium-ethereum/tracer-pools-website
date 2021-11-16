@@ -30,7 +30,7 @@ import Overlay10 from "/static/img/learn/overlay-10.svg";
 const TracerDrop = () => {
   return (
     <>
-      <section className="h-full w-full z-20 relative mt-16">
+      <section className="h-full w-full z-20 relative mt-40">
         <div className="container relative w-full mx-auto pb-12 lg:px-0 px-4">
           <h1 className="font-semibold text-3xl text-center mb-8 text-white">
             Tracer Drop
