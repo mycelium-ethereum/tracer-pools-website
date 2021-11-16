@@ -14,7 +14,7 @@ const PaperDownload = ({ title, header, image, link }) => {
           </div>
         </div>
         <div
-          className="relative"
+          className="relative filter drop-shadow-2xl"
           onMouseEnter={() => setShowDownload(true)}
           onMouseLeave={() => setShowDownload(false)}
         >
