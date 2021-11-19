@@ -10,7 +10,7 @@ const PostFilters = ({ setShowSearch, setCurrentPage, setCategory }) => {
     const category = e.target.dataset.category;
     const buttons = document.querySelectorAll("button[data-category]");
     buttons.forEach((e) => {
-      if (category != e.dataset.category) {
+      if (category !== e.dataset.category) {
         e.classList.remove("active");
       } else {
         e.classList.add("active");
@@ -118,7 +118,7 @@ const PostFilters = ({ setShowSearch, setCurrentPage, setCategory }) => {
         </ul>
       </div>
       <button onClick={() => openSearch()}>
-        <img className="w-5 h-5" src={SearchIcon} />
+        <img className="w-5 h-5" src={SearchIcon} alt={"Search Icon"} />
       </button>
     </div>
   );

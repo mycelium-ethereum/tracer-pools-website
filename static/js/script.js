@@ -1,10 +1,10 @@
-var w = window.innerWidth;
-var size = w >= 1024 ? "big" : "small";
-var controller;
-var prevElement;
-var halfScreen = window.innerHeight * 0.5;
-var threeQuarterScreen = window.innerHeight * 0.75;
-var oneFifthScreenHeight = window.innerHeight * 0.2;
+const w = window.innerWidth;
+let size = w >= 1024 ? "big" : "small";
+let controller;
+let prevElement;
+const halfScreen = window.innerHeight * 0.5;
+const threeQuarterScreen = window.innerHeight * 0.75;
+const oneFifthScreenHeight = window.innerHeight * 0.2;
 
 function stepAnimation() {
   var tl = gsap.timeline();
@@ -12,7 +12,7 @@ function stepAnimation() {
   tl.from(".panel.step-three", 1, { xPercent: 0 });
   tl.from(".panel.step-four", 1, { xPercent: 0 });
 
-  const scene = new ScrollMagic.Scene({
+  return new ScrollMagic.Scene({
     triggerElement: "#pinMaster",
     triggerHook: "onLeave",
     duration: "200%",
@@ -20,17 +20,16 @@ function stepAnimation() {
     .setPin("#pinMaster")
     .setTween(tl)
     .addTo(controller);
-  return scene;
 }
 function tokenAnimation() {
-  var t2 = gsap.timeline();
+  const t2 = gsap.timeline();
   t2.to("#fade1", 1, { opacity: 0 })
     .to("#fade1", 1, { opacity: 1 })
     .to("#fade1", 1, { opacity: 1 });
   t2.to("#fade2", 1, { opacity: 0 }).to("#fade2", 1, { opacity: 1 });
   t2.to("#fade3", 1, { opacity: 0 }).to("#fade3", 1, { opacity: 1 });
 
-  const scene = new ScrollMagic.Scene({
+  return new ScrollMagic.Scene({
     triggerElement: "#token-trigger",
     triggerHook: "onLeave",
     duration: "45%",
@@ -39,13 +38,12 @@ function tokenAnimation() {
     .setTween(t2)
     .setClassToggle("#token-trigger", "active")
     .addTo(controller);
-  return scene;
 }
 function cityAnimation() {
   var t3 = gsap.timeline();
   t3.from("#city-trigger", 1, { xPercent: 0, opacity: 1 });
 
-  const scene = new ScrollMagic.Scene({
+  return new ScrollMagic.Scene({
     triggerElement: "#city-trigger",
     triggerHook: "onLeave",
     duration: "0%",
@@ -54,13 +52,12 @@ function cityAnimation() {
     .setTween(t3)
     .setClassToggle("#city-trigger", "active")
     .addTo(controller);
-  return scene;
 }
 function buildingAnimation() {
-  var t4 = gsap.timeline();
+  const t4 = gsap.timeline();
   t4.from("#building-trigger", 1, { xPercent: 0, opacity: 1 });
 
-  const scene = new ScrollMagic.Scene({
+  return new ScrollMagic.Scene({
     triggerElement: "#building-trigger",
     triggerHook: "onLeave",
     duration: "0%",
@@ -69,13 +66,12 @@ function buildingAnimation() {
     .setTween(t4)
     .setClassToggle("#building-trigger", "active")
     .addTo(controller);
-  return scene;
 }
 function integrateAnimation() {
-  var t5 = gsap.timeline();
+  const t5 = gsap.timeline();
   t5.from(".integrate-section", 1, { xPercent: 0, opacity: 1 });
 
-  const scene = new ScrollMagic.Scene({
+  return new ScrollMagic.Scene({
     triggerElement: ".integrate-section",
     triggerHook: "onLeave",
     duration: "0%",
@@ -84,7 +80,6 @@ function integrateAnimation() {
     .setTween(t5)
     .setClassToggle(".integrate-section", "active")
     .addTo(controller);
-  return scene;
 }
 function updateActiveStep(progress) {
   const slides = document.querySelectorAll("#pinMaster .panel");
@@ -109,7 +104,7 @@ function updateActiveStep(progress) {
       // Start the step tile slide in animations
       slides[0].classList.add("start");
     }
-    if (progress < 0.2 && progress != 0) {
+    if (progress < 0.2 && progress !== 0) {
       slides[0].classList.add("active");
       firstSlide.classList.add("stage-one");
     }
@@ -155,8 +150,8 @@ function handleResize() {
     if (!isSafari()) {
       $.stellar("refresh");
     }
-    var newSize = !isMobile() ? "big" : "small";
-    if (newSize != size) {
+    const newSize = !isMobile() ? "big" : "small";
+    if (newSize !== size) {
       size = newSize;
       if (newSize === "small") {
         // console.log("Destroyed");
@@ -175,14 +170,14 @@ function isSafari() {
     navigator.mediaCapabilities && navigator.mediaCapabilities.decodingInfo
   );
   const isSafari =
-    ua.indexOf("safari") != -1 &&
-    !(ua.indexOf("chrome") != -1) &&
-    ua.indexOf("version/") != -1;
+    ua.indexOf("safari") !== -1 &&
+    !(ua.indexOf("chrome") !== -1) &&
+    ua.indexOf("version/") !== -1;
   return isSafari && hasMediaCapabilities;
 }
 function initialiseElements() {
   const title = document.title.split(" ")[0];
-  if (title == "Home") {
+  if (title === "Home") {
     if (!isMobile()) {
       initialiseScrollMagic();
     }
