@@ -103,7 +103,7 @@ const TokenSlider = ({ className }) => {
     pauseOnHover: false,
     lazyLoad: "progressive",
     fade: false,
-    rtl: className.includes("slider-left") ? true : false,
+    rtl: !!className.includes("slider-left"),
     responsive: [
       {
         breakpoint: 991,

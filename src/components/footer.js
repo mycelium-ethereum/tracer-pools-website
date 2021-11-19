@@ -24,7 +24,7 @@ const Footer = () => {
         id="footer-bg"
         className="absolute 2xl:-bottom-52 xl:-bottom-36 lg:-bottom-6 md:-bottom-13 sm:bottom-2 sm:top-auto bottom-auto -top-14 left-0 w-full h-auto "
         src={CityBottomDark}
-        alt=""
+        alt={"City Bottom Dark"}
       />
       <div className="container mx-auto relative xl:flex flex-col justify-between z-1 xl:px-0 px-8">
         <div className="h-60" />

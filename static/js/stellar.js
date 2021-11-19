@@ -1,5 +1,26 @@
 /*! Stellar.js v0.6.1 | Copyright 2013, Mark Dalgleish | http://markdalgleish.com/projects/stellar.js | http://markdalgleish.mit-license.org */
 (function (e, t, n, r) {
+  const i = "stellar";
+  const s = {
+    scrollProperty: "scroll",
+    positionProperty: "position",
+    horizontalScrolling: !0,
+    verticalScrolling: !0,
+    horizontalOffset: 0,
+    verticalOffset: 0,
+    responsive: !1,
+    parallaxBackgrounds: !0,
+    parallaxElements: !0,
+    hideDistantElements: !0,
+    hideElement: function (e) {
+      e.hide();
+    },
+    showElement: function (e) {
+      e.show();
+    },
+  };
+  const f = a("transform");
+
   function d(t, n) {
     (this.element = t),
       (this.options = e.extend({}, s, n)),
@@ -7,26 +28,8 @@
       (this._name = i),
       this.init();
   }
-  var i = "stellar",
-    s = {
-      scrollProperty: "scroll",
-      positionProperty: "position",
-      horizontalScrolling: !0,
-      verticalScrolling: !0,
-      horizontalOffset: 0,
-      verticalOffset: 0,
-      responsive: !1,
-      parallaxBackgrounds: !0,
-      parallaxElements: !0,
-      hideDistantElements: !0,
-      hideElement: function (e) {
-        e.hide();
-      },
-      showElement: function (e) {
-        e.show();
-      },
-    },
-    o = {
+
+  const o = {
       scroll: {
         getLeft: function (e) {
           return e.scrollLeft();
@@ -89,7 +92,7 @@
       },
     },
     a = (function () {
-      var t = /^(Moz|Webkit|Khtml|O|ms|Icab)(?=[A-Z])/,
+      let t = /^(Moz|Webkit|Khtml|O|ms|Icab)(?=[A-Z])/,
         n = e("script")[0].style,
         r = "",
         i;
@@ -108,7 +111,6 @@
         }
       );
     })(),
-    f = a("transform"),
     l = e("<div />").css("background-position-x") !== r,
     c = l
       ? function (e, t, n) {
@@ -162,7 +164,7 @@
             : this.$scrollElement.parent());
     },
     _defineGetters: function () {
-      var e = this,
+      const e = this,
         t = o[e.options.scrollProperty];
       (this._getScrollLeft = function () {
         return t.getLeft(e.$scrollElement);
@@ -197,7 +199,7 @@
           });
     },
     _handleWindowLoadAndResize: function () {
-      var n = this,
+      const n = this,
         r = e(t);
       n.options.responsive &&
         r.bind("load." + this.name, function () {
@@ -208,7 +210,7 @@
         });
     },
     refresh: function (n) {
-      var r = this,
+      const r = this,
         i = r._getScrollLeft(),
         s = r._getScrollTop();
       (!n || !n.firstLoad) && this._reset(),
@@ -232,7 +234,7 @@
         this._setScrollTop(s);
     },
     _detectViewport: function () {
-      var e = this.$viewportElement.offset(),
+      const e = this.$viewportElement.offset(),
         t = e !== null && e !== r;
       (this.viewportWidth = this.$viewportElement.width()),
         (this.viewportHeight = this.$viewportElement.height()),
@@ -240,16 +242,16 @@
         (this.viewportOffsetLeft = t ? e.left : 0);
     },
     _findParticles: function () {
-      var t = this,
+      const t = this,
         n = this._getScrollLeft(),
         i = this._getScrollTop();
       if (this.particles !== r)
-        for (var s = this.particles.length - 1; s >= 0; s--)
+        for (let s = this.particles.length - 1; s >= 0; s--)
           this.particles[s].$element.data("stellar-elementIsActive", r);
       this.particles = [];
       if (!this.options.parallaxElements) return;
       this.$element.find("[data-stellar-ratio]").each(function (n) {
-        var i = e(this),
+        let i = e(this),
           s,
           o,
           u,
@@ -285,7 +287,7 @@
           (h = i.offset().left - f),
           (p = i.offset().top - l),
           i.parents().each(function () {
-            var t = e(this);
+            const t = e(this);
             if (t.data("stellar-offset-parent") === !0)
               return (d = m), (v = g), (c = t), !1;
             (m += t.position().left), (g += t.position().top);
@@ -323,7 +325,7 @@
       });
     },
     _findBackgrounds: function () {
-      var t = this,
+      let t = this,
         n = this._getScrollLeft(),
         i = this._getScrollTop(),
         s;
@@ -333,7 +335,7 @@
         this.$element.data("stellar-background-ratio") &&
           (s = s.add(this.$element)),
         s.each(function () {
-          var s = e(this),
+          let s = e(this),
             o = h(s),
             u,
             a,
@@ -370,7 +372,7 @@
             (v = s.offset().left - p - n),
             (m = s.offset().top - d - i),
             s.parents().each(function () {
-              var t = e(this);
+              const t = e(this);
               if (t.data("stellar-offset-parent") === !0)
                 return (y = w), (b = E), (g = t), !1;
               (w += t.position().left), (E += t.position().top);
@@ -415,7 +417,7 @@
         });
     },
     _reset: function () {
-      var e, t, n, r, i;
+      let e, t, n, r, i;
       for (i = this.particles.length - 1; i >= 0; i--)
         (e = this.particles[i]),
           (t = e.$element.data("stellar-startingLeft")),
@@ -444,7 +446,7 @@
           .unbind("resize." + this.name);
     },
     _setOffsets: function () {
-      var n = this,
+      const n = this,
         r = e(t);
       r
         .unbind("resize.horizontal-" + this.name)
@@ -570,7 +572,7 @@
           c(o.$element, u, a);
     },
     _handleScrollEvent: function () {
-      var e = this,
+      let e = this,
         t = !1,
         n = function () {
           e._repositionElements(), (t = !1);
@@ -581,7 +583,7 @@
       this.$scrollElement.bind("scroll." + this.name, r), r();
     },
     _startAnimationLoop: function () {
-      var e = this;
+      const e = this;
       (this._animationLoop = function () {
         p(e._animationLoop), e._repositionElements();
       }),
@@ -589,7 +591,7 @@
     },
   }),
     (e.fn[i] = function (t) {
-      var n = arguments;
+      const n = arguments;
       if (t === r || typeof t == "object")
         return this.each(function () {
           e.data(this, "plugin_" + i) ||
@@ -605,7 +607,7 @@
         });
     }),
     (e[i] = function (n) {
-      var r = e(t);
+      const r = e(t);
       return r.stellar.apply(r, Array.prototype.slice.call(arguments, 0));
     }),
     (e[i].scrollProperty = o),

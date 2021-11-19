@@ -65,7 +65,7 @@ const TokenMarquee = ({ className }) => {
     const generatedSlides = [];
     const totalSlides = tokenShortPosTitles.length;
     const slideMultiplier = 3;
-    for (var j = 0; j < slideMultiplier; j++) {
+    for (let j = 0; j < slideMultiplier; j++) {
       createSlideGroup(totalSlides, generatedSlides, j + 1);
     }
     return generatedSlides;

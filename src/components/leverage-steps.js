@@ -44,10 +44,10 @@ const LeverageSteps = (direction) => {
                   </p>
                 </div>
                 <div className="step-progress absolute 2xl:bottom-40 lg:bottom-52 left-0 justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out lg:flex hidden">
-                  <span className="active w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out"></span>
-                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
-                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
-                  <span className="w-1/4 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
+                  <span className="active w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out" />
+                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
+                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
+                  <span className="w-1/4 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
                 </div>
               </div>
               <div
@@ -187,10 +187,10 @@ const LeverageSteps = (direction) => {
                   </p>
                 </div>
                 <div className="step-progress absolute 2xl:bottom-40 lg:bottom-52 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
-                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
-                  <span className="active w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out"></span>
-                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
-                  <span className="w-1/4 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
+                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
+                  <span className="active w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out" />
+                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
+                  <span className="w-1/4 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
                 </div>
               </div>
             </div>
@@ -215,10 +215,10 @@ const LeverageSteps = (direction) => {
                   </p>
                 </div>
                 <div className="step-progress absolute 2xl:bottom-40 lg:bottom-52 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
-                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
-                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
-                  <span className="active w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out"></span>
-                  <span className="w-1/4 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
+                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
+                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
+                  <span className="active w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out" />
+                  <span className="w-1/4 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
                 </div>
               </div>
             </div>
@@ -241,10 +241,10 @@ const LeverageSteps = (direction) => {
                   </p>
                 </div>
                 <div className="step-progress absolute 2xl:bottom-40 lg:bottom-52 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
-                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
-                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
-                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey"></span>
-                  <span className="active w-1/4 h-2.5 transition-background duration-500 ease-in-out"></span>
+                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
+                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
+                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
+                  <span className="active w-1/4 h-2.5 transition-background duration-500 ease-in-out" />
                 </div>
               </div>
             </div>

@@ -43,7 +43,7 @@ const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
   };
   const listenForEscape = (e) => {
     const key = e.which || e.keyCode;
-    if (key == 27) {
+    if (key === 27) {
       setShowSearch(false);
       enableScroll();
     }
@@ -80,7 +80,7 @@ const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
           className="absolute md:top-6 top-3 right-6"
           onClick={() => closeSearch()}
         >
-          <img className="w-6 h-6" src={CloseIcon} />
+          <img className="w-6 h-6" src={CloseIcon} alt={"Close Icon"} />
         </button>
         <div className="container max-w-blog mx-auto md:pt-32 pt-14 md:pb-16 pb-6 lg:px-0 px-4">
           <div className="relative flex flex-row-reverse items-center w-full md:h-14 md:mb-11 h-10 mb-8 md:px-8">

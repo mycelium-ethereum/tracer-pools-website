@@ -50,18 +50,16 @@ const TracerCity = () => {
               loop="loop"
               muted
               playsInline
-              disableRemotePlayback
               disablePictureInPicture
               className="h-fit lg:opacity-0 transition-opacity duration-700 h-full col-span-5 transform scale-110 relative rounded-xl overflow-hidden"
               poster={TracerCityPNG}
               id="tracer-city"
-            ></video>
+            />
           ) : (
             <video
               loop="loop"
               muted
               playsInline
-              disableRemotePlayback
               disablePictureInPicture
               className="h-fit lg:opacity-0 transition-opacity duration-700 h-full col-span-5 transform scale-110 relative rounded-xl overflow-hidden"
               id="tracer-city"
@@ -94,18 +92,16 @@ const TracerCity = () => {
               muted
               loop="loop"
               playsInline
-              disableRemotePlayback
               disablePictureInPicture
               id="tracer-building"
               className="h-fit lg:opacity-0 transition-opacity duration-700 lg:w-1/2 lg:mx-0 mx-auto w-3/4 md:mt-0 mt-6 lg:static lg:left-0 relative"
               poster={TracerBuildingPNG}
-            ></video>
+            />
           ) : (
             <video
               muted
               loop="loop"
               playsInline
-              disableRemotePlayback
               disablePictureInPicture
               id="tracer-building"
               className="h-fit lg:opacity-0 transition-opacity duration-700 lg:w-1/2 lg:mx-0 mx-auto w-3/4 md:mt-0 mt-6 lg:static lg:left-0 relative"

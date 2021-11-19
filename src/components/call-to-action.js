@@ -1,6 +1,5 @@
 import React from "react";
 import SolidButton from "./solid-button";
-import { Link } from "gatsby";
 
 // Images
 import CTABackground from "../../static/img/blog-posts/cta-bg.svg";

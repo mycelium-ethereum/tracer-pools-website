@@ -19,7 +19,11 @@ const PaperDownload = ({ title, header, image, link }) => {
           onMouseLeave={() => setShowDownload(false)}
         >
           <a href={link} rel="noreferrer" target="_blank" className="block">
-            <img className={"shadow-2xl"} src={image} alt="Research Paper page" />
+            <img
+              className={"shadow-2xl"}
+              src={image}
+              alt="Research Paper page"
+            />
           </a>
           <a
             className={`${

@@ -11,8 +11,9 @@ const SearchResult = ({ data, className }) => {
   };
   const postDescription = useRef();
   useEffect(() => {
-    const bodyTextHTML = marked(DOMPurify.sanitize(data.node.description));
-    postDescription.current.innerHTML = bodyTextHTML;
+    postDescription.current.innerHTML = marked(
+      DOMPurify.sanitize(data.node.description)
+    );
     postDescription.current.innerText = truncate(
       postDescription.current.innerText
     );
@@ -37,7 +38,7 @@ const SearchResult = ({ data, className }) => {
           <p
             ref={postDescription}
             className="post-text md:text-gray-400 text-black mb-6"
-          ></p>
+          />
           <Moment
             className="font-semibold color-blue block text-sm"
             format="Do MMMM, YYYY"
