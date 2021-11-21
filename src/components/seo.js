@@ -91,8 +91,19 @@ function SEO({ description, lang, meta, title, image }) {
         href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
         rel="stylesheet"
       />
-      {/* <Plausible /> */}
       <script defer data-domain="tracer.finance" src="/js/redirect.js" />
+      <script>
+        var _paq = window._paq = window._paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+        var u="https://tracerfinance.matomo.cloud/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src='//cdn.matomo.cloud/tracerfinance.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+      </script>
     </Helmet>
   );
 }
