@@ -6,6 +6,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-matomo",
+      options: {
+        siteId: "2",
+        matomoUrl: "https://tracerfinance.matomo.cloud",
+        siteUrl: "https://tracer.finance",
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: "gatsby-starter-default",
