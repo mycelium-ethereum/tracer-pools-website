@@ -8,7 +8,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, withPrefix } from "gatsby";
 
 // Images
 import OpenGraphLogo from "/static/img/general/open-graph.png";
@@ -85,6 +85,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
       ].concat(meta)}
     >
+      <script src={withPrefix('script.js')} type="text/javascript" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
       <link
