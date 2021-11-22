@@ -11,6 +11,7 @@ module.exports = {
         siteId: "2",
         matomoUrl: "https://tracerfinance.matomo.cloud",
         siteUrl: "https://tracer.finance",
+        disableCookies: true,
       },
     },
     {
