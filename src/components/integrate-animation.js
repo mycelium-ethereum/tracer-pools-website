@@ -34,7 +34,7 @@ const IntegrateAnimation = () => {
       <div className="flex h-full w-full container mx-auto relative items-center 2xl:pb-36 lg:flex-row lg:justify-end justify-start xl:px-0 flex-col px-4">
         <div className="force-flex lg:absolute xl:left-0 left-4 lg:mt-48 lg:justify-start lg:flex-row justify-center flex-col mx-auto z-10">
           <div className="integrate-text xl:w-full lg:w-96 h-auto flex flex-col justify-center">
-            <h1 className="2xl:text-6xl lg:text-5xl lg:text-left text-center text-3xl font-bold text-white mb-4">
+            <h1 id={"integrate-now"} className="2xl:text-6xl lg:text-5xl lg:text-left text-center text-3xl font-bold text-white mb-4">
               Integrate Now
             </h1>
             <p className="fade-anim transition-all duration-500 text-center xl:text-2xl lg:opacity-0 lg:text-xl lg:text-left sm:text-lg sm:w-auto w-60 text-lg text-white font-normal opacity-100">
