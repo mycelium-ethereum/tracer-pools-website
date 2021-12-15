@@ -42,6 +42,7 @@ const IntegrateAnimation = () => {
               into a user-facing application
             </p>
             <Button
+              id="launch-dev-docs"
               className="fade-anim mt-6 lg:opacity-0 lg:mx-0 mx-auto"
               href="https://docs.tracer.finance/market-types/perpetual-pools/mechanism-design/upkeep"
             >
