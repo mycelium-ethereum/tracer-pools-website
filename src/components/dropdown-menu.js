@@ -62,6 +62,7 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
           </span>
         </a>
         <a
+          id="tracer-governance"
           className="dropdown-option pr-2 w-full transition-colors duration-500 flex mb-6 rounded-lg"
           href="https://vote.tracer.finance/#/"
           rel="noreferrer"
