@@ -140,6 +140,7 @@ const Navbar = () => {
           </div>
           <div className="mr-3">
             <Link
+              id="learn-page"
               className="nav-link transition-colors duration-700 py-2 px-4 rounded-lg"
               to="/learn"
             >
