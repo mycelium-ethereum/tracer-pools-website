@@ -138,13 +138,13 @@ const Navbar = () => {
               <span className="text-white font-normal">Home</span>
             </Link>
           </div>
-          <div className="mr-3">
+          <div id="learn-page" className="mr-3">
             <Link
               id="learn-page"
               className="nav-link transition-colors duration-700 py-2 px-4 rounded-lg"
               to="/learn"
             >
-              <a className="text-white font-normal">Learn</a>
+              <span id="learn-page" className="text-white font-normal">Learn</span>
             </Link>
           </div>
           <div className="mr-3">
