@@ -77,6 +77,7 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
           </span>
         </a>
         <a
+          id="tracer-documentation"
           className="dropdown-option pr-2 w-full transition-colors duration-500 flex mb-6 rounded-lg"
           href="https://docs.tracer.finance"
           rel="noreferrer"
