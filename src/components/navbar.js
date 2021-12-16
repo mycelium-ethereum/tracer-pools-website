@@ -138,7 +138,7 @@ const Navbar = () => {
               <span className="text-white font-normal">Home</span>
             </Link>
           </div>
-          <div id="learn-page" className="mr-3">
+          <div className="mr-3">
             <Link
               id="learn-page"
               className="nav-link transition-colors duration-700 py-2 px-4 rounded-lg"
