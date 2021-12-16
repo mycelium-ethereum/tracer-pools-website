@@ -144,7 +144,7 @@ const Navbar = () => {
               className="nav-link transition-colors duration-700 py-2 px-4 rounded-lg"
               to="/learn"
             >
-              <span id="learn-page" className="text-white font-normal">Learn</span>
+              <span className="text-white font-normal">Learn</span>
             </Link>
           </div>
           <div className="mr-3">
