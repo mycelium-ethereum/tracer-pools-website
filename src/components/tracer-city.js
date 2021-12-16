@@ -124,6 +124,7 @@ const TracerCity = () => {
               In the Tracer Interface and earn TCR
             </small>
             <Button
+              id="view-staking"
               className="lg:ml-0 lg:mb-0 mb-12 mt-6"
               href="https://pools.tracer.finance/stake/"
             >
