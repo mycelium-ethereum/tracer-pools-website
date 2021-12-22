@@ -8,7 +8,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-matomo",
       options: {
-        siteId: "3",
+        siteId: "2",
         matomoUrl: "https://tracerfinance.matomo.cloud",
         siteUrl: "https://tracer.finance",
       },
