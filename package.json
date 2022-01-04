@@ -21,7 +21,6 @@
     "gatsby-plugin-ipfs": "^2.0.2",
     "gatsby-plugin-json-remark": "^1.1.5",
     "gatsby-plugin-manifest": "^2.12.1",
-    "gatsby-plugin-matomo": "^0.10.0",
     "gatsby-plugin-mdx": "^1.8.0",
     "gatsby-plugin-netlify": "^2.11.1",
     "gatsby-plugin-plausible": "0.0.7",
