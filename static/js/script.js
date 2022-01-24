@@ -1,10 +1,10 @@
-const w = window.innerWidth;
-let size = w >= 1024 ? "big" : "small";
-let controller;
-let prevElement;
-const halfScreen = window.innerHeight * 0.5;
-const threeQuarterScreen = window.innerHeight * 0.75;
-const oneFifthScreenHeight = window.innerHeight * 0.2;
+var w = window.innerWidth;
+var size = w >= 1024 ? "big" : "small";
+var controller;
+var prevElement;
+var halfScreen = window.innerHeight * 0.5;
+var threeQuarterScreen = window.innerHeight * 0.75;
+var oneFifthScreenHeight = window.innerHeight * 0.2;
 
 function stepAnimation() {
   var tl = gsap.timeline();
@@ -131,8 +131,7 @@ function updateActiveStep(progress) {
   }
 }
 function isMobile() {
-  const width = window.innerWidth;
-  return width < 1024;
+  return window.innerWidth < 1024;
 }
 function initialiseScrollMagic() {
   controller = new ScrollMagic.Controller();
@@ -154,10 +153,8 @@ function handleResize() {
     if (newSize !== size) {
       size = newSize;
       if (newSize === "small") {
-        // console.log("Destroyed");
         controller.destroy(true);
       } else {
-        // console.log("Initialised");
         initialiseScrollMagic();
       }
     }
@@ -176,8 +173,8 @@ function isSafari() {
   return isSafari && hasMediaCapabilities;
 }
 function initialiseElements() {
-  const title = document.title.split(" ")[0];
-  if (title === "Home") {
+  const title = document.title;
+  if (title.includes("Home")) {
     if (!isMobile()) {
       initialiseScrollMagic();
     }
@@ -208,4 +205,3 @@ function initialiseElements() {
   }
 }
 window.addEventListener("popstate", initialiseElements());
-// window.onload = initialiseElements();
