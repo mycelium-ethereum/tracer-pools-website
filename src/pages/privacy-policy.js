@@ -8,7 +8,7 @@ import PolicyText from "../components/policy-text";
 const Index = () => {
   return (
     <>
-      <SEO title="Privacy Policy" />
+      <SEO title="Privacy Policy" description="The Privacy Policy for tracer.finance."/>
       <Layout>
         <PolicyText />
       </Layout>
