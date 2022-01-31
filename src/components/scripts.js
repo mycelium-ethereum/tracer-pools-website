@@ -10,6 +10,7 @@ const Scripts = () => {
       "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js",
       "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js",
       "https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.1/jquery.stellar.min.js",
+      "https://platform.twitter.com/widgets.js",
       "/js/script.js",
       "/js/plausible-track.js",
     ];
