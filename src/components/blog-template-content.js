@@ -14,7 +14,12 @@ const BlogText = ({ data }) => {
   const [currentURL, setCurrentURL] = useState("");
   const bodyText = useRef();
   const setBodyText = () => {
-    bodyText.current.innerHTML = marked(DOMPurify.sanitize(data.body_text));
+    bodyText.current.innerHTML = marked(
+      DOMPurify.sanitize(data.body_text, {
+        FORCE_BODY: true,
+        ADD_TAGS: ["script"],
+      })
+    );
   };
 
   const applyStyles = (e) => {
