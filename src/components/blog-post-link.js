@@ -20,7 +20,7 @@ const PostLink = ({ data, className }) => {
   }, [data.node.description]);
   return (
     <Link
-      to={`/radar/` + data.node.slug}
+      to={`/radar/` + data.node.slug + "/"}
       className={
         "post-link relative h-auto col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-bl-xl rounded-br-xl cursor-pointer " +
         (className ? className : "")
