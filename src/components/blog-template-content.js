@@ -15,13 +15,11 @@ const BlogText = ({ data }) => {
   const [html, setHTML] = useState("");
   const bodyText = useRef();
   const setBodyText = () => {
-    setHTML(
-      marked(
-        DOMPurify.sanitize(data.body_text, {
-          FORCE_BODY: true,
-          ADD_TAGS: ["script"],
-        })
-      )
+    bodyText.current.innerHTML = marked(
+      DOMPurify.sanitize(data.body_text, {
+        FORCE_BODY: true,
+        ADD_TAGS: ["script"],
+      })
     );
   };
 
@@ -112,7 +110,6 @@ const BlogText = ({ data }) => {
             <div
               ref={bodyText}
               className="mt-6 prose mx-auto"
-              dangerouslySetInnerHTML={{ __html: html }}
             />
             <CallToAction />
           </div>
