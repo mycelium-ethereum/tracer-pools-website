@@ -893,6 +893,11 @@ button[data-category].category-dropdown.active {
 .search-result:hover + hr {
   border-color: 1px solid transparent;
 }
+
+/* Center Twitter posts on blog pages */
+.twitter-tweet {
+  margin: 0 auto !important;
+}
 /* --------------- MEDIA QUERIES --------------- */
 
 @media only screen and (min-width: 1200px) and (max-height: 600px){
