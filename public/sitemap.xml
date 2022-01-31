@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <url>
+    <loc>https://tracer.finance/</loc>
+    <lastmod>2022-01-31T05:51:11+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://tracer.finance/learn</loc>
+    <lastmod>2022-01-31T05:51:11+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tracer.finance/radar</loc>
+    <lastmod>2022-01-31T05:51:11+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tracer.finance/privacy-policy</loc>
+    <lastmod>2022-01-31T05:51:11+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tracer.finance/static/Tracer%20Perpetual%20Pools-efc7c29f638cb788832aafe0f41c07bd.pdf</loc>
+    <lastmod>2022-01-31T05:51:11+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tracer.finance/radar/sigma-prime-audit-response</loc>
+    <lastmod>2022-01-31T05:51:11+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tracer.finance/static/Purchasing%20Power%20Stablecoin-1b695338fe4a6cc41bad9a3c6aeafa3e.pdf</loc>
+    <lastmod>2022-01-31T05:51:11+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://tracer.finance/static/Tracer%20Perpetual%20Swaps-ea826cb7819c7655e078119ee7acf83e.pdf</loc>
+    <lastmod>2022-01-31T05:51:11+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://tracer.finance/static/Tracer%20Peer-to-Peer%20Finance-65f1127836ed89aad6c5ef39032bedf8.pdf</loc>
+    <lastmod>2022-01-31T05:51:11+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://tracer.finance/static/Sigma%20Prime%20Tracer%20DAO%20v1.1-18aada6b257525d929262963569b189d.pdf</loc>
+    <lastmod>2022-01-31T05:51:11+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://tracer.finance/radar/perpetual-pools-launch</loc>
+    <lastmod>2022-01-31T05:51:11+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+
+</urlset>

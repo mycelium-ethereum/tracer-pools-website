@@ -32,7 +32,7 @@ const WalletAnimation = () => {
           </p>
           <Button
             className="mx-auto mt-6 lg:opacity-0"
-            href="https://pools.tracer.finance/browse/"
+            href="https://pools.tracer.finance/stakepooltoken/"
             id="fade3"
           >
             Browse Tokens
