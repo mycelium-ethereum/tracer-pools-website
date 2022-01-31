@@ -5,6 +5,15 @@ module.exports = {
     siteUrl: `https://tracer.finance`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: `https://tracer.finance`,
+        sitemap: `https://tracer.finance/sitemap/sitemap-index.xml`,
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
