@@ -85,6 +85,9 @@ function SEO({ description, lang, meta, title, image }) {
         },
       ].concat(meta)}
     >
+      {/* Matomo tracking scripts */}
+      <script src={withPrefix('mat.js')} type="text/javascript" />
+      <script src={withPrefix('mat-container.js')} type="text/javascript" />
       <script src={withPrefix('script.js')} type="text/javascript" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
