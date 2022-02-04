@@ -93,6 +93,8 @@ function SEO({ description, lang, meta, title, image }) {
         rel="stylesheet"
       />
       <script defer data-domain="tracer.finance" src="/js/redirect.js" />
+      <script defer src="/js/mat_redirect.js" />
+      <script defer src="/js/container_9pOj4o6E_dev_d21c196aa41fb8ad3d2713ec.js" />
     </Helmet>
   );
 }
