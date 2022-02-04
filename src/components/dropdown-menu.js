@@ -50,7 +50,7 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
         <a
           className="dropdown-option pr-2 w-full transition-colors duration-500 flex mb-6 rounded-lg"
           href="https://pools.tracer.finance/"
-          rel="noreferrer"
+          
           target="_blank"
         >
           <img className="h-12 mr-3" src={TracerBoxPurple} alt="Tracer Box" />
@@ -65,7 +65,7 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
           id="tracer-governance"
           className="dropdown-option pr-2 w-full transition-colors duration-500 flex mb-6 rounded-lg"
           href="https://vote.tracer.finance/#/"
-          rel="noreferrer"
+          
           target="_blank"
         >
           <img className="h-12 mr-3" src={TracerBoxGreen} alt="Tracer Box" />
@@ -80,7 +80,7 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
           id="tracer-documentation"
           className="dropdown-option pr-2 w-full transition-colors duration-500 flex mb-6 rounded-lg"
           href="https://docs.tracer.finance"
-          rel="noreferrer"
+          
           target="_blank"
         >
           <img className="h-12 mr-3" src={TracerBoxBlue} alt="Tracer Box" />
@@ -96,7 +96,7 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
             <a
               className="w-full sm:px-2 transition-colors duration-500 flex items-center mt-5 rounded-lg text-white hover:text-gray-400"
               href={icon.href}
-              rel="noreferrer"
+              
               target="_blank"
               key={i}
             >

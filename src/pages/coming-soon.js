@@ -53,7 +53,7 @@ const ComingSoon = () => {
                   <a
                     className="inline-flex items-center ml-2"
                     href="https://discord.com/invite/kddBUqDVVb"
-                    rel="noreferrer"
+                    
                     target="_blank"
                   >
                     <img

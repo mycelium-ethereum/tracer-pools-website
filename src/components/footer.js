@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="w-max h-6 flex justify-between items-center lg:mt-0 lg:mb-0 mt-4 mb-4">
             <a
               href="https://discourse.tracer.finance"
-              rel="noreferrer"
+              
               target="_blank"
             >
               <img
@@ -46,7 +46,7 @@ const Footer = () => {
             </a>
             <a
               href="https://twitter.com/TracerDAO"
-              rel="noreferrer"
+              
               target="_blank"
             >
               <img
@@ -57,7 +57,7 @@ const Footer = () => {
             </a>
             <a
               href="https://github.com/tracer-protocol"
-              rel="noreferrer"
+              
               target="_blank"
             >
               <img
@@ -68,7 +68,7 @@ const Footer = () => {
             </a>
             <a
               href="https://discord.com/invite/kddBUqDVVb"
-              rel="noreferrer"
+              
               target="_blank"
             >
               <img
@@ -94,7 +94,7 @@ const Footer = () => {
             </a>
             <a
               className="text-base font-normal text-white xl:pl-12 sm:mb-0 sm:pl-6 mb-4"
-              rel="noreferrer"
+              
               target="_blank"
               href="https://docs.tracer.finance"
             >

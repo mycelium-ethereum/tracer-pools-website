@@ -221,7 +221,7 @@ const PartnersContributors = () => {
                   <a
                     href="https://www.afr.com/companies/financial-services/meet-the-defi-developers-who-ve-raised-funds-for-a-derivatives-system-20210628-p5850t"
                     target="_blank"
-                    rel="noreferrer"
+                    
                     className="flex flex-col justify-start items-center text-center w-96 sm:mr-5 mr-3 text-white"
                   >
                     <img
@@ -245,7 +245,7 @@ const PartnersContributors = () => {
                   <a
                     href="https://www.cointelegraph.com/news/tracer-dao-raises-4-5m-to-launch-derivatives-for-anything-with-an-oracle-feed"
                     target="_blank"
-                    rel="noreferrer"
+                    
                     className="flex flex-col justify-start items-center text-center w-96 sm:ml-5 ml-3 text-white"
                   >
                     <img

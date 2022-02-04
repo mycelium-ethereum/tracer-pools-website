@@ -39,7 +39,7 @@ const TracerDrop = () => {
             <a
               className="relative h-thumbnail overflow-hidden col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-xl cursor-pointer"
               href="https://www.youtube.com/watch?v=pkt2qgS3BFA"
-              rel="noreferrer"
+              
               target="_blank"
             >
               <img
@@ -57,7 +57,7 @@ const TracerDrop = () => {
             <a
               className="relative h-thumbnail overflow-hidden col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-xl cursor-pointer"
               href="https://www.youtube.com/watch?v=bZUzk77tgko"
-              rel="noreferrer"
+              
               target="_blank"
             >
               <img
@@ -75,7 +75,7 @@ const TracerDrop = () => {
             <a
               className="relative h-thumbnail overflow-hidden col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-xl cursor-pointer lg:block sm:hidden block"
               href="https://www.youtube.com/watch?v=pWVY84ttx6U"
-              rel="noreferrer"
+              
               target="_blank"
             >
               <img

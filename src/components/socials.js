@@ -12,7 +12,7 @@ const Socials = () => {
       <img className="-mt-3" src={Trapezoid} alt="Trapezoid" />
       <a
         href="https://discourse.tracer.finance"
-        rel="noreferrer"
+        
         target="_blank"
       >
         <img
@@ -23,7 +23,7 @@ const Socials = () => {
       </a>
       <a
         href="https://github.com/tracer-protocol"
-        rel="noreferrer"
+        
         target="_blank"
       >
         <img
@@ -32,14 +32,14 @@ const Socials = () => {
           alt="Github"
         />
       </a>
-      <a href="https://discord.gg/kvJEwfvyrW" rel="noreferrer" target="_blank">
+      <a href="https://discord.gg/kvJEwfvyrW"  target="_blank">
         <img
           className="absolute top-44 lg:left-2.5 left-3.5 cursor-pointer"
           src={Discord}
           alt="Discord"
         />
       </a>
-      <a href="https://twitter.com/TracerDAO" rel="noreferrer" target="_blank">
+      <a href="https://twitter.com/TracerDAO"  target="_blank">
         <img
           className="absolute top-60 lg:left-2.5 left-3.5 cursor-pointer"
           src={Twitter}
