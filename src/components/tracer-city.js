@@ -18,7 +18,9 @@ const TracerCity = () => {
   const playVideos = () => {
     const videos = document.querySelectorAll("video");
     videos.forEach((video) => {
-      video.play();
+      if (video) {
+        video.play();
+      }
     });
   };
   useEffect(() => {
@@ -47,6 +49,7 @@ const TracerCity = () => {
           </div>
           {isSafariBrowser ? (
             <video
+              data-piwik-ignore
               loop="loop"
               muted
               playsInline
@@ -57,6 +60,7 @@ const TracerCity = () => {
             />
           ) : (
             <video
+              data-piwik-ignore
               loop="loop"
               muted
               playsInline
@@ -89,6 +93,7 @@ const TracerCity = () => {
         <div className="container flex justify-between mx-auto w-full h-full xl:px-0 px-4 lg:flex-row flex-col-reverse relative z-10">
           {isSafariBrowser ? (
             <video
+              data-piwik-ignore
               muted
               loop="loop"
               playsInline
@@ -99,6 +104,7 @@ const TracerCity = () => {
             />
           ) : (
             <video
+              data-piwik-ignore
               muted
               loop="loop"
               playsInline
