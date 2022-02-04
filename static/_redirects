@@ -1,6 +1,10 @@
 /exchange /
 /radar/dao-participation /radar/tracer-dao-agreement
 /radar/dao-service-providers /radar/dao-service-agreement
+/whitepapers/tracer/Tracer_Whitepaper.pdf /static/Tracer%20Peer-to-Peer%20Finance-65f1127836ed89aad6c5ef39032bedf8.pdf
 /media/white-papers/perp-pools/perpetual-pools.pdf /static/Tracer%20Perpetual%20Pools-ded3c8351f5452c1f8ec58b30cdc943b.pdf
 /js/redirect.js https://plausible.io/js/plausible.outbound-links.js 200
 /api/event https://plausible.io/api/event 202
+
+/matomo.js //cdn.matomo.cloud/tracerfinance.matomo.cloud/matomo.js 200
+/container_9pOj4o6E_dev_d21c196aa41fb8ad3d2713ec.js //cdn.matomo.cloud/tracerfinance.matomo.cloud/container_9pOj4o6E_dev_d21c196aa41fb8ad3d2713ec.js 200

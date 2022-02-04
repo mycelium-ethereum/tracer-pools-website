@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Button from "../components/button";
 import { isSafari } from "react-device-detect";
 
-// Image assets
+// Image and video assets
 import TracerCityVideoWEBM from "/static/img/home-page/city/tracer-city.webm";
 import TracerCityPNG from "/static/img/home-page/city/tracer-city.png";
 import TracerBuildingWEBM from "/static/img/home-page/city/tracer-building.webm";
