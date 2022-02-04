@@ -11,7 +11,7 @@
 if ((document.cookie.indexOf('mtmPreview2_9pOj4o6E%3D1') !== -1 && window.location.href.indexOf('&mtmPreviewMode=0') === -1 && window.location.href.indexOf('?mtmPreviewMode=0') === -1) || window.location.href.indexOf('&mtmPreviewMode=9pOj4o6E') !== -1 || window.location.href.indexOf('?mtmPreviewMode=9pOj4o6E') !== -1) {
 
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=false; g.defer=false; g.src='https://tracerfinance.matomo.cloud/js/container_9pOj4o6E_preview.js'; s.parentNode.insertBefore(g,s);
+    g.type='text/javascript'; g.async=false; g.defer=false; g.src='/matomo/js/container_9pOj4o6E_preview.js'; s.parentNode.insertBefore(g,s);
     return;
 }
 
