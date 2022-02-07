@@ -12,7 +12,6 @@ import Clock from "../../static/img/blog-posts/clock.svg";
 
 const BlogText = ({ data }) => {
   const [currentURL, setCurrentURL] = useState("");
-  const [html, setHTML] = useState("");
   const bodyText = useRef();
   const setBodyText = () => {
     bodyText.current.innerHTML = marked(
@@ -107,10 +106,7 @@ const BlogText = ({ data }) => {
             <small className="block font-normal text-gray-500 sm:text-center sm:text-xl text-base">
               {data.tagline}
             </small>
-            <div
-              ref={bodyText}
-              className="mt-6 prose mx-auto"
-            />
+            <div ref={bodyText} className="mt-6 prose mx-auto" />
             <CallToAction />
           </div>
         </div>
