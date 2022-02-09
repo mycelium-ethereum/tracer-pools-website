@@ -7,17 +7,13 @@ const ShareButton = ({ url, title }) => {
       navigator
         .share({
           title: "Share " + title,
-          url: { url },
+          url: url,
         })
-        .then(() => {
-          shareButtonElement.text("Copied!");
-          setTimeout(() => {
-            shareButtonElement.text("Share");
-          }, 1000);
-        })
+        .then(() => {})
         .catch(console.error);
     } else {
       // fallback - copy URL to clipboard
+      copyToClipboard(url);
       shareButtonElement.text("Copied!");
       setTimeout(() => {
         shareButtonElement.text("Share");
