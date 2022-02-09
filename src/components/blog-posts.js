@@ -47,8 +47,9 @@ const BlogPosts = () => {
   const loadData = () => {
     let curPosts = [];
     const postData = [];
+
     if (category !== "all") {
-      posts.map((data, i) => {
+      posts.map((data) => {
         const postCategory = data.node.category;
         if (!!postCategory && postCategory === category) {
           postData.push(data);
@@ -61,6 +62,11 @@ const BlogPosts = () => {
       posts
         .slice(offset, offset + perPage)
         .map((data, i) => curPosts.push(<PostLink data={data} key={i} />));
+      // Only move V2 post to front on main page and with no
+      // category selected
+      if (category === "all" && currentPage === 0) {
+        moveV2Post(curPosts);
+      }
     }
     postContainer.current.classList.add("opacity-0");
     setTimeout(() => {
@@ -101,25 +107,47 @@ const BlogPosts = () => {
     );
   };
 
-  const adjustPostAmount = () => {
-    const width = window.innerWidth;
-    let amount = 9;
-    if (width < 1024) {
-      amount = 8;
-    }
-    if (width < 767) {
-      amount = 4;
-    }
-    setPerPage(amount);
+  // Temporary to move V2 post to front of blog posts
+  const moveV2Post = (curPosts) => {
+    const v2PostSlug = "perpetual-pools-v2-roadmap";
+    // Iterate through the posts array and current
+    // posts array (posts for the current page) to find V2 post
+    const foundElem = [];
+    let curPostElemIdx = 0;
+    posts.forEach((el) => {
+      if (el.node.slug === v2PostSlug) {
+        foundElem.push(<PostLink data={el} />);
+      }
+    });
+    curPosts.forEach((el, i) => {
+      if (el.props.data.node.slug === v2PostSlug) {
+        curPostElemIdx = i;
+      }
+    });
+    // Remove it from the curPosts array, and place it at the start
+    curPosts.splice(curPostElemIdx, 1);
+    curPosts.unshift(foundElem[0]);
   };
 
-  useEffect(() => {
-    adjustPostAmount();
-    window.addEventListener("resize", adjustPostAmount);
-    return () => {
-      window.removeEventListener("resize", adjustPostAmount);
-    };
-  }, []);
+  // const adjustPostAmount = () => {
+  //   const width = window.innerWidth;
+  //   let amount = 9;
+  //   if (width < 1024) {
+  //     amount = 8;
+  //   }
+  //   if (width < 767) {
+  //     amount = 4;
+  //   }
+  //   setPerPage(amount);
+  // };
+
+  // useEffect(() => {
+  //   adjustPostAmount();
+  //   window.addEventListener("resize", adjustPostAmount);
+  //   return () => {
+  //     window.removeEventListener("resize", adjustPostAmount);
+  //   };
+  // }, []);
 
   useEffect(() => {
     loadData();
@@ -133,9 +161,9 @@ const BlogPosts = () => {
         posts={posts}
         postTitles={postTitles}
       />
-      <section className="h-full w-full z-20 relative bg-white select-dark">
-        <div className="container w-full mx-auto pt-6 md:pb-16 pb-6 lg:px-0 sm:px-4 pl-4 pr-11">
-          <h1 className="font-semibold text-3xl text-center mb-8 md:block hidden">
+      <section className="select-dark relative z-20 h-full w-full bg-white">
+        <div className="container mx-auto w-full pt-6 pb-6 pl-4 pr-11 sm:px-4 md:pb-16 lg:px-0">
+          <h1 className="mb-8 hidden text-center text-3xl font-semibold md:block">
             Latest Articles
           </h1>
           <PostFilters
@@ -145,7 +173,7 @@ const BlogPosts = () => {
           />
           <div
             ref={postContainer}
-            className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 transition-all duration-500"
+            className="grid grid-cols-1 gap-8 transition-all duration-500 sm:grid-cols-2 lg:grid-cols-3"
           >
             <StaticQuery
               query={query}
@@ -173,7 +201,7 @@ const BlogPosts = () => {
             {/* Add in empty div as placeholder to provide more vertical height before posts load */}
             {currentPosts.length ? currentPosts : <div className="py-96" />}
           </div>
-          <hr className="mt-16 border-paginationrulegrey" />
+          <hr className="border-paginationrulegrey mt-16" />
           <ReactPaginate
             previousLabel={"Previous"}
             nextLabel={"Next"}

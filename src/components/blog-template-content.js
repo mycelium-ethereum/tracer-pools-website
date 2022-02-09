@@ -4,6 +4,8 @@ import Moment from "react-moment";
 import marked from "marked";
 import DOMPurify from "dompurify";
 import CallToAction from "./call-to-action";
+import TweetButton from "./tweet-button";
+import ShareButton from "./share-button";
 
 // Images
 import Home from "../../static/img/blog-posts/home.svg";
@@ -58,38 +60,38 @@ const BlogText = ({ data }) => {
   useEffect(() => {
     setBodyText();
     getTags();
-    setCurrentURL(window.location.pathname);
+    setCurrentURL(window.location.href);
   });
   return (
     <>
-      <section className="h-full w-full z-20 relative mt-16 bg-white select-dark">
-        <div className="container relative w-full mx-auto pt-6 lg:px-0 sm:pb-24 pb-24 px-4">
-          <div className="flex justify-between md:flex-row flex-col lg:mb-32 md:md-20 mb-12">
-            <div className="flex lg:items-center items-start text-gray-400 sm:mr-6">
-              <Link to="/" className="flex items-center w-5 h-6">
+      <section className="select-dark relative z-20 mt-16 h-full w-full bg-white">
+        <div className="container relative mx-auto w-full px-4 pt-6 pb-24 sm:pb-24 lg:px-0">
+          <div className="md:md-20 mb-12 flex flex-col justify-between md:flex-row lg:mb-32">
+            <div className="flex items-start text-gray-400 sm:mr-6 lg:items-center">
+              <Link to="/" className="flex h-6 w-5 items-center">
                 <img className="home-icon" src={Home} alt="Home" />
               </Link>
               <span className="mx-3">/</span>
               <Link to="/radar">Radar</Link>
               <span className="mx-3">/</span>
               <Link to={currentURL}>
-                <span className="block sm:whitespace-normal truncate">
+                <span className="block truncate sm:whitespace-normal">
                   {data.title}
                 </span>
               </Link>
             </div>
-            <div className="flex items-center flex-wrap text-gray-400 md:mt-0 mt-3">
-              <div className="flex items-center md:mb-0 mb-3">
+            <div className="mt-3 flex flex-wrap items-center text-gray-400 md:mt-0">
+              <div className="mb-3 flex items-center md:mb-0">
                 <img
                   className="w-4.5 h-4.5 mr-3"
                   src={Calendar}
                   alt="Calendar"
                 />
-                <Moment className="md:mr-6 mr-3" format="Do MMMM, YYYY">
+                <Moment className="mr-3 md:mr-6" format="Do MMMM, YYYY">
                   {data.publish_date}
                 </Moment>
               </div>
-              <div className="flex items-center md:mb-0 mb-3">
+              <div className="mb-3 flex items-center md:mb-0">
                 <img className="w-4.5 h-4.5 mr-3" src={Clock} alt="Clock" />
                 <span>
                   Read time: {data.read_time}{" "}
@@ -98,15 +100,19 @@ const BlogText = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="md:pr-0 pr-8 mx-auto max-w-blog">
-            <h1 className=" text-black font-semibold mb-2 md:text-4xl text-3xl sm:text-center">
+          <div className="max-w-blog mx-auto pr-8 md:pr-0">
+            <h1 className=" mb-2 text-3xl font-semibold text-black sm:text-center md:text-4xl">
               {data.title}
             </h1>
             {/* Tagline */}
-            <small className="block font-normal text-gray-500 sm:text-center sm:text-xl text-base">
+            <small className="block text-base font-normal text-gray-500 sm:text-center sm:text-xl">
               {data.tagline}
             </small>
-            <div ref={bodyText} className="mt-6 prose mx-auto" />
+            <div ref={bodyText} className="prose mx-auto mt-6 mb-10" />
+            <div className="mx-auto flex w-min">
+              <TweetButton url={currentURL} />
+              <ShareButton url={currentURL} title={data.title} />
+            </div>
             <CallToAction />
           </div>
         </div>

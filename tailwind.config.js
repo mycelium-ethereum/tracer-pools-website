@@ -9,6 +9,7 @@ module.exports = {
           1100: "#0000b0",
         },
         tracer: {
+          gray: "#E5E7EB",
           50: "#F0F0FF",
           100: "#DEDEFF",
           200: "#A6A6F2",
