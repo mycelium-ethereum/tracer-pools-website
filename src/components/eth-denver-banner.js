@@ -9,7 +9,7 @@ const ETHDenverBanner = () => {
     return window.innerWidth < 768;
   };
   const bannerEl = useRef(null);
-  const handleClick = (e) => {
+  const handleClick = () => {
     if (isMobile()) {
       bannerEl.current.style.opacity = "0";
     } else {

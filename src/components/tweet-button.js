@@ -4,6 +4,7 @@ const TweetButton = ({ url }) => {
   return (
     <a
       href={`https://twitter.com/intent/tweet?url=${url}&text=`}
+      target="_blank"
       className="group flex h-10 w-[122px] items-center justify-center rounded-xl bg-tracer-gray font-semibold transition-colors duration-500 hover:bg-blue-600 hover:text-white"
     >
       <svg
