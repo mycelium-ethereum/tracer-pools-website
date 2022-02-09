@@ -20,8 +20,8 @@ import PinkRectangle from "/static/img/home-page/background/pink-rectangle.png";
 const BackgroundParallax = () => {
   const [fixed, setFixed] = useState(false);
   const checkPage = () => {
-    const currentPage = window.location.pathname;
-    if (currentPage === "/radar" || currentPage === "/privacy-policy") {
+    const currentPage = window.location.pathname.replaceAll("/", "");
+    if (currentPage === "radar" || currentPage === "privacy-policy") {
       setFixed(true);
     }
   };
@@ -38,13 +38,13 @@ const BackgroundParallax = () => {
       <div
         className={
           (fixed ? "fixed" : "absolute") +
-          " left-0 w-screen origin-top xl:transform-none xl:left-0 lg:transform-gpu lg:scale-75 lg:left-1/2 lg:-translate-x-1/2 h-screen z-10 pointer-events-none sm:top-0 -top-32"
+          " pointer-events-none left-0 -top-32 z-10 h-screen w-screen origin-top sm:top-0 lg:left-1/2 lg:-translate-x-1/2 lg:scale-75 lg:transform-gpu xl:left-0 xl:transform-none"
         }
       >
-        <div className="relative tile-bg">
-          <div className="absolute square-middle z-30">
+        <div className="tile-bg relative">
+          <div className="square-middle absolute z-30">
             <picture
-              className="absolute opacity-50 blue-square"
+              className="blue-square absolute opacity-50"
               data-depth="0.2"
             >
               <source srcSet={BlueSquareWEBP} type="image/webp" />
@@ -52,26 +52,26 @@ const BackgroundParallax = () => {
               <img src={BlueSquare} alt={""} loading="lazy" />
             </picture>
           </div>
-          <picture className="absolute opacity-50 blue-arrow" data-depth="0.2">
+          <picture className="blue-arrow absolute opacity-50" data-depth="0.2">
             <source srcSet={BlueArrowWEBP} type="image/webp" />
             <source srcSet={BlueArrow} type="image/png" />
             <img src={BlueArrow} alt={""} loading="eager" />
           </picture>
           <picture
-            className="absolute opacity-50 green-arrow z-20"
+            className="green-arrow absolute z-20 opacity-50"
             data-depth="0.4"
           >
             <source srcSet={GreenArrowWEBP} type="image/webp" />
             <source srcSet={GreenArrow} type="image/png" />
             <img src={GreenArrow} alt={""} loading="eager" />
           </picture>
-          <picture className="absolute opacity-50 pink-arrow" data-depth="0.3">
+          <picture className="pink-arrow absolute opacity-50" data-depth="0.3">
             <source srcSet={PinkArrowWEBP} type="image/webp" />
             <source srcSet={PinkArrow} type="image/png" />
             <img src={PinkArrow} alt={""} loading="lazy" />
           </picture>
           <picture
-            className="absolute opacity-50 blue-square-medium"
+            className="blue-square-medium absolute opacity-50"
             data-depth="0.1"
           >
             <source srcSet={BlueSquareWEBP} type="image/webp" />
@@ -79,20 +79,20 @@ const BackgroundParallax = () => {
             <img src={BlueSquare} alt={""} loading="lazy" />
           </picture>
           <picture
-            className="absolute opacity-50 blue-arrow-down"
+            className="blue-arrow-down absolute opacity-50"
             data-depth="0.2"
           >
             <source srcSet={BlueArrowDownWEBP} type="image/webp" />
             <source srcSet={BlueArrowDown} type="image/png" />
             <img src={BlueArrowDown} alt={""} loading="lazy" />
           </picture>
-          <picture className="absolute opacity-50 pink-square" data-depth="0.2">
+          <picture className="pink-square absolute opacity-50" data-depth="0.2">
             <source srcSet={PinkSquareWEBP} type="image/webp" />
             <source srcSet={PinkSquare} type="image/png" />
             <img src={PinkSquare} alt={""} loading="lazy" />
           </picture>
           <picture
-            className="absolute opacity-50 pink-rectangle"
+            className="pink-rectangle absolute opacity-50"
             data-depth="0.1"
           >
             <source srcSet={PinkRectangleWEBP} type="image/webp" />
@@ -101,7 +101,7 @@ const BackgroundParallax = () => {
           </picture>
         </div>
       </div>
-      <div className="absolute top-0 left-0 w-full z-0 overflow-hidden bg-blue transition-all duration-500 min-h-body h-screen" />
+      <div className="bg-blue min-h-body absolute top-0 left-0 z-0 h-screen w-full overflow-hidden transition-all duration-500" />
     </>
   );
 };
