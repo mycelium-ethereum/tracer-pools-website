@@ -1257,6 +1257,11 @@ button[data-category].category-dropdown.active {
     min-width: 100%;
   }
 }
+@media only screen and (max-width: 360px) {
+  .eth-denver-beaver {
+    opacity: 0;
+  }
+}
 @media only screen and (max-width: 320px) {
   footer #footer-bg {
     top: 0px;
