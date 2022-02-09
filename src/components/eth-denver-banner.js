@@ -13,6 +13,7 @@ const ETHDenverBanner = () => {
     if (isMobile()) {
       bannerEl.current.style.opacity = "0";
     } else {
+      bannerEl.current.style.opacity = "0";
       bannerEl.current.style.left = "-250px";
     }
   };
