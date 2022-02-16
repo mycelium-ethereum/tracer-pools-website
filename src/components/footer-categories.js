@@ -74,10 +74,10 @@ export const tracerDAOCategory = [
     text: "Privacy Policy",
     url: "/privacy-policy",
   },
-  //   {
-  //     text: "Terms of Service",
-  //     url: "/terms-of-service",
-  //   },
+  {
+    text: "Terms of Use",
+    url: "https://pools.tracer.finance/terms-of-use/",
+  },
 ];
 
 export const productsCategory = [
