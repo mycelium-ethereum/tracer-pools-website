@@ -35,13 +35,13 @@ const TracerDrop = () => {
             </div>
             <div className="p-10 text-center text-white md:text-lg">
               <p>
-                Perpetual Pools is a new financial primitive that enables
-                anybody to take a short or long position on any underlying
-                asset. These positions are non-liquidatable, fully
-                collateralised, fully-fungible and can exist perpetually without
-                upkeep. Perpetual Pool tokens exist as ERC20 leveraged tokens
-                which live inside your wallet and are composable within the DeFi
-                economy.
+                DeFi has given the ability to access a blue-chip NFT’s in the
+                same way we might have financial instruments around property
+                rentals. We can point derivatives or other financial contracts
+                to given attributes of products in a market. Tracer’s goal is to
+                open up new financial markets that combine all components of the
+                digital future across Web3 and the Metaverse. Open-sourced,
+                decentralized and democratized.
               </p>
             </div>
           </div>
