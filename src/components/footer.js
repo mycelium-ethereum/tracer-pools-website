@@ -73,7 +73,7 @@ const Footer = () => {
             {socialLinks.map((socialLink) => (
               <a href={socialLink.url} target="_blank">
                 <img
-                  className="social-icon mr-6 h-[17px] w-auto"
+                  className="social-icon mx-3 h-[17px] w-auto sm:mr-6 sm:ml-0"
                   src={socialLink.icon}
                   alt={socialLink.alt}
                 />

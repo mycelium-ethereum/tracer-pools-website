@@ -5,7 +5,7 @@ import Container from "../components/container";
 const LearnHeader = () => {
   return (
     <>
-      <header className="relative z-20 mb-10 flex h-96 items-center pt-20 md:items-end md:pt-0">
+      <header className="relative z-20 mb-8 flex h-auto items-center pt-12 md:mb-10 md:items-end md:pt-20">
         <Container className="flex flex-col justify-center pt-24 text-center">
           <h1 className="mb-2 text-4xl font-black text-white transition-all duration-500 md:text-6xl">
             Learn
