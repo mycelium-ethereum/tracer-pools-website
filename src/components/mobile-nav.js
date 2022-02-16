@@ -6,7 +6,7 @@ const MobileNav = ({ navOpen, darkerNav, closeNav }) => {
   return (
     <menu
       className={
-        "mobile-nav fixed top-16 left-0 mt-0 h-screen w-full pl-0 transition-all duration-700" +
+        "mobile-nav fixed top-16 left-0 mt-0 h-screen w-full pl-0 transition-all duration-[600ms]" +
         (navOpen ? " active left-0" : " left-full")
       }
     >
