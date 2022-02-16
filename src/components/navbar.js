@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import Button from "./button";
 import Container from "./container";
+import MobileNav from "./mobile-nav";
 
 // Images
 import DropdownMenu from "./dropdown-menu";
@@ -153,7 +154,7 @@ const Navbar = () => {
               className="nav-link rounded-lg py-2 px-4 transition-colors duration-700"
               to="/radar"
             >
-              <span className="font-normal text-white">Blog</span>
+              <span className="font-normal text-white">News</span>
             </Link>
           </div>
           <div>
@@ -185,65 +186,7 @@ const Navbar = () => {
           <span />
         </button>
       </Container>
-      <menu
-        className={
-          "mobile-nav fixed top-16 left-0 mt-0 h-screen w-full pl-0 transition-all duration-700" +
-          (navOpen ? " active left-0" : " left-full")
-        }
-      >
-        <div
-          className={
-            "backdrop absolute top-0 left-0 h-full w-full transition-opacity duration-300" +
-            (darkerNav ? " darker" : "")
-          }
-        />
-        <div className="mx-auto flex w-60 flex-col justify-center pt-12 text-center">
-          <div className="relative">
-            <div className="mt-6 w-full">
-              <Link
-                onClick={() => closeNav()}
-                className="mobile-link rounded-lg py-2 px-4 opacity-0"
-                to="/learn"
-              >
-                <span className="text-lg font-normal text-white">Learn</span>
-              </Link>
-            </div>
-            <div className="mt-6 w-full">
-              <Button
-                onClick={() => closeNav()}
-                className="h-12 w-full border border-white text-lg font-normal opacity-0"
-                href="https://pools.tracer.finance/"
-                analytics='"LaunchPoolsNavCTA", {"props":{"plan":"Navigation"}}'
-              >
-                Launch Pools
-              </Button>
-            </div>
-            {/* <div className="mt-6 w-full">
-            <Link to="/perpetuals">
-              <span className="text-white font-normal text-lg">Perpetuals</span>
-            </Link>
-          </div> */}
-            <div className="mt-6 w-full">
-              <a
-                onClick={() => closeNav()}
-                className="mobile-link rounded-lg py-2 px-4 opacity-0"
-                href="https://vote.tracer.finance/#/"
-              >
-                <span className="text-lg font-normal text-white">Govern</span>
-              </a>
-            </div>
-            <div className="mt-6 w-full">
-              <Link
-                onClick={() => closeNav()}
-                className="mobile-link rounded-lg py-2 px-4 opacity-0"
-                to="/radar"
-              >
-                <span className="text-lg font-normal text-white">Blog</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </menu>
+      <MobileNav navOpen={navOpen} darkerNav={darkerNav} closeNav={closeNav} />
     </nav>
   );
 };

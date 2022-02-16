@@ -78,14 +78,14 @@ const FAQSection = () => {
             <FAQQuestion key={i} content={content} />
           ))}
         </Container>
-        <a
-          href="https://docs.tracer.finance"
-          target="_blank"
-          className="mx-auto flex w-max text-white underline transition-colors duration-300 hover:text-blue-400"
-        >
-          Read more FAQs
+        <div className="mx-auto flex w-max text-white transition-colors duration-300 hover:text-blue-400">
+          <span>Visit the&nbsp;</span>
+          <a href="https://docs.tracer.finance" target="_blank">
+            <span className="underline">User Documentation</span>
+          </a>
+          <span>&nbsp;to learn more</span>
           <img className="ml-3" src={OpenLinkIcon} />
-        </a>
+        </div>
       </section>
     </>
   );

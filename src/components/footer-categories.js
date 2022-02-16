@@ -86,7 +86,7 @@ export const productsCategory = [
     url: "https://pools.tracer.finance",
   },
   {
-    text: "Research",
+    text: "Swaps",
     url: "",
   },
   {
@@ -156,6 +156,10 @@ export const connectCategory = [
   {
     text: "Medium",
     url: "https://medium.com/tracer-dao",
+  },
+  {
+    text: "Mirror",
+    url: "https://mirror.xyz/0xAeFedAb4bdf19F6FCA918cB66aD4ddF9cf8Eb4a9",
   },
   {
     text: "YouTube",
