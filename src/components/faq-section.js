@@ -81,7 +81,7 @@ const FAQSection = () => {
         <a
           href="https://docs.tracer.finance"
           target="_blank"
-          className="mx-auto flex w-max text-white underline"
+          className="mx-auto flex w-max text-white underline transition-colors duration-300 hover:text-blue-400"
         >
           Read more FAQs
           <img className="ml-3" src={OpenLinkIcon} />
