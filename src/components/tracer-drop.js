@@ -48,7 +48,7 @@ const TracerDrop = () => {
           <a
             href="https://www.youtube.com/channel/UChQFEjLu4vaaS96iCRbasFg"
             target="_blank"
-            className="mx-auto mt-14 flex w-max text-white underline transition-colors duration-300 hover:text-blue-400"
+            className="mx-auto mt-14 mb-4 flex w-max text-white underline transition-colors duration-300 hover:text-blue-400"
           >
             <img className="mr-2.5" src={YouTubeIcon} />
             More episodes
