@@ -80,8 +80,8 @@ const Footer = () => {
               </a>
             ))}
           </div>
-          <span className="mt-5 text-white">
-            ©<span id="year"></span> Tracer DAO
+          <span className="mt-5 text-white sm:mt-0">
+            © <span id="year"></span> Tracer DAO
           </span>
         </div>
       </Container>
