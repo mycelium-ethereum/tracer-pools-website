@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "gatsby";
 // Components
 import LearnHeader from "../components/learn-header";
 import FAQQuestion from "../components/faq-question";
@@ -16,9 +16,12 @@ const FAQSection = () => {
           Arbitrum. Arbitrum is an Ethereum L2, which means it has the security
           of the Ethereum blockchain but is cheaper and faster to use. Once
           you’re connected, minting leveraged tokens is a breeze. Check out our{" "}
-          <a href="" target="_blank" className="text-blue-400 underline">
+          <Link
+            to="/radar/bridging-to-arbitrum/"
+            className="text-blue-400 underline"
+          >
             Arbitrum guide
-          </a>{" "}
+          </Link>{" "}
           to get set-up.
         </p>
       ),
@@ -34,7 +37,7 @@ const FAQSection = () => {
           without borrowing or worrying about margin calls and liquidations.
           Read more about Tracer’s Power Leverage{" "}
           <a
-            href="https://docs.tracer.finance"
+            href="https://docs.tracer.finance/market-types/perpetual-pools/mechanism-design"
             target="_blank"
             className="text-blue-400 underline"
           >
@@ -54,7 +57,11 @@ const FAQSection = () => {
           with an exchange to trade Perpetual Pool tokens. That’s because the
           tokens act most like a leveraged ETF, where positions are
           transferable. Read more{" "}
-          <a href="" target="_blank" className="text-blue-400 underline">
+          <a
+            href="https://docs.tracer.finance/tracer-faqs/perpetual-pools-faqs#how-are-perpetual-pools-different-from-perpetual-swaps"
+            target="_blank"
+            className="text-blue-400 underline"
+          >
             here
           </a>
           .
