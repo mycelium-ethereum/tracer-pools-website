@@ -147,7 +147,7 @@ export const governCategory = [
 export const connectCategory = [
   {
     text: "Discord",
-    url: "https://discourse.tracer.finance/",
+    url: "https://discord.gg/rpqXxQW",
   },
   {
     text: "Twitter",
