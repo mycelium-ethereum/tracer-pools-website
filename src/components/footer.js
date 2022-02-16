@@ -45,7 +45,7 @@ const Footer = () => {
       {!learnPage && (
         <img
           id="footer-bg"
-          className="md:-bottom-13 absolute bottom-auto -top-14 left-0 h-auto w-full sm:bottom-2 sm:top-auto lg:-bottom-6 xl:-bottom-36 2xl:-bottom-52"
+          className="absolute bottom-auto top-0 left-0 h-auto w-full min-w-[1000px]"
           src={CityBottomDark}
           alt={"City Bottom Dark"}
         />

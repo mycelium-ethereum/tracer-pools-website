@@ -3,7 +3,7 @@ import FooterLink from "./footer-link";
 
 const FooterCategory = ({ name, category }) => {
   return (
-    <div className="flex flex-col items-start">
+    <div className="flex w-max flex-col items-start">
       <span>
         <strong>{name}</strong>
       </span>
