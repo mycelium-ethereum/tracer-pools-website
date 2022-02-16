@@ -14,7 +14,7 @@ const TracerDrop = () => {
           alt=""
         />
         <Container className="pb-12 lg:max-w-[900px]">
-          <header className="mx-auto mb-10 w-max text-center">
+          <header className="mx-auto mb-10 text-center">
             <h1 className="mb-1 text-2xl font-black text-white transition-all duration-500 md:mb-3 md:text-[40px]">
               Tracer Drop
             </h1>
