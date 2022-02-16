@@ -6,11 +6,9 @@ const PaperDownload = ({ title, header, image, link }) => {
   return (
     <>
       <div className="col-span-1">
-        <div className="relative w-full lg:h-28 md:h-20 h-28 flex flex-col items-center justify-center border-0">
+        <div className="relative mb-5 flex h-12 w-full items-start justify-center border-0 sm:h-auto md:h-14">
           <div className="relative z-10 text-center">
-            <h1 className="xl:text-2xl md:text-xl text-2xl text-white font-bold">
-              {title}
-            </h1>
+            <h1 className="font-semibold text-white md:text-lg">{title}</h1>
           </div>
         </div>
         <div
@@ -18,7 +16,7 @@ const PaperDownload = ({ title, header, image, link }) => {
           onMouseEnter={() => setShowDownload(true)}
           onMouseLeave={() => setShowDownload(false)}
         >
-          <a href={link}  target="_blank" className="block">
+          <a href={link} target="_blank" className="block">
             <img
               className={"shadow-2xl"}
               src={image}
@@ -27,8 +25,8 @@ const PaperDownload = ({ title, header, image, link }) => {
           </a>
           <a
             className={`${
-              showDownload ? "flex" : "hidden"
-            } absolute inset-0 m-auto transition-colors duration-500 w-32 h-12 rounded-xl font-semibold text-white items-center justify-center bg-blue-600 hover:bg-blue-800`}
+              showDownload ? "opacity-100" : "opacity-0"
+            } absolute inset-0 m-auto flex h-12 w-32 items-center justify-center rounded-xl bg-blue-600 text-white transition-all duration-300 hover:bg-blue-800`}
             href={link}
             download
           >

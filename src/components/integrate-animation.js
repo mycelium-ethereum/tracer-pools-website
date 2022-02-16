@@ -27,30 +27,33 @@ const IntegrateAnimation = () => {
   return (
     <section
       className={
-        "integrate-section flex sm:items-center items-start h-auto md:pt-0 pt-6 " +
+        "integrate-section flex h-auto items-start pt-6 sm:items-center md:pt-0 " +
         (isActive ? "active" : "")
       }
     >
-      <div className="flex h-full w-full container mx-auto relative items-center 2xl:pb-36 lg:flex-row lg:justify-end justify-start xl:px-0 flex-col px-4">
-        <div className="force-flex lg:absolute xl:left-0 left-4 lg:mt-48 lg:justify-start lg:flex-row justify-center flex-col mx-auto z-10">
-          <div className="integrate-text xl:w-full lg:w-96 h-auto flex flex-col justify-center">
-            <h1 id={"integrate-now"} className="2xl:text-6xl lg:text-5xl lg:text-left text-center text-3xl font-bold text-white mb-4">
+      <div className="container relative mx-auto flex h-full w-full flex-col items-center justify-start px-4 lg:flex-row lg:justify-end xl:px-0 2xl:pb-36">
+        <div className="force-flex left-4 z-10 mx-auto flex-col justify-center lg:absolute lg:mt-48 lg:flex-row lg:justify-start xl:left-0">
+          <div className="integrate-text flex h-auto flex-col justify-center lg:w-96 xl:w-full">
+            <h1
+              id={"integrate-now"}
+              className="mb-4 text-center text-3xl font-bold text-white lg:text-left lg:text-5xl 2xl:text-6xl"
+            >
               Integrate Now
             </h1>
-            <p className="fade-anim transition-all duration-500 text-center xl:text-2xl lg:opacity-0 lg:text-xl lg:text-left sm:text-lg sm:w-auto w-60 text-lg text-white font-normal opacity-100">
+            <p className="fade-anim w-60 text-center text-lg font-normal text-white opacity-100 transition-all duration-500 sm:w-auto sm:text-lg lg:text-left lg:text-xl lg:opacity-0 xl:text-2xl">
               Seamlessly integrate into your proprietary trading interface or
               into a user-facing application
             </p>
             <Button
               id="launch-dev-docs"
-              className="fade-anim mt-6 lg:opacity-0 lg:mx-0 mx-auto"
+              className="fade-anim mx-auto mt-6 lg:mx-0 lg:opacity-0"
               href="https://docs.tracer.finance/market-types/perpetual-pools/mechanism-design/upkeep"
             >
               Launch Dev Docs
             </Button>
           </div>
         </div>
-        <div className="w-2/5 integrate-animation 2xl:scale-75 2xl:-right-32 transform-gpu 2xl:top-0 xl:top-4 xl:-right-36 lg:scale-50 lg:-right-40 lg:top-0 lg:relative md:-top-12 md:-right-10 sm:scale-50 sm:-right-14 sm:-top-20 absolute -right-32 -top-16">
+        <div className="integrate-animation absolute -right-32 -top-16 w-2/5 transform-gpu sm:-right-14 sm:-top-20 sm:scale-50 md:-top-12 md:-right-10 lg:relative lg:-right-40 lg:top-0 lg:scale-50 xl:top-4 xl:-right-36 2xl:-right-32 2xl:top-0 2xl:scale-75">
           <img
             className="integrate-animation__tile lg:opacity-0"
             src={Base}

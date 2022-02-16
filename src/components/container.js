@@ -1,0 +1,15 @@
+import React from "react";
+
+const Container = ({ className, children }) => {
+  return (
+    <div
+      className={`container relative z-10 mx-auto px-[30px] lg:px-0 xl:pl-2.5 ${
+        className ? className : ""
+      }`}
+    >
+      {children}
+    </div>
+  );
+};
+
+export default Container;

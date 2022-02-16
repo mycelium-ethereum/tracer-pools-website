@@ -1,21 +1,19 @@
 /* eslint-disable */
 import React from "react";
+import Container from "../components/container";
 
 const LearnHeader = () => {
   return (
     <>
-      <header className="h-96 flex md:items-end md:pt-0 pt-20 items-center z-20 relative">
-        <div className="container w-full mx-auto flex flex-col justify-center text-center pt-24 lg:px-0 px-4">
-          <small className="transition-all duration-500 md:text-3xl text-xl color-blue font-bold">
+      <header className="relative z-20 mb-10 flex h-96 items-center pt-20 md:items-end md:pt-0">
+        <Container className="flex flex-col justify-center pt-24 text-center">
+          <h1 className="mb-2 text-4xl font-black text-white transition-all duration-500 md:text-6xl">
             Learn
-          </small>
-          <h1 className="transition-all duration-500 font-black md:text-6xl text-4xl text-white mb-2">
-            Tracer Research
           </h1>
-          <span className="transition-all duration-500 md:text-2xl text-lg text-white font-normal">
-            Gain a more in-depth understanding of the Tracer protocol
-          </span>
-        </div>
+          <small className="text-xl font-normal text-white transition-all duration-500 md:text-2xl">
+            The essentials to get started using Perpetual Pools
+          </small>
+        </Container>
       </header>
     </>
   );

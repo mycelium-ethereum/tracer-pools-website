@@ -4,10 +4,11 @@ import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import ResearchPapers from "../components/research-papers";
-import LearnHeader from "../components/learn-header";
 import TracerDrop from "../components/tracer-drop";
+import TracerResearchHeader from "../components/tracer-research-header";
+import FAQSection from "../components/faq-section";
 
-const Index = () => {
+const LearnPage = () => {
   return (
     <>
       <SEO
@@ -15,7 +16,8 @@ const Index = () => {
         description="Gain a more in-depth understanding of the Tracer protocol"
       />
       <Layout>
-        <LearnHeader />
+        <FAQSection />
+        <TracerResearchHeader />
         <ResearchPapers />
         <TracerDrop />
       </Layout>
@@ -23,4 +25,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default LearnPage;

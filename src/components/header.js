@@ -1,13 +1,14 @@
 import React from "react";
+import Container from "../components/container";
 
 const Header = ({ title, subheading }) => {
   return (
     <>
-      <header className="h-72 flex z-20 relative">
-        <div className="container w-full mx-auto flex flex-col justify-center pt-24 lg:px-0 sm:text-left text-center px-4">
-          <h1 className="font-semibold text-3xl text-white mb-2">{title}</h1>
-          <small className="text-xl text-white font-normal">{subheading}</small>
-        </div>
+      <header className="relative z-20 flex h-72">
+        <Container className="flex flex-col justify-center pt-24 text-center sm:text-left">
+          <h1 className="mb-2 text-3xl font-semibold text-white">{title}</h1>
+          <small className="text-xl font-normal text-white">{subheading}</small>
+        </Container>
       </header>
     </>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import PaperDownload from "./paper-download";
+import Container from "./container";
 // Header images
 import PoolsHeader from "../../static/img/learn/pools/pools-header.png";
 import PerpetualSwapsHeader from "../../static/img/learn/swaps/perpetual-swaps-header.png";
@@ -42,13 +43,15 @@ const ResearchPapers = () => {
   };
   return (
     <>
-      <section className="h-full w-full z-20 relative mt-16">
-        <div className="container relative w-full mx-auto pb-12 xl:px-0 px-4 grid lg:grid-cols-4 md:grid-cols-2 md:gap-20 lg:pt-5 md:pt-13 pt-5 gap-12">
-          <PaperDownload {...purchaseProps} />
-          <PaperDownload {...poolsProps} />
-          <PaperDownload {...swapsProps} />
-          <PaperDownload {...p2pProps} />
-        </div>
+      <section className="relative z-20 mt-10 h-full w-full md:mt-16">
+        <Container>
+          <div className="md:pt-13 relative mx-auto grid w-full max-w-[900px] grid-cols-2 gap-12 pb-12 pt-5 md:gap-20 lg:grid-cols-4">
+            <PaperDownload {...purchaseProps} />
+            <PaperDownload {...poolsProps} />
+            <PaperDownload {...swapsProps} />
+            <PaperDownload {...p2pProps} />
+          </div>
+        </Container>
       </section>
     </>
   );
