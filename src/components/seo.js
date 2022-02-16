@@ -86,9 +86,9 @@ function SEO({ description, lang, meta, title, image }) {
       ].concat(meta)}
     >
       {/* Matomo tracking scripts */}
-      <script src={withPrefix('mat.js')} type="text/javascript" />
-      <script src={withPrefix('mat-container.js')} type="text/javascript" />
-      <script src={withPrefix('script.js')} type="text/javascript" />
+      <script src={withPrefix("mat.js")} type="text/javascript" />
+      <script src={withPrefix("mat-container.js")} type="text/javascript" />
+      <script src={withPrefix("script.js")} type="text/javascript" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
       <link
@@ -103,8 +103,8 @@ function SEO({ description, lang, meta, title, image }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  description: `Tracer Perpetual Pools.`,
-  author: `Tracer Perpetual Pools`,
+  description: `Leveraged exposure. No margins. No liquidations. A new derivative primitive.`,
+  author: `Tracer Team`,
 };
 
 SEO.propTypes = {
