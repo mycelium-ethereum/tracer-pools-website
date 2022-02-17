@@ -20,15 +20,15 @@ const WalletAnimation = () => {
             id="fade1"
             className="mb-4 text-center text-3xl font-black text-white lg:text-5xl lg:leading-snug lg:opacity-0 2xl:mt-12"
           >
-            Long-term leveraged tokens
+            Fungible ERC-20
             <br />
-            with no minimum spend
+            Tokenised Positions
           </h1>
           <p
             id="fade2"
             className="color-grey color-orange text-center text-lg font-normal md:text-2xl lg:opacity-0"
           >
-            Mint, stake, trade, or hedge
+            That live in your wallet
           </p>
           <Button
             className="mx-auto mt-6 lg:opacity-0"
