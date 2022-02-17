@@ -15,7 +15,7 @@ const BrandAssetTile = ({ item, index }) => {
         )}
       </div>
       <div className="flex w-full items-center justify-between text-sm">
-        <span className="text-[#82879]">{item.description}</span>
+        <span className="text-[#828790]">{item.description}</span>
         <div className="font-semibold text-[#1C64F2]">
           <a download href={item.svg} className>
             SVG
