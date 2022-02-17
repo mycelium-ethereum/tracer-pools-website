@@ -26,7 +26,7 @@ const FooterLink = ({ content }) => {
       )}
       {/* If no URL (coming soon) */}
       {URL === "" && (
-        <div className="mb-2.5 flex items-center">
+        <div className="mb-2.5 flex cursor-default items-center">
           <span className="text-white transition-colors duration-300 hover:text-blue-400"></span>
           {content.text}
           <span className="ml-2.5 flex h-[17px] w-[46px] items-center justify-center rounded-lg bg-tracer-400 text-[10px] font-bold">
