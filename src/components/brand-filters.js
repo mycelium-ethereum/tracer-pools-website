@@ -27,6 +27,10 @@ const BrandFilters = ({ setCategory }) => {
 
   const CategoryInfo = [
     {
+      name: "all",
+      text: "All",
+    },
+    {
       name: "logos",
       text: "Logos",
     },
@@ -46,7 +50,7 @@ const BrandFilters = ({ setCategory }) => {
 
   return (
     <div className="relative z-10 mb-8 flex w-full items-center pt-12 md:mt-12 md:mb-14 md:justify-center">
-      {CategoryInfo.map((category, i) => (
+      {CategoryInfo.slice(1, 5).map((category, i) => (
         <button
           className={`hidden h-full w-auto items-center justify-center rounded-3xl bg-gray-200 py-2.5 px-6 font-semibold text-black transition-colors duration-500 md:flex ${
             i === CategoryInfo.length - 1 ? "mr-0" : "mr-6"
@@ -75,7 +79,7 @@ const BrandFilters = ({ setCategory }) => {
           </button>
           <div
             className={
-              "absolute left-0 top-12 w-max overflow-hidden rounded-md bg-white shadow transition-opacity duration-500 md:rounded-none md:bg-transparent md:p-0 md:shadow-none " +
+              "absolute left-0 top-12 w-max overflow-hidden rounded-md bg-white shadow transition-opacity duration-300 md:hidden md:rounded-none md:bg-transparent md:p-0 md:shadow-none" +
               (dropdownOpen
                 ? "pointer-events-auto opacity-100"
                 : "pointer-events-none opacity-0")
@@ -87,7 +91,7 @@ const BrandFilters = ({ setCategory }) => {
                   <button
                     data-category={category.name}
                     onClick={selectCategory}
-                    className={`category-dropdown w-full py-1 px-4 text-left text-black transition-colors duration-500 ${
+                    className={`category-dropdown w-full py-1 px-4 text-left text-black transition-colors duration-300 ${
                       i === CategoryInfo.length - 1 ? "pb-1" : ""
                     }`}
                   >
