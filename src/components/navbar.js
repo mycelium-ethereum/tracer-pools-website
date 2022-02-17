@@ -17,7 +17,7 @@ const Navbar = () => {
 
   const isCollapsed = () => {
     const width = window.innerWidth;
-    return width < 640;
+    return width < 767;
   };
   const setSolidNav = () => {
     const scrollHeight = document.documentElement.scrollTop;
@@ -79,7 +79,7 @@ const Navbar = () => {
     // eslint-disable-next-line
     <nav
       id="nav"
-      className="fixed top-0 left-0 w-full z-50"
+      className="fixed top-0 left-0 z-50 w-full"
       onMouseLeave={() => setDropdownOpen(false)}
     >
       <div
@@ -89,7 +89,7 @@ const Navbar = () => {
           (darkerNav ? " darker" : "")
         }
       />
-      <div className="container h-16 flex justify-between items-center mx-auto xl:pl-2.5 lg:px-0 px-4 relative z-10">
+      <div className="container relative z-10 mx-auto flex h-16 items-center justify-between px-4 lg:px-0 xl:pl-2.5">
         <div className="relative flex">
           <Link
             id="logo"
@@ -100,19 +100,19 @@ const Navbar = () => {
             }}
           >
             <img
-              className="sm:w-24 w-22 h-auto sm:block hidden"
+              className="w-22 hidden h-auto sm:block sm:w-24"
               src={TracerLogo}
               alt="Tracer Logo"
             />
             <img
-              className="w-12 h-10 sm:hidden"
+              className="h-10 w-12 sm:hidden"
               src={TracerLogoMobile}
               alt="Tracer Logo"
             />
           </Link>
           <button
             id="toggle"
-            className="flex pl-3 w-22 h-22 left-0 top-0 z-0 justify-center items-center cursor-pointer"
+            className="w-22 h-22 left-0 top-0 z-0 flex cursor-pointer items-center justify-center pl-3"
             onMouseEnter={() => {
               if (!isCollapsed()) handleDropdownClick();
             }}
@@ -120,7 +120,7 @@ const Navbar = () => {
           >
             <img
               className={
-                "w-4 h-auto transition-all duration-500 transform " +
+                "h-auto w-4 transform transition-all duration-500 " +
                 (dropdownOpen ? "rotate-180" : "")
               }
               src={Dropdown}
@@ -129,31 +129,40 @@ const Navbar = () => {
           </button>
           <DropdownMenu dropdownOpen={dropdownOpen} darkerNav={darkerNav} />
         </div>
-        <div className="hidden sm:flex items-center">
+        <div className="hidden items-center md:flex">
           <div className="mr-3">
             <Link
-              className="nav-link transition-colors duration-700 py-2 px-4 rounded-lg"
+              className="nav-link rounded-lg py-2 px-4 transition-colors duration-700"
               to="/"
             >
-              <span className="text-white font-normal">Home</span>
+              <span className="font-normal text-white">Home</span>
             </Link>
           </div>
           <div className="mr-3">
             <Link
               id="learn-page"
-              className="nav-link transition-colors duration-700 py-2 px-4 rounded-lg"
+              className="nav-link rounded-lg py-2 px-4 transition-colors duration-700"
               to="/learn"
             >
-              <span className="text-white font-normal">Learn</span>
+              <span className="font-normal text-white">Learn</span>
             </Link>
           </div>
           <div className="mr-3">
             <Link
-              className="nav-link transition-colors duration-700 py-2 px-4 rounded-lg"
+              className="nav-link rounded-lg py-2 px-4 transition-colors duration-700"
               to="/radar"
             >
-              <span className="text-white font-normal">Blog</span>
+              <span className="font-normal text-white">Blog</span>
             </Link>
+          </div>
+          <div className="mr-3">
+            <a
+              className="nav-link rounded-lg py-2 px-4 transition-colors duration-700"
+              target="_blank"
+              href="https://jobs.lever.co/Mycelium/?department=Tracer%20DAO"
+            >
+              <span className="font-normal text-white">Careers</span>
+            </a>
           </div>
           <div>
             <Button
@@ -168,7 +177,7 @@ const Navbar = () => {
         </div>
         <button
           className={
-            "sm:hidden block cursor-pointer menu-icon " +
+            "menu-icon block cursor-pointer md:hidden " +
             (navOpen ? "open" : "")
           }
           // eslint-disable-next-line
@@ -186,8 +195,8 @@ const Navbar = () => {
       </div>
       <menu
         className={
-          "mobile-nav fixed transition-all duration-700 h-screen w-full top-16 left-0 mt-0 pl-0" +
-          (navOpen ? " left-0 active" : " left-full")
+          "mobile-nav fixed top-16 left-0 mt-0 h-screen w-full pl-0 transition-all duration-700" +
+          (navOpen ? " active left-0" : " left-full")
         }
       >
         <div
@@ -196,21 +205,21 @@ const Navbar = () => {
             (darkerNav ? " darker" : "")
           }
         />
-        <div className="flex flex-col justify-center w-60 mx-auto text-center pt-12">
+        <div className="mx-auto flex w-60 flex-col justify-center pt-12 text-center">
           <div className="relative">
             <div className="mt-6 w-full">
               <Link
                 onClick={() => closeNav()}
-                className="mobile-link opacity-0 py-2 px-4 rounded-lg"
+                className="mobile-link rounded-lg py-2 px-4 opacity-0"
                 to="/learn"
               >
-                <span className="text-white font-normal text-lg">Learn</span>
+                <span className="text-lg font-normal text-white">Learn</span>
               </Link>
             </div>
             <div className="mt-6 w-full">
               <Button
                 onClick={() => closeNav()}
-                className="h-12 w-full border border-white font-normal text-lg opacity-0"
+                className="h-12 w-full border border-white text-lg font-normal opacity-0"
                 href="https://pools.tracer.finance/"
                 analytics='"LaunchPoolsNavCTA", {"props":{"plan":"Navigation"}}'
               >
@@ -225,20 +234,31 @@ const Navbar = () => {
             <div className="mt-6 w-full">
               <a
                 onClick={() => closeNav()}
-                className="mobile-link opacity-0 py-2 px-4 rounded-lg"
+                className="mobile-link rounded-lg py-2 px-4 opacity-0"
+                target="_blank"
                 href="https://vote.tracer.finance/#/"
               >
-                <span className="text-white font-normal text-lg">Govern</span>
+                <span className="text-lg font-normal text-white">Govern</span>
               </a>
             </div>
             <div className="mt-6 w-full">
               <Link
                 onClick={() => closeNav()}
-                className="mobile-link opacity-0 py-2 px-4 rounded-lg"
+                className="mobile-link rounded-lg py-2 px-4 opacity-0"
                 to="/radar"
               >
-                <span className="text-white font-normal text-lg">Blog</span>
+                <span className="text-lg font-normal text-white">Blog</span>
               </Link>
+            </div>
+            <div className="mt-6 w-full">
+              <a
+                onClick={() => closeNav()}
+                className="mobile-link rounded-lg py-2 px-4 opacity-0"
+                target="_blank"
+                href="https://jobs.lever.co/Mycelium/?department=Tracer%20DAO"
+              >
+                <span className="text-lg font-normal text-white">Careers</span>
+              </a>
             </div>
           </div>
         </div>
