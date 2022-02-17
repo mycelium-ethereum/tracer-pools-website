@@ -16,7 +16,9 @@ const PaperDownload = ({ title, header, image, link }) => {
         >
           <a href={link} target="_blank" className="block">
             <img
-              className={"shadow-2xl"}
+              className={
+                "shadow-2xl [transform:perspective(999px)translate3d(0,0,0)]"
+              }
               src={image}
               alt="Research Paper page"
             />
