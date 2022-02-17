@@ -40,8 +40,7 @@ const BrandPage = () => {
       heading: "Primary Logo",
       subheading: (
         <p>
-          The Primary logo is the preferred logo to use when representing
-          Tracer"
+          The Primary logo is the preferred logo to use when representing Tracer
         </p>
       ),
     },
@@ -50,7 +49,7 @@ const BrandPage = () => {
       subheading: (
         <p>
           This logo should only be used when space doesn’t permit using the
-          Primary Logo or for usage in a square format"
+          Primary Logo or for usage in a square format
         </p>
       ),
     },
