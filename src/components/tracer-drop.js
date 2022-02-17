@@ -37,10 +37,11 @@ const TracerDrop = () => {
               <p>
                 DeFi has given the ability to access a blue-chip NFT’s in the
                 same way we might have financial instruments around property
-                rentals. We can point derivatives or other financial contracts
-                to given attributes of products in a market. Tracer’s goal is to
-                open up new financial markets that combine all components of the
-                digital future across Web3 and the Metaverse. Open-sourced,
+                rentals. Now we can point derivatives or other financial
+                contracts to given attributes of products in a market. With
+                Tracer’s derivative infrastructure, the goal is to open up new
+                financial markets that combine all components of the digital
+                future across Web3 and the Metaverse. Open-sourced,
                 decentralized and democratized.
               </p>
             </div>
