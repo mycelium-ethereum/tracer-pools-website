@@ -41,7 +41,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-blue relative z-10 h-1/2 w-full overflow-hidden pt-7 lg:py-10">
+    <footer className="bg-blue relative z-10 h-1/2 w-full overflow-hidden pt-7 lg:pt-10">
       {!learnPage && (
         <img
           id="footer-bg"
