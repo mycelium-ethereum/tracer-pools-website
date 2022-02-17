@@ -22,7 +22,11 @@ const BackgroundParallax = () => {
   const [learnPage, setLearnPage] = useState(false);
   const checkPage = () => {
     const currentPage = window.location.pathname.replaceAll("/", "");
-    if (currentPage === "radar" || currentPage === "privacy-policy") {
+    if (
+      currentPage === "radar" ||
+      currentPage === "privacy-policy" ||
+      currentPage === "brand"
+    ) {
       setFixed(true);
     } else if (currentPage === "learn") {
       setLearnPage(true);
