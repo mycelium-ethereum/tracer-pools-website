@@ -23,6 +23,10 @@ module.exports = {
         },
       },
     },
+    fontFamily: {
+      sans: ["Akkurat", "sans-serif"],
+      aileron: ["Aileron", "sans-serif"],
+    },
   },
   variants: {
     extend: {},

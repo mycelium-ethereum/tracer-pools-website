@@ -126,7 +126,13 @@ const BrandPage = () => {
                 <>
                   {content.heading !== "Colors" &&
                     content.heading !== "Support Graphics" && (
-                      <>
+                      <div
+                        className={`${
+                          category === "all" || category === "logos"
+                            ? "block"
+                            : "hidden"
+                        }`}
+                      >
                         <AssetHeading
                           heading={content.heading}
                           subheading={content.subheading}
@@ -140,14 +146,21 @@ const BrandPage = () => {
                           <BrandDownloadButton
                             blue
                             link="/img/brand/Tracer Brand Graphics.zip"
+                            download
                           >
                             Download Complete Logo Set
                           </BrandDownloadButton>
                         )}
-                      </>
+                      </div>
                     )}
                   {content.heading === "Colors" && (
-                    <>
+                    <div
+                      className={`${
+                        category === "all" || category === "colours"
+                          ? "block"
+                          : "hidden"
+                      }`}
+                    >
                       <div className="md:mt-20 xl:mt-32">
                         <AssetHeading
                           heading={content.heading}
@@ -162,10 +175,16 @@ const BrandPage = () => {
                           <BrandColourTile key={i} item={item} small />
                         ))}
                       </div>
-                    </>
+                    </div>
                   )}
                   {content.heading === "Support Graphics" && (
-                    <>
+                    <div
+                      className={`${
+                        category === "all" || category === "graphics"
+                          ? "block"
+                          : "hidden"
+                      }`}
+                    >
                       <div className="md:mt-20 xl:mt-32">
                         <AssetHeading
                           heading={content.heading}
@@ -182,11 +201,12 @@ const BrandPage = () => {
                       </div>
                       <BrandDownloadButton
                         blue
+                        download
                         link="/img/brand/Tracer Support Graphics.zip"
                       >
                         Download Support Graphic Set
                       </BrandDownloadButton>
-                    </>
+                    </div>
                   )}
                 </>
               ))}
@@ -197,15 +217,21 @@ const BrandPage = () => {
                 subheading={headings[6].subheading}
               />
               <div className="relative h-80 w-full sm:h-[270px] xl:h-60">
-                <span className="absolute left-1/2 block w-[859px] -translate-x-1/2 transform text-[80px] leading-none text-[#828790] sm:w-[950px] xl:w-[2200px] xl:text-[120px]">
+                <span className="absolute left-1/2 block w-[859px] -translate-x-1/2 transform font-aileron text-[80px] leading-none text-[#828790] sm:w-[950px] xl:w-[2200px] xl:text-[120px]">
                   Leveraged exposure. No margins. No liquidations. A new
                   derivative primitive.
                 </span>
               </div>
-              <BrandDownloadButton className="my-7">
+              <BrandDownloadButton
+                className="my-7"
+                link="https://fonts.adobe.com/fonts/aileron"
+              >
                 Download Aileron
               </BrandDownloadButton>
-              <BrandDownloadButton blue>
+              <BrandDownloadButton
+                blue
+                link="https://www.fontsquirrel.com/fonts/aileron"
+              >
                 Aileron on Font Squirrel
               </BrandDownloadButton>
             </div>

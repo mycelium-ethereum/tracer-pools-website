@@ -26,8 +26,8 @@ const BrandFilters = ({ setCategory }) => {
       text: "Logos",
     },
     {
-      name: "Colours",
-      text: "Education",
+      name: "colours",
+      text: "Colours",
     },
     {
       name: "graphics",
