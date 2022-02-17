@@ -160,6 +160,9 @@ body {
 img {
   image-rendering: -webkit-optimize-contrast;
 }
+.sharpen-image {
+  transform: perspective(999px) translate3d(0, 0, 0);
+}
 .enlarge {
   transform: scale(2);
 }
