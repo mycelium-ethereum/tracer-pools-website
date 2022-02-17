@@ -47,7 +47,7 @@ export const socialLinks = [
     alt: "Github",
   },
   {
-    url: "https://discord.gg/kvJEwfvyrW",
+    url: "https://discord.gg/cNUtXBkmNH",
     icon: Discord,
     alt: "Discord",
   },
@@ -117,7 +117,7 @@ export const learnCategory = [
 export const contributeCategory = [
   {
     text: "Contributor Hub",
-    url: "https://www.notion.so/tracerdao/Tracer-DAO-Contributor-Hub-facf7139e53840da96a8d12a82364986",
+    url: "https://tracerdao.notion.site/Tracer-DAO-Contributor-Hub-facf7139e53840da96a8d12a82364986",
   },
   {
     text: "Careers",
@@ -147,7 +147,7 @@ export const governCategory = [
 export const connectCategory = [
   {
     text: "Discord",
-    url: "https://discord.gg/kvJEwfvyrW",
+    url: "https://discord.gg/cNUtXBkmNH",
   },
   {
     text: "Twitter",
