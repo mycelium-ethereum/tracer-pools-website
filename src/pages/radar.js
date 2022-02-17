@@ -9,7 +9,7 @@ import BlogPosts from "../components/blog-posts";
 const BlogPage = () => {
   return (
     <>
-      <SEO title="Blog" description="Read the latest news for Tracer." />
+      <SEO title="News" description="Read the latest news for Tracer." />
       <Layout>
         <Header
           title={"Radar"}

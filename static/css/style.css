@@ -941,9 +941,6 @@ button[data-category].category-dropdown.active {
   .small-spacer {
     height: 800px;
   }
-  footer img#footer-bg {
-    bottom: -750px;
-  }
 }
 @media only screen and (min-width: 2000px) {
   #token-trigger .container {
@@ -957,10 +954,6 @@ button[data-category].category-dropdown.active {
   }
   .small-spacer {
     height: 800px;
-  }
-  footer #footer-bg {
-    top: unset;
-    bottom: -400px;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -1264,10 +1257,6 @@ button[data-category].category-dropdown.active {
   }
 }
 @media only screen and (max-width: 320px) {
-  footer #footer-bg {
-    top: 0px;
-    bottom: unset;
-  }
   .home-icon {
     min-width: 16px;
     min-height: 16px;
