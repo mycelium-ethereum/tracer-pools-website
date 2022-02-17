@@ -1,5 +1,4 @@
 import React from "react";
-
 // Image assets
 import MobileSteps from "/static/img/home-page/steps/mobile-steps.png";
 import EmptyTile from "/static/img/home-page/steps/empty-tile.png";
@@ -21,74 +20,74 @@ const LeverageSteps = (direction) => {
           id="pinContainer"
           className={"pin-container bg-blue z-10 " + direction.direction}
         >
-          <section className="panel lg:absolute top-0 left-0 step-one flex flex-col lg:justify-center justify-start w-full h-full lg:pointer-events-none pointer-events-auto">
-            <div className="flex container mx-auto w-full lg:flex-row flex-col items-center h-auto lg:pt-48 xl:px-0 md:pt-0 pt-6 px-4">
-              <div className="step-info xl:pb-0 lg:pb-32 lg:w-2/4 w-full lg:text-left text-center relative">
+          <section className="panel step-one pointer-events-auto top-0 left-0 flex h-full w-full flex-col justify-start lg:pointer-events-none lg:absolute lg:justify-center">
+            <div className="container mx-auto flex h-auto w-full flex-col items-center px-4 pt-6 md:pt-0 lg:flex-row lg:pt-48 xl:px-0">
+              <div className="step-info relative w-full text-center lg:w-2/4 lg:pb-32 lg:text-left xl:pb-0">
                 <small
                   id="steps"
-                  className="2xl:text-3xl lg:text-2xl color-blue text-base font-bold bg-blue"
+                  className="color-blue bg-blue text-base font-bold lg:text-2xl 2xl:text-3xl"
                 >
                   Perpetual Pools
                 </small>
-                <h1 className="2xl:text-6xl text-white lg:text-5xl text-3xl font-bold bg-blue lg:mt-4 mt-0 lg:mb-10 mb-6">
+                <h1 className="bg-blue mt-0 mb-6 text-3xl font-bold text-white lg:mt-4 lg:mb-10 lg:text-5xl 2xl:text-6xl">
                   Leveraged exposure in four steps
                 </h1>
-                <div className="step-info__text items-center lg:flex hidden">
-                  <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold bg-blue">
+                <div className="step-info__text hidden items-center lg:flex">
+                  <span className="step-info__number bg-blue font-bold text-white lg:text-5xl 2xl:text-6xl">
                     01
                   </span>
-                  <p className="ml-8 2xl:text-2xl lg:text-xl text-white">
+                  <p className="ml-8 text-white lg:text-xl 2xl:text-2xl">
                     Select market
                     <br />
                     BTC/USDC or ETH/USDC
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-40 lg:bottom-52 left-0 justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out lg:flex hidden">
-                  <span className="active w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out" />
-                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
-                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
-                  <span className="w-1/4 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
+                <div className="step-progress absolute left-0 z-0 mt-4 hidden h-4 justify-between opacity-0 transition-opacity duration-500 ease-in-out lg:bottom-52 lg:flex 2xl:bottom-40">
+                  <span className="active transition-background mr-1 h-2.5 w-1/4 duration-500 ease-in-out" />
+                  <span className="transition-background bg-grey mr-1 h-2.5 w-1/4 duration-500 ease-in-out" />
+                  <span className="transition-background bg-grey mr-1 h-2.5 w-1/4 duration-500 ease-in-out" />
+                  <span className="transition-background bg-grey h-2.5 w-1/4 duration-500 ease-in-out" />
                 </div>
               </div>
               <div
                 id="mobile-steps"
-                className="lg:hidden sm:w-80 w-full mx-auto z-20 sm:pl-0 pl-4"
+                className="z-20 mx-auto w-full pl-4 sm:w-80 sm:pl-0 lg:hidden"
               >
-                <div data-step="1" className="grid grid-cols-4 w-full sm:gap-0">
-                  <span className="font-bold md:text-5xl md:pr-2 text-4xl text-white col-span-1 flex justify-end pr-4">
+                <div data-step="1" className="grid w-full grid-cols-4 sm:gap-0">
+                  <span className="col-span-1 flex justify-end pr-4 text-4xl font-bold text-white md:pr-2 md:text-5xl">
                     01
                   </span>
-                  <p className="font-normal text-sm text-white col-span-3 mb-8">
+                  <p className="col-span-3 mb-8 text-sm font-normal text-white">
                     Select market
                     <br />
                     BTC/USDC or ETH/USDC
                   </p>
                 </div>
-                <div data-step="2" className="grid grid-cols-4 w-full sm:gap-0">
-                  <span className="font-bold md:text-5xl md:pr-2 text-4xl text-white col-span-1 flex justify-end pr-4">
+                <div data-step="2" className="grid w-full grid-cols-4 sm:gap-0">
+                  <span className="col-span-1 flex justify-end pr-4 text-4xl font-bold text-white md:pr-2 md:text-5xl">
                     02
                   </span>
-                  <p className="font-normal text-sm text-white col-span-3 mb-8">
+                  <p className="col-span-3 mb-8 text-sm font-normal text-white">
                     Select side
                     <br />
                     Long or short
                   </p>
                 </div>
-                <div data-step="3" className="grid grid-cols-4 w-full sm:gap-0">
-                  <span className="font-bold md:text-5xl md:pr-2 text-4xl text-white col-span-1 flex justify-end pr-4">
+                <div data-step="3" className="grid w-full grid-cols-4 sm:gap-0">
+                  <span className="col-span-1 flex justify-end pr-4 text-4xl font-bold text-white md:pr-2 md:text-5xl">
                     03
                   </span>
-                  <p className="font-normal text-sm text-white col-span-3 mb-8">
+                  <p className="col-span-3 mb-8 text-sm font-normal text-white">
                     Choose Power Leverage
                     <br />
                     1, 2, 3, 5, or 15
                   </p>
                 </div>
-                <div data-step="4" className="grid grid-cols-4 w-full sm:gap-0">
-                  <span className="font-bold md:text-5xl md:pr-2 text-4xl text-white col-span-1 flex justify-end pr-4">
+                <div data-step="4" className="grid w-full grid-cols-4 sm:gap-0">
+                  <span className="col-span-1 flex justify-end pr-4 text-4xl font-bold text-white md:pr-2 md:text-5xl">
                     04
                   </span>
-                  <p className="font-normal text-sm text-white col-span-3">
+                  <p className="col-span-3 text-sm font-normal text-white">
                     Enter collateral
                     <br />
                     Enter collateral and select 'Buy' to gain leveraged exposure
@@ -96,13 +95,13 @@ const LeverageSteps = (direction) => {
                 </div>
                 <img
                   loading="lazy"
-                  className="relative sm:bottom-0 -bottom-8 sm:-left-1/4 left-0 min-w-full max-w-none"
+                  className="relative -bottom-8 left-0 min-w-full max-w-none sm:bottom-0 sm:-left-1/4"
                   src={MobileSteps}
                   alt="Leverage Steps"
                 />
               </div>
-              <div className="w-2/4 step-animation relative 2xl:-top-24 lg:-top-32 xl:scale-75 xl:right-11 lg:scale-50 lg:-right-12 lg:opacity-100 opacity-0 lg:block transform-gpu scale-50 hidden z-10">
-                <div className="absolute step-animation__tile">
+              <div className="step-animation relative z-10 hidden w-2/4 scale-50 transform-gpu opacity-0 lg:-top-32 lg:-right-12 lg:block lg:scale-50 lg:opacity-100 xl:right-11 xl:scale-75 2xl:-top-24">
+                <div className="step-animation__tile absolute">
                   <img
                     loading="lazy"
                     className="step-animation__empty relative top-0 right-0 w-full opacity-0"
@@ -167,84 +166,84 @@ const LeverageSteps = (direction) => {
               </div>
             </div>
           </section>
-          <section className="panel absolute top-0 left-0 w-full h-full step-two flex-col justify-center lg:pointer-events-none pointer-events-auto lg:block hidden">
-            <div className="flex container mx-auto items-center h-full lg:pt-48 xl:px-0 px-4">
-              <div className="w-2/4 step-info xl:pb-0 lg:pb-32 relative">
-                <small className="2xl:text-3xl lg:text-2xl color-blue font-bold bg-blue">
+          <section className="panel step-two pointer-events-auto absolute top-0 left-0 hidden h-full w-full flex-col justify-center lg:pointer-events-none lg:block">
+            <div className="container mx-auto flex h-full items-center px-4 lg:pt-48 xl:px-0">
+              <div className="step-info relative w-2/4 lg:pb-32 xl:pb-0">
+                <small className="color-blue bg-blue font-bold lg:text-2xl 2xl:text-3xl">
                   Perpetual Pools
                 </small>
-                <h1 className="2xl:text-6xl text-white lg:text-5xl font-bold bg-blue mt-4 mb-10">
+                <h1 className="bg-blue mt-4 mb-10 font-bold text-white lg:text-5xl 2xl:text-6xl">
                   Leveraged exposure in four steps
                 </h1>
                 <div className="step-info__text flex items-center">
-                  <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold bg-blue">
+                  <span className="step-info__number bg-blue font-bold text-white lg:text-5xl 2xl:text-6xl">
                     02
                   </span>
-                  <p className="ml-8 2xl:text-2xl lg:text-xl text-white">
+                  <p className="ml-8 text-white lg:text-xl 2xl:text-2xl">
                     Select side
                     <br />
                     Long or short
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-40 lg:bottom-52 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
-                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
-                  <span className="active w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out" />
-                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
-                  <span className="w-1/4 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
+                <div className="step-progress absolute left-0 z-0 mt-4 flex h-4 justify-between opacity-0 transition-opacity duration-500 ease-in-out lg:bottom-52 2xl:bottom-40">
+                  <span className="transition-background bg-grey mr-1 h-2.5 w-1/4 duration-500 ease-in-out" />
+                  <span className="active transition-background mr-1 h-2.5 w-1/4 duration-500 ease-in-out" />
+                  <span className="transition-background bg-grey mr-1 h-2.5 w-1/4 duration-500 ease-in-out" />
+                  <span className="transition-background bg-grey h-2.5 w-1/4 duration-500 ease-in-out" />
                 </div>
               </div>
             </div>
           </section>
-          <section className="panel absolute top-0 left-0 w-full h-full step-three flex-col justify-center lg:pointer-events-none pointer-events-auto lg:block hidden">
-            <div className="flex container mx-auto items-center h-full lg:pt-48 xl:px-0 px-4">
-              <div className="w-2/4 step-info xl:pb-0 lg:pb-32 relative">
-                <small className="2xl:text-3xl lg:text-2xl color-blue font-bold bg-blue">
+          <section className="panel step-three pointer-events-auto absolute top-0 left-0 hidden h-full w-full flex-col justify-center lg:pointer-events-none lg:block">
+            <div className="container mx-auto flex h-full items-center px-4 lg:pt-48 xl:px-0">
+              <div className="step-info relative w-2/4 lg:pb-32 xl:pb-0">
+                <small className="color-blue bg-blue font-bold lg:text-2xl 2xl:text-3xl">
                   Perpetual Pools
                 </small>
-                <h1 className="2xl:text-6xl text-white lg:text-5xl font-bold bg-blue mt-4 mb-10">
+                <h1 className="bg-blue mt-4 mb-10 font-bold text-white lg:text-5xl 2xl:text-6xl">
                   Leveraged exposure in four steps
                 </h1>
                 <div className="step-info__text flex items-center">
-                  <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold bg-blue">
+                  <span className="step-info__number bg-blue font-bold text-white lg:text-5xl 2xl:text-6xl">
                     03
                   </span>
-                  <p className="ml-8 2xl:text-2xl lg:text-xl text-white">
+                  <p className="ml-8 text-white lg:text-xl 2xl:text-2xl">
                     Choose Power Leverage
                     <br />
                     1, 2, 3, 5, or 15
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-40 lg:bottom-52 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
-                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
-                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
-                  <span className="active w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out" />
-                  <span className="w-1/4 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
+                <div className="step-progress absolute left-0 z-0 mt-4 flex h-4 justify-between opacity-0 transition-opacity duration-500 ease-in-out lg:bottom-52 2xl:bottom-40">
+                  <span className="transition-background bg-grey mr-1 h-2.5 w-1/4 duration-500 ease-in-out" />
+                  <span className="transition-background bg-grey mr-1 h-2.5 w-1/4 duration-500 ease-in-out" />
+                  <span className="active transition-background mr-1 h-2.5 w-1/4 duration-500 ease-in-out" />
+                  <span className="transition-background bg-grey h-2.5 w-1/4 duration-500 ease-in-out" />
                 </div>
               </div>
             </div>
           </section>
-          <section className="panel absolute top-0 left-0 w-full h-full step-four flex-col justify-center lg:pointer-events-none pointer-events-auto lg:block hidden">
-            <div className="flex container mx-auto items-center h-full lg:pt-48 xl:px-0 px-4">
-              <div className="w-2/4 step-info xl:pb-0 lg:pb-32 relative">
-                <small className="2xl:text-3xl lg:text-2xl color-blue font-bold bg-blue">
+          <section className="panel step-four pointer-events-auto absolute top-0 left-0 hidden h-full w-full flex-col justify-center lg:pointer-events-none lg:block">
+            <div className="container mx-auto flex h-full items-center px-4 lg:pt-48 xl:px-0">
+              <div className="step-info relative w-2/4 lg:pb-32 xl:pb-0">
+                <small className="color-blue bg-blue font-bold lg:text-2xl 2xl:text-3xl">
                   Perpetual Pools
                 </small>
-                <h1 className="2xl:text-6xl text-white lg:text-5xl font-bold bg-blue mt-4 mb-10">
+                <h1 className="bg-blue mt-4 mb-10 font-bold text-white lg:text-5xl 2xl:text-6xl">
                   Leveraged exposure in four steps
                 </h1>
-                <div className="step-info__text flex items-center w-4/5">
-                  <span className="step-info__number text-white 2xl:text-6xl lg:text-5xl font-bold bg-blue">
+                <div className="step-info__text flex w-4/5 items-center">
+                  <span className="step-info__number bg-blue font-bold text-white lg:text-5xl 2xl:text-6xl">
                     04
                   </span>
-                  <p className="ml-8 2xl:text-2xl lg:text-xl text-white">
+                  <p className="ml-8 text-white lg:text-xl 2xl:text-2xl">
                     Enter collateral and select 'Buy' to gain leveraged exposure
                   </p>
                 </div>
-                <div className="step-progress absolute 2xl:bottom-40 lg:bottom-52 left-0 flex justify-between mt-4 h-4 opacity-0 z-0 transition-opacity duration-500 ease-in-out">
-                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
-                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
-                  <span className="w-1/4 mr-1 h-2.5 transition-background duration-500 ease-in-out bg-grey" />
-                  <span className="active w-1/4 h-2.5 transition-background duration-500 ease-in-out" />
+                <div className="step-progress absolute left-0 z-0 mt-4 flex h-4 justify-between opacity-0 transition-opacity duration-500 ease-in-out lg:bottom-52 2xl:bottom-40">
+                  <span className="transition-background bg-grey mr-1 h-2.5 w-1/4 duration-500 ease-in-out" />
+                  <span className="transition-background bg-grey mr-1 h-2.5 w-1/4 duration-500 ease-in-out" />
+                  <span className="transition-background bg-grey mr-1 h-2.5 w-1/4 duration-500 ease-in-out" />
+                  <span className="active transition-background h-2.5 w-1/4 duration-500 ease-in-out" />
                 </div>
               </div>
             </div>

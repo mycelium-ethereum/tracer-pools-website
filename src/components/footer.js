@@ -1,115 +1,90 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
-
+import Container from "../components/container";
 // Images
 import CityBottomDark from "/static/img/general/footer-bg.png";
-import Discourse from "/static/img/social-icons/discourse-footer.svg";
-import Twitter from "/static/img/social-icons/twitter-footer.svg";
-import Github from "/static/img/social-icons/github-footer.svg";
-import Discord from "/static/img/social-icons/discord-footer.svg";
+import TracerLogo from "/static/img/tracer-logo.svg";
+import FooterCategoryList from "../components/footer-category-list";
 
-// Litepaper
-import PoolsPDF from "../../static/pdf/Tracer Perpetual Pools.pdf";
-
+import {
+  categoryNames,
+  socialLinks,
+  tracerDAOCategory,
+  productsCategory,
+  learnCategory,
+  contributeCategory,
+  governCategory,
+  connectCategory,
+} from "./footer-categories";
 const Footer = () => {
+  const categoryArr = [
+    tracerDAOCategory,
+    productsCategory,
+    learnCategory,
+    contributeCategory,
+    governCategory,
+    connectCategory,
+  ];
+  const [learnPage, setLearnPage] = useState(false);
   const setCopyrightYear = () => {
     document.getElementById("year").innerHTML = new Date().getFullYear();
   };
+
+  const checkPage = () => {
+    const currentPage = window.location.pathname.replaceAll("/", "");
+    setLearnPage(currentPage === "learn");
+  };
+
   useEffect(() => {
+    checkPage();
     setCopyrightYear();
-  });
+  }, []);
+
   return (
-    <footer className="w-full relative overflow-hidden lg:py-10 h-1/2 z-10 bg-blue">
-      <img
-        id="footer-bg"
-        className="absolute 2xl:-bottom-52 xl:-bottom-36 lg:-bottom-6 md:-bottom-13 sm:bottom-2 sm:top-auto bottom-auto -top-14 left-0 w-full h-auto "
-        src={CityBottomDark}
-        alt={"City Bottom Dark"}
-      />
-      <div className="container mx-auto relative xl:flex flex-col justify-between z-1 xl:px-0 px-8">
-        <div className="h-60" />
-        <div className="h-auto w-full flex lg:flex-row flex-col justify-between sm:items-center items-start">
-          <span className="text-base font-normal text-white">
-            &copy; <span id="year" /> Tracer DAO
-          </span>
-          <div className="w-max h-6 flex justify-between items-center lg:mt-0 lg:mb-0 mt-4 mb-4">
-            <a
-              href="https://discourse.tracer.finance"
-              
-              target="_blank"
-            >
-              <img
-                className="social-icon w-5 sm:ml-6"
-                src={Discourse}
-                alt="Discourse"
-              />
-            </a>
-            <a
-              href="https://twitter.com/TracerDAO"
-              
-              target="_blank"
-            >
-              <img
-                className="social-icon w-6 sm:ml-6 ml-4"
-                src={Twitter}
-                alt="Twitter"
-              />
-            </a>
-            <a
-              href="https://github.com/tracer-protocol"
-              
-              target="_blank"
-            >
-              <img
-                className="social-icon w-7 sm:ml-6 ml-4"
-                src={Github}
-                alt="GitHub"
-              />
-            </a>
-            <a
-              href="https://discord.com/invite/kddBUqDVVb"
-              
-              target="_blank"
-            >
-              <img
-                className="social-icon w-6 sm:ml-6 ml-4"
-                src={Discord}
-                alt="Discord"
-              />
-            </a>
-          </div>
-          <div className="flex w-full justify-center flex-wrap lg:h-6 lg:w-max lg:justify-between lg:flex-nowrap lg:mb-0 sm:flex-row sm:mt-0 flex-col mt-6 mb-6">
-            <Link
-              className="text-base font-normal text-white sm:mb-0 mb-4"
-              to="/privacy-policy"
-            >
-              Privacy Policy
-            </Link>
-            <a
-              className="text-base font-normal text-white xl:pl-12 sm:mb-0 sm:pl-6 mb-4"
-              href={PoolsPDF}
-              target={"_blank"}
-            >
-              Litepaper
-            </a>
-            <a
-              className="text-base font-normal text-white xl:pl-12 sm:mb-0 sm:pl-6 mb-4"
-              
-              target="_blank"
-              href="https://docs.tracer.finance"
-            >
-              Documentation (Gitbook)
-            </a>
-            <a
-              className="text-base font-normal text-white xl:pl-12 sm:mb-0 sm:pl-6 mb-4"
-              href="/radar/sigma-prime-audit-response"
-              target={"_blank"}
-            >
-              Security Audit
-            </a>
+    <footer className="bg-blue relative z-10 h-1/2 w-full overflow-hidden pt-7 lg:pt-10">
+      {!learnPage && (
+        <img
+          id="footer-bg"
+          className="absolute bottom-auto top-0 left-0 h-auto w-full min-w-[1000px]"
+          src={CityBottomDark}
+          alt={"City Bottom Dark"}
+        />
+      )}
+      <Container>
+        <div className="mb-[75px] flex flex-col items-start justify-between pr-8 md:flex-row md:pr-0">
+          <Link to="/">
+            <img src={TracerLogo} className="mr-14 h-[24px] w-[100px]" />
+          </Link>
+          <div className="mt-12 grid flex-grow transform grid-cols-2 gap-x-[75px] gap-y-12 text-white sm:grid-cols-3 md:mt-0 lg:translate-x-[95px] xl:w-max xl:translate-x-[40px] xl:grid-cols-6">
+            {categoryNames.map((category, i) => {
+              return (
+                <FooterCategoryList
+                  key={category.name}
+                  name={category.name}
+                  category={categoryArr[i]}
+                />
+              );
+            })}
           </div>
         </div>
-      </div>
+        <div className="flex flex-col items-center justify-between border-t border-[#FBFBFB] pt-5 pb-7 sm:flex-row sm:pb-20">
+          {/* Social icons */}
+          <div className="flex">
+            {socialLinks.map((socialLink) => (
+              <a href={socialLink.url} target="_blank">
+                <img
+                  className="social-icon mx-3 h-[17px] w-auto sm:mr-6 sm:ml-0"
+                  src={socialLink.icon}
+                  alt={socialLink.alt}
+                />
+              </a>
+            ))}
+          </div>
+          <span className="mt-5 text-white sm:mt-0">
+            © <span id="year"></span> Tracer DAO
+          </span>
+        </div>
+      </Container>
     </footer>
   );
 };

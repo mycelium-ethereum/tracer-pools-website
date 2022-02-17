@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import SearchResult from "./blog-search-result";
 import SearchBar from "./blog-searchbar";
 import CloseIcon from "../../static/img/blog-posts/close.svg";
+import Container from "../components/container";
 
 const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
   const [postResults, setPostResults] = useState([]);
@@ -70,35 +71,37 @@ const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
     <>
       <section
         className={
-          "fixed h-screen w-full z-50 bg-white select-dark top-0 left-0 transition-opacity duration-500 " +
+          "select-dark fixed top-0 left-0 z-50 h-screen w-full bg-white transition-opacity duration-500 " +
           (showSearch
             ? "pointer-events-all opacity-100"
             : "pointer-events-none opacity-0")
         }
       >
         <button
-          className="absolute md:top-6 top-3 right-6"
+          className="absolute top-3 right-6 md:top-6"
           onClick={() => closeSearch()}
         >
-          <img className="w-6 h-6" src={CloseIcon} alt={"Close Icon"} />
+          <img className="h-6 w-6" src={CloseIcon} alt={"Close Icon"} />
         </button>
-        <div className="container max-w-blog mx-auto md:pt-32 pt-14 md:pb-16 pb-6 lg:px-0 px-4">
-          <div className="relative flex flex-row-reverse items-center w-full md:h-14 md:mb-11 h-10 mb-8 md:px-8">
-            <SearchBar
-              postTitles={postTitles}
-              searchResults={searchResults}
-              setSearchTerm={setSearchTerm}
-            />
-          </div>
-          <div className="overflow-y-hidden md:rounded-none rounded-tl-2xl rounded-tr-2xl">
-            <div
-              className="search-results overflow-y-scroll overflow-x-hidden transition-opacity duration-500 md:block sm:grid-cols-2 grid grid-cols-1 gap-8 pb-8 md:px-8"
-              ref={searchResults}
-            >
-              {postResults}
+        <Container>
+          <div className="max-w-blog mx-auto pt-14 pb-6 md:pt-32 md:pb-16">
+            <div className="relative mb-8 flex h-10 w-full flex-row-reverse items-center md:mb-11 md:h-14 md:px-8">
+              <SearchBar
+                postTitles={postTitles}
+                searchResults={searchResults}
+                setSearchTerm={setSearchTerm}
+              />
+            </div>
+            <div className="overflow-y-hidden rounded-tl-2xl rounded-tr-2xl md:rounded-none">
+              <div
+                className="search-results grid grid-cols-1 gap-8 overflow-x-hidden overflow-y-scroll pb-8 transition-opacity duration-500 sm:grid-cols-2 md:block md:px-8"
+                ref={searchResults}
+              >
+                {postResults}
+              </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
     </>
   );

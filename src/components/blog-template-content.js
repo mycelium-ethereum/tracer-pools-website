@@ -6,6 +6,7 @@ import DOMPurify from "dompurify";
 import CallToAction from "./call-to-action";
 import TweetButton from "./tweet-button";
 import ShareButton from "./share-button";
+import Container from "./container";
 
 // Images
 import Home from "../../static/img/blog-posts/home.svg";
@@ -65,7 +66,7 @@ const BlogText = ({ data }) => {
   return (
     <>
       <section className="select-dark relative z-20 mt-16 h-full w-full bg-white">
-        <div className="container relative mx-auto w-full px-4 pt-6 pb-24 sm:pb-24 lg:px-0">
+        <Container className="pt-6 pb-24 sm:pb-24">
           <div className="md:md-20 mb-12 flex flex-col justify-between md:flex-row lg:mb-32">
             <div className="flex items-start text-gray-400 sm:mr-6 lg:items-center">
               <Link to="/" className="flex h-6 w-5 items-center">
@@ -100,6 +101,7 @@ const BlogText = ({ data }) => {
               </div>
             </div>
           </div>
+
           <div className="max-w-blog mx-auto pr-8 md:pr-0">
             <h1 className=" mb-2 text-3xl font-semibold text-black sm:text-center md:text-4xl">
               {data.title}
@@ -115,7 +117,7 @@ const BlogText = ({ data }) => {
             </div>
             <CallToAction />
           </div>
-        </div>
+        </Container>
       </section>
     </>
   );

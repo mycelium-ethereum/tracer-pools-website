@@ -20,7 +20,7 @@ const ETHDenverBanner = () => {
       <div
         onClick={handleClick}
         ref={bannerEl}
-        className="group absolute top-24 left-1/2 z-40 flex h-[54px] w-[calc(100%-32px)] -translate-x-1/2 transform-gpu items-center justify-center px-4 transition-all duration-700 ease-in-out sm:w-full sm:max-w-[610px] md:fixed md:left-0 md:h-[88px] md:w-[253px] md:-translate-x-12 md:px-0 md:hover:-translate-x-2"
+        className="group absolute top-24 left-1/2 z-40 flex h-[54px] w-[calc(100%-56px)] -translate-x-1/2 transform-gpu items-center justify-center px-4 transition-all duration-700 ease-in-out sm:w-full sm:max-w-[610px] md:fixed md:left-0 md:h-[88px] md:w-[253px] md:-translate-x-12 md:px-0 md:hover:-translate-x-2"
       >
         <div className="absolute left-0 top-0 h-[54px] w-full overflow-hidden rounded-xl md:h-[88px]">
           <img

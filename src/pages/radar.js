@@ -6,10 +6,10 @@ import SEO from "../components/seo";
 import Header from "../components/header";
 import BlogPosts from "../components/blog-posts";
 
-const Index = () => {
+const BlogPage = () => {
   return (
     <>
-      <SEO title="Blog" description="Read the latest news for Tracer." />
+      <SEO title="News" description="Read the latest news for Tracer." />
       <Layout>
         <Header
           title={"Radar"}
@@ -21,4 +21,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default BlogPage;

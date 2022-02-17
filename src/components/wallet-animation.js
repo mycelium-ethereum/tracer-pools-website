@@ -12,13 +12,13 @@ const WalletAnimation = () => {
   return (
     <>
       <section
-        className="panel relative lg:h-full w-full z-0 bg-blue overflow-hidden"
+        className="panel bg-blue relative z-0 w-full overflow-hidden lg:h-full"
         id="token-trigger"
       >
-        <div className="container flex flex-col align-center justify-start h-full w-full relative z-10 mx-auto 2xl:pt-96 xl:pt-80 xl:px-0 pt-60 px-4">
+        <div className="align-center container relative z-10 mx-auto flex h-full w-full flex-col justify-start px-4 pt-60 xl:px-0 xl:pt-80 2xl:pt-96">
           <h1
             id="fade1"
-            className="mb-4 text-center 2xl:mt-12 lg:text-5xl text-3xl font-black text-white lg:opacity-0 lg:leading-snug"
+            className="mb-4 text-center text-3xl font-black text-white lg:text-5xl lg:leading-snug lg:opacity-0 2xl:mt-12"
           >
             Fungible ERC-20
             <br />
@@ -26,7 +26,7 @@ const WalletAnimation = () => {
           </h1>
           <p
             id="fade2"
-            className="md:text-2xl text-lg color-grey text-center font-normal color-orange lg:opacity-0"
+            className="color-grey color-orange text-center text-lg font-normal md:text-2xl lg:opacity-0"
           >
             That live in your wallet
           </p>
@@ -38,23 +38,23 @@ const WalletAnimation = () => {
             Browse Tokens
           </Button>
         </div>
-        <div className="w-full relative 2xl:h-60 lg:h-48 sm:mt-16 sm:mb-12 h-48 mt-12 mb-0">
+        <div className="relative mt-12 mb-0 h-48 w-full sm:mt-16 sm:mb-12 lg:h-48 2xl:h-60">
           <TokenMarquee className="slider-left -left-16" />
-          <div className="absolute 2xl:bottom-8 2xl:w-96 lg:w-72 lg:bottom-6 left-2/4 bottom-0 transform -translate-x-1/2 h-full sm:w-60 w-48 z-20">
-            <picture className="flex flex-col justify-center items-center relative w-full">
+          <div className="absolute left-2/4 bottom-0 z-20 h-full w-48 -translate-x-1/2 transform sm:w-60 lg:bottom-6 lg:w-72 2xl:bottom-8 2xl:w-96">
+            <picture className="relative flex w-full flex-col items-center justify-center">
               <img src={MetamaskFox} alt="MetaMask" />
             </picture>
           </div>
           <TokenMarquee className="slider-right -right-16" />
         </div>
         <img
-          className="city-top absolute sm:top-2/4 left-0 w-full transition-all duration-500 pointer-events-none"
+          className="city-top pointer-events-none absolute left-0 w-full transition-all duration-500 sm:top-2/4"
           src={CityTopDark}
           alt="City Background"
           loading="eager"
         />
       </section>
-      <div className="large-spacer pt-12 pointer-events-none relative z-10 overflow-hidden">
+      <div className="large-spacer pointer-events-none relative z-10 overflow-hidden pt-12">
         <img
           className="w-full"
           src={CityTop}

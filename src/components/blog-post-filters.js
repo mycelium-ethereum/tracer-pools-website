@@ -65,13 +65,13 @@ const PostFilters = ({ setShowSearch, setCurrentPage, setCategory }) => {
 
   return (
     <div
-      className="relative flex md:justify-center items-center w-full h-11 md:mt-14 md:mb-16 mt-6 mb-8 z-10"
+      className="relative z-10 mt-6 mb-8 flex h-11 w-full items-center md:mt-14 md:mb-16 md:justify-center"
       id="top"
     >
       {CategoryInfo.map((category, i) => (
         <button
           className={
-            "justify-center items-center h-full w-auto transition-colors duration-500 py-2.5 px-6 mr-6 rounded-3xl bg-gray-200 text-black font-semibold md:flex hidden " +
+            "mr-6 hidden h-full w-auto items-center justify-center rounded-3xl bg-gray-200 py-2.5 px-6 font-semibold text-black transition-colors duration-500 md:flex " +
             (i === CategoryInfo.length - 1 ? "active" : "")
           }
           data-category={category.name}
@@ -81,24 +81,24 @@ const PostFilters = ({ setShowSearch, setCurrentPage, setCategory }) => {
         </button>
       ))}
       <button
-        className="relative md:hidden inline-flex mr-4 justify-start items-center text-base font-semibold px-8 w-auto h-11 rounded-xl bg-gray-50 pl-4"
+        className="relative mr-4 inline-flex h-11 w-auto items-center justify-start rounded-xl bg-gray-50 px-8 pl-4 text-base font-semibold md:hidden"
         onClick={() => {
           setDropdownOpen((wasOpen) => !wasOpen);
         }}
       >
         {dropdownText.length ? dropdownText : "Categories"}
         <img
-          className="absolute top-1/2 transform -translate-y-1/2 right-2 w-4 h-auto"
+          className="absolute top-1/2 right-2 h-auto w-4 -translate-y-1/2 transform"
           src={Dropdown}
           alt="Dropdown toggle"
         />
       </button>
       <div
         className={
-          "absolute left-0 top-12 md:rounded-none md:p-0 md:shadow-none shadow rounded-md md:bg-transparent bg-white transition-opacity duration-500 overflow-hidden " +
+          "absolute left-0 top-12 overflow-hidden rounded-md bg-white shadow transition-opacity duration-300 md:rounded-none md:bg-transparent md:p-0 md:shadow-none " +
           (dropdownOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none")
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0")
         }
       >
         <ul className="md:mt-2">
@@ -107,8 +107,8 @@ const PostFilters = ({ setShowSearch, setCurrentPage, setCategory }) => {
               <button
                 data-category={category.name}
                 onClick={selectCategory}
-                className={`category-dropdown py-1 px-4 text-left w-full transition-colors duration-500 text-black ${
-                  i === CategoryInfo.length - 1 ? "pb-1 active" : ""
+                className={`category-dropdown w-full py-1 px-4 text-left text-black transition-colors duration-300 ${
+                  i === CategoryInfo.length - 1 ? "active pb-1" : ""
                 }`}
               >
                 {category.text}
@@ -118,7 +118,7 @@ const PostFilters = ({ setShowSearch, setCurrentPage, setCategory }) => {
         </ul>
       </div>
       <button onClick={() => openSearch()}>
-        <img className="w-5 h-5" src={SearchIcon} alt={"Search Icon"} />
+        <img className="h-5 w-5" src={SearchIcon} alt={"Search Icon"} />
       </button>
     </div>
   );

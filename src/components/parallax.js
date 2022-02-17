@@ -19,10 +19,17 @@ import PinkRectangle from "/static/img/home-page/background/pink-rectangle.png";
 
 const BackgroundParallax = () => {
   const [fixed, setFixed] = useState(false);
+  const [learnPage, setLearnPage] = useState(false);
   const checkPage = () => {
     const currentPage = window.location.pathname.replaceAll("/", "");
-    if (currentPage === "radar" || currentPage === "privacy-policy") {
+    if (
+      currentPage === "radar" ||
+      currentPage === "privacy-policy" ||
+      currentPage === "brand"
+    ) {
       setFixed(true);
+    } else if (currentPage === "learn") {
+      setLearnPage(true);
     }
   };
 
@@ -49,7 +56,7 @@ const BackgroundParallax = () => {
             >
               <source srcSet={BlueSquareWEBP} type="image/webp" />
               <source srcSet={BlueSquare} type="image/png" />
-              <img src={BlueSquare} alt={""} loading="lazy" />
+              <img src={BlueSquare} alt={""} />
             </picture>
           </div>
           <picture className="blue-arrow absolute opacity-50" data-depth="0.2">
@@ -68,7 +75,7 @@ const BackgroundParallax = () => {
           <picture className="pink-arrow absolute opacity-50" data-depth="0.3">
             <source srcSet={PinkArrowWEBP} type="image/webp" />
             <source srcSet={PinkArrow} type="image/png" />
-            <img src={PinkArrow} alt={""} loading="lazy" />
+            <img src={PinkArrow} alt={""} />
           </picture>
           <picture
             className="blue-square-medium absolute opacity-50"
@@ -76,7 +83,7 @@ const BackgroundParallax = () => {
           >
             <source srcSet={BlueSquareWEBP} type="image/webp" />
             <source srcSet={BlueSquare} type="image/png" />
-            <img src={BlueSquare} alt={""} loading="lazy" />
+            <img src={BlueSquare} alt={""} />
           </picture>
           <picture
             className="blue-arrow-down absolute opacity-50"
@@ -84,12 +91,12 @@ const BackgroundParallax = () => {
           >
             <source srcSet={BlueArrowDownWEBP} type="image/webp" />
             <source srcSet={BlueArrowDown} type="image/png" />
-            <img src={BlueArrowDown} alt={""} loading="lazy" />
+            <img src={BlueArrowDown} alt={""} />
           </picture>
           <picture className="pink-square absolute opacity-50" data-depth="0.2">
             <source srcSet={PinkSquareWEBP} type="image/webp" />
             <source srcSet={PinkSquare} type="image/png" />
-            <img src={PinkSquare} alt={""} loading="lazy" />
+            <img src={PinkSquare} alt={""} />
           </picture>
           <picture
             className="pink-rectangle absolute opacity-50"
@@ -97,11 +104,15 @@ const BackgroundParallax = () => {
           >
             <source srcSet={PinkRectangleWEBP} type="image/webp" />
             <source srcSet={PinkRectangle} type="image/png" />
-            <img src={PinkRectangle} alt={""} loading="lazy" />
+            <img src={PinkRectangle} alt={""} />
           </picture>
         </div>
       </div>
-      <div className="bg-blue min-h-body absolute top-0 left-0 z-0 h-screen w-full overflow-hidden transition-all duration-500" />
+      <div
+        className={`bg-blue min-h-body absolute top-0 left-0 z-0 h-screen w-full overflow-hidden transition-all duration-500 ${
+          learnPage ? "hidden" : "block"
+        }`}
+      />
     </>
   );
 };

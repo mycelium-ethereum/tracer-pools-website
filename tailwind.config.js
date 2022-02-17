@@ -1,6 +1,5 @@
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: false,
   theme: {
     extend: {
       colors: {
@@ -22,6 +21,10 @@ module.exports = {
           900: "#00007A",
         },
       },
+    },
+    fontFamily: {
+      sans: ["Akkurat", "sans-serif"],
+      aileron: ["Aileron", "sans-serif"],
     },
   },
   variants: {

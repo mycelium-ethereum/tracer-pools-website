@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import Button from "./button";
+import Container from "./container";
+import MobileNav from "./mobile-nav";
 
 // Images
 import DropdownMenu from "./dropdown-menu";
@@ -17,7 +19,7 @@ const Navbar = () => {
 
   const isCollapsed = () => {
     const width = window.innerWidth;
-    return width < 767;
+    return width < 1024;
   };
   const setSolidNav = () => {
     const scrollHeight = document.documentElement.scrollTop;
@@ -56,6 +58,7 @@ const Navbar = () => {
     const notHome =
       currentPage.includes("/learn") ||
       currentPage.includes("/radar") ||
+      currentPage.includes("/brand") ||
       currentPage.includes("/privacy-policy");
     if (notHome) {
       setDarkerNav(true);
@@ -89,7 +92,7 @@ const Navbar = () => {
           (darkerNav ? " darker" : "")
         }
       />
-      <div className="container relative z-10 mx-auto flex h-16 items-center justify-between px-4 lg:px-0 xl:pl-2.5">
+      <Container className="flex h-16 items-center justify-between">
         <div className="relative flex">
           <Link
             id="logo"
@@ -129,7 +132,7 @@ const Navbar = () => {
           </button>
           <DropdownMenu dropdownOpen={dropdownOpen} darkerNav={darkerNav} />
         </div>
-        <div className="hidden items-center md:flex">
+        <div className="hidden items-center lg:flex">
           <div className="mr-3">
             <Link
               className="nav-link rounded-lg py-2 px-4 transition-colors duration-700"
@@ -152,7 +155,7 @@ const Navbar = () => {
               className="nav-link rounded-lg py-2 px-4 transition-colors duration-700"
               to="/radar"
             >
-              <span className="font-normal text-white">Blog</span>
+              <span className="font-normal text-white">News</span>
             </Link>
           </div>
           <div className="mr-3">
@@ -177,7 +180,7 @@ const Navbar = () => {
         </div>
         <button
           className={
-            "menu-icon block cursor-pointer md:hidden " +
+            "menu-icon block cursor-pointer lg:hidden " +
             (navOpen ? "open" : "")
           }
           // eslint-disable-next-line
@@ -192,77 +195,8 @@ const Navbar = () => {
           <span />
           <span />
         </button>
-      </div>
-      <menu
-        className={
-          "mobile-nav fixed top-16 left-0 mt-0 h-screen w-full pl-0 transition-all duration-700" +
-          (navOpen ? " active left-0" : " left-full")
-        }
-      >
-        <div
-          className={
-            "backdrop absolute top-0 left-0 h-full w-full transition-opacity duration-300" +
-            (darkerNav ? " darker" : "")
-          }
-        />
-        <div className="mx-auto flex w-60 flex-col justify-center pt-12 text-center">
-          <div className="relative">
-            <div className="mt-6 w-full">
-              <Link
-                onClick={() => closeNav()}
-                className="mobile-link rounded-lg py-2 px-4 opacity-0"
-                to="/learn"
-              >
-                <span className="text-lg font-normal text-white">Learn</span>
-              </Link>
-            </div>
-            <div className="mt-6 w-full">
-              <Button
-                onClick={() => closeNav()}
-                className="h-12 w-full border border-white text-lg font-normal opacity-0"
-                href="https://pools.tracer.finance/"
-                analytics='"LaunchPoolsNavCTA", {"props":{"plan":"Navigation"}}'
-              >
-                Launch Pools
-              </Button>
-            </div>
-            {/* <div className="mt-6 w-full">
-            <Link to="/perpetuals">
-              <span className="text-white font-normal text-lg">Perpetuals</span>
-            </Link>
-          </div> */}
-            <div className="mt-6 w-full">
-              <a
-                onClick={() => closeNav()}
-                className="mobile-link rounded-lg py-2 px-4 opacity-0"
-                target="_blank"
-                href="https://vote.tracer.finance/#/"
-              >
-                <span className="text-lg font-normal text-white">Govern</span>
-              </a>
-            </div>
-            <div className="mt-6 w-full">
-              <Link
-                onClick={() => closeNav()}
-                className="mobile-link rounded-lg py-2 px-4 opacity-0"
-                to="/radar"
-              >
-                <span className="text-lg font-normal text-white">Blog</span>
-              </Link>
-            </div>
-            <div className="mt-6 w-full">
-              <a
-                onClick={() => closeNav()}
-                className="mobile-link rounded-lg py-2 px-4 opacity-0"
-                target="_blank"
-                href="https://jobs.lever.co/Mycelium/?department=Tracer%20DAO"
-              >
-                <span className="text-lg font-normal text-white">Careers</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </menu>
+      </Container>
+      <MobileNav navOpen={navOpen} darkerNav={darkerNav} closeNav={closeNav} />
     </nav>
   );
 };

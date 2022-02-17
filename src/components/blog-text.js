@@ -7,6 +7,7 @@ import { Link } from "gatsby";
 import Moment from "react-moment";
 import marked from "marked";
 import DOMPurify from "dompurify";
+import Container from "../../components/container";
 
 const BlogText = ({ data }) => {
   const bodyText = useRef();
@@ -48,9 +49,9 @@ const BlogText = ({ data }) => {
   }, []);
   return (
     <>
-      <section className="h-full w-full z-20 relative mt-16 bg-white select-dark">
-        <div className="container relative w-full mx-auto pt-6 pb-6 lg:px-0 px-4">
-          <div className="flex justify-between md:flex-row flex-col lg:mb-32 md:md-20 mb-12">
+      <section className="select-dark relative z-20 mt-16 h-full w-full bg-white">
+        <Container className="pt-6 pb-6">
+          <div className="md:md-20 mb-12 flex flex-col justify-between md:flex-row lg:mb-32">
             <div className="flex items-center text-gray-400">
               <Link to="/">
                 <img className="w-4.5 h-4.5" src={Home} alt={"Home"} />
@@ -60,34 +61,34 @@ const BlogText = ({ data }) => {
               <span className="mx-3">/</span>
               <span>{data.title}</span>
             </div>
-            <div className="flex items-center flex-wrap text-gray-400 md:mt-0 mt-3">
-              <div className="flex items-center md:mb-0 mb-3">
+            <div className="mt-3 flex flex-wrap items-center text-gray-400 md:mt-0">
+              <div className="mb-3 flex items-center md:mb-0">
                 <img
                   className="w-4.5 h-4.5 mr-3"
                   src={Calendar}
                   alt={"Calendar"}
                 />
-                <Moment className="md:mr-6 mr-3" format="Do MMMM, YYYY">
+                <Moment className="mr-3 md:mr-6" format="Do MMMM, YYYY">
                   {data.publish_date}
                 </Moment>
               </div>
-              <div className="flex items-center md:mb-0 mb-3">
+              <div className="mb-3 flex items-center md:mb-0">
                 <img className="w-4.5 h-4.5 mr-3" src={Clock} alt={"Clock"} />
                 <span>Read time: {data.read_time} minutes</span>
               </div>
             </div>
           </div>
           <div className="max-w-blog mx-auto">
-            <h1 className=" text-black font-semibold mb-2 md:text-3xl text-2xl sm:text-center">
+            <h1 className=" mb-2 text-2xl font-semibold text-black sm:text-center md:text-3xl">
               {data.title}
             </h1>
             {/* Tagline */}
-            <small className="block font-normal text-gray-500 sm:text-center sm:text-xl text-base">
+            <small className="block text-base font-normal text-gray-500 sm:text-center sm:text-xl">
               {data.tagline}
             </small>
-            <div ref={bodyText} className="mt-12 md:pr-0 pr-8" />
+            <div ref={bodyText} className="mt-12 pr-8 md:pr-0" />
           </div>
-        </div>
+        </Container>
       </section>
     </>
   );

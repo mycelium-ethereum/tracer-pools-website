@@ -8,40 +8,32 @@ import Twitter from "/static/img/social-icons/twitter-side.svg";
 
 const Socials = () => {
   return (
-    <div className="fixed lg:top-1/3 top-64 z-40 xl:transform-none transform-gpu scale-75 -right-2.5">
+    <div className="fixed top-64 -right-2.5 z-40 scale-75 transform-gpu lg:top-1/3 xl:transform-none">
       <img className="-mt-3" src={Trapezoid} alt="Trapezoid" />
-      <a
-        href="https://discourse.tracer.finance"
-        
-        target="_blank"
-      >
+      <a href="https://discourse.tracer.finance" target="_blank">
         <img
-          className="absolute top-12 lg:left-2.5 left-3.5 cursor-pointer"
+          className="absolute top-12 left-3.5 cursor-pointer lg:left-2.5"
           src={Discourse}
           alt="Discourse"
         />
       </a>
-      <a
-        href="https://github.com/tracer-protocol"
-        
-        target="_blank"
-      >
+      <a href="https://github.com/tracer-protocol" target="_blank">
         <img
-          className="absolute top-28 lg:left-2.5 left-3.5 cursor-pointer"
+          className="absolute top-28 left-3.5 cursor-pointer lg:left-2.5"
           src={GitHub}
           alt="Github"
         />
       </a>
-      <a href="https://discord.gg/kvJEwfvyrW"  target="_blank">
+      <a href="https://discord.gg/cNUtXBkmNH" target="_blank">
         <img
-          className="absolute top-44 lg:left-2.5 left-3.5 cursor-pointer"
+          className="absolute top-44 left-3.5 cursor-pointer lg:left-2.5"
           src={Discord}
           alt="Discord"
         />
       </a>
-      <a href="https://twitter.com/TracerDAO"  target="_blank">
+      <a href="https://twitter.com/TracerDAO" target="_blank">
         <img
-          className="absolute top-60 lg:left-2.5 left-3.5 cursor-pointer"
+          className="absolute top-60 left-3.5 cursor-pointer lg:left-2.5"
           src={Twitter}
           alt="Twitter"
         />
