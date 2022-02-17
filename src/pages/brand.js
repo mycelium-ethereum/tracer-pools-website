@@ -105,7 +105,7 @@ const BrandPage = () => {
           subheading={"Download the Tracer brand elements for usage"}
         />
         <section className="select-dark relative z-20 h-full w-full bg-white">
-          <Container className="max-w-[1200px] text-center">
+          <Container className="text-center xl:max-w-[1200px]">
             <BrandFilters setCategory={setCategory} />
             <div className="mx-auto mb-32 max-w-[705px]">
               <h2 className="mb-2.5 text-2xl text-tracer-700">
