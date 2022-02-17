@@ -37,7 +37,7 @@ export const socialLinks = [
     alt: "Discourse",
   },
   {
-    url: "https://twitter.com/tracerfinance",
+    url: "https://twitter.com/TracerDAO",
     icon: Twitter,
     alt: "Twitter",
   },
@@ -47,7 +47,7 @@ export const socialLinks = [
     alt: "Github",
   },
   {
-    url: "https://discord.gg/rpqXxQW",
+    url: "https://discord.gg/kvJEwfvyrW",
     icon: Discord,
     alt: "Discord",
   },
