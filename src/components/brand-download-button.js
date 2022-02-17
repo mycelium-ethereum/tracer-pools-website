@@ -3,7 +3,7 @@ import React from "react";
 const BrandDownloadButton = ({ className, children, link, blue, download }) => {
   return (
     //   Only download if link is not external
-    <a href={link} download={download}>
+    <a href={link} download={download} target={download ? false : "_blank"}>
       <button
         className={`mx-auto flex h-[43px] w-[274px] items-center justify-center rounded-lg  border-0 font-semibold outline-none transition-colors duration-300 ${
           className ? className : ""
