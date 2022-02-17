@@ -78,9 +78,13 @@ const FAQSection = () => {
             <FAQQuestion key={i} content={content} />
           ))}
         </Container>
-        <div className="mx-auto flex w-max text-white transition-colors duration-300 hover:text-blue-400">
+        <div className="mx-auto flex w-max text-white">
           <span>Visit the&nbsp;</span>
-          <a href="https://docs.tracer.finance" target="_blank">
+          <a
+            href="https://docs.tracer.finance"
+            target="_blank"
+            className="transition-colors duration-300 hover:text-blue-400"
+          >
             <span className="underline">User Documentation</span>
           </a>
           <span>&nbsp;to learn more</span>
