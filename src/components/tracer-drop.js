@@ -35,7 +35,7 @@ const TracerDrop = () => {
             </div>
             <div className="p-10 text-center text-white md:text-lg">
               <p>
-                DeFi has given the ability to access a blue-chip NFT’s in the
+                DeFi has given the ability to access a blue-chip NFTs in the
                 same way we might have financial instruments around property
                 rentals. Now we can point derivatives or other financial
                 contracts to given attributes of products in a market. With
