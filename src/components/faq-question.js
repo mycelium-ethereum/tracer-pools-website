@@ -35,7 +35,7 @@ const FAQQuestion = ({ content }) => {
         {content.question}
         <img
           src={ChevronIcon}
-          className={`pointer-events-none absolute right-6 h-5 w-5 transform transition-all duration-300 ${
+          className={`pointer-events-none absolute right-6 top-6 h-5 w-5 transform transition-all duration-300 ${
             open ? "rotate-180" : "rotate-0"
           }`}
         />
