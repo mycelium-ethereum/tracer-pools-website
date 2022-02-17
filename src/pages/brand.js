@@ -10,7 +10,7 @@ import {
   logomarks,
   tracerDAOLogos,
   graphics,
-  colors,
+  colours,
 } from "../components/brand-assets";
 // Components
 import Layout from "../components/layout";
@@ -25,7 +25,7 @@ const BrandPage = () => {
     primaryLogosStacked,
     logomarks,
     tracerDAOLogos,
-    colors,
+    colours,
     graphics,
   ];
   const AssetHeading = ({ heading, subheading }) => (
