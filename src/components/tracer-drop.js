@@ -24,7 +24,7 @@ const TracerDrop = () => {
             </small>
           </header>
           <div className="rounded-bl-xl rounded-br-xl bg-[#00007A] bg-opacity-50">
-            <div className="h-[500px]">
+            <div className="aspect-video w-full">
               <iframe
                 width="100%"
                 height="100%"
