@@ -1,5 +1,5 @@
 import React from "react";
-import { AspectRatio } from "react-aspect-ratio";
+import Ratio from "react-ratio";
 import Container from "../components/container";
 import CityBottomDark from "/static/img/learn/city-bottom.png";
 import YouTubeIcon from "/static/img/learn/youtube.svg";
@@ -24,15 +24,15 @@ const TracerDrop = () => {
             </small>
           </header>
           <div className="rounded-bl-xl rounded-br-xl bg-[#00007A] bg-opacity-50">
-            <AspectRatio ratio="16/9">
+            <Ratio ratio={16 / 9}>
               <iframe
                 width="100%"
                 height="100%"
                 src="https://www.youtube.com/embed/?listType=playlist&list=PLxyjg08ON02UAORUxX82EQsk8W782O2Yl"
                 frameborder="0"
                 allowfullscreen
-              ></iframe>
-            </AspectRatio>
+              />
+            </Ratio>
             <div className="p-10 text-center text-white md:text-lg">
               <p>
                 DeFi has given the ability to access a blue-chip NFTs in the
