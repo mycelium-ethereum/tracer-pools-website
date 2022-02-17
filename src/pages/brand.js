@@ -10,7 +10,7 @@ import {
   logomarks,
   tracerDAOLogos,
   graphics,
-  colours,
+  colors,
 } from "../components/brand-assets";
 // Components
 import Layout from "../components/layout";
@@ -25,7 +25,7 @@ const BrandPage = () => {
     primaryLogosStacked,
     logomarks,
     tracerDAOLogos,
-    colours,
+    colors,
     graphics,
   ];
   const AssetHeading = ({ heading, subheading }) => (
@@ -113,7 +113,7 @@ const BrandPage = () => {
               </h2>
               <p className="mb-4 text-[#828790]">
                 To ensure correct usage of the Tracer brand, please use the
-                following Logos, Colours, Support Graphics and Typography.
+                following Logos, Colors, Support Graphics and Typography.
                 {/* For correct application and usage please refer to the downloadable
                 Brand guidelines. */}
               </p>
@@ -156,7 +156,7 @@ const BrandPage = () => {
                   {content.heading === "Colors" && (
                     <div
                       className={`${
-                        category === "all" || category === "colours"
+                        category === "all" || category === "colors"
                           ? "block"
                           : "hidden"
                       }`}
