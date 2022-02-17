@@ -3,13 +3,13 @@ import EthereumShort from "/static/img/home-page/slider/eth-s.svg";
 import TokemakShort from "/static/img/home-page/slider/toke-s.svg";
 import LinkShort from "/static/img/home-page/slider/link-s.svg";
 import EuroShort from "/static/img/home-page/slider/euro-s.svg";
-import AvalanceShort from "/static/img/home-page/slider/aave-s.svg";
+import AvalancheShort from "/static/img/home-page/slider/aave-s.svg";
 import BitcoinLong from "/static/img/home-page/slider/btc-l.svg";
 import EthereumLong from "/static/img/home-page/slider/eth-l.svg";
 import TokemakLong from "/static/img/home-page/slider/toke-l.svg";
 import LinkLong from "/static/img/home-page/slider/link-l.svg";
 import EuroLong from "/static/img/home-page/slider/euro-l.svg";
-import AvalanceLong from "/static/img/home-page/slider/aave-l.svg";
+import AvalancheLong from "/static/img/home-page/slider/aave-l.svg";
 
 export const shortPosTokens = [
   {
@@ -46,7 +46,7 @@ export const shortPosTokens = [
   },
   {
     name: "3S-AAVE/USDC",
-    image: AvalanceShort,
+    image: AvalancheShort,
   },
 ];
 
@@ -77,7 +77,7 @@ export const longPosTokens = [
   },
   {
     name: "1L-EURO/USDC",
-    image: EthereumShort,
+    image: EuroLong,
   },
   {
     name: "3L-EURO/USDC",
@@ -85,6 +85,6 @@ export const longPosTokens = [
   },
   {
     name: "3L-AAVE/USDC",
-    image: AvalanceLong,
+    image: AvalancheLong,
   },
 ];
