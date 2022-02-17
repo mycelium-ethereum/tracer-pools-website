@@ -47,7 +47,7 @@ const PartnersContributors = () => {
   };
   return (
     <>
-      <section className="h-full w-screen pb-12 pt-48 md:pt-24 md:pb-0 lg:pt-12">
+      <section className="h-full w-screen pt-48 md:pt-24 lg:py-12">
         <Slider {...settings} ref={slider}>
           <section className="panel relative w-screen">
             <Container className="flex flex-col items-center justify-start">
