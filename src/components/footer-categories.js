@@ -66,10 +66,10 @@ export const tracerDAOCategory = [
     text: "News",
     url: "/radar",
   },
-  // {
-  //   url: "/brand",
-  //   text: "Brand Assets",
-  // },
+  {
+    url: "/brand",
+    text: "Brand Assets",
+  },
   {
     text: "Privacy Policy",
     url: "/privacy-policy",
