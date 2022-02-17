@@ -6,10 +6,8 @@ const PaperDownload = ({ title, header, image, link }) => {
   return (
     <>
       <div className="col-span-1">
-        <div className="relative mb-5 flex h-12 w-full items-start justify-center border-0 sm:h-auto md:h-14">
-          <div className="relative z-10 text-center">
-            <h1 className="font-semibold text-white md:text-lg">{title}</h1>
-          </div>
+        <div className="relative flex w-full items-start justify-center border-0 pb-5 sm:h-auto">
+          <div className="relative z-10 text-center">{title}</div>
         </div>
         <div
           className="relative"

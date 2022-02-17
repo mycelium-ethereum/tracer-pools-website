@@ -19,33 +19,54 @@ import PurchasePDF from "../../static/pdf/Purchasing Power Stablecoin.pdf";
 const ResearchPapers = () => {
   const purchaseProps = {
     title: "Purchasing Power Stablecoin",
+    title: (
+      <h1 className="font-semibold leading-none text-white md:text-lg md:leading-tight">
+        Purchasing Power
+        <br /> Stablecoin
+      </h1>
+    ),
     header: PoolsHeader,
     image: PurchasePaper,
     link: PurchasePDF,
   };
   const poolsProps = {
-    title: "Perpetual Pools",
+    title: (
+      <h1 className="font-semibold leading-none text-white md:text-lg md:leading-tight">
+        Perpetual
+        <br /> Pools
+      </h1>
+    ),
     header: PoolsHeader,
     image: PoolsLitepaper,
     link: PoolsPDF,
   };
   const swapsProps = {
-    title: "Perpetual Swaps",
+    title: (
+      <h1 className="font-semibold leading-none text-white md:text-lg md:leading-tight">
+        Perpetual
+        <br /> Swaps
+      </h1>
+    ),
     header: PerpetualSwapsHeader,
     image: PerpetualSwapsPaper,
     link: SwapsPDF,
   };
   const p2pProps = {
-    title: "Peer-to-Peer Finance",
+    title: (
+      <h1 className="font-semibold leading-none text-white md:text-lg md:leading-tight">
+        Peer-to-Peer
+        <br /> Finance
+      </h1>
+    ),
     header: P2PFinanceHeader,
     image: P2PFinancePaper,
     link: P2PPDF,
   };
   return (
     <>
-      <section className="relative z-20 mt-10 h-full w-full md:mt-16">
+      <section className="relative z-20 h-full w-full">
         <Container>
-          <div className="md:pt-13 relative mx-auto grid w-full max-w-[900px] grid-cols-2 gap-12 pb-12 pt-5 md:gap-20 lg:grid-cols-4">
+          <div className="relative mx-auto grid w-full max-w-[900px] grid-cols-2 gap-12 pb-12 pt-5 md:gap-10 md:pt-10 lg:grid-cols-4">
             <PaperDownload {...purchaseProps} />
             <PaperDownload {...poolsProps} />
             <PaperDownload {...swapsProps} />

@@ -7,7 +7,7 @@ import OpenLinkIcon from "/static/img/learn/open-link.svg";
 const TracerDrop = () => {
   return (
     <>
-      <section className="bg-blue relative z-20 mt-24 h-full w-full md:mt-40">
+      <section className="bg-blue relative z-20 mt-24 h-full w-full md:mt-20">
         <img
           className="absolute top-0 left-0 h-auto w-full min-w-[800px]"
           src={CityBottomDark}

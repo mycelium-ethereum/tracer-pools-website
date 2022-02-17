@@ -1,9 +1,10 @@
 /* eslint-disable */
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import ChevronIcon from "/static/img/learn/chevron-down.png";
 
 const FAQQuestion = ({ content }) => {
   const [open, setOpen] = useState(false);
+  const panel = useRef(null);
   const handleClick = (e) => {
     let panel = e.target.nextElementSibling;
     if (panel && panel.style.maxHeight) {
@@ -14,6 +15,17 @@ const FAQQuestion = ({ content }) => {
       setOpen(true);
     }
   };
+  const handleResize = () => {
+    if (panel.current.style.maxHeight)
+      panel.current.style.maxHeight = panel.current.scrollHeight + "px";
+  };
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="group mb-5 rounded-xl bg-[#00007A] bg-opacity-50 text-lg text-white transition-colors duration-500 hover:bg-opacity-70 focus:outline-none">
       <button
@@ -28,7 +40,10 @@ const FAQQuestion = ({ content }) => {
           }`}
         />
       </button>
-      <div class="max-h-0 overflow-hidden px-6 transition-all duration-300 ease-out">
+      <div
+        ref={panel}
+        class="max-h-0 overflow-hidden px-6 transition-all duration-300 ease-out"
+      >
         {content.answer}
       </div>
     </div>
