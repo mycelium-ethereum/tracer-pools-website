@@ -2,7 +2,7 @@ import React from "react";
 
 const BrandAssetTile = ({ item, index }) => {
   return (
-    <div className="w-[366px]">
+    <div className="w-full sm:w-[366px]">
       <div
         className={`mb-2 flex h-[179px] w-full items-center justify-center rounded-xl [box-shadow:0px_4px_15px_rgb(0_0_0_/_15%)] ${
           index === 0 ? "bg-[#0000B0]" : "bg-white"

@@ -16,7 +16,7 @@ const BrandColourTile = ({ item, small }) => {
   return (
     <div
       style={{ backgroundColor: item.hex }}
-      className={`mb-6 flex flex-col items-center justify-center rounded-[14px] ${sizeStyles} mx-3 min-w-full sm:min-w-[340px] xl:mx-0`}
+      className={`mb-6 flex flex-col items-center justify-center rounded-[14px] ${sizeStyles} mx-3 min-w-full sm:min-w-[366px] xl:mx-0`}
     >
       <span className="text-sm text-white">{item.description}</span>
       <button
