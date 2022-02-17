@@ -48,7 +48,9 @@ const BrandFilters = ({ setCategory }) => {
     <div className="relative z-10 mb-8 flex w-full items-center pt-12 md:mt-12 md:mb-14 md:justify-center">
       {CategoryInfo.map((category, i) => (
         <button
-          className="mr-6 hidden h-full w-auto items-center justify-center rounded-3xl bg-gray-200 py-2.5 px-6 font-semibold text-black transition-colors duration-500 md:flex"
+          className={`hidden h-full w-auto items-center justify-center rounded-3xl bg-gray-200 py-2.5 px-6 font-semibold text-black transition-colors duration-500 md:flex ${
+            i === CategoryInfo.length - 1 ? "mr-0" : "mr-6"
+          }`}
           data-category={category.name}
           onClick={selectCategory}
         >
@@ -56,7 +58,7 @@ const BrandFilters = ({ setCategory }) => {
         </button>
       ))}
       <div className="flex items-center">
-        <span className="mr-7 block text-[#828790]">Jump to</span>
+        <span className="mr-7 block text-[#828790] md:hidden">Jump to</span>
         <div className="relative">
           <button
             className="relative mr-4 inline-flex h-11 w-auto items-center justify-start rounded-xl bg-gray-50 px-8 pl-4 text-base font-semibold md:hidden"
@@ -86,7 +88,7 @@ const BrandFilters = ({ setCategory }) => {
                     data-category={category.name}
                     onClick={selectCategory}
                     className={`category-dropdown w-full py-1 px-4 text-left text-black transition-colors duration-500 ${
-                      i === CategoryInfo.length - 1 ? "active pb-1" : ""
+                      i === CategoryInfo.length - 1 ? "pb-1" : ""
                     }`}
                   >
                     {category.text}
