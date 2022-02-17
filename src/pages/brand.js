@@ -79,7 +79,7 @@ const BrandPage = () => {
       heading: "Support Graphics",
       subheading: (
         <p>
-          Please use the support graphics when creating material for Tracer.
+          Please use the support graphics when creating material for Tracer
           {/* For correct application please refer to the{" "}
           <a href="">Tracer Brand Guidelines</a> */}
         </p>
