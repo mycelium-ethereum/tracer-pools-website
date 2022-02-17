@@ -20,11 +20,11 @@ const BrandColourTile = ({ item, small }) => {
     >
       <span className="text-sm text-white">{item.description}</span>
       <button
-        className="mt-2 flex items-center justify-center rounded-2xl bg-white px-2 py-1 text-[8px] text-black"
+        className="mt-2 flex items-center justify-center rounded-2xl bg-white px-2.5 py-1 text-[10px] text-black"
         onClick={(e) => copyToClipboard(e, item.hex)}
       >
         <span className="pointer-events-none">{item.hex}</span>
-        <img src={CopyIcon} className="pointer-events-none ml-1" />
+        <img src={CopyIcon} className="pointer-events-none ml-1 mb-0.5" />
       </button>
     </div>
   );
