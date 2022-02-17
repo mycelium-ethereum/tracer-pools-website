@@ -19,7 +19,7 @@ const Navbar = () => {
 
   const isCollapsed = () => {
     const width = window.innerWidth;
-    return width < 640;
+    return width < 767;
   };
   const setSolidNav = () => {
     const scrollHeight = document.documentElement.scrollTop;
@@ -132,7 +132,7 @@ const Navbar = () => {
           </button>
           <DropdownMenu dropdownOpen={dropdownOpen} darkerNav={darkerNav} />
         </div>
-        <div className="hidden items-center sm:flex">
+        <div className="hidden items-center md:flex">
           <div className="mr-3">
             <Link
               className="nav-link rounded-lg py-2 px-4 transition-colors duration-700"
@@ -158,6 +158,15 @@ const Navbar = () => {
               <span className="font-normal text-white">News</span>
             </Link>
           </div>
+          <div className="mr-3">
+            <a
+              className="nav-link rounded-lg py-2 px-4 transition-colors duration-700"
+              target="_blank"
+              href="https://jobs.lever.co/Mycelium/?department=Tracer%20DAO"
+            >
+              <span className="font-normal text-white">Careers</span>
+            </a>
+          </div>
           <div>
             <Button
               id="launch-pools"
@@ -171,7 +180,7 @@ const Navbar = () => {
         </div>
         <button
           className={
-            "menu-icon block cursor-pointer sm:hidden " +
+            "menu-icon block cursor-pointer md:hidden " +
             (navOpen ? "open" : "")
           }
           // eslint-disable-next-line
