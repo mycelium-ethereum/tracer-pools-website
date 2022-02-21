@@ -25,17 +25,19 @@ const ETHDenverBanner = () => {
         <div className="absolute left-0 top-0 h-[54px] w-full overflow-hidden rounded-xl md:h-[88px]">
           <img
             src={Backdrop}
+            alt="ETHDenver Backdrop"
             className="absolute top-1/2 left-0 h-auto w-full -translate-y-1/2 transform transition-all duration-500 md:top-0 md:h-auto md:transform-none"
           />
         </div>
         <img
           src={Beaver}
+          alt="ETHDenver Beaver"
           className="eth-denver-beaver pointer-events-none absolute top-1/2 right-auto left-1/2 h-[82px] w-[73px] -translate-y-1/2 -translate-x-1/2 transform transition-all duration-500 md:-right-12 md:left-auto md:h-[114px] md:w-[101px] md:translate-x-0"
         />
         <div className="relative z-10 flex h-full w-full items-center justify-between text-center text-white md:h-auto md:w-auto md:flex-col">
           <div className="-translate-y-1 transform">
             <span>Tracer is at</span>
-            <img src={ETHDenverText} />
+            <img src={ETHDenverText} alt="ETHDenver Text" />
           </div>
           <button className="flex h-9 w-28 items-center justify-center rounded-lg border-2 border-white bg-white bg-opacity-20 text-sm transition-all duration-500 group-hover:bg-opacity-100 group-hover:text-blue-400 md:mt-2 md:h-[22px] md:w-[93px] md:text-xs">
             Read More
