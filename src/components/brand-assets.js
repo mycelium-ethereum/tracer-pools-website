@@ -48,13 +48,13 @@ export const primaryLogos = [
   {
     description: "Blue",
     svg: PrimaryBlue,
-    png: PrimaryWhitePNG,
+    png: PrimaryBluePNG,
     logo: true,
   },
   {
     description: "Black",
     svg: PrimaryBlack,
-    png: PrimaryWhitePNG,
+    png: PrimaryBlackPNG,
     logo: true,
   },
 ];
@@ -158,25 +158,30 @@ export const graphics = [
     description: "Mesh Background Horizontal",
     image: MeshHorizontal,
     download: MeshHorizontalDL,
+    alt: "Mesh Background Horizontal",
   },
   {
     description: "Mesh Background Vertical",
     image: MeshVertical,
     download: MeshVerticalDL,
+    alt: "Mesh Background Vertical",
   },
   {
     description: "Mesh Background Full",
     image: MeshFull,
     download: MeshFullDL,
+    alt: "Mesh Background Full",
   },
   {
     description: "Square Isometric Tile",
     image: TracerTileSquare,
     download: TracerTileSquareDL,
+    alt: "Square Isometric Tile",
   },
   {
     description: "Circular Isometric Tile",
     image: TracerTileCircle,
     download: TracerTileCircleDL,
+    alt: "Circular Isometric Tile",
   },
 ];
