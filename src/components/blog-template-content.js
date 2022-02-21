@@ -39,7 +39,10 @@ const BlogText = ({ data }) => {
       e.setAttribute("class", "text-black text-xl font-semibold");
     }
     if (e.tagName === "IMG") {
-      e.setAttribute("class", "mx-auto rounded-lg");
+      e.setAttribute(
+        "class",
+        "mx-auto rounded-lg transition-all duration-300 cursor-pointer"
+      );
       e.onclick = function () {
         this.classList.toggle("enlarge");
       };
