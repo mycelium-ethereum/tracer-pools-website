@@ -19,6 +19,7 @@ const FAQSection = () => {
           <Link
             to="/radar/bridging-to-arbitrum/"
             className="text-blue-400 underline"
+            id="faq-arbitrum-guide"
           >
             Arbitrum guide
           </Link>{" "}
@@ -40,6 +41,7 @@ const FAQSection = () => {
             href="https://docs.tracer.finance/market-types/perpetual-pools/mechanism-design"
             target="_blank"
             className="text-blue-400 underline"
+            id="faq-power-leverage"
           >
             here
           </a>
@@ -61,6 +63,7 @@ const FAQSection = () => {
             href="https://docs.tracer.finance/tracer-faqs/perpetual-pools-faqs#how-are-perpetual-pools-different-from-perpetual-swaps"
             target="_blank"
             className="text-blue-400 underline"
+            id="faq-perp-pools"
           >
             here
           </a>
