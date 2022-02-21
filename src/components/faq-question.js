@@ -27,7 +27,11 @@ const FAQQuestion = ({ content }) => {
   }, []);
 
   return (
-    <div className="group mb-5 rounded-xl bg-[#00007A] bg-opacity-50 text-lg text-white transition-colors duration-500 hover:bg-opacity-70 focus:outline-none">
+    <div
+      className={`group mb-5 rounded-xl bg-[#00007A] text-lg text-white transition-colors duration-500 hover:bg-opacity-70 focus:outline-none ${
+        open ? "bg-opacity-70" : "bg-opacity-50"
+      }`}
+    >
       <button
         class="relative flex w-full cursor-pointer items-center border-0 p-6 text-left font-semibold outline-none transition-all duration-500"
         onClick={handleClick}
@@ -42,7 +46,9 @@ const FAQQuestion = ({ content }) => {
       </button>
       <div
         ref={panel}
-        class="max-h-0 overflow-hidden px-6 transition-all duration-300 ease-out"
+        class={`max-h-0 overflow-hidden px-6 transition-all duration-300 ease-out ${
+          open ? "opacity-100" : "opacity-0"
+        }`}
       >
         {content.answer}
       </div>

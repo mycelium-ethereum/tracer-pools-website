@@ -349,7 +349,7 @@ section {
 }
 .dropdown.active a {
   opacity: 1;
-  transition: all 0.5s ease, opacity 0.5s ease 0.5s;
+  transition: all 0.5s ease, opacity 0.5s ease 0.35s;
 }
 .dropdown.inactive {
   height: 0px;

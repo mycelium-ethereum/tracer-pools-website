@@ -36,7 +36,7 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
     <div
       id="dropdown"
       className={
-        "dropdown transform-gpu transition-all duration-700 sm:absolute fixed sm:px-8 px-4 block sm:rounded-lg sm:top-11 left-0 top-16 box-border overflow-hidden " +
+        "dropdown fixed left-0 top-16 box-border block transform-gpu overflow-hidden px-4 transition-all duration-500 sm:absolute sm:top-11 sm:rounded-lg sm:px-8 " +
         (dropdownOpen ? "active" : "inactive")
       }
     >
@@ -46,15 +46,14 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
           (darkerNav ? " darker" : "")
         }
       />
-      <div className="relative sm:mt-8 mt-4">
+      <div className="relative mt-4 sm:mt-8">
         <a
-          className="dropdown-option pr-2 w-full transition-colors duration-500 flex mb-6 rounded-lg"
+          className="dropdown-option mb-6 flex w-full rounded-lg pr-2 transition-colors duration-500"
           href="https://pools.tracer.finance/"
-          
           target="_blank"
         >
-          <img className="h-12 mr-3" src={TracerBoxPurple} alt="Tracer Box" />
-          <span className="block text-white font-normal my-auto">
+          <img className="mr-3 h-12" src={TracerBoxPurple} alt="Tracer Box" />
+          <span className="my-auto block font-normal text-white">
             <p>Tracer</p>
             <p>
               <b>Perpetual Pools</b>
@@ -63,13 +62,12 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
         </a>
         <a
           id="tracer-governance"
-          className="dropdown-option pr-2 w-full transition-colors duration-500 flex mb-6 rounded-lg"
+          className="dropdown-option mb-6 flex w-full rounded-lg pr-2 transition-colors duration-500"
           href="https://vote.tracer.finance/#/"
-          
           target="_blank"
         >
-          <img className="h-12 mr-3" src={TracerBoxGreen} alt="Tracer Box" />
-          <span className="block text-white font-normal my-auto">
+          <img className="mr-3 h-12" src={TracerBoxGreen} alt="Tracer Box" />
+          <span className="my-auto block font-normal text-white">
             <p>Tracer</p>
             <p>
               <b>Governance</b>
@@ -78,13 +76,12 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
         </a>
         <a
           id="tracer-documentation"
-          className="dropdown-option pr-2 w-full transition-colors duration-500 flex mb-6 rounded-lg"
+          className="dropdown-option mb-6 flex w-full rounded-lg pr-2 transition-colors duration-500"
           href="https://docs.tracer.finance"
-          
           target="_blank"
         >
-          <img className="h-12 mr-3" src={TracerBoxBlue} alt="Tracer Box" />
-          <span className="block text-white font-normal my-auto">
+          <img className="mr-3 h-12" src={TracerBoxBlue} alt="Tracer Box" />
+          <span className="my-auto block font-normal text-white">
             <p>Tracer</p>
             <p>
               <b>Documentation</b>
@@ -94,20 +91,19 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
         <div className="mt-12">
           {Icons.map((icon, i) => (
             <a
-              className="w-full sm:px-2 transition-colors duration-500 flex items-center mt-5 rounded-lg text-white hover:text-gray-400"
+              className="mt-5 flex w-full items-center rounded-lg text-white transition-colors duration-500 hover:text-gray-400 sm:px-2"
               href={icon.href}
-              
               target="_blank"
               key={i}
             >
               <span>
                 <img
-                  className="social-icon w-5 mr-2 opacity-70"
+                  className="social-icon mr-2 w-5 opacity-70"
                   src={icon.logo}
                   alt="Logo"
                 />
               </span>
-              <span className="block font-normal my-auto">{icon.text}</span>
+              <span className="my-auto block font-normal">{icon.text}</span>
             </a>
           ))}
         </div>
