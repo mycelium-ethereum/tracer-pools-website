@@ -86,10 +86,10 @@ const FAQSection = () => {
           <a
             href="https://docs.tracer.finance"
             target="_blank"
-            className="transition-colors duration-300 hover:text-blue-400"
+            className="underline transition-colors duration-300 hover:text-blue-400"
             id="open-user-docs"
           >
-            <span className="underline">User Documentation</span>
+            User Documentation
           </a>
           <span>&nbsp;to learn more</span>
           <img className="ml-3" src={OpenLinkIcon} />
