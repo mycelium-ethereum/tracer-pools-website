@@ -8,3 +8,5 @@
 
 /mat https://tracerfinance.matomo.cloud 200
 /mat-php https://tracerfinance.matomo.cloud/matomo.php 200
+/mat-js https://cdn.matomo.cloud/tracerfinance.matomo.cloud/matomo.js 200
+/mat-container-js https://cdn.matomo.cloud/tracerfinance.matomo.cloud/container_9pOj4o6E.js 200
