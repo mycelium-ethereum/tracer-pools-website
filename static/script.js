@@ -7,8 +7,8 @@
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
-    var u="/mat";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    var u="/mat/";
+    _paq.push(['setTrackerUrl', '/mat-php']);
     _paq.push(['setSiteId', '2']);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.async=true; g.src='/mat-js'; s.parentNode.insertBefore(g,s);
