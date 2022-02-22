@@ -85,7 +85,7 @@ const FAQSection = () => {
           <span>Visit the&nbsp;</span>
           <a
             href="https://docs.tracer.finance"
-            // target="_blank"
+            target="_blank"
             className="underline transition-colors duration-300 hover:text-blue-400"
             id="open-user-docs"
           >
