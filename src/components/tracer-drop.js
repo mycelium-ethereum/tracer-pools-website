@@ -53,7 +53,7 @@ const TracerDrop = () => {
             id="open-youtube"
           >
             <img className="mr-2.5" src={YouTubeIcon} />
-            More episodes
+            <span>More episodes</span>
             <img className="ml-2.5" src={OpenLinkIcon} />
           </a>
         </Container>
