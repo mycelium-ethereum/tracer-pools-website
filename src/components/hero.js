@@ -28,6 +28,7 @@ const Hero = () => {
             <Button
               className="mt-6 sm:mt-12"
               href="https://pools.tracer.finance/"
+              id="launch-pools-home"
               analytics='"HomeHeadLaunchPoolsCTA", {"props":{"plan":"Navigation"}}'
             >
               Launch Pools

@@ -172,6 +172,7 @@ const Navbar = () => {
               id="launch-pools"
               className="mt-0"
               href="https://pools.tracer.finance/"
+              id="launch-pools-nav"
               analytics='"LaunchPoolsNavCTA", {"props":{"plan":"Navigation"}}'
             >
               Launch Pools
