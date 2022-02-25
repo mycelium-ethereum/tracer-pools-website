@@ -5,8 +5,3 @@
 /media/white-papers/perp-pools/perpetual-pools.pdf /static/Tracer%20Perpetual%20Pools-ded3c8351f5452c1f8ec58b30cdc943b.pdf
 /js/redirect.js https://plausible.io/js/plausible.outbound-links.js 200
 /api/event https://plausible.io/api/event 200
-
-/mat https://tracerfinance.matomo.cloud 200
-/mat-php https://tracerfinance.matomo.cloud/matomo.php 200
-/mat-js https://cdn.matomo.cloud/tracerfinance.matomo.cloud/matomo.js 200
-/mat-container-js https://cdn.matomo.cloud/tracerfinance.matomo.cloud/container_9pOj4o6E.js 200
