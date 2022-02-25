@@ -10,6 +10,7 @@ const Button = ({ className, children, href, id, analytics }) => {
       href={href}
       id={id}
       data-analytics={analytics}
+      target="_blank"
     >
       {children}
     </a>
