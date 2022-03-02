@@ -29,6 +29,7 @@ const CallToAction = () => {
           className="sm:ml-0 mx-auto mt-9 sm:w-56 sm:px-0 whitespace-nowrap"
           href="https://pools.tracer.finance/"
           analytics='"RadarPoolsFooterCTA", {"props":{"plan":"Navigation"}}'
+          id="launch-pools-blog-cta"
         >
           Launch Perpetual Pools
         </SolidButton>

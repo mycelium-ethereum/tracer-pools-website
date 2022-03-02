@@ -32,7 +32,7 @@ const MobileNav = ({ navOpen, darkerNav, closeNav }) => {
               onClick={() => closeNav()}
               className="h-12 w-full border border-white text-lg font-normal opacity-0"
               href="https://pools.tracer.finance/"
-              id="launch-pools-blog-cta"
+              id="launch-pools-nav-cta"
               analytics='"LaunchPoolsNavCTA", {"props":{"plan":"Navigation"}}'
             >
               Launch Pools
