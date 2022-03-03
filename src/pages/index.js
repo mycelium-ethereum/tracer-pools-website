@@ -3,7 +3,6 @@ import React from "react";
 // Components
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import ETHDenverBanner from "../components/eth-denver-banner";
 import Hero from "../components/hero";
 import TracerCity from "../components/tracer-city";
 import LeverageSteps from "../components/leverage-steps";
@@ -16,7 +15,6 @@ const Index = () => {
     <>
       <SEO title="Home" />
       <Layout>
-        <ETHDenverBanner />
         <Hero />
         <LeverageSteps />
         <WalletAnimation />
