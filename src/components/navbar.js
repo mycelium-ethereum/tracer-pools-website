@@ -16,6 +16,7 @@ const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [darkerNav, setDarkerNav] = useState(false);
+  const [poolsBtnId, setPoolsBtnId] = useState("");
 
   const isCollapsed = () => {
     const width = window.innerWidth;
@@ -66,9 +67,14 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    const page = window.location.pathname.split("/")[1];
     setActiveLink();
     setSolidNav();
     checkPage();
+    setPoolsBtnId(
+      "launch-pools-nav" +
+        (page.length ? "-" + window.location.pathname.split("/")[1] : "")
+    );
     window.addEventListener("scroll", setSolidNav);
     window.addEventListener("resize", setSolidNav);
     return () => {
@@ -171,7 +177,7 @@ const Navbar = () => {
             <Button
               className="mt-0"
               href="https://pools.tracer.finance/"
-              id="launch-pools-nav"
+              id={poolsBtnId}
               analytics='"LaunchPoolsNavCTA", {"props":{"plan":"Navigation"}}'
             >
               Launch Pools
