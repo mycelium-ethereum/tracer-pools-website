@@ -12,7 +12,6 @@ const FilterBox = ({
   dataType,
   filtersChanged,
 }) => {
-  filterData = filtersChanged ? listingData : filterData;
   const toggleFilter = () => {
     onClickAction((prev) => !prev);
   };
@@ -48,20 +47,27 @@ const FilterBox = ({
         }`}
       >
         {filterData.map((label, i) => (
-          <span
+          <button
             key={i}
-            className={`group relative border-[#C4C4C4] bg-transparent py-2.5 transition-colors duration-300 [border-top-width:0.5px] hover:border-transparent hover:text-white ${
+            className={`relative border-[#C4C4C4] bg-transparent py-2.5 text-left font-semibold transition-colors duration-300 [border-top-width:0.5px] ${
               i === filterData.length - 1 ? "pb-2.5" : ""
+            }
+            ${
+              !listingData.includes(label)
+                ? "text-tracer-darkgray"
+                : "group hover:border-transparent hover:text-white"
             }`}
             data-filter={label}
             data-type={dataType}
             onClick={handleChange}
+            // Disable button if there is current listings do not contain the filter
+            disabled={!listingData.includes(label)}
           >
             <span className="pointer-events-none relative z-10 bg-transparent">
               {label}
             </span>
             <span className="pointer-events-none absolute -left-6 top-0 z-0 h-full w-[calc(100%_+_48px)] bg-transparent transition-colors duration-300 group-hover:bg-tracer-1000" />
-          </span>
+          </button>
         ))}
       </div>
     </div>
