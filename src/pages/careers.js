@@ -9,11 +9,16 @@ import CareersTable from "../components/careers-table";
 const CareersPage = () => {
   return (
     <>
-      <SEO title="Careers" description="Read the latest news for Tracer." />
+      <SEO
+        title="Careers"
+        description="Tracer DAO is an open-source, smart contract protocol for derivatives. View open roles."
+      />
       <Layout>
         <Header
-          title={"Careers"}
-          subheading={"Read the latest news on the Tracer Blog"}
+          title={"Job Listings"}
+          subheading={
+            "Tracer DAO is an open-source, smart contract protocol for derivatives. View open roles below."
+          }
         />
         <CareersTable />
       </Layout>
