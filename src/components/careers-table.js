@@ -214,7 +214,7 @@ export default function CareersTable() {
   }, [jobRows]);
 
   return (
-    <section className="z-10 bg-white pt-6 pb-24">
+    <section className="select-dark z-10 bg-white pt-6 pb-24">
       <Container>
         <CareerFilters
           locations={locations}
