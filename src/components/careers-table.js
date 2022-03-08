@@ -178,7 +178,7 @@ export default function CareersTable() {
               {team.toUpperCase()}
             </span>
           </span>
-          <span className="mb-4 block text-xs">
+          <span className="mb-4 block">
             <span className="block text-[#828790] lg:text-2xl">
               {commitment}
             </span>
