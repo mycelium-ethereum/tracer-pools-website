@@ -26,7 +26,7 @@ const FilterBox = ({
       onClick={toggleFilter}
       ref={reference}
     >
-      <div className="pointer-events-none relative z-10 border-b border-white py-2.5 pl-6 pr-14 transition-colors duration-300">
+      <div className="pointer-events-none relative z-10 py-2.5 pl-6 pr-14 transition-colors duration-300">
         <span className="select-none">{text}</span>
         <div className="absolute right-6 top-1/2 flex h-full -translate-y-1/2 transform items-center">
           <img
@@ -38,7 +38,7 @@ const FilterBox = ({
         </div>
       </div>
       <div
-        className={`absolute top-0 left-0 z-0 flex w-full transform-gpu flex-col overflow-hidden rounded-lg bg-white px-6 pt-11 transition-all duration-200 [box-shadow:0px_4px_15px_rgb(0_0_0_/_15%)] ${
+        className={`absolute top-0 left-0 z-0 flex w-full transform-gpu flex-col overflow-hidden rounded-lg bg-[#F1F2F4] px-6 pt-11 transition-all duration-200 [box-shadow:0px_4px_15px_rgb(0_0_0_/_15%)] ${
           open
             ? "pointer-events-auto scale-100 opacity-100"
             : "pointer-events-none scale-[0.97] opacity-0"

@@ -65,14 +65,48 @@ const CareerFilters = ({ locations, teams, worktypes }) => {
       const jobWorktype = job.dataset.worktype;
       const isMatched = compareListing(jobLocation, jobTeam, jobWorktype);
       if (isMatched.includes(false)) {
-        job.classList.add("hidden");
+        hideListing(job);
       } else {
         // If one match exists, set matchExists to true
         hasMatches = true;
-        job.classList.remove("hidden");
+        showListing(job);
       }
     });
     return hasMatches;
+  };
+
+  const hideListing = (job) => {
+    job.classList.add("max-h-0");
+    // If contains 133px, its a table row. If not, it is a div
+    if (job.classList.contains("table-row")) {
+      // Remove border and replace with transparent
+      job.classList.remove("border-tracer-darkgray");
+      job.classList.add("border-transparent");
+      // Remove height and padding
+      job.querySelectorAll("div").forEach((td) => {
+        td.classList.remove("max-h-[133px]", "py-10");
+        td.classList.add("max-h-0");
+      });
+    } else {
+      job.classList.remove("max-h-[60px]");
+    }
+  };
+
+  const showListing = (job) => {
+    job.classList.remove("max-h-0");
+    // If contains 133px, its a table row. If not, it is a div
+    if (job.classList.contains("table-row")) {
+      // Remove border and replace with transparent
+      job.classList.add("border-tracer-darkgray");
+      job.classList.remove("border-transparent");
+      // Remove height and padding
+      job.querySelectorAll("div").forEach((td) => {
+        td.classList.add("max-h-[133px]", "py-10");
+        td.classList.remove("max-h-0");
+      });
+    } else {
+      job.classList.add("max-h-[60px]");
+    }
   };
 
   const compareListing = (jobLocation, jobTeam, jobWorktype) => {

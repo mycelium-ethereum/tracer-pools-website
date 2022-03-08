@@ -122,30 +122,36 @@ export default function CareersTable() {
     return (
       <tr
         key={key}
-        className="job-listing relative border-tracer-darkgray [border-bottom-width:0.1px]"
+        className="job-listing relative table-row border-tracer-darkgray  transition-colors duration-300 [border-bottom-width:0.1px]"
         data-location={location}
         data-business={department}
         data-team={team}
         data-worktype={commitment}
       >
-        <td className="px-10 py-10">
-          <span className="block text-2xl font-semibold text-tracer-800">
-            {title}
-          </span>
-          <span className="block text-sm font-semibold text-tracer-darkgray">
-            {team.toUpperCase()}
-          </span>
+        <td>
+          <div className="max-h-[133px] overflow-hidden px-10 py-10 transition-all duration-300">
+            <span className="block text-2xl font-semibold text-tracer-800">
+              {title}
+            </span>
+            <span className="block text-sm font-semibold text-tracer-darkgray">
+              {team.toUpperCase()}
+            </span>
+          </div>
         </td>
-        <td className="px-10 py-10">
-          <span className="block text-2xl text-[#828790]">{commitment}</span>
-          <span className="block text-sm text-tracer-darkgray">
-            {location.toUpperCase()}
-          </span>
+        <td>
+          <div className="max-h-[133px] overflow-hidden px-10 py-10 transition-all duration-300">
+            <span className="block text-2xl text-[#828790]">{commitment}</span>
+            <span className="block text-sm text-tracer-darkgray">
+              {location.toUpperCase()}
+            </span>
+          </div>
         </td>
-        <td className="px-10 py-10">
-          <ButtonGray link={link} className="w-[118px]">
-            Apply Now
-          </ButtonGray>
+        <td>
+          <div className="max-h-[133px] overflow-hidden px-10 py-10 transition-all duration-300">
+            <ButtonGray link={link} className="w-[118px]">
+              Apply Now
+            </ButtonGray>
+          </div>
         </td>
       </tr>
     );
@@ -163,7 +169,7 @@ export default function CareersTable() {
     return (
       <div
         key={key}
-        className="job-listing group relative"
+        className="job-listing group relative transition-all duration-300"
         data-location={location}
         data-business={department}
         data-team={team}
