@@ -38,7 +38,7 @@ const FilterBox = ({
         </div>
       </div>
       <div
-        className={`absolute top-0 left-0 z-0 flex w-full transform-gpu flex-col overflow-hidden rounded-lg bg-white px-6 pt-11 drop-shadow-lg transition-all duration-200 ${
+        className={`absolute top-0 left-0 z-0 flex w-full transform-gpu flex-col overflow-hidden rounded-lg bg-white px-6 pt-11 transition-all duration-200 [box-shadow:0px_4px_15px_rgb(0_0_0_/_15%)] ${
           open
             ? "pointer-events-auto scale-100 opacity-100"
             : "pointer-events-none scale-[0.97] opacity-0"
