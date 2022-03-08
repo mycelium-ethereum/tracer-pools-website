@@ -132,7 +132,7 @@ export default function CareersTable() {
           <span className="block text-2xl font-semibold text-tracer-800">
             {title}
           </span>
-          <span className="block text-sm text-tracer-darkgray">
+          <span className="block text-sm font-semibold text-tracer-darkgray">
             {team.toUpperCase()}
           </span>
         </td>
@@ -230,10 +230,10 @@ export default function CareersTable() {
             >
               <thead>
                 <tr className="border-tracer-darkgray [border-bottom-width:0.1px]">
-                  <th className="px-10 py-3 text-left text-xl text-tracer-800">
+                  <th className="px-10 py-3 text-left text-xl font-semibold text-tracer-800">
                     Role
                   </th>
-                  <th className="px-10 py-3 text-left text-xl text-tracer-800">
+                  <th className="px-10 py-3 text-left text-xl font-semibold text-tracer-800">
                     Location
                   </th>
                 </tr>
