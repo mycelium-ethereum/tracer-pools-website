@@ -34,11 +34,10 @@ const Navbar = () => {
     }
   };
   const setActiveLink = () => {
-    const path = window.location.pathname;
-    const navLinks = Array.from(document.querySelectorAll(".nav-link"));
+    const navLinks = document.querySelectorAll(".nav-link");
     navLinks.forEach((e) => {
       const href = e.getAttribute("href");
-      if (href === path) {
+      if (href === window.location.pathname) {
         e.classList.add("active");
       }
     });
