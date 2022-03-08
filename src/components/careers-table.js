@@ -175,7 +175,7 @@ export default function CareersTable() {
         data-team={team}
         data-worktype={commitment}
       >
-        <div className="relative z-10 flex flex-col border-tracer-darkgray px-7 pt-6 pb-8 transition-colors duration-300 [border-bottom-width:0.1px] group-hover:border-transparent group-hover:text-black">
+        <div className="relative z-10 flex flex-col border-tracer-darkgray px-7 pt-6 pb-8 transition-colors duration-300 [border-bottom-width:0.1px]">
           <span className="pb-2">
             <span className="block font-semibold text-tracer-800 lg:text-2xl">
               {title}
