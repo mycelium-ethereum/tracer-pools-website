@@ -55,15 +55,7 @@ const Navbar = () => {
     setNavOpen(false);
   };
   const checkPage = () => {
-    const currentPage = window.location.pathname;
-    const notHome =
-      currentPage.includes("/learn") ||
-      currentPage.includes("/radar") ||
-      currentPage.includes("/brand") ||
-      currentPage.includes("/privacy-policy");
-    if (notHome) {
-      setDarkerNav(true);
-    }
+    setDarkerNav(window.location.pathname !== "/");
   };
 
   useEffect(() => {
@@ -165,13 +157,12 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="mr-3">
-            <a
+            <Link
               className="nav-link rounded-lg py-2 px-4 transition-colors duration-700"
-              target="_blank"
-              href="https://jobs.lever.co/Mycelium/?department=Tracer%20DAO"
+              to="/careers"
             >
               <span className="font-normal text-white">Careers</span>
-            </a>
+            </Link>
           </div>
           <div>
             <Button

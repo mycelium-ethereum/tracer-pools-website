@@ -1,30 +1,23 @@
 import React, { useEffect, useState, useRef } from "react";
 import FilterBox from "./careers-filter-box";
-import NoMatchText from "./careers-no-match-text";
 import ClearFiltersButton from "./careers-filters-clear";
 
-const CareerFilters = ({
-  locations,
-  teams,
-  worktypes,
-  setMatches,
-  matches,
-}) => {
+const CareerFilters = ({ locations, teams, worktypes }) => {
   const [locationOpen, setLocationOpen] = useState(false);
   const [teamOpen, setTeamOpen] = useState(false);
   const [worktypeOpen, setWorktypeOpen] = useState(false);
   const [filtersChanged, setFiltersChanged] = useState(false);
+  const [matches, setMatches] = useState(false);
 
-  const [locationFilterText, setLocationFilter] = useState("All");
-  const [teamFilterText, setTeamFilter] = useState("All");
-  const [worktypeFilterText, setWorktypeFilter] = useState("All");
+  const [locationFilterText, setLocationFilter] = useState("Location");
+  const [teamFilterText, setTeamFilter] = useState("Team");
+  const [worktypeFilterText, setWorktypeFilter] = useState("Worktype");
 
   const locationFilterBox = useRef(null);
   const teamFilterBox = useRef(null);
   const worktypeFilterBox = useRef(null);
 
   const filterElements = [locationFilterBox, teamFilterBox, worktypeFilterBox];
-
   const filterStateElements = [setLocationOpen, setTeamOpen, setWorktypeOpen];
 
   const handleClick = (e) => {
@@ -56,6 +49,9 @@ const CareerFilters = ({
         setWorktypeFilter(filterText);
         break;
     }
+    console.log(target);
+    console.log(filterText);
+    console.log(filterType);
   };
 
   const filterListings = () => {
@@ -83,20 +79,26 @@ const CareerFilters = ({
     let locationMatch = false;
     let teamMatch = false;
     let worktypeMatch = false;
-    if (locationFilterText === "All" || jobLocation === locationFilterText) {
+    if (
+      locationFilterText === "Location" ||
+      jobLocation === locationFilterText
+    ) {
       locationMatch = true;
     }
-    if (teamFilterText === "All" || jobTeam === teamFilterText) {
+    if (teamFilterText === "Team" || jobTeam === teamFilterText) {
       teamMatch = true;
     }
-    if (worktypeFilterText === "All" || jobWorktype === worktypeFilterText) {
+    if (
+      worktypeFilterText === "Worktype" ||
+      jobWorktype === worktypeFilterText
+    ) {
       worktypeMatch = true;
     }
     // Reset the mobile headings if filters are cleared
     if (
-      locationFilterText === "All" &&
-      teamFilterText === "All" &&
-      worktypeFilterText === "All"
+      locationFilterText === "Location" &&
+      teamFilterText === "Team" &&
+      worktypeFilterText === "Worktype"
     ) {
       resetMobileHeaders();
     }
@@ -105,9 +107,9 @@ const CareerFilters = ({
   };
 
   const clearFilters = () => {
-    setLocationFilter("All");
-    setTeamFilter("All");
-    setWorktypeFilter("All");
+    setLocationFilter("Location");
+    setTeamFilter("Team");
+    setWorktypeFilter("Worktype");
   };
 
   const resetMobileHeaders = () => {
@@ -122,9 +124,9 @@ const CareerFilters = ({
 
   const checkFiltersModified = () => {
     if (
-      locationFilterText === "All" &&
-      teamFilterText === "All" &&
-      worktypeFilterText === "All"
+      locationFilterText === "Location" &&
+      teamFilterText === "Team" &&
+      worktypeFilterText === "Worktype"
     ) {
       setFiltersChanged(false);
     } else {
@@ -138,7 +140,6 @@ const CareerFilters = ({
   }, [locationFilterText, teamFilterText, worktypeFilterText]);
 
   useEffect(() => {
-    setMatches(true);
     document.addEventListener("click", handleClick);
     return () => {
       document.removeEventListener("click", handleClick);
@@ -147,7 +148,8 @@ const CareerFilters = ({
 
   return (
     <>
-      <div className="grid w-full grid-cols-1 justify-between gap-5 sm:grid-cols-2 lg:grid-cols-4 xl:flex">
+      <div className="flex w-full flex-col items-center justify-center lg:flex-row">
+        <span className="mb-4 block text-[#828790] lg:mb-0">Filter:</span>
         {/* Location filter */}
         <FilterBox
           onClickAction={setLocationOpen}
@@ -182,9 +184,7 @@ const CareerFilters = ({
       <ClearFiltersButton
         clearFilters={clearFilters}
         filtersChanged={filtersChanged}
-        matches={matches}
       />
-      <NoMatchText clearFilters={clearFilters} matches={matches} />
     </>
   );
 };

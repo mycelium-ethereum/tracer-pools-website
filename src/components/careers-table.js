@@ -3,10 +3,10 @@ import CareerFilters from "./careers-filters";
 import Loader from "./careers-loader";
 import ErrorText from "./careers-error";
 import Container from "./container";
+import ButtonGray from "./button-gray";
 
 export default function CareersTable() {
   const careerTable = useRef(null);
-  const [matches, setMatches] = useState(false);
   const [jobRows, setJobRows] = useState([]);
   const [jobDivs, setJobDivs] = useState([]);
   const [locations, setLocations] = useState([]);
@@ -56,7 +56,6 @@ export default function CareersTable() {
         let posting = _data[k];
         let department = posting.categories.department;
         if (department === currentDept) {
-          let isFirst = false;
           let title = posting.text;
           let location = posting.categories.location;
           let commitment = posting.categories.commitment;
@@ -65,7 +64,6 @@ export default function CareersTable() {
 
           //   Only get Tracer DAO listings
           if (department === "Tracer DAO") {
-            isFirst = true;
             //   Store data for filters
 
             //   Location
@@ -82,7 +80,6 @@ export default function CareersTable() {
             }
             const key = Math.random() * 1000;
             const row = createJobRow(
-              isFirst,
               link,
               title,
               department,
@@ -92,7 +89,6 @@ export default function CareersTable() {
               key
             );
             const div = createJobDiv(
-              isFirst,
               link,
               title,
               department,
@@ -114,24 +110,7 @@ export default function CareersTable() {
     setWorktypes(allWorktypes);
   };
 
-  const handleRowClick = (e) => {
-    //   Open link from TR element in new tab
-    const eventTarget = e.target;
-    const tableRow = eventTarget.parentNode;
-    const link = tableRow.dataset.link;
-    window.open(link, "_blank").focus();
-  };
-
-  const handleDivClick = (e) => {
-    //   Open link from TR element in new tab
-    const eventTarget = e.target;
-    const div = eventTarget.parentNode.parentNode;
-    const link = div.dataset.link;
-    window.open(link, "_blank").focus();
-  };
-
   const createJobRow = (
-    isFirst,
     link,
     title,
     department,
@@ -143,41 +122,36 @@ export default function CareersTable() {
     return (
       <tr
         key={key}
-        className="job-listing relative cursor-pointer text-white transition-colors duration-300 hover:bg-tracer-400 hover:text-black"
-        data-link={link}
+        className="job-listing relative border-tracer-darkgray [border-bottom-width:0.1px]"
         data-location={location}
         data-business={department}
         data-team={team}
         data-worktype={commitment}
-        onClick={(e) => handleRowClick(e)}
       >
-        <td
-          className={`department pointer-events-none top-0 left-0 z-0 h-full w-[360px] border-t text-white xl:py-8 ${
-            isFirst
-              ? "border-tracer-400 text-tracer-400"
-              : "border-transparent text-transparent"
-          }`}
-        >
-          {department}
+        <td className="px-10 py-10">
+          <span className="block text-2xl font-semibold text-tracer-800">
+            {title}
+          </span>
+          <span className="block text-sm text-tracer-darkgray">
+            {team.toUpperCase()}
+          </span>
         </td>
-        <td className="border-t border-tracer-400 py-4 px-4 align-top lg:py-8">
-          {title}
+        <td className="px-10 py-10">
+          <span className="block text-2xl text-[#828790]">{commitment}</span>
+          <span className="block text-sm text-tracer-darkgray">
+            {location.toUpperCase()}
+          </span>
         </td>
-        <td className="border-t border-tracer-400 py-4 px-4 align-top lg:py-8">
-          {department}
-        </td>
-        <td className="border-t border-tracer-400 py-4 px-4 align-top lg:py-8">
-          {commitment}
-        </td>
-        <td className="border-t border-tracer-400 py-4 px-4 align-top lg:py-8">
-          {location}
+        <td className="px-10 py-10">
+          <ButtonGray link={link} className="w-[118px]">
+            Apply Now
+          </ButtonGray>
         </td>
       </tr>
     );
   };
 
   const createJobDiv = (
-    isFirst,
     link,
     title,
     department,
@@ -187,35 +161,39 @@ export default function CareersTable() {
     key
   ) => {
     return (
-      <>
-        {isFirst && (
-          <div
-            key={key}
-            data-business={department}
-            className="job-department border-b border-[#9C9C9C] pt-10 pb-4 text-tracer-400"
+      <div
+        key={key}
+        className="job-listing group relative"
+        data-location={location}
+        data-business={department}
+        data-team={team}
+        data-worktype={commitment}
+      >
+        <div className="relative z-10 flex flex-col border-tracer-darkgray px-7 pt-6 pb-8 transition-colors duration-300 [border-bottom-width:0.1px] [border-top-width:0.1px] group-hover:border-transparent group-hover:text-black">
+          <span className="pb-2">
+            <span className="block font-semibold text-tracer-800 lg:text-2xl">
+              {title}
+            </span>
+            <span className="block text-sm text-tracer-darkgray">
+              {team.toUpperCase()}
+            </span>
+          </span>
+          <span className="mb-4 block text-xs">
+            <span className="block text-[#828790] lg:text-2xl">
+              {commitment}
+            </span>
+            <span className="block text-sm text-tracer-darkgray">
+              {location.toUpperCase()}
+            </span>
+          </span>
+          <ButtonGray
+            link={link}
+            className="h-[38px] max-w-full text-sm lg:h-auto lg:max-w-[auto] lg:text-base"
           >
-            {department}
-          </div>
-        )}
-        <div
-          key={isFirst ? 0 : key}
-          className="job-listing group relative"
-          data-link={link}
-          data-location={location}
-          data-business={department}
-          data-team={team}
-          data-worktype={commitment}
-          onClick={(e) => handleDivClick(e)}
-        >
-          <div className="pointer-events-none absolute -top-0.5 -left-4 z-0 h-full w-screen bg-tracer-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-          <div className="relative z-10 flex cursor-pointer flex-col border-b border-tracer-400 text-white transition-colors duration-300 group-hover:border-transparent group-hover:text-black">
-            <span className="pt-4 pb-2">{title}</span>
-            <span className="pb-2">{department}</span>
-            <span className="text-xs">{commitment}</span>
-            <span className="pb-4 font-semibold">{location}</span>
-          </div>
+            Apply Now
+          </ButtonGray>
         </div>
-      </>
+      </div>
     );
   };
 
@@ -230,35 +208,41 @@ export default function CareersTable() {
   }, [jobRows]);
 
   return (
-    <section className="z-10 bg-white">
+    <section className="z-10 bg-white pt-6 pb-24">
       <Container>
         <CareerFilters
           locations={locations}
           teams={teams}
           worktypes={worktypes}
-          setMatches={setMatches}
-          matches={matches}
         />
         <ErrorText showError={showError} />
         <Loader showLoader={showLoader} />
         <div
           className={`w-full overflow-hidden ${
-            matches ? "hidden xl:block" : "hidden"
+            !showLoader ? "hidden lg:block" : "hidden"
           }`}
         >
           <div className="overflow-x-auto">
             <table
               id="careers-table"
               ref={careerTable}
-              className="w-full min-w-[1160px] transform-gpu"
+              className="w-full transform-gpu"
             >
+              <thead>
+                <tr className="border-tracer-darkgray [border-bottom-width:0.1px]">
+                  <th className="px-10 py-3 text-left text-xl text-tracer-800">
+                    Role
+                  </th>
+                  <th className="px-10 py-3 text-left text-xl text-tracer-800">
+                    Location
+                  </th>
+                </tr>
+              </thead>
               <tbody>{jobRows}</tbody>
             </table>
           </div>
         </div>
-        <div className={`w-full ${matches ? "block xl:hidden" : "hidden"}`}>
-          {jobDivs}
-        </div>
+        <div className="block w-full lg:hidden">{jobDivs}</div>
       </Container>
     </section>
   );
