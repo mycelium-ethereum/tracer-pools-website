@@ -17,7 +17,7 @@ const CareersPage = () => {
         <Header
           title={"Job Listings"}
           subheading={
-            "Tracer DAO is an open-source, smart contract protocol for derivatives. View open roles below."
+            "View open roles below."
           }
         />
         <CareersTable />
