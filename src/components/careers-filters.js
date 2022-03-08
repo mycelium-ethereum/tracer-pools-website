@@ -88,7 +88,7 @@ const CareerFilters = ({ locations, teams, worktypes }) => {
         td.classList.add("max-h-0");
       });
     } else {
-      job.classList.remove("max-h-[60px]");
+      job.classList.remove("max-h-[207px]");
     }
   };
 
@@ -105,7 +105,7 @@ const CareerFilters = ({ locations, teams, worktypes }) => {
         td.classList.remove("max-h-0");
       });
     } else {
-      job.classList.add("max-h-[60px]");
+      job.classList.add("max-h-[207px]");
     }
   };
 

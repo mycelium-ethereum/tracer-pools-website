@@ -169,7 +169,7 @@ export default function CareersTable() {
     return (
       <div
         key={key}
-        className="job-listing group relative transition-all duration-300"
+        className="job-listing group relative max-h-[207px] overflow-hidden transition-all duration-300"
         data-location={location}
         data-business={department}
         data-team={team}
