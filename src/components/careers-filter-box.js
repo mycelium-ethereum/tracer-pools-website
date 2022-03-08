@@ -19,7 +19,7 @@ const FilterBox = ({
 
   return (
     <div
-      className={`relative ml-8 mb-2 min-w-[284px] cursor-pointer rounded-lg bg-[#F1F2F4] font-semibold text-black lg:mb-0 ${
+      className={`relative ml-8 mb-2 min-w-[284px] cursor-pointer rounded-lg bg-[#F1F2F4] font-semibold text-black xl:mb-0 ${
         open ? "z-30" : "z-20"
       }`}
       data-type={dataType}

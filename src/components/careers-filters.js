@@ -148,8 +148,8 @@ const CareerFilters = ({ locations, teams, worktypes }) => {
 
   return (
     <>
-      <div className="flex w-full flex-col items-center justify-center lg:flex-row">
-        <span className="mb-4 block text-[#828790] lg:mb-0">Filter:</span>
+      <div className="flex w-full flex-col items-center justify-center xl:flex-row">
+        <span className="mb-4 block text-[#828790] xl:mb-0">Filter:</span>
         {/* Location filter */}
         <FilterBox
           onClickAction={setLocationOpen}
