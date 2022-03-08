@@ -20,6 +20,11 @@ const CareerFilters = ({ locations, teams, worktypes }) => {
   const filterElements = [locationFilterBox, teamFilterBox, worktypeFilterBox];
   const filterStateElements = [setLocationOpen, setTeamOpen, setWorktypeOpen];
 
+  //   Keep record of listing data after filters have been applied
+  const [filteredLocations, setFilteredLocations] = useState([]);
+  const [filteredTeams, setFilteredTeams] = useState([]);
+  const [filteredWorktypes, setFilteredWorktypes] = useState([]);
+
   const handleClick = (e) => {
     const target = e.target;
     const types = ["location", "team", "worktype"];
@@ -49,30 +54,60 @@ const CareerFilters = ({ locations, teams, worktypes }) => {
         setWorktypeFilter(filterText);
         break;
     }
-    console.log(target);
-    console.log(filterText);
-    console.log(filterType);
   };
 
   const filterListings = () => {
     const listings = document.querySelectorAll(".job-listing");
     let hasMatches = false;
+    const filteredLocations = [];
+    const filteredTeams = [];
+    const filteredWorktypes = [];
     listings.forEach((listing) => {
       const job = listing;
       // Hide the listings that do not match the filters
-      const jobLocation = job.dataset.location;
-      const jobTeam = job.dataset.team;
-      const jobWorktype = job.dataset.worktype;
-      const isMatched = compareListing(jobLocation, jobTeam, jobWorktype);
+      const isMatched = compareListing(
+        job.dataset.location,
+        job.dataset.team,
+        job.dataset.worktype
+      );
       if (isMatched.includes(false)) {
         hideListing(job);
       } else {
         // If one match exists, set matchExists to true
         hasMatches = true;
         showListing(job);
+        limitFilterOptions(
+          filteredLocations,
+          filteredTeams,
+          filteredWorktypes,
+          job
+        );
       }
     });
+    setFilteredLocations(filteredLocations);
+    setFilteredTeams(filteredTeams);
+    setFilteredWorktypes(filteredWorktypes);
     return hasMatches;
+  };
+
+  const limitFilterOptions = (
+    filteredLocations,
+    filteredTeams,
+    filteredWorktypes,
+    job
+  ) => {
+    const jobLocation = job.dataset.location;
+    const jobTeam = job.dataset.team;
+    const jobWorktype = job.dataset.worktype;
+    if (!filteredLocations.includes(jobLocation)) {
+      filteredLocations.push(jobLocation);
+    }
+    if (!filteredTeams.includes(jobTeam)) {
+      filteredTeams.push(jobTeam);
+    }
+    if (!filteredWorktypes.includes(jobWorktype)) {
+      filteredWorktypes.push(jobWorktype);
+    }
   };
 
   const hideListing = (job) => {
@@ -193,6 +228,8 @@ const CareerFilters = ({ locations, teams, worktypes }) => {
           reference={locationFilterBox}
           filterData={locations}
           dataType="location"
+          filtersChanged={filtersChanged}
+          listingData={filteredLocations}
         />
         {/* Team filter */}
         <FilterBox
@@ -203,6 +240,8 @@ const CareerFilters = ({ locations, teams, worktypes }) => {
           reference={teamFilterBox}
           filterData={teams}
           dataType="team"
+          filtersChanged={filtersChanged}
+          listingData={filteredTeams}
         />
         {/* Worktype filter */}
         <FilterBox
@@ -213,6 +252,8 @@ const CareerFilters = ({ locations, teams, worktypes }) => {
           reference={worktypeFilterBox}
           filterData={worktypes}
           dataType="worktype"
+          filtersChanged={filtersChanged}
+          listingData={filteredWorktypes}
         />
       </div>
       <ClearFiltersButton

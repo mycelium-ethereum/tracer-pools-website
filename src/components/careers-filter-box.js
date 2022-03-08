@@ -8,8 +8,11 @@ const FilterBox = ({
   text,
   reference,
   filterData,
+  listingData,
   dataType,
+  filtersChanged,
 }) => {
+  filterData = filtersChanged ? listingData : filterData;
   const toggleFilter = () => {
     onClickAction((prev) => !prev);
   };
