@@ -120,7 +120,7 @@ const CareerFilters = ({ locations, teams, worktypes }) => {
       // Remove height and padding
       job.querySelectorAll("div").forEach((td) => {
         td.classList.remove("max-h-[133px]", "py-10");
-        td.classList.add("max-h-0");
+        td.classList.add("max-h-0", "opacity-0");
       });
     } else {
       job.classList.remove("max-h-[207px]");
@@ -137,7 +137,7 @@ const CareerFilters = ({ locations, teams, worktypes }) => {
       // Remove height and padding
       job.querySelectorAll("div").forEach((td) => {
         td.classList.add("max-h-[133px]", "py-10");
-        td.classList.remove("max-h-0");
+        td.classList.remove("max-h-0", "opacity-0");
       });
     } else {
       job.classList.add("max-h-[207px]");

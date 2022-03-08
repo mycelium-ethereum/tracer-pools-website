@@ -53,7 +53,7 @@ const FilterBox = ({
               i === filterData.length - 1 ? "pb-2.5" : ""
             }
             ${
-              !listingData.includes(label)
+              filtersChanged && !listingData.includes(label)
                 ? "text-tracer-darkgray"
                 : "group hover:border-transparent hover:text-white"
             }`}
@@ -61,7 +61,7 @@ const FilterBox = ({
             data-type={dataType}
             onClick={handleChange}
             // Disable button if there is current listings do not contain the filter
-            disabled={!listingData.includes(label)}
+            disabled={filtersChanged && !listingData.includes(label)}
           >
             <span className="pointer-events-none relative z-10 bg-transparent">
               {label}

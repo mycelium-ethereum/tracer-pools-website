@@ -122,7 +122,7 @@ export default function CareersTable() {
     return (
       <tr
         key={key}
-        className="job-listing relative table-row border-tracer-darkgray  transition-colors duration-300 [border-bottom-width:0.1px]"
+        className="job-listing relative table-row border-tracer-darkgray transition-colors duration-300 [border-bottom-width:0.1px]"
         data-location={location}
         data-business={department}
         data-team={team}
