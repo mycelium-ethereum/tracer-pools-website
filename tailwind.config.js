@@ -9,6 +9,7 @@ module.exports = {
         },
         tracer: {
           gray: "#E5E7EB",
+          darkgray: "#9C9C9C",
           50: "#F0F0FF",
           100: "#DEDEFF",
           200: "#A6A6F2",
@@ -19,6 +20,7 @@ module.exports = {
           700: "#0d29ff",
           800: "#0000B0",
           900: "#00007A",
+          1000: "#1C64F2",
         },
       },
     },

@@ -1,6 +1,6 @@
 import React from "react";
 
-const BrandDownloadButton = ({ className, children, link, blue, download }) => {
+const SolidButton = ({ className, children, link, blue, download }) => {
   return (
     //   Only download if link is not external
     <a href={link} download={download} target={download ? false : "_blank"}>
@@ -11,7 +11,7 @@ const BrandDownloadButton = ({ className, children, link, blue, download }) => {
         ${
           blue
             ? "bg-[#1C64F2] text-white hover:bg-tracer-800"
-            : "bg-gray-200 text-[#374151] hover:bg-[#1C64F2] hover:text-white"
+            : "bg-[#F1F2F4] text-black hover:bg-[#1C64F2] hover:text-white"
         }`}
       >
         {children}
@@ -20,4 +20,4 @@ const BrandDownloadButton = ({ className, children, link, blue, download }) => {
   );
 };
 
-export default BrandDownloadButton;
+export default SolidButton;

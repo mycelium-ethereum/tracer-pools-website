@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import BrandFilters from "../components/brand-filters";
-import BrandDownloadButton from "../components/brand-download-button";
+import SolidButton from "../components/button-solid";
 import BrandAssetTile from "../components/brand-asset-tile";
 import BrandColourTile from "../components/brand-colour-tile";
 import BrandGraphicTile from "../components/brand-graphic-tile";
@@ -117,9 +117,9 @@ const BrandPage = () => {
                 {/* For correct application and usage please refer to the downloadable
                 Brand guidelines. */}
               </p>
-              {/* <BrandDownloadButton blue>
+              {/* <SolidButton blue>
                 Download Brand Guidelines
-              </BrandDownloadButton> */}
+              </SolidButton> */}
             </div>
             <div className="mb-32">
               {headings.slice(0, 6).map((content, i) => (
@@ -143,13 +143,13 @@ const BrandPage = () => {
                           ))}
                         </div>
                         {i === 3 && (
-                          <BrandDownloadButton
+                          <SolidButton
                             blue
                             link="/img/brand/Tracer Brand Graphics.zip"
                             download
                           >
                             Download Complete Logo Set
-                          </BrandDownloadButton>
+                          </SolidButton>
                         )}
                       </div>
                     )}
@@ -199,13 +199,13 @@ const BrandPage = () => {
                           <BrandGraphicTile key={i} item={item} />
                         ))}
                       </div>
-                      <BrandDownloadButton
+                      <SolidButton
                         blue
                         download
                         link="/img/brand/Tracer Support Graphics.zip"
                       >
                         Download Support Graphic Set
-                      </BrandDownloadButton>
+                      </SolidButton>
                     </div>
                   )}
                 </>
@@ -222,18 +222,18 @@ const BrandPage = () => {
                   derivative primitive.
                 </span>
               </div>
-              <BrandDownloadButton
+              <SolidButton
                 className="my-7"
                 link="https://fonts.adobe.com/fonts/aileron"
               >
                 Download Aileron
-              </BrandDownloadButton>
-              <BrandDownloadButton
+              </SolidButton>
+              <SolidButton
                 blue
                 link="https://www.fontsquirrel.com/fonts/aileron"
               >
                 Aileron on Font Squirrel
-              </BrandDownloadButton>
+              </SolidButton>
             </div>
           </Container>
         </section>

@@ -121,7 +121,7 @@ export const contributeCategory = [
   },
   {
     text: "Careers",
-    url: "https://jobs.lever.co/Mycelium/?department=Tracer%20DAO",
+    url: "/careers",
   },
   {
     text: "Bounties",
