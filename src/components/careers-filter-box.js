@@ -21,7 +21,7 @@ const FilterBox = ({
 
   return (
     <div
-      className={`relative mb-2 min-w-[284px] cursor-pointer rounded-lg bg-[#F1F2F4] font-semibold xl:ml-8 xl:mb-0 ${
+      className={`relative mb-2 flex h-[50px] min-w-[284px] cursor-pointer items-center rounded-lg bg-[#F1F2F4] font-semibold xl:ml-8 xl:mb-0 ${
         open ? "z-30" : "z-20"
       }
       ${
@@ -33,7 +33,7 @@ const FilterBox = ({
       onClick={toggleFilter}
       ref={reference}
     >
-      <div className="pointer-events-none relative z-10 py-2.5 pl-6 pr-14 transition-colors duration-300">
+      <div className="pointer-events-none relative z-10 w-full py-2.5 pl-6 pr-14 transition-colors duration-300">
         <span className="select-none">{text}</span>
         <div className="absolute right-6 top-1/2 flex h-full -translate-y-1/2 transform items-center">
           <img

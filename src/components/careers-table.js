@@ -41,7 +41,7 @@ export default function CareersTable() {
     const allTeams = [];
     const allWorktypes = [];
 
-    if (!_data.length) {
+    if (_data.length) {
       // Get each type of department
       for (let i = 0; i < _data.length; i++) {
         let posting = _data[i];
