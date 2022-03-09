@@ -3,7 +3,8 @@ import CareerFilters from "./careers-filters";
 import Loader from "./careers-loader";
 import ErrorText from "./careers-error";
 import Container from "./container";
-import ButtonGray from "./button-gray";
+import SolidButton from "./button-solid";
+import NoJobsAvailable from "./careers-no-jobs-text";
 
 export default function CareersTable() {
   const careerTable = useRef(null);
@@ -14,6 +15,7 @@ export default function CareersTable() {
   const [worktypes, setWorktypes] = useState([]);
   const [showLoader, setShowLoader] = useState(true);
   const [showError, setError] = useState(false);
+  const [showNoJobs, setShowNoJobs] = useState(false);
 
   //   Pull data from Lever API
   const getJobs = () => {
@@ -28,6 +30,7 @@ export default function CareersTable() {
         setShowLoader(false);
       });
   };
+
   //Setting up the structure for each job posting
   const createJobs = (_data) => {
     //Checking for potential Lever source or origin parameters
@@ -38,76 +41,81 @@ export default function CareersTable() {
     const allTeams = [];
     const allWorktypes = [];
 
-    // Get each type of department
-    for (let i = 0; i < _data.length; i++) {
-      let posting = _data[i];
-      let department = posting.categories.department;
-      if (!departments.includes(department)) {
-        departments.push(department);
-      }
-    }
-
-    // Sort departments alphabetically
-    const sortedDepartments = departments.sort((a, b) => a.localeCompare(b));
-    const departmentsListed = [];
-    for (let j = 0; j < sortedDepartments.length; j++) {
-      for (let k = 0; k < _data.length; k++) {
-        let currentDept = sortedDepartments[j];
-        let posting = _data[k];
+    if (!_data.length) {
+      // Get each type of department
+      for (let i = 0; i < _data.length; i++) {
+        let posting = _data[i];
         let department = posting.categories.department;
-        if (department === currentDept) {
-          let title = posting.text;
-          let location = posting.categories.location;
-          let commitment = posting.categories.commitment;
-          let team = posting.categories.team;
-          let link = posting.hostedUrl;
+        if (!departments.includes(department)) {
+          departments.push(department);
+        }
+      }
 
-          //   Only get Tracer DAO listings
-          if (department === "Tracer DAO") {
-            //   Store data for filters
+      // Sort departments alphabetically
+      const sortedDepartments = departments.sort((a, b) => a.localeCompare(b));
+      const departmentsListed = [];
+      for (let j = 0; j < sortedDepartments.length; j++) {
+        for (let k = 0; k < _data.length; k++) {
+          let currentDept = sortedDepartments[j];
+          let posting = _data[k];
+          let department = posting.categories.department;
+          if (department === currentDept) {
+            let title = posting.text;
+            let location = posting.categories.location;
+            let commitment = posting.categories.commitment;
+            let team = posting.categories.team;
+            let link = posting.hostedUrl;
 
-            //   Location
-            if (!allLocations.includes(location)) {
-              allLocations.push(location);
+            //   Only get Tracer DAO listings
+            if (department === "Tracer DAO") {
+              //   Store data for filters
+
+              //   Location
+              if (!allLocations.includes(location)) {
+                allLocations.push(location);
+              }
+              //   Team
+              if (!allTeams.includes(team)) {
+                allTeams.push(team);
+              }
+              //   Work type
+              if (!allWorktypes.includes(commitment)) {
+                allWorktypes.push(commitment);
+              }
+              const key = Math.random() * 1000;
+              const row = createJobRow(
+                link,
+                title,
+                department,
+                location,
+                team,
+                commitment,
+                key
+              );
+              const div = createJobDiv(
+                link,
+                title,
+                department,
+                location,
+                team,
+                commitment,
+                key
+              );
+              jobRowArr.push(row);
+              jobDivArr.push(div);
             }
-            //   Team
-            if (!allTeams.includes(team)) {
-              allTeams.push(team);
-            }
-            //   Work type
-            if (!allWorktypes.includes(commitment)) {
-              allWorktypes.push(commitment);
-            }
-            const key = Math.random() * 1000;
-            const row = createJobRow(
-              link,
-              title,
-              department,
-              location,
-              team,
-              commitment,
-              key
-            );
-            const div = createJobDiv(
-              link,
-              title,
-              department,
-              location,
-              team,
-              commitment,
-              key
-            );
-            jobRowArr.push(row);
-            jobDivArr.push(div);
           }
         }
       }
+      setJobRows(jobRowArr);
+      setJobDivs(jobDivArr);
+      setLocations(allLocations);
+      setTeams(allTeams);
+      setWorktypes(allWorktypes);
+    } else {
+      setShowLoader(false);
+      setShowNoJobs(true);
     }
-    setJobRows(jobRowArr);
-    setJobDivs(jobDivArr);
-    setLocations(allLocations);
-    setTeams(allTeams);
-    setWorktypes(allWorktypes);
   };
 
   const createJobRow = (
@@ -148,9 +156,9 @@ export default function CareersTable() {
         </td>
         <td>
           <div className="max-h-[133px] overflow-hidden px-10 py-10 transition-all duration-300">
-            <ButtonGray link={link} className="w-[118px]">
+            <SolidButton link={link} className="w-[118px]">
               Apply Now
-            </ButtonGray>
+            </SolidButton>
           </div>
         </td>
       </tr>
@@ -192,12 +200,12 @@ export default function CareersTable() {
               {location.toUpperCase()}
             </span>
           </span>
-          <ButtonGray
+          <SolidButton
             link={link}
             className="h-[38px] max-w-full text-sm lg:h-auto lg:max-w-[auto] lg:text-base"
           >
             Apply Now
-          </ButtonGray>
+          </SolidButton>
         </div>
       </div>
     );
@@ -215,7 +223,7 @@ export default function CareersTable() {
 
   return (
     <section className="select-dark z-10 bg-white pt-6 pb-24">
-      <Container>
+      <Container className="min-h-[625px]">
         <CareerFilters
           locations={locations}
           teams={teams}
@@ -223,34 +231,33 @@ export default function CareersTable() {
         />
         <ErrorText showError={showError} />
         <Loader showLoader={showLoader} />
-        <div
-          className={`w-full overflow-hidden ${
-            !showLoader ? "hidden lg:block" : "hidden"
+        <table
+          id="careers-table"
+          ref={careerTable}
+          className={`mx-auto w-fit overflow-hidden ${
+            !showLoader && !showNoJobs ? "hidden lg:block" : "hidden"
           }`}
         >
-          <div className="overflow-x-auto">
-            <table
-              id="careers-table"
-              ref={careerTable}
-              className="w-full transform-gpu"
-            >
-              <thead>
-                <tr className="border-tracer-darkgray [border-bottom-width:0.1px]">
-                  <th className="px-10 py-3 text-left text-xl font-semibold text-tracer-800">
-                    Role
-                  </th>
-                  <th className="px-10 py-3 text-left text-xl font-semibold text-tracer-800">
-                    Location
-                  </th>
-                </tr>
-              </thead>
-              <tbody>{jobRows}</tbody>
-            </table>
-          </div>
-        </div>
-        <div className="block w-full border-tracer-darkgray [border-top-width:0.1px] lg:hidden">
+          <thead>
+            <tr className="border-tracer-darkgray [border-bottom-width:0.1px]">
+              <th className="px-10 py-3 text-left text-xl font-semibold text-tracer-800">
+                Role
+              </th>
+              <th className="px-10 py-3 text-left text-xl font-semibold text-tracer-800">
+                Location
+              </th>
+            </tr>
+          </thead>
+          <tbody>{jobRows}</tbody>
+        </table>
+        <div
+          className={`block w-full lg:hidden ${
+            showNoJobs ? "" : "border-tracer-darkgray [border-top-width:0.1px]"
+          }`}
+        >
           {jobDivs}
         </div>
+        {showNoJobs && <NoJobsAvailable />}
       </Container>
     </section>
   );

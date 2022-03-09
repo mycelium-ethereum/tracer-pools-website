@@ -1,6 +1,6 @@
 import React from "react";
 
-const ButtonGray = ({ className, children, link, blue, download }) => {
+const SolidButton = ({ className, children, link, blue, download }) => {
   return (
     //   Only download if link is not external
     <a href={link} download={download} target={download ? false : "_blank"}>
@@ -20,4 +20,4 @@ const ButtonGray = ({ className, children, link, blue, download }) => {
   );
 };
 
-export default ButtonGray;
+export default SolidButton;

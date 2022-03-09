@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import BrandFilters from "../components/brand-filters";
-import ButtonGray from "../components/button-gray";
+import SolidButton from "../components/button-solid";
 import BrandAssetTile from "../components/brand-asset-tile";
 import BrandColourTile from "../components/brand-colour-tile";
 import BrandGraphicTile from "../components/brand-graphic-tile";
@@ -117,9 +117,9 @@ const BrandPage = () => {
                 {/* For correct application and usage please refer to the downloadable
                 Brand guidelines. */}
               </p>
-              {/* <ButtonGray blue>
+              {/* <SolidButton blue>
                 Download Brand Guidelines
-              </ButtonGray> */}
+              </SolidButton> */}
             </div>
             <div className="mb-32">
               {headings.slice(0, 6).map((content, i) => (
@@ -143,13 +143,13 @@ const BrandPage = () => {
                           ))}
                         </div>
                         {i === 3 && (
-                          <ButtonGray
+                          <SolidButton
                             blue
                             link="/img/brand/Tracer Brand Graphics.zip"
                             download
                           >
                             Download Complete Logo Set
-                          </ButtonGray>
+                          </SolidButton>
                         )}
                       </div>
                     )}
@@ -199,13 +199,13 @@ const BrandPage = () => {
                           <BrandGraphicTile key={i} item={item} />
                         ))}
                       </div>
-                      <ButtonGray
+                      <SolidButton
                         blue
                         download
                         link="/img/brand/Tracer Support Graphics.zip"
                       >
                         Download Support Graphic Set
-                      </ButtonGray>
+                      </SolidButton>
                     </div>
                   )}
                 </>
@@ -222,18 +222,18 @@ const BrandPage = () => {
                   derivative primitive.
                 </span>
               </div>
-              <ButtonGray
+              <SolidButton
                 className="my-7"
                 link="https://fonts.adobe.com/fonts/aileron"
               >
                 Download Aileron
-              </ButtonGray>
-              <ButtonGray
+              </SolidButton>
+              <SolidButton
                 blue
                 link="https://www.fontsquirrel.com/fonts/aileron"
               >
                 Aileron on Font Squirrel
-              </ButtonGray>
+              </SolidButton>
             </div>
           </Container>
         </section>

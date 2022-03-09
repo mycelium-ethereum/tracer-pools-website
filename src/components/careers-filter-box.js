@@ -21,8 +21,13 @@ const FilterBox = ({
 
   return (
     <div
-      className={`relative mb-2 min-w-[284px] cursor-pointer rounded-lg bg-[#F1F2F4] font-semibold text-black xl:ml-8 xl:mb-0 ${
+      className={`relative mb-2 min-w-[284px] cursor-pointer rounded-lg bg-[#F1F2F4] font-semibold xl:ml-8 xl:mb-0 ${
         open ? "z-30" : "z-20"
+      }
+      ${
+        !filterData.length
+          ? "pointer-events-none text-tracer-darkgray"
+          : "pointer-events-auto text-black"
       }`}
       data-type={dataType}
       onClick={toggleFilter}
@@ -35,7 +40,8 @@ const FilterBox = ({
             src={Dropdown}
             className={`transform-gpu select-none transition-all duration-300 ${
               open ? "translate-y-1 rotate-180 pt-2" : ""
-            }`}
+            }
+            ${!filterData.length ? "opacity-40" : "opacity-100"}`}
           />
         </div>
       </div>
