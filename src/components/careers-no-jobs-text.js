@@ -4,7 +4,7 @@ import DiscordLogo from "../../static/img/social-icons/discord-nav.svg";
 
 export default function NoJobsAvailable() {
   return (
-    <div className="mx-auto mt-20 text-center text-[#828790] md:mt-40">
+    <div className="mx-auto mt-20 mb-40 text-center text-[#828790] md:mb-80 md:mt-40">
       <p className="text-2xl">No positions available at this time.</p>
       <p className="mt-2">
         <small className="text-base font-normal">

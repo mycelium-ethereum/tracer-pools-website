@@ -223,7 +223,7 @@ export default function CareersTable() {
 
   return (
     <section className="select-dark z-10 bg-white pt-6 pb-24">
-      <Container className="min-h-[625px]">
+      <Container>
         <CareerFilters
           locations={locations}
           teams={teams}
