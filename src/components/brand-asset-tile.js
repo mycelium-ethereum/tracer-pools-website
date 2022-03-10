@@ -10,7 +10,7 @@ const BrandAssetTile = ({ item, index }) => {
       >
         {item.logo && (
           <picture>
-            <img src={item.svg} />
+            <img src={item.svg} alt={item.alt} />
           </picture>
         )}
       </div>
