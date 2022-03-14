@@ -57,14 +57,13 @@ const MobileNav = ({ navOpen, darkerNav, closeNav }) => {
             </Link>
           </div>
           <div className="mt-6 w-full">
-            <a
+            <Link
               onClick={() => closeNav()}
               className="mobile-link rounded-lg py-2 px-4 opacity-0"
-              target="_blank"
-              href="https://jobs.lever.co/Mycelium/?department=Tracer%20DAO"
+              to="/careers"
             >
               <span className="text-lg font-normal text-white">Careers</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
