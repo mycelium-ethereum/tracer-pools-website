@@ -4,14 +4,14 @@ import Moment from "react-moment";
 import marked from "marked";
 import DOMPurify from "dompurify";
 import CallToAction from "./call-to-action";
-import TweetButton from "./tweet-button";
-import ShareButton from "./share-button";
-import Container from "./container";
+import TweetButton from "../tweet-button";
+import ShareButton from "../share-button";
+import Container from "../container";
 
 // Images
-import Home from "../../static/img/blog-posts/home.svg";
-import Calendar from "../../static/img/blog-posts/calendar.svg";
-import Clock from "../../static/img/blog-posts/clock.svg";
+import Home from "../../../static/img/blog-posts/home.svg";
+import Calendar from "../../../static/img/blog-posts/calendar.svg";
+import Clock from "../../../static/img/blog-posts/clock.svg";
 
 const BlogText = ({ data }) => {
   const [currentURL, setCurrentURL] = useState("");

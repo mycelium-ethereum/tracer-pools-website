@@ -1,19 +1,19 @@
 import React from "react";
-import SolidButton from "./solid-button";
+import SolidButton from "../solid-button";
 
 // Images
-import CTABackground from "../../static/img/blog-posts/cta-bg.svg";
+import CTABackground from "../../../static/img/blog-posts/cta-bg.svg";
 
 const CallToAction = () => {
   return (
-    <div className="w-full relative sm:px-12 sm:py-14 px-6 py-9 overflow-hidden rounded-xl sm:mt-20 mt-12">
+    <div className="relative mt-12 w-full overflow-hidden rounded-xl px-6 py-9 sm:mt-20 sm:px-12 sm:py-14">
       <img
-        className="w-full absolute bottom-0 right-0"
+        className="absolute bottom-0 right-0 w-full"
         src={CTABackground}
         alt=""
       />
-      <div className="relative z-0 text-white font-normal">
-        <p className="xl:text-2xl sm:text-xl sm:text-left text-center text-base">
+      <div className="relative z-0 font-normal text-white">
+        <p className="text-center text-base sm:text-left sm:text-xl xl:text-2xl">
           Tracer Perpetual Pools is now live on Arbitrum One. Fully fungible,
           leveraged tokens for the DeFi economy, with no margin requirements and
           no liquidations.
@@ -26,7 +26,7 @@ const CallToAction = () => {
           </a>
         </p>
         <SolidButton
-          className="sm:ml-0 mx-auto mt-9 sm:w-56 sm:px-0 whitespace-nowrap"
+          className="mx-auto mt-9 whitespace-nowrap sm:ml-0 sm:w-56 sm:px-0"
           href="https://pools.tracer.finance/"
           analytics='"RadarPoolsFooterCTA", {"props":{"plan":"Navigation"}}'
           id="launch-pools-blog-cta"

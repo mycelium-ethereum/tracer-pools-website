@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import SearchIcon from "../../static/img/blog-posts/search-large.svg";
-import Dropdown from "../../static/img/general/chevron-down.svg";
+import SearchIcon from "../../../static/img/blog-posts/search-large.svg";
+import Dropdown from "../../../static/img/general/chevron-down.svg";
 
 const PostFilters = ({ setShowSearch, setCurrentPage, setCategory }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);

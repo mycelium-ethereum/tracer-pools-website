@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 // Components
 import Layout from "../../../components/layout";
 import SEO from "../../../components/seo";
-import BlogContent from "../../../components/blog-template-content";
+import BlogContent from "../../../components/blog/blog-template-content";
 
 const Preview = (props) => {
   const [blogPreview, setBlogPreview] = useState(false);

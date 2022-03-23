@@ -7,8 +7,8 @@ const FooterCategory = ({ name, category }) => {
       <span className="mb-2.5 block">
         <strong>{name}</strong>
       </span>
-      {category.map((content) => (
-        <FooterLink content={content} />
+      {category.map((content, i) => (
+        <FooterLink key={i} content={content} />
       ))}
     </div>
   );

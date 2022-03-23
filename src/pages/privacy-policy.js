@@ -3,17 +3,20 @@ import React from "react";
 // Components
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import PolicyText from "../components/policy-text";
+import PolicyTextContainer from "../components/policy-text-container";
 
-const Index = () => {
+const PrivacyPolicyPage = () => {
   return (
     <>
-      <SEO title="Privacy Policy" description="The Privacy Policy for tracer.finance."/>
+      <SEO
+        title="Privacy Policy"
+        description="The Privacy Policy for tracer.finance."
+      />
       <Layout>
-        <PolicyText />
+        <PolicyTextContainer />
       </Layout>
     </>
   );
 };
 
-export default Index;
+export default PrivacyPolicyPage;

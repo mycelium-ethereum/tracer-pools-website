@@ -71,12 +71,8 @@ export const tracerDAOCategory = [
     text: "Brand Assets",
   },
   {
-    text: "Privacy Policy",
+    text: "Legal and Privacy",
     url: "/privacy-policy",
-  },
-  {
-    text: "Terms of Use",
-    url: "https://pools.tracer.finance/terms-of-use/",
   },
 ];
 
