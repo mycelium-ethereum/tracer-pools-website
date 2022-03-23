@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import Trie from "./trie";
+import Trie from "../trie";
 
 const SearchBar = ({ postTitles, searchResults, setSearchTerm }) => {
   const [prefix, setPrefix] = useState("");
@@ -62,7 +62,7 @@ const SearchBar = ({ postTitles, searchResults, setSearchTerm }) => {
   return (
     <>
       <input
-        className="search-box bg-transparent w-full h-full bg-searchgrey rounded-2xl md:pl-14 pl-11 z-0 font-normal text-gray-800"
+        className="search-box bg-searchgrey z-0 h-full w-full rounded-2xl bg-transparent pl-11 font-normal text-gray-800 md:pl-14"
         placeholder="Search"
         name="search-bar"
         ref={searchBar}
@@ -74,7 +74,7 @@ const SearchBar = ({ postTitles, searchResults, setSearchTerm }) => {
       <input
         type="text"
         name="search-bar"
-        className="absolute top-0 md:left-8 left-0 bg-transparent w-full h-full rounded-2xl md:pl-14 pl-11 font-normal pointer-events-none z-10 opacity-40"
+        className="pointer-events-none absolute top-0 left-0 z-10 h-full w-full rounded-2xl bg-transparent pl-11 font-normal opacity-40 md:left-8 md:pl-14"
         value={suggestion}
       />
       <svg
@@ -82,7 +82,7 @@ const SearchBar = ({ postTitles, searchResults, setSearchTerm }) => {
         height="20"
         viewBox="0 0 19 20"
         fill="none"
-        className="absolute md:left-14 left-4 w-5 h-5 transition-all duration-300"
+        className="absolute left-4 h-5 w-5 transition-all duration-300 md:left-14"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import React, { useEffect, useRef } from "react";
-import Home from "../../static/img/blog-posts/home.svg";
-import Calendar from "../../static/img/blog-posts/calendar.svg";
-import Clock from "../../static/img/blog-posts/clock.svg";
+import Home from "../../../static/img/blog-posts/home.svg";
+import Calendar from "../../../static/img/blog-posts/calendar.svg";
+import Clock from "../../../static/img/blog-posts/clock.svg";
 import { Link } from "gatsby";
 import Moment from "react-moment";
 import marked from "marked";

@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import SearchResult from "./blog-search-result";
 import SearchBar from "./blog-searchbar";
-import CloseIcon from "../../static/img/blog-posts/close.svg";
-import Container from "../components/container";
+import CloseIcon from "../../../static/img/blog-posts/close.svg";
+import Container from "../container";
 
 const BlogSearch = ({ setShowSearch, showSearch, posts, postTitles }) => {
   const [postResults, setPostResults] = useState([]);

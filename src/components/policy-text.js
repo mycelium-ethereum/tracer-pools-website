@@ -1,15 +1,10 @@
 /* eslint-disable */
 import React, { useEffect, useState } from "react";
-import Dropdown from "../../static/img/general/chevron-down.svg";
 import Container from "../components/container";
-
-// Litepaper
-import AuditPDF from "../../static/pdf/Sigma Prime Tracer DAO v1.1.pdf";
-import PoolsPDF from "../../static/pdf/Tracer Perpetual Pools.pdf";
+import LegalCategories from "./legal-categories";
 
 const PrivacyText = () => {
-  const [protocolDropdownOpen, setProtocolDropdownOpen] = useState(false);
-  const [websiteDropdownOpen, setWebsiteDropdownOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const isMobile = () => {
     const width = window.innerWidth;
     return width < 1024;
@@ -17,123 +12,30 @@ const PrivacyText = () => {
   useEffect(() => {
     window.addEventListener("resize", function () {
       if (isMobile()) {
-        setProtocolDropdownOpen(false);
-        setWebsiteDropdownOpen(false);
+        setDropdownOpen(false);
       }
     });
   }, []);
   return (
     <>
-      <section className="relative z-20 mt-16 h-full w-full bg-white">
-        <Container className="block grid-cols-12 pt-6 pb-6 md:grid">
-          <aside className="col-span-1 h-auto w-full md:w-60">
-            {/* <button
-              className="relative md:hidden inline-flex mr-4 justify-start items-center text-base font-semibold w-28 h-11 rounded-xl bg-gray-50 pl-4"
-              onClick={() => {
-                setProtocolDropdownOpen((wasOpen) => !wasOpen);
-                setWebsiteDropdownOpen(false);
-              }}
-            >
-              Protocol
-              <img
-                className="absolute top-1/2 transform -translate-y-1/2 right-2 w-4 h-auto"
-                src={Dropdown}
-                alt="Dropdown toggle"
-              />
-            </button> */}
-            <button
-              className="relative inline-flex h-11 w-28 items-center justify-start rounded-xl bg-gray-50 pl-4 text-base font-semibold md:hidden"
-              onClick={() => {
-                setWebsiteDropdownOpen((wasOpen) => !wasOpen);
-                setProtocolDropdownOpen(false);
-              }}
-            >
-              Website
-              <img
-                className="absolute top-1/2 right-2 h-auto w-4 -translate-y-1/2 transform"
-                src={Dropdown}
-                alt="Dropdown toggle"
-              />
-            </button>
-            {/* <div
-              className={
-                "md:static md:block absolute top-18 md:rounded-none md:p-0 md:shadow-none shadow p-4 rounded-xl md:bg-transparent bg-white " +
-                (protocolDropdownOpen ? "block" : "hidden")
-              }
-            >
-              <span className="text-3xl font-semibold md:block hidden">
-                Protocol
-              </span>
-              <ul className="md:mt-2 md:pl-4">
-                <li className="mb-2">Privacy Policy</li>
-                <li className="mb-2">
-                  <a className="text-gray-500" href="/privacy-policy">
-                    Disclaimer
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a className="text-gray-500" href="/privacy-policy">
-                    Terms of Use
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a className="text-gray-500" href="/privacy-policy">
-                    Participation Agreement
-                  </a>
-                </li>
-              </ul>
-            </div> */}
-            {/* mt-12 for div below */}
-            <div
-              className={
-                "absolute left-36 top-5 rounded-xl bg-white p-4 shadow md:static md:block md:rounded-none md:bg-transparent md:p-0 md:shadow-none " +
-                (websiteDropdownOpen ? "block" : "hidden")
-              }
-            >
-              <span className="hidden text-3xl font-semibold md:block">
-                Website
-              </span>
-              <ul className="md:mt-2 md:pl-4">
-                <li className="mb-2">
-                  <a
-                    className="text-gray-500"
-                    href={PoolsPDF}
-                    target={"_blank"}
-                  >
-                    Litepaper
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a
-                    className="text-gray-500"
-                    href="https://docs.tracer.finance"
-                    target={"_blank"}
-                  >
-                    Documentation (Gitbook)
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a
-                    className="text-gray-500"
-                    href={AuditPDF}
-                    target={"_blank"}
-                  >
-                    Security Audit
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </aside>
+      <section className="select-dark relative z-20 mt-16 h-full w-full bg-white">
+        <Container className="block grid-cols-12 pt-24 pb-6 md:grid">
+          <LegalCategories
+            setDropdownOpen={setDropdownOpen}
+            dropdownOpen={dropdownOpen}
+          />
           <div
             className="mt-4 pr-9 text-gray-500 md:col-span-8 md:col-start-5 md:mt-0 md:pr-0 lg:col-span-9 lg:col-start-4"
             onClick={() => {
-              setProtocolDropdownOpen(false);
-              setWebsiteDropdownOpen(false);
+              setDropdownOpen(false);
             }}
           >
-            <h1 className="mb-4 text-4xl font-semibold text-black">
+            <h1 className="mb-10 text-4xl font-semibold text-black">
               Privacy Policy
             </h1>
+            <small className="mb-5 block text-base font-normal">
+              Last updated: 2 September 2021
+            </small>
             <p className="mb-4">
               In this Privacy Policy, ‘us’ ‘we’ or ‘our’ means Tracer DAO. We
               are committed to respecting your privacy. Our Privacy Policy sets
@@ -161,7 +63,7 @@ const PrivacyText = () => {
               Personal information includes information or an opinion about an
               individual that is reasonably identifiable.
             </p>
-            <p className="mb-4 mt-8 text-lg font-semibold text-black">
+            <p className="mb-4 mt-8 text-xl font-semibold text-black">
               <b>How do we collect personal information?</b>
             </p>
             <p className="mb-4">
@@ -180,7 +82,7 @@ const PrivacyText = () => {
                 interact with our sites, services, content and advertising.
               </li>
             </ul>
-            <p className="mb-4 mt-8 text-lg font-semibold text-black">
+            <p className="mb-4 mt-8 text-xl font-semibold text-black">
               <b>Why do we collect, use and disclose personal information?</b>
             </p>
             <p className="mb-4">
@@ -228,7 +130,7 @@ const PrivacyText = () => {
               understand your preferences and interests, personalise your
               experience and enhance the products and services that you receive.
             </p>
-            <p className="mb-4 mt-8 text-lg font-semibold text-black">
+            <p className="mb-4 mt-8 text-xl font-semibold text-black">
               <b>Using our website and cookies</b>
             </p>
             <p className="mb-4">
@@ -240,7 +142,7 @@ const PrivacyText = () => {
               your visit and the internet protocol address assigned to your
               computer.
             </p>
-            <p className="mb-4 mt-8 text-lg font-semibold text-black">
+            <p className="mb-4 mt-8 text-xl font-semibold text-black">
               <b>Integrated third party services</b>
             </p>
             <p className="mb-4">
@@ -254,7 +156,7 @@ const PrivacyText = () => {
               services.
             </p>
 
-            <p className="mb-4 mt-8 text-lg font-semibold text-black">
+            <p className="mb-4 mt-8 text-xl font-semibold text-black">
               <b>Accessing or correcting your personal information</b>
             </p>
             <p className="mb-4">
@@ -267,7 +169,7 @@ const PrivacyText = () => {
               we hold about you is inaccurate, please contact us and we will
               take reasonable steps to ensure that it is corrected.
             </p>
-            <p className="mb-4 mt-8 text-lg font-semibold text-black">
+            <p className="mb-4 mt-8 text-xl font-semibold text-black">
               <b>Contact Us</b>
             </p>
             <p className="mb-4">
@@ -276,7 +178,7 @@ const PrivacyText = () => {
               complaint, please contact us at
               <a href="mailto:hello@tracer.finance">hello@tracer.finance</a>.
             </p>
-            <p className="mb-4 mt-8 text-lg font-semibold text-black">
+            <p className="mb-4 mt-8 text-xl font-semibold text-black">
               <b>What personal information do we collect?</b>
             </p>
             <p className="mb-4">
@@ -331,7 +233,7 @@ const PrivacyText = () => {
                 facilitate your dealings with us.
               </li>
             </ul>
-            <p className="mb-4 mt-8 text-lg font-semibold text-black">
+            <p className="mb-4 mt-8 text-xl font-semibold text-black">
               <b>Do we use your personal information for direct marketing?</b>
             </p>
             <p className="mb-4">
@@ -344,7 +246,7 @@ const PrivacyText = () => {
               from us by contacting us using the details set out below or by
               using the opt-out facilities provided (eg an unsubscribe link).
             </p>
-            <p className="mb-4 mt-8 text-lg font-semibold text-black">
+            <p className="mb-4 mt-8 text-xl font-semibold text-black">
               <b>To whom do we disclose your personal information?</b>
             </p>
             <p className="mb-4">
@@ -378,7 +280,7 @@ const PrivacyText = () => {
                 permitted by law.
               </li>
             </ul>
-            <p className="mb-4 mt-8 text-lg font-semibold text-black">
+            <p className="mb-4 mt-8 text-xl font-semibold text-black">
               <b>Disclosure of personal information</b>
             </p>
             <p className="mb-4">
@@ -389,7 +291,7 @@ const PrivacyText = () => {
               with the OECD Guidelines on the Protection of Privacy and
               Transborder Flows of Personal Data.
             </p>
-            <p className="mb-4 mt-8 text-lg font-semibold text-black">
+            <p className="mb-4 mt-8 text-xl font-semibold text-black">
               <b>Security</b>
             </p>
             <p className="mb-4">
@@ -401,7 +303,7 @@ const PrivacyText = () => {
               measures to protect your personal information. However, we cannot
               guarantee the security of your personal information.
             </p>
-            <p className="mb-4 mt-8 text-lg font-semibold text-black">
+            <p className="mb-4 mt-8 text-xl font-semibold text-black">
               <b>Links</b>
             </p>
             <p className="mb-4">
@@ -415,7 +317,7 @@ const PrivacyText = () => {
               Policy, so we encourage individuals to read them before using
               those websites.
             </p>
-            <p className="mb-4 mt-8 text-lg font-semibold text-black">
+            <p className="mb-4 mt-8 text-xl font-semibold text-black">
               <b>Making a complaint</b>
             </p>
             <p className="mb-4">
@@ -430,7 +332,7 @@ const PrivacyText = () => {
               satisfactorily, we will provide you with information about the
               further steps you can take.
             </p>
-            <p className="mb-4 mt-8 text-lg font-semibold text-black">
+            <p className="mb-4 mt-8 text-xl font-semibold text-black">
               <b>Effective</b>
             </p>
             <p className="mb-4">23 April, 2021</p>

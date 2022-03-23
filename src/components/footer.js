@@ -59,7 +59,7 @@ const Footer = () => {
             {categoryNames.map((category, i) => {
               return (
                 <FooterCategoryList
-                  key={category.name}
+                  key={i}
                   name={category.name}
                   category={categoryArr[i]}
                 />

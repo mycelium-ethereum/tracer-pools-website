@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { StaticQuery, graphql } from "gatsby";
 import Discord from "/static/img/social-icons/discord-footer.svg";
-import PostLink from "../components/blog-post-link";
+import PostLink from "../components/blog/blog-post-link";
 
 const query = graphql`
   query tracerBlogs {
@@ -34,30 +34,29 @@ const ComingSoon = () => {
       <Layout>
         <SEO title="Coming Soon" />
         <section className="relative z-10">
-          <div className="container w-full h-auto relative flex items-center justify-center md:pt-72 pt-36 pb-12 xl:px-0 px-4 mx-auto">
-            <header className="text-white text-center">
-              <h1 className="xl:text-9xl sm:text-7xl text-5xl font-black">
+          <div className="container relative mx-auto flex h-auto w-full items-center justify-center px-4 pt-36 pb-12 md:pt-72 xl:px-0">
+            <header className="text-center text-white">
+              <h1 className="text-5xl font-black sm:text-7xl xl:text-9xl">
                 Coming Soon.
               </h1>
-              <p className="lg:text-2xl md:text-xl text-lg mt-8">
-                <span className="sm:block inline">
+              <p className="mt-8 text-lg md:text-xl lg:text-2xl">
+                <span className="inline sm:block">
                   We’re working hard to get everything just right. We should
                   &nbsp;
                 </span>
-                <span className="sm:block inline">
+                <span className="inline sm:block">
                   be online in the next 24hrs. Keep track of the
                   conversation&nbsp;
                 </span>
-                <span className="sm:block inline">
+                <span className="inline sm:block">
                   in our
                   <a
-                    className="inline-flex items-center ml-2"
+                    className="ml-2 inline-flex items-center"
                     href="https://discord.com/invite/kddBUqDVVb"
-                    
                     target="_blank"
                   >
                     <img
-                      className="sm:w-6 w-5 mr-2"
+                      className="mr-2 w-5 sm:w-6"
                       src={Discord}
                       alt="Discord"
                     />
@@ -68,15 +67,15 @@ const ComingSoon = () => {
             </header>
           </div>
         </section>
-        <section className="h-full z-20 relative mt-16">
-          <div className="container relative w-full mx-auto pb-12 lg:px-0 px-4">
-            <h1 className="font-semibold text-3xl text-center mb-8 text-white">
+        <section className="relative z-20 mt-16 h-full">
+          <div className="container relative mx-auto w-full px-4 pb-12 lg:px-0">
+            <h1 className="mb-8 text-center text-3xl font-semibold text-white">
               Latest Announcements
             </h1>
             <StaticQuery
               query={query}
               render={(data) => (
-                <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
+                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                   {data.allStrapiTracerBlogs.edges
                     .sort((a, b) =>
                       new Date(a.node.publish_date) >
@@ -90,7 +89,7 @@ const ComingSoon = () => {
                       if (i === 2) {
                         return (
                           <PostLink
-                            className="lg:block sm:hidden block"
+                            className="block sm:hidden lg:block"
                             data={node}
                             key={i}
                           />
