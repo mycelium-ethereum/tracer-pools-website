@@ -112,8 +112,8 @@ export const learnCategory = [
 
 export const contributeCategory = [
   {
-    text: "Contributor Hub",
-    url: "https://tracerdao.notion.site/Tracer-DAO-Contributor-Hub-facf7139e53840da96a8d12a82364986",
+    text: "Open Tasks",
+    url: "https://app.dework.xyz/o/tracer-dao-3vNZC9t31aghwwUQH5Hqar",
   },
   {
     text: "Careers",
@@ -121,7 +121,11 @@ export const contributeCategory = [
   },
   {
     text: "Bounties",
-    url: "",
+    url: "https://docs.tracer.finance/tracer-1/service-providers/bounties",
+  },
+  {
+    text: "Contributor Docs",
+    url: "https://docs.tracer.finance/tracer-1/contribute",
   },
   {
     text: "Developers",
