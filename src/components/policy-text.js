@@ -175,7 +175,7 @@ const PrivacyText = () => {
             <p className="mb-4">
               For further information about our Privacy Policy or practices, or
               to access or correct your personal information, or make a
-              complaint, please contact us at
+              complaint, please contact us at&nbsp;
               <a href="mailto:hello@tracer.finance">hello@tracer.finance</a>.
             </p>
             <p className="mb-4 mt-8 text-xl font-semibold text-black">
@@ -184,7 +184,7 @@ const PrivacyText = () => {
             <p className="mb-4">
               For further information about our Privacy Policy or practices, or
               to access or correct your personal information, or make a
-              complaint, please contact us at
+              complaint, please contact us at&nbsp;
               <a href="mailto:hello@tracer.finance">hello@tracer.finance</a>.
             </p>
             <p className="mb-4">

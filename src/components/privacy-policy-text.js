@@ -124,18 +124,20 @@ const PrivacyPolicyText = () => {
       </h2>
       <p className="mb-4">
         You can access the personal information we hold about you by contacting
-        us at hello@tracer.finance. Sometimes, we may not be able to provide you
-        with access to all of your personal information and, where this is the
-        case, we will tell you why. We may also need to verify your identity
-        when you request your personal information. If you think that any
-        personal information we hold about you is inaccurate, please contact us
-        and we will take reasonable steps to ensure that it is corrected.
+        us at&nbsp;
+        <a href="mailto:hello@tracer.finance">hello@tracer.finance</a>.
+        Sometimes, we may not be able to provide you with access to all of your
+        personal information and, where this is the case, we will tell you why.
+        We may also need to verify your identity when you request your personal
+        information. If you think that any personal information we hold about
+        you is inaccurate, please contact us and we will take reasonable steps
+        to ensure that it is corrected.
       </p>
       <h2 className="mb-4 mt-8 text-xl font-semibold text-black">Contact Us</h2>
       <p className="mb-4">
         For further information about our Privacy Policy or practices, or to
         access or correct your personal information, or make a complaint, please
-        contact us at
+        contact us at&nbsp;
         <a href="mailto:hello@tracer.finance">hello@tracer.finance</a>.
       </p>
       <h2 className="mb-4 mt-8 text-xl font-semibold text-black">
@@ -144,7 +146,7 @@ const PrivacyPolicyText = () => {
       <p className="mb-4">
         For further information about our Privacy Policy or practices, or to
         access or correct your personal information, or make a complaint, please
-        contact us at
+        contact us at&nbsp;
         <a href="mailto:hello@tracer.finance">hello@tracer.finance</a>.
       </p>
       <p className="mb-4">
@@ -278,12 +280,13 @@ const PrivacyPolicyText = () => {
         If you think we have breached the OECD Guidelines on the Protection of
         Privacy and Transborder Flows of Personal Data, or you wish to make a
         complaint about the way we have handled your personal information, you
-        can contact us at hello@tracer.finance. Please include your name or
-        Discord username and clearly describe your complaint. We will
-        acknowledge your complaint and respond to you regarding your complaint
-        within a reasonable period of time. If you think that we have failed to
-        resolve the complaint satisfactorily, we will provide you with
-        information about the further steps you can take.
+        can contact us at&nbsp;
+        <a href="mailto:hello@tracer.finance">hello@tracer.finance</a>. Please
+        include your name or Discord username and clearly describe your
+        complaint. We will acknowledge your complaint and respond to you
+        regarding your complaint within a reasonable period of time. If you
+        think that we have failed to resolve the complaint satisfactorily, we
+        will provide you with information about the further steps you can take.
       </p>
       <h2 className="mb-4 mt-8 text-xl font-semibold text-black">Effective</h2>
       <p className="mb-4">23 April, 2021</p>
