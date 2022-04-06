@@ -31,6 +31,7 @@ const query = graphql`
   }
 `;
 const BlogPosts = () => {
+  const v2PostSlug = "perpetual-pools-v2-roadmap";
   const [currentPage, setCurrentPage] = useState(0);
   const [currentPosts, setCurrentPosts] = useState([]);
   const [pageCount, setPageCount] = useState(0);
@@ -62,11 +63,6 @@ const BlogPosts = () => {
       posts
         .slice(offset, offset + perPage)
         .map((data, i) => curPosts.push(<PostLink data={data} key={i} />));
-      // Only move V2 post to front on main page and with no
-      // category selected
-      if (category === "all" && currentPage === 0) {
-        moveV2Post(curPosts);
-      }
     }
     postContainer.current.classList.add("opacity-0");
     setTimeout(() => {
@@ -107,48 +103,6 @@ const BlogPosts = () => {
     );
   };
 
-  // Temporary to move V2 post to front of blog posts
-  const moveV2Post = (curPosts) => {
-    const v2PostSlug = "perpetual-pools-v2-roadmap";
-    // Iterate through the posts array and current
-    // posts array (posts for the current page) to find V2 post
-    const foundElem = [];
-    let curPostElemIdx = 0;
-    posts.forEach((el) => {
-      if (el.node.slug === v2PostSlug) {
-        foundElem.push(<PostLink data={el} />);
-      }
-    });
-    curPosts.forEach((el, i) => {
-      if (el.props.data.node.slug === v2PostSlug) {
-        curPostElemIdx = i;
-      }
-    });
-    // Remove it from the curPosts array, and place it at the start
-    curPosts.splice(curPostElemIdx, 1);
-    curPosts.unshift(foundElem[0]);
-  };
-
-  // const adjustPostAmount = () => {
-  //   const width = window.innerWidth;
-  //   let amount = 9;
-  //   if (width < 1024) {
-  //     amount = 8;
-  //   }
-  //   if (width < 767) {
-  //     amount = 4;
-  //   }
-  //   setPerPage(amount);
-  // };
-
-  // useEffect(() => {
-  //   adjustPostAmount();
-  //   window.addEventListener("resize", adjustPostAmount);
-  //   return () => {
-  //     window.removeEventListener("resize", adjustPostAmount);
-  //   };
-  // }, []);
-
   useEffect(() => {
     loadData();
   }, [posts, currentPage, perPage, category]);
@@ -179,9 +133,15 @@ const BlogPosts = () => {
               query={query}
               render={(data) => {
                 setPosts(
-                  data.allStrapiTracerBlogs.edges.sort((a, b) =>
-                    sortByDate(a, b)
-                  )
+                  data.allStrapiTracerBlogs.edges
+                    .sort((a, b) => sortByDate(a, b))
+                    .sort((x, y) => {
+                      return x.node.slug == v2PostSlug
+                        ? -1
+                        : y.node.slug == v2PostSlug
+                        ? 1
+                        : 0;
+                    })
                 );
                 data.allStrapiTracerBlogs.edges.map((data) => {
                   const splitTitle = data.node.title
