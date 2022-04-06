@@ -46,7 +46,7 @@ const FAQQuestion = ({ content }) => {
       </button>
       <div
         ref={panel}
-        class={`max-h-0 overflow-hidden px-6 transition-all duration-300 ease-out ${
+        className={`max-h-0 overflow-hidden px-6 transition-all duration-300 ease-out ${
           open ? "opacity-100" : "opacity-0"
         }`}
       >

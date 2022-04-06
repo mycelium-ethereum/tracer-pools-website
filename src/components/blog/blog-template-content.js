@@ -34,6 +34,8 @@ const BlogText = ({ data }) => {
     }
     if (e.tagName === "A") {
       e.setAttribute("class", "text-blue-500");
+      e.setAttribute("target", "_blank");
+      e.setAttribute("rel", "noopener noreferrer");
     }
     if (e.tagName === "H2") {
       e.setAttribute("class", "text-black text-xl font-semibold");
