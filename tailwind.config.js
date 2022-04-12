@@ -1,67 +1,48 @@
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
+    screens: {
+      xs: "370px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+      "3xl": "1920px",
+    },
     extend: {
       colors: {
-        blue: {
-          1000: "#0d2bd3",
-          1100: "#0000b0",
-        },
         tracer: {
-          gray: "#E5E7EB",
-          darkgray: "#9C9C9C",
-          50: "#F0F0FF",
-          100: "#DEDEFF",
-          200: "#A6A6F2",
-          300: "#8383EB",
-          400: "#3DA8F5",
-          500: "#3535DC",
-          600: "#2A2AC7",
-          700: "#0d29ff",
-          800: "#0000B0",
-          900: "#00007A",
-          1000: "#1C64F2",
+          purple: "#7223FF",
+          pink: "#E05CFF",
+          lightblue: "#0094F8",
+          midblue: "#3535DC",
+          navy: "#00005E",
+          cyan: "#00D9E9",
+          primaryblue: "#0000B0",
         },
-        grey: {
-          100: "#A1A1AA",
-          200: "#4B5563",
+        action: {
+          active: "#1C64F2",
         },
       },
-    },
-    fontFamily: {
-      sans: ["Akkurat", "sans-serif"],
-      aileron: ["Aileron", "sans-serif"],
+      fontFamily: {
+        sans: ["'aileron'", "sans-serif"],
+      },
     },
   },
   variants: {
     extend: {},
   },
-  corePlugins: {
-    container: false,
-  },
   plugins: [
     function ({ addComponents }) {
       addComponents({
         ".container": {
-          maxWidth: "100%",
-          "@screen sm": {
-            maxWidth: "640px",
-          },
-          "@screen md": {
-            maxWidth: "720px",
-          },
-          "@screen lg": {
-            maxWidth: "900px",
-          },
-          "@screen xl": {
-            maxWidth: "1160px",
-          },
-          "@screen 2xl": {
-            maxWidth: "1240px",
-          },
+          maxWidth: "1240px",
         },
       });
     },
-    require("@tailwindcss/typography"),
   ],
 };

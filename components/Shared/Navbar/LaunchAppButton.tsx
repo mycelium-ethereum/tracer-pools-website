@@ -1,0 +1,19 @@
+const LaunchAppButton: React.FC<{
+  onClickAction?: () => void;
+}> = ({ onClickAction }) => {
+  return (
+    <button
+      onClick={onClickAction}
+      className="btn-gradient-dark flex h-9 w-36 items-center justify-center rounded-md border border-action-active text-sm"
+    >
+      Launch App
+      <img
+        src="/img/icons/chevron-down.svg"
+        alt="Chevron down"
+        className="ml-2.5 h-1.5 w-3"
+      />
+    </button>
+  );
+};
+
+export default LaunchAppButton;

@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  @apply h-2.5 w-2.5;
+}
+::-webkit-scrollbar-track {
+  @apply bg-white;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-black;
+}
+
+body {
+  @apply min-w-[320px] max-w-[100vw] overflow-x-hidden bg-black font-sans font-normal text-base leading-[21px] text-white;
+  overflow-x: hidden;
+  overflow-y: overlay;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark blue background on text selection */
+::selection {
+  @apply bg-blue-400 text-white;
+}
+
+/*CUSTOM SCROLLBAR*/
+::-webkit-scrollbar {
+  @apply h-2.5 w-2.5;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-yellow-400;
+}
+
+h1,
+h2 {
+  @apply font-semibold;
+}
+
+* {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Button hover classes */
+
+.btn-gradient,
+.btn-clear:hover {
+  background: linear-gradient(267.35deg, rgba(28, 100, 242, 0.5) -63%, rgba(28, 100, 242, 0) 233.88%);
+}
+
+.btn-gradient:hover {
+
+}
+
+.btn-gradient-dark {
+  background: linear-gradient(187.04deg, rgba(28, 100, 242, 0.5) -11.86%, rgba(28, 100, 242, 0) 104.96%);
+}
+
+/* Fix for next/image image width and height */
+.image-container {
+  width: 100%;
+}
+.image-container-stretch > span,
+.image-container > span {
+  position: unset !important;
+  height: 100% !important;
+}
+.image-container-stretch .image,
+.image-container .image {
+  object-fit: cover;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+.image-container-stretch .image {
+  object-fit: fill;
+}
