@@ -6,18 +6,32 @@ const Button: React.FC<{
   action?: (payload: any) => void;
   children: string | React.ReactNode;
   gradient?: boolean;
+  clear?: boolean;
+  lightGradient?: boolean;
   link?: string;
   outgoingLink?: string;
-}> = ({ className, action, children, gradient, link, outgoingLink }) => {
+}> = ({
+  className,
+  action,
+  children,
+  gradient,
+  lightGradient,
+  clear,
+  link,
+  outgoingLink,
+}) => {
   return (
     <button
-      className={`relative flex rounded-md border border-action-active px-6 py-2 text-base leading-[24px] transition-all duration-500 ${
+      className={`relative flex w-max rounded-md border border-action-active px-6 py-2 text-base leading-[24px] transition-all duration-500 ${
         className ? className : ""
-      } ${
-        gradient
-          ? "btn-gradient text-white hover:text-action-active"
-          : "btn-clear text-action-active hover:text-white"
-      }`}
+      } 
+      ${gradient ? "btn-gradient text-white hover:text-action-active" : ""} 
+      ${
+        lightGradient
+          ? "btn-gradient-light text-action-active hover:text-action-active"
+          : ""
+      } 
+      ${clear ? "btn-clear text-action-active hover:text-white" : ""}`}
       onClick={action}
     >
       {outgoingLink && (

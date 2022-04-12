@@ -7,7 +7,7 @@ const BackgroundVideo: React.FC<{ src: string }> = ({ src }) => {
         src="/img/home/mesh.svg"
       /> */}
       <video
-        className="relative h-full w-full object-cover"
+        className="relative h-full w-full object-cover object-left"
         autoPlay
         loop
         muted

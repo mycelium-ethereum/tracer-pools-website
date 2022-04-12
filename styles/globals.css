@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 ::-webkit-scrollbar {
   @apply h-2.5 w-2.5;
 }
@@ -33,17 +38,21 @@ body {
   @apply bg-transparent;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-yellow-400;
+  @apply bg-action-active;
 }
 
 h1,
 h2 {
-  @apply font-semibold;
+  /* @apply font-semibold; */
+  line-height: 110%;
 }
 
-* {
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
+p {
+  line-height: 150%;
+}
+
+nav * {
+  transition: unset !important;
 }
 
 /* Button hover classes */
@@ -57,8 +66,15 @@ h2 {
 
 }
 
+.btn-gradient-light {
+  background: linear-gradient(265.19deg, rgba(28, 100, 242, 0.155) -7.22%, rgba(28, 100, 242, 0) 101.71%);
+}
 .btn-gradient-dark {
   background: linear-gradient(187.04deg, rgba(28, 100, 242, 0.5) -11.86%, rgba(28, 100, 242, 0) 104.96%);
+}
+
+.line-gradient-blue {
+  background: linear-gradient(to right, rgba(26, 85, 245, 1.0), rgba(26, 85, 245, 0));
 }
 
 /* Fix for next/image image width and height */
