@@ -14,7 +14,7 @@ const CallToAction = () => {
       />
       <div className="relative z-0 font-normal text-white">
         <p className="text-center text-base sm:text-left sm:text-xl xl:text-2xl">
-          Tracer Perpetual Pools is now live on Arbitrum One. Fully fungible,
+          Tracer Perpetual Pools V1 is currently live on Arbitrum One. Fully fungible,
           leveraged tokens for the DeFi economy, with no margin requirements and
           no liquidations.
           <a

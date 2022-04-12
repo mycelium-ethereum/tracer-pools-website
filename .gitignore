@@ -5,6 +5,7 @@ public
 .cache
 node_modules
 .idea
+.next
 
 # Local Netlify folder
 .netlify
