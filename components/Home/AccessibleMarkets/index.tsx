@@ -1,8 +1,8 @@
 import Section from "@/components/Shared/Section";
 import Container from "@/components/Shared/Container";
-import Button from "@/components/Shared/Button";
 import BackgroundVideo from "@/components/Home/BackgroundVideo";
 import ParagraphBlock from "@/components/Home/ParagraphBlock";
+import AnimateIn from "@/components/Shared/AnimateIn";
 
 const AccessibleMarkets: React.FC<{}> = () => {
   const paragraphCopy = [
@@ -23,13 +23,17 @@ const AccessibleMarkets: React.FC<{}> = () => {
     <Section id="section-2">
       <Container className="flex h-screen flex-col py-14 sm:py-16">
         <header className="flex h-full max-w-[561px] flex-grow flex-col justify-center">
-          <h1 className="mb-4 text-6xl font-thin leading-[66px] text-action-active">
-            Any market, Accessible Anywhere, For Anyone
-          </h1>
-          <p className="text-action-active">
-            Leveraging base layer blockchain technology to
-            <br /> democratise access to risk management tooling.
-          </p>
+          <AnimateIn delay={0.2}>
+            <h1 className="mb-4 text-6xl font-thin leading-[66px] text-action-active">
+              Any market, Accessible Anywhere, For Anyone
+            </h1>
+          </AnimateIn>
+          <AnimateIn delay={0.6}>
+            <p className="text-action-active">
+              Leveraging base layer blockchain technology to
+              <br /> democratise access to risk management tooling.
+            </p>
+          </AnimateIn>
         </header>
         <div className="flex">
           {paragraphCopy.map((paragraph, index) => (
