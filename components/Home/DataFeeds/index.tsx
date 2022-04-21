@@ -6,7 +6,7 @@ import OptimisedImage from "@/components/Shared/OptimisedImage";
 const DataFeeds: React.FC<{}> = () => {
   return (
     <Section id="section-6" className="bg-tracer-navy">
-      <Container className="relative flex h-screen flex-col py-14 sm:py-16">
+      <Container className="relative z-10 flex h-screen flex-col py-14 sm:py-16">
         <header className="flex h-full max-w-[356px] flex-grow flex-col justify-center">
           <div className="mb-4 w-full">
             <img
@@ -35,7 +35,7 @@ const DataFeeds: React.FC<{}> = () => {
         src="/img/home/data-feeds-bg.png"
         alt="Data Feeds Background"
         absolute
-        className="pointer-events-none top-0 right-0 h-full w-full"
+        className="pointer-events-none top-0 right-0 z-0 h-full w-full"
       />
       {/* <img
         className="absolute top-0 left-0 z-0 h-full w-full object-cover object-right"
