@@ -16,10 +16,14 @@ module.exports = {
     extend: {
       colors: {
         tracer: {
-          purple: "#7223FF",
+          purple: {
+            light: "#7223FF",
+            dark: "#26006B",
+          },
           pink: "#E05CFF",
           lightblue: "#0094F8",
           midblue: "#3535DC",
+          darkblue: "#00005E",
           navy: "#00005E",
           cyan: "#00D9E9",
           primaryblue: "#0000B0",

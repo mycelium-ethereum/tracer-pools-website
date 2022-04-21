@@ -6,7 +6,7 @@ const LaunchAppButton: React.FC<{
   return (
     <button
       onClick={onClickAction}
-      className="btn-gradient-dark flex h-9 w-36 items-center justify-center rounded-md border border-action-active text-sm"
+      className="btn-gradient-blue-dark flex h-9 w-36 items-center justify-center rounded-md border border-action-active text-sm"
     >
       Launch App
       <ChevronDownSVG className="ml-2.5 h-1.5 w-3" />

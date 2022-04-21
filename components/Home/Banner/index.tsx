@@ -9,20 +9,22 @@ const Banner: React.FC<{}> = () => {
       <Container className="flex h-screen items-center py-14 sm:py-16">
         <header>
           <h1 className="mb-1 text-6xl font-thin text-white">
-            The <span className="text-tracer-lightblue">Evolution</span>
+            The Evolution
             <br /> of Global Derivatives
           </h1>
           <p className="text-action-active">
-            Decentralised Derivatives Infrastructure to Power
-            <br /> the Next Generation of Global Trade
+            We Create Infrastructure to Power the Next
+            <br /> Generation of Global Trade
           </p>
-          <Button gradient className="mt-4">
+          <Button lightBlueGradient className="mt-4">
             Learn More
           </Button>
-          <Button className="mt-4">Documentation</Button>
+          <Button blueTransparent className="mt-4">
+            Documentation
+          </Button>
         </header>
       </Container>
-      <BackgroundVideo src="/img/home/banner.mp4" />
+      <BackgroundVideo loop src="/img/home/banner.mp4" />
     </Section>
   );
 };

@@ -5,30 +5,55 @@ const Button: React.FC<{
   className?: string;
   action?: (payload: any) => void;
   children: string | React.ReactNode;
-  gradient?: boolean;
+  blueTransparent?: boolean;
+  purpleTransparent?: boolean;
+  purpleGradient?: boolean;
   clear?: boolean;
-  lightGradient?: boolean;
+  lightBlueGradient?: boolean;
+  darkBlueGradient?: boolean;
   link?: string;
   outgoingLink?: string;
 }> = ({
   className,
   action,
   children,
-  gradient,
-  lightGradient,
+  blueTransparent,
+  purpleTransparent,
+  purpleGradient,
+  lightBlueGradient,
+  darkBlueGradient,
   clear,
   link,
   outgoingLink,
 }) => {
   return (
     <button
-      className={`relative flex w-max rounded-md border border-action-active px-6 py-2 text-base leading-[24px] transition-all duration-500 ${
+      className={`relative flex w-max rounded-md border px-6 py-2 text-base leading-[24px] transition-all duration-500 ${
         className ? className : ""
       } 
-      ${gradient ? "btn-gradient text-white hover:text-action-active" : ""} 
       ${
-        lightGradient
-          ? "btn-gradient-light text-action-active hover:text-action-active"
+        blueTransparent
+          ? "border-action-active text-action-active hover:bg-action-active hover:text-white"
+          : ""
+      }
+      ${
+        purpleTransparent
+          ? "border-tracer-purple-light text-tracer-purple-light"
+          : ""
+      }
+      ${
+        purpleGradient
+          ? "btn-gradient-purple border-tracer-purple-light text-white hover:bg-tracer-purple-light"
+          : ""
+      } 
+      ${
+        darkBlueGradient
+          ? "btn-gradient-blue-dark border-action-active text-white hover:text-action-active"
+          : ""
+      } 
+      ${
+        lightBlueGradient
+          ? "btn-gradient-blue-light border-action-active text-white"
           : ""
       } 
       ${clear ? "btn-clear text-action-active hover:text-white" : ""}`}

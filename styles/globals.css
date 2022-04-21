@@ -18,7 +18,7 @@
 }
 
 body {
-  @apply min-w-[320px] max-w-[100vw] overflow-x-hidden bg-black font-sans font-normal text-base leading-[21px] text-white;
+  @apply min-w-[320px] max-w-[100vw] overflow-x-hidden bg-black font-sans text-base font-normal leading-[21px] text-white;
   overflow-x: hidden;
   overflow-y: overlay;
   -webkit-font-smoothing: antialiased;
@@ -59,22 +59,60 @@ nav * {
 
 .btn-gradient,
 .btn-clear:hover {
-  background: linear-gradient(267.35deg, rgba(28, 100, 242, 0.5) -63%, rgba(28, 100, 242, 0) 233.88%);
+  background: linear-gradient(
+    267.35deg,
+    rgba(28, 100, 242, 0.5) -63%,
+    rgba(28, 100, 242, 0) 233.88%
+  );
 }
 
 .btn-gradient:hover {
-
 }
 
-.btn-gradient-light {
-  background: linear-gradient(265.19deg, rgba(28, 100, 242, 0.155) -7.22%, rgba(28, 100, 242, 0) 101.71%);
+.btn-gradient-blue-light {
+  background: linear-gradient(
+    265.19deg,
+    rgba(28, 100, 242, 0.155) -7.22%,
+    rgba(28, 100, 242, 0) 101.71%
+  );
 }
-.btn-gradient-dark {
-  background: linear-gradient(187.04deg, rgba(28, 100, 242, 0.5) -11.86%, rgba(28, 100, 242, 0) 104.96%);
+.btn-gradient-blue-dark {
+  background: linear-gradient(
+    187.04deg,
+    rgba(28, 100, 242, 0.5) -11.86%,
+    rgba(28, 100, 242, 0) 104.96%
+  );
+}
+.btn-gradient-purple {
+  background: linear-gradient(
+    267.35deg,
+    rgba(123, 97, 255, 0.5) -63%,
+    rgba(123, 97, 255, 0) 233.88%
+  );
+}
+
+.line-gradient-lightblue {
+  background: linear-gradient(
+    to right,
+    rgba(61, 168, 245, 1),
+    rgba(61, 168, 245, 0)
+  );
 }
 
 .line-gradient-blue {
-  background: linear-gradient(to right, rgba(26, 85, 245, 1.0), rgba(26, 85, 245, 0));
+  background: linear-gradient(
+    to right,
+    rgba(26, 85, 245, 1),
+    rgba(26, 85, 245, 0)
+  );
+}
+
+.line-gradient-purple {
+  background: linear-gradient(
+    to right,
+    rgba(123, 97, 255, 1),
+    rgba(123, 97, 255, 0)
+  );
 }
 
 /* Fix for next/image image width and height */
@@ -95,4 +133,22 @@ nav * {
 }
 .image-container-stretch .image {
   object-fit: fill;
+}
+
+/* CHART ANIMATION */
+.btc-chart-section {
+  /* background: linear-gradient(
+    138deg,
+    rgba(133, 83, 74, 1) 0%,
+    rgba(48, 31, 87, 1) 100%
+  ); */
+  overflow: visible;
+  z-index: 1;
+  border-width: 0 0 50px 50px;
+  /* border-color: transparent transparent #004899 transparent; */
+  border-image: linear-gradient(
+    138deg,
+    rgba(133, 83, 74, 1) 0%,
+    rgba(48, 31, 87, 1) 100%
+  );
 }

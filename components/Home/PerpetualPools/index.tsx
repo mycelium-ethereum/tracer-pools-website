@@ -2,19 +2,19 @@ import Section from "@/components/Shared/Section";
 import Container from "@/components/Shared/Container";
 import Button from "@/components/Shared/Button";
 import BackgroundVideo from "@/components/Home/BackgroundVideo";
-import Tokens from "@/components/Home/MoreLeverage/Tokens";
+import Tokens from "@/components/Home/PerpetualPools/Tokens";
 
-const MoreLeverage: React.FC<{}> = () => {
+const PerpetualPools: React.FC<{}> = () => {
   return (
     <Section id="section-4">
       <Container className="relative flex h-screen flex-col py-14 sm:py-16">
         <header className="flex h-full max-w-[356px] flex-grow flex-col justify-center">
           <div className="mb-4 w-full">
             <img
-              src="/img/logos/perpetual-pools.svg"
+              src="/img/logos/tracer-perpetual-pools.svg"
               className="mb-3 h-[18px] w-[182px]"
             />
-            <hr className="line-gradient-blue h-[0.5px] w-full border-none" />
+            <hr className="line-gradient-blue h-[1px] w-full border-none" />
           </div>
           <h1 className="mb-2 text-[40px] font-light text-white">
             More Leverage.
@@ -26,7 +26,7 @@ const MoreLeverage: React.FC<{}> = () => {
             no liquidations. A new derivative primative to hedge portfolio risk
             or trade leverage.
           </p>
-          <Button lightGradient className="mt-4 text-tracer-lightblue">
+          <Button lightBlueGradient className="mt-4 text-tracer-lightblue">
             Launch Pools
           </Button>
         </header>
@@ -41,4 +41,4 @@ const MoreLeverage: React.FC<{}> = () => {
   );
 };
 
-export default MoreLeverage;
+export default PerpetualPools;

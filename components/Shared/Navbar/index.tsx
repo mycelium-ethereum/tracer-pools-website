@@ -156,7 +156,7 @@ const Navbar: React.FC<{}> = ({}) => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 z-40 flex h-[70px] w-full transform-gpu items-center transition-all duration-500 ${navStyles}
+        className={`fixed top-0 left-0 z-40 flex h-[70px] w-full transform-gpu items-center transition-all duration-300 ${navStyles}
        ${visible ? "visible" : "xl:invisible xl:-translate-y-[70px]"}`}
       >
         <Container className="flex items-center justify-between">
