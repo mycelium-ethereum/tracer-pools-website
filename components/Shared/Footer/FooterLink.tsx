@@ -1,6 +1,12 @@
 import PageLink from "@/components/Shared/PageLink";
 
-const FooterLink = ({ content }) => {
+const FooterLink: React.FC<{
+  route: string;
+  content: {
+    text: string;
+    url: string;
+  };
+}> = ({ route, content }) => {
   const URL = content.url;
   return (
     <>
@@ -29,7 +35,11 @@ const FooterLink = ({ content }) => {
           <span className="transition-colors duration-300 hover:text-blue-400">
             {content.text}
           </span>
-          <span className="ml-2.5 flex h-[14px] w-[38px] items-center justify-center rounded-lg bg-tracer-primaryblue text-[8px] font-bold">
+          <span
+            className={`ml-2.5 flex h-[14px] w-[38px] items-center justify-center rounded-lg text-[8px] font-bold ${
+              route === "/" ? "bg-tracer-primaryblue" : "bg-action-cell"
+            }`}
+          >
             SOON
           </span>
         </div>

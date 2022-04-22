@@ -13,9 +13,10 @@ import {
   governCategory,
   connectCategory,
 } from "@/components/Shared/Footer/presets";
-import PageLink from "../PageLink";
-import SocialLinks from "./SocialLinks";
-const Footer = () => {
+import PageLink from "@/components/Shared/PageLink";
+import SocialLinks from "@/components/Shared/Footer/SocialLinks";
+
+const Footer: React.FC<{ route: string }> = ({ route }) => {
   const categoryArr = [
     tracerDAOCategory,
     productCategory,
@@ -34,7 +35,11 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="relative z-10 h-1/2 w-full overflow-hidden bg-tracer-darkblue py-[77px] text-action-active">
+    <footer
+      className={`relative z-10 h-1/2 w-full overflow-hidden py-[77px] text-action-active ${
+        route === "/" ? "bg-tracer-darkblue" : "bg-white"
+      }`}
+    >
       <Container>
         <div className="mb-[75px] flex flex-col items-start justify-between pr-8 md:flex-row md:pr-0">
           <PageLink href="/">
@@ -48,6 +53,7 @@ const Footer = () => {
               return (
                 <Category
                   key={i}
+                  route={route}
                   name={category.name}
                   category={categoryArr[i]}
                 />

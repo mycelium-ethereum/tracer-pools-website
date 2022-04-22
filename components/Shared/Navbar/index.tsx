@@ -1,7 +1,6 @@
 // import Link from "next/link";
 import Container from "@/components/Shared/Container";
 import NavLink from "@/components/Shared/Navbar/NavLink";
-import { useRouter } from "next/router";
 // import HamburgerMenu from "@/components/Shared/Navbar/HamburgerMenu";
 // import MobileNav from "@/components/Shared/Navbar/MobileNav";
 import { useCallback, useEffect, useState } from "react";
@@ -9,8 +8,7 @@ import { disableScroll, enableScroll, isCollapsed } from "@/lib/helpers";
 import Logo from "@/components/Shared/Logo";
 import LaunchAppButton from "./LaunchAppButton";
 
-const Navbar: React.FC<{}> = ({}) => {
-  const route = useRouter().pathname;
+const Navbar: React.FC<{ route: string }> = ({ route }) => {
   const [navOpen, setNavOpen] = useState<boolean>(false);
   const [navStyles, setNavStyles] = useState<string>("");
   const [currentSection, setCurrentSection] = useState<string>("");

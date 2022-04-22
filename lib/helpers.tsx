@@ -21,3 +21,13 @@ export const isMobile = () => {
     return false;
   }
 };
+
+export const capitaliseFirstLetter = (str: string) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
+export const sortByDate = (a: any, b: any) => {
+  return (
+    new Date(b.publish_date).getTime() - new Date(a.publish_date).getTime()
+  );
+};

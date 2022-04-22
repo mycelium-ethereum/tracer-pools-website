@@ -1,3 +1,5 @@
+import OptimisedImage from "./OptimisedImage";
+
 const PageHeader: React.FC<{ title: string; subheading: string }> = ({
   title,
   subheading,
@@ -10,6 +12,12 @@ const PageHeader: React.FC<{ title: string; subheading: string }> = ({
       <small className="text-lg leading-[30px] text-tertiary">
         {subheading}
       </small>
+      <OptimisedImage
+        src="/img/general/mesh-top-right.png"
+        alt=""
+        absolute
+        className="pointer-events-none top-0 right-0 w-full"
+      />
     </header>
   );
 };

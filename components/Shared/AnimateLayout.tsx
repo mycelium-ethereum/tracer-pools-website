@@ -4,7 +4,7 @@ const AnimateLayout: React.FC<{
   children: React.ReactNode;
 }> = ({ children }) => {
   return (
-    <motion.div
+    <motion.main
       initial={{
         opacity: 0,
       }}
@@ -18,10 +18,10 @@ const AnimateLayout: React.FC<{
         ease: "linear",
         duration: 0.4,
       }}
-      className="overflow-hidden"
+      className="min-h-screen overflow-hidden"
     >
       {children}
-    </motion.div>
+    </motion.main>
   );
 };
 

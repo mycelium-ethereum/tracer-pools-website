@@ -51,6 +51,10 @@ p {
   line-height: 150%;
 }
 
+input::placeholder {
+  @apply text-tertiary;
+}
+
 nav * {
   transition: unset !important;
 }
@@ -185,4 +189,13 @@ nav * {
   100% {
     transform: translateY(0);
   }
+}
+
+/* Limit blog post description length */
+.post-description {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
 }

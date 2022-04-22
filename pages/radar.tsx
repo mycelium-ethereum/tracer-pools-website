@@ -1,9 +1,17 @@
+import PostFilters from "@/components/Radar/PostFilters";
+import SearchBox from "@/components/Radar/SearchBox";
 import Container from "@/components/Shared/Container";
 import PageHeader from "@/components/Shared/PageHeader";
 import PageSection from "@/components/Shared/Section";
 import SEO from "@/components/Shared/SEO";
+import { useState } from "react";
+import { GetStaticProps } from "next";
+import RadarPosts from "@/components/Radar/RadarPosts";
 
-const BlogPage: React.FC<{}> = () => {
+const BlogPage: React.FC<{ articles: any }> = ({ articles }) => {
+  const [filteredArticles, setFilteredArticles] = useState(articles);
+  const [category, setCategory] = useState<string>("all");
+
   return (
     <>
       <SEO title="Home" />
@@ -13,6 +21,14 @@ const BlogPage: React.FC<{}> = () => {
             title="Blog"
             subheading="Read the latest news for Tracer"
           />
+          <div className="flex justify-between">
+            <PostFilters category={category} setCategory={setCategory} />
+            <SearchBox
+              articles={articles}
+              setFilteredArticles={setFilteredArticles}
+            />
+          </div>
+          <RadarPosts filteredArticles={filteredArticles} category={category} />
         </Container>
       </PageSection>
     </>
@@ -20,3 +36,16 @@ const BlogPage: React.FC<{}> = () => {
 };
 
 export default BlogPage;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const articles = await fetch(
+    "https://mycelium-content.uc.r.appspot.com/tracer-blogs"
+  )
+    .then((res) => res.json())
+    .catch((err) => console.error(err));
+  return {
+    props: {
+      articles,
+    },
+  };
+};

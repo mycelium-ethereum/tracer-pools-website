@@ -30,8 +30,10 @@ module.exports = {
           primaryblue: "#0000B0",
         },
         tertiary: "#7D8795",
+        highlight: "#1C64F2",
         action: {
           active: "#1C64F2",
+          cell: "#F1F7FF",
         },
       },
       fontFamily: {
