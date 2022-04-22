@@ -139,7 +139,7 @@ nav * {
 
 @keyframes slideDown {
   0% {
-    transform: translate(50%, 0) rotate(315deg);
+    transform: translate(50%, 300px) rotate(315deg);
     opacity: 0;
   }
   2% {
@@ -150,7 +150,7 @@ nav * {
   }
   100% {
     opacity: 0;
-    transform: translate(30%, 40%) rotate(315deg);
+    transform: translate(30%, 600px) rotate(315deg);
   }
 }
 
