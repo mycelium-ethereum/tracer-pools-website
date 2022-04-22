@@ -1,0 +1,21 @@
+import { useLottie } from "lottie-react";
+import circles from "../../../public/img/home/banner-lottie.json";
+
+const BannerLottieAnim: React.FC<{}> = () => {
+  const options = {
+    animationData: circles,
+    loop: true,
+    autoplay: true,
+  };
+
+  const { View } = useLottie(options);
+  return (
+    <div className="absolute top-0 right-0 z-10 h-full w-full translate-y-[150px] transform 4xl:translate-y-[200px] 4xl:scale-125">
+      <div className="bannerDiscAnim absolute top-0 right-0 h-full w-full">
+        {View}
+      </div>
+    </div>
+  );
+};
+
+export default BannerLottieAnim;

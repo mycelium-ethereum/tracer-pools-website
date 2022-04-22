@@ -3,10 +3,11 @@ import Container from "@/components/Shared/Container";
 import Button from "@/components/Shared/Button";
 import BackgroundVideo from "@/components/Home/BackgroundVideo";
 import AnimateIn from "@/components/Shared/AnimateIn";
+import BannerLottieAnim from "./BannerLottieAnim";
 
 const Banner: React.FC<{}> = () => {
   return (
-    <Section id="section-1">
+    <Section id="section-1" className="bg-tracer-navy">
       <Container className="flex h-screen items-center py-14 sm:py-16">
         <header>
           <AnimateIn delay={0.2}>
@@ -31,7 +32,8 @@ const Banner: React.FC<{}> = () => {
           </AnimateIn>
         </header>
       </Container>
-      <BackgroundVideo loop src="/img/home/banner.mp4" />
+      <BannerLottieAnim />
+      {/* <BackgroundVideo loop src="/img/home/banner.mp4" /> */}
     </Section>
   );
 };

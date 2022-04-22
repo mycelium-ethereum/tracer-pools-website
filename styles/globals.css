@@ -18,7 +18,7 @@
 }
 
 body {
-  @apply min-w-[320px] max-w-[100vw] overflow-x-hidden bg-black font-sans text-base font-normal leading-[21px] text-white;
+  @apply min-w-[320px] max-w-[100vw] overflow-x-hidden bg-white font-sans text-base font-normal leading-[21px] text-white;
   overflow-x: hidden;
   overflow-y: overlay;
   -webkit-font-smoothing: antialiased;
@@ -132,8 +132,29 @@ nav * {
   object-fit: fill;
 }
 
-/* TOKEN ANIMATIONS */
+/* BANNER DISC/CIRCLES ANIMATION */
+.bannerDiscAnim {
+  animation: slideDown 19s ease infinite;
+}
 
+@keyframes slideDown {
+  0% {
+    transform: translate(50%, 0) rotate(315deg);
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(30%, 40%) rotate(315deg);
+  }
+}
+
+/* TOKEN ANIMATIONS */
 .topToBottomAnim {
   animation: topToBottom 2s ease infinite;
 }

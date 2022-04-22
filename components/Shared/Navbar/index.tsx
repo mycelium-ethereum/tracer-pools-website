@@ -20,10 +20,10 @@ const Navbar: React.FC<{}> = ({}) => {
   const blueStyles = "text-action-active";
 
   const links = [
-    { label: "Products", href: "/" },
-    { label: "Learn", href: "/" },
-    { label: "Blog", href: "/" },
-    { label: "Community", href: "/" },
+    { label: "Products", href: "/products" },
+    { label: "Learn", href: "/learn" },
+    { label: "Blog", href: "/radar" },
+    { label: "Community", href: "/community" },
   ];
 
   const isMobile = () => {
@@ -83,7 +83,7 @@ const Navbar: React.FC<{}> = ({}) => {
           break;
       }
     } else {
-      navTextColour = whiteStyles;
+      navTextColour = blueStyles;
     }
     setNavStyles(navTextColour);
   };

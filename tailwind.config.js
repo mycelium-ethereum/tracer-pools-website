@@ -12,6 +12,7 @@ module.exports = {
       xl: "1280px",
       "2xl": "1536px",
       "3xl": "1920px",
+      "4xl": "2560px",
     },
     extend: {
       colors: {
@@ -28,6 +29,7 @@ module.exports = {
           cyan: "#00D9E9",
           primaryblue: "#0000B0",
         },
+        tertiary: "#7D8795",
         action: {
           active: "#1C64F2",
         },
