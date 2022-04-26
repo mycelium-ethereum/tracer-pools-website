@@ -68,24 +68,9 @@ const RadarPosts: React.FC<{
     >
       {
         {
-          3: (
-            <ThreeColumnLayout
-              sortedArticles={sortedArticles}
-              category={category}
-            />
-          ),
-          2: (
-            <TwoColumnLayout
-              sortedArticles={sortedArticles}
-              category={category}
-            />
-          ),
-          1: (
-            <TwoColumnLayout
-              sortedArticles={sortedArticles}
-              category={category}
-            />
-          ),
+          3: <ThreeColumnLayout sortedArticles={sortedArticles} />,
+          2: <TwoColumnLayout sortedArticles={sortedArticles} />,
+          1: <TwoColumnLayout sortedArticles={sortedArticles} />,
         }[columns]
       }
     </div>
