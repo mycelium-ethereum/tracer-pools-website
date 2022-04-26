@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import debounce from "lodash.debounce";
 
 const SearchBox: React.FC<{
   articles: any;
@@ -6,9 +7,12 @@ const SearchBox: React.FC<{
   postContainerRef: React.MutableRefObject<HTMLDivElement>;
 }> = ({ articles, setFilteredArticles, postContainerRef }) => {
   const [query, setQuery] = useState<string>("");
-  const handleChange = (e) => {
-    setQuery(e.target.value);
+
+  const handleChange = (event) => {
+    setQuery(event.target.value);
   };
+
+  const debouncedChangeHandler = useMemo(() => debounce(handleChange, 300), []);
 
   const filterArticles = () => {
     const updatedFilteredArticles = articles.filter((article: any) => {
@@ -36,8 +40,7 @@ const SearchBox: React.FC<{
         type="text"
         className="flex h-full w-full items-center bg-transparent pl-9"
         placeholder="Search"
-        value={query}
-        onChange={handleChange}
+        onChange={debouncedChangeHandler}
       />
       <img
         src="/img/icons/search.svg"

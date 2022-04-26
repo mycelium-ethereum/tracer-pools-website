@@ -5,6 +5,7 @@ import Button from "@/components/Shared/Button";
 import { useEffect, useState } from "react";
 import { isMobile } from "@/lib/helpers";
 import Link from "next/link";
+import GradientLine from "@/components/Shared/GradientDivider";
 
 const Sidebar: React.FC<{
   currentArticle: any;
@@ -54,7 +55,7 @@ const Sidebar: React.FC<{
 
   return (
     <aside
-      className={`fixed right-0 top-[140px] z-50 w-[296px] overflow-hidden rounded-tl-lg rounded-bl-lg shadow-lg transition-opacity duration-500 ${
+      className={`fixed right-0 top-[140px] z-50 w-[296px] overflow-hidden rounded-tl-lg rounded-bl-lg bg-white transition-opacity duration-500 [box-shadow:_0px_2px_4px_rgba(0,0,0,0.1)] ${
         visible ? visibleStyles : invisibleStyles
       }`}
     >
@@ -83,7 +84,7 @@ const Sidebar: React.FC<{
         <span className="mb-2 block text-xs tracking-[0.15em] text-tertiary">
           RELATED ARTICLES
         </span>
-        <hr className="line-gradient-grey h-[1px] w-full border-none" />
+        <GradientLine color="grey" />
         {getRelatedArticles()
           .slice(0, 2)
           .map((article, i) => (
@@ -95,9 +96,7 @@ const Sidebar: React.FC<{
                   </h4>
                 </a>
               </Link>
-              {i === 0 && (
-                <hr className="line-gradient-grey h-[1px] w-full border-none" />
-              )}
+              {i === 0 && <GradientLine color="grey" />}
             </>
           ))}
         <Button

@@ -36,8 +36,12 @@ const PostFilters: React.FC<{
 
   return (
     <div className="flex">
-      {CategoryInfo.map((buttonCategory) => (
-        <button data-category={buttonCategory.name} onClick={handleClick}>
+      {CategoryInfo.map((buttonCategory, i) => (
+        <button
+          key={i}
+          data-category={buttonCategory.name}
+          onClick={handleClick}
+        >
           <CategoryBubble
             large
             category={buttonCategory.text}

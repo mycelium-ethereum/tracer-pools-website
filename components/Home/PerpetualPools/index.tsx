@@ -4,6 +4,7 @@ import Button from "@/components/Shared/Button";
 import BackgroundVideo from "@/components/Home/BackgroundVideo";
 import Tokens from "@/components/Home/PerpetualPools/Tokens";
 import AnimateIn from "@/components/Shared/AnimateIn";
+import GradientLine from "@/components/Shared/GradientDivider";
 
 const PerpetualPools: React.FC<{}> = () => {
   return (
@@ -16,7 +17,7 @@ const PerpetualPools: React.FC<{}> = () => {
                 src="/img/logos/tracer-perpetual-pools.svg"
                 className="mb-3 h-[18px] w-[182px]"
               />
-              <hr className="line-gradient-blue h-[1px] w-full border-none" />
+              <GradientLine color="blue" />
             </div>
           </AnimateIn>
           <AnimateIn delay={0.6}>

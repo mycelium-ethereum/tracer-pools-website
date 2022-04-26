@@ -30,7 +30,7 @@ const Button: React.FC<{
 }) => {
   return (
     <button
-      className={`relative flex w-max rounded-md border text-base leading-[24px] transition-all duration-500 
+      className={`relative flex w-max whitespace-nowrap rounded-md border text-base leading-[24px] transition-all duration-500
       ${
         blueTransparent
           ? "border-action-active text-action-active hover:bg-action-active hover:text-white "

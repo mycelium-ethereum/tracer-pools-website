@@ -1,6 +1,7 @@
 import Section from "@/components/Shared/Section";
 import Container from "@/components/Shared/Container";
 import OptimisedImage from "@/components/Shared/OptimisedImage";
+import GradientLine from "@/components/Shared/GradientDivider";
 
 const Partners: React.FC<{}> = () => {
   return (
@@ -15,7 +16,7 @@ const Partners: React.FC<{}> = () => {
             />
             <span className="inline-block tracking-[0.15em]">PARTNERS</span>
           </div>
-          <hr className="line-gradient-lightblue h-[1px] w-full border-none" />
+          <GradientLine color="lightblue" />
         </header>
         <div className="flex">
           <img

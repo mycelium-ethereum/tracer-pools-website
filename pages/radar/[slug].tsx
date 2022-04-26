@@ -9,6 +9,7 @@ import Container from "@/components/Shared/Container";
 import CategoryBubble from "@/components/Radar/CategoryBubble";
 import Sidebar from "@/components/Radar/Sidebar";
 import MeshUnderlay from "@/components/Shared/MeshUnderlay";
+import CallToAction from "@/components/Radar/CallToAction";
 
 const Article = ({ data, articles }) => {
   const bodyTextRef = useRef<HTMLDivElement>(null);
@@ -110,6 +111,7 @@ const Article = ({ data, articles }) => {
             </header>
             <div className="prose mt-9" ref={bodyTextRef} />
           </div>
+          <CallToAction />
         </Container>
         <Sidebar
           currentArticle={data}

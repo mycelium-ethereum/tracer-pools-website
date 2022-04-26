@@ -14,6 +14,8 @@ const RadarPosts: React.FC<{
 
   const handleCategoryChange = () => {
     if (category !== prevCategory) {
+      console.log(category);
+      console.log(prevCategory);
       // Animate category change
       postContainerRef.current.classList.add("opacity-0");
       setTimeout(() => {

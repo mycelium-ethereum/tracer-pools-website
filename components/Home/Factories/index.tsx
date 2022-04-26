@@ -2,6 +2,7 @@ import Section from "@/components/Shared/Section";
 import Container from "@/components/Shared/Container";
 import Button from "@/components/Shared/Button";
 import AnimateIn from "@/components/Shared/AnimateIn";
+import GradientLine from "@/components/Shared/GradientDivider";
 
 const Factories: React.FC<{}> = () => {
   return (
@@ -14,7 +15,7 @@ const Factories: React.FC<{}> = () => {
                 src="/img/logos/tracer-factories.svg"
                 className="mb-3 h-[18px] w-[140px]"
               />
-              <hr className="line-gradient-purple h-[1px] w-full border-none" />
+              <GradientLine color="purple" />
             </div>
           </AnimateIn>
           <AnimateIn delay={0.6}>

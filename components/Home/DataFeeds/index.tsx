@@ -3,6 +3,7 @@ import Container from "@/components/Shared/Container";
 import Button from "@/components/Shared/Button";
 import OptimisedImage from "@/components/Shared/OptimisedImage";
 import AnimateIn from "@/components/Shared/AnimateIn";
+import GradientLine from "@/components/Shared/GradientDivider";
 
 const DataFeeds: React.FC<{}> = () => {
   return (
@@ -15,7 +16,7 @@ const DataFeeds: React.FC<{}> = () => {
                 src="/img/logos/tracer-data-feeds.svg"
                 className="mb-3 h-[18px] w-[152px]"
               />
-              <hr className="line-gradient-blue h-[1px] w-full border-none" />
+              <GradientLine color="blue" />
             </div>
           </AnimateIn>
           <AnimateIn delay={0.6}>
@@ -46,10 +47,6 @@ const DataFeeds: React.FC<{}> = () => {
         absolute
         className="pointer-events-none top-0 right-0 z-0 h-full w-full"
       />
-      {/* <img
-        className="absolute top-0 left-0 z-0 h-full w-full object-cover object-right"
-        src="/img/home/mesh.svg"
-      /> */}
     </Section>
   );
 };
