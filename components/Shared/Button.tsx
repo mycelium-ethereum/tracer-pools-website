@@ -69,7 +69,9 @@ const Button: React.FC<{
       {link && (
         <PageLink
           href={link}
-          className={`px-6 py-2 ${linkClassName ? linkClassName : ""}`}
+          className={`flex items-center justify-center px-6 py-2 ${
+            linkClassName ? linkClassName : ""
+          }`}
         >
           {children}
         </PageLink>

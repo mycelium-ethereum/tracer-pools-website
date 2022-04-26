@@ -1,8 +1,6 @@
-import React from "react";
-
-const ErrorText = ({ showError }) => {
+const ErrorText = () => {
   return (
-    <span className={`text-tracer-800 ${showError ? "block" : "hidden"}`}>
+    <span className={`block w-full text-center font-light text-tertiary`}>
       Error retrieving data from Lever. Please try again later.
     </span>
   );

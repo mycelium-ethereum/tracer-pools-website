@@ -1,3 +1,4 @@
+import CareersBanner from "@/components/Careers/CareersBanner";
 import CareersTable from "@/components/Careers/CareersTable";
 import Container from "@/components/Shared/Container";
 import PageHeader from "@/components/Shared/PageHeader";
@@ -15,6 +16,7 @@ const CareersPage: React.FC<{ posts: any }> = ({ posts }) => {
             subheading="View open roles for the Core Tracer team."
           />
           <CareersTable />
+          <CareersBanner />
         </Container>
       </PageSection>
     </>

@@ -27,6 +27,7 @@ const CareersTable = () => {
       .catch((error) => {
         console.log("Lever API request failed", error);
         setError(true);
+        setShowNoJobs(true);
         setShowLoader(false);
       });
   };
@@ -128,7 +129,7 @@ const CareersTable = () => {
         teams={teams}
         worktypes={worktypes}
       />
-      <ErrorText showError={showError} />
+      {showNoJobs && showError && <ErrorText />}
       <Loader showLoader={showLoader} />
       <table
         id="careers-table"
@@ -152,7 +153,7 @@ const CareersTable = () => {
       >
         {jobDivs}
       </div>
-      {showNoJobs && <NoJobsAvailableText />}
+      {showNoJobs && !showError && <NoJobsAvailableText />}
     </div>
   );
 };
