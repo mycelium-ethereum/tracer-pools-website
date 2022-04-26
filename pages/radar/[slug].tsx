@@ -104,9 +104,11 @@ const Article = ({ data }) => {
                   {data.read_time === 1 ? "minute" : "minutes"}
                 </span>
               </div>
-              <div className="my-2.5">
-                <CategoryBubble category={data.category} large />
-              </div>
+              {data.category && (
+                <div className="my-2.5">
+                  <CategoryBubble category={data.category} large />
+                </div>
+              )}
             </header>
             <div className="blog-content mt-9" ref={bodyText}>
               <MarkdownContent children={data.body_text} />
