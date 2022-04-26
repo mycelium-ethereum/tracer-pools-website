@@ -1,42 +1,33 @@
 import React, { useEffect, useRef, useState } from "react";
 import Moment from "react-moment";
-// import DOMPurify from "dompurify";
 import Script from "next/script";
 import { GetStaticPaths, GetStaticProps } from "next";
-// Components
+import { marked } from "marked";
+import DOMPurify from "dompurify";
 import SEO from "@/components/Shared/SEO";
 import Container from "@/components/Shared/Container";
-import MarkdownContent from "@/components/Radar/MarkdownContent";
 import CategoryBubble from "@/components/Radar/CategoryBubble";
 import Sidebar from "@/components/Radar/Sidebar";
-// Images
-// import TwitterSVG from "../../components/SVG/TwitterSVG";
-// import LinkedInSVG from "../../components/SVG/LinkedInSVG";
-// import FacebookSVG from "../../components/SVG/FacebookSVG";
-// import LinkSVG from "../../components/SVG/LinkSVG";
 
 const Article = ({ data, articles }) => {
-  const [currentURL, setCurrentURL] = useState<string>("");
-  const [currentPath, setCurrentPath] = useState<string>("");
-  const [bannerImage, setBannerImage] = useState<string>("");
   const bodyTextRef = useRef<HTMLDivElement>(null);
 
   const applyStyles = (e) => {
     const headingStyles =
       "relative uppercase tracking-[0.15em] mb-2 text-highlight mb-4 font-normal text-sm mt-10";
     if (e.tagName === "OL")
-      e.setAttribute("class", "list-outside pl-4 list-style-number mb-4");
-    if (e.tagName === "UL") e.setAttribute("class", "list-outside pl-4 mb-4");
+      e.setAttribute("class", "list-outside pl-4 list-style-number");
+    if (e.tagName === "UL") e.setAttribute("class", "list-outside pl-4");
     if (e.tagName === "A")
       e.setAttribute(
         "class",
         "underline text-tracer-lightblue hover:text-tracer-midblue transition-colors duration-300"
       );
-    if (e.tagName === "P") e.setAttribute("class", "mb-4");
+    // if (e.tagName === "P") e.setAttribute("class", "mb-4");
     if (e.tagName === "H1") e.setAttribute("class", headingStyles);
     if (e.tagName === "H2") e.setAttribute("class", headingStyles);
     if (e.tagName === "H3") e.setAttribute("class", headingStyles);
-    if (e.tagName === "HR") e.setAttribute("class", "mb-4");
+    // if (e.tagName === "HR") e.setAttribute("class", "mb-4");
     if (e.tagName === "IMG") {
       e.setAttribute(
         "class",
@@ -46,6 +37,15 @@ const Article = ({ data, articles }) => {
         this.classList.toggle("enlarge");
       };
     }
+  };
+
+  const setBodyText = () => {
+    bodyTextRef.current.innerHTML = marked(
+      DOMPurify.sanitize(data.body_text, {
+        FORCE_BODY: true,
+        ADD_TAGS: ["script"],
+      })
+    );
   };
 
   const getTags = () => {
@@ -60,33 +60,28 @@ const Article = ({ data, articles }) => {
       }
     });
   };
-  const getBannerImage = () => {
-    let bannerImage = "";
-    if (data.image[0].formats.small.url) {
-      bannerImage = data.image[0].formats.small.url;
-    } else if (data.image[0].formats.medium.url) {
-      bannerImage = data.image[0].formats.medium.url;
-    } else if (data.image[0].formats.large.url) {
-      bannerImage = data.image[0].formats.large.url;
-    }
-    setBannerImage(bannerImage);
-  };
 
   useEffect(() => {
+    setBodyText();
     getTags();
-    getBannerImage();
-    setCurrentURL(window.location.href);
-    setCurrentPath(window.location.pathname);
+    // setCurrentURL(window.location.href);
+    // setCurrentPath(window.location.pathname);
   }, [data]);
 
   return (
     <>
       <SEO
         title={data.title}
-        description={data.Description}
+        description={data.description}
         image={data.image[0].formats.small.url}
-        publishedTime={data.Publish_date}
+        publishedTime={data.publish_date}
       />
+      <style>{`
+            html,
+            body {
+              scroll-behavior: smooth;
+            }
+      `}</style>
       <section className="pt-[140px] pb-1.5">
         <Container className="leading-[24px] text-tertiary">
           <div className="max-w-[840px]">
@@ -112,9 +107,7 @@ const Article = ({ data, articles }) => {
                 </div>
               )}
             </header>
-            <div className="blog-content mt-9" ref={bodyTextRef}>
-              <MarkdownContent children={data.body_text} />
-            </div>
+            <div className="prose mt-9" ref={bodyTextRef} />
           </div>
         </Container>
         <Sidebar

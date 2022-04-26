@@ -1,15 +1,16 @@
 import CategoryBubble from "@/components/Radar/CategoryBubble";
 import Moment from "react-moment";
 import { sortByDate } from "@/lib/helpers";
-import Button from "../Shared/Button";
-import PageLink from "../Shared/PageLink";
+import Button from "@/components/Shared/Button";
 import { useEffect, useState } from "react";
 import { isMobile } from "@/lib/helpers";
+import Link from "next/link";
+
 const Sidebar: React.FC<{
   currentArticle: any;
   articles: any;
   bodyTextRef: React.MutableRefObject<HTMLDivElement>;
-}> = ({ currentArticle, articles }) => {
+}> = ({ currentArticle, articles, bodyTextRef }) => {
   const [visible, setVisible] = useState<boolean>(false);
   const getRelatedArticles = () => {
     const relatedArticles = articles
@@ -23,9 +24,7 @@ const Sidebar: React.FC<{
   };
 
   const handleScroll = () => {
-    const blogContentEl = document.querySelector(
-      ".blog-content"
-    ) as HTMLDivElement;
+    const blogContentEl = bodyTextRef.current as HTMLDivElement;
     const footerEl = document.querySelector("footer") as HTMLDivElement;
     const bodyHeight = document.body.scrollHeight;
     const bottomOffset = bodyHeight - footerEl.clientHeight * 2.5;
@@ -89,11 +88,13 @@ const Sidebar: React.FC<{
           .slice(0, 2)
           .map((article, i) => (
             <>
-              <PageLink href={`/radar/${article.slug}`}>
-                <h4 className="my-2 font-bold leading-[24px] text-action-active">
-                  {article.title}
-                </h4>
-              </PageLink>
+              <Link href={`/radar/${article.slug}`} passHref>
+                <a>
+                  <h4 className="my-2 font-bold leading-[24px] text-action-active">
+                    {article.title}
+                  </h4>
+                </a>
+              </Link>
               {i === 0 && (
                 <hr className="line-gradient-grey h-[1px] w-full border-none" />
               )}
