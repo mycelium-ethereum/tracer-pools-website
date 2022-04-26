@@ -10,12 +10,11 @@ const RadarPosts: React.FC<{
 }> = ({ filteredArticles, category, postContainerRef }) => {
   const [prevCategory, setPrevCategory] = useState<string>("all");
   const [sortedArticles, setSortedArticles] = useState(filteredArticles);
+  const [sorted, setSorted] = useState(false);
   const [columns, setColumns] = useState(3);
 
   const handleCategoryChange = () => {
     if (category !== prevCategory) {
-      console.log(category);
-      console.log(prevCategory);
       // Animate category change
       postContainerRef.current.classList.add("opacity-0");
       setTimeout(() => {
@@ -49,6 +48,13 @@ const RadarPosts: React.FC<{
     }
   };
 
+  // const fadeInPostContainer = () => {
+  //   postContainerRef.current.classList.add("opacity-0");
+  //   setTimeout(() => {
+  //     postContainerRef.current.classList.remove("opacity-0");
+  //   }, 500);
+  // };
+
   useEffect(() => {
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -59,25 +65,32 @@ const RadarPosts: React.FC<{
 
   useEffect(() => {
     setSortedArticles(filteredArticles.sort(sortByDate));
+    setSorted(true);
   }, [filteredArticles]);
 
   useEffect(() => {
     handleCategoryChange();
   }, [category]);
 
+  // useEffect(() => {
+  //   fadeInPostContainer();
+  // }, []);
+
   return (
     <div
       ref={postContainerRef}
       id="post-container"
-      className="mt-6 grid grid-cols-1 gap-x-4 transition-opacity duration-500 sm:grid-cols-2 lg:grid-cols-3"
+      hidden
+      className={`mt-6 grid grid-cols-1 gap-x-4 sm:grid-cols-2 lg:grid-cols-3 ${
+        sorted ? "transition-opacity duration-500" : ""
+      }`}
     >
-      {
+      {sorted &&
         {
           3: <ThreeColumnLayout sortedArticles={sortedArticles} />,
           2: <TwoColumnLayout sortedArticles={sortedArticles} />,
           1: <TwoColumnLayout sortedArticles={sortedArticles} />,
-        }[columns]
-      }
+        }[columns]}
     </div>
   );
 };

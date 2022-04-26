@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import CareerFilters from "@/components/Careers/CareerFilters";
 import Loader from "@/components/Careers/Loader";
 import ErrorText from "@/components/Careers/ErrorText";
-import Container from "@/components/Shared/Container";
 import NoJobsAvailableText from "@/components/Careers/NoJobsAvailableText";
 import JobDiv from "@/components/Careers/JobDiv";
 import JobRow from "@/components/Careers/JobRow";

@@ -1,5 +1,3 @@
-import React from "react";
-
 const ClearFiltersButton = ({ clearFilters, filtersChanged }) => {
   return (
     <button
