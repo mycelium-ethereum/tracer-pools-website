@@ -1,6 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Moment from "react-moment";
-import Link from "next/link";
 import PageLink from "../Shared/PageLink";
 import CategoryBubble from "./CategoryBubble";
 

@@ -3,6 +3,7 @@ import PageLink from "./PageLink";
 
 const Button: React.FC<{
   className?: string;
+  linkClassName?: string;
   action?: (payload: any) => void;
   children: string | React.ReactNode;
   blueTransparent?: boolean;
@@ -15,6 +16,7 @@ const Button: React.FC<{
   outgoingLink?: string;
 }> = ({
   className,
+  linkClassName,
   action,
   children,
   blueTransparent,
@@ -28,35 +30,35 @@ const Button: React.FC<{
 }) => {
   return (
     <button
-      className={`relative flex w-max rounded-md border px-6 py-2 text-base leading-[24px] transition-all duration-500 ${
-        className ? className : ""
-      } 
+      className={`relative flex w-max rounded-md border text-base leading-[24px] transition-all duration-500 
       ${
         blueTransparent
-          ? "border-action-active text-action-active hover:bg-action-active hover:text-white"
+          ? "border-action-active text-action-active hover:bg-action-active hover:text-white "
           : ""
       }
       ${
         purpleTransparent
-          ? "border-tracer-purple-light text-tracer-purple-light"
+          ? "border-tracer-purple-light text-tracer-purple-light "
           : ""
       }
       ${
         purpleGradient
-          ? "btn-gradient-purple border-tracer-purple-light text-white hover:bg-tracer-purple-light"
+          ? "btn-gradient-purple border-tracer-purple-light text-white hover:bg-tracer-purple-light "
           : ""
       } 
       ${
         darkBlueGradient
-          ? "btn-gradient-blue-dark border-action-active text-white hover:text-action-active"
+          ? "btn-gradient-blue-dark border-action-active text-white hover:text-action-active "
           : ""
       } 
       ${
         lightBlueGradient
-          ? "btn-gradient-blue-light border-action-active text-white"
+          ? "btn-gradient-blue-light border-action-active text-white "
           : ""
       } 
-      ${clear ? "btn-clear text-action-active hover:text-white" : ""}`}
+      ${clear ? "btn-clear text-action-active hover:text-white " : ""}
+      ${link ? "p-0" : "px-6 py-2"}
+      ${className ? className : ""}`}
       onClick={action}
     >
       {outgoingLink && (
@@ -64,7 +66,14 @@ const Button: React.FC<{
           {children}
         </a>
       )}
-      {link && <PageLink href={link}>{children}</PageLink>}
+      {link && (
+        <PageLink
+          href={link}
+          className={`px-6 py-2 ${linkClassName ? linkClassName : ""}`}
+        >
+          {children}
+        </PageLink>
+      )}
       {!outgoingLink && !link && <>{children}</>}
     </button>
   );

@@ -123,6 +123,14 @@ nav * {
   );
 }
 
+.line-gradient-grey {
+  background: linear-gradient(
+    to right,
+    rgba(231, 236, 240, 1),
+    rgba(231, 236, 240, 0)
+  );
+}
+
 /* Fix for next/image image width and height */
 .image-container {
   width: 100%;
@@ -233,4 +241,9 @@ nav * {
     rgba(61, 168, 245, 1),
     rgba(61, 168, 245, 0)
   );
+}
+
+/* Hide first image - banner */
+.blog-content > p:first-of-type > img {
+  display: none;
 }

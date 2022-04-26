@@ -8,17 +8,18 @@ import SEO from "@/components/Shared/SEO";
 import Container from "@/components/Shared/Container";
 import MarkdownContent from "@/components/Radar/MarkdownContent";
 import CategoryBubble from "@/components/Radar/CategoryBubble";
+import Sidebar from "@/components/Radar/Sidebar";
 // Images
 // import TwitterSVG from "../../components/SVG/TwitterSVG";
 // import LinkedInSVG from "../../components/SVG/LinkedInSVG";
 // import FacebookSVG from "../../components/SVG/FacebookSVG";
 // import LinkSVG from "../../components/SVG/LinkSVG";
 
-const Article = ({ data }) => {
+const Article = ({ data, articles }) => {
   const [currentURL, setCurrentURL] = useState<string>("");
   const [currentPath, setCurrentPath] = useState<string>("");
   const [bannerImage, setBannerImage] = useState<string>("");
-  const bodyText = useRef<HTMLDivElement>(null);
+  const bodyTextRef = useRef<HTMLDivElement>(null);
 
   const applyStyles = (e) => {
     const headingStyles =
@@ -35,6 +36,7 @@ const Article = ({ data }) => {
     if (e.tagName === "H1") e.setAttribute("class", headingStyles);
     if (e.tagName === "H2") e.setAttribute("class", headingStyles);
     if (e.tagName === "H3") e.setAttribute("class", headingStyles);
+    if (e.tagName === "HR") e.setAttribute("class", "mb-4");
     if (e.tagName === "IMG") {
       e.setAttribute(
         "class",
@@ -47,7 +49,7 @@ const Article = ({ data }) => {
   };
 
   const getTags = () => {
-    const childElements = bodyText.current.childNodes;
+    const childElements = bodyTextRef.current.childNodes;
     childElements.forEach((e) => {
       const nestedChildren = e.childNodes;
       applyStyles(e);
@@ -75,7 +77,7 @@ const Article = ({ data }) => {
     getBannerImage();
     setCurrentURL(window.location.href);
     setCurrentPath(window.location.pathname);
-  }, []);
+  }, [data]);
 
   return (
     <>
@@ -110,11 +112,16 @@ const Article = ({ data }) => {
                 </div>
               )}
             </header>
-            <div className="blog-content mt-9" ref={bodyText}>
+            <div className="blog-content mt-9" ref={bodyTextRef}>
               <MarkdownContent children={data.body_text} />
             </div>
           </div>
         </Container>
+        <Sidebar
+          currentArticle={data}
+          articles={articles}
+          bodyTextRef={bodyTextRef}
+        />
       </section>
       <Script
         async
@@ -167,6 +174,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       data,
+      articles,
     },
   };
 };
