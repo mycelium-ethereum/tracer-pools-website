@@ -8,6 +8,7 @@ import SEO from "@/components/Shared/SEO";
 import Container from "@/components/Shared/Container";
 import CategoryBubble from "@/components/Radar/CategoryBubble";
 import Sidebar from "@/components/Radar/Sidebar";
+import MeshUnderlay from "@/components/Shared/MeshUnderlay";
 
 const Article = ({ data, articles }) => {
   const bodyTextRef = useRef<HTMLDivElement>(null);
@@ -115,6 +116,7 @@ const Article = ({ data, articles }) => {
           articles={articles}
           bodyTextRef={bodyTextRef}
         />
+        <MeshUnderlay />
       </section>
       <Script
         async

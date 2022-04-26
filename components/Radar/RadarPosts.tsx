@@ -1,5 +1,4 @@
-import { useEffect, useRef, useState } from "react";
-import ResearchPostCard from "@/components/Radar/RadarPostCard";
+import { useEffect, useState } from "react";
 import { sortByDate } from "@/lib/helpers";
 import ThreeColumnLayout from "./ThreeColumnLayout";
 import TwoColumnLayout from "./TwoColumnLayout";
@@ -7,16 +6,16 @@ import TwoColumnLayout from "./TwoColumnLayout";
 const RadarPosts: React.FC<{
   filteredArticles: any;
   category: string;
-}> = ({ filteredArticles, category }) => {
+  postContainerRef: React.MutableRefObject<HTMLDivElement>;
+}> = ({ filteredArticles, category, postContainerRef }) => {
   const [prevCategory, setPrevCategory] = useState<string>("all");
   const [sortedArticles, setSortedArticles] = useState(filteredArticles);
   const [columns, setColumns] = useState(3);
-  const postContainer = useRef<HTMLDivElement>(null);
 
   const handleCategoryChange = () => {
     if (category !== prevCategory) {
       // Animate category change
-      postContainer.current.classList.add("opacity-0");
+      postContainerRef.current.classList.add("opacity-0");
       setTimeout(() => {
         if (category !== "all") {
           setSortedArticles(
@@ -29,8 +28,8 @@ const RadarPosts: React.FC<{
         }
       }, 500);
       setTimeout(() => {
-        postContainer.current.classList.remove("opacity-0");
-      }, 600);
+        postContainerRef.current.classList.remove("opacity-0");
+      }, 700);
       setPrevCategory(category);
     }
   };
@@ -66,7 +65,7 @@ const RadarPosts: React.FC<{
 
   return (
     <div
-      ref={postContainer}
+      ref={postContainerRef}
       id="post-container"
       className="mt-6 grid grid-cols-1 gap-x-4 transition-opacity duration-500 sm:grid-cols-2 lg:grid-cols-3"
     >

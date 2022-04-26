@@ -1,10 +1,10 @@
-import { sortByDate } from "@/lib/helpers";
 import { useEffect, useState } from "react";
 
 const SearchBox: React.FC<{
   articles: any;
   setFilteredArticles: React.Dispatch<any>;
-}> = ({ articles, setFilteredArticles }) => {
+  postContainerRef: React.MutableRefObject<HTMLDivElement>;
+}> = ({ articles, setFilteredArticles, postContainerRef }) => {
   const [query, setQuery] = useState<string>("");
   const handleChange = (e) => {
     setQuery(e.target.value);
@@ -17,7 +17,13 @@ const SearchBox: React.FC<{
         article.description.toLowerCase().includes(query.toLowerCase())
       );
     });
-    setFilteredArticles(updatedFilteredArticles);
+    postContainerRef.current.classList.add("opacity-0");
+    setTimeout(() => {
+      setFilteredArticles(updatedFilteredArticles);
+    }, 500);
+    setTimeout(() => {
+      postContainerRef.current.classList.remove("opacity-0");
+    }, 800);
   };
 
   useEffect(() => {
@@ -28,7 +34,7 @@ const SearchBox: React.FC<{
     <div className="relative h-10 w-[404px] rounded-lg border-2 border-action-active text-action-active">
       <input
         type="text"
-        className="flex h-full items-center bg-transparent pl-9"
+        className="flex h-full w-full items-center bg-transparent pl-9"
         placeholder="Search"
         value={query}
         onChange={handleChange}

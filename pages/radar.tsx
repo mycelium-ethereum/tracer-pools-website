@@ -4,13 +4,14 @@ import Container from "@/components/Shared/Container";
 import PageHeader from "@/components/Shared/PageHeader";
 import PageSection from "@/components/Shared/Section";
 import SEO from "@/components/Shared/SEO";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { GetStaticProps } from "next";
 import RadarPosts from "@/components/Radar/RadarPosts";
 
 const BlogPage: React.FC<{ articles: any }> = ({ articles }) => {
   const [filteredArticles, setFilteredArticles] = useState(articles);
   const [category, setCategory] = useState<string>("all");
+  const postContainerRef = useRef<HTMLDivElement>(null);
 
   return (
     <>
@@ -26,9 +27,14 @@ const BlogPage: React.FC<{ articles: any }> = ({ articles }) => {
             <SearchBox
               articles={articles}
               setFilteredArticles={setFilteredArticles}
+              postContainerRef={postContainerRef}
             />
           </div>
-          <RadarPosts filteredArticles={filteredArticles} category={category} />
+          <RadarPosts
+            filteredArticles={filteredArticles}
+            category={category}
+            postContainerRef={postContainerRef}
+          />
         </Container>
       </PageSection>
     </>
