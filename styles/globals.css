@@ -6,6 +6,13 @@
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
+ol {
+  list-style: number;
+}
+ul,
+menu {
+  list-style: unset;
+}
 
 ::-webkit-scrollbar {
   @apply h-2.5 w-2.5;
@@ -198,4 +205,32 @@ nav * {
   -webkit-line-clamp: 4; /* number of lines to show */
   line-clamp: 4;
   -webkit-box-orient: vertical;
+}
+
+.enlarge {
+  transform: scale(1.5);
+}
+
+/* BLOG CONTENT PAGES */
+
+.blog-content h1 strong,
+.blog-content h2 strong,
+.blog-content h3 strong {
+  font-weight: 400 !important;
+}
+
+.blog-content h1:after,
+.blog-content h2:after,
+.blog-content h3:after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(61, 168, 245, 1),
+    rgba(61, 168, 245, 0)
+  );
 }

@@ -2,20 +2,26 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-const SEO: React.FC<{ title: string; description?: string }> = ({
-  title,
-  description = "",
-}) => {
+const SEO: React.FC<{
+  title: string;
+  image?: string;
+  publishedTime?: string;
+  description?: string;
+}> = ({ title, image, publishedTime, description = "" }) => {
+  const currentDate = new Date().toISOString().split("T")[0];
   const router = useRouter();
   const [currentPath, setCurrentPath] = useState<string | undefined>(undefined);
   const metaDescription =
     description !== "" ? description : process.env.siteDescription;
   const keywords = process.env.siteKeywords;
   const siteURL = process.env.siteUrl;
-  const imagePreview = `${siteURL}/${process.env.siteImagePreviewUrl}`;
+  const imagePreview = image
+    ? image
+    : `${siteURL}/${process.env.siteImagePreviewUrl}`;
   const metaTitle = title
     ? title + " | " + process.env.siteTitle
     : process.env.siteTitle;
+  const metaPublishedTime = publishedTime ? publishedTime : currentDate;
 
   useEffect(() => {
     const pathname = router.pathname;
@@ -37,7 +43,7 @@ const SEO: React.FC<{ title: string; description?: string }> = ({
       <meta property="og:site_name" content={siteURL} key="ogsitename" />
       <meta property="og:description" content={metaDescription} key="ogdesc" />
       <meta property="og:type" content="website" />
-      <title>{metaTitle}</title>
+      <meta property="article:published_time" content={metaPublishedTime} />
 
       {/* <!-- Facebook Meta Tags --> */}
       <meta property="og:url" content={siteURL + currentPath} />
@@ -57,6 +63,8 @@ const SEO: React.FC<{ title: string; description?: string }> = ({
       <link rel="icon" href="/favicon.svg" />
       {/* <link rel="preconnect" href="https://use.typekit.net" /> */}
       <link rel="stylesheet" href="https://use.typekit.net/klm0viv.css" />
+
+      <title>{metaTitle}</title>
     </Head>
   );
 };

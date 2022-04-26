@@ -1,3 +1,5 @@
+import CategoryBubble from "./CategoryBubble";
+
 const PostFilters: React.FC<{
   category: string;
   setCategory: React.Dispatch<React.SetStateAction<string>>;
@@ -35,17 +37,18 @@ const PostFilters: React.FC<{
   return (
     <div className="flex">
       {CategoryInfo.map((buttonCategory) => (
-        <button
-          className={
-            "mr-2 flex h-10 items-center justify-center rounded-lg  py-2.5 px-[13px] transition-colors duration-300 hover:bg-action-active hover:text-action-cell " +
-            (category === buttonCategory.name
-              ? "bg-action-active text-action-cell"
-              : "bg-action-cell text-action-active")
-          }
-          data-category={buttonCategory.name}
-          onClick={handleClick}
-        >
-          {buttonCategory.text}
+        <button data-category={buttonCategory.name} onClick={handleClick}>
+          <CategoryBubble
+            large
+            category={buttonCategory.text}
+            className={`pointer-events-none mr-2
+              ${
+                category === buttonCategory.name
+                  ? "bg-action-active text-action-cell"
+                  : "bg-action-cell text-action-active"
+              }
+            `}
+          />
         </button>
       ))}
     </div>

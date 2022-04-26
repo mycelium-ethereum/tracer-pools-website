@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import ResearchPostCard from "@/components/Radar/RadarPostCard";
 import { sortByDate } from "@/lib/helpers";
+import ThreeColumnLayout from "./ThreeColumnLayout";
+import TwoColumnLayout from "./TwoColumnLayout";
+
 const RadarPosts: React.FC<{
   filteredArticles: any;
   category: string;
@@ -47,7 +50,7 @@ const RadarPosts: React.FC<{
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [handleResize]);
 
   useEffect(() => {
     setSortedArticles(filteredArticles.sort(sortByDate));
@@ -61,35 +64,30 @@ const RadarPosts: React.FC<{
     <div
       ref={postContainer}
       id="post-container"
-      className="mt-6 grid grid-cols-2 gap-x-4 transition-opacity duration-500 lg:grid-cols-3"
+      className="mt-6 grid grid-cols-1 gap-x-4 transition-opacity duration-500 sm:grid-cols-2 lg:grid-cols-3"
     >
-      <div>
-        {sortedArticles.map((article: any, i: number) => {
-          if (i % 3 === 0 || i === 0) {
-            return (
-              <ResearchPostCard key={i} article={article} category={category} />
-            );
-          }
-        })}
-      </div>
-      <div>
-        {sortedArticles.map((article: any, i: number) => {
-          if (i % 3 === 1 || i === 1) {
-            return (
-              <ResearchPostCard key={i} article={article} category={category} />
-            );
-          }
-        })}
-      </div>
-      <div>
-        {sortedArticles.map((article: any, i: number) => {
-          if (i % 3 !== 1 && i !== 1 && i % 3 !== 0 && i !== 0) {
-            return (
-              <ResearchPostCard key={i} article={article} category={category} />
-            );
-          }
-        })}
-      </div>
+      {
+        {
+          3: (
+            <ThreeColumnLayout
+              sortedArticles={sortedArticles}
+              category={category}
+            />
+          ),
+          2: (
+            <TwoColumnLayout
+              sortedArticles={sortedArticles}
+              category={category}
+            />
+          ),
+          1: (
+            <TwoColumnLayout
+              sortedArticles={sortedArticles}
+              category={category}
+            />
+          ),
+        }[columns]
+      }
     </div>
   );
 };

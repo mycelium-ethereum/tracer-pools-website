@@ -16,6 +16,7 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
   const [visible, setVisible] = useState<boolean>(true);
   const whiteStyles = "text-white";
   const blueStyles = "text-action-active";
+  const solidStyles = "text-action-active bg-white";
 
   const links = [
     { label: "Products", href: "/products" },
@@ -81,7 +82,7 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
           break;
       }
     } else {
-      navTextColour = blueStyles;
+      navTextColour = solidStyles;
     }
     setNavStyles(navTextColour);
   };

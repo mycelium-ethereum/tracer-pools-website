@@ -2,23 +2,23 @@ import { useEffect, useRef, useState } from "react";
 import Moment from "react-moment";
 import Link from "next/link";
 import PageLink from "../Shared/PageLink";
-import { capitaliseFirstLetter } from "lib/helpers";
+import CategoryBubble from "./CategoryBubble";
 
 const RadarPostCard: React.FC<{
   article: any;
   className?: string;
-  category: string;
-}> = ({ article, className, category }) => {
+}> = ({ article, className }) => {
   const postDescription = useRef<HTMLParagraphElement>(null);
+
   useEffect(() => {
     if (postDescription.current) {
       postDescription.current.innerHTML = article.Description;
     }
-  }, []);
+  }, [postDescription.current]);
 
   return (
-    <PageLink href={`/radar/` + article.Slug + "/"}>
-      <article className="mb-4 w-full overflow-hidden rounded-lg [box-shadow:_0px_2px_4px_rgba(0,0,0,0.1)]">
+    <PageLink href={`/radar/` + article.slug + "/"}>
+      <article className="mb-4 w-full overflow-hidden rounded-lg bg-white transition-all duration-300 [box-shadow:_0px_2px_4px_rgba(0,0,0,0.1)] hover:bg-action-cell hover:[box-shadow:_0px_2px_8px_rgba(26,85,245,0.2)]">
         <picture>
           <img
             src={article.image[0].formats.small.url}
@@ -36,11 +36,7 @@ const RadarPostCard: React.FC<{
           <p className="post-description overflow-hidden text-sm leading-[20px] text-tertiary">
             {article.description}
           </p>
-          {article.category && (
-            <span className="mt-4 flex h-6 w-max items-center justify-center rounded-md bg-action-cell px-2 text-xs text-action-active">
-              {capitaliseFirstLetter(article.category)}
-            </span>
-          )}
+          {article.category && <CategoryBubble category={article.category} />}
         </div>
       </article>
     </PageLink>
