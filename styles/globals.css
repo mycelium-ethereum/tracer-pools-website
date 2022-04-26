@@ -80,8 +80,8 @@ nav * {
 .btn-gradient-blue-light {
   background: linear-gradient(
     265.19deg,
-    rgba(28, 100, 242, 0.155) -7.22%,
-    rgba(28, 100, 242, 0) 101.71%
+    rgba(28, 100, 242, 0) -7.22%,
+    rgba(28, 100, 242, 0.155) 101.71%
   );
 }
 .btn-gradient-blue-dark {
@@ -256,4 +256,27 @@ nav * {
 /* Hide first image - banner */
 .prose > p:first-of-type > img {
   display: none;
+}
+
+/* CAREERS TABLE */
+
+/* Add gradient borders */
+table:after,
+tbody tr:not([data-hidden="true"]):after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.5px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(61, 168, 245, 1),
+    rgba(61, 168, 245, 0)
+  );
+}
+
+table:after {
+  top: unset;
+  bottom: 0;
 }

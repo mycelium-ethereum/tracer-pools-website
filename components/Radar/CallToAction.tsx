@@ -17,7 +17,7 @@ const CallToAction: React.FC<{}> = ({}) => {
         <h2 className="mt-4 text-[40px] leading-[44px] text-white">
           More Leverage. Less Overhead.
         </h2>
-        <small className="mt-2 block text-tracer-midblue">
+        <small className="mt-2 block text-base leading-[24px] text-tracer-midblue">
           Fully composibile leveraged tokens with no margin requirements and no
           liquidations. A new derivative primative to hedge portfolio risk or
           trade leverage.
