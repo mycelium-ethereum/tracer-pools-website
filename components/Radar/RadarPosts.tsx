@@ -8,27 +8,31 @@ const RadarPosts: React.FC<{
   filteredArticles: any;
   category: string;
 }> = ({ filteredArticles, category }) => {
+  const [prevCategory, setPrevCategory] = useState<string>("all");
   const [sortedArticles, setSortedArticles] = useState(filteredArticles);
   const [columns, setColumns] = useState(3);
   const postContainer = useRef<HTMLDivElement>(null);
 
   const handleCategoryChange = () => {
-    // Animate category change
-    postContainer.current.classList.add("opacity-0");
-    setTimeout(() => {
-      if (category !== "all") {
-        setSortedArticles(
-          filteredArticles.filter(
-            (article: any) => article.category === category
-          )
-        );
-      } else {
-        setSortedArticles(filteredArticles);
-      }
-    }, 500);
-    setTimeout(() => {
-      postContainer.current.classList.remove("opacity-0");
-    }, 600);
+    if (category !== prevCategory) {
+      // Animate category change
+      postContainer.current.classList.add("opacity-0");
+      setTimeout(() => {
+        if (category !== "all") {
+          setSortedArticles(
+            filteredArticles.filter(
+              (article: any) => article.category === category
+            )
+          );
+        } else {
+          setSortedArticles(filteredArticles);
+        }
+      }, 500);
+      setTimeout(() => {
+        postContainer.current.classList.remove("opacity-0");
+      }, 600);
+      setPrevCategory(category);
+    }
   };
 
   const handleResize = () => {

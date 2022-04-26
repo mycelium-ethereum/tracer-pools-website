@@ -29,6 +29,7 @@ const Sidebar: React.FC<{
     const footerEl = document.querySelector("footer") as HTMLDivElement;
     const bodyHeight = document.body.scrollHeight;
     const bottomOffset = bodyHeight - footerEl.clientHeight * 2.5;
+
     // Show the sidebar if the user has scrolled past the blog content,
     // but hide if close to bottom (2.5x footer height)
     if (
