@@ -78,12 +78,6 @@ const Article = ({ data, articles }) => {
         image={data.image[0].formats.small.url}
         publishedTime={data.publish_date}
       />
-      <style>{`
-            html,
-            body {
-              scroll-behavior: smooth;
-            }
-      `}</style>
       <section className="pt-[140px] pb-1.5">
         <Container className="leading-[24px] text-tertiary">
           <div className="max-w-[840px]">

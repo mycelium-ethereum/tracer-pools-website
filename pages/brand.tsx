@@ -19,12 +19,6 @@ import Element3DAssets from "@/components/Brand/Assets/Element3DAssets";
 
 const BrandPage = () => {
   const [category, setCategory] = useState("all");
-  const brandAssets = {
-    logos,
-    colours,
-    graphics,
-    elements3D,
-  };
 
   return (
     <>
@@ -47,28 +41,28 @@ const BrandPage = () => {
                   <LogoAssets
                     heading={headings.logos.heading}
                     subheading={headings.logos.subheading}
-                    logos={brandAssets.logos}
+                    logos={logos}
                   />
                 ),
                 colors: (
                   <ColourAssets
                     heading={headings.colours.heading}
                     subheading={headings.colours.subheading}
-                    colours={brandAssets.colours}
+                    colours={colours}
                   />
                 ),
                 graphics: (
                   <GraphicAssets
                     heading={headings.graphics.heading}
                     subheading={headings.graphics.subheading}
-                    graphics={brandAssets.graphics}
+                    graphics={graphics}
                   />
                 ),
                 elements3D: (
                   <Element3DAssets
                     heading={headings.elements3D.heading}
                     subheading={headings.elements3D.subheading}
-                    elements3D={brandAssets.elements3D}
+                    elements3D={elements3D}
                   />
                 ),
                 typography: (
@@ -82,22 +76,22 @@ const BrandPage = () => {
                     <LogoAssets
                       heading={headings.logos.heading}
                       subheading={headings.logos.subheading}
-                      logos={brandAssets.logos}
+                      logos={logos}
                     />
                     <ColourAssets
                       heading={headings.colours.heading}
                       subheading={headings.colours.subheading}
-                      colours={brandAssets.colours}
+                      colours={colours}
                     />
                     <GraphicAssets
                       heading={headings.graphics.heading}
                       subheading={headings.graphics.subheading}
-                      graphics={brandAssets.graphics}
+                      graphics={graphics}
                     />
                     <Element3DAssets
                       heading={headings.elements3D.heading}
                       subheading={headings.elements3D.subheading}
-                      elements3D={brandAssets.elements3D}
+                      elements3D={elements3D}
                     />
                     <TypographyAssets
                       heading={headings.typography.heading}

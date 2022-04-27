@@ -1,21 +1,21 @@
-import ResearchPostCard from "@/components/Radar/RadarPostCard";
+import RadarPostCard from "@/components/Radar/RadarPostCard";
 
 const TwoColumnLayout: React.FC<{
-  sortedArticles: any;
-}> = ({ sortedArticles }) => {
+  articles: any;
+}> = ({ articles }) => {
   return (
     <>
-      <div>
-        {sortedArticles.map((article: any, i: number) => {
+      <div className="w-full">
+        {articles.map((article: any, i: number) => {
           if (i % 2 === 0 || i === 0) {
-            return <ResearchPostCard key={i} article={article} />;
+            return <RadarPostCard key={i} article={article} />;
           }
         })}
       </div>
-      <div>
-        {sortedArticles.map((article: any, i: number) => {
+      <div className="w-full">
+        {articles.map((article: any, i: number) => {
           if (i % 2 === 1 || i === 1) {
-            return <ResearchPostCard key={i} article={article} />;
+            return <RadarPostCard key={i} article={article} />;
           }
         })}
       </div>

@@ -5,7 +5,7 @@ import Button from "@/components/Shared/Button";
 import { useEffect, useState } from "react";
 import { isMobile } from "@/lib/helpers";
 import Link from "next/link";
-import GradientLine from "@/components/Shared/GradientDivider";
+import GradientLine from "@/components/Shared/GradientLine";
 
 const Sidebar: React.FC<{
   currentArticle: any;
@@ -33,6 +33,7 @@ const Sidebar: React.FC<{
     // Show the sidebar if the user has scrolled past the blog content,
     // but hide if close to bottom (2.5x footer height)
     if (
+      blogContentEl &&
       window.scrollY >= blogContentEl.offsetTop &&
       window.scrollY <= bottomOffset &&
       !isMobile()

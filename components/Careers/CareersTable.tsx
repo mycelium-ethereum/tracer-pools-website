@@ -132,9 +132,8 @@ const CareersTable = () => {
       {showNoJobs && showError && <ErrorText />}
       <Loader showLoader={showLoader} />
       <table
-        id="careers-table"
         ref={careerTable}
-        className={`relative w-full overflow-hidden ${
+        className={`careers-table relative w-full overflow-hidden ${
           !showLoader && !showNoJobs ? "hidden lg:table" : "hidden"
         }`}
       >

@@ -261,8 +261,8 @@ nav * {
 /* CAREERS TABLE */
 
 /* Add gradient borders */
-table:after,
-tbody tr:not([data-hidden="true"]):after {
+.careers-table:after,
+.careers-table tbody tr:not([data-hidden="true"]):after {
   content: "";
   position: absolute;
   top: 0;

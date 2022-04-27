@@ -4,6 +4,7 @@ import Button from "@/components/Shared/Button";
 import BackgroundVideo from "@/components/Home/BackgroundVideo";
 import AnimateIn from "@/components/Shared/AnimateIn";
 import BannerLottieAnim from "./BannerLottieAnim";
+import MeshUnderlay from "@/components/Shared/MeshUnderlay";
 
 const Banner: React.FC<{}> = () => {
   return (
@@ -33,6 +34,7 @@ const Banner: React.FC<{}> = () => {
         </header>
         <BannerLottieAnim />
       </Container>
+      <MeshUnderlay fullPage />
       {/* <BackgroundVideo loop src="/img/home/banner.mp4" /> */}
     </Section>
   );

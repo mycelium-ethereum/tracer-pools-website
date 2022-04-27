@@ -12,7 +12,7 @@ const SearchBox: React.FC<{
     setQuery(event.target.value);
   };
 
-  const debouncedChangeHandler = useMemo(() => debounce(handleChange, 300), []);
+  // const debouncedChangeHandler = useMemo(() => debounce(handleChange, 300), []);
 
   const filterArticles = () => {
     const updatedFilteredArticles = articles.filter((article: any) => {
@@ -35,12 +35,13 @@ const SearchBox: React.FC<{
   }, [query]);
 
   return (
-    <div className="relative h-10 w-[404px] rounded-lg border-2 border-action-active text-action-active">
+    <div className="relative mb-4 ml-2 h-10 w-full max-w-[404px] rounded-lg border-2 border-action-active text-action-active sm:mb-0 lg:w-[404px]">
       <input
         type="text"
         className="flex h-full w-full items-center bg-transparent pl-9"
         placeholder="Search"
-        onChange={debouncedChangeHandler}
+        // onChange={debouncedChangeHandler}
+        onChange={handleChange}
       />
       <img
         src="/img/icons/search.svg"

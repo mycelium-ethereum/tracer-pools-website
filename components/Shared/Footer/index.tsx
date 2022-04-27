@@ -37,7 +37,7 @@ const Footer: React.FC<{ route: string }> = ({ route }) => {
   return (
     <footer
       className={`relative z-10 h-1/2 w-full overflow-hidden py-[77px] text-action-active ${
-        route === "/" ? "bg-tracer-darkblue" : "bg-white"
+        route === "/" ? "bg-tracer-navy" : "bg-white"
       }`}
     >
       <Container>

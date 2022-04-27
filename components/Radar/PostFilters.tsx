@@ -33,7 +33,7 @@ const PostFilters: React.FC<{
   ];
 
   return (
-    <div className="flex">
+    <div className="flex flex-wrap sm:flex-nowrap">
       {CategoryInfo.map((buttonCategory, i) => (
         <button
           key={i}
@@ -43,7 +43,7 @@ const PostFilters: React.FC<{
           <CategoryBubble
             large
             category={buttonCategory.text}
-            className={`pointer-events-none mr-2
+            className={`pointer-events-none mr-2 mb-2.5 sm:mb-0
               ${
                 category === buttonCategory.name
                   ? "bg-action-active text-action-cell"

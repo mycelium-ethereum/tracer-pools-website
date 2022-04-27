@@ -25,7 +25,6 @@ module.exports = {
           pink: "#E05CFF",
           lightblue: "#0094F8",
           midblue: "#3535DC",
-          darkblue: "#00005E",
           navy: "#00005E",
           cyan: "#00D9E9",
           primaryblue: "#0000B0",

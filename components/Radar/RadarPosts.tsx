@@ -1,13 +1,18 @@
 import { useEffect, useState } from "react";
 import { sortByDate } from "@/lib/helpers";
-import ThreeColumnLayout from "./ThreeColumnLayout";
-import TwoColumnLayout from "./TwoColumnLayout";
+import ThreeColumnLayout from "@/components/Radar/ThreeColumnLayout";
+import TwoColumnLayout from "@/components/Radar/TwoColumnLayout";
+import InfiniteScroll from "react-infinite-scroll-component";
+import OneColumnLayout from "@/components/Radar/OneColumnLayout";
 
 const RadarPosts: React.FC<{
   filteredArticles: any;
   category: string;
   postContainerRef: React.MutableRefObject<HTMLDivElement>;
 }> = ({ filteredArticles, category, postContainerRef }) => {
+  const [hasMore, setHasMore] = useState(true);
+  const [index, setIndex] = useState(9);
+  const [articlesInView, setArticlesInView] = useState([]);
   const [prevCategory, setPrevCategory] = useState<string>("all");
   const [sortedArticles, setSortedArticles] = useState(filteredArticles);
   const [sorted, setSorted] = useState(false);
@@ -32,7 +37,21 @@ const RadarPosts: React.FC<{
         postContainerRef.current.classList.remove("opacity-0");
       }, 700);
       setPrevCategory(category);
+      setArticlesInView(sortedArticles.slice(0, index));
     }
+  };
+
+  const fetchMoreData = () => {
+    let newIndex = index + 6;
+    if (newIndex >= sortedArticles.length) {
+      setHasMore(false);
+      setArticlesInView(sortedArticles.slice(0, sortedArticles.length));
+      return;
+    }
+    setTimeout(() => {
+      setArticlesInView(sortedArticles.slice(0, newIndex));
+      setIndex(newIndex);
+    }, 1000);
   };
 
   const handleResize = () => {
@@ -48,13 +67,6 @@ const RadarPosts: React.FC<{
     }
   };
 
-  // const fadeInPostContainer = () => {
-  //   postContainerRef.current.classList.add("opacity-0");
-  //   setTimeout(() => {
-  //     postContainerRef.current.classList.remove("opacity-0");
-  //   }, 500);
-  // };
-
   useEffect(() => {
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -69,28 +81,32 @@ const RadarPosts: React.FC<{
   }, [filteredArticles]);
 
   useEffect(() => {
+    setArticlesInView(sortedArticles.slice(0, index));
     handleCategoryChange();
   }, [category]);
 
-  // useEffect(() => {
-  //   fadeInPostContainer();
-  // }, []);
-
   return (
-    <div
-      ref={postContainerRef}
-      id="post-container"
-      hidden
-      className={`mt-6 grid grid-cols-1 gap-x-4 sm:grid-cols-2 lg:grid-cols-3 ${
-        sorted ? "transition-opacity duration-500" : ""
-      }`}
-    >
-      {sorted &&
-        {
-          3: <ThreeColumnLayout sortedArticles={sortedArticles} />,
-          2: <TwoColumnLayout sortedArticles={sortedArticles} />,
-          1: <TwoColumnLayout sortedArticles={sortedArticles} />,
-        }[columns]}
+    <div ref={postContainerRef} id="post-container">
+      <InfiniteScroll
+        dataLength={articlesInView.length}
+        next={fetchMoreData}
+        hasMore={hasMore}
+        loader={
+          <span className="col-span-1 block w-full text-center text-tertiary sm:col-span-2 lg:col-span-3">
+            Loading...
+          </span>
+        }
+        className={`mt-6 grid grid-cols-1 gap-x-4 sm:grid-cols-2 lg:grid-cols-3 ${
+          sorted ? "transition-opacity duration-500" : ""
+        }`}
+      >
+        {sorted &&
+          {
+            3: <ThreeColumnLayout articles={articlesInView} />,
+            2: <TwoColumnLayout articles={articlesInView} />,
+            1: <OneColumnLayout articles={articlesInView} />,
+          }[columns]}
+      </InfiniteScroll>
     </div>
   );
 };

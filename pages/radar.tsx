@@ -22,7 +22,7 @@ const BlogPage: React.FC<{ articles: any }> = ({ articles }) => {
             title="Blog"
             subheading="Read the latest news for Tracer"
           />
-          <div className="flex justify-between">
+          <div className="flex flex-col-reverse justify-between sm:flex-row">
             <PostFilters category={category} setCategory={setCategory} />
             <SearchBox
               articles={articles}

@@ -1,12 +1,12 @@
 import Button from "../Shared/Button";
-import GradientLine from "../Shared/GradientDivider";
+import GradientLine from "../Shared/GradientLine";
 
 const CallToAction: React.FC<{}> = ({}) => {
   return (
-    <div className="relative mt-24 mb-4 w-full rounded-lg bg-tracer-navy p-8">
+    <div className="relative mt-24 mb-4 w-full overflow-hidden rounded-lg bg-tracer-navy p-8">
       <img
         src="/img/radar/cta-bg.png"
-        className="absolute top-0 left-0 z-0 h-auto w-full object-cover object-top"
+        className="absolute top-0 left-0 z-0 h-full w-full object-cover object-right"
       />
       <div className="relative z-10 w-[328px]">
         <img

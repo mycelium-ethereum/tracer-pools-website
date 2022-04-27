@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
   const route = useRouter().pathname;
-
+  const path = useRouter().asPath;
   return (
     <>
       <Navbar route={route} />
@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
         exitBeforeEnter
         onExitComplete={() => window.scrollTo(0, 0)}
       >
-        <AnimateLayout key={route}>
+        <AnimateLayout path={path}>
           <Component {...pageProps} />
         </AnimateLayout>
       </AnimatePresence>
