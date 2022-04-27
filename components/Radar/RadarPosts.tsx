@@ -32,12 +32,12 @@ const RadarPosts: React.FC<{
         } else {
           setSortedArticles(filteredArticles);
         }
+        setArticlesInView(sortedArticles.slice(0, index));
       }, 500);
       setTimeout(() => {
         postContainerRef.current.classList.remove("opacity-0");
       }, 700);
       setPrevCategory(category);
-      setArticlesInView(sortedArticles.slice(0, index));
     }
   };
 
@@ -81,12 +81,15 @@ const RadarPosts: React.FC<{
   }, [filteredArticles]);
 
   useEffect(() => {
-    setArticlesInView(sortedArticles.slice(0, index));
     handleCategoryChange();
   }, [category]);
 
   return (
-    <div ref={postContainerRef} id="post-container">
+    <div
+      ref={postContainerRef}
+      id="post-container"
+      className={`${sorted ? "transition-opacity duration-500" : ""}`}
+    >
       <InfiniteScroll
         dataLength={articlesInView.length}
         next={fetchMoreData}
@@ -101,9 +104,7 @@ const RadarPosts: React.FC<{
             {`Showing ${sortedArticles.length} of ${sortedArticles.length} posts`}
           </span>
         }
-        className={`mt-6 grid grid-cols-1 gap-x-4 sm:grid-cols-2 lg:grid-cols-3 ${
-          sorted ? "transition-opacity duration-500" : ""
-        }`}
+        className={`mt-6 grid grid-cols-1 gap-x-4 sm:grid-cols-2 lg:grid-cols-3`}
       >
         {sorted &&
           {
