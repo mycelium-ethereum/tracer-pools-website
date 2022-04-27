@@ -18,7 +18,7 @@ const BrandFilters: React.FC<{
   };
 
   return (
-    <div className="relative z-10 mb-6 flex w-full items-center">
+    <div className="relative z-10 mb-10 flex w-full items-center">
       {categoryInfo.slice(1, 5).map((buttonCategory, i) => (
         <CategoryButton
           key={i}
