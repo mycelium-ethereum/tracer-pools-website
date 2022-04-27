@@ -10,8 +10,9 @@ const RadarPosts: React.FC<{
   category: string;
   postContainerRef: React.MutableRefObject<HTMLDivElement>;
 }> = ({ filteredArticles, category, postContainerRef }) => {
+  const INITIAL_POSTS = 9;
   const [hasMore, setHasMore] = useState(true);
-  const [index, setIndex] = useState(9);
+  const [index, setIndex] = useState(INITIAL_POSTS);
   const [articlesInView, setArticlesInView] = useState([]);
   const [prevCategory, setPrevCategory] = useState<string>("all");
   const [sortedArticles, setSortedArticles] = useState(filteredArticles);
@@ -19,6 +20,9 @@ const RadarPosts: React.FC<{
   const [columns, setColumns] = useState(3);
 
   const handleCategoryChange = () => {
+    // Reset index after each category change
+    setIndex(INITIAL_POSTS);
+    setHasMore(true);
     if (category !== prevCategory) {
       // Animate category change
       postContainerRef.current.classList.add("opacity-0");
@@ -38,6 +42,8 @@ const RadarPosts: React.FC<{
         postContainerRef.current.classList.remove("opacity-0");
       }, 700);
       setPrevCategory(category);
+    } else {
+      setArticlesInView(sortedArticles.slice(0, index));
     }
   };
 
@@ -79,6 +85,10 @@ const RadarPosts: React.FC<{
     setSortedArticles(filteredArticles.sort(sortByDate));
     setSorted(true);
   }, [filteredArticles]);
+
+  useEffect(() => {
+    setArticlesInView(sortedArticles.slice(0, index));
+  }, [index, sortedArticles]);
 
   useEffect(() => {
     handleCategoryChange();
