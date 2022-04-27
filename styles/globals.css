@@ -158,18 +158,18 @@ nav * {
 
 @keyframes slideDown {
   0% {
-    transform: translate(35vw, 10vh) rotate(315deg);
+    transform: translate(0, 0) rotate(315deg) scale(1.5);
     opacity: 0;
   }
-  2% {
+  5% {
     opacity: 1;
   }
-  98% {
+  95% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: translate(30vw, 20vh) rotate(315deg);
+    transform: translate(-15vh, 15vh) rotate(315deg) scale(1.5);
   }
 }
 
@@ -279,4 +279,42 @@ tbody tr:not([data-hidden="true"]):after {
 table:after {
   top: unset;
   bottom: 0;
+}
+
+@media only screen and (min-width: 2560px) {
+  @keyframes slideDown {
+    0% {
+      transform: translate(0, 0) rotate(315deg) scale(1.5);
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-10vh, 10vh) rotate(315deg) scale(1.5);
+    }
+  }
+}
+
+@media only screen and (min-width: 3840px) {
+  @keyframes slideDown {
+    0% {
+      transform: translate(0, 0) rotate(315deg) scale(1.5);
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-5vh, 5vh) rotate(315deg) scale(1.5);
+    }
+  }
 }

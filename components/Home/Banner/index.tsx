@@ -8,7 +8,7 @@ import BannerLottieAnim from "./BannerLottieAnim";
 const Banner: React.FC<{}> = () => {
   return (
     <Section id="section-1" className="bg-tracer-navy">
-      <Container className="flex h-screen items-center py-14 sm:py-16">
+      <Container className="relative flex h-screen items-center py-14 sm:py-16">
         <header>
           <AnimateIn delay={0.2}>
             <h1 className="mb-1 text-6xl font-thin text-white">
@@ -31,8 +31,8 @@ const Banner: React.FC<{}> = () => {
             </Button>
           </AnimateIn>
         </header>
+        <BannerLottieAnim />
       </Container>
-      <BannerLottieAnim />
       {/* <BackgroundVideo loop src="/img/home/banner.mp4" /> */}
     </Section>
   );
