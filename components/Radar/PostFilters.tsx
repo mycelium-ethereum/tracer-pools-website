@@ -5,9 +5,7 @@ const PostFilters: React.FC<{
   setCategory: React.Dispatch<React.SetStateAction<string>>;
 }> = ({ category, setCategory }) => {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    const buttonCategory = (e.target as HTMLButtonElement).getAttribute(
-      "data-category"
-    );
+    const buttonCategory = (e.target as HTMLButtonElement).dataset.category;
     setCategory(category === buttonCategory ? "all" : buttonCategory);
   };
 

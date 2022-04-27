@@ -29,6 +29,7 @@ module.exports = {
           cyan: "#00D9E9",
           primaryblue: "#0000B0",
         },
+        primary: "#192130",
         tertiary: "#7D8795",
         highlight: "#1C64F2",
         action: {

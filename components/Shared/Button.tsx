@@ -14,6 +14,7 @@ const Button: React.FC<{
   darkBlueGradient?: boolean;
   link?: string;
   outgoingLink?: string;
+  download?: boolean;
 }> = ({
   className,
   linkClassName,
@@ -27,10 +28,11 @@ const Button: React.FC<{
   clear,
   link,
   outgoingLink,
+  download,
 }) => {
   return (
     <button
-      className={`relative flex w-max whitespace-nowrap rounded-md border text-base leading-[24px] transition-all duration-500
+      className={`relative flex h-max w-max whitespace-nowrap rounded-md border text-base leading-[24px] transition-all duration-500
       ${
         blueTransparent
           ? "border-action-active text-action-active hover:bg-action-active hover:text-white "
@@ -62,7 +64,12 @@ const Button: React.FC<{
       onClick={action}
     >
       {outgoingLink && (
-        <a href={outgoingLink} target="_blank" rel="noopener noreferrer">
+        <a
+          href={outgoingLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          download={download}
+        >
           {children}
         </a>
       )}
