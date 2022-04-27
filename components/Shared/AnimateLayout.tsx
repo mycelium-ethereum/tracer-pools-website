@@ -6,7 +6,6 @@ const AnimateLayout: React.FC<{
 }> = ({ path, children }) => {
   return (
     <motion.main
-      key={path}
       initial={{
         opacity: 0,
       }}

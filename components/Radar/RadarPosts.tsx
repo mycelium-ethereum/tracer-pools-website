@@ -98,7 +98,7 @@ const RadarPosts: React.FC<{
         }
         endMessage={
           <span className="col-span-1 block w-full text-center text-tertiary sm:col-span-2 lg:col-span-3">
-            {`Showing all ${sortedArticles.length} posts`}
+            {`Showing ${sortedArticles.length} of ${sortedArticles.length} posts`}
           </span>
         }
         className={`mt-6 grid grid-cols-1 gap-x-4 sm:grid-cols-2 lg:grid-cols-3 ${

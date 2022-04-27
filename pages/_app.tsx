@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
         exitBeforeEnter
         onExitComplete={() => window.scrollTo(0, 0)}
       >
-        <AnimateLayout path={path}>
+        <AnimateLayout key={path} path={path}>
           <Component {...pageProps} />
         </AnimateLayout>
       </AnimatePresence>
