@@ -1,11 +1,10 @@
-import CategoryBubble from "@/components/Radar/CategoryBubble";
-import Moment from "react-moment";
-import { sortByDate } from "@/lib/helpers";
-import Button from "@/components/Shared/Button";
 import { useEffect, useState } from "react";
-import { isMobile } from "@/lib/helpers";
-import Link from "next/link";
+import Moment from "react-moment";
+import CategoryBubble from "@/components/Radar/CategoryBubble";
+import Button from "@/components/Shared/Button";
 import GradientLine from "@/components/Shared/GradientLine";
+import PageLink from "@/components/Shared/PageLink";
+import { isMobile, sortByDate } from "@/lib/helpers";
 
 const Sidebar: React.FC<{
   currentArticle: any;
@@ -90,13 +89,11 @@ const Sidebar: React.FC<{
           .slice(0, 2)
           .map((article, i) => (
             <>
-              <Link href={`/radar/${article.slug}`} passHref>
-                <a>
-                  <h4 className="my-2 font-bold leading-[24px] text-action-active">
-                    {article.title}
-                  </h4>
-                </a>
-              </Link>
+              <PageLink href={`/radar/${article.slug}`}>
+                <h4 className="my-2 font-bold leading-[24px] text-action-active">
+                  {article.title}
+                </h4>
+              </PageLink>
               {i === 0 && <GradientLine color="grey" />}
             </>
           ))}
