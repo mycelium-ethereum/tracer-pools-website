@@ -32,12 +32,12 @@ const LegalSidebarContent: React.FC<{ route: string }> = ({ route }) => {
     border?: boolean;
   }> = ({ text, link, border }): JSX.Element => (
     <>
-      {border && <GradientLine color="grey" />}
       <PageLink href={link}>
         <span className="my-2 block font-bold leading-[24px] text-action-active transition-colors duration-300 hover:text-tracer-lightblue">
           {text}
         </span>
       </PageLink>
+      {border && <GradientLine color="grey" />}
     </>
   );
 
