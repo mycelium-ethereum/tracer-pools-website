@@ -159,16 +159,8 @@ nav * {
 @keyframes slideDown {
   0% {
     transform: translate(0, 0) rotate(315deg) scale(1.5);
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  95% {
-    opacity: 1;
   }
   100% {
-    opacity: 0;
     transform: translate(-15vh, 15vh) rotate(315deg) scale(1.5);
   }
 }
