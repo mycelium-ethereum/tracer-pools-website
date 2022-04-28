@@ -11,6 +11,7 @@ import SidebarWrapper from "@/components/Shared/SidebarWrapper";
 import MeshUnderlay from "@/components/Shared/MeshUnderlay";
 import CallToAction from "@/components/Radar/CallToAction";
 import PostSidebarContent from "@/components/Radar/PostSidebarContent";
+import { useRouter } from "next/router";
 
 const Article = ({ data, articles }) => {
   const bodyTextRef = useRef<HTMLDivElement>(null);
@@ -64,7 +65,13 @@ const Article = ({ data, articles }) => {
     });
   };
 
+  const removeURLParameters = () => {
+    const url = document.location.href;
+    window.history.pushState({}, "", url.split("?")[0]);
+  };
+
   useEffect(() => {
+    removeURLParameters();
     setBodyText();
     getTags();
     // setCurrentURL(window.location.href);
@@ -129,7 +136,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     .then((res) => res.json())
     .catch((err) => console.error(err));
 
-  const paths = articles.map((article) => {
+  const paths = articles.map((article: any) => {
     return {
       params: { slug: String(article.slug) },
     };
@@ -141,7 +148,18 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
+const sleep = (ms = 100) => {
+  return new Promise((res) => setTimeout(res, ms));
+};
+
+export const avoidRateLimit = async () => {
+  if (process.env.NODE_ENV === "production") {
+    await sleep();
+  }
+};
+
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+  await avoidRateLimit();
   const articles = await fetch(
     "https://mycelium-content.uc.r.appspot.com/tracer-blogs"
   )

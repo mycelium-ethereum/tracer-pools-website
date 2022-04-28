@@ -50,15 +50,15 @@ const PostSidebarContent: React.FC<{
         <GradientLine color="grey" />
         {getRelatedArticles()
           .slice(0, 2)
-          .map((article, i) => (
-            <>
+          .map((article: any, i: number) => (
+            <span key={i}>
               <PageLink href={`/radar/${article.slug}`}>
-                <h4 className="my-2 font-bold leading-[24px] text-action-active">
+                <span className="my-2 font-bold leading-[24px] text-action-active">
                   {article.title}
-                </h4>
+                </span>
               </PageLink>
               {i === 0 && <GradientLine color="grey" />}
-            </>
+            </span>
           ))}
         <Button
           lightBlueGradient

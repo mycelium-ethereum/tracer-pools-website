@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const PageLink: React.FC<{
-  href: string;
+  href: string | {};
   className?: string;
   children: React.ReactNode | string;
 }> = ({ href, className, children }) => {

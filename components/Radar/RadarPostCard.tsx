@@ -16,7 +16,9 @@ const RadarPostCard: React.FC<{
   }, [postDescription.current]);
 
   return (
-    <PageLink href={`/radar/` + article.slug + "/"}>
+    <PageLink
+      href={{ pathname: `/radar/${article.slug}`, query: { id: article.id } }}
+    >
       <article className="mb-4 w-full overflow-hidden rounded-lg bg-white transition-all duration-300 [box-shadow:_0px_2px_4px_rgba(0,0,0,0.1)] hover:bg-action-cell hover:[box-shadow:_0px_2px_8px_rgba(26,85,245,0.2)]">
         <picture>
           <img
