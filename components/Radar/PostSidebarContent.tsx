@@ -30,7 +30,14 @@ const PostSidebarContent: React.FC<{
         />
       </picture>
       <div className="p-4">
-        <Moment format="Do MMMM, YYYY" className="text-[10px] text-highlight">
+        <span className="mb-2 block text-xs tracking-[0.15em] text-tertiary">
+          CURRENT ARTICLE
+        </span>
+        <GradientLine color="grey" />
+        <Moment
+          format="Do MMMM, YYYY"
+          className="mt-4 block text-[10px] text-highlight"
+        >
           {currentArticle.publish_date}
         </Moment>
         <h2 className="my-1 text-xl font-bold leading-[120%] text-action-active">
@@ -51,9 +58,9 @@ const PostSidebarContent: React.FC<{
         {getRelatedArticles()
           .slice(0, 2)
           .map((article: any, i: number) => (
-            <span key={i}>
+            <span key={i} className="my-2 block">
               <PageLink href={`/radar/${article.slug}`}>
-                <span className="my-2 font-bold leading-[24px] text-action-active">
+                <span className="font-bold leading-[24px] text-action-active">
                   {article.title}
                 </span>
               </PageLink>

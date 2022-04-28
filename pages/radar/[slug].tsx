@@ -153,9 +153,7 @@ const sleep = (ms = 100) => {
 };
 
 export const avoidRateLimit = async () => {
-  if (process.env.NODE_ENV === "production") {
-    await sleep();
-  }
+  process.env.NODE_ENV === "production" && (await sleep());
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {

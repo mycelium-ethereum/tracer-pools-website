@@ -8,10 +8,15 @@
 }
 ol {
   list-style: number;
+  line-height: 24px !important;
 }
 ul,
 menu {
   list-style: unset;
+  line-height: 24px !important;
+}
+p {
+  line-height: 24px !important;
 }
 
 ::-webkit-scrollbar {

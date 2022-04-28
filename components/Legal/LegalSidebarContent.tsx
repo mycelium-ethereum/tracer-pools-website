@@ -3,10 +3,14 @@ import PageLink from "@/components/Shared/PageLink";
 // import Button from "../Shared/Button";
 
 const LegalSidebarContent: React.FC<{ route: string }> = ({ route }) => {
+  const NUMBER_OF_DOCS = 3;
   const documentLinks = [
     { text: "Privacy Policy", link: "/privacy-policy" },
     { text: "Terms of Use", link: "/terms-of-use" },
-    { text: "Participation Agreement", link: "/participation-agreement" },
+    {
+      text: "Participation Agreement",
+      outgoingLink: "/documents/Participation_Agreement.pdf",
+    },
     { text: "Interfaces Disclaimer", link: "/interfaces-disclaimer" },
   ];
 
@@ -28,11 +32,15 @@ const LegalSidebarContent: React.FC<{ route: string }> = ({ route }) => {
 
   const DocumentLink: React.FC<{
     text: string;
-    link: string;
+    link?: string;
+    outgoingLink?: string;
     border?: boolean;
-  }> = ({ text, link, border }): JSX.Element => (
+  }> = ({ text, link, outgoingLink, border }): JSX.Element => (
     <>
-      <PageLink href={link}>
+      <PageLink
+        href={outgoingLink ? outgoingLink : link}
+        newTab={!!outgoingLink && outgoingLink.length > 0}
+      >
         <span className="my-2 block font-bold leading-[24px] text-action-active transition-colors duration-300 hover:text-tracer-lightblue">
           {text}
         </span>
@@ -59,8 +67,14 @@ const LegalSidebarContent: React.FC<{ route: string }> = ({ route }) => {
       <Heading title="CURRENT DOCUMENT" />
       {getCurrentPage()}
       <Heading title="OTHER DOCUMENTS" className="mt-6" />
-      {getOtherDocuments().map((link) => (
-        <DocumentLink text={link.text} link={link.link} border={true} />
+      {getOtherDocuments().map((link, i) => (
+        <DocumentLink
+          key={i}
+          text={link.text}
+          link={link.link}
+          outgoingLink={!!link.outgoingLink ? link.outgoingLink : undefined}
+          border={i !== NUMBER_OF_DOCS - 1}
+        />
       ))}
       {/* <Button lightBlueGradient link="" */}
     </div>
