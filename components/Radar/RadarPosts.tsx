@@ -75,6 +75,7 @@ const RadarPosts: React.FC<{
     }
     if (width >= 1024 && width < 1920) {
       setColumns(3);
+      setInitialPostCount(9);
     }
     if (width < 1024) {
       setColumns(2);
@@ -95,6 +96,7 @@ const RadarPosts: React.FC<{
 
   useEffect(() => {
     setIncrement(initialPostCount);
+    setIndex(initialPostCount);
   }, [columns]);
 
   useEffect(() => {
@@ -104,7 +106,7 @@ const RadarPosts: React.FC<{
 
   useEffect(() => {
     setArticlesInView(sortedArticles.slice(0, index));
-  }, [index, sortedArticles]);
+  }, [index, sortedArticles, columns]);
 
   useEffect(() => {
     handleCategoryChange();
