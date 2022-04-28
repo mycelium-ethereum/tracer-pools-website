@@ -1,5 +1,6 @@
 import AssetHeading from "@/components/Brand/Assets/AssetHeading";
-import BrandAssetTile from "../BrandAssetTile";
+import Button from "@/components/Shared/Button";
+import BrandAssetTile from "@/components/Brand/BrandAssetTile";
 
 const LogoAssets: React.FC<{
   heading: string;
@@ -8,16 +9,30 @@ const LogoAssets: React.FC<{
     description: string;
     svg: string;
     png: string;
-    black?: boolean;
+    grey?: boolean;
+    blue?: boolean;
+    noPadding?: boolean;
+    className?: string;
   }[];
 }> = ({ heading, subheading, logos }) => {
   return (
     <>
       <div className="mb-20">
-        <AssetHeading heading={heading} subheading={subheading} />
-        <div className="grid grid-cols-3 gap-4">
+        <div className="flex justify-between">
+          <AssetHeading heading={heading} subheading={subheading} />
+          <Button lightBlueGradient download link="/img/brand/Tracer Logos.zip">
+            Download All
+          </Button>
+        </div>
+        <div className="grid grid-cols-2 gap-4 xl:grid-cols-4">
           {logos.map((item, i) => (
-            <BrandAssetTile key={i} item={item} black={item.black} />
+            <BrandAssetTile
+              key={i}
+              item={item}
+              noPadding={item.noPadding}
+              grey={item.grey}
+              blue={item.blue}
+            />
           ))}
         </div>
       </div>

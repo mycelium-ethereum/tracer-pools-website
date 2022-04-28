@@ -32,6 +32,7 @@ module.exports = {
         primary: "#192130",
         tertiary: "#7D8795",
         highlight: "#1C64F2",
+        footnote: "#D6DFE6",
         action: {
           active: "#1C64F2",
           cell: "#F1F7FF",
@@ -61,7 +62,7 @@ module.exports = {
             maxWidth: "100%",
           },
           "@screen xl": {
-            maxWidth: "1240px",
+            maxWidth: "1340px",
           },
           "@screen 3xl": {
             maxWidth: "1600px",

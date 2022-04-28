@@ -9,7 +9,7 @@ const ColourHexButton: React.FC<{
     >
       <span className="pointer-events-none">{hex}</span>
       <img
-        src="/img/brand/copy.svg"
+        src="/img/brand/copy-icon.svg"
         className="pointer-events-none ml-1 mb-0.5"
       />
     </button>

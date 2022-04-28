@@ -14,7 +14,7 @@ const BrandGraphicTile: React.FC<{
         <picture>
           <img
             src={item.image}
-            className="h-full scale-105 transform object-cover object-right"
+            className="h-full w-full scale-105 transform object-cover object-right"
             alt={item.alt}
           />
         </picture>

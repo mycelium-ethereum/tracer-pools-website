@@ -15,12 +15,14 @@ const ColourAssets: React.FC<{
   return (
     <div className="mb-20">
       <AssetHeading heading={heading} subheading={subheading} />
-      <div className="flex flex-wrap justify-center xl:justify-between">
+      <div className="mb-4 grid grid-cols-3 gap-x-4">
         {colours.slice(0, FIRST_ROW_LIMIT).map((item, i) => (
           <BrandColourTile key={i} item={item} />
         ))}
+      </div>
+      <div className="grid grid-cols-4 gap-x-4">
         {colours.slice(FIRST_ROW_LIMIT, SECOND_ROW_LIMIT).map((item, i) => (
-          <BrandColourTile key={i} item={item} small />
+          <BrandColourTile key={i} item={item} />
         ))}
       </div>
     </div>

@@ -2,9 +2,13 @@
 const PrimaryWhite = "/img/brand/primary/primary-white.svg";
 const PrimaryBlue = "/img/brand/primary/primary-blue.svg";
 const PrimaryBlack = "/img/brand/primary/primary-black.svg";
+const PrimaryBlueBG = "/img/brand/primary/primary-blue-bg.svg";
 const PrimaryWhitePNG = "/img/brand/primary/primary-white.png";
 const PrimaryBluePNG = "/img/brand/primary/primary-blue.png";
 const PrimaryBlackPNG = "/img/brand/primary/primary-black.png";
+const PrimaryBlueBGPNG = "/img/brand/primary/primary-blue-bg.svg";
+// Primary class names
+// const primaryLogoClassname = "w-[250px] h-[59px]";
 
 // Stacked
 const PrimaryStackedWhite =
@@ -13,27 +17,34 @@ const PrimaryStackedBlue =
   "/img/brand/primary-stacked/primary-stacked-blue.svg";
 const PrimaryStackedBlack =
   "/img/brand/primary-stacked/primary-stacked-black.svg";
+const PrimaryStackedBlueBG =
+  "/img/brand/primary-stacked/primary-stacked-blue-bg.svg";
 const PrimaryStackedWhitePNG =
   "/img/brand/primary-stacked/primary-stacked-white.png";
 const PrimaryStackedBluePNG =
   "/img/brand/primary-stacked/primary-stacked-blue.png";
 const PrimaryStackedBlackPNG =
   "/img/brand/primary-stacked/primary-stacked-black.png";
-
+const PrimaryStackedBlueBGPNG =
+  "/img/brand/primary-stacked/primary-stacked-blue-bg.png";
 // Logomarks
 const LogomarkWhite = "/img/brand/logomark/logomark-white.svg";
 const LogomarkBlue = "/img/brand/logomark/logomark-blue.svg";
 const LogomarkBlack = "/img/brand/logomark/logomark-black.svg";
+const LogomarkBlueBG = "/img/brand/logomark/logomark-blue-bg.svg";
 const LogomarkWhitePNG = "/img/brand/logomark/logomark-white.png";
 const LogomarkBluePNG = "/img/brand/logomark/logomark-blue.png";
 const LogomarkBlackPNG = "/img/brand/logomark/logomark-black.png";
+const LogomarkBlueBGPNG = "/img/brand/logomark/logomark-blue-BG.png";
 // Tracer DAO logos
 const TracerDAOWhite = "/img/brand/tracer-dao/tracer-dao-white.svg";
 const TracerDAOBlue = "/img/brand/tracer-dao/tracer-dao-blue.svg";
 const TracerDAOBlack = "/img/brand/tracer-dao/tracer-dao-black.svg";
+const TracerDAOBlueBG = "/img/brand/tracer-dao/tracer-dao-blue-bg.svg";
 const TracerDAOWhitePNG = "/img/brand/tracer-dao/tracer-dao-white.png";
 const TracerDAOBluePNG = "/img/brand/tracer-dao/tracer-dao-blue.png";
 const TracerDAOBlackPNG = "/img/brand/tracer-dao/tracer-dao-black.png";
+const TracerDAOBlueBGPNG = "/img/brand/tracer-dao/tracer-dao-blue-bg.png";
 // Graphics
 const AscendingDiscs = "/img/brand/graphics/ascending-discs.png";
 const DivergingDiscs = "/img/brand/graphics/diverging-discs.png";
@@ -44,7 +55,6 @@ const AscendingDiscsPreview = "/img/brand/graphics/ascending-discs-preview.png";
 const DivergingDiscsPreview = "/img/brand/graphics/diverging-discs-preview.png";
 const GeometricMeshPreview = "/img/brand/graphics/geometric-mesh-preview.png";
 const V2TextPreview = "/img/brand/graphics/v2-text-preview.png";
-
 // 3D Elements
 const BTCTokenPreview = "/img/brand/elements3d/btc-token-preview.png";
 const LinkTokenPreview = "/img/brand/elements3d/link-token-preview.png";
@@ -52,69 +62,102 @@ const BTCTokenPNG = "/img/brand/elements3d/btc-token.png";
 const LinkTokenPNG = "/img/brand/elements3d/link-token.png";
 
 export const logos = [
+  // Primary
   {
-    description: "Blue",
+    description: "Primary Blue",
     svg: PrimaryBlue,
     png: PrimaryBluePNG,
   },
   {
-    description: "Black",
+    description: "Primary Black",
     svg: PrimaryBlack,
     png: PrimaryBlackPNG,
   },
   {
-    description: "White",
+    description: "Primary White",
     svg: PrimaryWhite,
     png: PrimaryWhitePNG,
-    black: true,
+    grey: true,
   },
   {
-    description: "Blue",
+    description: "Primary White on Blue BG",
+    svg: PrimaryBlueBG,
+    png: PrimaryBlueBGPNG,
+    blue: true,
+    className: "w-[250px] xl:min-w-[300px]",
+  },
+  // Stacked
+  {
+    description: "Stacked Blue",
     svg: PrimaryStackedBlue,
     png: PrimaryStackedBluePNG,
   },
   {
-    description: "Black",
+    description: "Stacked Black",
     svg: PrimaryStackedBlack,
     png: PrimaryStackedBlackPNG,
   },
   {
-    description: "White",
+    description: "Stacked White",
     svg: PrimaryStackedWhite,
     png: PrimaryStackedWhitePNG,
-    black: true,
+    grey: true,
   },
   {
-    description: "Blue",
-    svg: LogomarkBlue,
-    png: LogomarkBluePNG,
+    description: "Stacked White on Blue BG",
+    svg: PrimaryStackedBlueBG,
+    png: PrimaryStackedBlueBGPNG,
+    blue: true,
+    className: "min-h-[167px]",
   },
+  // DAO
   {
-    description: "Black",
-    svg: LogomarkBlack,
-    png: LogomarkBlackPNG,
-  },
-  {
-    description: "White",
-    svg: LogomarkWhite,
-    png: LogomarkWhitePNG,
-    black: true,
-  },
-  {
-    description: "Blue",
+    description: "DAO Blue",
     svg: TracerDAOBlue,
     png: TracerDAOBluePNG,
   },
   {
-    description: "Black",
+    description: "DAO Black",
     svg: TracerDAOBlack,
     png: TracerDAOBlackPNG,
   },
   {
-    description: "White",
+    description: "DAO White",
     svg: TracerDAOWhite,
     png: TracerDAOWhitePNG,
-    black: true,
+    grey: true,
+  },
+  {
+    description: "DAO White on Blue BG",
+    svg: TracerDAOBlueBG,
+    png: TracerDAOBlueBGPNG,
+    blue: true,
+    className: "w-[265px] 3xl:min-w-[315px] ",
+  },
+  // Logomarks
+  {
+    description: "Logomark Blue",
+    svg: LogomarkBlue,
+    png: LogomarkBluePNG,
+  },
+  {
+    description: "Logomark Black",
+    svg: LogomarkBlack,
+    png: LogomarkBlackPNG,
+  },
+  {
+    description: "Logomark White",
+    svg: LogomarkWhite,
+    png: LogomarkWhitePNG,
+    grey: true,
+  },
+  {
+    description: "Logomark White on Blue BG",
+    svg: LogomarkBlueBG,
+    png: LogomarkBlueBGPNG,
+    blue: true,
+    className: "h-[170px] 3xl:min-h-[160px]",
+    noPadding: true,
   },
 ];
 
@@ -224,7 +267,7 @@ export const headings = {
   typography: {
     heading: "TYPOGRAPHY",
     subheading: (
-      <p>For consistency please ensure correct typography is being used.</p>
+      <p>For consistency please ensure correct typography is being used</p>
     ),
   },
 };
@@ -239,7 +282,7 @@ export const categoryInfo = [
     text: "Logos",
   },
   {
-    name: "colors",
+    name: "colours",
     text: "Colors",
   },
   {

@@ -20,7 +20,7 @@ const Element3DAssets: React.FC<{
         <Button
           lightBlueGradient
           download
-          link="/img/brand/Tracer 3D Graphics.zip"
+          link="/img/brand/Tracer 3D Elements.zip"
         >
           Download All
         </Button>

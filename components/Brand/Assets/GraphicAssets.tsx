@@ -21,7 +21,7 @@ const GraphicAssets: React.FC<{
           download
           link="/img/brand/Tracer Support Graphics.zip"
         >
-          Download Support Graphic Set
+          Download All
         </Button>
       </div>
       <div className="grid grid-cols-2 gap-4">

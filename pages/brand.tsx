@@ -19,6 +19,42 @@ import Element3DAssets from "@/components/Brand/Assets/Element3DAssets";
 
 const BrandPage = () => {
   const [category, setCategory] = useState("all");
+  const brandComponents = {
+    logos: (
+      <LogoAssets
+        heading={headings.logos.heading}
+        subheading={headings.logos.subheading}
+        logos={logos}
+      />
+    ),
+    colours: (
+      <ColourAssets
+        heading={headings.colours.heading}
+        subheading={headings.colours.subheading}
+        colours={colours}
+      />
+    ),
+    graphics: (
+      <GraphicAssets
+        heading={headings.graphics.heading}
+        subheading={headings.graphics.subheading}
+        graphics={graphics}
+      />
+    ),
+    elements3D: (
+      <Element3DAssets
+        heading={headings.elements3D.heading}
+        subheading={headings.elements3D.subheading}
+        elements3D={elements3D}
+      />
+    ),
+    typography: (
+      <TypographyAssets
+        heading={headings.typography.heading}
+        subheading={headings.typography.subheading}
+      />
+    ),
+  };
 
   return (
     <>
@@ -34,74 +70,23 @@ const BrandPage = () => {
             subheading={"Download the Tracer brand elements for usage"}
           />
           <BrandFilters category={category} setCategory={setCategory} />
-          <div className="">
+          {
             {
-              {
-                logos: (
-                  <LogoAssets
-                    heading={headings.logos.heading}
-                    subheading={headings.logos.subheading}
-                    logos={logos}
-                  />
-                ),
-                colors: (
-                  <ColourAssets
-                    heading={headings.colours.heading}
-                    subheading={headings.colours.subheading}
-                    colours={colours}
-                  />
-                ),
-                graphics: (
-                  <GraphicAssets
-                    heading={headings.graphics.heading}
-                    subheading={headings.graphics.subheading}
-                    graphics={graphics}
-                  />
-                ),
-                elements3D: (
-                  <Element3DAssets
-                    heading={headings.elements3D.heading}
-                    subheading={headings.elements3D.subheading}
-                    elements3D={elements3D}
-                  />
-                ),
-                typography: (
-                  <TypographyAssets
-                    heading={headings.typography.heading}
-                    subheading={headings.typography.subheading}
-                  />
-                ),
-                all: (
-                  <>
-                    <LogoAssets
-                      heading={headings.logos.heading}
-                      subheading={headings.logos.subheading}
-                      logos={logos}
-                    />
-                    <ColourAssets
-                      heading={headings.colours.heading}
-                      subheading={headings.colours.subheading}
-                      colours={colours}
-                    />
-                    <GraphicAssets
-                      heading={headings.graphics.heading}
-                      subheading={headings.graphics.subheading}
-                      graphics={graphics}
-                    />
-                    <Element3DAssets
-                      heading={headings.elements3D.heading}
-                      subheading={headings.elements3D.subheading}
-                      elements3D={elements3D}
-                    />
-                    <TypographyAssets
-                      heading={headings.typography.heading}
-                      subheading={headings.typography.subheading}
-                    />
-                  </>
-                ),
-              }[category]
-            }
-          </div>
+              logos: brandComponents.logos,
+              colours: brandComponents.colours,
+              graphics: brandComponents.graphics,
+              elements3D: brandComponents.elements3D,
+              typography: brandComponents.typography,
+              all: (
+                <>
+                  {brandComponents.logos}
+                  {brandComponents.colours}
+                  {brandComponents.graphics}
+                  {brandComponents.typography}
+                </>
+              ),
+            }[category]
+          }
         </Container>
       </PageSection>
     </>

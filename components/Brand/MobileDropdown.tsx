@@ -41,7 +41,7 @@ const MobileDropdown: React.FC<{
       >
         <ul className="md:mt-2">
           {categoryInfo.map((category, i) => (
-            <li>
+            <li key={i}>
               <button
                 data-category={category.name}
                 onClick={handleClick}
