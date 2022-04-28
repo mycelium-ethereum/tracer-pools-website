@@ -19,7 +19,7 @@ const GradientLine: React.FC<{
       gradientColor = "line-gradient-blue";
   }
 
-  return <hr className={`h-[1px] w-full border-none ${gradientColor}`} />;
+  return <hr className={`h-[0.5px] w-full border-none ${gradientColor}`} />;
 };
 
 export default GradientLine;

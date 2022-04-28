@@ -7,9 +7,10 @@ import DOMPurify from "dompurify";
 import SEO from "@/components/Shared/SEO";
 import Container from "@/components/Shared/Container";
 import CategoryBubble from "@/components/Radar/CategoryBubble";
-import Sidebar from "@/components/Radar/Sidebar";
+import SidebarWrapper from "@/components/Shared/SidebarWrapper";
 import MeshUnderlay from "@/components/Shared/MeshUnderlay";
 import CallToAction from "@/components/Radar/CallToAction";
+import PostSidebarContent from "@/components/Radar/PostSidebarContent";
 
 const Article = ({ data, articles }) => {
   const bodyTextRef = useRef<HTMLDivElement>(null);
@@ -107,11 +108,9 @@ const Article = ({ data, articles }) => {
           </div>
           <CallToAction />
         </Container>
-        <Sidebar
-          currentArticle={data}
-          articles={articles}
-          bodyTextRef={bodyTextRef}
-        />
+        <SidebarWrapper bodyTextRef={bodyTextRef}>
+          <PostSidebarContent currentArticle={data} articles={articles} />
+        </SidebarWrapper>
         <MeshUnderlay />
       </section>
       <Script

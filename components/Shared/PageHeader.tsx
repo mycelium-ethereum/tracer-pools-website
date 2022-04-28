@@ -9,7 +9,7 @@ const PageHeader: React.FC<{ title: string; subheading: string }> = ({
       <h1 className="mb-1 text-[40px] font-bold leading-[48px] text-action-active">
         {title}
       </h1>
-      <small className="text-lg leading-[30px] text-tertiary">
+      <small className="text-lg font-light leading-[30px] text-tertiary">
         {subheading}
       </small>
       <MeshUnderlay />
