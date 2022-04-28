@@ -50,7 +50,25 @@ module.exports = {
     function ({ addComponents }) {
       addComponents({
         ".container": {
-          maxWidth: "1240px",
+          maxWidth: "100%",
+          "@screen sm": {
+            maxWidth: "100%",
+          },
+          "@screen md": {
+            maxWidth: "100%",
+          },
+          "@screen lg": {
+            maxWidth: "100%",
+          },
+          "@screen xl": {
+            maxWidth: "1240px",
+          },
+          "@screen 3xl": {
+            maxWidth: "1600px",
+          },
+          "@screen 4xl": {
+            maxWidth: "2370px",
+          },
         },
       });
     },

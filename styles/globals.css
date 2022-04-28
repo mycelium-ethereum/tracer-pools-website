@@ -220,6 +220,11 @@ nav * {
 }
 
 /* BLOG CONTENT PAGES */
+
+/* Show overflow for blog post drop shadow */
+.infinite-scroll-component {
+  overflow: visible !important;
+}
 .prose {
   max-width: 100%;
 }

@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { sortByDate } from "@/lib/helpers";
+import InfiniteScroll from "react-infinite-scroll-component";
+import FiveColumnLayout from "@/components/Radar/FiveColumnLayout";
+import FourColumnLayout from "@/components/Radar/FourColumnLayout";
 import ThreeColumnLayout from "@/components/Radar/ThreeColumnLayout";
 import TwoColumnLayout from "@/components/Radar/TwoColumnLayout";
-import InfiniteScroll from "react-infinite-scroll-component";
 import OneColumnLayout from "@/components/Radar/OneColumnLayout";
 
 const RadarPosts: React.FC<{
@@ -10,9 +12,10 @@ const RadarPosts: React.FC<{
   category: string;
   postContainerRef: React.MutableRefObject<HTMLDivElement>;
 }> = ({ filteredArticles, category, postContainerRef }) => {
-  const INITIAL_POSTS = 9;
+  const [initialPostCount, setInitialPostCount] = useState(9);
+  const [increment, setIncrement] = useState(initialPostCount);
   const [hasMore, setHasMore] = useState(true);
-  const [index, setIndex] = useState(INITIAL_POSTS);
+  const [index, setIndex] = useState(initialPostCount);
   const [articlesInView, setArticlesInView] = useState([]);
   const [prevCategory, setPrevCategory] = useState<string>("all");
   const [sortedArticles, setSortedArticles] = useState(filteredArticles);
@@ -21,7 +24,7 @@ const RadarPosts: React.FC<{
 
   const handleCategoryChange = () => {
     // Reset index after each category change
-    setIndex(INITIAL_POSTS);
+    setIndex(initialPostCount);
     setHasMore(true);
     if (category !== prevCategory) {
       // Animate category change
@@ -48,7 +51,7 @@ const RadarPosts: React.FC<{
   };
 
   const fetchMoreData = () => {
-    let newIndex = index + 6;
+    let newIndex = index + increment;
     if (newIndex >= sortedArticles.length) {
       setHasMore(false);
       setArticlesInView(sortedArticles.slice(0, sortedArticles.length));
@@ -62,11 +65,20 @@ const RadarPosts: React.FC<{
 
   const handleResize = () => {
     const width = window.innerWidth;
-    if (width >= 1024) {
+    if (width >= 2560) {
+      setColumns(5);
+      setInitialPostCount(10);
+    }
+    if (width >= 1920 && width < 2560) {
+      setColumns(4);
+      setInitialPostCount(8);
+    }
+    if (width >= 1024 && width < 1920) {
       setColumns(3);
     }
     if (width < 1024) {
       setColumns(2);
+      setIncrement(6);
     }
     if (width < 640) {
       setColumns(1);
@@ -79,7 +91,11 @@ const RadarPosts: React.FC<{
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [handleResize]);
+  }, []);
+
+  useEffect(() => {
+    setIncrement(initialPostCount);
+  }, [columns]);
 
   useEffect(() => {
     setSortedArticles(filteredArticles.sort(sortByDate));
@@ -105,19 +121,21 @@ const RadarPosts: React.FC<{
         next={fetchMoreData}
         hasMore={hasMore}
         loader={
-          <span className="col-span-1 block w-full text-center text-tertiary sm:col-span-2 lg:col-span-3">
+          <span className="col-span-1 mt-4 block w-full text-center text-tertiary sm:col-span-2 lg:col-span-3 3xl:col-span-4 4xl:col-span-5">
             {`Showing ${index} of ${sortedArticles.length} posts`}
           </span>
         }
         endMessage={
-          <span className="col-span-1 block w-full text-center text-tertiary sm:col-span-2 lg:col-span-3">
+          <span className="col-span-1 mt-4 block w-full text-center text-tertiary sm:col-span-2 lg:col-span-3 3xl:col-span-4 4xl:col-span-5">
             {`Showing ${sortedArticles.length} of ${sortedArticles.length} posts`}
           </span>
         }
-        className={`mt-6 grid grid-cols-1 gap-x-4 sm:grid-cols-2 lg:grid-cols-3`}
+        className={`mt-6 grid grid-cols-1 gap-x-4 sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 4xl:grid-cols-5`}
       >
         {sorted &&
           {
+            5: <FiveColumnLayout articles={articlesInView} />,
+            4: <FourColumnLayout articles={articlesInView} />,
             3: <ThreeColumnLayout articles={articlesInView} />,
             2: <TwoColumnLayout articles={articlesInView} />,
             1: <OneColumnLayout articles={articlesInView} />,

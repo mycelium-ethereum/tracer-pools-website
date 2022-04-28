@@ -1,7 +1,6 @@
 import Section from "@/components/Shared/Section";
 import Container from "@/components/Shared/Container";
 import Button from "@/components/Shared/Button";
-import BackgroundVideo from "@/components/Home/BackgroundVideo";
 import AnimateIn from "@/components/Shared/AnimateIn";
 import BannerLottieAnim from "./BannerLottieAnim";
 import MeshUnderlay from "@/components/Shared/MeshUnderlay";
