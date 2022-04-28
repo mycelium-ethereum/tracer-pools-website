@@ -11,7 +11,6 @@ import SidebarWrapper from "@/components/Shared/SidebarWrapper";
 import MeshUnderlay from "@/components/Shared/MeshUnderlay";
 import CallToAction from "@/components/Radar/CallToAction";
 import PostSidebarContent from "@/components/Radar/PostSidebarContent";
-import { useRouter } from "next/router";
 
 const Article = ({ data, articles }) => {
   const bodyTextRef = useRef<HTMLDivElement>(null);
@@ -35,7 +34,7 @@ const Article = ({ data, articles }) => {
     if (e.tagName === "IMG") {
       e.setAttribute(
         "class",
-        "mx-auto rounded-lg transition-all duration-300 cursor-pointer bg-white mb-4"
+        "mx-auto rounded-lg transition-all duration-300 cursor-pointer bg-white mb-4 relative z-10"
       );
       e.onclick = function () {
         this.classList.toggle("enlarge");
@@ -65,13 +64,7 @@ const Article = ({ data, articles }) => {
     });
   };
 
-  const removeURLParameters = () => {
-    const url = document.location.href;
-    window.history.pushState({}, "", url.split("?")[0]);
-  };
-
   useEffect(() => {
-    removeURLParameters();
     setBodyText();
     getTags();
     // setCurrentURL(window.location.href);

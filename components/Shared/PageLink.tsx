@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const PageLink: React.FC<{
-  href: string | {};
+  href: string;
   newTab?: boolean;
   className?: string;
   children: React.ReactNode | string;

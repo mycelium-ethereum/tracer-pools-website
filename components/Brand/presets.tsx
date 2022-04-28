@@ -47,12 +47,18 @@ const TracerDAOBlackPNG = "/img/brand/tracer-dao/tracer-dao-black.png";
 const TracerDAOBlueBGPNG = "/img/brand/tracer-dao/tracer-dao-blue-bg.png";
 // Graphics
 const AscendingDiscs = "/img/brand/graphics/ascending-discs.png";
-const DivergingDiscs = "/img/brand/graphics/diverging-discs.png";
+const GeometricShapes = "/img/brand/graphics/geometric-shapes.png";
 const GeometricMesh = "/img/brand/graphics/geometric-mesh.png";
 const V2Text = "/img/brand/graphics/v2-text.png";
+const AscendingDiscsSVG = "/img/brand/graphics/ascending-discs.svg";
+const GeometricShapesSVG = "/img/brand/graphics/geometric-shapes.svg";
+const GeometricMeshSVG = "/img/brand/graphics/geometric-mesh.svg";
+const V2TextSVG = "/img/brand/graphics/v2-text.svg";
+
 // Preview images (smaller filesize)
 const AscendingDiscsPreview = "/img/brand/graphics/ascending-discs-preview.png";
-const DivergingDiscsPreview = "/img/brand/graphics/diverging-discs-preview.png";
+const GeometricShapesPreview =
+  "/img/brand/graphics/geometric-shapes-preview.png";
 const GeometricMeshPreview = "/img/brand/graphics/geometric-mesh-preview.png";
 const V2TextPreview = "/img/brand/graphics/v2-text-preview.png";
 // 3D Elements
@@ -196,25 +202,29 @@ export const graphics = [
   {
     description: "Ascending Discs",
     image: AscendingDiscsPreview,
-    download: AscendingDiscs,
+    png: AscendingDiscs,
+    svg: AscendingDiscsSVG,
     alt: "Ascending Discs",
   },
   {
     description: "Diverging Discs",
-    image: DivergingDiscsPreview,
-    download: DivergingDiscs,
+    image: GeometricShapesPreview,
+    png: GeometricShapesSVG,
+    svg: GeometricShapesPreview,
     alt: "Diverging Discs",
   },
   {
     description: "Geometric Mesh",
     image: GeometricMeshPreview,
-    download: GeometricMesh,
+    png: GeometricMesh,
+    svg: GeometricMeshSVG,
     alt: "Geometric Mesh",
   },
   {
     description: "V2 Text",
     image: V2TextPreview,
-    download: V2Text,
+    png: V2Text,
+    svg: V2TextSVG,
     alt: "V2 Text",
   },
 ];

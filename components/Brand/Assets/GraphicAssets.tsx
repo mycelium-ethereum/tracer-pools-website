@@ -8,7 +8,8 @@ const GraphicAssets: React.FC<{
   graphics: {
     description: string;
     image: string;
-    download: string;
+    png: string;
+    svg: string;
     alt: string;
   }[];
 }> = ({ heading, subheading, graphics }) => {

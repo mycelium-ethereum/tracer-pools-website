@@ -4,7 +4,8 @@ const BrandGraphicTile: React.FC<{
   item: {
     description: string;
     image: string;
-    download: string;
+    png: string;
+    svg: string;
     alt: string;
   };
 }> = ({ item }) => {
@@ -21,7 +22,10 @@ const BrandGraphicTile: React.FC<{
       </div>
       <div className="flex w-full items-center justify-between text-sm">
         <span className="text-tertiary">{item.description}</span>
-        <Download url={item.download}>PNG</Download>
+        <div className="flex">
+          <Download url={item.svg}>SVG</Download>
+          <Download url={item.png}>PNG</Download>
+        </div>
       </div>
     </div>
   );
