@@ -141,7 +141,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-const sleep = (ms = 100) => {
+const sleep = (ms = 500) => {
   return new Promise((res) => setTimeout(res, ms));
 };
 
