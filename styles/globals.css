@@ -362,12 +362,14 @@ table:after {
       transform: translate(-10vh, 10vh) rotate(315deg) scale(1.5);
     }
   }
+  .slick-slide,
   .slick-slider {
-    width: 765px !important;
+    width: 800px !important;
   }
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 640px) and (max-width: 2560px) {
+  .slick-slide,
   .slick-slider {
     width: 465px !important;
   }
