@@ -14,7 +14,7 @@ const TokenSpread: React.FC<{}> = () => {
         src="/img/shared/btc-token.png"
         alt="BTC token"
         absolute
-        className="topToBottomAnim absolute -left-2 top-[830px] max-h-[262px] max-w-[273px] rotate-[12.06deg]"
+        className="bottomToTopAnim absolute -left-2 top-[830px] max-h-[262px] max-w-[273px] rotate-[12.06deg]"
       />
       <OptimisedImage
         src="/img/shared/btc-token.png"
@@ -26,7 +26,7 @@ const TokenSpread: React.FC<{}> = () => {
         src="/img/shared/link-token.png"
         alt="Link token"
         absolute
-        className="topToBottomAnim absolute left-[650px] top-[650px] max-h-[480px] max-w-[470px] [transform:matrix(-0.98,-0.22,-0.22,0.98,0,0)]"
+        className="bottomToTopAnim absolute left-[650px] top-[650px] max-h-[480px] max-w-[470px] [transform:matrix(-0.98,-0.22,-0.22,0.98,0,0)]"
       />
       <OptimisedImage
         src="/img/shared/btc-token.png"
@@ -38,7 +38,7 @@ const TokenSpread: React.FC<{}> = () => {
         src="/img/shared/link-token.png"
         alt="BTC token"
         absolute
-        className="topToBottomAnim absolute left-[1250px] top-[950px] max-h-[227px] max-w-[248px] [transform:matrix(-0.98,-0.22,-0.22,0.98,0,0)]"
+        className="bottomToTopAnim absolute left-[1250px] top-[950px] max-h-[227px] max-w-[248px] [transform:matrix(-0.98,-0.22,-0.22,0.98,0,0)]"
       />
     </div>
   );
