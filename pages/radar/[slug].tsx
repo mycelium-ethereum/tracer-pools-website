@@ -1,16 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
-import Moment from "react-moment";
 import Script from "next/script";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { marked } from "marked";
 import DOMPurify from "dompurify";
 import SEO from "@/components/Shared/SEO";
 import Container from "@/components/Shared/Container";
-import CategoryBubble from "@/components/Radar/CategoryBubble";
 import SidebarWrapper from "@/components/Shared/SidebarWrapper";
 import MeshUnderlay from "@/components/Shared/MeshUnderlay";
-import CallToAction from "@/components/Radar/CallToAction";
-import PostSidebarContent from "@/components/Radar/PostSidebarContent";
+import CallToAction from "@/components/Radar/Post/CallToAction";
+import PostSidebarContent from "@/components/Radar/Post/PostSidebarContent";
+import PostHeader from "@/components/Radar/Post/PostHeader";
 
 const Article = ({ data, articles }) => {
   const bodyTextRef = useRef<HTMLDivElement>(null);
@@ -67,8 +66,6 @@ const Article = ({ data, articles }) => {
   useEffect(() => {
     setBodyText();
     getTags();
-    // setCurrentURL(window.location.href);
-    // setCurrentPath(window.location.pathname);
   }, [data]);
 
   return (
@@ -82,28 +79,7 @@ const Article = ({ data, articles }) => {
       <section className="pt-[140px] pb-1.5">
         <Container className="leading-[24px] text-tertiary">
           <div className="max-w-[840px]">
-            <header>
-              <h1 className="text-[40px] font-bold leading-[48px] text-highlight">
-                {data.title}
-              </h1>
-              <small className="mt-2 block text-xl font-light leading-[30px]">
-                {data.tagline}
-              </small>
-              <div className="flex pt-[66px]">
-                <Moment format="Do MMMM, YYYY" className="mr-2 text-highlight">
-                  {data.publish_date}
-                </Moment>
-                <span>
-                  Read time: {data.read_time}&nbsp;
-                  {data.read_time === 1 ? "minute" : "minutes"}
-                </span>
-              </div>
-              {data.category && (
-                <div className="my-2.5">
-                  <CategoryBubble category={data.category} large />
-                </div>
-              )}
-            </header>
+            <PostHeader data={data} />
             <div className="prose mt-9" ref={bodyTextRef} />
           </div>
           <CallToAction />

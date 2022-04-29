@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { sortByDate } from "@/lib/helpers";
 import InfiniteScroll from "react-infinite-scroll-component";
-import FiveColumnLayout from "@/components/Radar/FiveColumnLayout";
-import FourColumnLayout from "@/components/Radar/FourColumnLayout";
-import ThreeColumnLayout from "@/components/Radar/ThreeColumnLayout";
-import TwoColumnLayout from "@/components/Radar/TwoColumnLayout";
-import OneColumnLayout from "@/components/Radar/OneColumnLayout";
+import FiveColumnLayout from "@/components/Radar/Layouts/FiveColumnLayout";
+import FourColumnLayout from "@/components/Radar/Layouts/FourColumnLayout";
+import ThreeColumnLayout from "@/components/Radar/Layouts/ThreeColumnLayout";
+import TwoColumnLayout from "@/components/Radar/Layouts/TwoColumnLayout";
+import OneColumnLayout from "@/components/Radar/Layouts/OneColumnLayout";
 
 const RadarPosts: React.FC<{
   filteredArticles: any;

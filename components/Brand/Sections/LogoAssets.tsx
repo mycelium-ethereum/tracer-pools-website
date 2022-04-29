@@ -1,6 +1,6 @@
-import AssetHeading from "@/components/Brand/Assets/AssetHeading";
+import AssetHeading from "@/components/Brand/Sections/AssetHeading";
 import Button from "@/components/Shared/Button";
-import BrandAssetTile from "@/components/Brand/BrandAssetTile";
+import BrandAssetTile from "@/components/Brand/Tiles/LogoTile";
 
 const LogoAssets: React.FC<{
   heading: string;

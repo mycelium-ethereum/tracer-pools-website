@@ -1,5 +1,5 @@
-import Button from "../Shared/Button";
-import GradientLine from "../Shared/GradientLine";
+import Button from "../../Shared/Button";
+import GradientLine from "../../Shared/GradientLine";
 
 const CallToAction: React.FC<{}> = ({}) => {
   return (

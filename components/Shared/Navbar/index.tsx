@@ -81,6 +81,8 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
           navTextColour = whiteStyles;
           break;
       }
+    } else if (route === "/pools") {
+      navTextColour = whiteStyles;
     } else {
       navTextColour = solidStyles;
     }

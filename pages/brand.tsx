@@ -11,11 +11,11 @@ import SEO from "@/components/Shared/SEO";
 import PageHeader from "@/components/Shared/PageHeader";
 import Container from "@/components/Shared/Container";
 import PageSection from "@/components/Shared/Section";
-import LogoAssets from "@/components/Brand/Assets/LogoAssets";
-import ColourAssets from "@/components/Brand/Assets/ColourAssets";
-import TypographyAssets from "@/components/Brand/Assets/TypographyAssets";
-import GraphicAssets from "@/components/Brand/Assets/GraphicAssets";
-import Element3DAssets from "@/components/Brand/Assets/Element3DAssets";
+import LogoAssets from "@/components/Brand/Sections/LogoAssets";
+import ColourAssets from "@/components/Brand/Sections/ColourAssets";
+import TypographyAssets from "@/components/Brand/Sections/TypographyAssets";
+import GraphicAssets from "@/components/Brand/Sections/GraphicAssets";
+import Element3DAssets from "@/components/Brand/Sections/Element3DAssets";
 
 const BrandPage = () => {
   const [category, setCategory] = useState("all");

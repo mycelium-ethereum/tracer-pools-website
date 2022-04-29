@@ -23,6 +23,8 @@
     "react-infinite-scroll-component": "^6.1.0",
     "react-intersection-observer": "^8.34.0",
     "react-moment": "^1.1.2",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "url-loader": "^4.1.1",
     "webpack": "^5.24.2"
   },

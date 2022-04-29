@@ -1,4 +1,4 @@
-import ColourHexButton from "./ColourHexButton";
+import ColourHexButton from "../ColourHexButton";
 
 const BrandColourTile: React.FC<{ item: any }> = ({ item }) => {
   const copyToClipboard = (e, hex) => {

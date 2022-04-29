@@ -1,6 +1,6 @@
-import AssetHeading from "@/components/Brand/Assets/AssetHeading";
+import AssetHeading from "@/components/Brand/Sections/AssetHeading";
 import Button from "@/components/Shared/Button";
-import BrandGraphicTile from "@/components/Brand/BrandGraphicTile";
+import BrandGraphicTile from "@/components/Brand/Tiles/GraphicTile";
 
 const GraphicAssets: React.FC<{
   heading: string;

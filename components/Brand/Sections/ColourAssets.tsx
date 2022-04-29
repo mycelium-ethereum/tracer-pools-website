@@ -1,5 +1,5 @@
-import AssetHeading from "@/components/Brand/Assets/AssetHeading";
-import BrandColourTile from "../BrandColourTile";
+import AssetHeading from "@/components/Brand/Sections/AssetHeading";
+import BrandColourTile from "../Tiles/ColourTile";
 
 const ColourAssets: React.FC<{
   heading: string;
