@@ -14,7 +14,7 @@ const VerticalCarousel: React.FC<{}> = () => {
   //   Double items in array to allow slider to animate
   exposureItems.push(...exposureItems);
   const settings = {
-    dots: true,
+    dots: false,
     arrows: false,
     infinite: true,
     vertical: true,
