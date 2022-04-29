@@ -172,11 +172,11 @@ nav * {
 
 /* TOKEN ANIMATIONS */
 .topToBottomAnim {
-  animation: topToBottom 2s ease infinite;
+  animation: topToBottom 4s ease infinite;
 }
 
 .bottomToTopAnim {
-  animation: bottomToTop 2s ease infinite;
+  animation: bottomToTop 4s ease infinite;
 }
 
 @keyframes topToBottom {
@@ -283,23 +283,27 @@ table:after {
   bottom: 0;
 }
 
-@media only screen and (min-width: 2560px) {
-  @keyframes slideDown {
-    0% {
-      transform: translate(0, 0) rotate(315deg) scale(1.5);
-      opacity: 0;
-    }
-    5% {
-      opacity: 1;
-    }
-    95% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      transform: translate(-10vh, 10vh) rotate(315deg) scale(1.5);
-    }
-  }
+/* POOLS PAGE */
+
+/* Slick Slider overrides */
+.slick-current + .slick-active + .slick-active div span {
+  @apply text-action-active;
+}
+/* Apply lighter text colour to first, fifth and sixth slides */
+.slick-current div span,
+.slick-current
+  + .slick-active
+  + .slick-active
+  + .slick-active
+  + .slick-active
+  div
+  span,
+.slick-slide:not(.slick-active) div span {
+  @apply text-secondary;
+}
+
+.slick-cloned {
+  transform: translate3d(0, 0, 0) !important;
 }
 
 @media only screen and (min-width: 3840px) {
@@ -318,5 +322,33 @@ table:after {
       opacity: 0;
       transform: translate(-5vh, 5vh) rotate(315deg) scale(1.5);
     }
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  @keyframes slideDown {
+    0% {
+      transform: translate(0, 0) rotate(315deg) scale(1.5);
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-10vh, 10vh) rotate(315deg) scale(1.5);
+    }
+  }
+  .slick-slider {
+    width: 765px !important;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .slick-slider {
+    width: 465px !important;
   }
 }

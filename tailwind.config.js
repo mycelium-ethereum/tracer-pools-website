@@ -31,12 +31,16 @@ module.exports = {
           primaryblue: "#0000B0",
         },
         primary: "#192130",
+        secondary: "#F9FAFA",
         tertiary: "#7D8795",
         highlight: "#1C64F2",
         footnote: "#D6DFE6",
         action: {
           active: "#1C64F2",
           cell: "#F1F7FF",
+        },
+        cell: {
+          tertiary: "#E7ECF0",
         },
       },
       fontFamily: {
