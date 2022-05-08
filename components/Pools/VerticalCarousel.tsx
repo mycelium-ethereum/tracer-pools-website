@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 const VerticalCarousel: React.FC<{}> = () => {
   const exposureItems = [
     "Commodities",
@@ -14,6 +15,7 @@ const VerticalCarousel: React.FC<{}> = () => {
   //   Double items in array to allow slider to animate
   exposureItems.push(...exposureItems);
   const settings = {
+    accessibility: false,
     dots: false,
     arrows: false,
     infinite: true,
@@ -29,7 +31,7 @@ const VerticalCarousel: React.FC<{}> = () => {
     useTransform: false,
   };
 
-  const slide = (item: string) => (
+  const Slide: React.FC<{ item: string }> = ({ item }) => (
     <span className="whitespace-nowrap text-[40px] font-bold leading-[48px] text-cell-tertiary transition-colors duration-500 4xl:text-[64px] 4xl:leading-[72px]">
       {item}
     </span>
@@ -38,7 +40,9 @@ const VerticalCarousel: React.FC<{}> = () => {
   return (
     <div className="ml-10">
       <Slider {...settings}>
-        {exposureItems.map((item: string) => slide(item))}
+        {exposureItems.map((item: string, i: number) => (
+          <Slide item={item} key={i} />
+        ))}
       </Slider>
     </div>
   );

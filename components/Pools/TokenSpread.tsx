@@ -1,11 +1,23 @@
 import OptimisedImage from "@/components/Shared/OptimisedImage";
 import TokenFadeIn from "@/components/Pools/TokenFadeIn";
+import { useLottie } from "lottie-react";
+import integration from "../../public/img/pools/integration.json";
 
 const TokenSpread: React.FC<{}> = () => {
+  const options = {
+    animationData: integration,
+    loop: true,
+    autoplay: true,
+  };
+  const { View } = useLottie(options);
+
   return (
     <div className="absolute top-0 left-1/2 z-10 h-[1024px] w-[1440px] -translate-x-1/2 transform">
       {/* Left to right order */}
-      <div className="topToBottomAnim absolute -left-[275px] top-[260px] h-[520px] w-[504px]">
+      <div className="absolute top-3/4 left-1/2 z-10 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2">
+        {View}
+      </div>
+      {/* <div className="topToBottomAnim absolute -left-[275px] top-[260px] h-[520px] w-[504px]">
         <TokenFadeIn delay={600}>
           <OptimisedImage
             src="/img/shared/link-token-back.png"
@@ -112,7 +124,7 @@ const TokenSpread: React.FC<{}> = () => {
             className="top-5 -left-2.5 z-10 [transform:matrix(-0.98,-0.22,-0.22,0.98,0,0)]"
           />
         </TokenFadeIn>
-      </div>
+      </div> */}
     </div>
   );
 };

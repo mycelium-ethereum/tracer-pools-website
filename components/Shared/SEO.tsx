@@ -57,11 +57,10 @@ const SEO: React.FC<{
       <meta name="twitter:image" content={imagePreview} />
 
       {/* Android Chrome tab theme colour */}
-      <meta name="theme-color" content="#00000" />
+      <meta name="theme-color" content="#0000B0" />
 
       {/* Favicon */}
       <link rel="icon" href="/favicon.svg" />
-      {/* <link rel="preconnect" href="https://use.typekit.net" /> */}
       <link rel="stylesheet" href="https://use.typekit.net/klm0viv.css" />
 
       <title>{metaTitle}</title>
