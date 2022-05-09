@@ -2,75 +2,21 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState } from "react";
+import {
+  exposureItems,
+  sliderNavSettings,
+  sliderMainSettings,
+} from "@/components/Pools/MechanismDesign/presets";
 
 const MechanismSlider: React.FC<{}> = () => {
   const [slider1, setSlider1] = useState(null);
   const [slider2, setSlider2] = useState(null);
 
-  const exposureItems = [
-    {
-      image: "/img/pools/mechanism-design-placeholder.png",
-      text: "When there is more collateral in one side of the pool, traders taking the less popular position benefit from a greater effective leverage on gains than they experience on losses.",
-    },
-    {
-      image: "/img/pools/mechanism-design-placeholder-2.png",
-      text: "When there is more collateral in one side of the pool, traders taking the less popular position benefit from a greater effective leverage on gains than they experience on losses.",
-    },
-    {
-      image: "/img/pools/mechanism-design-placeholder.png",
-      text: "When there is more collateral in one side of the pool, traders taking the less popular position benefit from a greater effective leverage on gains than they experience on losses.",
-    },
-    {
-      image: "/img/pools/mechanism-design-placeholder-2.png",
-      text: "When there is more collateral in one side of the pool, traders taking the less popular position benefit from a greater effective leverage on gains than they experience on losses.",
-    },
-    {
-      image: "/img/pools/mechanism-design-placeholder.png",
-      text: "When there is more collateral in one side of the pool, traders taking the less popular position benefit from a greater effective leverage on gains than they experience on losses.",
-    },
-    {
-      image: "/img/pools/mechanism-design-placeholder-2.png",
-      text: "When there is more collateral in one side of the pool, traders taking the less popular position benefit from a greater effective leverage on gains than they experience on losses.",
-    },
-    {
-      image: "/img/pools/mechanism-design-placeholder.png",
-      text: "When there is more collateral in one side of the pool, traders taking the less popular position benefit from a greater effective leverage on gains than they experience on losses.",
-    },
-  ];
   const TOTAL_SLIDES = exposureItems.length;
 
-  const sliderNavSettings = {
-    accessibility: false,
-    dots: false,
-    arrows: false,
-    vertical: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    speed: 500,
-    draggable: false,
-    swipe: false,
-    touchMove: false,
-    slidesToShow: 7,
-    focusOnSelect: true,
-    pauseOnFocus: true,
-  };
-
-  const sliderMainSettings = {
-    accessibility: false,
-    dots: false,
-    arrows: false,
-    vertical: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    speed: 500,
-    draggable: false,
-    swipe: false,
-    touchMove: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: true,
-    variableWidth: true,
-    pauseOnFocus: true,
+  const pauseSlider = () => {
+    slider1.slickPause();
+    slider2.slickPause();
   };
 
   const Slide: React.FC<{ item: { image: string; text: string } }> = ({
@@ -90,7 +36,10 @@ const MechanismSlider: React.FC<{}> = () => {
   );
 
   const SlideNavLink: React.FC<{ num: number }> = ({ num }) => (
-    <button className="relative my-[15px] text-2xl font-light leading-[30px] text-action-inactive transition-colors duration-300 3xl:my-[22px] 3xl:text-[40px] 3xl:leading-[44px]">
+    <button
+      className="relative my-[15px] text-2xl font-light leading-[30px] text-action-inactive transition-colors duration-300 3xl:my-[22px] 3xl:text-[40px] 3xl:leading-[44px]"
+      onClick={() => pauseSlider()}
+    >
       {num}
     </button>
   );
