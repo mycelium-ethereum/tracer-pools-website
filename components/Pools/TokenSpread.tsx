@@ -12,12 +12,50 @@ const TokenSpread: React.FC<{}> = () => {
   // const { View } = useLottie(options);
 
   return (
-    <div className="absolute top-0 left-1/2 z-10 h-[1024px] w-[1440px] -translate-x-1/2 transform">
+    <div className="absolute top-0 left-1/2 z-10 h-[1024px] w-[1440px] -translate-x-1/2 transform 3xl:scale-[1.2]">
       {/* Left to right order */}
       {/* <div className="absolute top-3/4 left-1/2 z-10 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2">
         {View}
       </div> */}
-      <div className="topToBottomAnim absolute -left-[275px] top-[260px] h-[520px] w-[504px]">
+
+      {/* Token widths are 300px less than Figma due to layering */}
+      <div className="topToBottomAnim absolute -left-[945px] top-[100px] w-[562px]">
+        <TokenFadeIn delay={900}>
+          <OptimisedImage
+            src="/img/shared/btc-token-back.png"
+            alt="BTC token back"
+            absolute
+            className="top-10 left-8 -rotate-[10.87deg]"
+          />
+        </TokenFadeIn>
+        <TokenFadeIn delay={600}>
+          <OptimisedImage
+            src="/img/shared/btc-token-front.png"
+            alt="BTC token front"
+            absolute
+            className="z-10 -rotate-[10.87deg]"
+          />
+        </TokenFadeIn>
+      </div>
+      <div className="topToBottomAnimSlower absolute -left-[530px] top-[735px] w-[367px]">
+        <TokenFadeIn delay={600}>
+          <OptimisedImage
+            src="/img/shared/link-token-back.png"
+            alt="Link token back"
+            absolute
+            className="[transform:matrix(-1,0.09,0.09,1,0,0)]"
+          />
+        </TokenFadeIn>
+        <TokenFadeIn delay={300}>
+          <OptimisedImage
+            src="/img/shared/link-token-front.png"
+            alt="Link token front"
+            absolute
+            className="top-10 -left-1 z-10 [transform:matrix(-1,0.09,0.09,1,0,0)]"
+          />
+        </TokenFadeIn>
+      </div>
+      <div className="topToBottomAnim absolute -left-[275px] top-[260px] w-[432px]">
         <TokenFadeIn delay={600}>
           <OptimisedImage
             src="/img/shared/link-token-back.png"
@@ -31,7 +69,7 @@ const TokenSpread: React.FC<{}> = () => {
             src="/img/shared/link-token-front.png"
             alt="Link token front"
             absolute
-            className="top-10 left-2.5 z-10 rotate-[-17.5deg]"
+            className="top-10 left-5 z-10 rotate-[-17.5deg]"
           />
         </TokenFadeIn>
       </div>
@@ -53,7 +91,7 @@ const TokenSpread: React.FC<{}> = () => {
           />
         </TokenFadeIn>
       </div>
-      <div className="topToBottomAnimSlower absolute left-[230px] top-[600px] h-[400px] w-[356px]">
+      <div className="topToBottomAnimSlower absolute left-[230px] top-[600px] w-[356px]">
         <TokenFadeIn delay={1200}>
           <OptimisedImage
             src="/img/shared/btc-token-back.png"
@@ -71,7 +109,7 @@ const TokenSpread: React.FC<{}> = () => {
           />
         </TokenFadeIn>
       </div>
-      <div className="topToBottomAnim absolute left-[680px] top-[670px] h-[480px] w-[350px]">
+      <div className="topToBottomAnim absolute left-[680px] top-[670px] w-[350px]">
         <TokenFadeIn delay={1500}>
           <OptimisedImage
             src="/img/shared/link-token-back.png"
@@ -89,7 +127,7 @@ const TokenSpread: React.FC<{}> = () => {
           />
         </TokenFadeIn>
       </div>
-      <div className="topToBottomAnimSlower absolute left-[1050px] top-[470px] h-[498px] w-[408px]">
+      <div className="topToBottomAnimSlower absolute left-[1050px] top-[470px] w-[408px]">
         <TokenFadeIn delay={1200}>
           <OptimisedImage
             src="/img/shared/btc-token-back.png"
@@ -107,7 +145,7 @@ const TokenSpread: React.FC<{}> = () => {
           />
         </TokenFadeIn>
       </div>
-      <div className="topToBottomAnim absolute left-[1250px] top-[950px] h-[227px] w-[188px]">
+      <div className="topToBottomAnim absolute left-[1250px] top-[950px] w-[188px]">
         <TokenFadeIn delay={1000}>
           <OptimisedImage
             src="/img/shared/link-token-back.png"
@@ -122,6 +160,42 @@ const TokenSpread: React.FC<{}> = () => {
             alt="Link token front"
             absolute
             className="top-5 -left-2.5 z-10 [transform:matrix(-0.98,-0.22,-0.22,0.98,0,0)]"
+          />
+        </TokenFadeIn>
+      </div>
+      <div className="topToBottomAnimSlower absolute left-[1480px] top-[725px] w-[408px]">
+        <TokenFadeIn delay={900}>
+          <OptimisedImage
+            src="/img/shared/btc-token-back.png"
+            alt="BTC token back"
+            absolute
+            className="top-12 left-1 rotate-[15.28deg]"
+          />
+        </TokenFadeIn>
+        <TokenFadeIn delay={600}>
+          <OptimisedImage
+            src="/img/shared/btc-token-front.png"
+            alt="BTC token front"
+            absolute
+            className="z-10 rotate-[15.28deg]"
+          />
+        </TokenFadeIn>
+      </div>
+      <div className="topToBottomAnim absolute left-[1530px] top-[165px] w-[504px]">
+        <TokenFadeIn delay={600}>
+          <OptimisedImage
+            src="/img/shared/link-token-back.png"
+            alt="Link token back"
+            absolute
+            className="[transform:matrix(-0.99,0.12,0.12,0.99,0,0)]"
+          />
+        </TokenFadeIn>
+        <TokenFadeIn delay={300}>
+          <OptimisedImage
+            src="/img/shared/link-token-front.png"
+            alt="Link token front"
+            absolute
+            className="top-10 left-5 z-10 [transform:matrix(-0.99,0.12,0.12,0.99,0,0)]"
           />
         </TokenFadeIn>
       </div>

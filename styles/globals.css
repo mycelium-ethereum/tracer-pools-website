@@ -429,12 +429,13 @@ table:after {
   }
 }
 
-@media only screen and (min-width: 640px) and (max-width: 2560px) {
+@media only screen and (min-width: 640px) and (max-width: 2559px) {
   .vertical-slider .slick-slide,
   .vertical-slider {
     width: 465px !important;
   }
 }
+
 @media only screen and (min-width: 640px) and (max-width: 1920px) {
   .slider-nav .slick-slide button:after {
     right: -28.5px;

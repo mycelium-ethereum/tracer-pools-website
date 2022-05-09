@@ -3,7 +3,7 @@ import AnimateIn from "@/components/Shared/AnimateIn";
 
 const Header: React.FC<{}> = () => {
   return (
-    <header className="relative z-20 mx-auto h-[800px] text-center">
+    <header className="relative z-20 mx-auto h-[900px] text-center 3xl:h-[1000px]">
       <AnimateIn delay={0.2}>
         <img
           src="/img/logos/tracer-perpetual-pools.svg"
