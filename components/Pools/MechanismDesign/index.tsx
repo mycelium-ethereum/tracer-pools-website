@@ -29,7 +29,7 @@ const MechanismDesign: React.FC<{}> = () => {
     },
   ];
   return (
-    <Section id="section-3">
+    <Section id="section-3" className="bg-secondary">
       <Container className="flex items-center justify-between py-20">
         <div className="min-w-[589px]">
           <header className="text-action-active">
@@ -39,7 +39,7 @@ const MechanismDesign: React.FC<{}> = () => {
             >
               Mechanism Design
             </BulletHeading>
-            <h1 className="my-4 text-2xl font-light leading-[28px] 3xl:text-[40px] 3xl:leading-[44px]">
+            <h1 className="mb-4 text-2xl font-light leading-[28px] 3xl:text-[40px] 3xl:leading-[44px]">
               Pool tokens entitle you to a
               <br />
               fractional share of long or short
@@ -54,7 +54,7 @@ const MechanismDesign: React.FC<{}> = () => {
           <div className="mt-8 flex max-w-[420px] flex-wrap">
             <BulletHeading
               lineColor="blue"
-              className="mb-4 max-w-[377px] text-action-active"
+              className="max-w-[377px] text-action-active"
             >
               Looking for more information?
             </BulletHeading>

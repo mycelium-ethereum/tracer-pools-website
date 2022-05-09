@@ -6,7 +6,7 @@ const BulletHeading: React.FC<{
   className: string;
 }> = ({ lineColor, children, className }) => {
   return (
-    <div className={`${className} text-sm uppercase`}>
+    <div className={`${className} mb-4 text-sm uppercase`}>
       <div className="flex items-center pb-2">
         <img
           src="/img/icons/bullet.svg"

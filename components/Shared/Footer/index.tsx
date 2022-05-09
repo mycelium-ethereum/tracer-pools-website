@@ -17,6 +17,7 @@ import PageLink from "@/components/Shared/PageLink";
 import SocialLinks from "@/components/Shared/Footer/SocialLinks";
 
 const Footer: React.FC<{ route: string }> = ({ route }) => {
+  const [background, setBackground] = useState("bg-white");
   const categoryArr = [
     tracerDAOCategory,
     productCategory,
@@ -25,20 +26,36 @@ const Footer: React.FC<{ route: string }> = ({ route }) => {
     governCategory,
     connectCategory,
   ];
+
   const setCopyrightYear = () => {
     const year = new Date().getFullYear();
     document.getElementById("year").innerHTML = year.toString();
+  };
+  const getBackground = () => {
+    switch (route) {
+      case "/":
+        setBackground("bg-tracer-navy");
+        break;
+      case "/pools":
+        setBackground("bg-secondary");
+        break;
+      default:
+        setBackground("bg-white");
+        break;
+    }
   };
 
   useEffect(() => {
     setCopyrightYear();
   }, []);
 
+  useEffect(() => {
+    getBackground();
+  }, [route]);
+
   return (
     <footer
-      className={`relative z-10 h-1/2 w-full overflow-hidden py-[77px] text-action-active ${
-        route === "/" ? "bg-tracer-navy" : "bg-white"
-      }`}
+      className={`relative z-10 h-1/2 w-full overflow-hidden py-[77px] text-action-active ${background}`}
     >
       <Container>
         <div className="mb-[75px] flex flex-col items-start justify-between pr-8 md:flex-row md:pr-0">

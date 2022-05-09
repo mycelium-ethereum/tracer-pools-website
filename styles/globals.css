@@ -358,7 +358,9 @@ table:after {
   right: -16px;
   opacity: 1;
 }
-
+.slick-current {
+  z-index: 10 !important;
+}
 .slider-nav-gradient {
   background: linear-gradient(
     180deg,
@@ -367,6 +369,17 @@ table:after {
     rgba(200, 220, 250, 1) 92%,
     rgba(200, 220, 250, 0) 100%
   );
+}
+
+/* Build portfolio */
+
+/* Shjow  */
+.portfolio-slider .slick-slide span {
+  color: inherit;
+}
+.portfolio-slider .slick-current span {
+  max-height: 150px;
+  opacity: 1;
 }
 
 @media only screen and (min-width: 3840px) {

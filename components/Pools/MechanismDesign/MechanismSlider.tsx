@@ -45,7 +45,7 @@ const MechanismSlider: React.FC<{}> = () => {
   );
 
   return (
-    <div className="relative z-10 ml-10 flex w-full max-w-[767px] items-center border border-action-active bg-white [box-shadow:_0px_4px_10px_2px_rgba(26,85,245,0.1)] 3xl:max-w-[1477px]">
+    <div className="relative z-10 ml-12 flex w-full max-w-[767px] items-center border border-action-active bg-white [box-shadow:_0px_4px_10px_2px_rgba(26,85,245,0.1)] 3xl:max-w-[1477px]">
       <div className="relative ml-[23px] mr-10 min-w-[43px] 3xl:ml-4 3xl:mr-16 3xl:min-w-[42px]">
         <Slider
           asNavFor={slider2}

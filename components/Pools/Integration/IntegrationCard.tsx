@@ -1,0 +1,23 @@
+import BulletHeading from "@/components/Shared/BulletHeading";
+// import OptimisedImage from "@/components/Shared/OptimisedImage";
+
+const Integration: React.FC<{
+  title: string;
+  text: React.ReactNode;
+}> = ({ title, text }) => {
+  return (
+    <div className="text-action-active">
+      <img
+        src="/img/pools/integration-placeholder.png"
+        alt=""
+        className="mb-4 h-[154px] w-[154px]"
+      />
+      <BulletHeading lineColor="blue" className="max-w-[294px]">
+        {title}
+      </BulletHeading>
+      {text}
+    </div>
+  );
+};
+
+export default Integration;

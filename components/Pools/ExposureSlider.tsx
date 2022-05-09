@@ -26,7 +26,7 @@ const ExposureSlider: React.FC<{}> = () => {
           absolute
           className="bottom-3 -right-52 max-h-[518px] max-w-[516px]"
         />
-        <div className="mx-auto w-max">
+        <div className="mx-auto mt-4 w-max">
           <span className="block text-lg leading-[28px] text-action-active">
             Start your Journey now!
           </span>
