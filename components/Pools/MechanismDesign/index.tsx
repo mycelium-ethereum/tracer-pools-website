@@ -30,7 +30,7 @@ const MechanismDesign: React.FC<{}> = () => {
   ];
   return (
     <Section id="section-3">
-      <Container className="flex items-center py-20">
+      <Container className="flex items-center justify-between py-20">
         <div className="min-w-[589px]">
           <header className="text-action-active">
             <BulletHeading
@@ -39,14 +39,14 @@ const MechanismDesign: React.FC<{}> = () => {
             >
               Mechanism Design
             </BulletHeading>
-            <h1 className="my-4 text-[40px] font-light leading-[44px]">
+            <h1 className="my-4 text-2xl font-light leading-[28px] 3xl:text-[40px] 3xl:leading-[44px]">
               Pool tokens entitle you to a
               <br />
               fractional share of long or short
               <br />
               collateral held in a pool.
             </h1>
-            <p className="text-lg font-light leading-[30px] text-tertiary">
+            <p className="font-light text-tertiary 3xl:text-xl 3xl:leading-[30px]">
               When the underlying feed moves, funds are exchanged between
               <br /> sides, reflecting leveraged returns for token holders.
             </p>

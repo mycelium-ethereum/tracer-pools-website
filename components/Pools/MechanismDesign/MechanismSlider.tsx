@@ -51,15 +51,14 @@ const MechanismSlider: React.FC<{}> = () => {
     swipe: false,
     touchMove: false,
     slidesToShow: 7,
-    // slidesToScroll: 1,
     focusOnSelect: true,
+    pauseOnFocus: true,
   };
 
   const sliderMainSettings = {
     accessibility: false,
     dots: false,
     arrows: false,
-    // infinite: true,
     vertical: true,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -70,6 +69,8 @@ const MechanismSlider: React.FC<{}> = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
+    variableWidth: true,
+    pauseOnFocus: true,
   };
 
   const Slide: React.FC<{ item: { image: string; text: string } }> = ({
@@ -107,7 +108,7 @@ const MechanismSlider: React.FC<{}> = () => {
             <SlideNavLink key={i} num={i + 1} />
           ))}
         </Slider>
-        <span className="slider-nav-gradient absolute right-0 top-1/2 block h-full w-[1px] flex-grow -translate-y-1/2 3xl:h-[calc(100%+60px)]" />
+        <span className="slider-nav-gradient absolute right-0 top-1/2 block h-full w-[1px] flex-grow -translate-y-1/2 3xl:h-[calc(100%+20px)]" />
       </div>
       <Slider
         asNavFor={slider1}
