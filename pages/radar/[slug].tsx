@@ -126,13 +126,21 @@ export const avoidRateLimit = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  await avoidRateLimit();
-  const articles = await fetch(
-    "https://mycelium-content.uc.r.appspot.com/tracer-blogs"
-  )
-    .then((res) => res.json())
-    .catch((err) => console.error(err));
-
+  let success = false;
+  let articles = [];
+  while (!success) {
+    try {
+      await avoidRateLimit();
+      articles = await fetch(
+        "https://mycelium-content.uc.r.appspot.com/tracer-blogs"
+      )
+        .then((res) => res.json())
+        .catch((err) => console.error(err));
+      success = true;
+    } catch {
+      console.error("Failed to fetch article");
+    }
+  }
   let articleID = 0;
   articles.map((article) => {
     if (article.slug === params.slug) {
