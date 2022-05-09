@@ -27,6 +27,7 @@ const MechanismSlider: React.FC<{}> = () => {
       <img
         src={item.image}
         alt=""
+        draggable={false}
         className="h-[324px] w-full object-cover object-center 3xl:h-[585px]"
       />
       <p className="mt-4 text-action-active 3xl:text-center 3xl:text-xl 3xl:leading-[28px]">

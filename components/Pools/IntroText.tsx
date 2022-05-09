@@ -3,7 +3,7 @@ import GradientLine from "../Shared/GradientLine";
 
 const IntroText: React.FC<{}> = () => {
   return (
-    <div className="pt-40">
+    <div className="w-max pt-40">
       <div className="mb-2">
         <span className="mb-2 block text-lg leading-[28px] text-tracer-lightblue">
           Bullish? Bearish? Bring it.
