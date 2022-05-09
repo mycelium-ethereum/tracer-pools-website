@@ -61,7 +61,6 @@ const SEO: React.FC<{
 
       {/* Favicon */}
       <link rel="icon" href="/favicon.svg" />
-      <link rel="stylesheet" href="https://use.typekit.net/klm0viv.css" />
 
       <title>{metaTitle}</title>
     </Head>

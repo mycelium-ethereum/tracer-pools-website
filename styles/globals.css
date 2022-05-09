@@ -306,7 +306,7 @@ table:after {
 /* POOLS PAGE */
 
 /* Slick Slider overrides */
-.slick-current + .slick-active + .slick-active div span {
+.vertical-slider .slick-current + .slick-active + .slick-active div span {
   @apply text-action-active;
 }
 /* Apply lighter text colour to first, fifth and sixth slides */
@@ -318,12 +318,55 @@ table:after {
   + .slick-active
   div
   span,
-.slick-slide:not(.slick-active) div span {
+.vertical-slider .slick-slide:not(.slick-active) div span {
   @apply text-secondary;
 }
 
 .slick-cloned {
   transform: translate3d(0, 0, 0) !important;
+}
+
+/* Mechanism Design slider */
+.slider-nav .slick-list {
+  overflow: visible !important;
+}
+.slider-nav .slick-current div button {
+  @apply font-bold text-action-active;
+}
+.slider-nav .slick-slide button:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 90px;
+  opacity: 0;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(
+    180deg,
+    rgba(61, 168, 245, 0) 0%,
+    rgba(61, 168, 245, 1) 8%,
+    rgba(61, 168, 245, 1) 92%,
+    rgba(61, 168, 245, 0) 100%
+  );
+  box-shadow: 2px 0 5px 0px #3da8f5;
+}
+.slider-nav .slick-slide button:after {
+  right: -18px;
+}
+.slider-nav .slick-current button:after {
+  right: -16px;
+  opacity: 1;
+}
+
+.slider-nav-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(200, 220, 250, 0) 0%,
+    rgba(200, 220, 250, 1) 8%,
+    rgba(200, 220, 250, 1) 92%,
+    rgba(200, 220, 250, 0) 100%
+  );
 }
 
 @media only screen and (min-width: 3840px) {
@@ -362,15 +405,15 @@ table:after {
       transform: translate(-10vh, 10vh) rotate(315deg) scale(1.5);
     }
   }
-  .slick-slide,
-  .slick-slider {
+  .vertical-slider .slick-slide,
+  .vertical-slider {
     width: 800px !important;
   }
 }
 
 @media only screen and (min-width: 640px) and (max-width: 2560px) {
-  .slick-slide,
-  .slick-slider {
+  .vertical-slider .slick-slide,
+  .vertical-slider {
     width: 465px !important;
   }
 }

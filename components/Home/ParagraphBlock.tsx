@@ -6,7 +6,7 @@ const ParagraphBlock: React.FC<{
   className?: string;
 }> = ({ title, text, className }) => {
   return (
-    <div className={`mr-9 min-w-[386px] ${className ? className : ""}`}>
+    <div className={`mr-9 w-[386px] ${className ? className : ""}`}>
       <div className="flex items-center border-b pt-1.5 pb-[14px] text-sm uppercase [border-color:inherit]">
         <img
           src="/img/icons/bullet.svg"

@@ -3,14 +3,15 @@ import Container from "@/components/Shared/Container";
 import Button from "@/components/Shared/Button";
 import AnimateIn from "@/components/Shared/AnimateIn";
 import GradientLine from "@/components/Shared/GradientLine";
+import OptimisedImage from "@/components/Shared/OptimisedImage";
 
 const Factories: React.FC<{}> = () => {
   return (
     <Section id="section-5" className="bg-tracer-purple-dark">
-      <Container className="relative flex h-screen flex-col py-14 sm:py-16">
-        <header className="flex h-full max-w-[356px] flex-grow flex-col justify-center">
+      <Container className="relative flex h-screen min-h-[800px] py-14 sm:py-16">
+        <header className="flex h-full flex-grow flex-col justify-center">
           <AnimateIn delay={0.2}>
-            <div className="mb-4 w-full">
+            <div className="mb-4 w-full max-w-[328px]">
               <img
                 src="/img/logos/tracer-factories.svg"
                 className="mb-3 h-[18px] w-[140px]"
@@ -20,15 +21,16 @@ const Factories: React.FC<{}> = () => {
           </AnimateIn>
           <AnimateIn delay={0.6}>
             <h1 className="mb-2 text-[40px] font-light text-white">
-              More Leverage.
-              <br />
-              Less Overhead.
+              The benefits of diversification,
+              <br /> meet the joys of a
+              <br /> customised portfolio.
             </h1>
           </AnimateIn>
           <AnimateIn delay={1.0}>
             <p className="text-tracer-purple max-w-[328px]-light">
-              Tracer’s Factory layer contains the templates and tools to allow
-              DeFi applications to be built on top of Tracer’s products.
+              Tracer’s Factory layer contains the templates
+              <br /> and tools to allow DeFi applications to be
+              <br /> built on top of Tracer’s products.
             </p>
           </AnimateIn>
           <AnimateIn delay={1.4}>
@@ -42,8 +44,9 @@ const Factories: React.FC<{}> = () => {
         </header>
       </Container>
       <img
-        className="absolute top-0 left-0 z-0 h-full w-full object-cover object-right"
+        className="absolute top-0 right-0 h-full max-w-[792px] object-cover object-left"
         src="/img/home/factories-section-bg.png"
+        alt=""
       />
     </Section>
   );

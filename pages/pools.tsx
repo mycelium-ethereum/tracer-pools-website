@@ -1,5 +1,6 @@
 import Banner from "@/components/Pools/Banner";
-import Exposure from "@/components/Pools/Exposure";
+import ExposureSlider from "@/components/Pools/ExposureSlider";
+import MechanismDesign from "@/components/Pools/MechanismDesign";
 import SEO from "@/components/Shared/SEO";
 
 const PoolsPage: React.FC<{}> = () => {
@@ -7,7 +8,8 @@ const PoolsPage: React.FC<{}> = () => {
     <>
       <SEO title="Pools" />
       <Banner />
-      <Exposure />
+      <ExposureSlider />
+      <MechanismDesign />
     </>
   );
 };

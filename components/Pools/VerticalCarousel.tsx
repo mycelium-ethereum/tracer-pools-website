@@ -39,7 +39,7 @@ const VerticalCarousel: React.FC<{}> = () => {
 
   return (
     <div className="ml-10">
-      <Slider {...settings}>
+      <Slider {...settings} className="vertical-slider">
         {exposureItems.map((item: string, i: number) => (
           <Slide item={item} key={i} />
         ))}

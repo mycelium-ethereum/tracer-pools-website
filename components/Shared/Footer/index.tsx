@@ -48,7 +48,7 @@ const Footer: React.FC<{ route: string }> = ({ route }) => {
               className="mr-20 h-[26px] w-[111px]"
             />
           </PageLink>
-          <div className="mt-12 grid flex-grow transform grid-cols-2 gap-x-[75px] gap-y-12 sm:grid-cols-3 md:mt-0 lg:translate-x-[95px] xl:w-max xl:translate-x-[40px] xl:grid-cols-6">
+          <div className="mt-12 grid max-w-[1045px] flex-grow transform grid-cols-2 gap-x-[75px] gap-y-12 sm:grid-cols-3 md:mt-0 lg:translate-x-[95px] xl:w-max xl:translate-x-[40px] xl:grid-cols-6">
             {categoryNames.map((category, i) => {
               return (
                 <Category

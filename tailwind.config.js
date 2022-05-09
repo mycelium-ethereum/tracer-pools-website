@@ -37,6 +37,7 @@ module.exports = {
         footnote: "#D6DFE6",
         action: {
           active: "#1C64F2",
+          inactive: "#C8DCFA",
           cell: "#F1F7FF",
         },
         cell: {

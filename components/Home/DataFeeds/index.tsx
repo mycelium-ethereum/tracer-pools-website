@@ -26,9 +26,9 @@ const DataFeeds: React.FC<{}> = () => {
           </AnimateIn>
           <AnimateIn delay={1.0}>
             <p className="max-w-[328px] text-tracer-lightblue">
-              Fully composibile leveraged tokens with no margin requirements and
-              no liquidations. A new derivative primative to hedge portfolio
-              risk or trade leverage.
+              The Tracer Data Factory takes any single, or multiple asset data
+              feed and transforms them into a standardised Tracer Data Feed for
+              DeFi applications.
             </p>
           </AnimateIn>
           <AnimateIn delay={1.4}>
