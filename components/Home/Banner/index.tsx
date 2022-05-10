@@ -8,12 +8,13 @@ import MeshUnderlay from "@/components/Shared/MeshUnderlay";
 const Banner: React.FC<{}> = () => {
   return (
     <Section id="section-1" className="bg-tracer-navy">
-      <Container className="relative flex h-screen items-center py-14 sm:py-16">
-        <header>
+      <Container className="relative h-screen min-h-[900px] items-center pb-16 pt-28 sm:min-h-[850px] md:flex md:min-h-[700px] md:pt-0">
+        <header className="relative z-10">
           <AnimateIn delay={0.2}>
-            <h1 className="mb-1 text-6xl font-thin text-white">
+            <h1 className="mb-1 text-[40px] font-thin leading-[44px] text-white sm:text-6xl sm:leading-[60px]">
               The Evolution
-              <br /> of Global Derivatives
+              <br /> of Global
+              <br className="block lg:hidden" /> Derivatives
             </h1>
           </AnimateIn>
           <AnimateIn delay={0.5}>
@@ -23,7 +24,7 @@ const Banner: React.FC<{}> = () => {
             </p>
           </AnimateIn>
           <AnimateIn delay={0.8}>
-            <Button lightBlueGradient className="mt-4">
+            <Button lightBlueGradient className="mt-4 text-white">
               Learn More
             </Button>
             <Button blueTransparent className="mt-4">

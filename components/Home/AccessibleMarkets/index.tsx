@@ -26,7 +26,7 @@ const AccessibleMarkets: React.FC<{}> = () => {
       <Container className="flex flex-col py-40">
         <header className="flex max-w-[561px] flex-col justify-center">
           <AnimateIn delay={0.2}>
-            <h1 className="mb-4 text-6xl font-thin leading-[66px] text-action-active">
+            <h1 className="mb-4 text-6xl font-light leading-[66px] text-action-active">
               Any market, Accessible Anywhere, For Anyone
             </h1>
           </AnimateIn>
@@ -54,7 +54,7 @@ const AccessibleMarkets: React.FC<{}> = () => {
         </div>
         <div className="flex max-w-[561px] flex-col justify-center">
           <AnimateIn delay={2.2}>
-            <h1 className="mt-24 mb-4 text-6xl font-thin leading-[66px] text-action-active">
+            <h1 className="mt-24 mb-4 text-6xl font-light leading-[66px] text-action-active">
               Not just one protocol, but the railroads of the future of
               derivatives
             </h1>
@@ -77,7 +77,7 @@ const AccessibleMarkets: React.FC<{}> = () => {
         src="/img/home/accessible-markets-bg.png"
         alt=""
         absolute
-        className="pointer-events-none -bottom-[30px] -right-[30px] h-[727px] w-[1284px]"
+        className="pointer-events-none -bottom-[30px] -right-[30px] min-h-[727px] min-w-[1284px]"
       />
     </Section>
   );

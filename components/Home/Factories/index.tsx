@@ -3,11 +3,10 @@ import Container from "@/components/Shared/Container";
 import Button from "@/components/Shared/Button";
 import AnimateIn from "@/components/Shared/AnimateIn";
 import GradientLine from "@/components/Shared/GradientLine";
-import OptimisedImage from "@/components/Shared/OptimisedImage";
 
 const Factories: React.FC<{}> = () => {
   return (
-    <Section id="section-5" className="bg-tracer-purple-dark">
+    <Section id="section-4" className="bg-tracer-purple-dark">
       <Container className="relative flex h-screen min-h-[800px] py-14 sm:py-16">
         <header className="flex h-full flex-grow flex-col justify-center">
           <AnimateIn delay={0.2}>

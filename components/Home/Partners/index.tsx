@@ -6,7 +6,7 @@ import MeshUnderlay from "@/components/Shared/MeshUnderlay";
 
 const Partners: React.FC<{}> = () => {
   return (
-    <Section id="section-7" className="bg-tracer-navy">
+    <Section id="section-6" className="bg-tracer-navy">
       <Container className="relative pt-16 pb-20">
         <header className="mb-8 h-full w-full max-w-[678px]">
           <div className="mb-2 flex items-center">

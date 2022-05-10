@@ -6,7 +6,7 @@ import NavLink from "@/components/Shared/Navbar/NavLink";
 import { useCallback, useEffect, useState } from "react";
 import { disableScroll, enableScroll, isCollapsed } from "@/lib/helpers";
 import Logo from "@/components/Shared/Logo";
-import LaunchAppButton from "./LaunchAppButton";
+import LaunchAppButton from "@/components/Shared/Navbar/LaunchAppButton";
 
 const Navbar: React.FC<{ route: string }> = ({ route }) => {
   const [navOpen, setNavOpen] = useState<boolean>(false);
@@ -36,7 +36,7 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
   };
 
   const getCurrentSection = () => {
-    if (route === "/") {
+    if (route === "/" || route === "/pools") {
       const sections: NodeListOf<HTMLElement> =
         document.querySelectorAll("section");
       // Check each section to see if it is above or below the top of the viewport
@@ -82,7 +82,26 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
           break;
       }
     } else if (route === "/pools") {
-      navTextColour = whiteStyles;
+      switch (currentSection) {
+        case "section-1":
+          navTextColour = whiteStyles;
+          break;
+        case "section-2":
+          navTextColour = blueStyles;
+          break;
+        case "section-3":
+          navTextColour = blueStyles;
+          break;
+        case "section-4":
+          navTextColour = blueStyles;
+          break;
+        case "section-5":
+          navTextColour = blueStyles;
+          break;
+        default:
+          navTextColour = whiteStyles;
+          break;
+      }
     } else {
       navTextColour = solidStyles;
     }
