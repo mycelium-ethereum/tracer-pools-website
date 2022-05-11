@@ -129,3 +129,12 @@ export const articles = [
         link: "/"
     },
 ]
+
+export const mediaVideos = [
+    "J0nyb7jAsio",
+    "FL1zZL1zaSU",
+    "2ZfTKryGCRQ",
+    "geB8ZYUhT6s",
+    "U6scft0dGn8",
+    "P2QUN8tvoFc",
+]

@@ -389,6 +389,11 @@ input::placeholder {
   opacity: 1;
 }
 
+/* Learn page */
+.btn-full-width {
+  width: auto;
+}
+
 @media only screen and (min-width: 3840px) {
   @keyframes slideDown {
     0% {
