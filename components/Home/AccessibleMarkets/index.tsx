@@ -58,7 +58,7 @@ const AccessibleMarkets: React.FC<{}> = () => {
         </div>
         <div className="flex max-w-[561px] flex-col justify-center">
           <AnimateIn delay={0.2}>
-            <h1 className="mt-24 mb-4 text-6xl font-light leading-[66px] text-action-active">
+            <h1 className="mt-24 mb-4 text-[40px] font-light leading-[44px] text-action-active 3xl:text-6xl 3xl:leading-[66px]">
               Not just one protocol, but the railroads of the future of
               derivatives
             </h1>
