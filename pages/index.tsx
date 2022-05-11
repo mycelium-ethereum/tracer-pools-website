@@ -1,13 +1,12 @@
-import Banner from "@/components/Home/Banner";
-import DataFeeds from "@/components/Home/DataFeeds";
-import AccessibleMarkets from "@/components/Home/AccessibleMarkets";
-import PerpetualPools from "@/components/Home/PerpetualPools";
-// import Railroads from "@/components/Home/Railroads";
-import SEO from "@/components/Shared/SEO";
-import Factories from "@/components/Home/Factories";
-import Partners from "@/components/Home/Partners";
+import Banner from "@components/Home/Banner";
+import DataFeeds from "@components/Home/DataFeeds";
+import AccessibleMarkets from "@components/Home/AccessibleMarkets";
+import PerpetualPools from "@components/Home/PerpetualPools";
+import SEO from "@components/Shared/SEO";
+import Factories from "@components/Home/Factories";
+import Partners from "@components/Home/Partners";
 
-const IndexPage: React.FC<{}> = () => {
+const HomePage: React.FC<{}> = () => {
   return (
     <>
       <SEO title="Home" />
@@ -22,4 +21,4 @@ const IndexPage: React.FC<{}> = () => {
   );
 };
 
-export default IndexPage;
+export default HomePage;

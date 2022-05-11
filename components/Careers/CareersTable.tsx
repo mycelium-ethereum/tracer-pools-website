@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import CareerFilters from "@/components/Careers/CareerFilters";
-import Loader from "@/components/Careers/Loader";
-import ErrorText from "@/components/Careers/ErrorText";
-import NoJobsAvailableText from "@/components/Careers/NoJobsAvailableText";
-import JobDiv from "@/components/Careers/JobDiv";
-import JobRow from "@/components/Careers/JobRow";
+import CareerFilters from "@components/Careers/CareerFilters";
+import Loader from "@components/Careers/Loader";
+import ErrorText from "@components/Careers/ErrorText";
+import NoJobsAvailableText from "@components/Careers/NoJobsAvailableText";
+import JobDiv from "@components/Careers/JobDiv";
+import JobRow from "@components/Careers/JobRow";
 
 const CareersTable = () => {
   const careerTable = useRef(null);
@@ -133,7 +133,7 @@ const CareersTable = () => {
       <Loader showLoader={showLoader} />
       <table
         ref={careerTable}
-        className={`careers-table relative w-full overflow-hidden ${
+        className={`careers-table relative w-full ${
           !showLoader && !showNoJobs ? "hidden lg:table" : "hidden"
         }`}
       >

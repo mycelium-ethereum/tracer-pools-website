@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import Moment from "react-moment";
 import PageLink from "../Shared/PageLink";
-import CategoryBubble from "./CategoryBubble";
+import CategoryBubble from "../Shared/CategoryBubble";
 
 const RadarPostCard: React.FC<{
   article: any;

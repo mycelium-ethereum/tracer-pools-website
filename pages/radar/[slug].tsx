@@ -3,13 +3,13 @@ import Script from "next/script";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { marked } from "marked";
 import DOMPurify from "dompurify";
-import SEO from "@/components/Shared/SEO";
-import Container from "@/components/Shared/Container";
-import SidebarWrapper from "@/components/Shared/SidebarWrapper";
-import MeshUnderlay from "@/components/Shared/MeshUnderlay";
-import CallToAction from "@/components/Radar/Post/CallToAction";
-import PostSidebarContent from "@/components/Radar/Post/PostSidebarContent";
-import PostHeader from "@/components/Radar/Post/PostHeader";
+import SEO from "@components/Shared/SEO";
+import Container from "@components/Shared/Container";
+import SidebarWrapper from "@components/Shared/SidebarWrapper";
+import MeshUnderlay from "@components/Shared/MeshUnderlay";
+import CallToAction from "@components/Radar/Post/CallToAction";
+import PostSidebarContent from "@components/Radar/Post/PostSidebarContent";
+import PostHeader from "@components/Radar/Post/PostHeader";
 
 const Article = ({ data, articles }) => {
   const bodyTextRef = useRef<HTMLDivElement>(null);

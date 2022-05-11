@@ -1,5 +1,5 @@
 import Moment from "react-moment";
-import CategoryBubble from "@/components/Radar/CategoryBubble";
+import CategoryBubble from "@components/Shared/CategoryBubble";
 
 const PostHeader: React.FC<{
   data: any;

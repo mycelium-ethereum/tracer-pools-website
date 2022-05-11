@@ -1,4 +1,4 @@
-import Button from "@/components/Shared/Button";
+import Button from "@components/Shared/Button";
 
 const JobDiv: React.FC<{
   link: string;

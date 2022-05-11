@@ -1,8 +1,8 @@
-import Section from "@/components/Shared/Section";
-import Container from "@/components/Shared/Container";
-import Button from "@/components/Shared/Button";
-import BulletHeading from "@/components/Shared/BulletHeading";
-import MeshDouble from "@/components/Pools/MeshDouble";
+import Section from "@components/Shared/Section";
+import Container from "@components/Shared/Container";
+import Button from "@components/Shared/Button";
+import UnderlinedHeading from "@components/Shared/UnderlinedHeading";
+import MeshDouble from "@components/Pools/MeshDouble";
 import MechanismSlider from "./MechanismSlider";
 
 const MechanismDesign: React.FC<{}> = () => {
@@ -33,12 +33,12 @@ const MechanismDesign: React.FC<{}> = () => {
       <Container className="flex items-center justify-between py-20">
         <div className="min-w-[589px]">
           <header className="text-action-active">
-            <BulletHeading
+            <UnderlinedHeading
               lineColor="blue"
               className="max-w-[294px] text-action-active"
             >
               Mechanism Design
-            </BulletHeading>
+            </UnderlinedHeading>
             <h1 className="mb-4 text-2xl font-light leading-[28px] 3xl:text-[40px] 3xl:leading-[44px]">
               Pool tokens entitle you to a
               <br />
@@ -52,12 +52,12 @@ const MechanismDesign: React.FC<{}> = () => {
             </p>
           </header>
           <div className="mt-8 flex max-w-[420px] flex-wrap">
-            <BulletHeading
+            <UnderlinedHeading
               lineColor="blue"
               className="max-w-[377px] text-action-active"
             >
               Looking for more information?
-            </BulletHeading>
+            </UnderlinedHeading>
             {moreInfoButtons.map((button, i) => (
               <Button
                 key={i}

@@ -1,4 +1,4 @@
-import AssetHeading from "@/components/Brand/Sections/AssetHeading";
+import AssetHeading from "@components/Brand/Sections/AssetHeading";
 import BrandColourTile from "../Tiles/ColourTile";
 
 const ColourAssets: React.FC<{

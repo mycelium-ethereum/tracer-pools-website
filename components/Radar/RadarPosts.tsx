@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { sortByDate } from "@/lib/helpers";
+import { sortByDate } from "@lib/helpers";
 import InfiniteScroll from "react-infinite-scroll-component";
-import FiveColumnLayout from "@/components/Radar/Layouts/FiveColumnLayout";
-import FourColumnLayout from "@/components/Radar/Layouts/FourColumnLayout";
-import ThreeColumnLayout from "@/components/Radar/Layouts/ThreeColumnLayout";
-import TwoColumnLayout from "@/components/Radar/Layouts/TwoColumnLayout";
-import OneColumnLayout from "@/components/Radar/Layouts/OneColumnLayout";
+import RadarPostCard from "@components/Radar/RadarPostCard";
+import FiveColumnLayout from "@components/Shared/Layouts/FiveColumnLayout";
+import FourColumnLayout from "@components/Shared/Layouts/FourColumnLayout";
+import ThreeColumnLayout from "@components/Shared/Layouts/ThreeColumnLayout";
+import TwoColumnLayout from "@components/Shared/Layouts/TwoColumnLayout";
+import OneColumnLayout from "@components/Shared/Layouts/OneColumnLayout";
 
 const RadarPosts: React.FC<{
   filteredArticles: any;
@@ -97,6 +98,7 @@ const RadarPosts: React.FC<{
   useEffect(() => {
     setIncrement(initialPostCount);
     setIndex(initialPostCount);
+    setHasMore(true);
   }, [columns]);
 
   useEffect(() => {
@@ -136,11 +138,36 @@ const RadarPosts: React.FC<{
       >
         {sorted &&
           {
-            5: <FiveColumnLayout articles={articlesInView} />,
-            4: <FourColumnLayout articles={articlesInView} />,
-            3: <ThreeColumnLayout articles={articlesInView} />,
-            2: <TwoColumnLayout articles={articlesInView} />,
-            1: <OneColumnLayout articles={articlesInView} />,
+            5: (
+              <FiveColumnLayout
+                articles={articlesInView}
+                ArticleComponent={RadarPostCard}
+              />
+            ),
+            4: (
+              <FourColumnLayout
+                articles={articlesInView}
+                ArticleComponent={RadarPostCard}
+              />
+            ),
+            3: (
+              <ThreeColumnLayout
+                articles={articlesInView}
+                ArticleComponent={RadarPostCard}
+              />
+            ),
+            2: (
+              <TwoColumnLayout
+                articles={articlesInView}
+                ArticleComponent={RadarPostCard}
+              />
+            ),
+            1: (
+              <OneColumnLayout
+                articles={articlesInView}
+                ArticleComponent={RadarPostCard}
+              />
+            ),
           }[columns]}
       </InfiniteScroll>
     </div>

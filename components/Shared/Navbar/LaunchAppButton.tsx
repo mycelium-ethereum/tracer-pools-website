@@ -1,4 +1,4 @@
-import ChevronDownSVG from "@/components/SVG/ChevronDownSVG";
+import ChevronDownSVG from "@components/SVG/ChevronDownSVG";
 
 const LaunchAppButton: React.FC<{
   onClickAction?: () => void;

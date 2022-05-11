@@ -1,8 +1,8 @@
-import Section from "@/components/Shared/Section";
-import Container from "@/components/Shared/Container";
-import { integrationItems } from "@/components/Pools/Integration/presets";
-import IntegrationCard from "@/components/Pools/Integration/IntegrationCard";
-import HelpGovernBanner from "@/components/Pools/Integration/HelpGovernBanner";
+import Section from "@components/Shared/Section";
+import Container from "@components/Shared/Container";
+import { integrationItems } from "@components/Pools/Integration/presets";
+import IntegrationCard from "@components/Pools/Integration/IntegrationCard";
+import HelpGovernBanner from "@components/Pools/Integration/HelpGovernBanner";
 
 const Integration: React.FC<{}> = () => {
   return (

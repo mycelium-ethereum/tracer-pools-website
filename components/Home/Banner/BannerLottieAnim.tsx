@@ -1,9 +1,9 @@
 import { useLottie } from "lottie-react";
-import circles from "../../../public/img/home/banner-lottie.json";
+import Circles from "../../../public/img/home/banner-lottie.json";
 
 const BannerLottieAnim: React.FC<{}> = () => {
   const options = {
-    animationData: circles,
+    animationData: Circles,
     loop: true,
     autoplay: true,
   };

@@ -1,15 +1,16 @@
-import Section from "@/components/Shared/Section";
-import Container from "@/components/Shared/Container";
-import Button from "@/components/Shared/Button";
-import BackgroundVideo from "@/components/Home/BackgroundVideo";
-import Tokens from "@/components/Home/PerpetualPools/Tokens";
-import AnimateIn from "@/components/Shared/AnimateIn";
-import GradientLine from "@/components/Shared/GradientLine";
+import Section from "@components/Shared/Section";
+import Container from "@components/Shared/Container";
+import Button from "@components/Shared/Button";
+import Tokens from "@components/Home/PerpetualPools/Tokens";
+import AnimateIn from "@components/Shared/AnimateIn";
+import GradientLine from "@components/Shared/GradientLine";
+import V2LottieAnim from "@components/Home/PerpetualPools/V2LottieAnim";
+import MeshUnderlay from "@components/Shared/MeshUnderlay";
 
 const PerpetualPools: React.FC<{}> = () => {
   return (
-    <Section id="section-3">
-      <Container className="relative flex h-screen min-h-[800px] flex-col py-14 sm:py-16">
+    <Section id="section-3" className="bg-tracer-navy">
+      <Container className="relative z-10 flex h-screen min-h-[800px] flex-col py-14 sm:py-16">
         <header className="flex h-full max-w-[356px] flex-grow flex-col justify-center">
           <AnimateIn delay={0.2}>
             <div className="mb-4 w-full">
@@ -42,7 +43,7 @@ const PerpetualPools: React.FC<{}> = () => {
         </header>
         <Tokens />
       </Container>
-      <BackgroundVideo src="/img/home/leverage.mp4" />
+      <V2LottieAnim />
     </Section>
   );
 };

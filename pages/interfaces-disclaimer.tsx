@@ -1,13 +1,13 @@
 import { useRef } from "react";
 import { useRouter } from "next/router";
-import SEO from "@/components/Shared/SEO";
-import Container from "@/components/Shared/Container";
-import PageHeader from "@/components/Shared/PageHeader";
-import PageSection from "@/components/Shared/Section";
-import SidebarWrapper from "@/components/Shared/SidebarWrapper";
-import LegalSidebarContent from "@/components/Legal/Texts/LegalSidebarContent";
-import TermsOfUseText from "@/components/Legal/TermsOfUseText";
-import InterfacesDisclaimerText from "@/components/Legal/Texts/InterfacesDisclaimerText";
+import SEO from "@components/Shared/SEO";
+import Container from "@components/Shared/Container";
+import PageHeader from "@components/Shared/PageHeader";
+import PageSection from "@components/Shared/Section";
+import SidebarWrapper from "@components/Shared/SidebarWrapper";
+import LegalSidebarContent from "@components/Legal/Texts/LegalSidebarContent";
+import TermsOfUseText from "@components/Legal/TermsOfUseText";
+import InterfacesDisclaimerText from "@components/Legal/Texts/InterfacesDisclaimerText";
 
 const InterfacesDisclaimerPage = () => {
   const route = useRouter().pathname;

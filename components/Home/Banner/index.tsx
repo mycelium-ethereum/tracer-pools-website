@@ -1,14 +1,14 @@
-import Section from "@/components/Shared/Section";
-import Container from "@/components/Shared/Container";
-import Button from "@/components/Shared/Button";
-import AnimateIn from "@/components/Shared/AnimateIn";
+import Section from "@components/Shared/Section";
+import Container from "@components/Shared/Container";
+import Button from "@components/Shared/Button";
+import AnimateIn from "@components/Shared/AnimateIn";
 import BannerLottieAnim from "./BannerLottieAnim";
-import MeshUnderlay from "@/components/Shared/MeshUnderlay";
+import MeshUnderlay from "@components/Shared/MeshUnderlay";
 
 const Banner: React.FC<{}> = () => {
   return (
     <Section id="section-1" className="bg-tracer-navy">
-      <Container className="relative h-screen min-h-[900px] items-center pb-16 pt-28 sm:min-h-[850px] md:flex md:min-h-[700px] md:pt-0">
+      <Container className="relative h-screen max-h-[900px] items-center pb-16 pt-28 sm:max-h-[unset] sm:min-h-[850px] md:flex md:min-h-[700px] md:pt-0">
         <header className="relative z-10">
           <AnimateIn delay={0.2}>
             <h1 className="mb-1 text-[40px] font-thin leading-[44px] text-white sm:text-6xl sm:leading-[60px]">

@@ -1,4 +1,4 @@
-import OptimisedImage from "@/components/Shared/OptimisedImage";
+import OptimisedImage from "@components/Shared/OptimisedImage";
 
 const MeshDouble: React.FC<{}> = ({}) => {
   return (

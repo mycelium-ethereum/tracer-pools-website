@@ -1,12 +1,13 @@
-import PostFilters from "@/components/Radar/PostFilters";
-import SearchBox from "@/components/Radar/SearchBox";
-import Container from "@/components/Shared/Container";
-import PageHeader from "@/components/Shared/PageHeader";
-import PageSection from "@/components/Shared/Section";
-import SEO from "@/components/Shared/SEO";
+import SEO from "@components/Shared/SEO";
+import TagFilters from "@components/Shared/TagFilters";
+import SearchBox from "@components/Shared/SearchBox";
+import Container from "@components/Shared/Container";
+import PageHeader from "@components/Shared/PageHeader";
+import PageSection from "@components/Shared/Section";
+import RadarPosts from "@components/Radar/RadarPosts";
 import { useRef, useState } from "react";
 import { GetStaticProps } from "next";
-import RadarPosts from "@/components/Radar/RadarPosts";
+import { tags } from "@components/Radar/presets";
 
 const BlogPage: React.FC<{ articles: any }> = ({ articles }) => {
   const [filteredArticles, setFilteredArticles] = useState(articles);
@@ -23,7 +24,11 @@ const BlogPage: React.FC<{ articles: any }> = ({ articles }) => {
             subheading="Read the latest news for Tracer"
           />
           <div className="flex flex-col-reverse justify-between sm:flex-row">
-            <PostFilters category={category} setCategory={setCategory} />
+            <TagFilters
+              tags={tags}
+              category={category}
+              setCategory={setCategory}
+            />
             <SearchBox
               articles={articles}
               setFilteredArticles={setFilteredArticles}

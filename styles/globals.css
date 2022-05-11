@@ -67,9 +67,9 @@ input::placeholder {
   @apply text-tertiary;
 }
 
-nav * {
+/* nav * {
   transition: unset !important;
-}
+} */
 
 /* Button hover classes */
 
@@ -245,6 +245,13 @@ nav * {
 .prose {
   max-width: 100%;
 }
+.prose p,
+.prose p strong {
+  @apply text-tertiary;
+}
+.prose p strong {
+  font-weight: bold;
+}
 .prose h1,
 .prose h2,
 .prose h3,
@@ -298,7 +305,7 @@ nav * {
   );
 }
 
-table:after {
+.careers-table:after {
   top: unset;
   bottom: 0;
 }

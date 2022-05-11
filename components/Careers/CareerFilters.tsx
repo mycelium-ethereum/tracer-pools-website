@@ -1,13 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
-import FilterBox from "@/components/Careers/FilterBox";
-import ClearFiltersButton from "@/components/Careers/ClearFiltersButton";
+import FilterBox from "@components/Careers/FilterBox";
+import ClearFiltersButton from "@components/Careers/ClearFiltersButton";
 
 const CareerFilters = ({ locations, teams, worktypes }) => {
   const [locationOpen, setLocationOpen] = useState(false);
   const [teamOpen, setTeamOpen] = useState(false);
   const [worktypeOpen, setWorktypeOpen] = useState(false);
   const [filtersChanged, setFiltersChanged] = useState(false);
-  const [matches, setMatches] = useState(false);
 
   const [locationFilterText, setLocationFilter] = useState("Location");
   const [teamFilterText, setTeamFilter] = useState("Team");
@@ -212,7 +211,7 @@ const CareerFilters = ({ locations, teams, worktypes }) => {
   };
 
   useEffect(() => {
-    setMatches(filterListings());
+    filterListings();
     checkFiltersModified();
   }, [locationFilterText, teamFilterText, worktypeFilterText]);
 

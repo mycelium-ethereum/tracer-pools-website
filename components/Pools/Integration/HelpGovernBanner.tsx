@@ -1,5 +1,5 @@
-import Button from "@/components/Shared/Button";
-import MeshUnderlay from "@/components/Shared/MeshUnderlay";
+import Button from "@components/Shared/Button";
+import MeshUnderlay from "@components/Shared/MeshUnderlay";
 
 const HelpGovernBanner: React.FC = () => {
   return (

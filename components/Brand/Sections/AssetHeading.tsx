@@ -1,4 +1,4 @@
-import GradientLine from "@/components/Shared/GradientLine";
+import GradientLine from "@components/Shared/GradientLine";
 
 const AssetHeading: React.FC<{
   heading: string;

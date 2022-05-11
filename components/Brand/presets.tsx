@@ -282,29 +282,11 @@ export const headings = {
   },
 };
 
-export const categoryInfo = [
-  {
-    name: "all",
-    text: "All",
-  },
-  {
-    name: "logos",
-    text: "Logos",
-  },
-  {
-    name: "colours",
-    text: "Colors",
-  },
-  {
-    name: "graphics",
-    text: "Support Graphics",
-  },
-  {
-    name: "elements3D",
-    text: "3D Elements",
-  },
-  {
-    name: "typography",
-    text: "Typography",
-  },
+export const tags = [
+  "Logos",
+  "Colors",
+  "Support Graphics",
+  "3D Elements",
+  "Typography",
+  "All",
 ];

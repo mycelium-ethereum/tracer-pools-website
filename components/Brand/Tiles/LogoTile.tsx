@@ -1,4 +1,4 @@
-import Download from "@/components/Brand/Download";
+import Download from "@components/Brand/Download";
 
 const BrandAssetTile: React.FC<{
   item: any;

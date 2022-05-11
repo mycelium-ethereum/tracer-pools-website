@@ -4,11 +4,11 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/lib/*": ["lib/*"],
-      "@/styles/*": ["styles/*"],
-      "@/context/*": ["context/*"],
-      "@/utils/*": ["utils/*"]
+      "@components/*": ["components/*"],
+      "@lib/*": ["lib/*"],
+      "@styles/*": ["styles/*"],
+      "@context/*": ["context/*"],
+      "@utils/*": ["utils/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { isMobile, sortByDate } from "@/lib/helpers";
+import { isMobile, sortByDate } from "@lib/helpers";
 
 const SidebarWrapper: React.FC<{
   bodyTextRef: React.MutableRefObject<HTMLDivElement>;

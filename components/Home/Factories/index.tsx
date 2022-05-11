@@ -1,8 +1,8 @@
-import Section from "@/components/Shared/Section";
-import Container from "@/components/Shared/Container";
-import Button from "@/components/Shared/Button";
-import AnimateIn from "@/components/Shared/AnimateIn";
-import GradientLine from "@/components/Shared/GradientLine";
+import Section from "@components/Shared/Section";
+import Container from "@components/Shared/Container";
+import Button from "@components/Shared/Button";
+import AnimateIn from "@components/Shared/AnimateIn";
+import GradientLine from "@components/Shared/GradientLine";
 
 const Factories: React.FC<{}> = () => {
   return (

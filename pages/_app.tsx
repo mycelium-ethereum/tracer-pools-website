@@ -1,9 +1,9 @@
 // Import css
-import "@/styles/globals.css";
-import AnimateLayout from "@/components/Shared/AnimateLayout";
+import "@styles/globals.css";
+import AnimateLayout from "@components/Shared/AnimateLayout";
 import { AnimatePresence } from "framer-motion";
-import Navbar from "@/components/Shared/Navbar";
-import Footer from "@/components/Shared/Footer/";
+import Navbar from "@components/Shared/Navbar";
+import Footer from "@components/Shared/Footer/";
 import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {

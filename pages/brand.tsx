@@ -1,24 +1,24 @@
 import { useState } from "react";
-import BrandFilters from "@/components/Brand/BrandFilters";
+import BrandFilters from "@components/Brand/BrandFilters";
 import {
   logos,
   graphics,
   elements3D,
   colours,
   headings,
-} from "@/components/Brand/presets";
-import SEO from "@/components/Shared/SEO";
-import PageHeader from "@/components/Shared/PageHeader";
-import Container from "@/components/Shared/Container";
-import PageSection from "@/components/Shared/Section";
-import LogoAssets from "@/components/Brand/Sections/LogoAssets";
-import ColourAssets from "@/components/Brand/Sections/ColourAssets";
-import TypographyAssets from "@/components/Brand/Sections/TypographyAssets";
-import GraphicAssets from "@/components/Brand/Sections/GraphicAssets";
-import Element3DAssets from "@/components/Brand/Sections/Element3DAssets";
+} from "@components/Brand/presets";
+import SEO from "@components/Shared/SEO";
+import PageHeader from "@components/Shared/PageHeader";
+import Container from "@components/Shared/Container";
+import PageSection from "@components/Shared/Section";
+import LogoAssets from "@components/Brand/Sections/LogoAssets";
+import ColourAssets from "@components/Brand/Sections/ColourAssets";
+import TypographyAssets from "@components/Brand/Sections/TypographyAssets";
+import GraphicAssets from "@components/Brand/Sections/GraphicAssets";
+import Element3DAssets from "@components/Brand/Sections/Element3DAssets";
 
 const BrandPage = () => {
-  const [category, setCategory] = useState("all");
+  const [category, setCategory] = useState("All");
   const brandComponents = {
     logos: (
       <LogoAssets
@@ -72,12 +72,12 @@ const BrandPage = () => {
           <BrandFilters category={category} setCategory={setCategory} />
           {
             {
-              logos: brandComponents.logos,
-              colours: brandComponents.colours,
-              graphics: brandComponents.graphics,
-              elements3D: brandComponents.elements3D,
-              typography: brandComponents.typography,
-              all: (
+              Logos: brandComponents.logos,
+              Colors: brandComponents.colours,
+              "Support Graphics": brandComponents.graphics,
+              "3D Elements": brandComponents.elements3D,
+              Typography: brandComponents.typography,
+              All: (
                 <>
                   {brandComponents.logos}
                   {brandComponents.colours}

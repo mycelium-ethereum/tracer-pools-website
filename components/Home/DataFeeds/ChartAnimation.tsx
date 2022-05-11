@@ -1,4 +1,4 @@
-import MeshUnderlay from "@/components/Shared/MeshUnderlay";
+import MeshUnderlay from "@components/Shared/MeshUnderlay";
 
 const ChartAnimation: React.FC<{}> = () => {
   return (

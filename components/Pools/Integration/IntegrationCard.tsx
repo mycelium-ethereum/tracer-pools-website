@@ -1,5 +1,5 @@
-import BulletHeading from "@/components/Shared/BulletHeading";
-// import OptimisedImage from "@/components/Shared/OptimisedImage";
+import UnderlinedHeading from "@components/Shared/UnderlinedHeading";
+// import OptimisedImage from "@components/Shared/OptimisedImage";
 
 const Integration: React.FC<{
   title: string;
@@ -12,9 +12,9 @@ const Integration: React.FC<{
         alt=""
         className="mb-4 h-[154px] w-[154px]"
       />
-      <BulletHeading lineColor="blue" className="max-w-[294px]">
+      <UnderlinedHeading lineColor="blue" className="max-w-[294px]">
         {title}
-      </BulletHeading>
+      </UnderlinedHeading>
       {text}
     </div>
   );

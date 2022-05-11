@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Container from "@/components/Shared/Container";
+import Container from "@components/Shared/Container";
 // Images
-import Category from "@/components/Shared/Footer/Category";
+import Category from "@components/Shared/Footer/Category";
 
 import {
   categoryNames,
@@ -12,9 +12,9 @@ import {
   contributeCategory,
   governCategory,
   connectCategory,
-} from "@/components/Shared/Footer/presets";
-import PageLink from "@/components/Shared/PageLink";
-import SocialLinks from "@/components/Shared/Footer/SocialLinks";
+} from "@components/Shared/Footer/presets";
+import PageLink from "@components/Shared/PageLink";
+import SocialLinks from "@components/Shared/Footer/SocialLinks";
 
 const Footer: React.FC<{ route: string }> = ({ route }) => {
   const [background, setBackground] = useState("bg-white");

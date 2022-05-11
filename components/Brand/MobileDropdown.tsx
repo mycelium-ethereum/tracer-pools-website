@@ -1,21 +1,12 @@
 import React, { SetStateAction } from "react";
 
 const MobileDropdown: React.FC<{
-  categoryInfo: {
-    name: string;
-    text: string;
-  }[];
+  tags: string[];
   dropdownText: string;
   dropdownOpen: boolean;
   setDropdownOpen: React.Dispatch<SetStateAction<boolean>>;
   handleClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
-}> = ({
-  categoryInfo,
-  dropdownText,
-  dropdownOpen,
-  setDropdownOpen,
-  handleClick,
-}) => {
+}> = ({ tags, dropdownText, dropdownOpen, setDropdownOpen, handleClick }) => {
   return (
     <div className="relative">
       <button
@@ -40,16 +31,16 @@ const MobileDropdown: React.FC<{
         }
       >
         <ul className="md:mt-2">
-          {categoryInfo.map((category, i) => (
+          {tags.map((tag, i) => (
             <li key={i}>
               <button
-                data-category={category.name}
+                data-category={tag}
                 onClick={handleClick}
                 className={`category-dropdown w-full py-1 px-4 text-left text-black transition-colors duration-300 ${
-                  i === categoryInfo.length - 1 ? "pb-1" : ""
+                  i === tags.length - 1 ? "pb-1" : ""
                 }`}
               >
-                {category.text}
+                {tag}
               </button>
             </li>
           ))}

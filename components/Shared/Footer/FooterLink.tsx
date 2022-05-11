@@ -1,4 +1,4 @@
-import PageLink from "@/components/Shared/PageLink";
+import PageLink from "@components/Shared/PageLink";
 
 const FooterLink: React.FC<{
   route: string;

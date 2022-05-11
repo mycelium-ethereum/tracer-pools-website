@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import Moment from "react-moment";
-import CategoryBubble from "@/components/Radar/CategoryBubble";
-import Button from "@/components/Shared/Button";
-import GradientLine from "@/components/Shared/GradientLine";
-import PageLink from "@/components/Shared/PageLink";
-import { isMobile, sortByDate } from "@/lib/helpers";
+import CategoryBubble from "@components/Shared/CategoryBubble";
+import Button from "@components/Shared/Button";
+import GradientLine from "@components/Shared/GradientLine";
+import PageLink from "@components/Shared/PageLink";
+import { isMobile, sortByDate } from "@lib/helpers";
 
 const Sidebar: React.FC<{
   currentArticle: any;

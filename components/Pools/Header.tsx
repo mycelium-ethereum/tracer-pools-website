@@ -1,5 +1,5 @@
-import Button from "@/components/Shared/Button";
-import AnimateIn from "@/components/Shared/AnimateIn";
+import Button from "@components/Shared/Button";
+import AnimateIn from "@components/Shared/AnimateIn";
 
 const Header: React.FC<{}> = () => {
   return (

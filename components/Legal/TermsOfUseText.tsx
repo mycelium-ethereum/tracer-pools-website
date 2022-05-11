@@ -1,4 +1,4 @@
-import PageLink from "@/components/Shared/PageLink";
+import PageLink from "@components/Shared/PageLink";
 
 const TermsOfUseText: React.FC<{
   containerRef: React.MutableRefObject<HTMLDivElement>;

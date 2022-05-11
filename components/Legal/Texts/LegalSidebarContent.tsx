@@ -1,5 +1,5 @@
-import GradientLine from "@/components/Shared/GradientLine";
-import PageLink from "@/components/Shared/PageLink";
+import GradientLine from "@components/Shared/GradientLine";
+import PageLink from "@components/Shared/PageLink";
 // import Button from "../Shared/Button";
 
 const LegalSidebarContent: React.FC<{ route: string }> = ({ route }) => {
@@ -9,7 +9,7 @@ const LegalSidebarContent: React.FC<{ route: string }> = ({ route }) => {
     { text: "Terms of Use", link: "/terms-of-use" },
     {
       text: "Participation Agreement",
-      outgoingLink: "/documents/Participation_Agreement.pdf",
+      outgoingLink: "/documents/Participation Agreement.pdf",
     },
     { text: "Interfaces Disclaimer", link: "/interfaces-disclaimer" },
   ];

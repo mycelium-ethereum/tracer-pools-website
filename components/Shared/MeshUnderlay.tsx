@@ -1,4 +1,4 @@
-import OptimisedImage from "@/components/Shared/OptimisedImage";
+import OptimisedImage from "@components/Shared/OptimisedImage";
 
 const MeshUnderlay: React.FC<{ fullPage?: boolean }> = ({ fullPage }) => {
   return (

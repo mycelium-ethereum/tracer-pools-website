@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { categoryInfo } from "@/components/Brand/presets";
+import { tags } from "@components/Brand/presets";
 import CategoryButton from "./CategoryButton";
 import MobileDropdown from "./MobileDropdown";
 
@@ -12,20 +12,20 @@ const BrandFilters: React.FC<{
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const buttonCategory = (e.target as HTMLButtonElement).dataset.category;
-    setCategory(category === buttonCategory ? "all" : buttonCategory);
+    setCategory(category === buttonCategory ? "All" : buttonCategory);
     setDropdownOpen(false);
     setDropdownText(category.charAt(0).toUpperCase() + category.slice(1));
   };
 
   return (
     <div className="relative z-10 mb-10 flex w-full items-center">
-      {categoryInfo.slice(1, 5).map((buttonCategory, i) => (
+      {tags.slice(1, 5).map((tag, i) => (
         <CategoryButton
           key={i}
           index={i}
           category={category}
-          categoryInfo={categoryInfo}
-          buttonCategory={buttonCategory}
+          tags={tags}
+          buttonCategory={tag}
           handleClick={handleClick}
         />
       ))}
@@ -33,7 +33,7 @@ const BrandFilters: React.FC<{
         <span className="mr-7 block text-[#828790] md:hidden">Jump to</span>
         <MobileDropdown
           {...{
-            categoryInfo,
+            tags,
             dropdownText,
             dropdownOpen,
             setDropdownOpen,

@@ -1,5 +1,5 @@
 import React from "react";
-import FooterLink from "@/components/Shared/Footer/FooterLink";
+import FooterLink from "@components/Shared/Footer/FooterLink";
 
 const Category: React.FC<{
   name: string;

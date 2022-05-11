@@ -1,4 +1,4 @@
-import AnimateIn from "@/components/Shared/AnimateIn";
+import AnimateIn from "@components/Shared/AnimateIn";
 import GradientLine from "../Shared/GradientLine";
 
 const IntroText: React.FC<{}> = () => {

@@ -1,6 +1,6 @@
-import AssetHeading from "@/components/Brand/Sections/AssetHeading";
-import Button from "@/components/Shared/Button";
-import BrandElement3DTile from "@/components/Brand/Tiles/Element3DTile";
+import AssetHeading from "@components/Brand/Sections/AssetHeading";
+import Button from "@components/Shared/Button";
+import BrandElement3DTile from "@components/Brand/Tiles/Element3DTile";
 
 const Element3DAssets: React.FC<{
   heading: string;

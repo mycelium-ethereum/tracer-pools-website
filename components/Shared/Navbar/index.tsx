@@ -1,22 +1,22 @@
 // import Link from "next/link";
-import Container from "@/components/Shared/Container";
-import NavLink from "@/components/Shared/Navbar/NavLink";
-// import HamburgerMenu from "@/components/Shared/Navbar/HamburgerMenu";
-// import MobileNav from "@/components/Shared/Navbar/MobileNav";
+import Container from "@components/Shared/Container";
+import NavLink from "@components/Shared/Navbar/NavLink";
+import HamburgerMenu from "@components/Shared/Navbar/HamburgerMenu";
+// import MobileNav from "@components/Shared/Navbar/MobileNav";
 import { useCallback, useEffect, useState } from "react";
-import { disableScroll, enableScroll, isCollapsed } from "@/lib/helpers";
-import Logo from "@/components/Shared/Logo";
-import LaunchAppButton from "@/components/Shared/Navbar/LaunchAppButton";
+import { disableScroll, enableScroll, isCollapsed } from "@lib/helpers";
+import Logo from "@components/Shared/Logo";
+import LaunchAppButton from "@components/Shared/Navbar/LaunchAppButton";
 
 const Navbar: React.FC<{ route: string }> = ({ route }) => {
   const [navOpen, setNavOpen] = useState<boolean>(false);
-  const [navStyles, setNavStyles] = useState<string>("");
+  const [navColour, setNavColour] = useState<string>("");
   const [currentSection, setCurrentSection] = useState<string>("");
   const [y, setY] = useState<number>(0);
   const [visible, setVisible] = useState<boolean>(true);
-  const whiteStyles = "text-white";
-  const blueStyles = "text-action-active";
-  const solidStyles = "text-action-active bg-white";
+  const whiteStyles = "text-white lg:[backdrop-filter:unset]";
+  const blueStyles = "text-action-active lg:[backdrop-filter:unset]";
+  const solidBlueStyles = "text-action-active";
 
   const links = [
     { label: "Products", href: "/products" },
@@ -103,9 +103,9 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
           break;
       }
     } else {
-      navTextColour = solidStyles;
+      navTextColour = solidBlueStyles;
     }
-    setNavStyles(navTextColour);
+    setNavColour(navTextColour);
   };
 
   const handleClose = () => {
@@ -176,7 +176,7 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 z-40 flex h-[70px] w-full transform-gpu items-center transition-all duration-300 ${navStyles}
+        className={`fixed top-0 left-0 z-40 flex h-[70px] w-full transform-gpu items-center transition-all duration-300 [backdrop-filter:blur(10px)] ${navColour}
        ${visible ? "visible" : "xl:invisible xl:-translate-y-[70px]"}`}
       >
         <Container className="flex items-center justify-between">
@@ -189,7 +189,7 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
             ))}
             <LaunchAppButton />
           </div>
-          {/* <HamburgerMenu navOpen={navOpen} setNavOpen={setNavOpen} /> */}
+          <HamburgerMenu navOpen={navOpen} setNavOpen={setNavOpen} />
         </Container>
       </nav>
       {/* <MobileNav navOpen={navOpen} handleClose={handleClose} /> */}

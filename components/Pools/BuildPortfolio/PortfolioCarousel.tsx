@@ -5,8 +5,8 @@ import { useState } from "react";
 import {
   settings,
   portfolioCarouselItems,
-} from "@/components/Pools/BuildPortfolio/presets";
-import GradientLine from "@/components/Shared/GradientLine";
+} from "@components/Pools/BuildPortfolio/presets";
+import GradientLine from "@components/Shared/GradientLine";
 
 const PortfolioCarousel: React.FC<{}> = () => {
   const [slider, setSlider] = useState(null);

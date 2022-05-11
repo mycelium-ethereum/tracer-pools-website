@@ -6,7 +6,7 @@ import {
   exposureItems,
   sliderNavSettings,
   sliderMainSettings,
-} from "@/components/Pools/MechanismDesign/presets";
+} from "@components/Pools/MechanismDesign/presets";
 
 const MechanismSlider: React.FC<{}> = () => {
   const [slider1, setSlider1] = useState(null);
