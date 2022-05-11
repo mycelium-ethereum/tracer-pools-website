@@ -46,7 +46,7 @@ const TracerDrop: React.FC<{}> = () => {
 // const YOUTUBE_PLAYLIST_ITEMS_API =
 //   "https://www.googleapis.com/youtube/v3/playlistItems";
 
-// export default TracerDrop;
+export default TracerDrop;
 
 // export async function getServerSideProps() {
 //   const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}`);
