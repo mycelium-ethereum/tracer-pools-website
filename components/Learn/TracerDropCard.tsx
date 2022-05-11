@@ -33,11 +33,11 @@ const TracerDropCard: React.FC<{
           <p className="post-description overflow-hidden text-sm leading-[20px] text-tertiary">
             {article.description}
           </p>
-          {article.category && <CategoryBubble category={article.category} />}
+          {/* {article.category && <CategoryBubble category={article.category} />} */}
         </div>
       </article>
     </a>
   );
 };
 
-export default RadarPostCard;
+export default TracerDropCard;
