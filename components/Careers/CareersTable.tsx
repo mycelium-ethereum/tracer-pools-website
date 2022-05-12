@@ -5,6 +5,7 @@ import ErrorText from "@components/Careers/ErrorText";
 import NoJobsAvailableText from "@components/Careers/NoJobsAvailableText";
 import JobDiv from "@components/Careers/JobDiv";
 import JobRow from "@components/Careers/JobRow";
+import GradientLine from "@components/Shared/GradientLine";
 
 const CareersTable = () => {
   const careerTable = useRef(null);
@@ -145,11 +146,8 @@ const CareersTable = () => {
         </thead>
         <tbody>{jobRows}</tbody>
       </table>
-      <div
-        className={`block w-full lg:hidden ${
-          showNoJobs ? "" : "border-tracer-darkgray [border-top-width:0.1px]"
-        }`}
-      >
+      <div className={`block w-full lg:hidden`}>
+        <GradientLine color="lightblue" />
         {jobDivs}
       </div>
       {showNoJobs && !showError && <NoJobsAvailableText />}

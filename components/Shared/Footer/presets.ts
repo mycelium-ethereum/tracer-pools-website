@@ -65,8 +65,20 @@ export const tracerDAOCategory = [
         text: "Brand Assets",
     },
     {
-        text: "Legal and Privacy",
+        text: "Privacy Policy",
         url: "/privacy-policy",
+    },
+    {
+        text: "Terms of Use",
+        url: "/terms-of-use",
+    },
+    {
+        text: "Participation Agreement",
+        url: "/documents/Participation%20Agreement.pdf",
+    },
+    {
+        text: "Interfaces Disclaimer",
+        url: "/interfaces-disclaimer",
     },
 ];
 

@@ -126,7 +126,8 @@ const CareerFilters = ({ locations, teams, worktypes }) => {
         td.classList.add("max-h-0", "opacity-0");
       });
     } else {
-      job.classList.remove("max-h-[207px]");
+      job.classList.remove("max-h-[221px]");
+      job.classList.remove("overflow-visible");
     }
   };
 
@@ -147,7 +148,8 @@ const CareerFilters = ({ locations, teams, worktypes }) => {
         td.classList.remove("max-h-0", "opacity-0");
       });
     } else {
-      job.classList.add("max-h-[207px]");
+      job.classList.add("max-h-[221px]");
+      job.classList.add("overflow-hidden");
     }
   };
 
@@ -224,8 +226,8 @@ const CareerFilters = ({ locations, teams, worktypes }) => {
 
   return (
     <>
-      <div className="flex w-full flex-col items-center justify-center xl:flex-row xl:justify-start">
-        <span className="mb-4 block text-[#828790] xl:mb-0">Filter:</span>
+      <div className="flex w-full flex-col justify-center lg:flex-row lg:items-center lg:justify-start">
+        <span className="mb-4 block text-[#828790] lg:mb-0">Filter:</span>
         {/* Location filter */}
         <FilterBox
           onClickAction={setLocationOpen}

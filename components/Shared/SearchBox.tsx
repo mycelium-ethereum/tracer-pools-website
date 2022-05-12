@@ -32,7 +32,7 @@ const SearchBox: React.FC<{
   }, [query]);
 
   return (
-    <div className="relative mb-4 ml-2 h-10 w-full max-w-[404px] rounded-lg border-2 border-action-active text-action-active sm:mb-0 lg:w-[404px]">
+    <div className="relative mb-4 h-10 w-full max-w-[404px] rounded-lg border-2 border-action-active text-action-active sm:ml-2 sm:mb-0 lg:w-[404px]">
       <input
         type="text"
         className="flex h-full w-full items-center bg-transparent pl-9"

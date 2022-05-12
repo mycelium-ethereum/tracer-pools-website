@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Container from "@components/Shared/Container";
-// Images
 import Category from "@components/Shared/Footer/Category";
-
 import {
   categoryNames,
   socialLinks,

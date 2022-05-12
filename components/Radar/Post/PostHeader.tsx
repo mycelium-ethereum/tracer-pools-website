@@ -15,15 +15,20 @@ const PostHeader: React.FC<{
       <small className="mt-2 block text-xl font-light leading-[30px]">
         {data.tagline}
       </small>
-      <div className="flex items-center pt-[66px]">
-        <Moment format="Do MMMM, YYYY" className="mr-2 text-highlight">
-          {data.publish_date}
-        </Moment>
-        <span>
-          Read time: {data.read_time}&nbsp;
-          {data.read_time === 1 ? "minute" : "minutes"}
-        </span>
-        <ShareButtons title={data.title} className="ml-10" />
+      <div className="flex flex-col pt-[66px] sm:flex-row sm:items-center">
+        <div className="flex">
+          <Moment format="Do MMMM, YYYY" className="mr-2 text-highlight">
+            {data.publish_date}
+          </Moment>
+          <span>
+            Read time: {data.read_time}&nbsp;
+            {data.read_time === 1 ? "minute" : "minutes"}
+          </span>
+        </div>
+        <ShareButtons
+          title={data.title}
+          className="mt-2 -translate-x-2 sm:mt-0 sm:ml-10 sm:translate-x-0"
+        />
       </div>
       {data.category && (
         <div className="my-2.5">

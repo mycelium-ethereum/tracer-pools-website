@@ -8,7 +8,7 @@ import Container from "@components/Shared/Container";
 import SidebarWrapper from "@components/Shared/SidebarWrapper";
 import MeshUnderlay from "@components/Shared/Mesh/MeshUnderlay";
 import CallToAction from "@components/Radar/Post/CallToAction";
-import PostSidebarContent from "@components/Radar/Post/PostSidebarContent";
+import PostSidebarContent from "@components/Radar/Sidebar/PostSidebarContent";
 import PostHeader from "@components/Radar/Post/PostHeader";
 import ShareButtons from "@components/Radar/Post/ShareButtons";
 
@@ -77,13 +77,16 @@ const Article = ({ data, articles }) => {
         image={data.image[0].formats.small.url}
         publishedTime={data.publish_date}
       />
-      <section className="relative z-20 pt-[140px] pb-5">
+      <section className="relative z-20 pt-[140px] lg:pb-5">
         <Container className="leading-[24px] text-tertiary">
           <div className="max-w-[840px]">
             <PostHeader data={data} />
             <div className="prose mt-9" ref={bodyTextRef} />
           </div>
-          <ShareButtons title={data.title} className="mt-10 mb-12" />
+          <ShareButtons
+            title={data.title}
+            className="mt-10 mb-12 -translate-x-2"
+          />
           <CallToAction />
         </Container>
         <SidebarWrapper bodyTextRef={bodyTextRef}>
