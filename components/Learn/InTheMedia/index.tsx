@@ -12,11 +12,25 @@ import TwoColumnLayout from "@components/Shared/Layouts/TwoColumnLayout";
 import { filterArticles, handleLearnPageResize } from "@lib/helpers";
 import ViewAllButton from "@components/Learn/ViewAllButton";
 
-const InTheMedia: React.FC<{ mediaVideoData: any }> = ({ mediaVideoData }) => {
+const InTheMedia: React.FC<{ mediaVideos: string[]; mediaVideoData: any }> = ({
+  mediaVideos,
+  mediaVideoData,
+}) => {
+  mediaVideoData.sort(
+    (a: any, b: any) => mediaVideos.indexOf(a) - mediaVideoData.indexOf(b)
+  );
   const [columns, setColumns] = useState<number>(3);
   const [showAll, setShowAll] = useState<boolean>(false);
   const [amountToShow, setAmountToShow] = useState<number>(columns);
   const [postsInView, setPostsInView] = useState<any[]>(mediaVideoData);
+
+  const sortVideos = () => {
+    const videos = postsInView;
+    videos.sort(
+      (a: any, b: any) =>
+        mediaVideoData.indexOf(a) - mediaVideos.indexOf(b.items[0].id)
+    );
+  };
 
   const handleShowAll = () => {
     setShowAll(true);
@@ -29,6 +43,10 @@ const InTheMedia: React.FC<{ mediaVideoData: any }> = ({ mediaVideoData }) => {
   useEffect(() => {
     filterArticles(mediaVideoData, amountToShow, setPostsInView);
   }, [amountToShow]);
+
+  useEffect(() => {
+    sortVideos();
+  }, [postsInView]);
 
   useEffect(() => {
     handleLearnPageResize(setAmountToShow, setColumns, setShowAll);

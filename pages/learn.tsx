@@ -19,7 +19,7 @@ const LearnPage: React.FC<{ dropVideoData: any; mediaVideoData: any }> = ({
       <TracerLibrary />
       <UserDocs />
       <TracerDrop dropVideoData={dropVideoData} />
-      <InTheMedia mediaVideoData={mediaVideoData} />
+      <InTheMedia mediaVideos={mediaVideos} mediaVideoData={mediaVideoData} />
       <FAQs />
     </>
   );
