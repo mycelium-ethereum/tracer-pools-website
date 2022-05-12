@@ -39,7 +39,7 @@ body {
 
 /* Dark blue background on text selection */
 ::selection {
-  @apply bg-blue-400 text-white;
+  @apply bg-action-active text-white;
 }
 
 /*CUSTOM SCROLLBAR*/
@@ -91,9 +91,9 @@ input::placeholder {
 }
 .btn-gradient-blue-dark {
   background: linear-gradient(
-    187.04deg,
-    rgba(28, 100, 242, 0.5) -11.86%,
-    rgba(28, 100, 242, 0) 104.96%
+    267.35deg,
+    rgba(28, 100, 242, 0.5) -63%,
+    rgba(28, 100, 242, 0) 233.88%
   );
 }
 .btn-gradient-purple {

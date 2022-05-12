@@ -1,25 +1,14 @@
 import Moment from "react-moment";
 import CategoryBubble from "@components/Shared/CategoryBubble";
-import Button from "@components/Shared/Button";
 import GradientLine from "@components/Shared/GradientLine";
 import PageLink from "@components/Shared/PageLink";
-import { sortByDate } from "@lib/helpers";
+import RelatedArticles from "@components/Radar/Sidebar/RelatedArticles";
+import ShareButtons from "../ShareButtons";
 
 const PostSidebarContent: React.FC<{
   currentArticle: any;
   articles: any;
 }> = ({ currentArticle, articles }) => {
-  const getRelatedArticles = () => {
-    const relatedArticles = articles
-      .sort(sortByDate)
-      .filter(
-        (article) =>
-          article.category === currentArticle.category &&
-          article.slug !== currentArticle.slug
-      );
-    return relatedArticles;
-  };
-
   return (
     <>
       <picture>
@@ -40,42 +29,24 @@ const PostSidebarContent: React.FC<{
         >
           {currentArticle.publish_date}
         </Moment>
-        <h2 className="my-1 text-xl font-bold leading-[120%] text-action-active">
-          {currentArticle.title}
-        </h2>
+        <PageLink href={`/radar/${currentArticle.slug}`}>
+          <h2 className="my-1 text-xl font-bold leading-[120%] text-action-active">
+            {currentArticle.title}
+          </h2>
+        </PageLink>
         <small className="post-description overflow-hidden text-sm leading-[20px] text-tertiary">
           {currentArticle.tagline}
         </small>
+        <ShareButtons
+          title={currentArticle.title}
+          className="my-4 -translate-x-2"
+          smallerMargin
+        />
         {currentArticle.category && (
           <CategoryBubble category={currentArticle.category} />
         )}
       </div>
-      <div className="p-4">
-        <span className="mb-2 block text-xs tracking-[0.15em] text-tertiary">
-          RELATED ARTICLES
-        </span>
-        <GradientLine color="grey" />
-        {getRelatedArticles()
-          .slice(0, 2)
-          .map((article: any, i: number) => (
-            <span key={i} className="my-2 block">
-              <PageLink href={`/radar/${article.slug}`}>
-                <span className="font-bold leading-[24px] text-action-active">
-                  {article.title}
-                </span>
-              </PageLink>
-              {i === 0 && <GradientLine color="grey" />}
-            </span>
-          ))}
-        <Button
-          lightBlueGradient
-          link="/radar"
-          className="mt-4"
-          linkClassName="text-action-active"
-        >
-          All Articles
-        </Button>
-      </div>
+      <RelatedArticles currentArticle={currentArticle} articles={articles} />
     </>
   );
 };

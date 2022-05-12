@@ -1,0 +1,114 @@
+![Voyage_Announcement_Blog_02-01.png](https://storage.googleapis.com/mycelium-bucket/Voyage_Announcement_Blog_02_01_01f2229375/Voyage_Announcement_Blog_02_01_01f2229375.png)
+
+## The Tracer Voyage: setting sail towards Perpetual Pools V2
+
+In just a few short days the ability to mint the first ever long-term leveraged tokens in DeFi will be unlocked by Tracer on Arbitrum mainnet.
+
+Pack your bags, as we are about to embark on a journey through the novel lands of DeFi derivatives.
+
+The Tracer Voyage will serve as a guided tour of each of the novel use cases Perpetual Pools V2 enables. Before we arrive at our final destination - the official launch of Perpetual Pools V2 - we will drop anchor along the way to explore some of the exciting use cases.
+
+On our journey towards the future we will show off the new world we have built. A world where any governance token can be used to take positions or hedge; where you can create custom, diversified portfolios represented by a single token; and where liquidations have been cured.
+
+Only with Tracer can you trade the “Flippening”, get exposure to Cryptopunks and hedge your exposure to oil all on a single platform.
+
+Oh, and did we mention you can share in over 6 million TCR rewards and receive POAPs and exclusive NFTs just by participating along the way?
+
+Following The Tracer Voyage, we will push out the full release of Perpetual Pools V2 along with our Indices and Factory interfaces to let the Cambrian explosion of new markets commence.
+
+<div style="position:relative;margin:40px 0;pointer-events:none;">
+    <img src="https://storage.googleapis.com/mycelium-bucket/Voyage_Main_GIF_3_c7ac570fd7/Voyage_Main_GIF_3_c7ac570fd7.gif"/>
+  <img style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);margin-top: 0px;" src="https://storage.googleapis.com/mycelium-bucket/Voyage_V2_Island_Twitter_post_FA_01_08_6f840e227b/Voyage_V2_Island_Twitter_post_FA_01_08_6f840e227b.png" alt=""/>
+</div>
+
+<div style="position:relative">
+  <div style="position:absolute;left:-270px;">
+      <img src="https://storage.googleapis.com/mycelium-bucket/Voyage_Map_V2_Island_Assets_04_1_ffb94c4c0b/Voyage_Map_V2_Island_Assets_04_1_ffb94c4c0b.png" style="width:245px;height:300px"/>
+  </div>
+</div>
+
+## Our first destination
+
+Our journey will begin on May 18 and we will set sail to our first island to explore the core value of V2: **the creation of long-term leveraged tokens which can never be liquidated.**
+
+Two markets will be live from May 18, to allow us to explore this concept:
+
+- 3x ETH/USD settled in USDC
+- 3x BTC/USD settled in USDC
+
+## Where to next?
+
+Following our first stop, we’ll bring you along for the journey as we explore several other use-cases of Tracer. Will it be venturing into the lands of exotic collateral? Or will we find ourselves trading real world assets or NFT markets? Stay tuned via [Twitter](https://twitter.com/TracerDAO) to find out where the Voyage takes you next.
+
+## Earn TCR & NFT Rewards
+
+While you explore Tracer’s Voyage, you’ll be earning TCR and working your way towards an exclusive NFT. Each week TCR emissions will be used to reward our first voyagers, with enhanced emissions directed to that week’s focus market. This means you can earn boosted TCR rewards just by following along with The Voyage each week.
+
+<div style="position:relative">
+  <div style="position:absolute;right:-300px;">
+      <img src="https://storage.googleapis.com/mycelium-bucket/Voyage_Map_V2_Island_Assets_03_1_d5f6d5458f/Voyage_Map_V2_Island_Assets_03_1_d5f6d5458f.png" style="width:270px;height:304px"/>
+  </div>
+</div>
+
+**The Voyage NFT**
+
+Qualify for the Voyage NFT by participating in The Voyage each week. Simply take a long or short position in the market(s) of the week, read the official related article(s) released each week, and complete a weekly quiz to collect a POAP. If you **collect all POAPs** by the end of the Tracer Voyage, you’ll be airdropped the Tracer Voyage NFT. \*\*\*\*The Voyage NFT is an indication of your interest and dedication to Tracer’s PPV2, and these NFTs might just be tied to further benefits down the track - more on this to come.
+
+## How to Participate in the Voyage
+
+There will be several unique destinations that we stop off at during the Voyage; but each time we drop anchor there are a few common activities you should complete.
+
+1. Read that destination’s official Tracer Voyage article - it will reveal to you the secrets and power of the focus market of that destination.
+2. Complete the short quiz on the article to be eligible to receive your POAP. The quiz link will be at the bottom of the article under the “For the Voyagers” heading.
+3. Take a long or short position in the focus market of that destination using the Perpetual Pools V2 beta interface. This combined with Step 2 above will enable you to receive that destination’s POAP.
+4. Stake your long or short tokens on the Tracer “Stake” page to earn TCR rewards.
+5. Tell your friends!
+
+Don’t forget, you’ll need to collect all the Voyage POAPs to be eligible for The Tracer NFT drop at the end of the journey!
+
+## Where will the Tracer Voyage take you
+
+**Is the merge making you bullish on ETH?**
+
+Go long without worrying about timing your entry perfectly or short term volatility triggering a liquidation.
+
+**Mad that you were late to the party on Cryptopunks?**
+
+Get the Cryptopunk exposure you desire without needing to wrangle up ~70 ETH.
+
+**Do you believe that ETH will flip BTC one day or are you sure BTC will maintain dominance?**
+
+Take a position which ignores the volatility and cyclicality of the aggregate market by trading your belief using a ‘Flippening’ market which bets on the relative market capitalisation of ETH and BTC.
+
+**Do you want exposure to a group of tokens but are sick of having to manage multiple positions?**
+
+Create an index products which gives you exposure to the assets you’re most bullish on.
+
+**Long time OHMie looking for some more utility from the decentralized reserve currency of the future?**
+
+Gain some exposure to another asset using gOHM as settlement collateral.
+
+**Worried about inflation?**
+
+Hedge your risk by going long gold with an XAU market.
+
+These are just some of the exciting ways you can use the proof-of-concept markets. Imagine what else is possible.
+
+## About Perpetual Pools
+
+Tracer’s Perpetual Pools V1 contracts have been live since September 2021 allowing the creation of long-term leveraged tokens which provide the ability to hedge downside risk, or speculate with leverage without the fear of liquidation or the need to maintain a margin account. Since launching, the contracts have handled over $400M in primary market volume and had a peak TVL of over $50M all with zero exploits, security incidents or positions liquidated.
+
+V2 brings to the fray a series of improvements targeted at minimising the impacts of volatility decay and unlocks the ability for users to permissionlessly create new exotic markets, using any available price feed, that can settle in any token, without writing a single line of code via our factory interface.
+
+The ability to permissionlessly deploy any market, on any Chainlink oracle feed using any ERC20 as settlement will be pushed out during a later release at the completion of this initial launch marketing campaign.
+
+### Bon voyage, Tracers!
+
+## Useful Links:
+
+- [V1 —> V2 Migration FAQ’s](https://tracer.finance/radar/v2-migration/)
+- [Perpetual Pools ELI5](https://tracer.finance/radar/tracer-perpetual-pools-eli5/)
+- [Mint and Burn Guide](https://tracer.finance/radar/minting-burning/)
+- [Staking Pool Tokens Guide](https://tracer.finance/radar/staking)
+- [Documentation](https://docs.tracer.finance/tracer/master)
+- [Tracer Vision](https://tracer.finance/radar/future-of-derivatives/)

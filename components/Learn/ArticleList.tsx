@@ -37,7 +37,7 @@ const ArticleList: React.FC<{
         }
         resetArticlesInView();
         postContainerRef.current.classList.remove("opacity-0");
-      }, 500);
+      }, 300);
       setPrevCategory(category);
     }
   };
@@ -112,7 +112,7 @@ const ArticleList: React.FC<{
       ref={postContainerRef}
       id="post-container"
       className={`grid grid-cols-1 gap-x-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 4xl:grid-cols-5 ${
-        sorted ? "transition-opacity duration-500" : ""
+        sorted ? "transition-opacity duration-300" : ""
       }`}
     >
       {sorted &&
@@ -151,7 +151,13 @@ const ArticleList: React.FC<{
       {!showAll &&
         sortedArticles.length > columns * 2 &&
         sortedArticles.length > 4 && (
-          <ViewAllButton handleShowAll={handleShowAll}>Show All</ViewAllButton>
+          <Button
+            lightBlueGradient
+            className="btn-full-width mt-8 grid-cols-1 gap-x-4 sm:col-start-2 sm:-translate-x-1/2 lg:col-start-2 lg:translate-x-0 xl:col-start-2 xl:translate-x-1/2 4xl:col-start-3 4xl:translate-x-0"
+            action={handleShowAll}
+          >
+            Show All
+          </Button>
         )}
     </div>
   );

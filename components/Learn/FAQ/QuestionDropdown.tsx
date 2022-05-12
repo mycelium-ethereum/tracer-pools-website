@@ -37,7 +37,8 @@ const QuestionDropdown: React.FC<{
 
   return (
     <div
-      className={`group mb-4 h-min w-[calc(50%-8px)] flex-shrink rounded-lg bg-white text-lg text-white transition-colors duration-500 [box-shadow:_0px_2px_4px_rgba(0,0,0,0.1)] hover:bg-action-cell focus:outline-none
+      className={`group mb-4 h-min w-[calc(50%-8px)] flex-shrink rounded-lg bg-white text-lg text-white transition-colors duration-300 [box-shadow:_0px_2px_4px_rgba(0,0,0,0.1)] focus:outline-none
+      ${open ? "" : "hover:bg-action-cell"}
       ${className ? className : ""}`}
     >
       <button
