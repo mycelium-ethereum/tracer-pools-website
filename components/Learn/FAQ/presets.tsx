@@ -3,25 +3,6 @@ const paragraphStyles = "mb-4 mt-2 text-sm text-tertiary";
 
 export const faqQuestions = [
   {
-    question: "How do I use Perpertual Pools on Arbitrum?",
-    answer: (
-      <p className={paragraphStyles}>
-        To use Perpetual Pools, you’ll need to be on a network called Arbitrum.
-        Arbitrum is an Ethereum L2, which means it has the security of the
-        Ethereum blockchain but is cheaper and faster to use. Once you’re
-        connected, minting leveraged tokens is a breeze. Check out our{" "}
-        <PageLink
-          href="/radar/bridging-to-arbitrum/"
-          className="text-blue-400 underline"
-          // id = "faq-arbitrum-guide"
-        >
-          Arbitrum guide
-        </PageLink>{" "}
-        to get setup.
-      </p>
-    ),
-  },
-  {
     question: "Are Perpetual Pools Different from Perpetual Swaps?",
     answer: (
       <p className={paragraphStyles}>
@@ -40,6 +21,25 @@ export const faqQuestions = [
           here
         </a>
         .
+      </p>
+    ),
+  },
+  {
+    question: "How do I use Perpertual Pools on Arbitrum?",
+    answer: (
+      <p className={paragraphStyles}>
+        To use Perpetual Pools, you’ll need to be on a network called Arbitrum.
+        Arbitrum is an Ethereum L2, which means it has the security of the
+        Ethereum blockchain but is cheaper and faster to use. Once you’re
+        connected, minting leveraged tokens is a breeze. Check out our{" "}
+        <PageLink
+          href="/radar/bridging-to-arbitrum/"
+          className="text-blue-400 underline"
+          // id = "faq-arbitrum-guide"
+        >
+          Arbitrum guide
+        </PageLink>{" "}
+        to get setup.
       </p>
     ),
   },

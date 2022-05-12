@@ -1,4 +1,4 @@
-import UnderlinedHeading from "@components/Shared/UnderlinedHeading";
+import UnderlinedHeading from "@components/Shared/Heading/UnderlinedHeading";
 // import OptimisedImage from "@components/Shared/OptimisedImage";
 
 const Integration: React.FC<{

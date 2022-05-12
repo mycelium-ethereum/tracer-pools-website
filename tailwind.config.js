@@ -35,6 +35,9 @@ module.exports = {
         tertiary: "#7D8795",
         highlight: "#1C64F2",
         footnote: "#D6DFE6",
+        alternative: {
+          active: "#00D9E9",
+        },
         action: {
           active: "#1C64F2",
           inactive: "#C8DCFA",

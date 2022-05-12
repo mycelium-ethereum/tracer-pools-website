@@ -1,5 +1,5 @@
 import AssetHeading from "@components/Brand/Sections/AssetHeading";
-import Button from "@components/Shared/Button";
+import Button from "@components/Shared/Buttons/Button";
 
 const TypographyAssets: React.FC<{
   heading: string;

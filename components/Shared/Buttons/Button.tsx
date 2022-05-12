@@ -1,5 +1,5 @@
 import React from "react";
-import PageLink from "./PageLink";
+import PageLink from "../PageLink";
 
 const Button: React.FC<{
   className?: string;
@@ -11,6 +11,7 @@ const Button: React.FC<{
   purpleGradient?: boolean;
   clear?: boolean;
   lightBlueGradient?: boolean;
+  ultralightBlueGradient?: boolean;
   darkBlueGradient?: boolean;
   link?: string;
   outgoingLink?: string;
@@ -24,6 +25,7 @@ const Button: React.FC<{
   purpleTransparent,
   purpleGradient,
   lightBlueGradient,
+  ultralightBlueGradient,
   darkBlueGradient,
   clear,
   link,
@@ -50,12 +52,17 @@ const Button: React.FC<{
       } 
       ${
         darkBlueGradient
-          ? "btn-gradient-blue-dark border-action-active text-white hover:text-action-active "
+          ? "btn-gradient-blue-dark border-action-active text-white hover:bg-action-active hover:text-white "
           : ""
       } 
       ${
         lightBlueGradient
           ? "btn-gradient-blue-light border-action-active text-action-active "
+          : ""
+      } 
+      ${
+        ultralightBlueGradient
+          ? "btn-gradient-blue-ultralight border-alternative-active text-white "
           : ""
       } 
       ${clear ? "btn-clear text-action-active hover:text-white " : ""}

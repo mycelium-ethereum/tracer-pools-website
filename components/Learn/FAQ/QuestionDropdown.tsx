@@ -6,8 +6,7 @@ const QuestionDropdown: React.FC<{
     question: string;
     answer: JSX.Element;
   };
-  className?: string;
-}> = ({ content, className }) => {
+}> = ({ content }) => {
   const [open, setOpen] = useState(false);
   const panel = useRef(null);
 
@@ -37,12 +36,11 @@ const QuestionDropdown: React.FC<{
 
   return (
     <div
-      className={`group mb-4 h-min w-[calc(50%-8px)] flex-shrink rounded-lg bg-white text-lg text-white transition-colors duration-300 [box-shadow:_0px_2px_4px_rgba(0,0,0,0.1)] focus:outline-none
-      ${open ? "" : "hover:bg-action-cell"}
-      ${className ? className : ""}`}
+      className={`group mb-4 h-min flex-shrink rounded-lg bg-white text-lg text-white transition-colors duration-300 [box-shadow:_0px_2px_4px_rgba(0,0,0,0.1)] focus:outline-none
+      ${open ? "" : "hover:bg-action-cell"}`}
     >
       <button
-        className={`relative flex w-full cursor-pointer select-none items-center border-0 p-4 text-left font-bold text-action-active outline-none transition-all duration-300 ${
+        className={`relative flex w-full cursor-pointer select-none items-center border-0 p-4 pr-10 text-left font-bold text-action-active outline-none transition-all duration-300 ${
           open ? "pb-2" : ""
         }`}
         onClick={handleClick}

@@ -5,8 +5,8 @@ import ThreeColumnLayout from "@components/Shared/Layouts/ThreeColumnLayout";
 import TwoColumnLayout from "@components/Shared/Layouts/TwoColumnLayout";
 import OneColumnLayout from "@components/Shared/Layouts/OneColumnLayout";
 import ArticleCard from "@components/Learn/ArticleCard";
-import Button from "@components/Shared/Button";
-import ViewAllButton from "./ViewAllButton";
+import Button from "@components/Shared/Buttons/Button";
+import ViewAllButton from "../ViewAllButton";
 
 const ArticleList: React.FC<{
   filteredArticles: any;

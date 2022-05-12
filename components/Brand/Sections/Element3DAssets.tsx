@@ -1,5 +1,5 @@
 import AssetHeading from "@components/Brand/Sections/AssetHeading";
-import Button from "@components/Shared/Button";
+import Button from "@components/Shared/Buttons/Button";
 import BrandElement3DTile from "@components/Brand/Tiles/Element3DTile";
 
 const Element3DAssets: React.FC<{

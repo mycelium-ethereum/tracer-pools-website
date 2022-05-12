@@ -1,4 +1,4 @@
-import Button from "../Shared/Button";
+import Button from "../Shared/Buttons/Button";
 import GradientLine from "../Shared/GradientLine";
 
 const CareersBanner: React.FC<{}> = ({}) => {

@@ -6,11 +6,11 @@ import DOMPurify from "dompurify";
 import SEO from "@components/Shared/SEO";
 import Container from "@components/Shared/Container";
 import SidebarWrapper from "@components/Shared/SidebarWrapper";
-import MeshUnderlay from "@components/Shared/MeshUnderlay";
+import MeshUnderlay from "@components/Shared/Mesh/MeshUnderlay";
 import CallToAction from "@components/Radar/Post/CallToAction";
 import PostSidebarContent from "@components/Radar/Post/PostSidebarContent";
 import PostHeader from "@components/Radar/Post/PostHeader";
-import ShareButtons from "@components/Radar/ShareButtons";
+import ShareButtons from "@components/Radar/Post/ShareButtons";
 
 const Article = ({ data, articles }) => {
   const bodyTextRef = useRef<HTMLDivElement>(null);

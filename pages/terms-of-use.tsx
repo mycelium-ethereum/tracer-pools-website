@@ -6,7 +6,7 @@ import PageHeader from "@components/Shared/PageHeader";
 import PageSection from "@components/Shared/Section";
 import SidebarWrapper from "@components/Shared/SidebarWrapper";
 import LegalSidebarContent from "@components/Legal/Texts/LegalSidebarContent";
-import TermsOfUseText from "@components/Legal/TermsOfUseText";
+import TermsOfUseText from "@components/Legal/Texts/TermsOfUseText";
 
 const TermsOfUsePage = () => {
   const route = useRouter().pathname;

@@ -3,7 +3,7 @@ import CategoryBubble from "@components/Shared/CategoryBubble";
 import GradientLine from "@components/Shared/GradientLine";
 import PageLink from "@components/Shared/PageLink";
 import RelatedArticles from "@components/Radar/Sidebar/RelatedArticles";
-import ShareButtons from "../ShareButtons";
+import ShareButtons from "./ShareButtons";
 
 const PostSidebarContent: React.FC<{
   currentArticle: any;

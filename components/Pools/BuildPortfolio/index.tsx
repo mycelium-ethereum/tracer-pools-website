@@ -1,6 +1,6 @@
 import Section from "@components/Shared/Section";
 import Container from "@components/Shared/Container";
-import UnderlinedHeading from "@components/Shared/UnderlinedHeading";
+import UnderlinedHeading from "@components/Shared/Heading/UnderlinedHeading";
 import OptimisedImage from "@components/Shared/OptimisedImage";
 import PortfolioCarousel from "@components/Pools/BuildPortfolio/PortfolioCarousel";
 

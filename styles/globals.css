@@ -81,7 +81,13 @@ input::placeholder {
     rgba(28, 100, 242, 0) 233.88%
   );
 }
-
+.btn-gradient-blue-ultralight {
+  background: linear-gradient(
+    267.35deg,
+    rgba(0, 217, 233, 0.5) -63%,
+    rgba(0, 217, 233, 0) 233.88%
+  );
+}
 .btn-gradient-blue-light {
   background: linear-gradient(
     265.19deg,

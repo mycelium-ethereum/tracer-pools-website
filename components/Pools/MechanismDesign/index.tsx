@@ -1,8 +1,8 @@
 import Section from "@components/Shared/Section";
 import Container from "@components/Shared/Container";
-import Button from "@components/Shared/Button";
-import UnderlinedHeading from "@components/Shared/UnderlinedHeading";
-import MeshDouble from "@components/Pools/MeshDouble";
+import Button from "@components/Shared/Buttons/Button";
+import UnderlinedHeading from "@components/Shared/Heading/UnderlinedHeading";
+import MeshDouble from "@components/Shared/Mesh/MeshDouble";
 import MechanismSlider from "./MechanismSlider";
 
 const MechanismDesign: React.FC<{}> = () => {

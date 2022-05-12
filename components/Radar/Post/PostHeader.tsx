@@ -1,6 +1,6 @@
 import Moment from "react-moment";
 import CategoryBubble from "@components/Shared/CategoryBubble";
-import ShareButtons from "@components/Radar/ShareButtons";
+import ShareButtons from "@components/Radar/Post/ShareButtons";
 
 const PostHeader: React.FC<{
   data: any;

@@ -1,9 +1,9 @@
 import Section from "@components/Shared/Section";
 import Container from "@components/Shared/Container";
-import Button from "@components/Shared/Button";
+import Button from "@components/Shared/Buttons/Button";
 import AnimateIn from "@components/Shared/AnimateIn";
 import BannerLottieAnim from "./BannerLottieAnim";
-import MeshUnderlay from "@components/Shared/MeshUnderlay";
+import MeshUnderlay from "@components/Shared/Mesh/MeshUnderlay";
 
 const Banner: React.FC<{}> = () => {
   return (

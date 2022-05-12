@@ -1,5 +1,5 @@
 import AnimateIn from "@components/Shared/AnimateIn";
-import UnderlinedHeading from "../Shared/UnderlinedHeading";
+import UnderlinedHeading from "../Shared/Heading/UnderlinedHeading";
 
 const ParagraphBlock: React.FC<{
   title: string;

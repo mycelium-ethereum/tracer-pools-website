@@ -1,8 +1,8 @@
 import Section from "@components/Shared/Section";
 import Container from "@components/Shared/Container";
-import VerticalCarousel from "@components/Pools/VerticalCarousel";
+import VerticalCarousel from "@components/Pools/ExposureSlider/VerticalCarousel";
 import OptimisedImage from "@components/Shared/OptimisedImage";
-import Button from "@components/Shared/Button";
+import Button from "@components/Shared/Buttons/Button";
 
 const ExposureSlider: React.FC<{}> = () => {
   return (

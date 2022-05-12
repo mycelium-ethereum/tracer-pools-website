@@ -4,7 +4,7 @@ const H2: React.FC<{
 }> = ({ className, children }) => {
   return (
     <h2
-      className={`text-[40px] font-light leading-[44px] ${
+      className={`text-2xl font-light leading-[28px] sm:text-[40px] sm:leading-[44px] ${
         className ? className : ""
       }`}
     >

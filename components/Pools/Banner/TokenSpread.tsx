@@ -1,5 +1,5 @@
 import OptimisedImage from "@components/Shared/OptimisedImage";
-import TokenFadeIn from "@components/Pools/TokenFadeIn";
+import TokenFadeIn from "@components/Pools/Banner/TokenFadeIn";
 // import { useLottie } from "lottie-react";
 // import integration from "../../public/img/pools/integration.json";
 

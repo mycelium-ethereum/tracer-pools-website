@@ -1,4 +1,4 @@
-import Button from "@components/Shared/Button";
+import Button from "@components/Shared/Buttons/Button";
 
 const ViewAllButton: React.FC<{
   handleShowAll?: (

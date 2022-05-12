@@ -13,17 +13,15 @@ const GuideTile: React.FC<{
 
   return (
     <PageLink href={link}>
-      <article className="group relative flex h-[200px] w-full items-center rounded-lg bg-tracer-navy pl-8">
+      <article className="group relative flex h-[120px] w-full items-center rounded-lg bg-tracer-navy pl-8 xs:h-[150px] sm:h-[200px]">
         <div>
-          <img src={logo} alt={alt} className="h-5" />
-          <span className="mt-1 block whitespace-nowrap text-[40px] font-light leading-[44px] text-white">
+          <img src={logo} alt={alt} className="h-4 sm:h-5" />
+          <span className="mt-1 block whitespace-nowrap text-2xl font-light leading-[28px] text-white sm:text-[40px] sm:leading-[44px]">
             User Guide
           </span>
         </div>
         {tokens && (
-          <div
-            className={`pointer-events-none absolute right-0 top-0 z-10 h-full w-[200px]`}
-          >
+          <div className="pointer-events-none absolute -right-10 top-1/2 z-10 h-[200px] w-[200px] -translate-y-1/2 scale-[0.6] xs:-right-4 xs:scale-[0.8] sm:right-0 sm:scale-100">
             <OptimisedImage
               src="/img/shared/link-token.png"
               alt="Link Token"
@@ -34,7 +32,7 @@ const GuideTile: React.FC<{
               src="/img/shared/btc-token.png"
               alt="BTC Token"
               absolute
-              className="-bottom-4 -right-4 max-w-[133px]"
+              className="-bottom-3 -right-4 max-w-[133px]"
             />
           </div>
         )}

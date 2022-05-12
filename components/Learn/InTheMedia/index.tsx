@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import UnderlinedHeading from "@components/Shared/UnderlinedHeading";
+import UnderlinedHeading from "@components/Shared/Heading/UnderlinedHeading";
 import Container from "@components/Shared/Container";
-import H2 from "@components/Shared/H2";
+import H2 from "@components/Shared/Heading/H2";
 import Section from "@components/Shared/Section";
 import VideoCard from "@components/Learn/VideoCard";
 import FiveColumnLayout from "@components/Shared/Layouts/FiveColumnLayout";
@@ -44,7 +44,7 @@ const InTheMedia: React.FC<{ mediaVideoData: any }> = ({ mediaVideoData }) => {
   }, []);
 
   return (
-    <Section className="pt-16 pb-12">
+    <Section className="py-16 sm:pt-16 sm:pb-12">
       <Container className="text-action-active">
         <UnderlinedHeading
           hideBullet

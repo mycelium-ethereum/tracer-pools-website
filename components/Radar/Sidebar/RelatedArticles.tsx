@@ -1,4 +1,4 @@
-import Button from "@components/Shared/Button";
+import Button from "@components/Shared/Buttons/Button";
 import GradientLine from "@components/Shared/GradientLine";
 import PageLink from "@components/Shared/PageLink";
 import { sortByDate } from "@lib/helpers";

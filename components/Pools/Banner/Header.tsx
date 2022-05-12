@@ -1,4 +1,4 @@
-import Button from "@components/Shared/Button";
+import Button from "@components/Shared/Buttons/Button";
 import AnimateIn from "@components/Shared/AnimateIn";
 
 const Header: React.FC<{}> = () => {

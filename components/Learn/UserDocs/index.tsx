@@ -1,12 +1,12 @@
-import UnderlinedHeading from "@components/Shared/UnderlinedHeading";
+import UnderlinedHeading from "@components/Shared/Heading/UnderlinedHeading";
 import Container from "@components/Shared/Container";
-import H2 from "@components/Shared/H2";
-import Button from "@components/Shared/Button";
+import H2 from "@components/Shared/Heading/H2";
+import Button from "@components/Shared/Buttons/Button";
 import Section from "@components/Shared/Section";
 
 const UserDocs: React.FC<{}> = () => {
   return (
-    <Section className="py-20">
+    <Section className="py-16 sm:py-20">
       <Container className="text-action-active">
         <UnderlinedHeading
           hideBullet
