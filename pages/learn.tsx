@@ -4,31 +4,42 @@ import UserGuides from "@components/Learn/UserGuides";
 import UserDocs from "@components/Learn/UserDocs";
 import TracerDrop from "@components/Learn/TracerDrop";
 import InTheMedia from "@components/Learn/InTheMedia";
+import { getTracerDropPlaylistData, getVideoData } from "@lib/helpers";
+import { mediaVideos } from "@components/Learn/presets";
+import FAQs from "@components/Learn/FAQs";
 
-const LearnPage: React.FC<{ data: any }> = ({ data }) => {
+const LearnPage: React.FC<{ dropVideoData: any; mediaVideoData: any }> = ({
+  dropVideoData,
+  mediaVideoData,
+}) => {
   return (
     <>
       <SEO title="Learn" />
       <UserGuides />
       <TracerLibrary />
       <UserDocs />
-      <TracerDrop data={data} />
-      <InTheMedia />
+      <TracerDrop dropVideoData={dropVideoData} />
+      <InTheMedia mediaVideoData={mediaVideoData} />
+      <FAQs />
     </>
   );
 };
 
 export default LearnPage;
 
-export async function getServerSideProps() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&maxResults=3&playlistId=${process.env.NEXT_PUBLIC_YOUTUBE_PLAYLIST_ID}&key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}`
-  );
-  const data = await res.json();
+export const getServerSideProps = async () => {
+  const mediaVideoData = [];
+  mediaVideos.forEach((video) => {
+    getVideoData(mediaVideoData, video);
+  });
+
+  // Get playlist data for Tracer Drop
+  const dropVideoData = await getTracerDropPlaylistData();
 
   return {
     props: {
-      data,
+      dropVideoData,
+      mediaVideoData,
     },
   };
-}
+};

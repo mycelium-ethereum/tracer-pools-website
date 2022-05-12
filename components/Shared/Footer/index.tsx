@@ -39,6 +39,9 @@ const Footer: React.FC<{ route: string }> = ({ route }) => {
       case "/pools":
         setBackground("bg-secondary");
         break;
+      case "/learn":
+        setBackground("bg-secondary");
+        break;
       default:
         setBackground("bg-white");
         break;

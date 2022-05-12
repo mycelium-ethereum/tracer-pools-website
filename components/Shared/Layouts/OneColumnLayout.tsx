@@ -1,8 +1,7 @@
 const OneColumnLayout: React.FC<{
   articles: any;
   ArticleComponent: React.FC<{
-    article: any;
-    className?: string;
+    article?: any;
   }>;
 }> = ({ articles, ArticleComponent }) => {
   return (

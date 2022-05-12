@@ -32,7 +32,7 @@ const Button: React.FC<{
 }) => {
   return (
     <button
-      className={`relative flex h-max w-max items-center justify-center whitespace-nowrap rounded-md border text-base leading-[24px] transition-all duration-500
+      className={`relative flex h-[42px] w-max items-center justify-center whitespace-nowrap rounded-md border text-base leading-[24px] transition-all duration-500
       ${
         blueTransparent
           ? "border-action-active text-action-active hover:bg-action-active hover:text-white "
@@ -59,7 +59,7 @@ const Button: React.FC<{
           : ""
       } 
       ${clear ? "btn-clear text-action-active hover:text-white " : ""}
-      ${link ? "p-0" : "px-6 py-2"}
+      ${link || outgoingLink ? "p-0" : "px-6 py-2"}
       ${className ? className : ""}`}
       onClick={action}
     >
@@ -69,7 +69,7 @@ const Button: React.FC<{
           target="_blank"
           rel="noopener noreferrer"
           download={download}
-          className="flex items-center"
+          className="flex h-full w-auto flex-grow items-center justify-center px-6 py-2"
         >
           {children}
         </a>

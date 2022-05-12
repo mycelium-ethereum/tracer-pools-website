@@ -151,7 +151,7 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [handleResize]);
 
   useEffect(() => {
     // Wait for page exit transition before setting nav bg and text colours

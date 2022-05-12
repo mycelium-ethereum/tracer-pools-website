@@ -6,6 +6,7 @@ import TwoColumnLayout from "@components/Shared/Layouts/TwoColumnLayout";
 import OneColumnLayout from "@components/Shared/Layouts/OneColumnLayout";
 import ArticleCard from "@components/Learn/ArticleCard";
 import Button from "@components/Shared/Button";
+import ViewAllButton from "./ViewAllButton";
 
 const ArticleList: React.FC<{
   filteredArticles: any;
@@ -27,9 +28,9 @@ const ArticleList: React.FC<{
       setTimeout(() => {
         if (category !== "All") {
           setSortedArticles(
-            filteredArticles
-              .filter((article: any) => article.tags.includes(category))
-              .slice(0, amountToShow)
+            filteredArticles.filter((article: any) =>
+              article.tags.includes(category)
+            )
           );
         } else {
           setSortedArticles(filteredArticles);
@@ -42,26 +43,32 @@ const ArticleList: React.FC<{
   };
 
   const resetArticlesInView = () => {
+    const amount = columns <= 2 ? 4 : columns * 2;
     setShowAll(false);
-    setAmountToShow(columns * 2);
+    setAmountToShow(amount);
   };
 
   const handleResize = () => {
     const width = window.innerWidth;
     if (width >= 2560) {
       setColumns(5);
+      setAmountToShow(10);
     }
     if (width >= 1280 && width < 2560) {
       setColumns(4);
+      setAmountToShow(8);
     }
     if (width >= 1024 && width < 1280) {
       setColumns(3);
+      setAmountToShow(6);
     }
     if (width < 1024) {
       setColumns(2);
+      setAmountToShow(4);
     }
     if (width < 640) {
       setColumns(1);
+      setAmountToShow(4);
     }
   };
 
@@ -69,34 +76,31 @@ const ArticleList: React.FC<{
     setShowAll(true);
   };
 
-  const limitArticlesInView = () => {
-    showAll
-      ? setAmountToShow(filteredArticles.length)
-      : setAmountToShow(columns * 2);
+  const filterArticles = () => {
+    const filtered = sortedArticles.slice(0, amountToShow);
+    setArticlesInView(filtered);
   };
 
   useEffect(() => {
-    setSorted(true);
-  }, [filteredArticles]);
+    setAmountToShow(sortedArticles.length);
+  }, [showAll]);
 
-  //   If show all true, show all articles
-  //   else show double the current column amount
   useEffect(() => {
-    limitArticlesInView();
-  }, [showAll, category, columns]);
+    filterArticles();
+  }, [sortedArticles, amountToShow]);
+
+  useEffect(() => {
+    if (!sorted) setSorted(true);
+  }, [filteredArticles]);
 
   useEffect(() => {
     handleCategoryChange();
   }, [category]);
 
   useEffect(() => {
-    const slicedArticles = sortedArticles.slice(0, amountToShow);
-    setArticlesInView(slicedArticles);
-  }, [sortedArticles, amountToShow]);
-
-  useEffect(() => {
     window.addEventListener("resize", handleResize);
     let timeout = setTimeout(() => handleResize(), 700);
+    filterArticles();
     return () => {
       clearTimeout(timeout);
       window.removeEventListener("resize", handleResize);
@@ -144,13 +148,11 @@ const ArticleList: React.FC<{
             />
           ),
         }[columns]}
-      <div className="col-span-full">
-        {!showAll && sortedArticles.length > 8 && (
-          <Button lightBlueGradient action={handleShowAll} className="mx-auto">
-            Show All
-          </Button>
+      {!showAll &&
+        sortedArticles.length > columns * 2 &&
+        sortedArticles.length > 4 && (
+          <ViewAllButton handleShowAll={handleShowAll}>Show All</ViewAllButton>
         )}
-      </div>
     </div>
   );
 };
