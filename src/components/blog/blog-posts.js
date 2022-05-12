@@ -30,8 +30,10 @@ const query = graphql`
     }
   }
 `;
+
 const BlogPosts = () => {
   const v2PostSlug = "perpetual-pools-v2-roadmap";
+  const voyagePostSlug = "the-tracer-voyage";
   const [currentPage, setCurrentPage] = useState(0);
   const [currentPosts, setCurrentPosts] = useState([]);
   const [pageCount, setPageCount] = useState(0);
@@ -76,7 +78,7 @@ const BlogPosts = () => {
     }, 500);
     setTimeout(() => {
       postContainer.current.classList.remove("opacity-0");
-    }, 700);
+    }, 800);
   };
 
   const handlePageClick = ({ selected: selectedPage }) => {
@@ -93,7 +95,7 @@ const BlogPosts = () => {
     }, 1100);
     setTimeout(function () {
       postContainer.current.classList.remove("opacity-0");
-    }, 1800);
+    }, 1900);
   };
 
   const sortByDate = (a, b) => {
@@ -139,6 +141,13 @@ const BlogPosts = () => {
                       return x.node.slug == v2PostSlug
                         ? -1
                         : y.node.slug == v2PostSlug
+                        ? 1
+                        : 0;
+                    })
+                    .sort((x, y) => {
+                      return x.node.slug == voyagePostSlug
+                        ? -1
+                        : y.node.slug == voyagePostSlug
                         ? 1
                         : 0;
                     })
