@@ -9,12 +9,14 @@ import LeverageSteps from "../components/leverage-steps";
 import WalletAnimation from "../components/wallet-animation";
 import IntegrateAnimation from "../components/integrate-animation";
 import PartnersContributors from "../components/partners-contributors";
+import VoyageBanner from "../components/voyage-banner";
 
 const Index = () => {
   return (
     <>
       <SEO title="Home" />
       <Layout>
+        <VoyageBanner />
         <Hero />
         <LeverageSteps />
         <WalletAnimation />
