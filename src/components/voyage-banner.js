@@ -7,7 +7,7 @@ import { Link } from "gatsby";
 const VoyageBanner = () => {
   return (
     <Link to="/radar/the-tracer-voyage/">
-      <div className="group fixed top-[64px] left-0 z-50 h-[123px] w-full transition-all duration-700 sm:top-[101px] sm:h-[162px] sm:w-[376px] sm:-translate-x-[245px] sm:hover:-translate-x-[70px]">
+      <div className="group fixed top-[64px] left-0 z-40 h-[123px] w-full transition-all duration-700 sm:top-[101px] sm:h-[162px] sm:w-[376px] sm:-translate-x-[245px] sm:hover:-translate-x-[70px]">
         <img
           src={VoyageBannerGIF}
           className="absolute bottom-0 left-0 h-full w-full"
