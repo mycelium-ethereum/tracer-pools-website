@@ -64,46 +64,46 @@ export const serviceProviders = [
     {
         image: "mycelium-blue.svg",
         alt: "Mycelium logo",
-        link: "",
+        link: "https://mycelium.xyz",
     },
     {
         image: "rmit-blue.svg",
         alt: "RMIT logo",
-        link: "",
+        link: "https://rmitblockchain.io/",
     },
     {
         image: "chainlink-blue.svg",
         alt: "Chainlink logo",
-        link: "",
+        link: "https://chain.link/",
     },
     {
         image: "epns-blue.svg",
         alt: "EPNS logo",
-        link: "",
+        link: "https://epns.io/",
     },
     {
         image: "flex-dapps-blue.svg",
         alt: "Flex Dapps logo",
-        link: "",
+        link: "https://github.com/flex-dapps",
     },
     {
         image: "immunefi-blue.svg",
         alt: "Immunefi logo",
-        link: "",
+        link: "https://immunefi.com/bounty/tracer/",
     },
     {
         image: "runtime-verification-blue.svg",
         alt: "Runtime Verification logo",
-        link: "",
+        link: "https://runtimeverification.com/",
     },
     {
         image: "code-arena-blue.svg",
         alt: "Code Arena logo",
-        link: "",
+        link: "https://code4rena.com/",
     },
     {
         image: "sigma-prime-blue.svg",
         alt: "Sigma Prime logo",
-        link: "",
+        link: "https://sigmaprime.io/",
     },
 ]

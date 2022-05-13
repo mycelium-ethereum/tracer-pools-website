@@ -16,12 +16,13 @@ const ServiceProviders: React.FC<{}> = () => {
         </UnderlinedHeading>
         <div className="flex max-w-[900px] flex-wrap">
           {serviceProviders.map((provider) => (
-              <a href={provider.link} target="_blank" rel="noopener noreferrer" className="w-full max-w-[300px] mb-20">
-            <img
-              src={`/img/logos/${provider.image}`}
-              alt={provider.alt}
-              className="mr-12 mb-8"
-            />
+            <a href={provider.link} target="_blank" rel="noopener noreferrer">
+              <img
+                src={`/img/logos/${provider.image}`}
+                alt={provider.alt}
+                className="mr-12 mb-8"
+              />
+            </a>
           ))}
         </div>
       </Container>
