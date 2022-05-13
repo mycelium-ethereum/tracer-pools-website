@@ -10,12 +10,11 @@ const GraphicAssets: React.FC<{
     image: string;
     png: string;
     svg: string;
-    alt: string;
   }[];
 }> = ({ heading, subheading, graphics }) => {
   return (
     <div className="mb-20">
-      <div className="flex justify-between">
+      <div className="mb-8 flex flex-col justify-between sm:mb-0 sm:flex-row">
         <AssetHeading heading={heading} subheading={subheading} />
         <Button
           lightBlueGradient
@@ -25,7 +24,7 @@ const GraphicAssets: React.FC<{
           Download All
         </Button>
       </div>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid gap-4 lg:grid-cols-2 3xl:grid-cols-3">
         {graphics.map((item, i) => (
           <BrandGraphicTile key={i} item={item} />
         ))}

@@ -7,8 +7,6 @@ const PrimaryWhitePNG = "/img/brand/primary/primary-white.png";
 const PrimaryBluePNG = "/img/brand/primary/primary-blue.png";
 const PrimaryBlackPNG = "/img/brand/primary/primary-black.png";
 const PrimaryBlueBGPNG = "/img/brand/primary/primary-blue-bg.svg";
-// Primary class names
-// const primaryLogoClassname = "w-[250px] h-[59px]";
 
 // Stacked
 const PrimaryStackedWhite =
@@ -45,15 +43,20 @@ const TracerDAOWhitePNG = "/img/brand/tracer-dao/tracer-dao-white.png";
 const TracerDAOBluePNG = "/img/brand/tracer-dao/tracer-dao-blue.png";
 const TracerDAOBlackPNG = "/img/brand/tracer-dao/tracer-dao-black.png";
 const TracerDAOBlueBGPNG = "/img/brand/tracer-dao/tracer-dao-blue-bg.png";
+
 // Graphics
-const AscendingDiscs = "/img/brand/graphics/ascending-discs.png";
-const GeometricShapes = "/img/brand/graphics/geometric-shapes.png";
 const GeometricMesh = "/img/brand/graphics/geometric-mesh.png";
-const V2Text = "/img/brand/graphics/v2-text.png";
-const AscendingDiscsSVG = "/img/brand/graphics/ascending-discs.svg";
-const GeometricShapesSVG = "/img/brand/graphics/geometric-shapes.svg";
 const GeometricMeshSVG = "/img/brand/graphics/geometric-mesh.svg";
+const GeometricShapes = "/img/brand/graphics/geometric-shapes.png";
+const GeometricShapesSVG = "/img/brand/graphics/geometric-shapes.svg";
+const AscendingDiscs = "/img/brand/graphics/ascending-discs.png";
+const AscendingDiscsSVG = "/img/brand/graphics/ascending-discs.svg";
+const V2Text = "/img/brand/graphics/v2-text.png";
 const V2TextSVG = "/img/brand/graphics/v2-text.svg";
+const RotatingDiscs = "/img/brand/graphics/rotating-discs.png";
+const RotatingDiscsSVG = "/img/brand/graphics/rotating-discs.svg";
+const BlueMesh = "/img/brand/graphics/blue-mesh.png";
+const BlueMeshSVG = "/img/brand/graphics/blue-mesh.svg";
 
 // Preview images (smaller filesize)
 const AscendingDiscsPreview = "/img/brand/graphics/ascending-discs-preview.png";
@@ -61,11 +64,8 @@ const GeometricShapesPreview =
   "/img/brand/graphics/geometric-shapes-preview.png";
 const GeometricMeshPreview = "/img/brand/graphics/geometric-mesh-preview.png";
 const V2TextPreview = "/img/brand/graphics/v2-text-preview.png";
-// 3D Elements
-const BTCTokenPreview = "/img/brand/elements3d/btc-token-preview.png";
-const LinkTokenPreview = "/img/brand/elements3d/link-token-preview.png";
-const BTCTokenPNG = "/img/brand/elements3d/btc-token.png";
-const LinkTokenPNG = "/img/brand/elements3d/link-token.png";
+const RotatingDiscsPreview = "/img/brand/graphics/rotating-discs-preview.png";
+const BlueMeshPreview = "/img/brand/graphics/blue-mesh-preview.png";
 
 export const logos = [
   // Primary
@@ -200,49 +200,40 @@ export const colours = [
 
 export const graphics = [
   {
-    description: "Ascending Discs",
-    image: AscendingDiscsPreview,
-    png: AscendingDiscs,
-    svg: AscendingDiscsSVG,
-    alt: "Ascending Discs",
-  },
-  {
-    description: "Diverging Discs",
-    image: GeometricShapesPreview,
-    png: GeometricShapesSVG,
-    svg: GeometricShapesPreview,
-    alt: "Diverging Discs",
-  },
-  {
     description: "Geometric Mesh",
     image: GeometricMeshPreview,
     png: GeometricMesh,
     svg: GeometricMeshSVG,
-    alt: "Geometric Mesh",
+  },
+  {
+    description: "Tracer Shapes",
+    image: GeometricShapesPreview,
+    png: GeometricShapes,
+    svg: GeometricShapesSVG,
+  },
+  {
+    description: "Ascending Discs",
+    image: AscendingDiscsPreview,
+    png: AscendingDiscs,
+    svg: AscendingDiscsSVG,
   },
   {
     description: "V2 Text",
     image: V2TextPreview,
     png: V2Text,
     svg: V2TextSVG,
-    alt: "V2 Text",
-  },
-];
-
-export const elements3D = [
-  {
-    description: "Link Token",
-    image: LinkTokenPreview,
-    download: LinkTokenPNG,
-    alt: "Link Token",
-    className: "w-[355px] h-[341px] object-cover",
   },
   {
-    description: "BTC Token",
-    image: BTCTokenPreview,
-    download: BTCTokenPNG,
-    alt: "BTC Token",
-    className: "w-[315px] h-[304px] object-cover",
+    description: "Rotating Discs",
+    image: RotatingDiscsPreview,
+    png: RotatingDiscs,
+    svg: RotatingDiscsSVG,
+  },
+  {
+    description: "Blue Mesh",
+    image: BlueMeshPreview,
+    png: BlueMesh,
+    svg: BlueMeshSVG,
   },
 ];
 
@@ -286,7 +277,6 @@ export const tags = [
   "Logos",
   "Colors",
   "Support Graphics",
-  "3D Elements",
   "Typography",
   "All",
 ];

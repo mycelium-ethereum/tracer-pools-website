@@ -1,9 +1,9 @@
 import { useState } from "react";
 import BrandFilters from "@components/Brand/BrandFilters";
 import {
+  tags,
   logos,
   graphics,
-  elements3D,
   colours,
   headings,
 } from "@components/Brand/presets";
@@ -15,7 +15,6 @@ import LogoAssets from "@components/Brand/Sections/LogoAssets";
 import ColourAssets from "@components/Brand/Sections/ColourAssets";
 import TypographyAssets from "@components/Brand/Sections/TypographyAssets";
 import GraphicAssets from "@components/Brand/Sections/GraphicAssets";
-import Element3DAssets from "@components/Brand/Sections/Element3DAssets";
 
 const BrandPage = () => {
   const [category, setCategory] = useState("All");
@@ -41,13 +40,6 @@ const BrandPage = () => {
         graphics={graphics}
       />
     ),
-    elements3D: (
-      <Element3DAssets
-        heading={headings.elements3D.heading}
-        subheading={headings.elements3D.subheading}
-        elements3D={elements3D}
-      />
-    ),
     typography: (
       <TypographyAssets
         heading={headings.typography.heading}
@@ -69,13 +61,16 @@ const BrandPage = () => {
             title={"Brand Assets"}
             subheading={"Download the Tracer brand elements for usage"}
           />
-          <BrandFilters category={category} setCategory={setCategory} />
+          <BrandFilters
+            tags={tags}
+            category={category}
+            setCategory={setCategory}
+          />
           {
             {
               Logos: brandComponents.logos,
               Colors: brandComponents.colours,
               "Support Graphics": brandComponents.graphics,
-              "3D Elements": brandComponents.elements3D,
               Typography: brandComponents.typography,
               All: (
                 <>

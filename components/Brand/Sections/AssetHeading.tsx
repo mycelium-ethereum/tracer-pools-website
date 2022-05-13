@@ -4,7 +4,7 @@ const AssetHeading: React.FC<{
   heading: string;
   subheading: string | React.ReactNode;
 }> = ({ heading, subheading }) => (
-  <div className="mb-4 w-1/2">
+  <div className="mb-4 sm:w-1/2">
     <h2 className="pb-2 text-sm uppercase leading-[14px] tracking-[0.15em] text-highlight">
       {heading}
     </h2>

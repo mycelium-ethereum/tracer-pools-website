@@ -18,13 +18,13 @@ const LogoAssets: React.FC<{
   return (
     <>
       <div className="mb-20">
-        <div className="flex justify-between">
+        <div className="mb-8 flex flex-col justify-between sm:mb-0 sm:flex-row">
           <AssetHeading heading={heading} subheading={subheading} />
           <Button lightBlueGradient download link="/img/brand/Tracer Logos.zip">
             Download All
           </Button>
         </div>
-        <div className="grid grid-cols-2 gap-4 xl:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {logos.map((item, i) => (
             <BrandAssetTile
               key={i}

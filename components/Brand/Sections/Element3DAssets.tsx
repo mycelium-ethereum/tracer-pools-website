@@ -15,7 +15,7 @@ const Element3DAssets: React.FC<{
 }> = ({ heading, subheading, elements3D }) => {
   return (
     <div className="mb-20">
-      <div className="flex justify-between">
+      <div className="mb-8 flex flex-col justify-between sm:mb-0 sm:flex-row">
         <AssetHeading heading={heading} subheading={subheading} />
         <Button
           lightBlueGradient

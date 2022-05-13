@@ -6,7 +6,6 @@ const BrandGraphicTile: React.FC<{
     image: string;
     png: string;
     svg: string;
-    alt: string;
   };
 }> = ({ item }) => {
   return (
@@ -16,7 +15,7 @@ const BrandGraphicTile: React.FC<{
           <img
             src={item.image}
             className="h-full w-full scale-105 transform object-cover object-right"
-            alt={item.alt}
+            alt={item.description}
           />
         </picture>
       </div>

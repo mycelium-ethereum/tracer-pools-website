@@ -15,13 +15,20 @@ const ColourAssets: React.FC<{
   return (
     <div className="mb-20">
       <AssetHeading heading={heading} subheading={subheading} />
-      <div className="mb-4 grid grid-cols-3 gap-x-4">
-        {colours.slice(0, FIRST_ROW_LIMIT).map((item, i) => (
-          <BrandColourTile key={i} item={item} />
-        ))}
+      <div className="hidden lg:block">
+        <div className="mb-4 grid grid-cols-3 gap-x-4">
+          {colours.slice(0, FIRST_ROW_LIMIT).map((item, i) => (
+            <BrandColourTile key={i} item={item} />
+          ))}
+        </div>
+        <div className="grid grid-cols-4 gap-x-4">
+          {colours.slice(FIRST_ROW_LIMIT, SECOND_ROW_LIMIT).map((item, i) => (
+            <BrandColourTile key={i} item={item} />
+          ))}
+        </div>
       </div>
-      <div className="grid grid-cols-4 gap-x-4">
-        {colours.slice(FIRST_ROW_LIMIT, SECOND_ROW_LIMIT).map((item, i) => (
+      <div className="grid gap-4 sm:grid-cols-2 lg:hidden">
+        {colours.map((item, i) => (
           <BrandColourTile key={i} item={item} />
         ))}
       </div>

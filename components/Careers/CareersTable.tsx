@@ -125,11 +125,13 @@ const CareersTable = () => {
 
   return (
     <div className="select-dark z-10 bg-white pt-6 pb-24">
-      <CareerFilters
-        locations={locations}
-        teams={teams}
-        worktypes={worktypes}
-      />
+      {jobRows.length > 4 && (
+        <CareerFilters
+          locations={locations}
+          teams={teams}
+          worktypes={worktypes}
+        />
+      )}
       {showNoJobs && showError && <ErrorText />}
       <Loader showLoader={showLoader} />
       <table

@@ -12,7 +12,7 @@ const BrandAssetTile: React.FC<{
         className={`mb-2 flex h-[150px] w-full items-center justify-center overflow-hidden rounded-lg px-8 [box-shadow:0px_2px_4px_rgba(0,0,0,0.1)]
         ${grey ? "bg-footnote" : ""}
         ${blue ? "bg-tracer-primaryblue px-4" : ""}
-        ${!blue && !grey ? "bg-white" : ""}
+        ${!blue && !grey ? "bg-secondary" : ""}
         ${noPadding ? "px-0" : ""}
         `}
       >

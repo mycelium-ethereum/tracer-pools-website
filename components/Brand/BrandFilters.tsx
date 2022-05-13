@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { tags } from "@components/Brand/presets";
-import CategoryButton from "./CategoryButton";
-import MobileDropdown from "./MobileDropdown";
+import CategoryButton from "@components/Brand/CategoryButton";
+import MobileDropdown from "@components/Brand/MobileDropdown";
 
 const BrandFilters: React.FC<{
+  tags: string[];
   category: string;
   setCategory: React.Dispatch<React.SetStateAction<string>>;
-}> = ({ category, setCategory }) => {
+}> = ({ tags, category, setCategory }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [dropdownText, setDropdownText] = useState("");
 
@@ -29,8 +29,8 @@ const BrandFilters: React.FC<{
           handleClick={handleClick}
         />
       ))}
-      <div className="flex items-center">
-        <span className="mr-7 block text-[#828790] md:hidden">Jump to</span>
+      <div className="flex items-center md:hidden">
+        <span className="text mr-4 block text-tertiary">Jump to</span>
         <MobileDropdown
           {...{
             tags,
