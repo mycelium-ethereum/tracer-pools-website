@@ -22,7 +22,7 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
     { label: "Products", href: "/products" },
     { label: "Learn", href: "/learn" },
     { label: "Blog", href: "/radar" },
-    { label: "Community", href: "/community" },
+    { label: "DAO", href: "/dao" },
   ];
 
   const isMobile = () => {

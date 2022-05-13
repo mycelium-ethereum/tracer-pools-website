@@ -90,9 +90,9 @@ input::placeholder {
 }
 .btn-gradient-blue-light {
   background: linear-gradient(
-    265.19deg,
-    rgba(28, 100, 242, 0) -7.22%,
-    rgba(28, 100, 242, 0.155) 101.71%
+    98.64deg,
+    rgba(28, 100, 242, 0.5) -259.39%,
+    rgba(28, 100, 242, 0) 46.89%
   );
 }
 .btn-gradient-blue-dark {

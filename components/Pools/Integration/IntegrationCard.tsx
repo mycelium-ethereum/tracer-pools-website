@@ -8,7 +8,7 @@ const Integration: React.FC<{
   return (
     <div className="text-action-active">
       <img
-        src="/img/pools/integration-placeholder.png"
+        src="/img/shared/integration-placeholder.png"
         alt=""
         className="mb-4 h-[154px] w-[154px]"
       />

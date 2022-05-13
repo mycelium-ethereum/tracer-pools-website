@@ -40,6 +40,9 @@ const Footer: React.FC<{ route: string }> = ({ route }) => {
       case "/learn":
         setBackground("bg-secondary");
         break;
+      case "/dao":
+        setBackground("bg-secondary");
+        break;
       default:
         setBackground("bg-white");
         break;

@@ -9,7 +9,7 @@ const GuideTile: React.FC<{
   tokens?: boolean;
 }> = ({ link, background, logo, alt, tokens }) => {
   const transitionStyles =
-    "transition-all duration-500 [transform:translateZ(0)_perspective(999px)] group-hover:[transform:translateZ(0)_perspective(999px)_scale3d(1.05,1.05,1.0)_translateX(-10px)]";
+    "transition-all duration-500 [transform:translateZ(0)_perspective(999px)_scale3d(1,1,1)] group-hover:[transform:translateZ(0)_perspective(999px)_scale3d(1.05,1.05,1.0)_translateX(-10px)]";
 
   return (
     <PageLink href={link}>
@@ -21,7 +21,7 @@ const GuideTile: React.FC<{
           </span>
         </div>
         {tokens && (
-          <div className="pointer-events-none absolute -right-10 top-1/2 z-10 h-[200px] w-[200px] -translate-y-1/2 scale-[0.6] xs:-right-4 xs:scale-[0.8] sm:right-0 sm:scale-100">
+          <div className="pointer-events-none absolute -right-10 top-1/2 z-10 h-[200px] w-[200px] [transform:translateZ(0)_translateY(-50%)_perspective(999px)_scale3d(0.6,0.6,1)] xs:-right-4 xs:[transform:translateZ(0)_translateY(-50%)_perspective(999px)_scale3d(0.8,0.8,1)] sm:right-0 sm:[transform:translateZ(0)_translateY(-50%)_perspective(999px)_scale3d(1,1,1)]">
             <OptimisedImage
               src="/img/shared/link-token.png"
               alt="Link Token"
