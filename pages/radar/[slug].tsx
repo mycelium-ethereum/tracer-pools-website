@@ -34,7 +34,7 @@ const Article = ({ data, articles }) => {
     if (e.tagName === "IMG") {
       e.setAttribute(
         "class",
-        "mx-auto rounded-lg transition-all duration-300 cursor-pointer bg-white mb-4 relative z-10"
+        "mx-auto rounded-lg transition-all duration-300 cursor-pointer mb-4 relative z-10"
       );
       e.onclick = function () {
         this.classList.toggle("enlarge");
