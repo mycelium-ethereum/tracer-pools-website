@@ -7,7 +7,7 @@ const UnderlinedHeading: React.FC<{
   className?: string;
 }> = ({ lineColor, hideBullet, children, className }) => {
   return (
-    <div className={`${className} mb-4 text-sm uppercase`}>
+    <div className={`${className ? className : ""} mb-4 text-sm uppercase`}>
       <div className="flex items-center pb-2">
         {!hideBullet && (
           <img

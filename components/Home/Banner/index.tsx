@@ -14,7 +14,7 @@ const Banner: React.FC<{}> = () => {
             <h1 className="mb-1 text-[40px] font-thin leading-[44px] text-white sm:text-6xl sm:leading-[60px]">
               The Evolution
               <br /> of Global
-              <br className="block lg:hidden" /> Derivatives
+              <br className="block md:hidden" /> Derivatives
             </h1>
           </AnimateIn>
           <AnimateIn delay={0.5}>

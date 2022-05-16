@@ -11,7 +11,7 @@ const V2LottieAnim: React.FC<{}> = () => {
   const { View } = useLottie(options);
 
   return (
-    <div className="absolute -top-1/4 -right-1/3 z-0 h-full w-[125vw]">
+    <div className="absolute -top-1/2 z-0 h-full w-[125vw] lg:top-1/2 lg:-right-[600px] lg:-translate-y-[calc(50%+100px)] 2xl:-right-1/3 2xl:-top-1/4 2xl:translate-y-0">
       {View}
     </div>
   );

@@ -3,11 +3,13 @@ import Container from "@components/Shared/Container";
 import Button from "@components/Shared/Buttons/Button";
 import AnimateIn from "@components/Shared/AnimateIn";
 import GradientLine from "@components/Shared/GradientLine";
+import Paragraph from "@components/Home/Paragraph";
+import H1 from "@components/Home/H1";
 
 const Factories: React.FC<{}> = () => {
   return (
     <Section id="section-4" className="bg-tracer-purple-dark">
-      <Container className="relative flex h-screen min-h-[800px] py-14 sm:py-16">
+      <Container className="relative flex h-screen min-h-[800px] py-14 text-white sm:py-16">
         <header className="flex h-full flex-grow flex-col justify-center">
           <AnimateIn delay={0.2}>
             <div className="mb-4 w-full max-w-[328px]">
@@ -19,18 +21,18 @@ const Factories: React.FC<{}> = () => {
             </div>
           </AnimateIn>
           <AnimateIn delay={0.6}>
-            <h1 className="mb-2 text-[40px] font-light text-white">
+            <H1 className="mb-2">
               The benefits of diversification,
               <br /> meet the joys of a
               <br /> customised portfolio.
-            </h1>
+            </H1>
           </AnimateIn>
           <AnimateIn delay={1.0}>
-            <p className="text-tracer-purple max-w-[328px]-light">
+            <Paragraph className="max-w-[328px] 3xl:max-w-[420px]">
               Tracer’s Factory layer contains the templates
               <br /> and tools to allow DeFi applications to be
               <br /> built on top of Tracer’s products.
-            </p>
+            </Paragraph>
           </AnimateIn>
           <AnimateIn delay={1.4}>
             <div className="mt-4 flex">

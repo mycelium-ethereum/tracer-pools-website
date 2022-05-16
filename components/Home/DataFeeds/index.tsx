@@ -4,6 +4,8 @@ import Button from "@components/Shared/Buttons/Button";
 import OptimisedImage from "@components/Shared/OptimisedImage";
 import AnimateIn from "@components/Shared/AnimateIn";
 import GradientLine from "@components/Shared/GradientLine";
+import Paragraph from "@components/Home/Paragraph";
+import H1 from "@components/Home/H1";
 
 const DataFeeds: React.FC<{}> = () => {
   return (
@@ -20,16 +22,14 @@ const DataFeeds: React.FC<{}> = () => {
             </div>
           </AnimateIn>
           <AnimateIn delay={0.6}>
-            <h1 className="mb-2 text-[40px] font-light text-white">
-              &#123;Create your own data feeds&#125;
-            </h1>
+            <H1 className="mb-2">&#123;Create your own data feeds&#125;</H1>
           </AnimateIn>
           <AnimateIn delay={1.0}>
-            <p className="max-w-[328px] text-tracer-lightblue">
+            <Paragraph className="max-w-[328px] 3xl:max-w-[420px]">
               The Tracer Data Factory takes any single, or multiple asset data
               feed and transforms them into a standardised Tracer Data Feed for
               DeFi applications.
-            </p>
+            </Paragraph>
           </AnimateIn>
           <AnimateIn delay={1.4}>
             <div className="mt-4 flex">

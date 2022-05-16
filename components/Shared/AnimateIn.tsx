@@ -19,17 +19,17 @@ const AnimateIn: React.FC<{
     });
   }
   return (
-    <div ref={ref} className={className ? className : ""}>
-      <motion.div
-        initial={{
-          y: "-7px",
-          opacity: 0,
-        }}
-        animate={animationControl}
-      >
-        {children}
-      </motion.div>
-    </div>
+    <motion.div
+      initial={{
+        y: "-7px",
+        opacity: 0,
+      }}
+      animate={animationControl}
+      ref={ref}
+      className={className ? className : ""}
+    >
+      {children}
+    </motion.div>
   );
 };
 
