@@ -60,7 +60,7 @@ const InTheMedia: React.FC<{ mediaVideos: string[]; mediaVideoData: any }> = ({
         handleLearnPageResize(setAmountToShow, setColumns, setShowAll)
       );
     };
-  }, []);
+  }, [handleLearnPageResize]);
 
   return (
     <Section className="py-16 sm:pt-16 sm:pb-12">

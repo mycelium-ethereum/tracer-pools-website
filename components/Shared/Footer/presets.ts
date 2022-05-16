@@ -1,3 +1,9 @@
+import GitbookSVG from "@components/SVG/GitbookSVG";
+import DiscourseSVG from "@components/SVG/DiscourseSVG";
+import TwitterSVG from "@components/SVG/TwitterSVG";
+import GithubSVG from "@components/SVG/GithubSVG";
+import DiscordSVG from "@components/SVG/DiscordSVG";
+
 export const categoryNames = [
     {
         name: "Tracer DAO",
@@ -22,27 +28,27 @@ export const categoryNames = [
 export const socialLinks = [
     {
         url: "https://docs.tracer.finance/",
-        icon: "/img/icons/gitbook.svg",
+        icon: GitbookSVG,
         alt: "Gitbook",
     },
     {
         url: "https://discourse.tracer.finance/",
-        icon: "/img/icons/discourse.svg",
+        icon: DiscourseSVG,
         alt: "Discourse",
     },
     {
         url: "https://twitter.com/TracerDAO",
-        icon: "/img/icons/twitter.svg",
+        icon: TwitterSVG,
         alt: "Twitter",
     },
     {
         url: "https://github.com/tracer-protocol",
-        icon: "/img/icons/github.svg",
+        icon: GithubSVG,
         alt: "Github",
     },
     {
         url: "https://discord.gg/cNUtXBkmNH",
-        icon: "/img/icons/discord.svg",
+        icon: DiscordSVG,
         alt: "Discord",
     },
 ];

@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 function MyApp({ Component, pageProps }) {
   const route = useRouter().pathname;
   const path = useRouter().asPath;
+
   return (
     <>
       <Navbar route={route} />

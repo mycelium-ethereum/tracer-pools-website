@@ -1,32 +1,35 @@
 type HBMenuProps = {
   navOpen: boolean;
-  setNavOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  hamburgerColour: string;
+  toggleNavMenu: () => void;
 };
 
-const HamburgerMenu: React.FC<HBMenuProps> = ({ navOpen, setNavOpen }) => {
-  const handleClick = () => {
-    setNavOpen(!navOpen);
-  };
-
+const HamburgerMenu: React.FC<HBMenuProps> = ({
+  navOpen,
+  hamburgerColour,
+  toggleNavMenu,
+}) => {
   return (
     <button
-      className="z-20 flex w-6 flex-col items-end xl:hidden"
-      onClick={handleClick}
+      className="z-20 flex w-6 flex-col items-end md:hidden"
+      onClick={toggleNavMenu}
       aria-label="nav-menu"
     >
       <span
-        className={`block h-0.5 w-[17px] transform-gpu bg-white transition-all duration-500 ${
-          navOpen ? "translate-y-2 -rotate-45" : "rotate-0"
+        className={`block h-0.5 w-[17px] transform-gpu transition-all duration-500 ${
+          navOpen
+            ? `translate-y-2 rotate-45 bg-white`
+            : `rotate-0 ${hamburgerColour}`
         }`}
       />
       <span
-        className={`mt-1.5 block h-0.5 w-[17px] transform-gpu bg-white transition-all duration-500 ${
-          navOpen ? "opacity-0" : "opacity-100"
+        className={`mt-1.5 block h-0.5 w-[17px] transform-gpu transition-all duration-500 ${
+          navOpen ? `bg-white opacity-0` : `opacity-100 ${hamburgerColour}`
         }`}
       />
       <span
-        className={`mt-1.5 block h-0.5 w-[17px] bg-white transition-all duration-500 ${
-          navOpen ? "-translate-y-2 rotate-45" : ""
+        className={`mt-1.5 block h-0.5 w-[17px] ${hamburgerColour} transition-all duration-500 ${
+          navOpen ? `-translate-y-2 -rotate-45 bg-white` : `${hamburgerColour}`
         }`}
       />
     </button>

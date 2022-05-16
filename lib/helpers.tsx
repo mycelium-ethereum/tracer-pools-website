@@ -14,14 +14,6 @@ export const isCollapsed = () => {
   }
 };
 
-export const isMobile = () => {
-  if (typeof window !== "undefined") {
-    return window.innerWidth < 640;
-  } else {
-    return false;
-  }
-};
-
 export const capitaliseFirstLetter = (str: string) => {
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
@@ -85,5 +77,20 @@ export const handleLearnPageResize = (
   if (width < 640) {
     setColumns(1);
     setAmountToShow(4);
+  }
+};
+
+export const setCopyrightYear = (
+  yearRef: React.MutableRefObject<HTMLDivElement>
+) => {
+  const year = new Date().getFullYear();
+  yearRef.current.innerHTML = year.toString();
+};
+
+export const isMobile = () => {
+  if (typeof window !== "undefined") {
+    return window.innerWidth < 767;
+  } else {
+    return false;
   }
 };

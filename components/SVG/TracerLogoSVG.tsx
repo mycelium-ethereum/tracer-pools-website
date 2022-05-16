@@ -1,6 +1,6 @@
-const TracerLogoSVG: React.FC<{
-  className?: string;
-}> = ({ className }) => {
+import { SVGProps } from "types";
+
+const TracerLogoSVG: React.FC<SVGProps> = ({ alt, className }) => {
   return (
     <svg
       width="98"
@@ -8,6 +8,7 @@ const TracerLogoSVG: React.FC<{
       viewBox="0 0 98 23"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-labelledby={alt}
       className={className ? className : ""}
     >
       <path

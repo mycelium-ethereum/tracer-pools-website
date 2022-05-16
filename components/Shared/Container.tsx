@@ -4,7 +4,7 @@ const Container: React.FC<{
 }> = ({ className, children }) => {
   return (
     <div
-      className={`container mx-auto px-[18px] transition-[width] duration-500 md:px-[50px] ${
+      className={`container z-10 mx-auto px-[18px] transition-[width] duration-500 md:px-[50px] ${
         className ? className : ""
       }`}
     >

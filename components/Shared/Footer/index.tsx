@@ -13,6 +13,7 @@ import {
 } from "@components/Shared/Footer/presets";
 import PageLink from "@components/Shared/PageLink";
 import SocialLinks from "@components/Shared/Footer/SocialLinks";
+import CopyrightYear from "@components/Shared/CopyrightYear";
 
 const Footer: React.FC<{ route: string }> = ({ route }) => {
   const [background, setBackground] = useState("bg-white");
@@ -25,10 +26,6 @@ const Footer: React.FC<{ route: string }> = ({ route }) => {
     connectCategory,
   ];
 
-  const setCopyrightYear = () => {
-    const year = new Date().getFullYear();
-    document.getElementById("year").innerHTML = year.toString();
-  };
   const getBackground = () => {
     switch (route) {
       case "/":
@@ -48,10 +45,6 @@ const Footer: React.FC<{ route: string }> = ({ route }) => {
         break;
     }
   };
-
-  useEffect(() => {
-    setCopyrightYear();
-  }, []);
 
   useEffect(() => {
     getBackground();
@@ -85,9 +78,7 @@ const Footer: React.FC<{ route: string }> = ({ route }) => {
         <div className="flex flex-col items-center justify-between border-t border-action-active pt-5 sm:flex-row">
           {/* Social icons */}
           <SocialLinks links={socialLinks} />
-          <span className="mt-5 sm:mt-0">
-            © <span id="year"></span> Tracer DAO
-          </span>
+          <CopyrightYear className="mt-5 sm:mt-0" />
         </div>
       </Container>
     </footer>
