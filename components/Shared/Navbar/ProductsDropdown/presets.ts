@@ -1,5 +1,14 @@
-export const dropdownLinks = [
-    { label: "Perpetual Pools", href: "/perpetual-pools" },
-    { label: "Factories", href: "/factories" },
-    { label: "Indicies", href: "/indicies" },
+export const productContent = [
+    {
+        logo: "/img/logos/tracer-data-feeds.svg",
+        link: "/data-feeds",
+    },
+    {
+        logo: "/img/logos/tracer-factories.svg",
+        link: "/factories",
+    },
+    {
+        logo: "/img/logos/tracer-perpetual-pools.svg",
+        link: "/perpetual-pools",
+    },
 ];

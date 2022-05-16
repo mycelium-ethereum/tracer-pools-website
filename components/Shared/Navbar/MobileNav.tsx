@@ -4,7 +4,7 @@ import MeshUnderlay from "@components/Shared/Mesh/MeshUnderlay";
 import { socialLinks } from "@components/Shared/Footer/presets";
 import SocialLinks from "../Footer/SocialLinks";
 import CopyrightYear from "../CopyrightYear";
-import ProductsDropdown from "./ProductsDropdown";
+import ProductsDropdown from "./ProductsDropdownMobile";
 
 const MobileNav: React.FC<{
   links: {
@@ -12,10 +12,16 @@ const MobileNav: React.FC<{
     href: string;
   }[];
   navOpen: boolean;
-  dropdownOpen: boolean;
+  mobileProductsDropdownOpen: boolean;
   handleClose: () => void;
-  handleDropdownToggle: () => void;
-}> = ({ links, navOpen, dropdownOpen, handleClose, handleDropdownToggle }) => {
+  handleMobileProductsDropdownToggle: () => void;
+}> = ({
+  links,
+  navOpen,
+  mobileProductsDropdownOpen,
+  handleClose,
+  handleMobileProductsDropdownToggle,
+}) => {
   return (
     <menu
       className={`fixed top-0 left-0 z-30 w-full overflow-hidden bg-tracer-navy transition-all duration-700 ${
@@ -28,9 +34,11 @@ const MobileNav: React.FC<{
             {links[0].label}
           </MobileLink>
           <ProductsDropdown
-            dropdownOpen={dropdownOpen}
+            mobileProductsDropdownOpen={mobileProductsDropdownOpen}
             handleClose={handleClose}
-            handleDropdownToggle={handleDropdownToggle}
+            handleMobileProductsDropdownToggle={
+              handleMobileProductsDropdownToggle
+            }
           />
           {links.slice(2, links.length).map((link, i) => (
             <MobileLink

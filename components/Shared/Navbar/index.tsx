@@ -1,35 +1,66 @@
-// import Link from "next/link";
+import { useCallback, useEffect, useState } from "react";
 import Container from "@components/Shared/Container";
 import NavLink from "@components/Shared/Navbar/NavLink";
 import HamburgerMenu from "@components/Shared/Navbar/HamburgerMenu";
 import MobileNav from "@components/Shared/Navbar/MobileNav";
 import Logo from "@components/Shared/Logo";
 import LaunchAppButton from "@components/Shared/Navbar/LaunchAppButton";
-import { useCallback, useEffect, useState } from "react";
+import LaunchDropdown from "@components/Shared/Navbar/LaunchDropdown";
+import ProductsDropdown from "@components/Shared/Navbar/ProductsDropdown";
 import { disableScroll, enableScroll, isMobile } from "@lib/helpers";
 import { links } from "@components/Shared/Navbar/presets";
 
 const Navbar: React.FC<{ route: string }> = ({ route }) => {
   const [navOpen, setNavOpen] = useState<boolean>(false);
   const [navColour, setNavColour] = useState<string>("");
+  const [navBackdrop, setNavBackdrop] = useState<boolean>(true);
   const [hamburgerColour, setHamburgerColour] = useState<string>("");
   const [currentSection, setCurrentSection] = useState<string>("");
+  const [desktopProductsDropdownOpen, setDesktopProductsDropdownOpen] =
+    useState<boolean>(false);
+  const [mobileProductsDropdownOpen, setMobileProductsDropdownOpen] =
+    useState<boolean>(false);
   const [y, setY] = useState<number>(0);
   const [visible, setVisible] = useState<boolean>(true);
   const whiteStyles = "text-white";
-  const blueStyles = "text-action-active bg-tracer-navy bg-opacity-20";
+  const blueStyles = "text-action-active";
   const solidBlueStyles = "text-action-active";
-
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
 
-  const handleDropdownToggle = () => {
-    setDropdownOpen(!dropdownOpen);
+  const handleDropdownOpen = () => {
+    setDesktopProductsDropdownOpen(false);
+    setDropdownOpen(true);
+  };
+
+  const handleDropdownClose = () => {
+    setDropdownOpen(false);
+  };
+
+  const handleDesktopProductsDropdownOpen = () => {
+    setDropdownOpen(false); // Close other dropdown when open
+    setDesktopProductsDropdownOpen(true);
+  };
+
+  const handleDesktopProductsDropdownClose = () => {
+    setDesktopProductsDropdownOpen(false);
+  };
+
+  const handleMobileProductsDropdownToggle = () => {
+    setMobileProductsDropdownOpen(!mobileProductsDropdownOpen);
   };
 
   const handleResize = () => {
     if (!isMobile()) {
       setNavOpen(false);
-      setDropdownOpen(false);
+      setMobileProductsDropdownOpen(false);
+    }
+  };
+
+  const handleScroll = () => {
+    if (window.scrollY >= 1) {
+      setNavBackdrop(true);
+    } else {
+      setNavBackdrop(false);
     }
   };
 
@@ -112,13 +143,13 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
   const handleClose = () => {
     setTimeout(() => {
       setNavOpen(false);
-      setDropdownOpen(false);
+      setMobileProductsDropdownOpen(false);
     }, 500);
   };
 
   const toggleNavMenu = () => {
     setNavOpen(!navOpen);
-    setDropdownOpen(false);
+    setMobileProductsDropdownOpen(false);
   };
 
   const handleNavigation = useCallback(
@@ -128,20 +159,12 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
         setVisible(true);
       } else if (y < window.scrollY) {
         setVisible(false);
+        setDropdownOpen(false);
       }
       setY(window.scrollY);
     },
     [y]
   );
-
-  useEffect(() => {
-    setY(window.scrollY);
-    window.addEventListener("scroll", handleNavigation);
-
-    return () => {
-      window.removeEventListener("scroll", handleNavigation);
-    };
-  }, [handleNavigation]);
 
   useEffect(() => {
     if (navOpen) {
@@ -160,6 +183,17 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, [handleResize]);
+
+  useEffect(() => {
+    setY(window.scrollY);
+    window.addEventListener("scroll", (e) => {
+      handleNavigation(e);
+      handleScroll();
+    });
+    return () => {
+      window.removeEventListener("scroll", handleNavigation && handleScroll);
+    };
+  }, [handleNavigation]);
 
   useEffect(() => {
     // Wait for page exit transition before setting nav bg and text colours
@@ -185,25 +219,44 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 z-40 flex h-[70px] w-full transform-gpu items-center transition-all duration-300
+        className={`fixed top-0 left-0 z-40 flex h-[70px] w-full transform-gpu items-center backdrop-blur-md transition-all duration-300
+        ${navBackdrop ? "backdrop-blur-md" : "backdrop-blur-0"}
         ${
           !navOpen && isMobile()
-            ? `backdrop-blur-md ${navColour}`
+            ? `${navColour}`
             : isMobile()
-            ? `text-white backdrop-blur-0`
-            : `${navColour} backdrop-blur-md`
+            ? `text-white`
+            : `${navColour}`
         }
-        ${visible ? "visible" : "md:invisible md:-translate-y-[70px]"}`}
+        ${visible ? "visible" : "lg:invisible lg:-translate-y-[70px]"}`}
       >
         <Container className="flex items-center justify-between">
           <Logo onClickAction={handleClose} />
           <div className="hidden items-center md:flex">
-            {links.slice(1, links.length).map((link, i) => (
+            <div
+              className="relative"
+              onMouseEnter={handleDesktopProductsDropdownOpen}
+            >
+              <button className="mr-6 text-sm">{links[1].label}</button>
+              <ProductsDropdown
+                desktopProductsDropdownOpen={desktopProductsDropdownOpen}
+                handleDesktopProductsDropdownClose={
+                  handleDesktopProductsDropdownClose
+                }
+              />
+            </div>
+            {links.slice(2, links.length).map((link, i) => (
               <NavLink href={link.href} key={i}>
                 {link.label}
               </NavLink>
             ))}
-            <LaunchAppButton />
+            <div className="relative" onMouseEnter={handleDropdownOpen}>
+              <LaunchAppButton dropdownOpen={dropdownOpen} />
+              <LaunchDropdown
+                dropdownOpen={dropdownOpen}
+                handleDropdownClose={handleDropdownClose}
+              />
+            </div>
           </div>
           <HamburgerMenu
             navOpen={navOpen}
@@ -213,10 +266,10 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
         </Container>
       </nav>
       <MobileNav
-        dropdownOpen={dropdownOpen}
+        mobileProductsDropdownOpen={mobileProductsDropdownOpen}
         navOpen={navOpen}
         handleClose={handleClose}
-        handleDropdownToggle={handleDropdownToggle}
+        handleMobileProductsDropdownToggle={handleMobileProductsDropdownToggle}
         links={links}
       />
     </>

@@ -24,7 +24,7 @@ const Banner: React.FC<{}> = () => {
             </p>
           </AnimateIn>
           <AnimateIn delay={0.8}>
-            <Button lightBlueGradient className="mt-4 text-white">
+            <Button darkBlueGradient className="mt-4 text-white">
               Learn More
             </Button>
             <Button blueTransparent className="mt-4">

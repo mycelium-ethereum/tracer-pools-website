@@ -12,7 +12,6 @@ const HomePage: React.FC<{}> = () => {
       <SEO title="Home" />
       <Banner />
       <AccessibleMarkets />
-      {/* <Railroads /> */}
       <PerpetualPools />
       <Factories />
       <DataFeeds />

@@ -4,12 +4,11 @@ import PageLink from "../PageLink";
 const Button: React.FC<{
   className?: string;
   linkClassName?: string;
-  action?: (payload: any) => void;
+  onClickAction?: (payload: any) => void;
   children: string | React.ReactNode;
   blueTransparent?: boolean;
   purpleTransparent?: boolean;
   purpleGradient?: boolean;
-  clear?: boolean;
   lightBlueGradient?: boolean;
   ultralightBlueGradient?: boolean;
   darkBlueGradient?: boolean;
@@ -19,7 +18,7 @@ const Button: React.FC<{
 }> = ({
   className,
   linkClassName,
-  action,
+  onClickAction,
   children,
   blueTransparent,
   purpleTransparent,
@@ -27,7 +26,6 @@ const Button: React.FC<{
   lightBlueGradient,
   ultralightBlueGradient,
   darkBlueGradient,
-  clear,
   link,
   outgoingLink,
   download,
@@ -52,12 +50,12 @@ const Button: React.FC<{
       } 
       ${
         darkBlueGradient
-          ? "btn-gradient-blue-dark border-action-active text-white hover:bg-action-active hover:text-white "
+          ? "btn-gradient-blue-dark border-action-active text-white hover:bg-tracer-midblue hover:bg-opacity-80 hover:text-white "
           : ""
       } 
       ${
         lightBlueGradient
-          ? "btn-gradient-blue-light border-action-active text-action-active "
+          ? "btn-gradient-blue-light border-action-active text-action-active hover:bg-action-active hover:text-white "
           : ""
       } 
       ${
@@ -65,10 +63,9 @@ const Button: React.FC<{
           ? "btn-gradient-blue-ultralight border-alternative-active text-white "
           : ""
       } 
-      ${clear ? "btn-clear text-action-active hover:text-white " : ""}
       ${link || outgoingLink ? "p-0" : "px-6 py-2"}
       ${className ? className : ""}`}
-      onClick={action}
+      onClick={onClickAction}
     >
       {outgoingLink && (
         <a
