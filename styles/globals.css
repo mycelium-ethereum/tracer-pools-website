@@ -162,6 +162,23 @@ input::placeholder {
   object-fit: fill;
 }
 
+/* Cover */
+img.image-cover-top {
+  object-position: top !important;
+}
+img.image-cover-bottom {
+  object-position: bottom !important;
+}
+img.image-cover-center {
+  object-position: center !important;
+}
+img.image-cover-left {
+  object-position: left !important;
+}
+img.image-cover-right {
+  object-position: right !important;
+}
+
 /* BANNER DISC/CIRCLES ANIMATION */
 .bannerDiscAnim {
   animation: slideDown 19s ease infinite;

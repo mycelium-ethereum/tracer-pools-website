@@ -12,7 +12,7 @@ const ExposureSlider: React.FC<{}> = () => {
           src="/img/shared/link-token.png"
           alt="Link token"
           absolute
-          className="top-[-20px] left-[-270px] max-h-[542px] max-w-[564px]"
+          className="absolute top-[-20px] left-[-270px] max-h-[542px] max-w-[564px]"
         />
         <div className="flex items-center justify-center">
           <span className="whitespace-nowrap text-[40px] font-light leading-[48px] text-action-active 4xl:text-[64px] 4xl:leading-[72px]">

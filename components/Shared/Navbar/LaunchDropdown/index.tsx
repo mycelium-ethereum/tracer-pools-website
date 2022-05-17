@@ -19,7 +19,7 @@ const LaunchDropdown: React.FC<{
   return (
     <div
       onMouseLeave={handleDropdownClose}
-      className={`absolute right-0 top-14 w-[280px] rounded-md border border-action-active bg-tracer-midblue bg-opacity-80 transition-all duration-300 ${
+      className={`absolute right-0 top-14 w-[280px] rounded-md border border-action-active bg-tracer-midblue bg-opacity-80 text-white transition-all duration-300 ${
         dropdownOpen ? activeStyles : inactiveStyles
       }`}
     >

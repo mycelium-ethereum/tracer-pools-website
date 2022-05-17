@@ -7,7 +7,7 @@ export const partnerLogos = [
     {
         image: "/img/logos/dacm.svg",
         alt: "DACM Logo",
-        imgClassName: "mr-8",
+        imgClassName: "sm:mr-8",
     },
     {
         image: "/img/logos/koji.svg",
@@ -47,6 +47,6 @@ export const partnerLogos = [
     {
         image: "/img/logos/efficient-frontier.svg",
         alt: "Efficient Frontier Logo",
-        imgClassName: "mr-8",
+        imgClassName: "sm:mr-8",
     }
 ]

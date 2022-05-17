@@ -48,7 +48,7 @@ const PerpetualPools: React.FC<{}> = () => {
           </AnimateIn>
         </header>
       </Container>
-      <div className="relative h-[50vh] min-h-[500px] lg:static lg:h-auto lg:min-h-[unset]">
+      <div className="relative h-[370px] sm:h-[50vh] sm:min-h-[500px] lg:static lg:h-auto lg:min-h-[unset]">
         <Tokens />
         <V2LottieAnim />
       </div>

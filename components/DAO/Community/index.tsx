@@ -12,8 +12,7 @@ const Community: React.FC<{}> = () => {
       <OptimisedImage
         src="/img/dao/community-bg.png"
         alt=""
-        absolute
-        className="top-0 right-0 w-1/2 max-w-[700px]"
+        className="absolute top-0 right-0 w-1/2 max-w-[700px]"
       />
       <Container className="text-action-active">
         <UnderlinedHeading

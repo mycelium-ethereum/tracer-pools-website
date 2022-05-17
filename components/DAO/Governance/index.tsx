@@ -13,8 +13,7 @@ const Governance: React.FC<{}> = () => {
       <OptimisedImage
         src="/img/dao/governance-bg.png"
         alt=""
-        absolute
-        className="top-0 right-0 w-[66%] max-w-[960px]"
+        className="absolute top-0 right-0 w-[66%] max-w-[960px]"
       />
       <Container className="text-action-active">
         <UnderlinedHeading

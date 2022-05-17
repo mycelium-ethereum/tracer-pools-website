@@ -10,7 +10,7 @@ import H1 from "@components/Home/H1";
 const DataFeeds: React.FC<{}> = () => {
   return (
     <Section id="section-5" className="bg-tracer-navy">
-      <Container className="relative z-10 flex h-screen flex-col py-14 sm:py-16">
+      <Container className="flex pt-20 text-white lg:h-screen lg:min-h-[800px] lg:py-16">
         <header className="flex h-full max-w-[356px] flex-grow flex-col justify-center">
           <AnimateIn delay={0.2}>
             <div className="mb-4 w-full">
@@ -22,7 +22,10 @@ const DataFeeds: React.FC<{}> = () => {
             </div>
           </AnimateIn>
           <AnimateIn delay={0.6}>
-            <H1 className="mb-2">&#123;Create your own data feeds&#125;</H1>
+            <H1 className="mb-2">
+              &#123;Create your own
+              <br /> data feeds&#125;
+            </H1>
           </AnimateIn>
           <AnimateIn delay={1.0}>
             <Paragraph className="max-w-[328px] 3xl:max-w-[420px]">
@@ -32,8 +35,8 @@ const DataFeeds: React.FC<{}> = () => {
             </Paragraph>
           </AnimateIn>
           <AnimateIn delay={1.4}>
-            <div className="mt-4 flex">
-              <Button darkBlueGradient className="mr-4">
+            <div className="mt-4 flex flex-col sm:flex-row">
+              <Button darkBlueGradient className="mb-4 sm:mb-0 sm:mr-4">
                 Launch Data Feeds
               </Button>
               <Button blueTransparent>Learn More</Button>
@@ -44,9 +47,15 @@ const DataFeeds: React.FC<{}> = () => {
       <OptimisedImage
         src="/img/home/data-feeds-bg.png"
         alt="Data Feeds Background"
-        absolute
-        className="pointer-events-none top-0 right-0 z-0 h-full w-full"
+        className="pointer-events-none absolute top-0 right-0 z-0 hidden h-full w-full lg:block"
       />
+      <div className="relative block h-[458px] w-full lg:hidden">
+        <OptimisedImage
+          className="absolute bottom-0 right-0 h-[1012px] w-[1805px]"
+          src="/img/home/data-feeds-mobile-bg.png"
+          alt=""
+        />
+      </div>
     </Section>
   );
 };

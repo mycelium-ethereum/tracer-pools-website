@@ -7,15 +7,13 @@ const MeshUnderlay: React.FC<{ fullPage?: boolean }> = ({ fullPage }) => {
         <OptimisedImage
           src="/img/shared/mesh.png"
           alt=""
-          absolute
-          className="pointer-events-none top-0 right-0 z-0 h-full w-full select-none md:min-h-[1080px] md:min-w-[1920px]"
+          className="pointer-events-none absolute top-0 right-0 z-0 h-full w-full select-none md:min-h-[1080px] md:min-w-[1920px]"
         />
       ) : (
         <OptimisedImage
           src="/img/shared/mesh-top-right.png"
           alt=""
-          absolute
-          className="pointer-events-none top-0 right-0 z-0 h-[1080px] w-[1920px] select-none"
+          className="pointer-events-none absolute top-0 right-0 z-0 h-[1080px] w-[1920px] select-none"
         />
       )}
     </>

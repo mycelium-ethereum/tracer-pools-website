@@ -8,7 +8,7 @@ import { partnerLogos } from "@components/Home/Partners/presets";
 const Partners: React.FC<{}> = () => {
   return (
     <Section id="section-6" className="bg-tracer-navy">
-      <Container className="relative pt-16 pb-11">
+      <Container className="relative pt-20 pb-[107px] md:pt-16 md:pb-11">
         <header className="mb-8 h-full w-full max-w-[678px]">
           <div className="mb-2 flex items-center">
             <img
@@ -20,7 +20,7 @@ const Partners: React.FC<{}> = () => {
           </div>
           <GradientLine color="lightblue" />
         </header>
-        <div className="flex max-w-[864px] flex-wrap 3xl:max-w-[unset]">
+        <div className="flex max-w-[584px] flex-wrap lg:max-w-[864px] 4xl:max-w-[unset]">
           {partnerLogos.map((logo, i) => (
             <PartnerLogo key={i} {...logo} />
           ))}

@@ -55,11 +55,11 @@ const Footer: React.FC<{ route: string }> = ({ route }) => {
       className={`relative z-10 h-1/2 w-full overflow-hidden py-[77px] text-action-active ${background}`}
     >
       <Container>
-        <div className="mb-[75px] flex flex-col items-start justify-between pr-8 md:flex-row md:pr-0">
+        <div className="mb-[75px] flex flex-col items-start justify-between pr-8 md:pr-0 lg:flex-row">
           <PageLink href="/">
             <img
               src="/img/logos/tracer-logo-blue.svg"
-              className="mr-20 h-[26px] w-[111px]"
+              className="mb-11 h-[26px] w-[111px] lg:mr-20 lg:mb-0"
             />
           </PageLink>
           <div className="mt-12 grid max-w-[1045px] flex-grow transform grid-cols-2 gap-x-[75px] gap-y-12 sm:grid-cols-3 md:mt-0 lg:translate-x-[95px] xl:w-max xl:translate-x-[40px] xl:grid-cols-6">

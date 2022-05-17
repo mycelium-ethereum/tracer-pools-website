@@ -11,7 +11,7 @@ const AccessibleMarkets: React.FC<{}> = () => {
   let delay = 0.6;
   return (
     <Section id="section-2">
-      <Container className="flex flex-col pt-28 text-action-active md:pb-[300px] md:pt-28 lg:py-40">
+      <Container className="flex flex-col pt-28 pb-[400px] text-action-active md:pb-[300px] md:pt-28 lg:py-40">
         <header className="flex flex-col justify-center 3xl:max-w-[1043px]">
           <AnimateIn delay={0.2}>
             <H1 className="mb-4">
@@ -54,12 +54,12 @@ const AccessibleMarkets: React.FC<{}> = () => {
           <AnimateIn delay={0.6}>
             <Paragraph>
               We build factory contracts which are fully modular and
-              <br />
+              <br className="hidden sm:block" />
               permissionless to deploy.
             </Paragraph>
             <Paragraph className="mt-2">
               A derivative product suite including applications and contracts
-              <br />
+              <br className="hidden sm:block" />
               to enable truly global financial stability.
             </Paragraph>
           </AnimateIn>
@@ -68,14 +68,12 @@ const AccessibleMarkets: React.FC<{}> = () => {
       <OptimisedImage
         src="/img/home/accessible-markets-bg.png"
         alt=""
-        absolute
-        className="pointer-events-none -bottom-[30px] -right-[30px] hidden min-h-[727px] min-w-[1284px] xl:block"
+        className="pointer-events-none absolute -bottom-[30px] -right-[30px] hidden min-h-[727px] min-w-[1284px] xl:block"
       />
       <OptimisedImage
         src="/img/home/accessible-markets-mobile-bg.png"
         alt=""
-        absolute
-        className="pointer-events-none -bottom-[30px] -right-[30px] block min-h-[480px] max-w-[350px] xl:hidden"
+        className="pointer-events-none absolute -bottom-[30px] -right-[30px] block min-h-[480px] max-w-[350px] translate-x-4 md:translate-x-0 xl:hidden"
       />
     </Section>
   );

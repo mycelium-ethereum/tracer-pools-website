@@ -5,11 +5,12 @@ import AnimateIn from "@components/Shared/AnimateIn";
 import GradientLine from "@components/Shared/GradientLine";
 import Paragraph from "@components/Home/Paragraph";
 import H1 from "@components/Home/H1";
+import OptimisedImage from "@components/Shared/OptimisedImage";
 
 const Factories: React.FC<{}> = () => {
   return (
     <Section id="section-4" className="bg-tracer-purple-dark">
-      <Container className="relative flex h-screen min-h-[800px] py-14 text-white sm:py-16">
+      <Container className="relative flex pt-20 pb-5 text-white lg:h-screen lg:min-h-[800px] lg:py-16">
         <header className="flex h-full flex-grow flex-col justify-center">
           <AnimateIn delay={0.2}>
             <div className="mb-4 w-full max-w-[328px]">
@@ -44,11 +45,21 @@ const Factories: React.FC<{}> = () => {
           </AnimateIn>
         </header>
       </Container>
-      <img
-        className="absolute top-0 right-0 h-full max-w-[792px] object-cover object-left"
-        src="/img/home/factories-section-bg.png"
-        alt=""
-      />
+      <div className="absolute top-0 right-0 hidden h-full w-[50vw] max-w-[792px] lg:block">
+        <OptimisedImage
+          cover
+          position="left"
+          src="/img/home/factories-section-bg.png"
+          alt=""
+        />
+      </div>
+      <div className="relative block h-[430px] w-full lg:hidden">
+        <OptimisedImage
+          className="absolute top-0 right-0 h-[430px] min-w-[1030px]"
+          src="/img/home/factories-section-mobile-bg.png"
+          alt=""
+        />
+      </div>
     </Section>
   );
 };

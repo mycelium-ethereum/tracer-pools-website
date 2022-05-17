@@ -4,7 +4,7 @@ const Paragraph: React.FC<{
 }> = ({ className, children }) => {
   return (
     <p
-      className={`text-base leading-[150%] 3xl:text-xl 3xl:leading-[28px] ${
+      className={`text-base leading-[150%] 4xl:text-xl 4xl:leading-[28px] ${
         className ? className : ""
       }`}
     >
