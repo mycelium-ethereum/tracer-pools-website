@@ -15,7 +15,7 @@ const ProductsDropdown: React.FC<{
     <>
       <button
         onClick={handleMobileProductsDropdownToggle}
-        className="w-full px-4 text-left"
+        className="nav-link w-full px-4 text-left"
       >
         <span
           className={`relative z-10 block overflow-hidden py-4 text-[40px] leading-[44px] transition-all duration-300 ${
@@ -38,6 +38,7 @@ const ProductsDropdown: React.FC<{
               link={link.href}
               onClickAction={handleClose}
               border={i !== dropdownLinks.length - 1}
+              nestedLink
               noHover
             >
               {link.label}

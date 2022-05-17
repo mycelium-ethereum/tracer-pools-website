@@ -67,9 +67,31 @@ input::placeholder {
   @apply text-tertiary;
 }
 
-/* nav * {
-  transition: unset !important;
-} */
+/* Mobile nav link animations */
+.nav-link {
+  @apply translate-y-3 -translate-x-2 opacity-0 transition-all delay-[500ms] duration-500;
+}
+.active .nav-link {
+  @apply translate-y-0 -translate-x-0 opacity-100;
+}
+.active .nav-link:nth-child(1) {
+  @apply delay-[300ms];
+}
+.active .nav-link:nth-child(2) {
+  @apply delay-[400ms];
+}
+.active .nav-link:nth-child(3) {
+  @apply delay-[500ms];
+}
+.active .nav-link:nth-child(4) {
+  @apply delay-[600ms];
+}
+.active .nav-link:nth-child(5) {
+  @apply delay-[700ms];
+}
+.active .nav-link:nth-child(6) {
+  @apply delay-[800ms];
+}
 
 /* Button hover classes */
 

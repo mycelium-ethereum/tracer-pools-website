@@ -11,23 +11,21 @@ const Header: React.FC<{}> = () => {
         />
       </AnimateIn>
       <AnimateIn delay={0.5}>
-        <h1 className="mb-4 text-[70px] font-light leading-[90px] xl:text-[120px] xl:leading-[132px]">
+        <h1 className="mb-4 text-[48px] font-light leading-[58px] sm:text-[70px] sm:leading-[90px] xl:text-[120px] xl:leading-[132px]">
           Leveraged Tokens.
           <br />
           Less Overhead.
         </h1>
       </AnimateIn>
       <AnimateIn delay={0.8}>
-        <p className="text-xl text-action-active">
+        <p className="text-2xl leading-[120%] text-action-active">
           With a new derivative primitive.
         </p>
       </AnimateIn>
       <AnimateIn delay={1.1} className="mx-auto w-max">
-        <div className="flex">
-          <Button lightBlueGradient className="mt-4">
-            Launch Pools
-          </Button>
-          <Button blueTransparent className="ml-4 mt-4">
+        <div className="mt-4 flex flex-col items-center sm:flex-row">
+          <Button darkBlueGradient>Launch Pools</Button>
+          <Button blueTransparent className="mt-4 sm:ml-4 sm:mt-0">
             Documentation
           </Button>
         </div>

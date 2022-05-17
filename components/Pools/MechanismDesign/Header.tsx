@@ -13,14 +13,14 @@ const Header: React.FC<{}> = () => {
         Mechanism Design
       </UnderlinedHeading>
       <H1 className="mb-4">
-        Your leveraged token
+        Your leveraged token&nbsp;
         <br className="hidden sm:block" />
-        represents your claim on the
+        represents your claim on the&nbsp;
         <br className="hidden sm:block" />
         capital in a Perpetual Pool
       </H1>
       <Paragraph className="text-tertiary">
-        Click through to see how this derivative
+        Click through to see how this derivative&nbsp;
         <br className="hidden sm:block" />
         primitive works
       </Paragraph>

@@ -25,11 +25,11 @@ const MobileNav: React.FC<{
   return (
     <menu
       className={`fixed top-0 left-0 z-30 w-full overflow-hidden bg-tracer-navy transition-all duration-700 ${
-        navOpen ? "h-screen" : "h-0"
+        navOpen ? "active h-screen" : "h-0"
       }`}
     >
-      <div className="absolute top-0 left-0 z-10 flex h-screen w-full flex-col justify-end">
-        <div className="mt-[100px] h-[385px] overflow-y-auto overflow-x-hidden">
+      <div className="absolute top-0 left-0 z-10 flex h-screen w-full flex-col justify-between">
+        <div className="mt-[100px] h-[385px] overflow-y-auto overflow-x-hidden sm:h-auto">
           <MobileLink link={links[0].href} onClickAction={handleClose} border>
             {links[0].label}
           </MobileLink>

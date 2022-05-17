@@ -10,7 +10,7 @@ import OptimisedImage from "@components/Shared/OptimisedImage";
 const Factories: React.FC<{}> = () => {
   return (
     <Section id="section-4" className="bg-tracer-purple-dark">
-      <Container className="relative flex pt-20 pb-5 text-white lg:h-screen lg:min-h-[800px] lg:py-16">
+      <Container className="flex pt-20 pb-5 text-white lg:h-screen lg:min-h-[800px] lg:py-16">
         <header className="flex h-full flex-grow flex-col justify-center">
           <AnimateIn delay={0.2}>
             <div className="mb-4 w-full max-w-[328px]">

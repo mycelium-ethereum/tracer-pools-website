@@ -11,7 +11,7 @@ import H1 from "@components/Home/H1";
 const PerpetualPools: React.FC<{}> = () => {
   return (
     <Section id="section-3" className="bg-tracer-navy">
-      <Container className="relative z-10 flex flex-col pt-10 text-white md:py-16 lg:min-h-[800px] xl:h-screen">
+      <Container className="z-10 flex flex-col pt-10 text-white md:py-16 lg:min-h-[800px] xl:h-screen">
         <header className="flex h-full flex-grow flex-col justify-center">
           <AnimateIn delay={0.2}>
             <div className="mb-4 w-full max-w-[328px]">

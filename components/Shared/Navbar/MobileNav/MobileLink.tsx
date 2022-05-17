@@ -6,13 +6,14 @@ const MobileLink: React.FC<{
   children: string;
   border: boolean;
   noHover?: boolean;
+  nestedLink?: boolean;
   onClickAction: () => void;
-}> = ({ children, link, border, noHover, onClickAction }) => {
+}> = ({ children, link, border, noHover, nestedLink, onClickAction }) => {
   return (
     <PageLink
       href={link ? link : "#"}
       onClickAction={onClickAction}
-      className="group relative block px-4"
+      className={`group relative block px-4 ${nestedLink ? "" : "nav-link"}`}
     >
       <span className="relative z-10 block overflow-hidden py-4 text-[40px] font-light leading-[44px]">
         {children}

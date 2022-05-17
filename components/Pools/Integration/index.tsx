@@ -8,7 +8,7 @@ const Integration: React.FC<{}> = () => {
   return (
     <Section id="section-5" className="bg-secondary">
       <Container>
-        <div className="mx-auto mt-32 mb-[99px] grid max-w-[1680px] grid-cols-3 gap-16 3xl:gap-x-56">
+        <div className="mx-auto mt-16 mb-[99px] grid max-w-[1680px] gap-16 sm:grid-cols-2 md:grid-cols-3 lg:mt-32 3xl:gap-x-56">
           {integrationItems.map((item) => (
             <IntegrationCard {...item} />
           ))}

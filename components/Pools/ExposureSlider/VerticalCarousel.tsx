@@ -17,12 +17,17 @@ const VerticalCarousel: React.FC<{}> = () => {
   );
 
   return (
-    <div className="mt-2 xl:ml-10">
-      <Slider {...settings} className="vertical-slider">
-        {exposureItems.map((item: string, i: number) => (
-          <Slide item={item} key={i} />
-        ))}
-      </Slider>
+    <div className="flex flex-col items-center justify-center xl:flex-row">
+      <span className="whitespace-nowrap text-2xl leading-[28px] text-action-active lg:text-[40px] lg:leading-[48px] 4xl:text-[64px] 4xl:leading-[72px]">
+        Get exposure to
+      </span>
+      <div className="mt-2 xl:ml-10">
+        <Slider {...settings} className="vertical-slider">
+          {exposureItems.map((item: string, i: number) => (
+            <Slide item={item} key={i} />
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };
