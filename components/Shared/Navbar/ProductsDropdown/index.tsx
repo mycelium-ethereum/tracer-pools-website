@@ -22,6 +22,7 @@ const ProductsDropdown: React.FC<{
         <ProductItem
           key={i}
           {...product}
+          handleClose={handleDesktopProductsDropdownClose}
           border={i !== productContent.length - 1}
         />
       ))}
