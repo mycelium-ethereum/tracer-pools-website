@@ -3,7 +3,7 @@ import Button from "../../Shared/Buttons/Button";
 
 const CallToAction: React.FC<{}> = ({}) => {
   return (
-    <div className="relative flex h-[204px] w-full items-center justify-center overflow-hidden rounded-lg bg-tracer-navy py-6 px-6 lg:mb-4 lg:h-[84px] lg:overflow-visible lg:py-7 xl:justify-start 2xl:pl-14 3xl:justify-center">
+    <div className="relative -ml-3 flex h-[204px] w-full min-w-[calc(100%+24px)] items-center justify-center overflow-hidden rounded-lg bg-tracer-navy py-6 px-6 md:ml-0 lg:mb-4 lg:h-[84px] lg:overflow-visible lg:py-7 xl:justify-start 2xl:pl-14 3xl:justify-center">
       <img
         src="/img/radar/cta-bg.png"
         className="absolute top-0 left-0 z-0 hidden h-full w-full object-cover object-right lg:block"

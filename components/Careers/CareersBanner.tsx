@@ -3,7 +3,7 @@ import MeshDouble from "@components/Shared/Mesh/MeshDouble";
 
 const CareersBanner: React.FC = () => {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-md bg-tracer-midblue py-[22px] text-xl leading-[28px] text-white lg:flex-row xl:h-[84px] xl:py-0">
+    <div className="relative -ml-3 flex w-full min-w-[calc(100%+24px)] flex-col items-center justify-center overflow-hidden rounded-md bg-tracer-midblue py-[22px] text-xl leading-[28px] text-white md:ml-0 lg:flex-row xl:h-[84px] xl:py-0">
       <span className="items-center text-center sm:flex">
         Build with the
         <br />
