@@ -1,5 +1,6 @@
-import { productContent } from "@components/Shared/Navbar/ProductsDropdown/presets";
+import { useRef } from "react";
 import ProductItem from "@components/Shared/Navbar/ProductsDropdown/ProductItem";
+import { productContent } from "@components/Shared/Navbar/ProductsDropdown/presets";
 
 const ProductsDropdown: React.FC<{
   desktopProductsDropdownOpen: boolean;

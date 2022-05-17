@@ -1,4 +1,4 @@
-import { useOnScreen } from "@lib/helpers";
+import { useOnScreen } from "hooks";
 import { useEffect, useRef } from "react";
 import Lottie from "lottie-react";
 import linework from "../../../public/img/home/v2-lottie.json";

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Container from "@components/Shared/Container";
 import NavLink from "@components/Shared/Navbar/NavLink";
 import HamburgerMenu from "@components/Shared/Navbar/HamburgerMenu";
@@ -9,6 +9,7 @@ import LaunchDropdown from "@components/Shared/Navbar/LaunchDropdown";
 import ProductsDropdown from "@components/Shared/Navbar/ProductsDropdown";
 import { disableScroll, enableScroll, isMobile } from "@lib/helpers";
 import { links } from "@components/Shared/Navbar/presets";
+import { handleOutsideClick } from "hooks";
 
 const Navbar: React.FC<{ route: string }> = ({ route }) => {
   const [navOpen, setNavOpen] = useState<boolean>(false);
@@ -192,7 +193,10 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
       handleScroll();
     });
     return () => {
-      window.removeEventListener("scroll", handleNavigation && handleScroll);
+      window.removeEventListener("scroll", (e) => {
+        handleNavigation(e);
+        handleScroll();
+      });
     };
   }, [handleNavigation]);
 
@@ -217,6 +221,13 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
     changeNavColour();
   }, [currentSection]);
 
+  // Handle click/tap outside to close modals
+  const productDropdownRef = useRef<HTMLDivElement>(null);
+  handleOutsideClick(productDropdownRef, handleDesktopProductsDropdownClose);
+
+  const launchDropdownRef = useRef<HTMLDivElement>(null);
+  handleOutsideClick(launchDropdownRef, handleDropdownClose);
+
   return (
     <>
       <nav
@@ -236,6 +247,7 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
           <div className="hidden items-center md:flex">
             <div
               className="relative mr-6"
+              ref={productDropdownRef}
               onMouseEnter={handleDesktopProductsDropdownOpen}
             >
               <button className="text-sm">{links[1].label}</button>
@@ -251,7 +263,11 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
                 {link.label}
               </NavLink>
             ))}
-            <div className="relative" onMouseEnter={handleDropdownOpen}>
+            <div
+              className="relative"
+              onMouseEnter={handleDropdownOpen}
+              ref={launchDropdownRef}
+            >
               <LaunchAppButton
                 dropdownOpen={dropdownOpen}
                 navColour={navColour}
