@@ -1,5 +1,5 @@
 import OptimisedImage from "@components/Shared/OptimisedImage";
-import Button from "../../Shared/Buttons/Button";
+import Button from "@components/Shared/Buttons/Button";
 
 const CallToAction: React.FC<{}> = ({}) => {
   return (

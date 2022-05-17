@@ -7,11 +7,11 @@ import PortfolioCarousel from "@components/Pools/BuildPortfolio/PortfolioCarouse
 const BuildPortfolio: React.FC<{}> = () => {
   return (
     <Section id="section-4">
-      <Container className="flex items-center justify-center py-20">
+      <Container className="flex flex-col-reverse justify-center py-16 xl:flex-row xl:items-center xl:py-20">
         <OptimisedImage
           src="/img/pools/build-portfolio-diagram.png"
           alt="Perpetual Pools diagram"
-          className="mr-[122px] max-h-[498px] max-w-[567px] 3xl:mr-[322px] 3xl:max-h-[768px] 3xl:max-w-[874px]"
+          className="mx-auto mt-10 max-h-[498px] max-w-[567px] lg:mx-0 lg:mt-0 lg:mr-[122px] 3xl:mr-[322px] 3xl:max-h-[768px] 3xl:max-w-[874px]"
         />
         <div>
           <UnderlinedHeading

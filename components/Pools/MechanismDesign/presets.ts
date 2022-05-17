@@ -65,3 +65,26 @@ export const sliderMainSettings = {
     pauseOnFocus: true,
     pauseOnHover: true,
 };
+
+export const buttonContent = [
+    {
+        text: "Explained like I'm 5",
+        link: "/radar/tracer-perpetual-pools-eli5/",
+    },
+    {
+        text: "Whitepaper",
+        link: "/",
+    },
+    {
+        text: "Litepaper",
+        link: "/",
+    },
+    {
+        text: "FAQs",
+        link: "/",
+    },
+    {
+        text: "Documentation",
+        link: "/",
+    },
+];

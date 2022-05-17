@@ -1,11 +1,13 @@
 import Button from "@components/Shared/Buttons/Button";
 
+const paragraphStyles = "text-base leading-[24px] lg:text-xl lg:leading-[28px]";
+
 export const integrationItems = [
   {
     title: "SECURITY FIRST",
     text: (
       <>
-        <p className="text-xl leading-[28px]">
+        <p className={paragraphStyles}>
           Tracer has a long term commitment to security. Our contracts have been
           audited by top tier security firms.
         </p>
@@ -33,7 +35,7 @@ export const integrationItems = [
     title: "INTEGRATION READY",
     text: (
       <>
-        <p className="text-xl leading-[28px]">
+        <p className={paragraphStyles}>
           Seamlessly integrate Perpetual Pool markets into a your own
           application via the Tracer SDK or add our leveraged tokens to your CEX
           or DEX.
@@ -48,7 +50,7 @@ export const integrationItems = [
     title: "{ ANOTHER POINT REQUIRED }",
     text: (
       <>
-        <p className="text-xl leading-[28px]">
+        <p className={paragraphStyles}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada
           nibh elit vulputate id elit. Qui
         </p>

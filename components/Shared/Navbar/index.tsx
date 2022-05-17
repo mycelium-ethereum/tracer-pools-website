@@ -186,6 +186,7 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
 
   useEffect(() => {
     setY(window.scrollY);
+    handleScroll();
     window.addEventListener("scroll", (e) => {
       handleNavigation(e);
       handleScroll();

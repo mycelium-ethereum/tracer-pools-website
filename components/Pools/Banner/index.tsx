@@ -1,10 +1,9 @@
 import Section from "@components/Shared/Section";
 import Container from "@components/Shared/Container";
-import MeshUnderlay from "@components/Shared/Mesh/MeshUnderlay";
 import TokenSpread from "@components/Pools/Banner/TokenSpread";
 import Header from "@components/Pools/Banner/Header";
 import IntroText from "./IntroText";
-import MeshDouble from "../../Shared/Mesh/MeshDouble";
+import MeshDouble from "@components/Shared/Mesh/MeshDouble";
 
 const Banner: React.FC<{}> = () => {
   return (
