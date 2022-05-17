@@ -10,7 +10,7 @@ export const settings = {
     dots: false,
     arrows: false,
     vertical: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 3500,
     speed: 500,
     draggable: false,

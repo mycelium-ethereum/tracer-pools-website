@@ -7,18 +7,18 @@ const Header: React.FC<{}> = () => {
       <AnimateIn delay={0.2}>
         <img
           src="/img/logos/tracer-perpetual-pools.svg"
-          className="mx-auto mb-4 h-[26px] w-[264px]"
+          className="mx-auto mb-8 h-[26px] w-[264px] sm:mb-4"
         />
       </AnimateIn>
       <AnimateIn delay={0.5}>
-        <h1 className="mb-4 text-[48px] font-light leading-[58px] sm:text-[70px] sm:leading-[90px] xl:text-[120px] xl:leading-[132px]">
+        <h1 className="mb-4 text-2xl font-light leading-[30px] sm:text-[48px] sm:leading-[90px] md:text-[70px] md:leading-[80px] xl:text-[120px] xl:leading-[132px]">
           Leveraged Tokens.
           <br />
           Less Overhead.
         </h1>
       </AnimateIn>
       <AnimateIn delay={0.8}>
-        <p className="text-2xl leading-[120%] text-action-active">
+        <p className="text-xl leading-[30px] text-action-active sm:text-2xl sm:leading-[120%]">
           With a new derivative primitive.
         </p>
       </AnimateIn>

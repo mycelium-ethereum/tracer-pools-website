@@ -8,7 +8,7 @@ import MeshDouble from "@components/Shared/Mesh/MeshDouble";
 const Banner: React.FC<{}> = () => {
   return (
     <Section id="section-1" className="bg-tracer-darkblue">
-      <Container className="relative pt-40 pb-36">
+      <Container className="relative pt-40 pb-10 sm:pb-36">
         <Header />
         <TokenSpread />
         <IntroText />

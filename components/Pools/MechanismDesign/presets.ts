@@ -34,7 +34,7 @@ export const sliderNavSettings = {
     dots: false,
     arrows: false,
     vertical: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 2000,
     speed: 500,
     draggable: false,
@@ -44,6 +44,14 @@ export const sliderNavSettings = {
     focusOnSelect: true,
     pauseOnFocus: true,
     pauseOnHover: true,
+    responsive: [
+        {
+            breakpoint: 640,
+            settings: {
+                vertical: false,
+            }
+        },
+    ]
 };
 
 export const sliderMainSettings = {
@@ -51,7 +59,7 @@ export const sliderMainSettings = {
     dots: false,
     arrows: false,
     vertical: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 2000,
     speed: 500,
     draggable: false,

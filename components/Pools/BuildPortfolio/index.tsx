@@ -11,7 +11,7 @@ const BuildPortfolio: React.FC<{}> = () => {
         <OptimisedImage
           src="/img/pools/build-portfolio-diagram.png"
           alt="Perpetual Pools diagram"
-          className="mx-auto mt-10 max-h-[498px] max-w-[567px] lg:mx-0 lg:mt-0 lg:mr-[122px] 3xl:mr-[322px] 3xl:max-h-[768px] 3xl:max-w-[874px]"
+          className="mx-auto mt-10 hidden max-h-[498px] max-w-[567px] sm:block lg:mx-0 lg:mt-0 lg:mr-[122px] 3xl:mr-[322px] 3xl:max-h-[768px] 3xl:max-w-[874px]"
         />
         <div>
           <UnderlinedHeading

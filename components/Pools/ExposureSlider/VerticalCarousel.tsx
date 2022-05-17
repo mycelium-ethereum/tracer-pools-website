@@ -11,7 +11,7 @@ const VerticalCarousel: React.FC<{}> = () => {
   exposureItems.push(...exposureItems);
 
   const Slide: React.FC<{ item: string }> = ({ item }) => (
-    <span className="block whitespace-nowrap text-center text-[40px] font-bold leading-[48px] text-cell-tertiary transition-colors duration-500 xl:text-left 4xl:text-[64px] 4xl:leading-[72px]">
+    <span className="block text-center text-[30px] font-bold leading-[36px] text-cell-tertiary transition-colors duration-500 sm:whitespace-nowrap sm:text-[40px] sm:leading-[48px] xl:text-left 4xl:text-[64px] 4xl:leading-[72px]">
       {item}
     </span>
   );

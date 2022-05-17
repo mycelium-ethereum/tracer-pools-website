@@ -432,7 +432,7 @@ img.image-cover-right {
 .portfolio-slider .slick-slide span {
   color: inherit;
 }
-.portfolio-slider .slick-current span {
+.portfolio-slider .slick-current .content {
   max-height: 150px;
   opacity: 1;
 }
@@ -528,5 +528,47 @@ img.image-cover-right {
 @media only screen and (min-width: 768px) {
   .enlarge {
     transform: scale(1.5);
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .vertical-slider .slick-slide,
+  .vertical-slider {
+    width: 360px !important;
+  }
+  .slider-nav-gradient {
+    background: linear-gradient(
+      90deg,
+      rgba(200, 220, 250, 0) 0%,
+      rgba(200, 220, 250, 1) 8%,
+      rgba(200, 220, 250, 1) 92%,
+      rgba(200, 220, 250, 0) 100%
+    );
+  }
+  .slider-nav .slick-slide button:after {
+    right: unset;
+    height: 1px;
+    top: unset;
+    bottom: -4.5px;
+    width: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 2px 6px 0px #3da8f5;
+    background: linear-gradient(
+      90deg,
+      rgba(61, 168, 245, 0) 0%,
+      rgba(61, 168, 245, 1) 20%,
+      rgba(61, 168, 245, 1) 80%,
+      rgba(61, 168, 245, 0) 100%
+    );
+  }
+  .slider-nav .slick-slide button:after {
+    right: -18px;
+  }
+  .slider-nav .slick-current button:after {
+    right: -16px;
+  }
+  .portfolio-slider .slick-current .content {
+    max-height: 390px;
   }
 }

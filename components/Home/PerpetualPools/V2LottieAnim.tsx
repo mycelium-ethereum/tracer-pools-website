@@ -7,11 +7,6 @@ const V2LottieAnim: React.FC<{}> = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const lottieRef = useRef(null);
 
-  // const options = {
-  //   animationData: linework,
-  //   loop: false,
-  //   autoplay: true,
-  // };
   const onScreen = useOnScreen(containerRef);
 
   useEffect(() => {
