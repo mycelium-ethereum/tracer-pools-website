@@ -27,14 +27,12 @@ const CallToAction: React.FC<{}> = ({}) => {
           <OptimisedImage
             src="/img/shared/link-token.png"
             alt="Link Token"
-            absolute
-            className="-top-16 right-[60px] max-w-[131px]"
+            className="absolute -top-16 right-[60px] max-w-[131px]"
           />
           <OptimisedImage
             src="/img/shared/btc-token.png"
             alt="BTC Token"
-            absolute
-            className="-bottom-[60px] -right-5 max-w-[114px]"
+            className="absolute -bottom-[60px] -right-5 max-w-[114px]"
           />
         </div>
       </div>

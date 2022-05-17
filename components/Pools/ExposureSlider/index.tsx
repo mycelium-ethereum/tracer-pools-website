@@ -11,7 +11,6 @@ const ExposureSlider: React.FC<{}> = () => {
         <OptimisedImage
           src="/img/shared/link-token.png"
           alt="Link token"
-          absolute
           className="absolute top-[-20px] left-[-270px] max-h-[542px] max-w-[564px]"
         />
         <div className="flex items-center justify-center">
@@ -23,8 +22,7 @@ const ExposureSlider: React.FC<{}> = () => {
         <OptimisedImage
           src="/img/shared/btc-token.png"
           alt="BTC token"
-          absolute
-          className="bottom-3 -right-52 max-h-[518px] max-w-[516px]"
+          className="absolute bottom-3 -right-52 max-h-[518px] max-w-[516px]"
         />
         <div className="mx-auto mt-4 w-max">
           <span className="block text-lg leading-[28px] text-action-active">

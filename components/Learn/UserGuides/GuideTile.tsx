@@ -25,14 +25,12 @@ const GuideTile: React.FC<{
             <OptimisedImage
               src="/img/shared/link-token.png"
               alt="Link Token"
-              absolute
-              className="-top-7 right-8 max-w-[148px]"
+              className="absolute -top-7 right-8 max-w-[148px]"
             />
             <OptimisedImage
               src="/img/shared/btc-token.png"
               alt="BTC Token"
-              absolute
-              className="-bottom-3 -right-4 max-w-[133px]"
+              className="absolute -bottom-3 -right-4 max-w-[133px]"
             />
           </div>
         )}
@@ -40,8 +38,7 @@ const GuideTile: React.FC<{
           <OptimisedImage
             src={background}
             alt=""
-            absolute
-            className={`pointer-events-none top-0 right-0 h-full max-w-[402px] ${transitionStyles}`}
+            className={`pointer-events-none absolute top-0 right-0 h-full max-w-[402px] ${transitionStyles}`}
           />
         </div>
       </article>

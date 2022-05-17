@@ -13,18 +13,12 @@ const TokenSpread: React.FC<{}> = () => {
 
   return (
     <div className="absolute top-0 left-1/2 z-10 h-[1024px] w-[1440px] -translate-x-1/2 transform 3xl:scale-[1.2]">
-      {/* Left to right order */}
-      {/* <div className="absolute top-3/4 left-1/2 z-10 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2">
-        {View}
-      </div> */}
-
       {/* Token widths are 300px less than Figma due to layering */}
       <div className="topToBottomAnim absolute -left-[945px] top-[100px] w-[562px]">
         <TokenFadeIn delay={900}>
           <OptimisedImage
             src="/img/shared/btc-token-back.png"
             alt="BTC token back"
-            absolute
             className="absolute top-10 left-8 -rotate-[10.87deg]"
           />
         </TokenFadeIn>
@@ -32,8 +26,7 @@ const TokenSpread: React.FC<{}> = () => {
           <OptimisedImage
             src="/img/shared/btc-token-front.png"
             alt="BTC token front"
-            absolute
-            className="z-10 -rotate-[10.87deg]"
+            className="absolute z-10 -rotate-[10.87deg]"
           />
         </TokenFadeIn>
       </div>
@@ -42,15 +35,13 @@ const TokenSpread: React.FC<{}> = () => {
           <OptimisedImage
             src="/img/shared/link-token-back.png"
             alt="Link token back"
-            absolute
-            className="[transform:matrix(-1,0.09,0.09,1,0,0)]"
+            className="absolute [transform:matrix(-1,0.09,0.09,1,0,0)]"
           />
         </TokenFadeIn>
         <TokenFadeIn delay={300}>
           <OptimisedImage
             src="/img/shared/link-token-front.png"
             alt="Link token front"
-            absolute
             className="absolute top-10 -left-1 z-10 [transform:matrix(-1,0.09,0.09,1,0,0)]"
           />
         </TokenFadeIn>
@@ -60,15 +51,13 @@ const TokenSpread: React.FC<{}> = () => {
           <OptimisedImage
             src="/img/shared/link-token-back.png"
             alt="Link token back"
-            absolute
-            className="rotate-[-17.5deg]"
+            className="absolute rotate-[-17.5deg]"
           />
         </TokenFadeIn>
         <TokenFadeIn delay={300}>
           <OptimisedImage
             src="/img/shared/link-token-front.png"
             alt="Link token front"
-            absolute
             className="absolute top-10 left-5 z-10 rotate-[-17.5deg]"
           />
         </TokenFadeIn>
@@ -78,7 +67,6 @@ const TokenSpread: React.FC<{}> = () => {
           <OptimisedImage
             src="/img/shared/btc-token-back.png"
             alt="BTC token back"
-            absolute
             className="absolute top-6 rotate-[12.06deg]"
           />
         </TokenFadeIn>
@@ -86,8 +74,7 @@ const TokenSpread: React.FC<{}> = () => {
           <OptimisedImage
             src="/img/shared/btc-token-front.png"
             alt="BTC token front"
-            absolute
-            className="z-10 rotate-[12.06deg]"
+            className="absolute z-10 rotate-[12.06deg]"
           />
         </TokenFadeIn>
       </div>
@@ -96,7 +83,6 @@ const TokenSpread: React.FC<{}> = () => {
           <OptimisedImage
             src="/img/shared/btc-token-back.png"
             alt="BTC token back"
-            absolute
             className="absolute top-10 [transform:matrix(-1,0.08,0.08,1,0,0)]"
           />
         </TokenFadeIn>
@@ -104,8 +90,7 @@ const TokenSpread: React.FC<{}> = () => {
           <OptimisedImage
             src="/img/shared/btc-token-front.png"
             alt="BTC token front"
-            absolute
-            className="left-1 z-10 [transform:matrix(-1,0.08,0.08,1,0,0)]"
+            className="absolute left-1 z-10 [transform:matrix(-1,0.08,0.08,1,0,0)]"
           />
         </TokenFadeIn>
       </div>
@@ -114,15 +99,13 @@ const TokenSpread: React.FC<{}> = () => {
           <OptimisedImage
             src="/img/shared/link-token-back.png"
             alt="Link token back"
-            absolute
-            className="[transform:matrix(-0.98,-0.22,-0.22,0.98,0,0)_scale(-1,-1)]"
+            className="absolute [transform:matrix(-0.98,-0.22,-0.22,0.98,0,0)_scale(-1,-1)]"
           />
         </TokenFadeIn>
         <TokenFadeIn delay={1200}>
           <OptimisedImage
             src="/img/shared/link-token-front.png"
             alt="Link token front"
-            absolute
             className="absolute top-10 -left-4 z-10 [transform:matrix(-0.98,-0.22,-0.22,0.98,0,0)_scale(-1,-1)]"
           />
         </TokenFadeIn>
@@ -132,7 +115,6 @@ const TokenSpread: React.FC<{}> = () => {
           <OptimisedImage
             src="/img/shared/btc-token-back.png"
             alt="BTC token back"
-            absolute
             className="absolute top-10"
           />
         </TokenFadeIn>
@@ -140,8 +122,7 @@ const TokenSpread: React.FC<{}> = () => {
           <OptimisedImage
             src="/img/shared/btc-token-front.png"
             alt="BTC token front"
-            absolute
-            className="z-10"
+            className="absolute z-10"
           />
         </TokenFadeIn>
       </div>
@@ -150,15 +131,13 @@ const TokenSpread: React.FC<{}> = () => {
           <OptimisedImage
             src="/img/shared/link-token-back.png"
             alt="Link token back"
-            absolute
-            className="[transform:matrix(-0.98,-0.22,-0.22,0.98,0,0)]"
+            className="absolute [transform:matrix(-0.98,-0.22,-0.22,0.98,0,0)]"
           />
         </TokenFadeIn>
         <TokenFadeIn delay={700}>
           <OptimisedImage
             src="/img/shared/link-token-front.png"
             alt="Link token front"
-            absolute
             className="absolute top-5 -left-2.5 z-10 [transform:matrix(-0.98,-0.22,-0.22,0.98,0,0)]"
           />
         </TokenFadeIn>
@@ -168,7 +147,6 @@ const TokenSpread: React.FC<{}> = () => {
           <OptimisedImage
             src="/img/shared/btc-token-back.png"
             alt="BTC token back"
-            absolute
             className="absolute top-12 left-1 rotate-[15.28deg]"
           />
         </TokenFadeIn>
@@ -176,8 +154,7 @@ const TokenSpread: React.FC<{}> = () => {
           <OptimisedImage
             src="/img/shared/btc-token-front.png"
             alt="BTC token front"
-            absolute
-            className="z-10 rotate-[15.28deg]"
+            className="absolute z-10 rotate-[15.28deg]"
           />
         </TokenFadeIn>
       </div>
@@ -186,15 +163,13 @@ const TokenSpread: React.FC<{}> = () => {
           <OptimisedImage
             src="/img/shared/link-token-back.png"
             alt="Link token back"
-            absolute
-            className="[transform:matrix(-0.99,0.12,0.12,0.99,0,0)]"
+            className="absolute [transform:matrix(-0.99,0.12,0.12,0.99,0,0)]"
           />
         </TokenFadeIn>
         <TokenFadeIn delay={300}>
           <OptimisedImage
             src="/img/shared/link-token-front.png"
             alt="Link token front"
-            absolute
             className="absolute top-10 left-5 z-10 [transform:matrix(-0.99,0.12,0.12,0.99,0,0)]"
           />
         </TokenFadeIn>
