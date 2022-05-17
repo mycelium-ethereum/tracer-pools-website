@@ -14,7 +14,7 @@ const PerpetualPools: React.FC<{}> = () => {
       <Container className="relative z-10 flex flex-col pt-10 text-white md:py-16 lg:min-h-[800px] xl:h-screen">
         <header className="flex h-full flex-grow flex-col justify-center">
           <AnimateIn delay={0.2}>
-            <div className="mb-4 w-full">
+            <div className="mb-4 w-full max-w-[328px]">
               <img
                 src="/img/logos/tracer-perpetual-pools.svg"
                 className="mb-3 h-[18px] w-[182px]"

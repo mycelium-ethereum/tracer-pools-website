@@ -30,6 +30,7 @@ module.exports = {
           cyan: "#00D9E9",
           primaryblue: "#0000B0",
         },
+        "icon-grey": "#7D8795",
         primary: "#192130",
         secondary: "#F9FAFA",
         tertiary: "#7D8795",

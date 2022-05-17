@@ -6,6 +6,7 @@ const Button: React.FC<{
   linkClassName?: string;
   onClickAction?: (payload: any) => void;
   children: string | React.ReactNode;
+  navLaunchButton?: boolean;
   blueTransparent?: boolean;
   purpleTransparent?: boolean;
   purpleGradient?: boolean;
@@ -19,7 +20,7 @@ const Button: React.FC<{
   className,
   linkClassName,
   onClickAction,
-  children,
+  navLaunchButton,
   blueTransparent,
   purpleTransparent,
   purpleGradient,
@@ -29,6 +30,7 @@ const Button: React.FC<{
   link,
   outgoingLink,
   download,
+  children,
 }) => {
   return (
     <button
@@ -51,6 +53,11 @@ const Button: React.FC<{
       ${
         darkBlueGradient
           ? "btn-gradient-blue-dark border-action-active text-white hover:bg-tracer-midblue hover:bg-opacity-80 hover:text-white "
+          : ""
+      } 
+      ${
+        navLaunchButton
+          ? "btn-gradient-blue-dark border-action-active hover:bg-tracer-midblue hover:bg-opacity-80 hover:text-white "
           : ""
       } 
       ${

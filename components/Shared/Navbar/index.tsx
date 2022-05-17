@@ -234,10 +234,10 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
           <Logo onClickAction={handleClose} />
           <div className="hidden items-center md:flex">
             <div
-              className="relative"
+              className="relative mr-6"
               onMouseEnter={handleDesktopProductsDropdownOpen}
             >
-              <button className="mr-6 text-sm">{links[1].label}</button>
+              <button className="text-sm">{links[1].label}</button>
               <ProductsDropdown
                 desktopProductsDropdownOpen={desktopProductsDropdownOpen}
                 handleDesktopProductsDropdownClose={
@@ -251,7 +251,10 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
               </NavLink>
             ))}
             <div className="relative" onMouseEnter={handleDropdownOpen}>
-              <LaunchAppButton dropdownOpen={dropdownOpen} />
+              <LaunchAppButton
+                dropdownOpen={dropdownOpen}
+                navColour={navColour}
+              />
               <LaunchDropdown
                 dropdownOpen={dropdownOpen}
                 handleDropdownClose={handleDropdownClose}

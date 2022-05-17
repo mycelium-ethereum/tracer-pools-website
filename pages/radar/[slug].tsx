@@ -21,11 +21,13 @@ const Article = ({ data, articles }) => {
     if (e.tagName === "OL")
       e.setAttribute("class", "list-outside pl-4 list-style-number");
     if (e.tagName === "UL") e.setAttribute("class", "list-outside pl-4");
-    if (e.tagName === "A")
+    if (e.tagName === "A") {
       e.setAttribute(
         "class",
         "underline text-tracer-lightblue hover:text-tracer-midblue transition-colors duration-300"
       );
+      e.setAttribute("target", "_blank");
+    }
     // if (e.tagName === "P") e.setAttribute("class", "mb-4");
     if (e.tagName === "H1") e.setAttribute("class", headingStyles);
     if (e.tagName === "H2") e.setAttribute("class", headingStyles);
@@ -34,7 +36,7 @@ const Article = ({ data, articles }) => {
     if (e.tagName === "IMG") {
       e.setAttribute(
         "class",
-        "mx-auto rounded-lg transition-all duration-300 cursor-pointer mb-4 relative z-10"
+        "md:rounded-lg transition-all duration-300 cursor-pointer mb-4 relative z-10 -ml-6 min-w-[calc(100vw+48px)] md:w-full md:mx-auto "
       );
       e.onclick = function () {
         this.classList.toggle("enlarge");
@@ -79,7 +81,7 @@ const Article = ({ data, articles }) => {
       />
       <section className="relative z-20 pt-[140px] lg:pb-5">
         <Container className="leading-[24px] text-tertiary">
-          <div className="max-w-[840px]">
+          <div className="max-w-[880px]">
             <PostHeader data={data} />
             <div className="prose mt-9" ref={bodyTextRef} />
           </div>

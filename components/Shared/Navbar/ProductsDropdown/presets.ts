@@ -9,6 +9,6 @@ export const productContent = [
     },
     {
         logo: "/img/logos/tracer-perpetual-pools.svg",
-        link: "/perpetual-pools",
+        link: "/pools",
     },
 ];

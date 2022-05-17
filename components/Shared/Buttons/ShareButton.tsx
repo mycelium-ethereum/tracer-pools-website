@@ -1,3 +1,4 @@
+import ShareSVG from "@components/SVG/ShareSVG";
 import { useEffect, useRef, useState } from "react";
 
 const ShareButton: React.FC<{ title: string }> = ({ title }) => {
@@ -40,11 +41,7 @@ const ShareButton: React.FC<{ title: string }> = ({ title }) => {
       className="flex h-7 items-center rounded-lg px-2 text-base leading-[24px] text-tertiary transition-colors duration-300 hover:bg-action-cell hover:text-action-active"
     >
       Share
-      <img
-        src="/img/icons/share.svg"
-        alt="Share icon"
-        className="ml-2 h-3 w-3"
-      />
+      <ShareSVG alt="Share icon" className="ml-2 h-3 w-3" />
     </button>
   );
 };

@@ -1,3 +1,4 @@
+import TwitterGreySVG from "@components/SVG/TwitterGreySVG";
 import { useEffect, useState } from "react";
 
 const TweetButton: React.FC<{ className?: string }> = ({ className }) => {
@@ -18,11 +19,7 @@ const TweetButton: React.FC<{ className?: string }> = ({ className }) => {
         }`}
       >
         Tweet
-        <img
-          src="/img/icons/twitter-grey.svg"
-          alt="Share icon"
-          className="ml-2 h-3 w-3"
-        />
+        <TwitterGreySVG alt="Share icon" className="ml-2 h-3 w-3" />
       </button>
     </a>
   );

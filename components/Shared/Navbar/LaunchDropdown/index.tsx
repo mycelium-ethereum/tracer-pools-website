@@ -12,7 +12,7 @@ const LaunchDropdown: React.FC<{
   handleDropdownClose: () => void;
 }> = ({ dropdownOpen, handleDropdownClose }) => {
   const activeStyles =
-    "[transform:scale3d(1,1,1)_perspective(999px)_translate3d(0,0,0)]  pointer-events-auto opacity-100";
+    "[transform:scale3d(1,1,1)_perspective(999px)_translate3d(0,0,0)] pointer-events-auto opacity-100";
   const inactiveStyles =
     "[transform:scale3d(0.98,0.98,1)_perspective(999px)_translate3d(0,0,0)] pointer-events-none opacity-0";
 
