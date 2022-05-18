@@ -400,8 +400,8 @@ img.image-cover-right {
   background: linear-gradient(
     180deg,
     rgba(61, 168, 245, 0) 0%,
-    rgba(61, 168, 245, 1) 8%,
-    rgba(61, 168, 245, 1) 92%,
+    rgba(61, 168, 245, 1) 20%,
+    rgba(61, 168, 245, 1) 80%,
     rgba(61, 168, 245, 0) 100%
   );
   box-shadow: 2px 0 6px 0px #3da8f5;
@@ -420,8 +420,8 @@ img.image-cover-right {
   background: linear-gradient(
     180deg,
     rgba(200, 220, 250, 0) 0%,
-    rgba(200, 220, 250, 1) 8%,
-    rgba(200, 220, 250, 1) 92%,
+    rgba(200, 220, 250, 1) 20%,
+    rgba(200, 220, 250, 1) 80%,
     rgba(200, 220, 250, 0) 100%
   );
 }
@@ -540,8 +540,8 @@ img.image-cover-right {
     background: linear-gradient(
       90deg,
       rgba(200, 220, 250, 0) 0%,
-      rgba(200, 220, 250, 1) 8%,
-      rgba(200, 220, 250, 1) 92%,
+      rgba(200, 220, 250, 1) 20%,
+      rgba(200, 220, 250, 1) 80%,
       rgba(200, 220, 250, 0) 100%
     );
   }
@@ -549,7 +549,7 @@ img.image-cover-right {
     right: unset;
     height: 1px;
     top: unset;
-    bottom: -4.5px;
+    bottom: -4px;
     width: 50px;
     left: 50%;
     transform: translateX(-50%);
