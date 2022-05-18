@@ -1,8 +1,9 @@
 import Section from "@components/Shared/Section";
 import Container from "@components/Shared/Container";
 import MeshDouble from "@components/Shared/Mesh/MeshDouble";
-import Header from "@components/Factories/Banner/Header";
+import Header from "@components/Indices/Banner/Header";
 import Background from "@components/Shared/Background";
+import BottomText from "@components/Indices/Banner/BottomText";
 
 const Banner: React.FC<{}> = () => {
   return (
@@ -13,10 +14,11 @@ const Banner: React.FC<{}> = () => {
       <Container>
         <Header />
       </Container>
+      <BottomText />
       <MeshDouble />
       <Background
-        image="/img/factories/banner-bg.png"
-        className="min-h-[835px] min-w-[1702px] "
+        image="/img/indices/banner-bg.png"
+        className="min-h-[702px] max-w-[1500px]"
       />
     </Section>
   );

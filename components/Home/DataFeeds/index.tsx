@@ -15,8 +15,8 @@ const DataFeeds: React.FC<{}> = () => {
           <AnimateIn delay={0.2}>
             <div className="mb-4 w-full">
               <img
-                src="/img/logos/tracer-data-feeds.svg"
-                className="mb-3 h-[18px] w-[152px]"
+                src="/img/logos/tracer-indices.svg"
+                className="mb-3 h-[18px] w-[126px]"
               />
               <GradientLine color="blue" />
             </div>

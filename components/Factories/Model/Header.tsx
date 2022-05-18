@@ -1,6 +1,6 @@
 import UnderlinedHeading from "@components/Shared/Heading/UnderlinedHeading";
 import Paragraph from "@components/Home/Paragraph";
-import MoreInfoButtons from "@components/Factories/Model//MoreInfoButtons";
+import MoreInfoButtons from "@components/Factories/Model/MoreInfoButtons";
 
 const Header: React.FC<{}> = () => {
   return (
