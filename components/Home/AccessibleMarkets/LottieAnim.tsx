@@ -1,7 +1,7 @@
-import { useOnScreen } from "hooks";
 import { useEffect, useRef } from "react";
 import Lottie from "lottie-react";
 import squares from "../../../public/img/home/accessible-markets-lottie.json";
+import { useOnScreen } from "hooks";
 
 const LottieAnim: React.FC<{}> = () => {
   const containerRef = useRef<HTMLDivElement>(null);
