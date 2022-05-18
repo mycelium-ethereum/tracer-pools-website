@@ -1,10 +1,9 @@
-import Container from "@components/Shared/Container";
 import MobileLink from "@components/Shared/Navbar/MobileNav/MobileLink";
 import MeshUnderlay from "@components/Shared/Mesh/MeshUnderlay";
-import { socialLinks } from "@components/Shared/Footer/presets";
 import SocialLinks from "../Footer/SocialLinks";
 import CopyrightYear from "../CopyrightYear";
 import ProductsDropdown from "./ProductsDropdownMobile";
+import { socialLinks } from "@components/Shared/Footer/presets";
 
 const MobileNav: React.FC<{
   links: {
@@ -29,7 +28,7 @@ const MobileNav: React.FC<{
       }`}
     >
       <div className="absolute top-0 left-0 z-10 flex h-screen w-full flex-col justify-between">
-        <div className="mt-[100px] h-[385px] overflow-y-auto overflow-x-hidden sm:h-auto">
+        <div className="mt-[100px] h-[400px] overflow-y-auto overflow-x-hidden sm:h-auto">
           <MobileLink link={links[0].href} onClickAction={handleClose} border>
             {links[0].label}
           </MobileLink>
