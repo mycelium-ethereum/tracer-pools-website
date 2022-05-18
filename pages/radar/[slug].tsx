@@ -11,6 +11,7 @@ import CallToAction from "@components/Radar/Post/CallToAction";
 import PostSidebarContent from "@components/Radar/Sidebar/PostSidebarContent";
 import PostHeader from "@components/Radar/Post/PostHeader";
 import ShareButtons from "@components/Radar/Post/ShareButtons";
+import CurrentArticlePopout from "@components/Radar/Post/CurrentArticlePopout";
 
 const Article = ({ data, articles }) => {
   const bodyTextRef = useRef<HTMLDivElement>(null);
@@ -36,7 +37,7 @@ const Article = ({ data, articles }) => {
     if (e.tagName === "IMG") {
       e.setAttribute(
         "class",
-        "md:rounded-lg transition-all duration-300 cursor-pointer mb-4 relative z-10 -ml-6 min-w-[calc(100vw+48px)] md:w-full md:mx-auto "
+        "md:rounded-lg transition-all duration-300 cursor-pointer mb-4 relative z-10 -ml-6 min-w-[calc(100vw+48px)] md:ml-0 md:min-w-[unset] md:w-full md:mx-auto "
       );
       e.onclick = function () {
         this.classList.toggle("enlarge");
@@ -79,9 +80,10 @@ const Article = ({ data, articles }) => {
         image={data.image[0].formats.small.url}
         publishedTime={data.publish_date}
       />
-      <section className="relative z-20 pt-[140px] lg:pb-5">
+      <CurrentArticlePopout data={data} />
+      <section className="relative z-20 pt-[123px] sm:pt-[140px] lg:pb-5">
         <Container className="leading-[24px] text-tertiary">
-          <div className="max-w-[880px]">
+          <div className="lg:max-w-[calc(100%-296px)] xl:max-w-[880px]">
             <PostHeader data={data} />
             <div className="prose mt-9" ref={bodyTextRef} />
           </div>

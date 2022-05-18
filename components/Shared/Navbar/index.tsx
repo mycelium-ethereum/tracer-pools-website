@@ -231,7 +231,7 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 z-40 flex h-[70px] w-full transform-gpu items-center backdrop-blur-md transition-all duration-300
+        className={`fixed top-0 left-0 z-40 flex h-[65px] w-full transform-gpu items-center backdrop-blur-md transition-all duration-300 md:h-[52px]
         ${navBackdrop ? "backdrop-blur-md" : "backdrop-blur-0"}
         ${
           !navOpen && isMobile()
@@ -240,7 +240,7 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
             ? `text-white`
             : `${navColour}`
         }
-        ${visible ? "visible" : "lg:invisible lg:-translate-y-[70px]"}`}
+        ${visible ? "visible" : "md:invisible md:-translate-y-[52px]"}`}
       >
         <Container className="flex items-center justify-between">
           {/* {

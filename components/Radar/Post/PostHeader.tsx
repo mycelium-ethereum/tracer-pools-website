@@ -7,15 +7,15 @@ const PostHeader: React.FC<{
 }> = ({ data }) => {
   return (
     <header>
-      <h1 className="text-[40px] font-bold leading-[48px]">
+      <h1 className="text-2xl font-bold leading-[30px] sm:text-[40px] sm:leading-[48px]">
         <span className="text-action-inactive">Blog</span>
         <br />
         <span className="text-highlight">{data.title}</span>
       </h1>
-      <small className="mt-2 block text-xl font-light leading-[30px]">
+      <small className="mb-10 block text-base font-light leading-[24px] sm:mt-2 sm:mb-[66px] sm:text-xl sm:leading-[30px] ">
         {data.tagline}
       </small>
-      <div className="flex flex-col pt-[66px] sm:flex-row sm:items-center">
+      <div className="flex flex-col sm:flex-row sm:items-center">
         <div className="flex">
           <Moment format="Do MMMM, YYYY" className="mr-2 text-highlight">
             {data.publish_date}

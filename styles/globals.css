@@ -287,6 +287,7 @@ img.image-cover-right {
   max-width: 100%;
 }
 .prose p,
+.prose ol li,
 .prose ul li,
 .prose p strong {
   @apply text-tertiary;
@@ -294,7 +295,9 @@ img.image-cover-right {
 .prose p strong {
   font-weight: bold;
 }
-.prose strong a {
+.prose strong a,
+.prose ul li a,
+.prose ol li a {
   @apply text-tracer-lightblue;
 }
 .prose strong a:hover {

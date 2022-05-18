@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import Container from "@components/Shared/Container";
 import Category from "@components/Shared/Footer/Category";
+import PageLink from "@components/Shared/PageLink";
+import SocialLinks from "@components/Shared/Footer/SocialLinks";
+import CopyrightYear from "@components/Shared/CopyrightYear";
+import TracerLogoSVG from "@components/SVG/TracerLogoSVG";
 import {
   categoryNames,
   socialLinks,
@@ -11,9 +15,6 @@ import {
   governCategory,
   connectCategory,
 } from "@components/Shared/Footer/presets";
-import PageLink from "@components/Shared/PageLink";
-import SocialLinks from "@components/Shared/Footer/SocialLinks";
-import CopyrightYear from "@components/Shared/CopyrightYear";
 
 const Footer: React.FC<{ route: string }> = ({ route }) => {
   const [background, setBackground] = useState("bg-white");
@@ -57,12 +58,9 @@ const Footer: React.FC<{ route: string }> = ({ route }) => {
       <Container>
         <div className="mb-[75px] flex flex-col items-start justify-between pr-8 md:pr-0 lg:flex-row">
           <PageLink href="/">
-            <img
-              src="/img/logos/tracer-logo-blue.svg"
-              className="mb-11 h-[26px] w-[111px] lg:mr-20 lg:mb-0"
-            />
+            <TracerLogoSVG className="mb-11 h-[26px] w-[112px] lg:mr-20 lg:mb-0" />
           </PageLink>
-          <div className="mt-12 grid max-w-[1045px] flex-grow transform grid-cols-2 gap-x-[75px] gap-y-12 sm:grid-cols-3 md:mt-0 lg:translate-x-[95px] xl:w-max xl:translate-x-[40px] xl:grid-cols-6">
+          <div className="grid max-w-[1045px] flex-grow transform grid-cols-2 gap-x-[75px] gap-y-12 sm:grid-cols-3 md:mt-0 lg:mt-12 lg:translate-x-[95px] xl:w-max xl:translate-x-[40px] xl:grid-cols-6">
             {categoryNames.map((category, i) => {
               return (
                 <Category

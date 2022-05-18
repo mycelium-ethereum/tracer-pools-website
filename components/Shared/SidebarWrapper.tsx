@@ -39,7 +39,7 @@ const SidebarWrapper: React.FC<{
 
   return (
     <aside
-      className={`fixed right-0 top-[140px] z-50 hidden w-[296px] overflow-hidden rounded-tl-lg rounded-bl-lg bg-white transition-opacity duration-500 [box-shadow:_0px_2px_4px_rgba(0,0,0,0.1)] xl:block ${
+      className={`fixed right-0 top-[140px] z-50 hidden w-[296px] overflow-hidden rounded-tl-lg rounded-bl-lg bg-white transition-opacity duration-500 [box-shadow:_0px_2px_4px_rgba(0,0,0,0.1)] lg:block ${
         visible ? visibleStyles : invisibleStyles
       }`}
     >
