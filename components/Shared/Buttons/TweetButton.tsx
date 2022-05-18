@@ -14,7 +14,7 @@ const TweetButton: React.FC<{ className?: string }> = ({ className }) => {
       target="_blank"
     >
       <button
-        className={`flex h-7 items-center rounded-lg px-2 text-base leading-[24px] text-tertiary transition-colors duration-300 hover:bg-action-cell hover:text-action-active ${
+        className={`flex h-7 items-center rounded-lg px-2 leading-[24px] text-tertiary transition-colors duration-300 hover:bg-action-cell hover:text-action-active ${
           className ? className : ""
         }`}
       >

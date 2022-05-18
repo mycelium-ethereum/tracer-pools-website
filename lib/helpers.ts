@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import scrollIntoView from "smooth-scroll-into-view-if-needed";
 
 export const disableScroll = () => {
     document.body.classList.add("overflow-hidden");
@@ -95,4 +95,21 @@ export const isMobile = () => {
     } else {
         return false;
     }
+};
+
+export const handleAnchorClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+) => {
+    e.preventDefault();
+    const href = (e.target as HTMLAnchorElement)
+        .getAttribute("href")
+        .replace("#", "")
+        .replace("/", "");
+    // Scroll to top of posts
+    scrollIntoView(document.getElementById(href), {
+        behavior: "smooth",
+        block: 'start',
+        scrollMode: "if-needed",
+        duration: 1000,
+    });
 };

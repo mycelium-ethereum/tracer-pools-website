@@ -7,7 +7,7 @@ const ShareButtons: React.FC<{
   className?: string;
 }> = ({ title, smallerMargin, className }) => {
   return (
-    <div className={`flex ${className ? className : ""}`}>
+    <div className={`flex w-max ${className ? className : ""}`}>
       <ShareButton title={title} />
       <TweetButton className={smallerMargin ? "ml-1" : "ml-2"} />
     </div>

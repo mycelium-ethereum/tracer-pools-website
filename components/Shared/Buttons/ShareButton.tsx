@@ -38,7 +38,7 @@ const ShareButton: React.FC<{ title: string }> = ({ title }) => {
     <button
       onClick={handleClick}
       ref={shareButtonElement}
-      className="flex h-7 items-center rounded-lg px-2 text-base leading-[24px] text-tertiary transition-colors duration-300 hover:bg-action-cell hover:text-action-active"
+      className="flex h-7 items-center rounded-lg px-2 leading-[24px] text-tertiary transition-colors duration-300 hover:bg-action-cell hover:text-action-active"
     >
       Share
       <ShareSVG alt="Share icon" className="ml-2 h-3 w-3" />

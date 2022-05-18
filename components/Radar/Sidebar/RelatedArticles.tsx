@@ -30,8 +30,8 @@ const RelatedArticles: React.FC<{
   );
 
   return (
-    <div className="p-4">
-      <span className="mb-2 block text-xs tracking-[0.15em] text-tertiary">
+    <div className="max-w-[264px] pt-4 lg:max-w-[unset] lg:p-4">
+      <span className="mb-2 hidden text-xs tracking-[0.15em] text-tertiary lg:block">
         RELATED ARTICLES
       </span>
       <GradientLine color="grey" />
@@ -40,14 +40,16 @@ const RelatedArticles: React.FC<{
         .map((article: any, i: number) => (
           <ArticleLink key={i} article={article} />
         ))}
-      <Button
-        lightBlueGradient
-        link="/radar"
-        className="mt-4"
-        linkClassName="text-action-active"
-      >
-        All Articles
-      </Button>
+      <span className="hidden lg:block">
+        <Button
+          lightBlueGradient
+          link="/radar"
+          className="mt-4"
+          linkClassName="text-action-active"
+        >
+          All Articles
+        </Button>
+      </span>
     </div>
   );
 };

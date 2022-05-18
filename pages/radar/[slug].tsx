@@ -12,6 +12,7 @@ import PostSidebarContent from "@components/Radar/Sidebar/PostSidebarContent";
 import PostHeader from "@components/Radar/Post/PostHeader";
 import ShareButtons from "@components/Radar/Post/ShareButtons";
 import CurrentArticlePopout from "@components/Radar/Post/CurrentArticlePopout";
+import ScrollTopButton from "@components/Radar/Post/ScrollTopButton";
 
 const Article = ({ data, articles }) => {
   const bodyTextRef = useRef<HTMLDivElement>(null);
@@ -80,8 +81,11 @@ const Article = ({ data, articles }) => {
         image={data.image[0].formats.small.url}
         publishedTime={data.publish_date}
       />
-      <CurrentArticlePopout data={data} />
-      <section className="relative z-20 pt-[123px] sm:pt-[140px] lg:pb-5">
+      <section
+        className="relative z-20 pt-[123px] sm:pt-[140px] lg:pb-5"
+        id="top"
+      >
+        <CurrentArticlePopout data={data} articles={articles} />
         <Container className="leading-[24px] text-tertiary">
           <div className="lg:max-w-[calc(100%-296px)] xl:max-w-[880px]">
             <PostHeader data={data} />
@@ -89,8 +93,9 @@ const Article = ({ data, articles }) => {
           </div>
           <ShareButtons
             title={data.title}
-            className="mt-10 mb-12 -translate-x-2"
+            className="mx-auto mt-10 mb-6 lg:mx-0 lg:-translate-x-2"
           />
+          <ScrollTopButton className="mx-auto mb-[34px] lg:mx-0" />
           <CallToAction />
         </Container>
         <SidebarWrapper bodyTextRef={bodyTextRef}>
