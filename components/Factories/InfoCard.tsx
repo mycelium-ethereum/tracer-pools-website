@@ -11,9 +11,9 @@ const InfoCard: React.FC<{
   headingStyles: string;
 }> = ({ image, title, description, buttonText, buttonLink, headingStyles }) => {
   return (
-    <article className="group relative min-w-[402px] bg-secondary">
+    <article className="group relative min-w-[402px] rounded-lg bg-secondary">
       <div className="absolute top-0 left-0 h-full w-full overflow-hidden rounded-lg opacity-0 transition-opacity duration-300 [background-image:linear-gradient(337.11deg,#1C64F2_-7.32%,rgba(28,100,242,0)_106.58%)] group-hover:opacity-100">
-        <div className="absolute top-[1px] left-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-lg  bg-secondary" />
+        <div className="absolute top-[1px] left-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-lg bg-secondary" />
       </div>
       <div className="relative z-10 flex flex-col items-center justify-center p-4 text-center">
         {image && (
