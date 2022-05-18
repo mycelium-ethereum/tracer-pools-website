@@ -63,7 +63,7 @@ const Footer: React.FC<{ route: string }> = ({ route }) => {
           <PageLink href="/">
             <TracerLogoSVG className="mb-11 h-[26px] w-[112px] lg:mr-20 lg:mb-0" />
           </PageLink>
-          <div className="grid max-w-[1045px] flex-grow transform grid-cols-2 gap-x-[75px] gap-y-12 sm:grid-cols-3 md:mt-0 lg:mt-12 lg:translate-x-[95px] xl:w-max xl:translate-x-[40px] xl:grid-cols-6">
+          <div className="grid max-w-[1045px] flex-grow transform grid-cols-2 gap-x-[75px] gap-y-12 sm:grid-cols-3 lg:translate-x-[95px] xl:mt-0 xl:w-max xl:translate-x-[40px] xl:grid-cols-6">
             {categoryNames.map((category, i) => {
               return (
                 <Category
