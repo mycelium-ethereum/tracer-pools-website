@@ -2,18 +2,26 @@ import Container from "@components/Shared/Container";
 import H2 from "@components/Shared/Heading/H2";
 import UnderlinedHeading from "@components/Shared/Heading/UnderlinedHeading";
 import PageSection from "@components/Shared/Section";
-import { communityCards } from "@components/DAO/presets";
 import InfoCard from "@components/DAO/InfoCard";
 import OptimisedImage from "@components/Shared/OptimisedImage";
+import GridContainer from "@components/DAO/GridContainer";
+import { communityCards } from "@components/DAO/presets";
 
 const Community: React.FC<{}> = () => {
   return (
-    <PageSection className="py-[70px]">
-      <OptimisedImage
-        src="/img/dao/community-bg.png"
-        alt=""
-        className="absolute top-0 right-0 w-1/2 max-w-[700px]"
-      />
+    <PageSection className="pb-16 lg:py-[70px]">
+      <div className="flex h-[300px] w-full justify-end lg:h-auto">
+        <OptimisedImage
+          src="/img/dao/community-bg.png"
+          alt=""
+          className="absolute top-0 right-0 hidden w-1/2 max-w-[700px] lg:block"
+        />
+        <OptimisedImage
+          src="/img/dao/community-bg.png"
+          alt=""
+          className="block max-w-[375px] lg:hidden"
+        />
+      </div>
       <Container className="text-action-active">
         <UnderlinedHeading
           lineColor="lightblue"
@@ -27,11 +35,11 @@ const Community: React.FC<{}> = () => {
           <br /> consectetur adipiscing elit. At
           <br /> felis sit ipsum posuere.
         </H2>
-        <div className="mt-20 grid max-w-[814px] grid-cols-2 gap-x-14 gap-y-20">
+        <GridContainer>
           {communityCards.map((card, index) => (
             <InfoCard key={index} {...card} />
           ))}
-        </div>
+        </GridContainer>
       </Container>
     </PageSection>
   );

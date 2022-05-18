@@ -6,7 +6,7 @@ const Logo: React.FC<{
   onClickAction: () => void;
 }> = ({ type, onClickAction }) => {
   return (
-    <PageLink href="/">
+    <PageLink href="/" className="flex items-center">
       <button onClick={onClickAction}>
         {
           {

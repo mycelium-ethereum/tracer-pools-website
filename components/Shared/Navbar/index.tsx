@@ -235,7 +235,7 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
         ${navBackdrop ? "backdrop-blur-md" : "backdrop-blur-0"}
         ${
           !navOpen && isMobile()
-            ? `${navColour}`
+            ? `${navColour} delay-[600ms]`
             : isMobile()
             ? `text-white`
             : `${navColour}`
