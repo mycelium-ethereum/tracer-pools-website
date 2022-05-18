@@ -29,49 +29,42 @@ export const exposureItems = [
     },
 ];
 
-export const sliderNavSettings = {
+const sliderRootSettings = {
     accessibility: false,
     dots: false,
     arrows: false,
     vertical: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     speed: 500,
     draggable: false,
-    swipe: false,
-    touchMove: false,
-    slidesToShow: 7,
     focusOnSelect: true,
     pauseOnFocus: true,
     pauseOnHover: true,
+    swipe: false,
+    touchMove: false,
+}
+
+export const sliderNavSettings = {
+    ...sliderRootSettings,
+    slidesToShow: 7,
     responsive: [
         {
             breakpoint: 640,
             settings: {
                 vertical: false,
+                variableWidth: true,
             }
         },
     ]
 };
 
 export const sliderMainSettings = {
-    accessibility: false,
-    dots: false,
-    arrows: false,
-    vertical: true,
-    // autoplay: true,
-    autoplaySpeed: 2000,
-    speed: 500,
-    draggable: false,
-    swipe: false,
-    touchMove: false,
+    ...sliderRootSettings,
     slidesToShow: 1,
     slidesToScroll: 1,
-    fade: true,
-    focusOnSelect: true,
     variableWidth: true,
-    pauseOnFocus: true,
-    pauseOnHover: true,
+    fade: true,
 };
 
 export const buttonContent = [

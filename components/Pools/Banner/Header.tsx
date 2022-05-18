@@ -11,7 +11,7 @@ const Header: React.FC<{}> = () => {
         />
       </AnimateIn>
       <AnimateIn delay={0.5}>
-        <h1 className="mb-4 text-2xl font-light leading-[30px] sm:text-[48px] sm:leading-[90px] md:text-[70px] md:leading-[80px] xl:text-[120px] xl:leading-[132px]">
+        <h1 className="mb-4 text-[40px] font-light leading-[44px] sm:text-[48px] sm:leading-[90px] md:text-[70px] md:leading-[80px] xl:text-[120px] xl:leading-[132px]">
           Leveraged Tokens.
           <br />
           Less Overhead.

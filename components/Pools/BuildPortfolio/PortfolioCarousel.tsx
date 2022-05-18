@@ -34,7 +34,7 @@ const PortfolioCarousel: React.FC<{}> = () => {
           className="mx-auto my-2 block w-full sm:hidden"
         />
       </div>
-      <div className="max-w-[377px]">
+      <div className="mt-4 max-w-[377px]">
         <GradientLine color="lightblue" />
       </div>
     </button>
@@ -44,7 +44,7 @@ const PortfolioCarousel: React.FC<{}> = () => {
     <Slider
       {...settings}
       ref={(slider) => setSlider(slider)}
-      className="portfolio-slider h-[400px] w-[400px]"
+      className="portfolio-slider sm:h-[400px] sm:w-[400px]"
     >
       {portfolioCarouselItems.map((item) => (
         <Slide key={item.title} item={item} />

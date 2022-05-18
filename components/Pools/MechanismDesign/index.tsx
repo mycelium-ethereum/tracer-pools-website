@@ -11,7 +11,7 @@ const MechanismDesign: React.FC<{}> = () => {
       <Container className="flex flex-col justify-between xl:flex-row xl:items-center">
         <Header />
         <MechanismSlider />
-        <MoreInfoButtons className="block xl:hidden" />
+        <MoreInfoButtons className="flex xl:hidden" />
       </Container>
       <MeshDouble />
     </Section>

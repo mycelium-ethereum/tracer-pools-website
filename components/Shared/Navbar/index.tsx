@@ -58,7 +58,7 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
   };
 
   const handleScroll = () => {
-    if (window.scrollY >= 1) {
+    if (window.scrollY >= 1 || isMobile()) {
       setNavBackdrop(true);
     } else {
       setNavBackdrop(false);

@@ -5,7 +5,7 @@ import MoreInfoButtons from "@components/Pools/MechanismDesign/MoreInfoButtons";
 
 const Header: React.FC<{}> = () => {
   return (
-    <header className="mb-10 min-w-[589px] text-action-active xl:mb-0">
+    <header className="mb-10 text-action-active sm:min-w-[589px] xl:mb-0">
       <UnderlinedHeading
         lineColor="blue"
         className="max-w-[294px] text-action-active"
@@ -24,7 +24,7 @@ const Header: React.FC<{}> = () => {
         <br className="hidden sm:block" />
         primitive works
       </Paragraph>
-      <MoreInfoButtons className="hidden xl:block" />
+      <MoreInfoButtons className="hidden xl:flex" />
     </header>
   );
 };

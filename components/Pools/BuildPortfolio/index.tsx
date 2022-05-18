@@ -16,7 +16,7 @@ const BuildPortfolio: React.FC<{}> = () => {
         <div>
           <UnderlinedHeading
             lineColor="blue"
-            className="max-w-[377px] text-action-active"
+            className="mb-0 max-w-[377px] text-action-active"
           >
             BUILD YOUR ON-CHAIN PORTFOLIO
           </UnderlinedHeading>

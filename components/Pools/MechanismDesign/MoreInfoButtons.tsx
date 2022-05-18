@@ -5,9 +5,7 @@ import { buttonContent } from "@components/Pools/MechanismDesign/presets";
 const MoreInfoButtons: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <div
-      className={`mt-8 flex max-w-[420px] flex-wrap ${
-        className ? className : ""
-      }`}
+      className={`mt-8 max-w-[420px] flex-wrap ${className ? className : ""}`}
     >
       <UnderlinedHeading
         lineColor="blue"

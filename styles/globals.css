@@ -80,17 +80,17 @@ input::placeholder {
 .active .nav-link:nth-child(2) {
   @apply delay-[400ms];
 }
-.active .nav-link:nth-child(3) {
+/* .active .nav-link:nth-child(3) { // unused
+  @apply delay-[500ms];
+} */
+.active .nav-link:nth-child(4) {
   @apply delay-[500ms];
 }
-.active .nav-link:nth-child(4) {
+.active .nav-link:nth-child(5) {
   @apply delay-[600ms];
 }
-.active .nav-link:nth-child(5) {
-  @apply delay-[700ms];
-}
 .active .nav-link:nth-child(6) {
-  @apply delay-[800ms];
+  @apply delay-[700ms];
 }
 
 /* Button hover classes */
@@ -570,5 +570,9 @@ img.image-cover-right {
   }
   .portfolio-slider .slick-current .content {
     max-height: 390px;
+  }
+  .slider-nav .slick-track {
+    display: flex;
+    justify-content: space-around;
   }
 }
