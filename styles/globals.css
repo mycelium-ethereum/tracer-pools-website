@@ -69,7 +69,7 @@ input::placeholder {
 
 /* Mobile nav link animations */
 .nav-link {
-  @apply translate-y-3 -translate-x-2 opacity-0 transition-all delay-[500ms] duration-500;
+  @apply translate-y-3 -translate-x-2 opacity-0 transition-all delay-[500ms] duration-700;
 }
 .active .nav-link {
   @apply translate-y-0 -translate-x-0 opacity-100;
