@@ -113,3 +113,99 @@ export const handleAnchorClick = (
         duration: 1000,
     });
 };
+
+export const getCurrentSection = (route: string, setCurrentSection: (value: React.SetStateAction<string>) => void) => {
+    if (route === "/" || route === "/pools") {
+        const sections: NodeListOf<HTMLElement> =
+            document.querySelectorAll("section");
+        // Check each section to see if it is above or below the top of the viewport
+        sections.forEach((section) => {
+            let offset = section.offsetTop;
+            let actualPos = offset - document.documentElement.scrollTop;
+            let id = section.getAttribute("id");
+            if (id && actualPos < 30 && actualPos + section.clientHeight > 30) {
+                id = id.replace("#", "");
+                setCurrentSection(id);
+            }
+        });
+    }
+};
+
+export const changeNavColour = (route: string, currentSection: string, blueStyles: string,
+    whiteStyles: string, solidBlueStyles: string, setHamburgerColour: (value: React.SetStateAction<string>) => void,
+    setNavColour: (value: React.SetStateAction<string>) => void) => {
+    let navTextColour = "";
+    if (route === "/") {
+        switch (currentSection) {
+            case "section-1":
+                navTextColour = whiteStyles;
+                break;
+            case "section-2":
+                navTextColour = blueStyles;
+                break;
+            case "section-3":
+                navTextColour = whiteStyles;
+                break;
+            case "section-4":
+                navTextColour = whiteStyles;
+                break;
+            case "section-5":
+                navTextColour = whiteStyles;
+                break;
+            case "section-6":
+                navTextColour = whiteStyles;
+                break;
+            default:
+                navTextColour = whiteStyles;
+                break;
+        }
+    } else if (route === "/pools") {
+        switch (currentSection) {
+            case "section-1":
+                navTextColour = whiteStyles;
+                break;
+            case "section-2":
+                navTextColour = blueStyles;
+                break;
+            case "section-3":
+                navTextColour = blueStyles;
+                break;
+            case "section-4":
+                navTextColour = blueStyles;
+                break;
+            case "section-5":
+                navTextColour = blueStyles;
+                break;
+            default:
+                navTextColour = whiteStyles;
+                break;
+        }
+    } else if (route === "/factories") {
+        switch (currentSection) {
+            case "section-1":
+                navTextColour = whiteStyles;
+                break;
+            case "section-2":
+                navTextColour = blueStyles;
+                break;
+            case "section-3":
+                navTextColour = blueStyles;
+                break;
+            case "section-4":
+                navTextColour = blueStyles;
+                break;
+            case "section-5":
+                navTextColour = blueStyles;
+                break;
+            default:
+                navTextColour = whiteStyles;
+                break;
+        }
+    } else {
+        navTextColour = solidBlueStyles;
+    }
+    setHamburgerColour(
+        navTextColour === whiteStyles ? "bg-white" : "bg-action-active"
+    );
+    setNavColour(navTextColour);
+};

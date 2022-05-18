@@ -15,9 +15,9 @@ menu {
   list-style: unset;
   line-height: 24px !important;
 }
-p {
+/* p {
   line-height: 24px !important;
-}
+} */
 
 ::-webkit-scrollbar {
   @apply h-2.5 w-2.5;
@@ -431,7 +431,6 @@ img.image-cover-right {
 
 /* Build portfolio */
 
-/* Shjow  */
 .portfolio-slider .slick-slide span {
   color: inherit;
 }
@@ -443,6 +442,19 @@ img.image-cover-right {
 /* Learn page */
 .btn-full-width {
   width: auto;
+}
+
+/* Factories page */
+
+/* Centered title gradient */
+.blue-gradient-center {
+  background-image: linear-gradient(
+    90deg,
+    rgba(28, 100, 242, 0) 0%,
+    #1c64f2 30.25%,
+    #1c64f2 77.72%,
+    rgba(28, 100, 242, 0) 100.15%
+  );
 }
 
 @media only screen and (min-width: 3840px) {

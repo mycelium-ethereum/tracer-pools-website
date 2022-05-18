@@ -2,10 +2,10 @@ import Container from "@components/Shared/Container";
 import H2 from "@components/Shared/Heading/H2";
 import UnderlinedHeading from "@components/Shared/Heading/UnderlinedHeading";
 import PageSection from "@components/Shared/Section";
-import { governanceCards } from "@components/DAO/presets";
 import InfoCard from "@components/DAO/InfoCard";
 import OptimisedImage from "@components/Shared/OptimisedImage";
 import GridContainer from "@components/DAO/GridContainer";
+import { governanceCards } from "@components/DAO/presets";
 
 const Governance: React.FC<{}> = () => {
   return (

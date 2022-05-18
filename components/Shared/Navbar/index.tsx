@@ -7,7 +7,13 @@ import Logo from "@components/Shared/Logo";
 import LaunchAppButton from "@components/Shared/Navbar/LaunchAppButton";
 import LaunchDropdown from "@components/Shared/Navbar/LaunchDropdown";
 import ProductsDropdown from "@components/Shared/Navbar/ProductsDropdown";
-import { disableScroll, enableScroll, isMobile } from "@lib/helpers";
+import {
+  changeNavColour,
+  getCurrentSection,
+  disableScroll,
+  enableScroll,
+  isMobile,
+} from "@lib/helpers";
 import { links } from "@components/Shared/Navbar/presets";
 import { handleOutsideClick } from "hooks";
 
@@ -65,82 +71,6 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
     }
   };
 
-  const getCurrentSection = () => {
-    if (route === "/" || route === "/pools") {
-      const sections: NodeListOf<HTMLElement> =
-        document.querySelectorAll("section");
-      // Check each section to see if it is above or below the top of the viewport
-      sections.forEach((section) => {
-        let offset = section.offsetTop;
-        let actualPos = offset - document.documentElement.scrollTop;
-        let id = section.getAttribute("id");
-        if (id && actualPos < 30 && actualPos + section.clientHeight > 30) {
-          id = id.replace("#", "");
-          setCurrentSection(id);
-        }
-      });
-    }
-  };
-
-  const changeNavColour = () => {
-    let navTextColour = "";
-    if (route === "/") {
-      switch (currentSection) {
-        case "section-1":
-          navTextColour = whiteStyles;
-          break;
-        case "section-2":
-          navTextColour = blueStyles;
-          break;
-        case "section-3":
-          navTextColour = whiteStyles;
-          break;
-        case "section-4":
-          navTextColour = whiteStyles;
-          break;
-        case "section-5":
-          navTextColour = whiteStyles;
-          break;
-        case "section-6":
-          navTextColour = whiteStyles;
-          break;
-        case "section-6":
-          navTextColour = whiteStyles;
-          break;
-        default:
-          navTextColour = whiteStyles;
-          break;
-      }
-    } else if (route === "/pools") {
-      switch (currentSection) {
-        case "section-1":
-          navTextColour = whiteStyles;
-          break;
-        case "section-2":
-          navTextColour = blueStyles;
-          break;
-        case "section-3":
-          navTextColour = blueStyles;
-          break;
-        case "section-4":
-          navTextColour = blueStyles;
-          break;
-        case "section-5":
-          navTextColour = blueStyles;
-          break;
-        default:
-          navTextColour = whiteStyles;
-          break;
-      }
-    } else {
-      navTextColour = solidBlueStyles;
-    }
-    setHamburgerColour(
-      navTextColour === whiteStyles ? "bg-white" : "bg-action-active"
-    );
-    setNavColour(navTextColour);
-  };
-
   const handleClose = () => {
     setTimeout(() => {
       setNavOpen(false);
@@ -171,14 +101,30 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
     if (navOpen) {
       disableScroll();
     } else {
-      changeNavColour();
+      changeNavColour(
+        route,
+        currentSection,
+        blueStyles,
+        whiteStyles,
+        solidBlueStyles,
+        setHamburgerColour,
+        setNavColour
+      );
       enableScroll();
     }
   }, [navOpen]);
 
   useEffect(() => {
-    changeNavColour();
-    getCurrentSection();
+    changeNavColour(
+      route,
+      currentSection,
+      blueStyles,
+      whiteStyles,
+      solidBlueStyles,
+      setHamburgerColour,
+      setNavColour
+    );
+    getCurrentSection(route, setCurrentSection);
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -203,22 +149,38 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
   useEffect(() => {
     // Wait for page exit transition before setting nav bg and text colours
     let timeout = setTimeout(() => {
-      changeNavColour();
+      changeNavColour(
+        route,
+        currentSection,
+        blueStyles,
+        whiteStyles,
+        solidBlueStyles,
+        setHamburgerColour,
+        setNavColour
+      );
     }, 300);
-    getCurrentSection();
+    getCurrentSection(route, setCurrentSection);
     window.addEventListener("scroll", () => {
-      getCurrentSection();
+      getCurrentSection(route, setCurrentSection);
     });
     return () => {
       clearTimeout(timeout);
       window.removeEventListener("scroll", () => {
-        getCurrentSection();
+        getCurrentSection(route, setCurrentSection);
       });
     };
   }, [route]);
 
   useEffect(() => {
-    changeNavColour();
+    changeNavColour(
+      route,
+      currentSection,
+      blueStyles,
+      whiteStyles,
+      solidBlueStyles,
+      setHamburgerColour,
+      setNavColour
+    );
   }, [currentSection]);
 
   // Handle click/tap outside to close modals

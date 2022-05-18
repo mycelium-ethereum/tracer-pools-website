@@ -7,9 +7,9 @@ const ProductsDropdown: React.FC<{
   handleDesktopProductsDropdownClose: () => void;
 }> = ({ desktopProductsDropdownOpen, handleDesktopProductsDropdownClose }) => {
   const activeStyles =
-    "[transform:scale3d(1,1,1)_perspective(999px)_translate3d(0,0,0)_translateX(calc(calc(50%+12px)*-1))]  pointer-events-auto opacity-100";
+    "[transform:scale3d(1,1,1)_perspective(999px)_translate3d(0,0,0)_translateX(calc(calc(50%)*-1))]  pointer-events-auto opacity-100";
   const inactiveStyles =
-    "[transform:scale3d(0.98,0.98,1)_perspective(999px)_translate3d(0,0,0)_translateX(calc(calc(50%+12px)*-1))] pointer-events-none opacity-0";
+    "[transform:scale3d(0.98,0.98,1)_perspective(999px)_translate3d(0,0,0)_translateX(calc(calc(50%)*-1))] pointer-events-none opacity-0";
 
   return (
     <div

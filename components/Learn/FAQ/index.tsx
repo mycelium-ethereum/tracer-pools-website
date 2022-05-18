@@ -2,7 +2,7 @@ import UnderlinedHeading from "@components/Shared/Heading/UnderlinedHeading";
 import Container from "@components/Shared/Container";
 import H2 from "@components/Shared/Heading/H2";
 import Section from "@components/Shared/Section";
-import HelpGovernBanner from "@components/Pools/Integration/HelpGovernBanner";
+import HelpGovernBanner from "@components/Shared/Banners/HelpGovernBanner";
 import { faqQuestions } from "@components/Learn/FAQ/presets";
 import QuestionDropdown from "@components/Learn/FAQ/QuestionDropdown";
 

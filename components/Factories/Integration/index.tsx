@@ -1,14 +1,14 @@
 import Section from "@components/Shared/Section";
 import Container from "@components/Shared/Container";
-import { integrationItems } from "@components/Pools/Integration/presets";
+import { integrationItems } from "@components/Factories/Integration/presets";
 import IntegrationCard from "@components/Shared/Cards/IntegrationCard";
 import HelpGovernBanner from "@components/Shared/Banners/HelpGovernBanner";
 
 const Integration: React.FC<{}> = () => {
   return (
-    <Section id="section-5" className="bg-secondary">
+    <Section id="section-5" className="bg-secondary pt-20">
       <Container>
-        <div className="mx-auto mt-16 mb-[99px] grid max-w-[1680px] gap-16 sm:grid-cols-2 md:grid-cols-3 lg:mt-32 3xl:gap-x-56">
+        <div className="mx-auto mb-[93px] grid max-w-[1680px] gap-16 sm:grid-cols-2 md:grid-cols-3 3xl:gap-x-56">
           {integrationItems.map((item, i) => (
             <IntegrationCard {...item} key={i} />
           ))}
