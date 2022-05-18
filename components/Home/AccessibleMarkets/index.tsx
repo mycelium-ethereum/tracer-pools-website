@@ -2,10 +2,10 @@ import Section from "@components/Shared/Section";
 import Container from "@components/Shared/Container";
 import ParagraphBlock from "@components/Home/ParagraphBlock";
 import AnimateIn from "@components/Shared/AnimateIn";
-import OptimisedImage from "@components/Shared/OptimisedImage";
-import { paragraphCopy } from "@components/Home/AccessibleMarkets/presets";
 import H1 from "@components/Home/H1";
 import Paragraph from "@components/Home/Paragraph";
+import LottieAnim from "@components/Home/AccessibleMarkets/LottieAnim";
+import { paragraphCopy } from "@components/Home/AccessibleMarkets/presets";
 
 const AccessibleMarkets: React.FC<{}> = () => {
   let delay = 0.6;
@@ -65,16 +65,7 @@ const AccessibleMarkets: React.FC<{}> = () => {
           </AnimateIn>
         </div>
       </Container>
-      <OptimisedImage
-        src="/img/home/accessible-markets-bg.png"
-        alt=""
-        className="pointer-events-none absolute -bottom-[30px] -right-[30px] hidden min-h-[727px] min-w-[1284px] xl:block"
-      />
-      <OptimisedImage
-        src="/img/home/accessible-markets-mobile-bg.png"
-        alt=""
-        className="pointer-events-none absolute -bottom-[30px] -right-[30px] block min-h-[480px] max-w-[350px] translate-x-4 md:translate-x-0 xl:hidden"
-      />
+      <LottieAnim />
     </Section>
   );
 };
