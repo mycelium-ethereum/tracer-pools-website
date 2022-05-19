@@ -15,7 +15,7 @@ const GuideTile: React.FC<{
     <PageLink href={link}>
       <article className="group relative flex h-[120px] w-full items-center rounded-lg bg-tracer-navy pl-8 xs:h-[150px] sm:h-[200px]">
         <div>
-          <Logo className="h-4 sm:h-5" />
+          <Logo className="h-4 text-white sm:h-5" />
           <span className="mt-1 block whitespace-nowrap text-2xl font-light leading-[28px] text-white sm:text-[40px] sm:leading-[44px]">
             User Guide
           </span>
