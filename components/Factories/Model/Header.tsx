@@ -8,7 +8,7 @@ const Header: React.FC<{}> = () => {
       <UnderlinedHeading lineColor="blue" className="max-w-[294px]">
         THE FACTORY MODEL
       </UnderlinedHeading>
-      <H2 className="max-w-[455px] 3xl:max-w-[unset]">
+      <H2 className="max-w-[455px] 3xl:max-w-full">
         The base layer of the Tracer protocol combines smart contract templates
         and oracle data feeds to create unstoppable derivatives market
         infrastructure.

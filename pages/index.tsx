@@ -1,5 +1,5 @@
 import Banner from "@components/Home/Banner";
-import DataFeeds from "@components/Home/DataFeeds";
+import Indices from "@components/Home/Indices";
 import AccessibleMarkets from "@components/Home/AccessibleMarkets";
 import PerpetualPools from "@components/Home/PerpetualPools";
 import SEO from "@components/Shared/SEO";
@@ -14,7 +14,7 @@ const HomePage: React.FC<{}> = () => {
       <AccessibleMarkets />
       <PerpetualPools />
       <Factories />
-      <DataFeeds />
+      <Indices />
       <Partners />
     </>
   );

@@ -9,8 +9,11 @@ import OptimisedImage from "@components/Shared/OptimisedImage";
 
 const Factories: React.FC<{}> = () => {
   return (
-    <Section id="section-4" className="bg-tracer-purple-dark">
-      <Container className="flex pt-20 pb-5 text-white lg:h-screen lg:min-h-[800px] lg:py-16">
+    <Section
+      id="section-4"
+      className="bg-tracer-purple-dark pt-20 pb-5 lg:h-[800px] lg:py-16 3xl:h-[1200px]"
+    >
+      <Container className="flex h-full items-center text-white">
         <header className="flex h-full flex-grow flex-col justify-center">
           <AnimateIn delay={0.2}>
             <div className="mb-4 w-full max-w-[328px]">
@@ -45,7 +48,7 @@ const Factories: React.FC<{}> = () => {
           </AnimateIn>
         </header>
       </Container>
-      <div className="absolute top-0 right-0 hidden h-full w-[50vw] max-w-[792px] lg:block">
+      <div className="absolute top-0 right-0 hidden h-full w-[50vw] max-w-[792px] lg:block 3xl:max-w-full">
         <OptimisedImage
           cover
           position="left"

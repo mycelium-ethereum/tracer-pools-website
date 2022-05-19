@@ -20,7 +20,7 @@ const Partners: React.FC<{}> = () => {
           </div>
           <GradientLine color="lightblue" />
         </header>
-        <div className="flex max-w-[584px] flex-wrap lg:max-w-[864px] 4xl:max-w-[unset]">
+        <div className="flex max-w-[584px] flex-wrap lg:max-w-[864px] 4xl:max-w-full">
           {partnerLogos.map((logo, i) => (
             <PartnerLogo key={i} {...logo} />
           ))}

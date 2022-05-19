@@ -7,7 +7,7 @@ const Header: React.FC<{}> = () => {
       <UnderlinedHeading lineColor="blue" className="max-w-[294px]">
         GET PAID FOR YOUR CREATIVITY
       </UnderlinedHeading>
-      <H2 className="max-w-[455px] 3xl:max-w-[unset]">
+      <H2 className="max-w-[455px] 3xl:max-w-full">
         <span className="inline-block text-2xl leading-[28px] sm:text-[40px] sm:leading-[44px] 3xl:text-[64px] 3xl:leading-[72px]">
           10% of fees
         </span>

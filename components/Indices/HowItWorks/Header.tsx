@@ -9,7 +9,7 @@ const Header: React.FC<{}> = () => {
       <UnderlinedHeading lineColor="blue" className="max-w-[294px]">
         HOW IT WORKS
       </UnderlinedHeading>
-      <H2 className="max-w-[344px] 3xl:max-w-[unset]">
+      <H2 className="max-w-[344px] 3xl:max-w-full">
         Learn how we make it happen
       </H2>
       <div className="flex sm:flex-col">

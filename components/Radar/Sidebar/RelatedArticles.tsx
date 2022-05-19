@@ -30,7 +30,7 @@ const RelatedArticles: React.FC<{
   );
 
   return (
-    <div className="max-w-[264px] pt-4 lg:max-w-[unset] lg:p-4">
+    <div className="max-w-[264px] pt-4 lg:max-w-full lg:p-4">
       <span className="mb-2 hidden text-xs tracking-[0.15em] text-tertiary lg:block">
         RELATED ARTICLES
       </span>
