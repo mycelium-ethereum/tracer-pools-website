@@ -5,27 +5,13 @@ import PageLink from "@components/Shared/PageLink";
 import SocialLinks from "@components/Shared/Footer/SocialLinks";
 import CopyrightYear from "@components/Shared/CopyrightYear";
 import TracerLogoSVG from "@components/SVG/TracerSVG";
-import {
-  categoryNames,
-  socialLinks,
-  tracerDAOCategory,
-  productCategory,
-  learnCategory,
-  contributeCategory,
-  governCategory,
-  connectCategory,
-} from "@components/Shared/Footer/presets";
+import DesktopGrid from "@components/Shared/Footer/DesktopGrid";
+import TabletGrid from "@components/Shared/Footer/TabletGrid";
+import { socialLinks } from "@components/Shared/Footer/presets";
+import MobileGrid from "./MobileGrid";
 
 const Footer: React.FC<{ route: string }> = ({ route }) => {
   const [background, setBackground] = useState("bg-white");
-  const categoryArr = [
-    tracerDAOCategory,
-    productCategory,
-    learnCategory,
-    contributeCategory,
-    governCategory,
-    connectCategory,
-  ];
 
   const getBackground = () => {
     switch (route) {
@@ -63,18 +49,9 @@ const Footer: React.FC<{ route: string }> = ({ route }) => {
           <PageLink href="/">
             <TracerLogoSVG className="mb-11 h-[26px] w-[112px] lg:mr-20 lg:mb-0" />
           </PageLink>
-          <div className="grid max-w-[1045px] flex-grow transform grid-cols-2 gap-x-[75px] gap-y-12 sm:grid-cols-3 lg:translate-x-[95px] xl:mt-0 xl:w-max xl:translate-x-[40px] xl:grid-cols-6">
-            {categoryNames.map((category, i) => {
-              return (
-                <Category
-                  key={i}
-                  route={route}
-                  name={category.name}
-                  category={categoryArr[i]}
-                />
-              );
-            })}
-          </div>
+          <DesktopGrid route={route} />
+          <TabletGrid route={route} />
+          <MobileGrid route={route} />
         </div>
         <div className="flex flex-col items-center justify-between border-t border-action-active pt-5 sm:flex-row">
           {/* Social icons */}

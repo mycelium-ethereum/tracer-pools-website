@@ -1,4 +1,3 @@
-import React from "react";
 import FooterLink from "@components/Shared/Footer/FooterLink";
 
 const Category: React.FC<{
@@ -10,7 +9,7 @@ const Category: React.FC<{
   }[];
 }> = ({ name, route, category }) => {
   return (
-    <div className="flex w-max flex-col items-start">
+    <div className="mb-6 flex w-max flex-col items-start xl:mb-0">
       <span className="mb-2.5 block font-extrabold">{name}</span>
       {category.map((content, i) => (
         <FooterLink key={i} content={content} route={route} />

@@ -1,32 +1,28 @@
 const FourColumnLayout: React.FC<{
-  articles: any;
-  ArticleComponent: React.FC<{
-    article?: any;
+  items: any;
+  Component: React.FC<{
+    item?: any;
   }>;
-}> = ({ articles, ArticleComponent }) => {
+}> = ({ items, Component }) => {
   return (
     <>
       <div>
         {articles.map(
           (article: any, i: number) =>
-            (i % 4 === 0 || i === 0) && (
-              <ArticleComponent key={i} article={article} />
-            )
+            (i % 4 === 0 || i === 0) && <ArticleComponent key={i} item={item} />
         )}
       </div>
       <div>
         {articles.map(
           (article: any, i: number) =>
             (i % 4 === 1 || i === 1) &&
-            i !== 0 && <ArticleComponent key={i} article={article} />
+            i !== 0 && <ArticleComponent key={i} item={item} />
         )}
       </div>
       <div>
         {articles.map(
           (article: any, i: number) =>
-            (i % 4 === 2 || i === 2) && (
-              <ArticleComponent key={i} article={article} />
-            )
+            (i % 4 === 2 || i === 2) && <ArticleComponent key={i} item={item} />
         )}
       </div>
       <div>
@@ -37,7 +33,7 @@ const FourColumnLayout: React.FC<{
             i % 4 !== 1 &&
             i !== 1 &&
             i % 4 !== 2 &&
-            i !== 2 && <ArticleComponent key={i} article={article} />
+            i !== 2 && <ArticleComponent key={i} item={item} />
         )}
       </div>
     </>

@@ -1,14 +1,14 @@
 const OneColumnLayout: React.FC<{
-  articles: any;
-  ArticleComponent: React.FC<{
-    article?: any;
+  items: any;
+  Component: React.FC<{
+    item?: any;
   }>;
-}> = ({ articles, ArticleComponent }) => {
+}> = ({ items, Component }) => {
   return (
     <>
       <div className="w-full">
-        {articles.map((article: any, i: number) => {
-          return <ArticleComponent key={i} article={article} />;
+        {items.map((item: any, i: number) => {
+          return <Component key={i} item={item} />;
         })}
       </div>
     </>

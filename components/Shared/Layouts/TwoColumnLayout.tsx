@@ -1,22 +1,22 @@
 const TwoColumnLayout: React.FC<{
-  articles: any;
-  ArticleComponent: React.FC<{
-    article?: any;
+  items: any;
+  Component: React.FC<{
+    item?: any;
   }>;
-}> = ({ articles, ArticleComponent }) => {
+}> = ({ items, Component }) => {
   return (
     <>
       <div className="w-full">
-        {articles.map((article: any, i: number) => {
+        {items.map((item: any, i: number) => {
           if (i % 2 === 0 || i === 0) {
-            return <ArticleComponent key={i} article={article} />;
+            return <Component key={i} item={item} />;
           }
         })}
       </div>
       <div className="w-full">
-        {articles.map((article: any, i: number) => {
+        {items.map((item: any, i: number) => {
           if (i % 2 === 1 || i === 1) {
-            return <ArticleComponent key={i} article={article} />;
+            return <Component key={i} item={item} />;
           }
         })}
       </div>

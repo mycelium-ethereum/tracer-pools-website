@@ -19,16 +19,6 @@ menu {
   line-height: 24px !important;
 } */
 
-::-webkit-scrollbar {
-  @apply h-2.5 w-2.5;
-}
-::-webkit-scrollbar-track {
-  @apply bg-white;
-}
-::-webkit-scrollbar-thumb {
-  @apply bg-black;
-}
-
 body {
   @apply min-w-[320px] max-w-[100vw] overflow-x-hidden bg-white font-sans text-base font-normal leading-[21px] text-white transition-colors duration-500;
   overflow-x: hidden;
@@ -44,7 +34,7 @@ body {
 
 /*CUSTOM SCROLLBAR*/
 ::-webkit-scrollbar {
-  @apply h-2.5 w-2.5;
+  @apply h-1.5 w-1.5;
 }
 ::-webkit-scrollbar-track {
   @apply bg-transparent;

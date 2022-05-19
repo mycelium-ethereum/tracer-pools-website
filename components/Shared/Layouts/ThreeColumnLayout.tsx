@@ -1,29 +1,29 @@
 const ThreeColumnLayout: React.FC<{
-  articles: any;
-  ArticleComponent: React.FC<{
-    article?: any;
+  items: any;
+  Component: React.FC<{
+    item?: any;
   }>;
-}> = ({ articles, ArticleComponent }) => {
+}> = ({ items, Component }) => {
   return (
     <>
       <div>
-        {articles.map((article: any, i: number) => {
+        {items.map((item: any, i: number) => {
           if (i % 3 === 0 || i === 0) {
-            return <ArticleComponent key={i} article={article} />;
+            return <Component key={i} item={item} />;
           }
         })}
       </div>
       <div>
-        {articles.map((article: any, i: number) => {
+        {items.map((item: any, i: number) => {
           if (i % 3 === 1 || i === 1) {
-            return <ArticleComponent key={i} article={article} />;
+            return <Component key={i} item={item} />;
           }
         })}
       </div>
       <div>
-        {articles.map((article: any, i: number) => {
+        {items.map((item: any, i: number) => {
           if (i % 3 !== 1 && i !== 1 && i % 3 !== 0 && i !== 0) {
-            return <ArticleComponent key={i} article={article} />;
+            return <Component key={i} item={item} />;
           }
         })}
       </div>

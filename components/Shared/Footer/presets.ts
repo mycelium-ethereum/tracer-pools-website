@@ -5,25 +5,40 @@ import GithubSVG from "@components/SVG/GithubSVG";
 import DiscordSVG from "@components/SVG/DiscordSVG";
 
 export const categoryNames = [
-    {
-        name: "Tracer DAO",
-    },
-    {
-        name: "Products",
-    },
-    {
-        name: "Learn",
-    },
-    {
-        name: "Contribute",
-    },
-    {
-        name: "Govern",
-    },
-    {
-        name: "Connect",
-    },
+    "Tracer DAO",
+    "Products",
+    "Learn",
+    "Contribute",
+    "Govern",
+    "Connect",
 ];
+
+export const desktopOrder = [
+    categoryNames[0],
+    categoryNames[1],
+    categoryNames[2],
+    categoryNames[3],
+    categoryNames[4],
+    categoryNames[5],
+]
+
+export const tabletOrder = [
+    categoryNames[0],
+    categoryNames[2],
+    categoryNames[3],
+    categoryNames[4],
+    categoryNames[1],
+    categoryNames[5],
+]
+
+export const mobileOrder = [
+    categoryNames[0],
+    categoryNames[2],
+    categoryNames[4],
+    categoryNames[3],
+    categoryNames[2],
+    categoryNames[5],
+]
 
 export const socialLinks = [
     {
