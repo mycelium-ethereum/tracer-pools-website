@@ -15,7 +15,7 @@ const ServiceProviders: React.FC<{}> = () => {
         >
           SERVICE PROVIDERS
         </UnderlinedHeading>
-        <div className="flex max-w-[900px] flex-wrap justify-between sm:justify-start">
+        <div className="flex max-w-[900px] flex-wrap justify-between sm:justify-start 4xl:max-w-full">
           {serviceProviders.map((provider, i) => (
             <ProviderLogo key={i} {...provider} />
           ))}
