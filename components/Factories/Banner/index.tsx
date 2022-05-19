@@ -16,7 +16,7 @@ const Banner: React.FC<{}> = () => {
       <MeshDouble />
       <Background
         image="/img/factories/banner-bg.png"
-        className="min-h-[835px] min-w-[1702px] "
+        className="3xl:min-w-[calc(100%+400px)]"
       />
     </Section>
   );

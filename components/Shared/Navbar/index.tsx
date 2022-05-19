@@ -144,7 +144,7 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
       setHamburgerColour,
       setNavColour
     );
-    getCurrentSection(route, setCurrentSection);
+    getCurrentSection(setCurrentSection);
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -180,14 +180,14 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
       );
     }, 300);
     getLogoType();
-    getCurrentSection(route, setCurrentSection);
+    getCurrentSection(setCurrentSection);
     window.addEventListener("scroll", () => {
-      getCurrentSection(route, setCurrentSection);
+      getCurrentSection(setCurrentSection);
     });
     return () => {
       clearTimeout(timeout);
       window.removeEventListener("scroll", () => {
-        getCurrentSection(route, setCurrentSection);
+        getCurrentSection(setCurrentSection);
       });
     };
   }, [route]);

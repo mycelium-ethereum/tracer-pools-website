@@ -112,21 +112,19 @@ export const handleAnchorClick = (
     });
 };
 
-export const getCurrentSection = (route: string, setCurrentSection: (value: React.SetStateAction<string>) => void) => {
-    if (route === "/" || route === "/pools") {
-        const sections: NodeListOf<HTMLElement> =
-            document.querySelectorAll("section");
-        // Check each section to see if it is above or below the top of the viewport
-        sections.forEach((section) => {
-            let offset = section.offsetTop;
-            let actualPos = offset - document.documentElement.scrollTop;
-            let id = section.getAttribute("id");
-            if (id && actualPos < 30 && actualPos + section.clientHeight > 30) {
-                id = id.replace("#", "");
-                setCurrentSection(id);
-            }
-        });
-    }
+export const getCurrentSection = (setCurrentSection: (value: React.SetStateAction<string>) => void) => {
+    const sections: NodeListOf<HTMLElement> =
+        document.querySelectorAll("section");
+    // Check each section to see if it is above or below the top of the viewport
+    sections.forEach((section) => {
+        let offset = section.offsetTop;
+        let actualPos = offset - document.documentElement.scrollTop;
+        let id = section.getAttribute("id");
+        if (id && actualPos < 30 && actualPos + section.clientHeight > 30) {
+            id = id.replace("#", "");
+            setCurrentSection(id);
+        }
+    });
 };
 
 export const changeNavColour = (route: string, currentSection: string, blueStyles: string,

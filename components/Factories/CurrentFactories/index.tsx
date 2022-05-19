@@ -9,7 +9,7 @@ const CurrentFactories: React.FC<{}> = () => {
     <Section id="section-4" className="bg-white pt-20 pb-[133px]">
       <Container className="flex justify-between">
         <Header />
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4 3xl:grid-cols-3">
           {cardContent.map((content, index) => (
             <FactoryInfoCard key={index} {...content} />
           ))}

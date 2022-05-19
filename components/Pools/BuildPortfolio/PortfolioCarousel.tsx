@@ -20,10 +20,12 @@ const PortfolioCarousel: React.FC<{}> = () => {
     item,
   }) => (
     <button
-      className="w-full pt-4 text-left text-action-active sm:w-[391px]"
+      className="w-full pt-4 text-left text-action-active sm:w-[391px] 3xl:w-[625px]"
       onClick={() => pauseSlider()}
     >
-      <h2 className="text-2xl leading-[28px]">{item.title}</h2>
+      <h2 className="text-2xl leading-[28px] transition-colors duration-300">
+        {item.title}
+      </h2>
       <div className="content max-h-0 opacity-0 transition-all duration-300">
         <span className="mt-1 mb-4 block overflow-hidden font-light leading-[24px] sm:text-[40px] sm:leading-[44px] 3xl:text-[64px] 3xl:leading-[72px]">
           {item.text}
@@ -44,7 +46,7 @@ const PortfolioCarousel: React.FC<{}> = () => {
     <Slider
       {...settings}
       ref={(slider) => setSlider(slider)}
-      className="portfolio-slider h-[650px] sm:h-[400px] sm:w-[400px]"
+      className="portfolio-slider h-[650px] sm:h-[400px] sm:w-[400px] 3xl:h-[460px] 3xl:w-[625px]"
     >
       {portfolioCarouselItems.map((item) => (
         <Slide key={item.title} item={item} />

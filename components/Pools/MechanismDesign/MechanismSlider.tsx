@@ -30,7 +30,7 @@ const MechanismSlider: React.FC<{}> = () => {
         draggable={false}
         className="w-full object-center sm:h-[324px] sm:object-cover 3xl:h-[585px]"
       />
-      <p className="mb-4 text-action-active sm:mt-4 sm:mb-0 3xl:text-center 3xl:text-xl 3xl:leading-[28px]">
+      <p className="mx-auto mb-4 max-w-[818px] text-action-active sm:mt-4 sm:mb-0 3xl:text-center 3xl:text-xl 3xl:leading-[28px]">
         {item.text}
       </p>
     </div>

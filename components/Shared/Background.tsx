@@ -5,13 +5,17 @@ const Background: React.FC<{ image: string; className: string }> = ({
   className,
 }) => {
   return (
-    <OptimisedImage
-      src={image}
-      alt="Banner background"
-      className={`absolute left-1/2 bottom-0 z-0 -translate-x-1/2 ${
-        className ? className : ""
-      }`}
-    />
+    <div className="absolute top-0 left-0 h-full w-full">
+      <OptimisedImage
+        src={image}
+        cover
+        position="center"
+        alt="Banner background"
+        className={`banner-bg absolute left-1/2 bottom-0 z-0 -translate-x-1/2 ${
+          className ? className : ""
+        }`}
+      />
+    </div>
   );
 };
 

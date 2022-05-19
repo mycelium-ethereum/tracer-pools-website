@@ -201,6 +201,13 @@ img.image-cover-right {
   object-position: right !important;
 }
 
+/* Override styles */
+.banner-bg {
+  /* max-height: calc(100% - 90px) !important; */
+  min-width: calc(100% + 400px) !important;
+  left: 50% !important;
+}
+
 /* BANNER DISC/CIRCLES ANIMATION */
 .bannerDiscAnim {
   animation: slideDown 19s ease infinite;
@@ -434,6 +441,9 @@ img.image-cover-right {
 .portfolio-slider .slick-slide span {
   color: inherit;
 }
+.portfolio-slider .slick-slide:not(.slick-current) h2 {
+  @apply text-action-inactive;
+}
 .portfolio-slider .slick-current .content {
   max-height: 150px;
   opacity: 1;
@@ -457,47 +467,6 @@ img.image-cover-right {
   );
 }
 
-@media only screen and (min-width: 3840px) {
-  @keyframes slideDown {
-    0% {
-      transform: translate(0, 0) rotate(315deg) scale(1.5);
-      opacity: 0;
-    }
-    5% {
-      opacity: 1;
-    }
-    95% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      transform: translate(-5vh, 5vh) rotate(315deg) scale(1.5);
-    }
-  }
-}
-
-@media only screen and (min-width: 2560px) {
-  @keyframes slideDown {
-    0% {
-      transform: translate(0, 0) rotate(315deg) scale(1.5);
-      opacity: 0;
-    }
-    5% {
-      opacity: 1;
-    }
-    95% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      transform: translate(-10vh, 10vh) rotate(315deg) scale(1.5);
-    }
-  }
-  .vertical-slider .slick-slide,
-  .vertical-slider {
-    width: 800px !important;
-  }
-}
 @media only screen and (min-width: 640px) and (max-width: 2559px) {
   .vertical-slider .slick-slide,
   .vertical-slider {
@@ -535,9 +504,55 @@ img.image-cover-right {
     }
   }
 }
+/* 5XL */
+@media only screen and (min-width: 3840px) {
+  @keyframes slideDown {
+    0% {
+      transform: translate(0, 0) rotate(315deg) scale(1.5);
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-5vh, 5vh) rotate(315deg) scale(1.5);
+    }
+  }
+}
+/* 4XL */
+@media only screen and (min-width: 2560px) {
+  @keyframes slideDown {
+    0% {
+      transform: translate(0, 0) rotate(315deg) scale(1.5);
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-10vh, 10vh) rotate(315deg) scale(1.5);
+    }
+  }
+  .vertical-slider .slick-slide,
+  .vertical-slider {
+    width: 800px !important;
+  }
+}
+/* 3XL */
 @media only screen and (min-width: 1920px) {
   .slider-nav .slick-slide button:after {
     height: 90px;
+  }
+  .portfolio-slider .slick-current .content {
+    max-height: 216px;
   }
 }
 @media only screen and (min-width: 768px) {

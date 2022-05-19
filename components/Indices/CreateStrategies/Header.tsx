@@ -11,7 +11,7 @@ const Header: React.FC<{}> = () => {
       >
         STRATEGIES
       </UnderlinedHeading>
-      <H2 className="mb-4 max-w-[344px] text-2xl leading-[28px] text-action-active">
+      <H2 className=" max-w-[344px] text-2xl leading-[28px] text-action-active">
         Create Market
         <br /> Neutral Strategies
       </H2>
