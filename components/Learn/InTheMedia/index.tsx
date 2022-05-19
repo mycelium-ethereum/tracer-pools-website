@@ -29,7 +29,7 @@ const InTheMedia: React.FC<{ mediaVideos: string[]; mediaVideoData: any }> = ({
     const videos = postsInView;
     videos.sort(
       (a: any, b: any) =>
-        mediaVideoData.indexOf(a) - mediaVideos.indexOf(b.items[0].id)
+        mediaVideoData.indexOf(a) - mediaVideos.indexOf(b.articles[0].id)
     );
   };
 

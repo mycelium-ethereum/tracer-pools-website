@@ -38,7 +38,7 @@ const RelatedArticles: React.FC<{
       {getRelatedArticles()
         .slice(0, 2)
         .map((article: any, i: number) => (
-          <ArticleLink key={i} item={item} />
+          <ArticleLink key={i} article={article} />
         ))}
       <span className="hidden lg:block">
         <Button
