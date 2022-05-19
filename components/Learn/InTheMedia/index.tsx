@@ -11,7 +11,6 @@ import ThreeColumnLayout from "@components/Shared/Layouts/ThreeColumnLayout";
 import TwoColumnLayout from "@components/Shared/Layouts/TwoColumnLayout";
 import { filterArticles, handleLearnPageResize } from "@lib/helpers";
 import ViewAllButton from "@components/Learn/ViewAllButton";
-import { CleanPlugin } from "webpack";
 
 const InTheMedia: React.FC<{ mediaVideos: string[]; mediaVideoData: any }> = ({
   mediaVideos,
@@ -29,7 +28,7 @@ const InTheMedia: React.FC<{ mediaVideos: string[]; mediaVideoData: any }> = ({
     const videos = postsInView;
     videos.sort(
       (a: any, b: any) =>
-        mediaVideoData.indexOf(a) - mediaVideos.indexOf(b.articles[0].id)
+        mediaVideoData.indexOf(a) - mediaVideos.indexOf(b.items[0].id)
     );
   };
 
