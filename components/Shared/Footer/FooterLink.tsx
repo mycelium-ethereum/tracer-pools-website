@@ -37,7 +37,7 @@ const FooterLink: React.FC<{
           </span>
           <span
             className={`ml-2.5 flex h-[14px] w-[38px] items-center justify-center rounded-lg text-[8px] font-bold ${
-              route === "/" ? "bg-tracer-primaryblue" : "bg-action-cell"
+              route === "/" ? "bg-tracer-primaryblue" : "bg-action-inactive"
             }`}
           >
             SOON
