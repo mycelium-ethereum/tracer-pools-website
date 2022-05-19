@@ -1,8 +1,9 @@
 import Section from "@components/Shared/Section";
 import Container from "@components/Shared/Container";
 import MeshDouble from "@components/Shared/Mesh/MeshDouble";
-import Header from "@components/Factories/Banner/Header";
 import Background from "@components/Shared/Background";
+import LargeHeader from "@components/Shared/LargeHeader";
+import { headerInfo } from "@components/Factories/Banner/presets";
 
 const Banner: React.FC<{}> = () => {
   return (
@@ -11,7 +12,7 @@ const Banner: React.FC<{}> = () => {
       className="h-screen bg-tracer-darkblue pt-[100px] pb-10 sm:pt-[131px] sm:pb-36"
     >
       <Container>
-        <Header />
+        <LargeHeader {...headerInfo} />
       </Container>
       <MeshDouble />
       <Background
