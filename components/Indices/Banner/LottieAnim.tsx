@@ -11,8 +11,10 @@ const LottieAnim: React.FC<{}> = () => {
   const { View } = useLottie(options);
 
   return (
-    <div className="absolute bottom-0 right-0 z-0 h-[900px] w-[full]">
-      {View}
+    <div className="absolute bottom-0 right-0 z-0 h-[900px] w-full">
+      <div className="absolute top-0 left-1/2 h-[900px] w-[1500px] -translate-x-1/2">
+        {View}
+      </div>
     </div>
   );
 };
