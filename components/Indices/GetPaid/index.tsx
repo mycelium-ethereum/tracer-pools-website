@@ -5,7 +5,7 @@ import OptimisedImage from "@components/Shared/OptimisedImage";
 
 const GetPaid: React.FC<{}> = () => {
   return (
-    <Section id="section-2" className="h-[662px]">
+    <Section id="section-2" className="h-[662px] bg-white">
       <Container className="flex h-full items-center">
         <Header />
       </Container>
