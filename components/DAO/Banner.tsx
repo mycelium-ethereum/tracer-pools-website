@@ -5,7 +5,7 @@ import PageSection from "@components/Shared/Section";
 
 const Banner: React.FC<{}> = () => {
   return (
-    <PageSection>
+    <PageSection className="bg-white">
       <Container>
         <PageHeader
           title="DAO"

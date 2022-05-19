@@ -8,7 +8,7 @@ import ArticleList from "@components/Learn/TracerLibrary/ArticleList";
 import { articles, tags } from "@components/Learn/presets";
 
 const TracerLibrary: React.FC<{}> = () => {
-  const postContainerRef = useRef<HTMLDivElement>(null);
+  const articleContainerRef = useRef<HTMLDivElement>(null);
   const [category, setCategory] = useState<string>("All");
   // const [filteredArticles, setFilteredArticles] = useState(articles); // will be used once Search implemented
 
@@ -42,7 +42,7 @@ const TracerLibrary: React.FC<{}> = () => {
           /> */}
         </div>
         <ArticleList
-          postContainerRef={postContainerRef}
+          articleContainerRef={articleContainerRef}
           filteredArticles={articles}
           category={category}
         />

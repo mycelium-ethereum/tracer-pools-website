@@ -17,7 +17,7 @@ const BlogPage: React.FC<{ articles: any }> = ({ articles }) => {
   return (
     <>
       <SEO title="Home" />
-      <PageSection>
+      <PageSection className="bg-white">
         <Container>
           <PageHeader
             title="Blog"

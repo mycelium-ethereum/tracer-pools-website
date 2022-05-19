@@ -6,7 +6,7 @@ import Section from "@components/Shared/Section";
 
 const UserDocs: React.FC<{}> = () => {
   return (
-    <Section className="py-16 sm:py-20">
+    <Section className="bg-white py-16 sm:py-20">
       <Container className="text-action-active">
         <UnderlinedHeading
           hideBullet

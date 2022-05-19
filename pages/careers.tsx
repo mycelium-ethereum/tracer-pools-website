@@ -9,7 +9,7 @@ const CareersPage: React.FC<{ posts: any }> = ({ posts }) => {
   return (
     <>
       <SEO title="Careers" />
-      <PageSection>
+      <PageSection className="bg-white">
         <Container>
           <PageHeader
             title="Job Listings"

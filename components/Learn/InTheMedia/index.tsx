@@ -64,7 +64,7 @@ const InTheMedia: React.FC<{ mediaVideos: string[]; mediaVideoData: any }> = ({
   }, [handleLearnPageResize]);
 
   return (
-    <Section className="py-16 sm:pt-16 sm:pb-12">
+    <Section className="bg-white py-16 sm:pt-16 sm:pb-12">
       <Container className="text-action-active">
         <UnderlinedHeading
           hideBullet

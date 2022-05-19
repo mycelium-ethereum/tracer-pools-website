@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import BrandFilters from "@components/Brand/BrandFilters";
 import {
   tags,
@@ -17,6 +17,7 @@ import TypographyAssets from "@components/Brand/Sections/TypographyAssets";
 import GraphicAssets from "@components/Brand/Sections/GraphicAssets";
 
 const BrandPage = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
   const [category, setCategory] = useState("All");
   const brandComponents = {
     logos: (
@@ -55,7 +56,7 @@ const BrandPage = () => {
         description="Download the Tracer brand elements for usage."
       />
 
-      <PageSection>
+      <PageSection className="bg-white">
         <Container>
           <PageHeader
             title={"Brand Assets"}
@@ -65,23 +66,26 @@ const BrandPage = () => {
             tags={tags}
             category={category}
             setCategory={setCategory}
+            containerRef={containerRef}
           />
-          {
+          <div ref={containerRef} className="transition-opacity duration-300">
             {
-              Logos: brandComponents.logos,
-              Colors: brandComponents.colours,
-              "Support Graphics": brandComponents.graphics,
-              Typography: brandComponents.typography,
-              All: (
-                <>
-                  {brandComponents.logos}
-                  {brandComponents.colours}
-                  {brandComponents.graphics}
-                  {brandComponents.typography}
-                </>
-              ),
-            }[category]
-          }
+              {
+                Logos: brandComponents.logos,
+                Colors: brandComponents.colours,
+                "Support Graphics": brandComponents.graphics,
+                Typography: brandComponents.typography,
+                All: (
+                  <>
+                    {brandComponents.logos}
+                    {brandComponents.colours}
+                    {brandComponents.graphics}
+                    {brandComponents.typography}
+                  </>
+                ),
+              }[category]
+            }
+          </div>
         </Container>
       </PageSection>
     </>

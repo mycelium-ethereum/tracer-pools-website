@@ -6,13 +6,12 @@ import TwoColumnLayout from "@components/Shared/Layouts/TwoColumnLayout";
 import OneColumnLayout from "@components/Shared/Layouts/OneColumnLayout";
 import ArticleCard from "@components/Learn/ArticleCard";
 import Button from "@components/Shared/Buttons/Button";
-import ViewAllButton from "../ViewAllButton";
 
 const ArticleList: React.FC<{
   filteredArticles: any;
   category: string;
-  postContainerRef: React.MutableRefObject<HTMLDivElement>;
-}> = ({ filteredArticles, category, postContainerRef }) => {
+  articleContainerRef: React.MutableRefObject<HTMLDivElement>;
+}> = ({ filteredArticles, category, articleContainerRef }) => {
   const [columns, setColumns] = useState<number>(3);
   const [amountToShow, setAmountToShow] = useState<number>(columns * 2);
   const [showAll, setShowAll] = useState<boolean>(false);
@@ -24,7 +23,7 @@ const ArticleList: React.FC<{
   const handleCategoryChange = () => {
     if (category !== prevCategory) {
       // Animate category change
-      postContainerRef.current.classList.add("opacity-0");
+      articleContainerRef?.current?.classList.add("opacity-0");
       setTimeout(() => {
         if (category !== "All") {
           setSortedArticles(
@@ -36,7 +35,7 @@ const ArticleList: React.FC<{
           setSortedArticles(filteredArticles);
         }
         resetArticlesInView();
-        postContainerRef.current.classList.remove("opacity-0");
+        articleContainerRef?.current?.classList.remove("opacity-0");
       }, 300);
       setPrevCategory(category);
     }
@@ -109,7 +108,7 @@ const ArticleList: React.FC<{
 
   return (
     <div
-      ref={postContainerRef}
+      ref={articleContainerRef}
       id="post-container"
       className={`grid grid-cols-1 gap-x-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 4xl:grid-cols-5 ${
         sorted ? "transition-opacity duration-300" : ""

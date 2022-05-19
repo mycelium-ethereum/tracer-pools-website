@@ -9,7 +9,7 @@ import { communityCards } from "@components/DAO/presets";
 
 const Community: React.FC<{}> = () => {
   return (
-    <PageSection className="pb-16 lg:py-[70px]">
+    <PageSection className="bg-white pb-16 lg:py-[70px]">
       <div className="flex h-[300px] w-full justify-end lg:h-auto">
         <OptimisedImage
           src="/img/dao/community-bg.png"

@@ -8,7 +8,7 @@ import { tileData } from "@components/Learn/presets";
 
 const UserGuides: React.FC<{}> = () => {
   return (
-    <PageSection>
+    <PageSection className="bg-white">
       <Container>
         <PageHeader
           title="Learn"

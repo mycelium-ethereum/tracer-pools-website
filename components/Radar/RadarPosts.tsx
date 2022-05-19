@@ -29,7 +29,7 @@ const RadarPosts: React.FC<{
     setHasMore(true);
     if (category !== prevCategory) {
       // Animate category change
-      postContainerRef.current.classList.add("opacity-0");
+      postContainerRef?.current?.classList.add("opacity-0");
       setTimeout(() => {
         if (category !== "all") {
           setSortedArticles(
@@ -43,7 +43,7 @@ const RadarPosts: React.FC<{
         setArticlesInView(sortedArticles.slice(0, index));
       }, 500);
       setTimeout(() => {
-        postContainerRef.current.classList.remove("opacity-0");
+        postContainerRef?.current?.classList.remove("opacity-0");
       }, 700);
       setPrevCategory(category);
     } else {
