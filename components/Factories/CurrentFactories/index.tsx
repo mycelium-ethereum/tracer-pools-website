@@ -1,7 +1,7 @@
 import Section from "@components/Shared/Section";
 import Container from "@components/Shared/Container";
 import Header from "@components/Factories/CurrentFactories/Header";
-import InfoCard from "@components/Factories/InfoCard";
+import FactoryInfoCard from "@components/Factories/FactoryInfoCard";
 import { cardContent } from "@components/Factories/CurrentFactories/presets";
 
 const CurrentFactories: React.FC<{}> = () => {
@@ -11,7 +11,7 @@ const CurrentFactories: React.FC<{}> = () => {
         <Header />
         <div className="grid grid-cols-2 gap-4">
           {cardContent.map((content, index) => (
-            <InfoCard key={index} {...content} />
+            <FactoryInfoCard key={index} {...content} />
           ))}
         </div>
       </Container>

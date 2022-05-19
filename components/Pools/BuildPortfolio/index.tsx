@@ -6,7 +6,7 @@ import PortfolioCarousel from "@components/Pools/BuildPortfolio/PortfolioCarouse
 
 const BuildPortfolio: React.FC<{}> = () => {
   return (
-    <Section id="section-4" className="py-16 xl:py-20">
+    <Section id="section-4" className="bg-white py-16 xl:py-20">
       <Container className="flex flex-col-reverse justify-center xl:flex-row xl:items-center">
         <OptimisedImage
           src="/img/pools/build-portfolio-diagram.png"

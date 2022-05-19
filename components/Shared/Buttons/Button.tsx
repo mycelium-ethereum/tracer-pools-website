@@ -62,7 +62,7 @@ const Button: React.FC<{
       } 
       ${
         lightBlueGradient
-          ? "btn-gradient-blue-light border-action-active text-action-active hover:bg-action-active hover:text-white "
+          ? "btn-gradient-blue-light border-action-active text-action-active hover:bg-action-active hover:text-white group-hover:bg-action-active group-hover:text-white "
           : ""
       } 
       ${
