@@ -5,13 +5,13 @@ import Header from "@components/Indices/CreateStrategies/Header";
 
 const CreateStrategies: React.FC<{}> = () => {
   return (
-    <Section id="section-2" className="h-[650px] bg-secondary">
+    <Section id="section-2" className="h-[650px] bg-secondary 3xl:h-[1000px]">
       <Container className="flex h-full items-center justify-between">
         <Header />
         <OptimisedImage
           src="/img/indices/diagram.png"
           alt="Perpetual Pools Diagram"
-          className="max-h-[548px] max-w-[623px]"
+          className="mr-0 max-w-[623px] 3xl:mr-[133px] 3xl:max-w-[940px]"
         />
       </Container>
       <OptimisedImage
