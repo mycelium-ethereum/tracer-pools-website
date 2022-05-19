@@ -1,6 +1,6 @@
 import { SVGProps } from "types";
 
-const TracerLogoSVG: React.FC<SVGProps> = ({ alt, className }) => {
+const TracerSVG: React.FC<SVGProps> = ({ className }) => {
   return (
     <svg
       width="98"
@@ -8,7 +8,7 @@ const TracerLogoSVG: React.FC<SVGProps> = ({ alt, className }) => {
       viewBox="0 0 98 23"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      aria-labelledby={alt}
+      aria-labelledby="Tracer Logo"
       className={className ? className : ""}
     >
       <path
@@ -48,4 +48,4 @@ const TracerLogoSVG: React.FC<SVGProps> = ({ alt, className }) => {
   );
 };
 
-export default TracerLogoSVG;
+export default TracerSVG;

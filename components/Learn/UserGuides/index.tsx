@@ -3,8 +3,8 @@ import GuideTile from "@components/Learn/UserGuides/GuideTile";
 import Container from "@components/Shared/Container";
 import PageHeader from "@components/Shared/PageHeader";
 import PageSection from "@components/Shared/Section";
-import { tileData } from "@components/Learn/presets";
 import H2 from "@components/Shared/Heading/H2";
+import { tileData } from "@components/Learn/presets";
 
 const UserGuides: React.FC<{}> = () => {
   return (

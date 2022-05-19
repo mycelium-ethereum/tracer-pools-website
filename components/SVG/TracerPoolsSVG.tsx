@@ -1,6 +1,6 @@
 import { SVGProps } from "types";
 
-const TracerPoolsLogoSVG: React.FC<SVGProps> = ({ alt, className }) => {
+const TracerPoolsSVG: React.FC<SVGProps> = ({ className }) => {
   return (
     <svg
       width="182"
@@ -8,7 +8,7 @@ const TracerPoolsLogoSVG: React.FC<SVGProps> = ({ alt, className }) => {
       viewBox="0 0 182 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      aria-labelledby={alt}
+      aria-labelledby="Tracer Pools Logo"
       className={className ? className : ""}
     >
       <path
@@ -104,4 +104,4 @@ const TracerPoolsLogoSVG: React.FC<SVGProps> = ({ alt, className }) => {
   );
 };
 
-export default TracerPoolsLogoSVG;
+export default TracerPoolsSVG;

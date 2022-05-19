@@ -1,22 +1,23 @@
+import TracerPoolsSVG from "@components/SVG/TracerPoolsSVG";
+import TracerFactoriesSVG from "@components/SVG/TracerFactoriesSVG";
+import TracerIndicesSVG from "@components/SVG/TracerIndicesSVG";
+
 export const tileData = [
     {
         link: "/",
         background: "/img/learn/perpetual-pools-guide-bg.png",
-        logo: "/img/logos/tracer-perpetual-pools.svg",
-        alt: "Tracer Perpetual Pools Logo",
+        Logo: TracerPoolsSVG,
         tokens: true
     },
     {
         link: "/",
         background: "/img/learn/factories-guide-bg.png",
-        logo: "/img/logos/tracer-factories.svg",
-        alt: "Tracer Factories Logo",
+        Logo: TracerFactoriesSVG,
     },
     {
         link: "/",
         background: "/img/learn/data-feeds-guide-bg.png",
-        logo: "/img/logos/tracer-indices.svg",
-        alt: "Tracer Indices Logo",
+        Logo: TracerIndicesSVG,
     }
 ]
 

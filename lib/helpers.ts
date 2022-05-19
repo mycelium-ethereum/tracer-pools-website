@@ -201,6 +201,27 @@ export const changeNavColour = (route: string, currentSection: string, blueStyle
                 navTextColour = whiteStyles;
                 break;
         }
+    } else if (route === "/indices") {
+        switch (currentSection) {
+            case "section-1":
+                navTextColour = whiteStyles;
+                break;
+            case "section-2":
+                navTextColour = blueStyles;
+                break;
+            case "section-3":
+                navTextColour = blueStyles;
+                break;
+            case "section-4":
+                navTextColour = blueStyles;
+                break;
+            case "section-5":
+                navTextColour = blueStyles;
+                break;
+            default:
+                navTextColour = whiteStyles;
+                break;
+        }
     } else {
         navTextColour = solidBlueStyles;
     }

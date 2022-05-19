@@ -1,13 +1,13 @@
 import OptimisedImage from "@components/Shared/OptimisedImage";
 import PageLink from "@components/Shared/PageLink";
+import { SVGProps } from "types";
 
 const GuideTile: React.FC<{
   link: string;
   background: string;
-  logo: string;
-  alt: string;
+  Logo: React.FC<SVGProps>;
   tokens?: boolean;
-}> = ({ link, background, logo, alt, tokens }) => {
+}> = ({ link, background, Logo, tokens }) => {
   const transitionStyles =
     "transition-all duration-500 [transform:translateZ(0)_perspective(999px)_scale3d(1,1,1)] group-hover:[transform:translateZ(0)_perspective(999px)_scale3d(1.05,1.05,1.0)_translateX(-10px)]";
 
@@ -15,7 +15,7 @@ const GuideTile: React.FC<{
     <PageLink href={link}>
       <article className="group relative flex h-[120px] w-full items-center rounded-lg bg-tracer-navy pl-8 xs:h-[150px] sm:h-[200px]">
         <div>
-          <img src={logo} alt={alt} className="h-4 sm:h-5" />
+          <Logo className="h-4 sm:h-5" />
           <span className="mt-1 block whitespace-nowrap text-2xl font-light leading-[28px] text-white sm:text-[40px] sm:leading-[44px]">
             User Guide
           </span>

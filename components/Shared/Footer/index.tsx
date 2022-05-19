@@ -4,7 +4,7 @@ import Category from "@components/Shared/Footer/Category";
 import PageLink from "@components/Shared/PageLink";
 import SocialLinks from "@components/Shared/Footer/SocialLinks";
 import CopyrightYear from "@components/Shared/CopyrightYear";
-import TracerLogoSVG from "@components/SVG/TracerLogoSVG";
+import TracerLogoSVG from "@components/SVG/TracerSVG";
 import {
   categoryNames,
   socialLinks,
