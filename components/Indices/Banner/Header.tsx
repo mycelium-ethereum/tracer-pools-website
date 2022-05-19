@@ -6,7 +6,7 @@ const Header: React.FC<{}> = () => {
     <header className="relative z-20 mx-auto text-center">
       <AnimateIn delay={0.2}>
         <img
-          src="/img/logos/tracer-factories.svg"
+          src="/img/logos/tracer-indices.svg"
           className="mx-auto mb-8 h-[26px] w-[204px] sm:mb-4"
         />
       </AnimateIn>
