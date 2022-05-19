@@ -18,7 +18,7 @@ const Header: React.FC<{}> = () => {
         </h1>
       </AnimateIn>
       <AnimateIn delay={0.8}>
-        <p className="mx-auto max-w-[600px] text-xl leading-[30px] text-action-active sm:text-2xl sm:leading-[28px]">
+        <p className="mx-auto max-w-[700px] text-xl leading-[30px] text-action-active sm:text-2xl sm:leading-[28px]">
           Enabling a rich ecosystem of derivative markets through the
           permissionless deployment of new markets and products.
         </p>

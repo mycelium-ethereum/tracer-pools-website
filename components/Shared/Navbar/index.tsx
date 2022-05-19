@@ -18,6 +18,9 @@ import { links } from "@components/Shared/Navbar/presets";
 import { handleOutsideClick } from "hooks";
 
 const Navbar: React.FC<{ route: string }> = ({ route }) => {
+  const [logoType, setLogoType] = useState<
+    "primary" | "pools" | "factories" | "indices"
+  >("primary");
   const [navOpen, setNavOpen] = useState<boolean>(false);
   const [navColour, setNavColour] = useState<string>("");
   const [navBackdrop, setNavBackdrop] = useState<boolean>(true);
@@ -97,6 +100,23 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
     [y]
   );
 
+  const getLogoType = () => {
+    switch (route) {
+      case "/pools":
+        setLogoType("pools");
+        break;
+      case "/factories":
+        setLogoType("factories");
+        break;
+      case "/indices":
+        setLogoType("indices");
+        break;
+      default:
+        setLogoType("primary");
+        break;
+    }
+  };
+
   useEffect(() => {
     if (navOpen) {
       disableScroll();
@@ -159,6 +179,7 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
         setNavColour
       );
     }, 300);
+    getLogoType();
     getCurrentSection(route, setCurrentSection);
     window.addEventListener("scroll", () => {
       getCurrentSection(route, setCurrentSection);
@@ -221,7 +242,7 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
               ),
             }[category]
           } */}
-          <Logo type="primary" onClickAction={handleClose} />
+          <Logo type={logoType} onClickAction={handleClose} />
           <div className="hidden items-center md:flex">
             <div
               className="relative mr-6"

@@ -15,7 +15,7 @@ export const tileData = [
     {
         link: "/",
         background: "/img/learn/data-feeds-guide-bg.png",
-        logo: "/img/logos/tracer-indicies.svg",
+        logo: "/img/logos/tracer-indices.svg",
         alt: "Tracer Indices Logo",
     }
 ]

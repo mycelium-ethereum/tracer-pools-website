@@ -9,10 +9,19 @@ import { useRouter } from "next/router";
 function MyApp({ Component, pageProps }) {
   const route = useRouter().pathname;
   const path = useRouter().asPath;
-
+  const darkPageRoutes = ["/", "/pools", "/factories", "/indices"];
   return (
     <>
       <Navbar route={route} />
+      {darkPageRoutes.includes(route) && (
+        <style>
+          {`
+          body {
+            background-color: #00003C;
+          }
+        `}
+        </style>
+      )}
       <AnimatePresence
         exitBeforeEnter
         onExitComplete={() => window.scrollTo(0, 0)}

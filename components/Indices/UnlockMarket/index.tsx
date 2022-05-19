@@ -4,7 +4,7 @@ import Header from "@components/Indices/UnlockMarket/Header";
 
 const UnlockMarket: React.FC<{}> = () => {
   return (
-    <Section id="section-3" className="h-[650px]">
+    <Section id="section-3" className="h-[650px] bg-white">
       <Container className="flex h-full items-center">
         <Header />
       </Container>

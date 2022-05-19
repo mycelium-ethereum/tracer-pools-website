@@ -30,7 +30,7 @@ menu {
 }
 
 body {
-  @apply min-w-[320px] max-w-[100vw] overflow-x-hidden bg-white font-sans text-base font-normal leading-[21px] text-white;
+  @apply min-w-[320px] max-w-[100vw] overflow-x-hidden bg-white font-sans text-base font-normal leading-[21px] text-white transition-colors duration-500;
   overflow-x: hidden;
   overflow-y: overlay;
   -webkit-font-smoothing: antialiased;

@@ -10,7 +10,7 @@ import { paragraphCopy } from "@components/Home/AccessibleMarkets/presets";
 const AccessibleMarkets: React.FC<{}> = () => {
   let delay = 0.6;
   return (
-    <Section id="section-2">
+    <Section id="section-2" className="bg-white">
       <Container className="flex flex-col pt-28 pb-[400px] text-action-active md:pb-[300px] md:pt-28 lg:py-40">
         <header className="flex flex-col justify-center 3xl:max-w-[1043px]">
           <AnimateIn delay={0.2}>

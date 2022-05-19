@@ -13,7 +13,7 @@ const IndicesPage: React.FC<{}> = () => {
       <Banner />
       <GetPaid />
       <CreateStrategies />
-      <UnlockMarket />'
+      <UnlockMarket />
       <HowItWorks />
       <InfoPoints />
     </>

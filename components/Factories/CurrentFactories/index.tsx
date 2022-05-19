@@ -6,7 +6,7 @@ import { cardContent } from "@components/Factories/CurrentFactories/presets";
 
 const CurrentFactories: React.FC<{}> = () => {
   return (
-    <Section id="section-4" className="pt-20 pb-[133px]">
+    <Section id="section-4" className="bg-white pt-20 pb-[133px]">
       <Container className="flex justify-between">
         <Header />
         <div className="grid grid-cols-2 gap-4">

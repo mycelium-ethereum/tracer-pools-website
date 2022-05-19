@@ -1,6 +1,6 @@
 export const productContent = [
     {
-        logo: "/img/logos/tracer-indicies.svg",
+        logo: "/img/logos/tracer-indices.svg",
         link: "/indices",
     },
     {
