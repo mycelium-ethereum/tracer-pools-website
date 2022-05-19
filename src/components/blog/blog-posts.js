@@ -32,7 +32,6 @@ const query = graphql`
 `;
 
 const BlogPosts = () => {
-  const v2PostSlug = "perpetual-pools-v2-roadmap";
   const voyagePostSlug = "the-tracer-voyage";
   const [currentPage, setCurrentPage] = useState(0);
   const [currentPosts, setCurrentPosts] = useState([]);
@@ -137,13 +136,6 @@ const BlogPosts = () => {
                 setPosts(
                   data.allStrapiTracerBlogs.edges
                     .sort((a, b) => sortByDate(a, b))
-                    .sort((x, y) => {
-                      return x.node.slug == v2PostSlug
-                        ? -1
-                        : y.node.slug == v2PostSlug
-                        ? 1
-                        : 0;
-                    })
                     .sort((x, y) => {
                       return x.node.slug == voyagePostSlug
                         ? -1
