@@ -2,7 +2,6 @@ import Section from "@components/Shared/Section";
 import Container from "@components/Shared/Container";
 import MeshDouble from "@components/Shared/Mesh/MeshDouble";
 import LargeHeader from "@components/Shared/LargeHeader";
-// import Background from "@components/Shared/Background";
 import BottomText from "@components/Indices/Banner/BottomText";
 import LottieAnim from "@components/Indices/Banner/LottieAnim";
 import { headerInfo } from "@components/Indices/Banner/presets";
@@ -18,10 +17,6 @@ const Banner: React.FC<{}> = () => {
       </Container>
       <BottomText />
       <MeshDouble />
-      {/* <Background
-        image="/img/indices/banner-bg.png"
-        className="min-h-[702px] max-w-[1500px]"
-      /> */}
       <LottieAnim />
     </Section>
   );
