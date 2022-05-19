@@ -226,22 +226,6 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
         ${visible ? "visible" : "md:invisible md:-translate-y-[52px]"}`}
       >
         <Container className="flex items-center justify-between">
-          {/* {
-            {
-              Logos: brandComponents.logos,
-              Colors: brandComponents.colours,
-              "Support Graphics": brandComponents.graphics,
-              Typography: brandComponents.typography,
-              All: (
-                <>
-                  {brandComponents.logos}
-                  {brandComponents.colours}
-                  {brandComponents.graphics}
-                  {brandComponents.typography}
-                </>
-              ),
-            }[category]
-          } */}
           <Logo type={logoType} onClickAction={handleClose} />
           <div className="hidden items-center md:flex">
             <div

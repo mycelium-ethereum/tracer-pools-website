@@ -38,11 +38,12 @@ const InTheMedia: React.FC<{ mediaVideos: string[]; mediaVideoData: any }> = ({
   };
 
   useEffect(() => {
-    setAmountToShow(mediaVideoData.length);
+    showAll && setAmountToShow(mediaVideoData.length);
   }, [showAll]);
 
   useEffect(() => {
     filterArticles(mediaVideoData, amountToShow, setPostsInView);
+    if (amountToShow !== mediaVideoData.length) setShowAll(false);
   }, [amountToShow]);
 
   useEffect(() => {
@@ -50,14 +51,14 @@ const InTheMedia: React.FC<{ mediaVideos: string[]; mediaVideoData: any }> = ({
   }, [postsInView]);
 
   useEffect(() => {
-    handleLearnPageResize(setAmountToShow, setColumns, setShowAll);
+    handleLearnPageResize(setAmountToShow, setColumns);
     filterArticles(mediaVideoData, amountToShow, setPostsInView);
     window.addEventListener("resize", () =>
-      handleLearnPageResize(setAmountToShow, setColumns, setShowAll)
+      handleLearnPageResize(setAmountToShow, setColumns)
     );
     return () => {
       window.removeEventListener("resize", () =>
-        handleLearnPageResize(setAmountToShow, setColumns, setShowAll)
+        handleLearnPageResize(setAmountToShow, setColumns)
       );
     };
   }, [handleLearnPageResize]);

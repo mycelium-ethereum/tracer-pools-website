@@ -56,10 +56,8 @@ export const filterArticles = (
 export const handleLearnPageResize = (
     setAmountToShow: (value: React.SetStateAction<number>) => void,
     setColumns: (value: React.SetStateAction<number>) => void,
-    setShowAll?: (value: React.SetStateAction<boolean>) => void
 ) => {
     const width = window.innerWidth;
-    setShowAll && setShowAll(false);
     if (width >= 2560) {
         setColumns(5);
         setAmountToShow(5);
