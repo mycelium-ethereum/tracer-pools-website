@@ -58,7 +58,16 @@ p {
 }
 
 input::placeholder {
-  @apply text-tertiary;
+  @apply text-action-active;
+}
+
+/* Backdrop filter fallback for Firefox */
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .backdrop-blur-lg,
+  .backdrop-blur-md,
+  .backdrop-blur-sm {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
 }
 
 /* Mobile nav link animations */
@@ -85,6 +94,29 @@ input::placeholder {
 }
 .active .nav-link:nth-child(6) {
   @apply delay-[700ms];
+}
+
+/* Launch dropdown animations */
+.launch-dropdown > div {
+  @apply translate-y-4 -translate-x-4 bg-tracer-midblue bg-opacity-80 opacity-0 transition-all duration-500;
+}
+.launch-dropdown.active div {
+  @apply translate-y-0 translate-x-0 opacity-100;
+}
+.launch-dropdown div:nth-child(1) {
+  @apply delay-[100ms];
+}
+.launch-dropdown div:nth-child(2) {
+  @apply delay-[200ms];
+}
+.launch-dropdown div:nth-child(3) {
+  @apply delay-[300ms];
+}
+.launch-dropdown div:nth-child(4) {
+  @apply delay-[400ms];
+}
+.launch-dropdown div:nth-child(5) {
+  @apply delay-[500ms];
 }
 
 /* Button hover classes */
@@ -286,6 +318,18 @@ img.image-cover-right {
 .prose {
   max-width: 100%;
 }
+.prose ol {
+  @apply list-outside list-decimal pl-4;
+}
+.prose ul {
+  @apply list-outside pl-4;
+}
+.prose a {
+  @apply text-tracer-lightblue underline transition-colors duration-300 hover:text-tracer-midblue;
+}
+.prose img {
+  @apply relative z-10 mb-4 -ml-6 min-w-[calc(100vw+48px)] cursor-pointer transition-all duration-300 md:mx-auto md:ml-0 md:w-full md:min-w-[unset] md:rounded-lg;
+}
 .prose p,
 .prose ol li,
 .prose ul li,
@@ -298,8 +342,10 @@ img.image-cover-right {
 .prose strong a,
 .prose ul li a,
 .prose ol li a {
-  @apply text-tracer-lightblue;
+  @apply text-tracer-lightblue transition-colors duration-300;
 }
+.prose ul li a:hover,
+.prose ol li a:hover,
 .prose strong a:hover {
   @apply text-tracer-midblue;
 }
@@ -316,7 +362,11 @@ img.image-cover-right {
 .prose h3 strong {
   font-weight: 400 !important;
 }
-
+.prose h1,
+.prose h2,
+.prose h3 {
+  @apply relative mb-4 mt-10 text-sm font-normal uppercase tracking-[0.15em] text-highlight;
+}
 .prose h1:after,
 .prose h2:after,
 .prose h3:after {

@@ -35,7 +35,7 @@ const TracerLibrary: React.FC<{}> = () => {
             category={category}
             setCategory={setCategory}
           />
-          {/* <SearchBox
+          {/* <SearchBar
             articles={articles}
             setFilteredArticles={setFilteredArticles}
             postContainerRef={postContainerRef}

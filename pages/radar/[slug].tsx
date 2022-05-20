@@ -17,29 +17,11 @@ import ScrollTopButton from "@components/Radar/Post/ScrollTopButton";
 const Article = ({ data, articles }) => {
   const bodyTextRef = useRef<HTMLDivElement>(null);
 
-  const applyStyles = (e) => {
-    const headingStyles =
-      "relative uppercase tracking-[0.15em] mb-2 text-highlight mb-4 font-normal text-sm mt-10";
-    if (e.tagName === "OL")
-      e.setAttribute("class", "list-outside pl-4 list-style-number");
-    if (e.tagName === "UL") e.setAttribute("class", "list-outside pl-4");
+  const applyAttributes = (e) => {
     if (e.tagName === "A") {
-      e.setAttribute(
-        "class",
-        "underline text-tracer-lightblue hover:text-tracer-midblue transition-colors duration-300"
-      );
       e.setAttribute("target", "_blank");
     }
-    // if (e.tagName === "P") e.setAttribute("class", "mb-4");
-    if (e.tagName === "H1") e.setAttribute("class", headingStyles);
-    if (e.tagName === "H2") e.setAttribute("class", headingStyles);
-    if (e.tagName === "H3") e.setAttribute("class", headingStyles);
-    // if (e.tagName === "HR") e.setAttribute("class", "mb-4");
     if (e.tagName === "IMG") {
-      e.setAttribute(
-        "class",
-        "md:rounded-lg transition-all duration-300 cursor-pointer mb-4 relative z-10 -ml-6 min-w-[calc(100vw+48px)] md:ml-0 md:min-w-[unset] md:w-full md:mx-auto "
-      );
       e.onclick = function () {
         this.classList.toggle("enlarge");
       };
@@ -57,12 +39,12 @@ const Article = ({ data, articles }) => {
 
   const getTags = () => {
     const childElements = bodyTextRef.current.childNodes;
-    childElements.forEach((e) => {
-      const nestedChildren = e.childNodes;
-      applyStyles(e);
+    childElements.forEach((child) => {
+      const nestedChildren = child.childNodes;
+      applyAttributes(child);
       if (!!nestedChildren) {
-        nestedChildren.forEach((e) => {
-          applyStyles(e);
+        nestedChildren.forEach((child) => {
+          applyAttributes(child);
         });
       }
     });

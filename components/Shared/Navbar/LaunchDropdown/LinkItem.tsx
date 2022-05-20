@@ -8,12 +8,14 @@ const LinkItem: React.FC<{
   link: string;
 }> = ({ LinkImage, imgClassName, label, link }) => {
   return (
-    <a href={link} rel="noopener noreferrer" target="_blank">
-      <div className="flex items-center justify-center border-b border-action-active py-4 transition-colors duration-500 hover:bg-tracer-midblue ">
-        <LinkImage className={`mr-5 ${imgClassName}`} />
-        <span>{label}</span>
-      </div>
-    </a>
+    <div className="w-full border-b border-r border-l border-r border-action-active">
+      <a href={link} rel="noopener noreferrer" target="_blank">
+        <button className="flex w-full items-center justify-center py-4 transition-colors duration-500 hover:bg-tracer-midblue">
+          <LinkImage className={`mr-5 ${imgClassName}`} />
+          <span>{label}</span>
+        </button>
+      </a>
+    </div>
   );
 };
 

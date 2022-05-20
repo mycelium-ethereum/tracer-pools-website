@@ -3,7 +3,7 @@ import { handleAnchorClick } from "@lib/helpers";
 const ScrollTopButton: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <a
-      className="leading-[24px] text-highlight"
+      className="group block w-max leading-[24px] text-highlight"
       onClick={handleAnchorClick}
       href="#top"
     >
@@ -16,7 +16,7 @@ const ScrollTopButton: React.FC<{ className?: string }> = ({ className }) => {
         <img
           src="/img/icons/arrow-up.svg"
           alt="Back to Top"
-          className="ml-2.5 h-[15px] w-2.5"
+          className="ml-2.5 h-[15px] w-2.5 transition-[transform] duration-300 group-hover:-translate-y-[0.5]"
         />
       </button>
     </a>

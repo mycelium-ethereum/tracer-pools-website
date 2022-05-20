@@ -21,7 +21,7 @@ const LaunchAppButton: React.FC<{
     >
       Launch
       <ChevronDownSVG
-        className={`pointer-events-none ml-2.5 h-1.5 w-3 ${
+        className={`pointer-events-none ml-2.5 h-2 w-3 transition-[transform] duration-300 ${
           dropdownOpen ? activeChevronStyles : inactiveChevronStyles
         }`}
       />

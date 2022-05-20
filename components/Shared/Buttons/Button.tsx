@@ -1,7 +1,7 @@
 import React from "react";
-import PageLink from "../PageLink";
+import PageLink from "@components/Shared/PageLink";
 
-const Button: React.FC<{
+type ButtonProps = {
   className?: string;
   linkClassName?: string;
   onClickAction?: (payload: any) => void;
@@ -16,7 +16,9 @@ const Button: React.FC<{
   link?: string;
   outgoingLink?: string;
   download?: boolean;
-}> = ({
+};
+
+const Button: React.FC<ButtonProps> = ({
   className,
   linkClassName,
   onClickAction,

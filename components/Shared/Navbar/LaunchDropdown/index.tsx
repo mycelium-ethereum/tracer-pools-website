@@ -11,20 +11,18 @@ const LaunchDropdown: React.FC<{
   dropdownOpen: boolean;
   handleDropdownClose: () => void;
 }> = ({ dropdownOpen, handleDropdownClose }) => {
-  const activeStyles =
-    "[transform:scale3d(1,1,1)_perspective(999px)_translate3d(0,0,0)] pointer-events-auto opacity-100";
-  const inactiveStyles =
-    "[transform:scale3d(0.98,0.98,1)_perspective(999px)_translate3d(0,0,0)] pointer-events-none opacity-0";
+  const activeStyles = "active pointer-events-auto";
+  const inactiveStyles = "pointer-events-none";
 
   return (
     <div
       onMouseLeave={handleDropdownClose}
       onClick={handleDropdownClose}
-      className={`absolute right-0 top-14 w-[280px] rounded-md border border-action-active bg-tracer-midblue bg-opacity-80 text-white transition-all duration-300 ${
+      className={`launch-dropdown absolute right-0 top-14 w-[280px] text-white ${
         dropdownOpen ? activeStyles : inactiveStyles
       }`}
     >
-      <div className="grid grid-cols-2 gap-y-2 border-b border-action-active p-2">
+      <div className="grid grid-cols-2 gap-y-2 rounded-tl-md rounded-tr-md border border-action-active p-2">
         {appButtonContent.map((app) => (
           <AppItem key={app.logo} {...app} />
         ))}
@@ -32,7 +30,7 @@ const LaunchDropdown: React.FC<{
       {linkContent.map((item) => (
         <LinkItem key={item.label} {...item} />
       ))}
-      <div className="flex justify-center py-4">
+      <div className="flex justify-center rounded-bl-md rounded-br-md border-b border-r border-l border-action-active py-4">
         {socialLinkContent.map((item) => (
           <SocialItem key={item.link} {...item} />
         ))}

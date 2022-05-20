@@ -7,6 +7,7 @@ import ThreeColumnLayout from "@components/Shared/Layouts/ThreeColumnLayout";
 import TwoColumnLayout from "@components/Shared/Layouts/TwoColumnLayout";
 import OneColumnLayout from "@components/Shared/Layouts/OneColumnLayout";
 import { sortByDate } from "@lib/helpers";
+import { articles } from "@components/Learn/presets";
 
 const RadarPosts: React.FC<{
   filteredArticles: any;
@@ -125,7 +126,7 @@ const RadarPosts: React.FC<{
         hasMore={hasMore}
         loader={
           <span className="col-span-1 mt-4 block w-full text-center text-tertiary sm:col-span-2 lg:col-span-3 3xl:col-span-4 4xl:col-span-5">
-            {`Showing ${index} of ${sortedArticles.length} posts`}
+            {`Showing ${articlesInView.length} of ${sortedArticles.length} posts`}
           </span>
         }
         endMessage={

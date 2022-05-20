@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const SearchBox: React.FC<{
+const SearchBar: React.FC<{
   articles: any;
   setFilteredArticles: React.Dispatch<any>;
   postContainerRef: React.MutableRefObject<HTMLDivElement>;
@@ -47,4 +47,4 @@ const SearchBox: React.FC<{
   );
 };
 
-export default SearchBox;
+export default SearchBar;

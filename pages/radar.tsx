@@ -1,6 +1,6 @@
 import SEO from "@components/Shared/SEO";
 import TagFilters from "@components/Shared/TagFilters";
-import SearchBox from "@components/Shared/SearchBox";
+import SearchBar from "@components/Shared/SearchBar";
 import Container from "@components/Shared/Container";
 import PageHeader from "@components/Shared/PageHeader";
 import PageSection from "@components/Shared/Section";
@@ -18,7 +18,7 @@ const BlogPage: React.FC<{ articles: any }> = ({ articles }) => {
     <>
       <SEO title="Home" />
       <PageSection className="bg-white">
-        <Container>
+        <Container className="xs:static">
           <PageHeader
             title="Blog"
             subheading="Read the latest news for Tracer"
@@ -29,7 +29,7 @@ const BlogPage: React.FC<{ articles: any }> = ({ articles }) => {
               category={category}
               setCategory={setCategory}
             />
-            <SearchBox
+            <SearchBar
               articles={articles}
               setFilteredArticles={setFilteredArticles}
               postContainerRef={postContainerRef}

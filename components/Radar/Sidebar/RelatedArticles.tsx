@@ -41,12 +41,7 @@ const RelatedArticles: React.FC<{
           <ArticleLink key={i} article={article} />
         ))}
       <span className="hidden lg:block">
-        <Button
-          lightBlueGradient
-          link="/radar"
-          className="mt-4"
-          linkClassName="text-action-active"
-        >
+        <Button lightBlueGradient link="/radar" className="mt-4">
           All Articles
         </Button>
       </span>

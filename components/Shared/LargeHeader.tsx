@@ -29,20 +29,20 @@ const LargeHeader: React.FC<{
         className ? className : ""
       }`}
     >
-      <AnimateIn delay={0.2}>
+      <AnimateIn delayLevel={1}>
         <Logo className={`mx-auto mb-8 sm:mb-4 ${logoClassName}`} />
       </AnimateIn>
-      <AnimateIn delay={0.5}>
+      <AnimateIn delayLevel={2}>
         <h1 className="mb-4 text-[40px] font-light leading-[44px] transition-all duration-500 sm:text-[48px] sm:leading-[60px] md:text-[70px] md:leading-[80px] xl:text-[120px] xl:leading-[132px]">
           {title}
         </h1>
       </AnimateIn>
-      <AnimateIn delayLevel={2}>
+      <AnimateIn delayLevel={3}>
         <p className="mx-auto max-w-[700px] text-xl leading-[30px] text-action-active transition-all duration-500 sm:text-2xl sm:leading-[28px]">
           {subheading}
         </p>
       </AnimateIn>
-      <AnimateIn delay={1.1} className="mx-auto w-max">
+      <AnimateIn delayLevel={4} className="mx-auto w-max">
         <div className="mt-4 flex flex-col items-center sm:flex-row 4xl:mt-8">
           <Button darkBlueGradient link={button1Link}>
             {button1Text}
