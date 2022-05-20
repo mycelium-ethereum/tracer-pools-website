@@ -9,7 +9,7 @@ const Slide: React.FC<{ item: { image: string; text: string } }> = ({
       draggable={false}
       className="w-full object-center sm:h-[324px] sm:object-cover 4xl:h-[585px]"
     />
-    <p className="mx-auto mb-4 max-w-[818px] text-action-active sm:mt-4 sm:mb-0 4xl:text-center 4xl:text-xl 4xl:leading-[28px]">
+    <p className="mx-auto mb-4 h-[100px] max-w-[818px] text-action-active sm:mt-4 sm:mb-0 sm:h-[50px] xl:h-[100px] 4xl:text-center 4xl:text-xl 4xl:leading-[28px]">
       {item.text}
     </p>
   </div>

@@ -29,6 +29,7 @@ const MechanismSlider: React.FC<{}> = () => {
         asNavFor={slider1}
         ref={(slider) => setSlider2(slider)}
         {...sliderMainSettings}
+        className="mx-auto md:w-[700px] xl:w-auto"
       >
         {exposureItems.map(
           (item: { image: string; text: string }, i: number) => (

@@ -41,7 +41,7 @@ const SliderNav: React.FC<{
         asNavFor={slider2}
         ref={(slider) => setSlider1(slider)}
         {...settings}
-        className="slider-nav relative z-10 w-[calc(100vw-48px)] sm:h-[440px] sm:w-[43px] 4xl:h-[635px] 4xl:w-[53px] 4xl:pl-4"
+        className="slider-nav relative z-10 w-[calc(100vw-48px)] max-w-[272px] xs:max-w-[330px] sm:h-[440px] sm:w-[43px] 4xl:h-[635px] 4xl:w-[53px] 4xl:pl-4"
       >
         {Array.from({ length: TOTAL_SLIDES }).map((slideNum: number, i) => (
           <SlideNavLink
