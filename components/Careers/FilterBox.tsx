@@ -18,7 +18,7 @@ const FilterBox = ({
 
   return (
     <div
-      className={`relative mb-2 flex h-10 w-full cursor-pointer items-center rounded-lg bg-action-cell xs:w-[272px] lg:ml-4 lg:mb-0 ${
+      className={`relative mb-4 flex h-10 w-full cursor-pointer items-center rounded-lg bg-action-cell xs:w-[272px] lg:ml-4 lg:mb-0 ${
         open ? "z-30" : "z-20"
       }
       ${

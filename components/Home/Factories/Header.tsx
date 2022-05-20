@@ -7,7 +7,7 @@ import H1 from "@components/Home/H1";
 const Header: React.FC<{}> = () => {
   return (
     <header className="flex h-full flex-grow flex-col justify-center">
-      <AnimateIn delay={0.2}>
+      <AnimateIn delayLevel={1}>
         <div className="mb-4 w-full max-w-[328px]">
           <img
             src="/img/logos/tracer-factories.svg"
@@ -16,21 +16,21 @@ const Header: React.FC<{}> = () => {
           <GradientLine color="purple" />
         </div>
       </AnimateIn>
-      <AnimateIn delay={0.6}>
+      <AnimateIn delayLevel={2}>
         <H1 className="mb-2">
           More Markets.
           <br />
           Made Simple.
         </H1>
       </AnimateIn>
-      <AnimateIn delay={1.0}>
+      <AnimateIn delayLevel={3}>
         <Paragraph className="max-w-[328px] 4xl:max-w-[420px]">
           Tracer’s Factory layer contains the templates and tools to allow DeFi
           allowing any protocol to build on top of Tracer and deploy derivative
           markets without writing a single line of code.
         </Paragraph>
       </AnimateIn>
-      <AnimateIn delay={1.4}>
+      <AnimateIn delayLevel={4}>
         <div className="mt-4 flex">
           <Button purpleGradient className="mr-4">
             Launch Factories

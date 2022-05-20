@@ -3,6 +3,7 @@ import Container from "@components/Shared/Container";
 import GradientLine from "@components/Shared/GradientLine";
 import MeshUnderlay from "@components/Shared/Mesh/MeshUnderlay";
 import PartnerLogo from "@components/Home/Partners/PartnerLogo";
+import AnimateIn from "@components/Shared/AnimateIn";
 import { partnerLogos } from "@components/Home/Partners/presets";
 
 const Partners: React.FC<{}> = () => {
@@ -20,11 +21,14 @@ const Partners: React.FC<{}> = () => {
           </div>
           <GradientLine color="lightblue" />
         </header>
-        <div className="flex max-w-[584px] flex-wrap lg:max-w-[864px] 4xl:max-w-full">
+        <AnimateIn
+          delayLevel={1}
+          className="flex max-w-[584px] flex-wrap lg:max-w-[864px] 4xl:max-w-full"
+        >
           {partnerLogos.map((logo, i) => (
             <PartnerLogo key={i} {...logo} />
           ))}
-        </div>
+        </AnimateIn>
       </Container>
       <MeshUnderlay fullPage />
     </Section>

@@ -14,7 +14,7 @@ const AnimateIn: React.FC<{
       y: 0,
       opacity: 1,
       transition: {
-        delay: delayValues[delayLevel + 1],
+        delay: delayValues[delayLevel - 1],
         duration: 0.8,
       },
     });

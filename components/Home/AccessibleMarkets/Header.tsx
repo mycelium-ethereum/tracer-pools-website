@@ -5,7 +5,7 @@ import Paragraph from "@components/Home/Paragraph";
 const Header: React.FC<{}> = () => {
   return (
     <header className="flex flex-col justify-center 3xl:max-w-[1043px]">
-      <AnimateIn delay={0.2}>
+      <AnimateIn delayLevel={1}>
         <H1 className="mb-4">
           Any market,
           <br className="block lg:hidden" />
@@ -14,7 +14,7 @@ const Header: React.FC<{}> = () => {
           For Anyone
         </H1>
       </AnimateIn>
-      <AnimateIn delay={0.6}>
+      <AnimateIn delayLevel={2}>
         <Paragraph>
           Leveraging base layer blockchain technology to
           <br className="hidden sm:block" /> democratise access to risk

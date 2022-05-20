@@ -7,7 +7,7 @@ import H1 from "@components/Home/H1";
 const Header: React.FC<{}> = () => {
   return (
     <header className="flex h-full flex-grow flex-col justify-center">
-      <AnimateIn delay={0.2}>
+      <AnimateIn delayLevel={1}>
         <div className="mb-4 w-full max-w-[328px]">
           <img
             src="/img/logos/tracer-perpetual-pools.svg"
@@ -16,21 +16,21 @@ const Header: React.FC<{}> = () => {
           <GradientLine color="blue" />
         </div>
       </AnimateIn>
-      <AnimateIn delay={0.6}>
+      <AnimateIn delayLevel={2}>
         <H1 className="mb-2">
           More Leverage.
           <br />
           Less Overhead.
         </H1>
       </AnimateIn>
-      <AnimateIn delay={1.0}>
+      <AnimateIn delayLevel={3}>
         <Paragraph className="max-w-[328px] 3xl:max-w-[420px]">
           Fully composibile leveraged tokens with no margin requirements and no
           liquidations. A new derivative primative to hedge portfolio risk or
           trade leverage.
         </Paragraph>
       </AnimateIn>
-      <AnimateIn delay={1.4}>
+      <AnimateIn delayLevel={4}>
         <div className="flex flex-col md:flex-row">
           <Button darkBlueGradient className="mt-4 md:mr-4">
             Launch Perpetual Pools

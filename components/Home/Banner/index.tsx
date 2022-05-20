@@ -10,21 +10,21 @@ const Banner: React.FC<{}> = () => {
     <Section id="section-1" className="bg-tracer-navy">
       <Container className="h-[800px] items-center pb-16 pt-28 sm:max-h-[unset] sm:min-h-[850px] md:flex md:min-h-[700px] md:pt-0 lg:h-screen">
         <header className="relative z-10">
-          <AnimateIn delay={0.2}>
+          <AnimateIn delayLevel={1}>
             <h1 className="mb-1 text-[40px] font-thin leading-[44px] text-white sm:text-6xl sm:leading-[60px]">
               The Evolution
               <br /> of Global
               <br className="block md:hidden" /> Derivatives
             </h1>
           </AnimateIn>
-          <AnimateIn delay={0.5}>
+          <AnimateIn delayLevel={2}>
             <p className="text-action-active">
               We Create Infrastructure to Power
               <br className="block sm:hidden" /> the Next
               <br className="hidden sm:block" /> Generation of Global Trade
             </p>
           </AnimateIn>
-          <AnimateIn delayLevel={2}>
+          <AnimateIn delayLevel={3}>
             <Button darkBlueGradient className="mt-4 text-white">
               Learn More
             </Button>

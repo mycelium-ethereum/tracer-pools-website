@@ -5,12 +5,12 @@ import Paragraph from "@components/Home/Paragraph";
 const RailroadsText: React.FC<{}> = () => {
   return (
     <div className="mt-20 flex max-w-[561px] flex-col justify-center sm:mt-24">
-      <AnimateIn delay={0.2}>
+      <AnimateIn delayLevel={1}>
         <H1 className="mb-4">
           Not just one protocol, but the railroads of the future of derivatives
         </H1>
       </AnimateIn>
-      <AnimateIn delay={0.6}>
+      <AnimateIn delayLevel={2}>
         <Paragraph>
           We build factory contracts which are fully modular and
           <br className="hidden sm:block" />
