@@ -33,7 +33,7 @@ const LargeHeader: React.FC<{
         <Logo className={`mx-auto mb-8 sm:mb-4 ${logoClassName}`} />
       </AnimateIn>
       <AnimateIn delay={0.5}>
-        <h1 className="mb-4 text-[40px] font-light leading-[44px] transition-all duration-500 sm:text-[48px] sm:leading-[60px] md:text-[70px] md:leading-[ç] xl:text-[120px] xl:leading-[132px]">
+        <h1 className="mb-4 text-[40px] font-light leading-[44px] transition-all duration-500 sm:text-[48px] sm:leading-[60px] md:text-[70px] md:leading-[80px] xl:text-[120px] xl:leading-[132px]">
           {title}
         </h1>
       </AnimateIn>

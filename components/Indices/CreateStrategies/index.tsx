@@ -5,14 +5,19 @@ import Header from "@components/Indices/CreateStrategies/Header";
 
 const CreateStrategies: React.FC<{}> = () => {
   return (
-    <Section id="section-2" className="h-[650px] bg-secondary 4xl:h-[1000px]">
-      <Container className="flex h-full items-center justify-between">
+    <Section
+      id="section-2"
+      className="bg-secondary pt-16 lg:h-[650px] 4xl:h-[1000px]"
+    >
+      <Container className="flex h-full flex-col justify-between lg:flex-row lg:items-center">
         <Header />
-        <OptimisedImage
-          src="/img/indices/diagram.png"
-          alt="Perpetual Pools Diagram"
-          className="mr-0 max-w-[623px] 4xl:mr-[133px] 4xl:max-w-[940px]"
-        />
+        <div className="mt-6 mb-10 flex w-full justify-center lg:mt-0 lg:mb-0 lg:w-auto">
+          <OptimisedImage
+            src="/img/indices/diagram.png"
+            alt="Perpetual Pools Diagram"
+            className="mr-0 min-w-[498px] sm:min-w-[unset] sm:max-w-[427px] lg:max-w-[623px] 4xl:mr-[133px] 4xl:max-w-[940px]"
+          />
+        </div>
       </Container>
       <OptimisedImage
         src="/img/indices/mesh.png"
