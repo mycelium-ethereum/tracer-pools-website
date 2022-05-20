@@ -7,6 +7,7 @@ import PageSection from "@components/Shared/Section";
 import SidebarWrapper from "@components/Shared/SidebarWrapper";
 import LegalSidebarContent from "@components/Legal/Texts/LegalSidebarContent";
 import TermsOfUseText from "@components/Legal/Texts/TermsOfUseText";
+import { legalSeoDesc } from "@pages/presets";
 
 const TermsOfUsePage = () => {
   const route = useRouter().pathname;
@@ -14,7 +15,7 @@ const TermsOfUsePage = () => {
 
   return (
     <>
-      <SEO title="Terms of Use" />
+      <SEO title="Terms of Use" description={legalSeoDesc} />
       <PageSection>
         <Container className="text-tertiary">
           <div className="max-w-[880px]">

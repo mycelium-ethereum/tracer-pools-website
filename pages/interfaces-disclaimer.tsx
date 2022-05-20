@@ -6,8 +6,8 @@ import PageHeader from "@components/Shared/PageHeader";
 import PageSection from "@components/Shared/Section";
 import SidebarWrapper from "@components/Shared/SidebarWrapper";
 import LegalSidebarContent from "@components/Legal/Texts/LegalSidebarContent";
-import TermsOfUseText from "@components/Legal/Texts/TermsOfUseText";
 import InterfacesDisclaimerText from "@components/Legal/Texts/InterfacesDisclaimerText";
+import { legalSeoDesc } from "@pages/presets";
 
 const InterfacesDisclaimerPage = () => {
   const route = useRouter().pathname;
@@ -15,7 +15,7 @@ const InterfacesDisclaimerPage = () => {
 
   return (
     <>
-      <SEO title="Interfaces Disclaimer" />
+      <SEO title="Interfaces Disclaimer" description={legalSeoDesc} />
       <PageSection>
         <Container className="text-tertiary">
           <div className="max-w-[880px]">

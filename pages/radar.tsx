@@ -8,6 +8,7 @@ import RadarPosts from "@components/Radar/RadarPosts";
 import { useRef, useState } from "react";
 import { GetStaticProps } from "next";
 import { tags } from "@components/Radar/presets";
+import { blogSeoDesc } from "@pages/presets";
 
 const BlogPage: React.FC<{ articles: any }> = ({ articles }) => {
   const [filteredArticles, setFilteredArticles] = useState(articles);
@@ -16,7 +17,7 @@ const BlogPage: React.FC<{ articles: any }> = ({ articles }) => {
 
   return (
     <>
-      <SEO title="Home" />
+      <SEO title="Radar" description={blogSeoDesc} />
       <PageSection className="bg-white">
         <Container className="xs:static">
           <PageHeader

@@ -15,6 +15,7 @@ import LogoAssets from "@components/Brand/Sections/LogoAssets";
 import ColourAssets from "@components/Brand/Sections/ColourAssets";
 import TypographyAssets from "@components/Brand/Sections/TypographyAssets";
 import GraphicAssets from "@components/Brand/Sections/GraphicAssets";
+import { brandSeoDesc } from "@pages/presets";
 
 const BrandPage = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -51,11 +52,7 @@ const BrandPage = () => {
 
   return (
     <>
-      <SEO
-        title="Brand"
-        description="Download the Tracer brand elements for usage."
-      />
-
+      <SEO title="Brand" description={brandSeoDesc} />
       <PageSection className="bg-white">
         <Container>
           <PageHeader

@@ -1,14 +1,15 @@
+import SEO from "@components/Shared/SEO";
 import CareersBanner from "@components/Careers/CareersBanner";
 import CareersTable from "@components/Careers/CareersTable";
 import Container from "@components/Shared/Container";
 import PageHeader from "@components/Shared/PageHeader";
 import PageSection from "@components/Shared/Section";
-import SEO from "@components/Shared/SEO";
+import { careersSeoDesc } from "@pages/presets";
 
-const CareersPage: React.FC<{ posts: any }> = ({ posts }) => {
+const CareersPage: React.FC<{}> = () => {
   return (
     <>
-      <SEO title="Careers" />
+      <SEO title="Careers" description={careersSeoDesc} />
       <PageSection className="bg-white">
         <Container>
           <PageHeader

@@ -8,6 +8,7 @@ import InTheMedia from "@components/Learn/InTheMedia";
 import FAQs from "@components/Learn/FAQ";
 import { getTracerDropPlaylistData, getVideoData } from "@lib/helpers";
 import { mediaVideos } from "@components/Learn/presets";
+import { learnSeoDesc } from "@pages/presets";
 
 const LearnPage: React.FC<{ dropVideoData: any; mediaVideoData: any }> = ({
   dropVideoData,
@@ -15,7 +16,7 @@ const LearnPage: React.FC<{ dropVideoData: any; mediaVideoData: any }> = ({
 }) => {
   return (
     <>
-      <SEO title="Learn" />
+      <SEO title="Learn" description={learnSeoDesc} />
       <UserGuides />
       <TracerLibrary />
       <UserDocs />

@@ -1,14 +1,15 @@
+import SEO from "@components/Shared/SEO";
 import Banner from "@components/Pools/Banner";
 import BuildPortfolio from "@components/Pools/BuildPortfolio";
 import ExposureSlider from "@components/Pools/ExposureSlider";
 import Integration from "@components/Pools/Integration";
 import MechanismDesign from "@components/Pools/MechanismDesign";
-import SEO from "@components/Shared/SEO";
+import { poolsSeoDesc } from "@pages/presets";
 
 const PoolsPage: React.FC<{}> = () => {
   return (
     <>
-      <SEO title="Pools" />
+      <SEO title="Pools" description={poolsSeoDesc} />
       <Banner />
       <ExposureSlider />
       <MechanismDesign />

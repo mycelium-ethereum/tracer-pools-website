@@ -5,11 +5,12 @@ import CreateStrategies from "@components/Indices/CreateStrategies";
 import UnlockMarket from "@components/Indices/UnlockMarket";
 import HowItWorks from "@components/Indices/HowItWorks";
 import InfoPoints from "@components/Indices/InfoPoints";
+import { indicesSeoDesc } from "@pages/presets";
 
 const IndicesPage: React.FC<{}> = () => {
   return (
     <>
-      <SEO title="Indices" />
+      <SEO title="Indices" description={indicesSeoDesc} />
       <Banner />
       <GetPaid />
       <CreateStrategies />
