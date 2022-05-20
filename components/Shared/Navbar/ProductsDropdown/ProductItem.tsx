@@ -1,19 +1,16 @@
-import { SVGProps } from "types";
 import PageLink from "@components/Shared/PageLink";
 
 const ProductItem: React.FC<{
   logo: string;
   link: string;
-  border: boolean;
   handleClose: () => void;
-}> = ({ logo, link, border, handleClose }) => {
+  className: string;
+}> = ({ logo, link, handleClose, className }) => {
   return (
-    <PageLink href={link}>
+    <PageLink href={link} className={`block border-action-active ${className}`}>
       <button
         onClick={handleClose}
-        className={`flex w-full items-center justify-center py-4 transition-colors duration-500 hover:bg-tracer-midblue ${
-          border ? "border-b border-action-active" : ""
-        }`}
+        className={`flex w-full items-center justify-center py-4 transition-all duration-500 hover:bg-tracer-midblue`}
       >
         <img src={logo} className="h-[18px]" />
       </button>

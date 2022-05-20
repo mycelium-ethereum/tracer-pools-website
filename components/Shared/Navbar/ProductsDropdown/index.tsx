@@ -6,14 +6,29 @@ const ProductsDropdown: React.FC<{
   desktopProductsDropdownOpen: boolean;
   handleDesktopProductsDropdownClose: () => void;
 }> = ({ desktopProductsDropdownOpen, handleDesktopProductsDropdownClose }) => {
-  const activeStyles =
-    "[transform:scale3d(1,1,1)_perspective(999px)_translate3d(0,0,0)_translateX(calc(calc(50%)*-1))]  pointer-events-auto opacity-100";
-  const inactiveStyles =
-    "[transform:scale3d(0.98,0.98,1)_perspective(999px)_translate3d(0,0,0)_translateX(calc(calc(50%)*-1))] pointer-events-none opacity-0";
+  const activeStyles = "active pointer-events-auto ";
+  const inactiveStyles = "pointer-events-none";
+
+  const firstClass = "border rounded-tr-md rounded-tl-md";
+  const secondClass = "border-l border-r";
+  const thirdClass = "border rounded-br-md rounded-bl-md";
+
+  const getClass = (index: number): string => {
+    switch (index) {
+      case 0:
+        return firstClass;
+      case 1:
+        return secondClass;
+      case 2:
+        return thirdClass;
+      default:
+        return firstClass;
+    }
+  };
 
   return (
     <div
-      className={`absolute top-10 left-1/2 w-[257px] overflow-hidden rounded-md border border-action-active bg-tracer-midblue bg-opacity-80 transition-all duration-500 ${
+      className={`products-dropdown absolute top-10 left-1/2 w-[257px] -translate-x-1/2 rounded-md ${
         desktopProductsDropdownOpen ? activeStyles : inactiveStyles
       }`}
       onMouseLeave={handleDesktopProductsDropdownClose}
@@ -23,7 +38,7 @@ const ProductsDropdown: React.FC<{
           key={i}
           {...product}
           handleClose={handleDesktopProductsDropdownClose}
-          border={i !== productContent.length - 1}
+          className={getClass(i)}
         />
       ))}
     </div>

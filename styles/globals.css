@@ -98,25 +98,42 @@ input::placeholder {
 
 /* Launch dropdown animations */
 .launch-dropdown > div {
-  @apply translate-y-4 -translate-x-4 bg-tracer-midblue bg-opacity-80 opacity-0 transition-all duration-500;
+  @apply translate-y-4 translate-x-4 bg-tracer-midblue bg-opacity-80 opacity-0 transition-all duration-500;
 }
 .launch-dropdown.active div {
   @apply translate-y-0 translate-x-0 opacity-100;
 }
-.launch-dropdown div:nth-child(1) {
+.launch-dropdown > div:nth-child(1) {
   @apply delay-[100ms];
 }
-.launch-dropdown div:nth-child(2) {
+.launch-dropdown > div:nth-child(2) {
   @apply delay-[200ms];
 }
-.launch-dropdown div:nth-child(3) {
+.launch-dropdown > div:nth-child(3) {
   @apply delay-[300ms];
 }
-.launch-dropdown div:nth-child(4) {
+.launch-dropdown > div:nth-child(4) {
   @apply delay-[400ms];
 }
-.launch-dropdown div:nth-child(5) {
+.launch-dropdown > div:nth-child(5) {
   @apply delay-[500ms];
+}
+
+/* Products Dropdown animation */
+.products-dropdown > a {
+  @apply translate-y-4 translate-x-4 bg-tracer-midblue bg-opacity-80 opacity-0 transition-all duration-500;
+}
+.products-dropdown.active > a {
+  @apply translate-y-0 translate-x-0 opacity-100;
+}
+.products-dropdown > a:nth-child(1) {
+  @apply delay-[100ms];
+}
+.products-dropdown > a:nth-child(2) {
+  @apply delay-[200ms];
+}
+.products-dropdown > a:nth-child(3) {
+  @apply delay-[300ms];
 }
 
 /* Button hover classes */
