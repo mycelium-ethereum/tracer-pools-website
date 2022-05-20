@@ -2,7 +2,7 @@ import Section from "@components/Shared/Section";
 import Container from "@components/Shared/Container";
 import IntegrationCard from "@components/Shared/Cards/InfoCard";
 import HelpGovernBanner from "@components/Shared/Banners/HelpGovernBanner";
-import { integrationItems } from "@components/Factories/Integration/presets";
+import { integrationItems } from "@components/Indices/InfoPoints/presets";
 
 const InfoPoints: React.FC<{}> = () => {
   return (

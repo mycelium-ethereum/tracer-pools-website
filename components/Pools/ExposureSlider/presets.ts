@@ -14,14 +14,16 @@ const settings = {
     infinite: true,
     vertical: true,
     autoplay: true,
-    autoplaySpeed: 2000,
-    speed: 500,
+    autoplaySpeed: 3000,
+    speed: 1000,
     draggable: false,
     swipe: false,
     touchMove: false,
     slidesToShow: 5,
     slidesToScroll: 1,
     useTransform: false,
+    pauseOnFocus: true,
+    pauseOnHover: true,
 };
 
 export { exposureItems, settings };

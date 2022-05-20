@@ -47,13 +47,16 @@ export const integrationItems = [
     ),
   },
   {
-    title: "{ ANOTHER POINT REQUIRED }",
+    title: "Permissionless",
     text: (
       <>
         <p className={paragraphStyles}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada
-          nibh elit vulputate id elit. Qui
+          Create your own Perpetual Pool market without writing any code by
+          picking a data-feed, leverage and settlement token.
         </p>
+        <Button lightBlueGradient className="mt-4">
+          Launch Factory
+        </Button>
       </>
     ),
   },

@@ -4,18 +4,18 @@ import TracerIndicesSVG from "@components/SVG/TracerIndicesSVG";
 
 export const tileData = [
     {
-        link: "/",
+        link: "/radar/tracer-perpetual-pools-eli5/",
         background: "/img/learn/perpetual-pools-guide-bg.png",
         Logo: TracerPoolsSVG,
         tokens: true
     },
     {
-        link: "/",
+        link: "/radar/minting-burning/",
         background: "/img/learn/factories-guide-bg.png",
         Logo: TracerFactoriesSVG,
     },
     {
-        link: "/",
+        link: "/radar/staking/",
         background: "/img/learn/data-feeds-guide-bg.png",
         Logo: TracerIndicesSVG,
     }

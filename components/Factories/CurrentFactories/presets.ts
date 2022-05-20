@@ -9,10 +9,10 @@ export const cardContent = [
     },
     {
         image: true,
-        title: "POOLS FACTORY",
-        description: "Pick your leverage. Pick your data feed. Pick your settlement collateral. Adjust key parameters to optimise for a short term, swing trade product or a longer term hold leveraged token.",
+        title: "SWAPS FACTORY",
+        description: "The Swaps Factory enables the ability to create a permissionless swap market. Just plug in the parameters, and deploy!",
         link: "/",
-        buttonText: "Launch Pools Factory",
+        buttonText: "Swaps Whitepaper",
         headingStyles: "max-w-[294px]"
     },
     {

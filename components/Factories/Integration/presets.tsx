@@ -36,9 +36,6 @@ export const integrationItems = [
           Tracer has a long term commitment to security. Our contracts have been
           audited by top tier security firms.
         </p>
-        <Button lightBlueGradient className="mt-4">
-          Documentation
-        </Button>
       </>
     ),
   },

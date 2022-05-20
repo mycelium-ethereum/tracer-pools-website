@@ -1,3 +1,4 @@
+import AnimateIn from "@components/Shared/AnimateIn";
 import GradientLine from "@components/Shared/GradientLine";
 
 const IntroText: React.FC<{}> = () => {
@@ -10,18 +11,16 @@ const IntroText: React.FC<{}> = () => {
         <GradientLine color="lightblue" />
       </div>
       <div className="mb-4 text-[40px] font-light leading-[44px] sm:mb-11 sm:text-[60px] sm:leading-[66px] xl:text-[80px] xl:leading-[88px]">
-        <span>
-          No Margins.
-          <br />
-          No Liquidations.
-          <br />
-          No Minimum Spend.
-        </span>
+        <AnimateIn delay={0.4}>No Margins.</AnimateIn>
+        <AnimateIn delay={0.8}>No Liquidations.</AnimateIn>
+        <AnimateIn delay={1.2}>No Minimum Spend.</AnimateIn>
       </div>
-      <img
-        src="/img/logos/powered-by-arbitrum.svg"
-        className="h-[29px] w-[156px] sm:h-[41px] sm:w-[357px]"
-      />
+      <AnimateIn delay={1.6}>
+        <img
+          src="/img/logos/powered-by-arbitrum.svg"
+          className="h-[29px] w-[156px] sm:h-[41px] sm:w-[357px]"
+        />
+      </AnimateIn>
     </div>
   );
 };

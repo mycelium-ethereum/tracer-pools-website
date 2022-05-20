@@ -5,6 +5,7 @@ import Section from "@components/Shared/Section";
 import HelpGovernBanner from "@components/Shared/Banners/HelpGovernBanner";
 import { faqQuestions } from "@components/Learn/FAQ/presets";
 import QuestionDropdown from "@components/Learn/FAQ/QuestionDropdown";
+// import TwoColumnLayout from "./TwoColumnLayout";
 
 const FAQ = () => {
   return (
@@ -20,13 +21,23 @@ const FAQ = () => {
         <H2 className="mb-6 max-w-[767px]">
           {`{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.}`}
         </H2>
-        <div className="mb-6 grid flex-wrap justify-between gap-x-4 sm:grid-cols-2 xl:max-w-[926px]">
+        <div className="mb-6 grid flex-wrap justify-between gap-x-4 sm:grid-cols-2 xl:max-w-[926px] 3xl:max-w-full 3xl:grid-cols-3 4xl:grid-cols-4">
           <div>
             {faqQuestions.map((content, i) => (
               <QuestionDropdown key={i} content={content} />
             ))}
           </div>
           <div>
+            {faqQuestions.reverse().map((content, i) => (
+              <QuestionDropdown key={i} content={content} />
+            ))}
+          </div>
+          <div className="hidden 3xl:block">
+            {faqQuestions.reverse().map((content, i) => (
+              <QuestionDropdown key={i} content={content} />
+            ))}
+          </div>
+          <div className="hidden 4xl:block">
             {faqQuestions.reverse().map((content, i) => (
               <QuestionDropdown key={i} content={content} />
             ))}

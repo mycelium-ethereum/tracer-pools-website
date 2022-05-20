@@ -16,7 +16,7 @@ const PortfolioCarousel: React.FC<{}> = () => {
     <Slider
       {...settings}
       ref={(slider) => setSlider(slider)}
-      className="portfolio-slider h-[650px] sm:h-[400px] sm:w-[400px] 3xl:h-[460px] 3xl:w-[625px]"
+      className="portfolio-slider h-[650px] sm:h-[400px] sm:w-[400px] 4xl:h-[460px] 4xl:w-[625px]"
     >
       {portfolioCarouselItems.map((item) => (
         <Slide
