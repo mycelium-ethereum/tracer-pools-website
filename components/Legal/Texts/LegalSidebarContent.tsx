@@ -5,13 +5,13 @@ import PageLink from "@components/Shared/PageLink";
 const LegalSidebarContent: React.FC<{ route: string }> = ({ route }) => {
   const NUMBER_OF_DOCS = 3;
   const documentLinks = [
-    { text: "Privacy Policy", link: "/privacy-policy" },
-    { text: "Terms of Use", link: "/terms-of-use" },
+    { text: "Privacy Policy", link: "/legal/privacy-policy" },
+    { text: "Terms of Use", link: "/legal/terms-of-use" },
     {
       text: "Participation Agreement",
-      outgoingLink: "/documents/Participation Agreement.pdf",
+      outgoingLink: "/legal/participation-agreement",
     },
-    { text: "Interfaces Disclaimer", link: "/interfaces-disclaimer" },
+    { text: "Interfaces Disclaimer", link: "/legal/interfaces-disclaimer" },
   ];
 
   const Heading: React.FC<{ title: string; className?: string }> = ({

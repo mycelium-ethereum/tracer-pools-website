@@ -87,19 +87,19 @@ export const tracerDAOCategory = [
     },
     {
         text: "Privacy Policy",
-        url: "/privacy-policy",
+        url: "/legal/privacy-policy",
     },
     {
         text: "Terms of Use",
-        url: "/terms-of-use",
+        url: "/legal/terms-of-use",
     },
     {
         text: "Participation Agreement",
-        url: "/documents/Participation%20Agreement.pdf",
+        url: "/legal/participation-agreement",
     },
     {
         text: "Interfaces Disclaimer",
-        url: "/interfaces-disclaimer",
+        url: "/legal/interfaces-disclaimer",
     },
 ];
 
