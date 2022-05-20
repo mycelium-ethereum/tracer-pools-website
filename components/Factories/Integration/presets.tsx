@@ -9,7 +9,7 @@ export const integrationItems = [
       <>
         <p className={paragraphStyles}>
           With the Tracer Factory layer you can deploy permissionless markets or
-          create custom indices
+          create custom indices.
         </p>
       </>
     ),

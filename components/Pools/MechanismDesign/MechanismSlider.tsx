@@ -6,7 +6,8 @@ import {
   exposureItems,
   sliderMainSettings,
 } from "@components/Pools/MechanismDesign/presets";
-import SliderNav from "./SliderNav";
+import SliderNav from "@components/Pools/MechanismDesign/SliderNav";
+import Slide from "@components/Pools/MechanismDesign/Slide";
 
 const MechanismSlider: React.FC<{}> = () => {
   const [slider1, setSlider1] = useState(null);
@@ -19,25 +20,8 @@ const MechanismSlider: React.FC<{}> = () => {
     slider2.slickPause();
   };
 
-  const Slide: React.FC<{ item: { image: string; text: string } }> = ({
-    item,
-  }) => (
-    <div className="flex flex-col-reverse p-6 sm:flex-col sm:py-10 sm:pr-10 3xl:px-12 3xl:pt-12">
-      {/* Will be replaced by Lottie animations in future */}
-      <img
-        src={item.image}
-        alt=""
-        draggable={false}
-        className="w-full object-center sm:h-[324px] sm:object-cover 3xl:h-[585px]"
-      />
-      <p className="mx-auto mb-4 max-w-[818px] text-action-active sm:mt-4 sm:mb-0 3xl:text-center 3xl:text-xl 3xl:leading-[28px]">
-        {item.text}
-      </p>
-    </div>
-  );
-
   return (
-    <div className="relative z-10 -ml-6 flex w-[calc(100%+48px)] flex-col border-t border-b border-action-active bg-white [box-shadow:_0px_4px_10px_2px_rgba(26,85,245,0.1)] sm:ml-0 sm:w-full sm:flex-row sm:items-center sm:border xl:ml-12 xl:max-w-[767px] 3xl:max-w-[1477px]">
+    <div className="relative z-10 -ml-6 flex w-[calc(100%+48px)] flex-col border-t border-b border-action-active bg-white [box-shadow:_0px_4px_10px_2px_rgba(26,85,245,0.1)] sm:ml-0 sm:w-full sm:flex-row sm:items-center sm:border xl:ml-12 xl:max-w-[767px] 4xl:max-w-[1477px]">
       <SliderNav
         slider2={slider2}
         setSlider1={setSlider1}

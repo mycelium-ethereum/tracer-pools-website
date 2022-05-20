@@ -34,7 +34,7 @@ const sliderRootSettings = {
     dots: false,
     arrows: false,
     vertical: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 4000,
     speed: 500,
     draggable: false,

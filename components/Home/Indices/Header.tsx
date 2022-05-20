@@ -8,7 +8,7 @@ const Indices: React.FC<{}> = () => {
   return (
     <header className="flex h-full max-w-[356px] flex-grow flex-col justify-center lg:max-w-[426px] 3xl:max-w-full">
       <AnimateIn delay={0.2}>
-        <div className="mb-4 w-full">
+        <div className="mb-4 w-full max-w-[294px]">
           <img
             src="/img/logos/tracer-indices.svg"
             className="mb-3 h-[18px] w-[126px]"

@@ -7,9 +7,9 @@ const Indices: React.FC<{}> = () => {
   return (
     <Section
       id="section-5"
-      className="bg-tracer-navy pt-20 lg:h-[800px] lg:py-16 3xl:h-[1200px]"
+      className="bg-tracer-navy pt-20 lg:h-[800px] lg:py-16 4xl:h-[1200px]"
     >
-      <Container className="flex text-white h-full items-center">
+      <Container className="flex h-full items-center text-white">
         <Header />
       </Container>
       <Graphics />

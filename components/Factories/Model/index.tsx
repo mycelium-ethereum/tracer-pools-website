@@ -5,11 +5,8 @@ import OptimisedImage from "@components/Shared/OptimisedImage";
 
 const Model: React.FC<{}> = () => {
   return (
-    <Section
-      id="section-2"
-      className="bg-white pt-[155px] pb-[120px] 3xl:py-[300px]"
-    >
-      <Container>
+    <Section id="section-2" className="h-[650px] bg-white 4xl:h-[1000px]">
+      <Container className="flex h-full items-center">
         <Header />
       </Container>
       <OptimisedImage

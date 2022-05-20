@@ -11,7 +11,7 @@ const Factories: React.FC<{}> = () => {
   return (
     <Section
       id="section-4"
-      className="bg-tracer-purple-dark pt-20 pb-5 lg:h-[800px] lg:py-16 3xl:h-[1200px]"
+      className="bg-tracer-purple-dark pt-20 pb-5 lg:h-[800px] lg:py-16 4xl:h-[1200px]"
     >
       <Container className="flex h-full items-center text-white">
         <header className="flex h-full flex-grow flex-col justify-center">
@@ -32,7 +32,7 @@ const Factories: React.FC<{}> = () => {
             </H1>
           </AnimateIn>
           <AnimateIn delay={1.0}>
-            <Paragraph className="max-w-[328px] 3xl:max-w-[420px]">
+            <Paragraph className="max-w-[328px] 4xl:max-w-[420px]">
               Tracer’s Factory layer contains the templates
               <br /> and tools to allow DeFi applications to be
               <br /> built on top of Tracer’s products.
@@ -48,7 +48,7 @@ const Factories: React.FC<{}> = () => {
           </AnimateIn>
         </header>
       </Container>
-      <div className="absolute top-0 right-0 hidden h-full w-[50vw] max-w-[792px] lg:block 3xl:max-w-full">
+      <div className="absolute top-0 right-0 hidden h-full w-[50vw] max-w-[792px] lg:block 4xl:max-w-full">
         <OptimisedImage
           cover
           position="left"

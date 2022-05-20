@@ -5,20 +5,20 @@ import Header from "@components/Indices/HowItWorks/Header";
 
 const HowItWorks: React.FC<{}> = () => {
   return (
-    <Section id="section-4" className="h-[650px] bg-secondary 3xl:h-[1000px]">
+    <Section id="section-4" className="h-[650px] bg-secondary 4xl:h-[1000px]">
       <Container className="flex h-full items-center justify-between">
         <Header />
       </Container>
       <OptimisedImage
         src="/img/indices/how-it-works-bg.png"
         alt="Background graphic"
-        className="absolute right-0 top-0 block h-full max-w-[883px] 3xl:hidden"
+        className="absolute right-0 top-0 block h-full max-w-[883px] 4xl:hidden"
       />
-      <div className="absolute right-0 top-0 hidden h-full w-[60vw] max-w-[1607px] 3xl:block">
+      <div className="absolute right-0 top-0 hidden h-full w-[60vw] max-w-[1607px] 4xl:block">
         <OptimisedImage
           src="/img/indices/how-it-works-xl-bg.png"
           alt="Background graphic"
-          className="absolute right-0 top-0 hidden h-full max-w-[1607px] 3xl:block"
+          className="absolute right-0 top-0 hidden h-full max-w-[1607px] 4xl:block"
         />
       </div>
       <OptimisedImage

@@ -6,10 +6,10 @@ import { cardContent } from "@components/Factories/CurrentFactories/presets";
 
 const CurrentFactories: React.FC<{}> = () => {
   return (
-    <Section id="section-4" className="bg-white pt-20 pb-[133px]">
-      <Container className="flex justify-between">
+    <Section id="section-4" className="bg-white pt-20 pb-32">
+      <Container className="flex h-full items-center justify-between">
         <Header />
-        <div className="grid grid-cols-2 gap-4 3xl:grid-cols-3">
+        <div className="grid grid-cols-2 gap-4 4xl:grid-cols-3">
           {cardContent.map((content, index) => (
             <FactoryInfoCard key={index} {...content} />
           ))}

@@ -6,8 +6,11 @@ import Header from "@components/Home/PerpetualPools/Header";
 
 const PerpetualPools: React.FC<{}> = () => {
   return (
-    <Section id="section-3" className="bg-tracer-navy">
-      <Container className="z-10 flex flex-col pt-10 text-white md:py-16 lg:h-[800px] 3xl:h-[1200px]">
+    <Section
+      id="section-3"
+      className="bg-tracer-navy pt-10 md:py-16 lg:h-[800px] 4xl:h-[1200px]"
+    >
+      <Container className="z-10 flex h-full flex-col text-white">
         <Header />
       </Container>
       <div className="relative h-[370px] sm:h-[50vh] sm:min-h-[500px] lg:static lg:h-auto lg:min-h-[unset]">

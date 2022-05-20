@@ -3,7 +3,7 @@ import OptimisedImage from "@components/Shared/OptimisedImage";
 const Graphics: React.FC<{}> = () => {
   return (
     <>
-      <div className="absolute right-0 top-0 hidden h-full w-full max-w-[1340px] lg:block 3xl:hidden">
+      <div className="absolute right-0 top-0 hidden h-full w-full max-w-[1340px] lg:block 4xl:hidden">
         <OptimisedImage
           src="/img/home/data-feeds-bg.png"
           alt="Data Feeds Background"
@@ -11,7 +11,7 @@ const Graphics: React.FC<{}> = () => {
           position="left"
         />
       </div>
-      <div className="absolute right-0 top-0 hidden h-full w-[70vw] max-w-[2177px] 3xl:block">
+      <div className="absolute right-0 top-0 hidden h-full w-[70vw] max-w-[2177px] 4xl:block">
         <OptimisedImage
           src="/img/home/data-feeds-xl-bg.png"
           alt="Data Feeds Background"

@@ -7,7 +7,10 @@ import Header from "@components/Pools/MechanismDesign/Header";
 
 const MechanismDesign: React.FC<{}> = () => {
   return (
-    <Section id="section-3" className="bg-secondary py-16 xl:py-20">
+    <Section
+      id="section-3"
+      className="h-auto bg-secondary py-16 xl:py-20 4xl:h-[1000px]"
+    >
       <Container className="flex flex-col justify-between xl:flex-row xl:items-center">
         <Header />
         <MechanismSlider />

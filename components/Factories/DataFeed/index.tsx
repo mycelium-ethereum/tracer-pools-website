@@ -5,11 +5,8 @@ import Graphics from "@components/Factories/DataFeed/Graphics";
 
 const DataFeed: React.FC<{}> = () => {
   return (
-    <Section
-      id="section-3"
-      className="bg-secondary pt-[270px] pb-[200px] 3xl:pb-[386px] 3xl:pt-[486px]"
-    >
-      <Container>
+    <Section id="section-3" className="h-[650px] bg-secondary 4xl:h-[1000px]">
+      <Container className="flex h-full items-center">
         <Header />
       </Container>
       <Graphics />

@@ -158,13 +158,15 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
       handleNavigation(e);
       handleScroll();
     });
+    window.addEventListener("resize", handleScroll);
     return () => {
+      window.removeEventListener("resize", handleScroll);
       window.removeEventListener("scroll", (e) => {
         handleNavigation(e);
         handleScroll();
       });
     };
-  }, [handleNavigation]);
+  }, [handleNavigation, handleScroll]);
 
   useEffect(() => {
     // Wait for page exit transition before setting nav bg and text colours
@@ -218,7 +220,7 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
         ${navBackdrop ? "backdrop-blur-md" : "backdrop-blur-0"}
         ${
           !navOpen && isMobile()
-            ? `${navColour} delay-[600ms]`
+            ? `${navColour}`
             : isMobile()
             ? `text-white`
             : `${navColour}`

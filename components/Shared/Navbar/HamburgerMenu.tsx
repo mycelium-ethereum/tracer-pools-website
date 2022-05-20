@@ -28,7 +28,7 @@ const HamburgerMenu: React.FC<HBMenuProps> = ({
         }`}
       />
       <span
-        className={`mt-1.5 block h-0.5 w-[17px] ${hamburgerColour} transition-all duration-500 ${
+        className={`mt-1.5 block h-0.5 w-[17px] transition-all duration-500 ${
           navOpen ? `-translate-y-2 -rotate-45 bg-white` : `${hamburgerColour}`
         }`}
       />

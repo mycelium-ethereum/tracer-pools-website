@@ -6,7 +6,7 @@ import { integrationItems } from "@components/Factories/Integration/presets";
 
 const InfoPoints: React.FC<{}> = () => {
   return (
-    <Section id="section-5" className="bg-white pt-20">
+    <Section id="section-5" className="h-[650px] bg-white pt-20">
       <Container>
         <div className="mx-auto mb-[93px] grid max-w-[1680px] gap-16 sm:grid-cols-2 md:grid-cols-3 3xl:gap-x-56">
           {integrationItems.map((item, i) => (
