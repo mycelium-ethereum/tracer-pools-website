@@ -226,3 +226,8 @@ export const changeNavColour = (route: string, currentSection: string, blueStyle
     );
     setNavColour(navTextColour);
 };
+
+export const pauseSlider = (slider1: any, slider2?: any) => {
+    slider1.slickPause();
+    slider2 && slider2.slickPause();
+};

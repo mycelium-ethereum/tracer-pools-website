@@ -8,11 +8,12 @@ import SlideNavLink from "@components/Pools/MechanismDesign/SlideNavLink";
 import { sliderNavSettings } from "@components/Pools/MechanismDesign/presets";
 
 const SliderNav: React.FC<{
+  slider1: any;
   slider2: any;
   setSlider1: React.Dispatch<any>;
-  pauseSlider: () => void;
+  pauseSlider: (slider1: any, slider2: any) => void;
   TOTAL_SLIDES: number;
-}> = ({ slider2, setSlider1, pauseSlider, TOTAL_SLIDES }) => {
+}> = ({ slider1, slider2, setSlider1, pauseSlider, TOTAL_SLIDES }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const settings = {
     ...sliderNavSettings,
@@ -43,7 +44,13 @@ const SliderNav: React.FC<{
         className="slider-nav relative z-10 w-[calc(100vw-48px)] sm:h-[440px] sm:w-[43px] 4xl:h-[635px] 4xl:w-[53px] 4xl:pl-4"
       >
         {Array.from({ length: TOTAL_SLIDES }).map((slideNum: number, i) => (
-          <SlideNavLink key={i} num={i + 1} pauseSlider={pauseSlider} />
+          <SlideNavLink
+            key={i}
+            slider1={slider1}
+            slider2={slider2}
+            num={i + 1}
+            pauseSlider={pauseSlider}
+          />
         ))}
       </Slider>
       <Divider />

@@ -8,6 +8,7 @@ import {
 } from "@components/Pools/MechanismDesign/presets";
 import SliderNav from "@components/Pools/MechanismDesign/SliderNav";
 import Slide from "@components/Pools/MechanismDesign/Slide";
+import { pauseSlider } from "@lib/helpers";
 
 const MechanismSlider: React.FC<{}> = () => {
   const [slider1, setSlider1] = useState(null);
@@ -15,14 +16,10 @@ const MechanismSlider: React.FC<{}> = () => {
 
   const TOTAL_SLIDES = exposureItems.length;
 
-  const pauseSlider = () => {
-    slider1.slickPause();
-    slider2.slickPause();
-  };
-
   return (
     <div className="relative z-10 -ml-6 flex w-[calc(100%+48px)] flex-col border-t border-b border-action-active bg-white [box-shadow:_0px_4px_10px_2px_rgba(26,85,245,0.1)] sm:ml-0 sm:w-full sm:flex-row sm:items-center sm:border xl:ml-12 xl:max-w-[767px] 4xl:max-w-[1477px]">
       <SliderNav
+        slider1={slider1}
         slider2={slider2}
         setSlider1={setSlider1}
         pauseSlider={pauseSlider}
