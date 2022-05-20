@@ -4,7 +4,7 @@ import H2 from "@components/Factories/H2";
 
 const Header: React.FC<{}> = () => {
   return (
-    <header className="mb-10 text-action-active sm:max-w-[542px] xl:mb-0 3xl:max-w-[750px]">
+    <header className="max-w-[464px] text-action-active lg:max-w-[542px] xl:mb-0 3xl:max-w-[750px]">
       <UnderlinedHeading lineColor="blue" className="max-w-[294px]">
         THE FACTORY MODEL
       </UnderlinedHeading>
@@ -18,7 +18,6 @@ const Header: React.FC<{}> = () => {
         by a price feed is powerful. With the Factory Model, we have the ability
         to bring stability to markets across the Metaverse and real world.
       </p>
-      <MoreInfoButtons className="hidden xl:flex" />
     </header>
   );
 };

@@ -1,7 +1,6 @@
 import Button from "@components/Shared/Buttons/Button";
 import OptimisedImage from "@components/Shared/OptimisedImage";
 import CenteredHeading from "@components/Factories/CenteredHeading";
-import Link from "next/link";
 
 const FactoryInfoCard: React.FC<{
   image: boolean;
@@ -13,7 +12,7 @@ const FactoryInfoCard: React.FC<{
 }> = ({ image, title, description, buttonText, link, headingStyles }) => {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer">
-      <article className="group relative min-w-[402px] rounded-lg bg-secondary">
+      <article className="group relative mb-4 w-full rounded-lg bg-secondary 2xl:min-w-[402px] 4xl:mb-0">
         <div className="absolute top-0 left-0 h-full w-full overflow-hidden rounded-lg opacity-0 transition-opacity duration-300 [background-image:linear-gradient(337.11deg,#1C64F2_-7.32%,rgba(28,100,242,0)_106.58%)] group-hover:opacity-100">
           <div className="absolute top-[1px] left-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-lg bg-secondary" />
         </div>

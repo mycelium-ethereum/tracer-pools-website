@@ -3,7 +3,7 @@ import H2 from "@components/Factories/H2";
 
 const Header: React.FC<{}> = () => {
   return (
-    <header className="mb-10 w-full text-action-active sm:max-w-[335px] xl:mb-0 xl:mr-20">
+    <header className="mb-10 mr-10 w-full text-action-active sm:max-w-[335px] xl:mb-0 xl:mr-20">
       <UnderlinedHeading lineColor="blue" className="max-w-[294px]">
         CURRENT FACTORIES
       </UnderlinedHeading>

@@ -4,7 +4,9 @@ import { buttonContent } from "@components/Factories/Model/presets";
 const MoreInfoButtons: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <div
-      className={`mt-4 max-w-[429px] flex-wrap ${className ? className : ""}`}
+      className={`mt-4 flex max-w-[429px] flex-wrap ${
+        className ? className : ""
+      }`}
     >
       {buttonContent.map((button, i) => (
         <Button

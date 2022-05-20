@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { sortByDate } from "@lib/helpers";
 import InfiniteScroll from "react-infinite-scroll-component";
 import RadarPostCard from "@components/Radar/RadarPostCard";
 import FiveColumnLayout from "@components/Shared/Layouts/FiveColumnLayout";
@@ -7,6 +6,7 @@ import FourColumnLayout from "@components/Shared/Layouts/FourColumnLayout";
 import ThreeColumnLayout from "@components/Shared/Layouts/ThreeColumnLayout";
 import TwoColumnLayout from "@components/Shared/Layouts/TwoColumnLayout";
 import OneColumnLayout from "@components/Shared/Layouts/OneColumnLayout";
+import { sortByDate } from "@lib/helpers";
 
 const RadarPosts: React.FC<{
   filteredArticles: any;
@@ -22,7 +22,6 @@ const RadarPosts: React.FC<{
   const [sortedArticles, setSortedArticles] = useState(filteredArticles);
   const [sorted, setSorted] = useState(false);
   const [columns, setColumns] = useState(3);
-
   const handleCategoryChange = () => {
     // Reset index after each category change
     setIndex(initialPostCount);

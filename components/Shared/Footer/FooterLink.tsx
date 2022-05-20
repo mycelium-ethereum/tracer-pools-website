@@ -24,7 +24,7 @@ const FooterLink: React.FC<{
       {!URL.includes("https") && URL !== "" && (
         <PageLink
           href={URL}
-          className="mb-2.5 transition-colors duration-300 hover:text-blue-400"
+          className="mb-2.5 max-w-[100px] transition-colors duration-300 hover:text-blue-400 xs:max-w-full"
         >
           {content.text}
         </PageLink>

@@ -22,7 +22,7 @@ const LottieAnim: React.FC<{}> = () => {
   return (
     <div
       ref={containerRef}
-      className="absolute bottom-0 right-0 z-0 h-[676px] w-[676px]"
+      className="relative bottom-0 right-0 z-0 flex h-[320px] w-full justify-end xs:h-[380px] sm:h-[400px] xl:absolute xl:h-[676px] xl:w-[676px]"
     >
       <Lottie
         lottieRef={lottieRef}

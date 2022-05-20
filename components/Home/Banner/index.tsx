@@ -19,8 +19,9 @@ const Banner: React.FC<{}> = () => {
           </AnimateIn>
           <AnimateIn delay={0.5}>
             <p className="text-action-active">
-              We Create Infrastructure to Power the Next
-              <br /> Generation of Global Trade
+              We Create Infrastructure to Power
+              <br className="block sm:hidden" /> the Next
+              <br className="hidden sm:block" /> Generation of Global Trade
             </p>
           </AnimateIn>
           <AnimateIn delay={0.8}>

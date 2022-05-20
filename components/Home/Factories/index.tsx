@@ -11,7 +11,7 @@ const Factories: React.FC<{}> = () => {
   return (
     <Section
       id="section-4"
-      className="bg-tracer-purple-dark pt-20 pb-5 lg:h-[800px] lg:py-16 4xl:h-[1200px]"
+      className="bg-tracer-purple-dark pt-20 lg:h-[800px] lg:py-16 4xl:h-[1200px]"
     >
       <Container className="flex h-full items-center text-white">
         <header className="flex h-full flex-grow flex-col justify-center">

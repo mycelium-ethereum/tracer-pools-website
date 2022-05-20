@@ -22,7 +22,7 @@ const MobileGrid: React.FC<{
   ];
 
   return (
-    <div className="grid min-w-[calc(100%+160px)] grid-cols-2 gap-x-4 md:hidden">
+    <div className="grid min-w-[calc(100%+48px)] grid-cols-2 gap-x-4 xs:min-w-[calc(100%+160px)] md:hidden">
       <div>
         {mobileOrder.map((category: string, i: number) => {
           if (i % 2 === 0 || i === 0) {
