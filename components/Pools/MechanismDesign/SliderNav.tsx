@@ -35,7 +35,7 @@ const SliderNav: React.FC<{
     );
   }, [currentSlide]);
   return (
-    <div className="relative mx-auto mt-4 sm:mr-10 sm:ml-[23px] sm:mt-0 sm:min-w-[43px] sm:px-0 4xl:ml-4 4xl:mr-16 4xl:min-w-[85px]">
+    <div className="relative mx-auto mt-4 sm:mr-10 sm:ml-[23px] sm:mt-0 sm:min-w-[53px] sm:px-0 4xl:ml-4 4xl:mr-16 4xl:min-w-[85px]">
       <Slider
         asNavFor={slider2}
         ref={(slider) => setSlider1(slider)}
