@@ -15,7 +15,7 @@ const CreateStrategies: React.FC<{}> = () => {
           <OptimisedImage
             src="/img/indices/diagram.png"
             alt="Perpetual Pools Diagram"
-            className="mr-0 min-w-[498px] sm:min-w-[unset] sm:max-w-[427px] lg:max-w-[623px] 4xl:mr-[133px] 4xl:max-w-[940px]"
+            className="mr-0 min-w-[498px] sm:min-w-[unset] sm:max-w-[427px] lg:min-w-[623px] 4xl:mr-[133px] 4xl:min-w-[940px]"
           />
         </div>
       </Container>

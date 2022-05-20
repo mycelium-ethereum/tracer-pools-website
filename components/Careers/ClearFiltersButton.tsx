@@ -6,7 +6,7 @@ const ClearFiltersButton = ({ clearFilters, filtersChanged }) => {
         filtersChanged
           ? "pointer-events-auto opacity-100"
           : "pointer-events-none opacity-0"
-      } hover:text-tracer-800 mb-12 mt-5 block w-max font-semibold text-black underline transition-all duration-300`}
+      } hover:text-tracer-800 mb-12 mt-5 block w-max font-semibold text-action-active underline transition-all duration-300`}
     >
       Clear filters
     </button>

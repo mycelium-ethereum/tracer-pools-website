@@ -11,11 +11,11 @@ const IntroText: React.FC<{}> = () => {
         <GradientLine color="lightblue" />
       </div>
       <div className="mb-4 text-[40px] font-light leading-[44px] sm:mb-11 sm:text-[60px] sm:leading-[66px] xl:text-[80px] xl:leading-[88px]">
-        <AnimateIn delay={0.4}>No Margins.</AnimateIn>
-        <AnimateIn delay={0.8}>No Liquidations.</AnimateIn>
-        <AnimateIn delay={1.2}>No Minimum Spend.</AnimateIn>
+        <AnimateIn delayLevel={1}>No Margins.</AnimateIn>
+        <AnimateIn delayLevel={2}>No Liquidations.</AnimateIn>
+        <AnimateIn delayLevel={3}>No Minimum Spend.</AnimateIn>
       </div>
-      <AnimateIn delay={1.6}>
+      <AnimateIn delayLevel={4}>
         <img
           src="/img/logos/powered-by-arbitrum.svg"
           className="h-[29px] w-[156px] sm:h-[41px] sm:w-[357px]"

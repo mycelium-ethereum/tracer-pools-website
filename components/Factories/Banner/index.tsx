@@ -9,7 +9,7 @@ const Banner: React.FC<{}> = () => {
   return (
     <Section
       id="section-1"
-      className="h-[800px] bg-tracer-darkblue pt-[100px] pb-10 sm:pt-[131px] sm:pb-36 lg:h-[1000px]"
+      className="h-[800px] max-h-[1440px] bg-tracer-darkblue pt-[100px] pb-10 sm:pt-[131px] sm:pb-36 lg:h-[1080px] 3xl:h-screen"
     >
       <Container>
         <LargeHeader {...headerInfo} />

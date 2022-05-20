@@ -17,24 +17,22 @@ const JobDiv: React.FC<{
       data-team={team}
       data-worktype={commitment}
     >
-      <div className="flex w-full items-start justify-between py-6">
-        <div className="relative z-10 flex flex-col transition-colors duration-300">
-          <span className="pb-2">
-            <span className="text-lg font-bold leading-[24px] text-highlight xs:text-xl">
-              {title}
-            </span>
-            <span className="block leading-[24px] text-tertiary">{team}</span>
+      <div className="flex w-full flex-col py-8">
+        <span className="mb-4 block">
+          <span className="text-2xl font-bold leading-[30px] text-highlight xs:text-xl">
+            {title}
           </span>
-          <span className="block">
-            <span className="text-lg leading-[24px] text-highlight xs:text-xl">
-              {location}
-            </span>
-            <span className="block leading-[24px] text-tertiary">
-              {commitment}
-            </span>
+          <span className="block leading-[24px] text-tertiary">{team}</span>
+        </span>
+        <span className="block">
+          <span className="text-2xl leading-[24px] text-highlight xs:text-xl">
+            {location}
           </span>
-        </div>
-        <Button link={link} lightBlueGradient>
+          <span className="block leading-[24px] text-tertiary">
+            {commitment}
+          </span>
+        </span>
+        <Button link={link} lightBlueGradient className="mt-8 min-w-[241px]">
           Apply Now
         </Button>
       </div>

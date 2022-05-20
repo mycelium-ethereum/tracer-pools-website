@@ -19,7 +19,7 @@ const AnimateLayout: React.FC<{
         ease: "linear",
         duration: 0.4,
       }}
-      className="min-h-screen overflow-hidden"
+      className="overflow-hidden"
     >
       {children}
     </motion.main>

@@ -18,7 +18,7 @@ const FilterBox = ({
 
   return (
     <div
-      className={`relative mb-2 flex h-10 w-full max-w-[300px] cursor-pointer items-center rounded-lg bg-action-cell font-semibold lg:ml-4 lg:mb-0 lg:min-w-[250px] ${
+      className={`relative mb-2 flex h-10 w-full cursor-pointer items-center rounded-lg bg-action-cell xs:w-[272px] lg:ml-4 lg:mb-0 ${
         open ? "z-30" : "z-20"
       }
       ${
@@ -30,7 +30,7 @@ const FilterBox = ({
       onClick={toggleFilter}
       ref={reference}
     >
-      <div className="pointer-events-none relative z-10 w-full py-2.5 pl-6 pr-10 transition-colors duration-300">
+      <div className="pointer-events-none relative z-10 w-full py-2.5 pl-4 pr-10 transition-colors duration-300">
         <span className="select-none">{text}</span>
         <div className="absolute right-6 top-1/2 flex h-full -translate-y-1/2 transform items-center">
           <img
@@ -43,7 +43,7 @@ const FilterBox = ({
         </div>
       </div>
       <div
-        className={`absolute top-0 left-0 z-0 flex w-full transform-gpu flex-col overflow-hidden rounded-lg bg-action-cell px-6 pt-11 transition-all duration-200 [box-shadow:0px_4px_15px_rgb(0_0_0_/_15%)] ${
+        className={`absolute top-0 left-0 z-0 flex w-full transform-gpu flex-col overflow-hidden rounded-lg bg-action-cell px-4 pt-11 transition-all duration-200 [box-shadow:0px_4px_15px_rgb(0_0_0_/_15%)] ${
           open
             ? "pointer-events-auto scale-100 opacity-100"
             : "pointer-events-none scale-[0.97] opacity-0"
@@ -52,7 +52,7 @@ const FilterBox = ({
         {filterData.map((label, i) => (
           <button
             key={i}
-            className={`relative border-[#C4C4C4] bg-transparent py-2.5 text-left font-semibold transition-colors duration-300 [border-top-width:0.5px] ${
+            className={`border-cell-inactive relative bg-transparent py-2.5 text-left transition-colors duration-300 [border-top-width:0.5px] ${
               i === filterData.length - 1 ? "pb-2.5" : ""
             }
             ${

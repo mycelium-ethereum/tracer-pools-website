@@ -55,7 +55,6 @@ const CareersTable = () => {
 
       // Sort departments alphabetically
       const sortedDepartments = departments.sort((a, b) => a.localeCompare(b));
-      const departmentsListed = [];
       for (let j = 0; j < sortedDepartments.length; j++) {
         for (let k = 0; k < _data.length; k++) {
           let currentDept = sortedDepartments[j];
@@ -121,7 +120,7 @@ const CareersTable = () => {
   }, [jobRows]);
 
   const headingStyles =
-    "pb-4 text-left text-sm leading-[14px] tracking-[0.15em] text-highlight";
+    "pb-4 text-left text-sm leading-[14px] tracking-[0.15em] text-highlight font-normal";
 
   return (
     <div className="select-dark z-10 bg-white pt-6 pb-24">

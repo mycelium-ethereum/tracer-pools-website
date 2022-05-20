@@ -37,7 +37,7 @@ const LargeHeader: React.FC<{
           {title}
         </h1>
       </AnimateIn>
-      <AnimateIn delay={0.8}>
+      <AnimateIn delayLevel={2}>
         <p className="mx-auto max-w-[700px] text-xl leading-[30px] text-action-active transition-all duration-500 sm:text-2xl sm:leading-[28px]">
           {subheading}
         </p>

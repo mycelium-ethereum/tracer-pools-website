@@ -2,10 +2,11 @@ import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 
 const AnimateIn: React.FC<{
-  delay: number;
+  delayLevel: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
   className?: string;
   children: React.ReactNode;
-}> = ({ delay, className, children }) => {
+}> = ({ delayLevel, className, children }) => {
+  const delayValues = [0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2, 3.6, 4];
   const animationControl = useAnimation();
   const { inView, ref } = useInView();
   if (inView) {
@@ -13,7 +14,7 @@ const AnimateIn: React.FC<{
       y: 0,
       opacity: 1,
       transition: {
-        delay: delay,
+        delay: delayValues[delayLevel + 1],
         duration: 0.8,
       },
     });

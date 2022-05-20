@@ -10,7 +10,7 @@ const ExposureSlider: React.FC<{}> = () => {
       id="section-2"
       className="-mt-12 h-auto bg-white pb-16 pt-0 md:mt-0 md:py-16 xl:py-40 4xl:h-[1000px]"
     >
-      <Container className="flex flex-col items-center justify-center">
+      <Container className="flex h-full flex-col items-center justify-center">
         <Tokens />
         <VerticalCarousel />
         <StartJourney />

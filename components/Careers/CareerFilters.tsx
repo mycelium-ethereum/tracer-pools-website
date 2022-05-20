@@ -226,44 +226,48 @@ const CareerFilters = ({ locations, teams, worktypes }) => {
 
   return (
     <>
-      <div className="flex w-full flex-col justify-center lg:flex-row lg:items-center lg:justify-start">
-        <span className="mb-4 block text-[#828790] lg:mb-0">Filter:</span>
-        {/* Location filter */}
-        <FilterBox
-          onClickAction={setLocationOpen}
-          changeAction={handleChange}
-          open={locationOpen}
-          text={locationFilterText}
-          reference={locationFilterBox}
-          filterData={locations}
-          dataType="location"
-          filtersChanged={filtersChanged}
-          listingData={filteredLocations}
-        />
-        {/* Team filter */}
-        <FilterBox
-          onClickAction={setTeamOpen}
-          changeAction={handleChange}
-          open={teamOpen}
-          text={teamFilterText}
-          reference={teamFilterBox}
-          filterData={teams}
-          dataType="team"
-          filtersChanged={filtersChanged}
-          listingData={filteredTeams}
-        />
-        {/* Worktype filter */}
-        <FilterBox
-          onClickAction={setWorktypeOpen}
-          changeAction={handleChange}
-          open={worktypeOpen}
-          text={worktypeFilterText}
-          reference={worktypeFilterBox}
-          filterData={worktypes}
-          dataType="worktype"
-          filtersChanged={filtersChanged}
-          listingData={filteredWorktypes}
-        />
+      <div className="flex w-full flex-col justify-start xs:flex-row lg:items-center">
+        <span className="mb-2 block text-[#828790] xs:mb-0 xs:mr-8 xs:mt-2 lg:mr-0 lg:mt-0">
+          Filter:
+        </span>
+        <div className="flex flex-col lg:flex-row">
+          {/* Location filter */}
+          <FilterBox
+            onClickAction={setLocationOpen}
+            changeAction={handleChange}
+            open={locationOpen}
+            text={locationFilterText}
+            reference={locationFilterBox}
+            filterData={locations}
+            dataType="location"
+            filtersChanged={filtersChanged}
+            listingData={filteredLocations}
+          />
+          {/* Team filter */}
+          <FilterBox
+            onClickAction={setTeamOpen}
+            changeAction={handleChange}
+            open={teamOpen}
+            text={teamFilterText}
+            reference={teamFilterBox}
+            filterData={teams}
+            dataType="team"
+            filtersChanged={filtersChanged}
+            listingData={filteredTeams}
+          />
+          {/* Worktype filter */}
+          <FilterBox
+            onClickAction={setWorktypeOpen}
+            changeAction={handleChange}
+            open={worktypeOpen}
+            text={worktypeFilterText}
+            reference={worktypeFilterBox}
+            filterData={worktypes}
+            dataType="worktype"
+            filtersChanged={filtersChanged}
+            listingData={filteredWorktypes}
+          />
+        </div>
       </div>
       <ClearFiltersButton
         clearFilters={clearFilters}

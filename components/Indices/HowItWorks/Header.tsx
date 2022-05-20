@@ -11,7 +11,7 @@ const Header: React.FC<{}> = () => {
       <H2 className="max-w-[344px] 3xl:max-w-full">
         Learn how we make it happen
       </H2>
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col">
         <Button lightBlueGradient className="mb-4">
           Governance Whitepaper
         </Button>

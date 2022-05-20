@@ -24,7 +24,7 @@ const Banner: React.FC<{}> = () => {
               <br className="hidden sm:block" /> Generation of Global Trade
             </p>
           </AnimateIn>
-          <AnimateIn delay={0.8}>
+          <AnimateIn delayLevel={2}>
             <Button darkBlueGradient className="mt-4 text-white">
               Learn More
             </Button>

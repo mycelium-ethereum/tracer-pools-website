@@ -6,6 +6,7 @@ import {
   exposureItems,
   settings,
 } from "@components/Pools/ExposureSlider/presets";
+import AnimateIn from "@components/Shared/AnimateIn";
 
 const VerticalCarousel: React.FC<{}> = () => {
   const DELAY = 500;
@@ -42,14 +43,14 @@ const VerticalCarousel: React.FC<{}> = () => {
       <span className="whitespace-nowrap text-2xl leading-[28px] text-action-active lg:text-[40px] lg:leading-[48px] 4xl:text-[64px] 4xl:leading-[72px]">
         Get exposure to
       </span>
-      <div className="mt-2 xl:ml-10">
+      <AnimateIn className="mt-2 xl:ml-10" delayLevel={1}>
         <Slider {...updatedSettings} className="vertical-slider">
           {items &&
             items.map((item: string, i: number) => (
               <Slide item={item} key={i} />
             ))}
         </Slider>
-      </div>
+      </AnimateIn>
     </div>
   );
 };
