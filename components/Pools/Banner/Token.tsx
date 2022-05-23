@@ -2,6 +2,8 @@ import OptimisedImage from "@components/Shared/OptimisedImage";
 import TokenFadeIn from "@components/Pools/Banner/TokenFadeIn";
 
 const Token: React.FC<{
+  token: string;
+  alt: string;
   type: string;
   containerStyles: string;
   backDelay: number;
@@ -9,6 +11,8 @@ const Token: React.FC<{
   backStyles: string;
   frontStyles: string;
 }> = ({
+  token,
+  alt,
   type,
   containerStyles,
   backDelay,
@@ -17,19 +21,15 @@ const Token: React.FC<{
   frontStyles,
 }) => {
   let backImage = "";
-  let frontImage = "";
   switch (type) {
-    case "BTC":
-      backImage = "/img/shared/btc-token-back.png";
-      frontImage = "/img/shared/btc-token-front.png";
+    case "long":
+      backImage = "/img/pools/tokens/token-back-long.png";
       break;
-    case "LINK":
-      backImage = "/img/shared/link-token-back.png";
-      frontImage = "/img/shared/link-token-front.png";
+    case "short":
+      backImage = "/img/pools/tokens/token-back-short.png";
       break;
     default:
-      backImage = "/img/shared/link-token-back.png";
-      frontImage = "/img/shared/link-token-front.png";
+      backImage = "/img/pools/tokens/token-back-long.png";
       break;
   }
 
@@ -44,8 +44,8 @@ const Token: React.FC<{
       </TokenFadeIn>
       <TokenFadeIn delay={frontDelay}>
         <OptimisedImage
-          src={frontImage}
-          alt={`${type} token front`}
+          src={`/img/pools/tokens/${token}`}
+          alt={alt}
           className={`absolute z-10 ${frontStyles}`}
         />
       </TokenFadeIn>
