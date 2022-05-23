@@ -8,7 +8,7 @@ import RadarPosts from "@components/Radar/RadarPosts";
 import { useRef, useState } from "react";
 import { GetStaticProps } from "next";
 import { tags } from "@components/Radar/presets";
-import { blogSeoDesc } from "@pages/presets";
+import { blogSeoDesc } from "@components/Shared/presets";
 
 const BlogPage: React.FC<{ articles: any }> = ({ articles }) => {
   const [filteredArticles, setFilteredArticles] = useState(articles);

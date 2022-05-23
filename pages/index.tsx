@@ -5,7 +5,7 @@ import PerpetualPools from "@components/Home/PerpetualPools";
 import SEO from "@components/Shared/SEO";
 import Factories from "@components/Home/Factories";
 import Partners from "@components/Home/Partners";
-import { homepageSeoDesc } from "@pages/presets";
+import { homepageSeoDesc } from "@components/Shared/presets";
 
 const HomePage: React.FC<{}> = () => {
   return (

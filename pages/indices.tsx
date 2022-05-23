@@ -5,7 +5,7 @@ import CreateStrategies from "@components/Indices/CreateStrategies";
 import UnlockMarket from "@components/Indices/UnlockMarket";
 import HowItWorks from "@components/Indices/HowItWorks";
 import InfoPoints from "@components/Indices/InfoPoints";
-import { indicesSeoDesc } from "@pages/presets";
+import { indicesSeoDesc } from "@components/Shared/presets";
 
 const IndicesPage: React.FC<{}> = () => {
   return (

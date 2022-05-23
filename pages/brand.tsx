@@ -15,7 +15,7 @@ import LogoAssets from "@components/Brand/Sections/LogoAssets";
 import ColourAssets from "@components/Brand/Sections/ColourAssets";
 import TypographyAssets from "@components/Brand/Sections/TypographyAssets";
 import GraphicAssets from "@components/Brand/Sections/GraphicAssets";
-import { brandSeoDesc } from "@pages/presets";
+import { brandSeoDesc } from "@components/Shared/presets";
 
 const BrandPage = () => {
   const containerRef = useRef<HTMLDivElement>(null);

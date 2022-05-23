@@ -4,7 +4,7 @@ import CareersTable from "@components/Careers/CareersTable";
 import Container from "@components/Shared/Container";
 import PageHeader from "@components/Shared/PageHeader";
 import PageSection from "@components/Shared/Section";
-import { careersSeoDesc } from "@pages/presets";
+import { careersSeoDesc } from "@components/Shared/presets";
 
 const CareersPage: React.FC<{}> = () => {
   return (

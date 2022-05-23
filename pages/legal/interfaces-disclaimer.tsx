@@ -7,7 +7,7 @@ import PageSection from "@components/Shared/Section";
 import SidebarWrapper from "@components/Shared/SidebarWrapper";
 import LegalSidebarContent from "@components/Legal/Texts/LegalSidebarContent";
 import InterfacesDisclaimerText from "@components/Legal/Texts/InterfacesDisclaimerText";
-import { legalSeoDesc } from "@pages/presets";
+import { legalSeoDesc } from "@components/Shared/presets";
 
 const InterfacesDisclaimerPage = () => {
   const route = useRouter().pathname;

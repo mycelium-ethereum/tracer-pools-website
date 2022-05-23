@@ -7,7 +7,7 @@ import PageSection from "@components/Shared/Section";
 import SidebarWrapper from "@components/Shared/SidebarWrapper";
 import LegalSidebarContent from "@components/Legal/Texts/LegalSidebarContent";
 import ParticipationAgreementText from "@components/Legal/Texts/ParticipationAgreementText";
-import { legalSeoDesc } from "@pages/presets";
+import { legalSeoDesc } from "@components/Shared/presets";
 
 const ParticipationAgreementPage = () => {
   const route = useRouter().pathname;

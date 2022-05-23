@@ -4,7 +4,7 @@ import Model from "@components/Factories/Model";
 import DataFeed from "@components/Factories/DataFeed";
 import CurrentFactories from "@components/Factories/CurrentFactories";
 import Integration from "@components/Factories/Integration";
-import { factoriesSeoDesc } from "@pages/presets";
+import { factoriesSeoDesc } from "@components/Shared/presets";
 
 const FactoriesPage: React.FC<{}> = () => {
   return (

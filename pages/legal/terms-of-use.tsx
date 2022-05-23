@@ -7,7 +7,7 @@ import PageSection from "@components/Shared/Section";
 import SidebarWrapper from "@components/Shared/SidebarWrapper";
 import LegalSidebarContent from "@components/Legal/Texts/LegalSidebarContent";
 import TermsOfUseText from "@components/Legal/Texts/TermsOfUseText";
-import { legalSeoDesc } from "@pages/presets";
+import { legalSeoDesc } from "@components/Shared/presets";
 
 const TermsOfUsePage = () => {
   const route = useRouter().pathname;

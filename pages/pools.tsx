@@ -4,7 +4,7 @@ import BuildPortfolio from "@components/Pools/BuildPortfolio";
 import ExposureSlider from "@components/Pools/ExposureSlider";
 import Integration from "@components/Pools/Integration";
 import MechanismDesign from "@components/Pools/MechanismDesign";
-import { poolsSeoDesc } from "@pages/presets";
+import { poolsSeoDesc } from "@components/Shared/presets";
 
 const PoolsPage: React.FC<{}> = () => {
   return (

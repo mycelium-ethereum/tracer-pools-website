@@ -7,7 +7,7 @@ import PageSection from "@components/Shared/Section";
 import SEO from "@components/Shared/SEO";
 import SidebarWrapper from "@components/Shared/SidebarWrapper";
 import LegalSidebarContent from "@components/Legal/Texts/LegalSidebarContent";
-import { legalSeoDesc } from "@pages/presets";
+import { legalSeoDesc } from "@components/Shared/presets";
 
 const PrivacyPolicyPage = () => {
   const route = useRouter().pathname;

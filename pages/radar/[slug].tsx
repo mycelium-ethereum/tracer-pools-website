@@ -122,9 +122,11 @@ export const avoidRateLimit = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  let success = false;
+  let firstSuccess = false;
+  let secondSuccess = false;
   let articles = [];
-  while (!success) {
+  let articleID = 0;
+  while (!firstSuccess) {
     try {
       await avoidRateLimit();
       articles = await fetch(
@@ -132,23 +134,31 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       )
         .then((res) => res.json())
         .catch((err) => console.error(err));
-      success = true;
+      articles.map((article) => {
+        if (article.slug === params.slug) {
+          articleID = article.id;
+        }
+      });
+      firstSuccess = true;
     } catch {
       console.error("Failed to fetch article");
     }
   }
-  let articleID = 0;
-  articles.map((article) => {
-    if (article.slug === params.slug) {
-      articleID = article.id;
-    }
-  });
 
-  const data = await fetch(
-    `https://mycelium-content.uc.r.appspot.com/tracer-blogs/${articleID}`
-  )
-    .then((res) => res.json())
-    .catch((err) => console.error(err));
+  let data = [];
+  while (!secondSuccess) {
+    try {
+      await avoidRateLimit();
+      data = await fetch(
+        `https://mycelium-content.uc.r.appspot.com/tracer-blogs/${articleID}`
+      )
+        .then((res) => res.json())
+        .catch((err) => console.error(err));
+      secondSuccess = true;
+    } catch {
+      console.error("Failed to fetch article");
+    }
+  }
 
   return {
     props: {

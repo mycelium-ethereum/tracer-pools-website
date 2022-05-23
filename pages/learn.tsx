@@ -8,7 +8,7 @@ import InTheMedia from "@components/Learn/InTheMedia";
 import FAQs from "@components/Learn/FAQ";
 import { getTracerDropPlaylistData, getVideoData } from "@lib/helpers";
 import { mediaVideos } from "@components/Learn/presets";
-import { learnSeoDesc } from "@pages/presets";
+import { learnSeoDesc } from "@components/Shared/presets";
 
 const LearnPage: React.FC<{ dropVideoData: any; mediaVideoData: any }> = ({
   dropVideoData,
