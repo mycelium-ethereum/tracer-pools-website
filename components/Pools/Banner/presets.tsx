@@ -68,7 +68,8 @@ export const tokenSpread = [
     backDelay: 1200,
     frontDelay: 900,
     backStyles: "top-14 left-4 [transform:matrix(-1,0.08,0.08,1,0,0)]",
-    frontStyles: "[transform:matrix(-1,0.08,0.08,1,0,0)] min-w-[420px]",
+    frontStyles:
+      "[transform:matrix(-1,0.08,0.08,1,0,0)] min-w-[670px] sm:min-w-[420px]",
   },
   {
     token: "link.png",
@@ -91,7 +92,7 @@ export const tokenSpread = [
     backDelay: 1200,
     frontDelay: 900,
     backStyles: "top-[75px]",
-    frontStyles: "-left-14 min-w-[500px]",
+    frontStyles: "-left-14 min-w-[440px] sm:min-w-[500px]",
   },
   {
     token: "dot.png",
