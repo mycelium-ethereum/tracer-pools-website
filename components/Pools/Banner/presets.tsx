@@ -60,7 +60,7 @@ export const tokenSpread = [
     frontStyles: "-left-6 -top-8 rotate-[12.06deg] min-w-[250px]",
   },
   {
-    token: "BTC.png",
+    token: "btc.png",
     alt: "BTC token",
     type: "short",
     containerStyles:
