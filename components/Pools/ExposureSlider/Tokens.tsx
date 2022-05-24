@@ -21,7 +21,7 @@ const Tokens: React.FC<{ position: number }> = ({ position }) => {
       {shortTokens.concat(longTokens).map((token, index) => (
         <img
           src={`/img/pools/tokens/slider/${token}.png`}
-          className="invisible"
+          className="invisible h-0 w-0"
           key={index}
           alt={token}
         />
