@@ -2,8 +2,8 @@ import OptimisedImage from "@components/Shared/OptimisedImage";
 
 const Tokens: React.FC<{ position: number }> = ({ position }) => {
   const animationStyles = "opacity-0 transition-opacity duration-500";
-  const shortTokens = ["sol", "bayc", "xau", "euro"];
-  const longTokens = ["link", "punks", "wti", "jpy"];
+  const shortTokens = ["euro", "bayc", "xau", "sol"];
+  const longTokens = ["jpy", "punks", "wti", "link"];
 
   return (
     <div className="relative mx-auto h-[350px] w-[270px] md:static md:mx-0 md:h-auto md:w-auto">

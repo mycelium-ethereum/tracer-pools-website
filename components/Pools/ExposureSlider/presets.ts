@@ -1,7 +1,7 @@
 const exposureItems = [
     "Commodities",
-    "Foreign Exchange",
     "Cryptocurrencies",
+    "Foreign Exchange",
     "NFTs",
     // "Custom Indexes",
     // "Sophisticated Strategies",
