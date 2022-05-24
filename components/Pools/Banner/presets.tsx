@@ -67,9 +67,8 @@ export const tokenSpread = [
       "topToBottomAnimSlower w-[600px] top-[500px] left-[150px] sm:left-[230px] sm:top-[600px] sm:w-[356px]",
     backDelay: 1200,
     frontDelay: 900,
-    backStyles: "top-14 left-4 [transform:matrix(-1,0.08,0.08,1,0,0)]",
-    frontStyles:
-      "[transform:matrix(-1,0.08,0.08,1,0,0)] min-w-[670px] sm:min-w-[420px]",
+    backStyles: "top-12 left-14",
+    frontStyles: "min-w-[670px] sm:min-w-[420px]",
   },
   {
     token: "link.png",

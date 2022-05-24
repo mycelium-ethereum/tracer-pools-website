@@ -13,7 +13,7 @@ const ExposureSlider: React.FC<{}> = () => {
   const updatePosition = (newPosition: number) => {
     if (newPosition >= MAX_SLIDES) newPosition = newPosition % MAX_SLIDES;
     setTimeout(() => {
-      setPosition(newPosition);
+      // setPosition(newPosition);
     }, 400);
   };
 
@@ -28,14 +28,10 @@ const ExposureSlider: React.FC<{}> = () => {
     }, DELAY);
   };
 
-  useEffect(() => {
-    console.log(position);
-  }, [position]);
-
   return (
     <Section
       id="section-2"
-      className="-mt-12 h-auto bg-white pb-16 pt-0 md:mt-0 md:py-16 xl:py-40 4xl:h-[1000px]"
+      className="h-auto bg-white pb-16 pt-0 md:py-16 lg:h-[650px] 4xl:h-[1000px]"
     >
       <Container className="flex h-full flex-col items-center justify-center">
         <Tokens position={position} />

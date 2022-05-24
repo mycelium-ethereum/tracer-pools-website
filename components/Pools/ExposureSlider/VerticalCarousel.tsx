@@ -17,12 +17,12 @@ const VerticalCarousel: React.FC<{
     ...settings,
     beforeChange: (current, next) => {
       updatePosition(next);
-      resetAnimation();
+      // resetAnimation();
     },
   };
 
   useEffect(() => {
-    resetAnimation();
+    // resetAnimation();
     //   Double amount of items in array to allow slider to animate
     exposureItems.push(...exposureItems);
     setItems(exposureItems);
