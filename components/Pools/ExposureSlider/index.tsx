@@ -13,7 +13,7 @@ const ExposureSlider: React.FC<{}> = () => {
   const updatePosition = (newPosition: number) => {
     if (newPosition >= MAX_SLIDES) newPosition = newPosition % MAX_SLIDES;
     setTimeout(() => {
-      // setPosition(newPosition);
+      setPosition(newPosition);
     }, 400);
   };
 

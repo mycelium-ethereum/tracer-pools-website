@@ -1,8 +1,8 @@
 import OptimisedImage from "@components/Shared/OptimisedImage";
 
 const Tokens: React.FC<{ position: number }> = ({ position }) => {
-  const animationStyles = "transition-opacity duration-500";
-  // const animationStyles = "opacity-0 transition-opacity duration-500";
+  // const animationStyles = "transition-opacity duration-500";
+  const animationStyles = "opacity-0 transition-opacity duration-500";
   const shortTokens = ["euro", "punks", "xau", "sol"];
   const longTokens = ["jpy", "bayc", "wti", "link"];
 
