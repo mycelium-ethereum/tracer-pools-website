@@ -10,8 +10,8 @@ import AnimateIn from "@components/Shared/AnimateIn";
 
 const VerticalCarousel: React.FC<{
   updatePosition: (newPosition: number) => void;
-}> = ({ updatePosition }) => {
-  const DELAY = 500;
+  resetAnimation: () => void;
+}> = ({ updatePosition, resetAnimation }) => {
   const [items, setItems] = useState<undefined | string[]>([]);
   const updatedSettings = {
     ...settings,
@@ -21,16 +21,6 @@ const VerticalCarousel: React.FC<{
     },
   };
 
-  const resetAnimation = () => {
-    const btcToken = document.querySelector(".btc-token");
-    const linkToken = document.querySelector(".link-token");
-    btcToken.classList.remove("animate-up");
-    linkToken.classList.remove("animate-down");
-    setTimeout(() => {
-      btcToken.classList.add("animate-up");
-      linkToken.classList.add("animate-down");
-    }, DELAY);
-  };
   useEffect(() => {
     resetAnimation();
     //   Double amount of items in array to allow slider to animate

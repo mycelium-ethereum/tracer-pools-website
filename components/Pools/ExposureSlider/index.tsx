@@ -6,6 +6,7 @@ import Tokens from "@components/Pools/ExposureSlider/Tokens";
 import StartJourney from "@components/Pools/ExposureSlider/StartJourney";
 
 const ExposureSlider: React.FC<{}> = () => {
+  const DELAY = 500;
   const MAX_SLIDES = 4;
   const [position, setPosition] = useState(0);
 
@@ -13,7 +14,18 @@ const ExposureSlider: React.FC<{}> = () => {
     if (newPosition >= MAX_SLIDES) newPosition = newPosition % MAX_SLIDES;
     setTimeout(() => {
       setPosition(newPosition);
-    }, 300);
+    }, 400);
+  };
+
+  const resetAnimation = () => {
+    const btcToken = document.querySelector(".btc-token");
+    const linkToken = document.querySelector(".link-token");
+    btcToken.classList.remove("animate-up");
+    linkToken.classList.remove("animate-down");
+    setTimeout(() => {
+      btcToken.classList.add("animate-up");
+      linkToken.classList.add("animate-down");
+    }, DELAY);
   };
 
   useEffect(() => {
@@ -27,7 +39,10 @@ const ExposureSlider: React.FC<{}> = () => {
     >
       <Container className="flex h-full flex-col items-center justify-center">
         <Tokens position={position} />
-        <VerticalCarousel updatePosition={updatePosition} />
+        <VerticalCarousel
+          updatePosition={updatePosition}
+          resetAnimation={resetAnimation}
+        />
         <StartJourney />
       </Container>
     </Section>
