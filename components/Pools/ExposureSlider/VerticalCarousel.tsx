@@ -8,12 +8,17 @@ import {
 } from "@components/Pools/ExposureSlider/presets";
 import AnimateIn from "@components/Shared/AnimateIn";
 
-const VerticalCarousel: React.FC<{}> = () => {
+const VerticalCarousel: React.FC<{
+  updatePosition: (newPosition: number) => void;
+}> = ({ updatePosition }) => {
   const DELAY = 500;
   const [items, setItems] = useState<undefined | string[]>([]);
   const updatedSettings = {
     ...settings,
-    beforeChange: () => resetAnimation(),
+    beforeChange: (current, next) => {
+      updatePosition(next);
+      resetAnimation();
+    },
   };
 
   const resetAnimation = () => {
@@ -27,6 +32,7 @@ const VerticalCarousel: React.FC<{}> = () => {
     }, DELAY);
   };
   useEffect(() => {
+    resetAnimation();
     //   Double amount of items in array to allow slider to animate
     exposureItems.push(...exposureItems);
     setItems(exposureItems);

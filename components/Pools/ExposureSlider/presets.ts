@@ -1,11 +1,10 @@
 const exposureItems = [
     "Commodities",
     "Foreign Exchange",
-    "Equities",
     "Cryptocurrencies",
     "NFTs",
-    "Custom Indexes",
-    "Sophisticated Strategies",
+    // "Custom Indexes",
+    // "Sophisticated Strategies",
 ];
 const settings = {
     accessibility: false,
@@ -22,8 +21,8 @@ const settings = {
     slidesToShow: 5,
     slidesToScroll: 1,
     useTransform: false,
-    pauseOnFocus: true,
-    pauseOnHover: true,
+    pauseOnFocus: false,
+    pauseOnHover: false,
 };
 
 export { exposureItems, settings };

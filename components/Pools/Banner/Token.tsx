@@ -23,13 +23,13 @@ const Token: React.FC<{
   let backImage = "";
   switch (type) {
     case "long":
-      backImage = "/img/pools/tokens/token-back-long.png";
+      backImage = "/img/pools/tokens/banner/token-back-long.png";
       break;
     case "short":
-      backImage = "/img/pools/tokens/token-back-short.png";
+      backImage = "/img/pools/tokens/banner/token-back-short.png";
       break;
     default:
-      backImage = "/img/pools/tokens/token-back-long.png";
+      backImage = "/img/pools/tokens/banner/token-back-long.png";
       break;
   }
 
@@ -44,7 +44,7 @@ const Token: React.FC<{
       </TokenFadeIn>
       <TokenFadeIn delay={frontDelay}>
         <OptimisedImage
-          src={`/img/pools/tokens/${token}`}
+          src={`/img/pools/tokens/banner/${token}`}
           alt={alt}
           className={`absolute z-10 ${frontStyles}`}
         />
