@@ -4,7 +4,7 @@ export const exposureItems = [
         text: "A perpetual pool has long and short sides, where users can deposit ERC20 tokens.",
     },
     {
-        image: "/img/pools/mechanism-design-placeholder-2.png",
+        image: "/img/pools/mechanism-design-placeholder.png",
         text: "Users are minted a pool token, representing their share of the side. This token can be burnt in exchange for the underlying at any time, which is where the pool token’s value is derived from.",
     },
     {
@@ -12,7 +12,7 @@ export const exposureItems = [
         text: "The pool tracks the movement of some underlying feed. This feed can go up or down. When the underlying feed increases, shorts pay longs, increasing the value of the Long Tokens.",
     },
     {
-        image: "/img/pools/mechanism-design-placeholder-2.png",
+        image: "/img/pools/mechanism-design-placeholder.png",
         text: "When the underlying feed decreases, longs pay shorts, increasing the value of the Short Tokens.",
     },
     {
@@ -20,7 +20,7 @@ export const exposureItems = [
         text: "New entrants can deposit into the pool. Their tokens will be minted using the current value.",
     },
     {
-        image: "/img/pools/mechanism-design-placeholder-2.png",
+        image: "/img/pools/mechanism-design-placeholder.png",
         text: "The value in the long and short side may not always be equal. When the sides are skewed, the sides are not exposed to the same value of potential gains.",
     },
     {
