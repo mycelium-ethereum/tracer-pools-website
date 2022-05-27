@@ -3,9 +3,10 @@ import { motion, useAnimation } from "framer-motion";
 
 const AnimateIn: React.FC<{
   delayLevel: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+  opacityOnly?: boolean;
   className?: string;
   children: React.ReactNode;
-}> = ({ delayLevel, className, children }) => {
+}> = ({ delayLevel, opacityOnly, className, children }) => {
   const delayValues = [0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2, 3.6, 4];
   const animationControl = useAnimation();
   const { inView, ref } = useInView();
@@ -22,7 +23,7 @@ const AnimateIn: React.FC<{
   return (
     <motion.div
       initial={{
-        y: "-7px",
+        y: opacityOnly ? 0 : "-7px",
         opacity: 0,
       }}
       animate={animationControl}
