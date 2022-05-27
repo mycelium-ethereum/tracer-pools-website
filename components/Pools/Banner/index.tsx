@@ -8,7 +8,10 @@ import { headerInfo } from "@components/Pools/Banner/presets";
 
 const Banner: React.FC<{}> = () => {
   return (
-    <Section id="section-1" className="bg-tracer-darkblue">
+    <Section
+      id="section-1"
+      className="h-[800px] bg-tracer-darkblue sm:h-screen 4xl:min-h-[1440px]"
+    >
       <Container className="relative pt-[100px] pb-10 sm:pt-40 sm:pb-36">
         <LargeHeader {...headerInfo} />
         <TokenSpread />
