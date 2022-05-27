@@ -3,13 +3,13 @@ import PageLink from "@components/Shared/PageLink";
 // import Button from "../Shared/Button";
 
 const LegalSidebarContent: React.FC<{ route: string }> = ({ route }) => {
-  const NUMBER_OF_DOCS = 3;
+  const NUM_DOCS = 3;
   const documentLinks = [
     { text: "Privacy Policy", link: "/legal/privacy-policy" },
     { text: "Terms of Use", link: "/legal/terms-of-use" },
     {
       text: "Participation Agreement",
-      outgoingLink: "/legal/participation-agreement",
+      link: "/legal/participation-agreement",
     },
     { text: "Interfaces Disclaimer", link: "/legal/interfaces-disclaimer" },
   ];
@@ -33,14 +33,10 @@ const LegalSidebarContent: React.FC<{ route: string }> = ({ route }) => {
   const DocumentLink: React.FC<{
     text: string;
     link?: string;
-    outgoingLink?: string;
     border?: boolean;
-  }> = ({ text, link, outgoingLink, border }): JSX.Element => (
+  }> = ({ text, link, border }): JSX.Element => (
     <>
-      <PageLink
-        href={outgoingLink ? outgoingLink : link}
-        newTab={!!outgoingLink && outgoingLink.length > 0}
-      >
+      <PageLink href={link}>
         <span className="my-2 block font-bold leading-[24px] text-action-active transition-colors duration-300 hover:text-tracer-lightblue">
           {text}
         </span>
@@ -72,11 +68,9 @@ const LegalSidebarContent: React.FC<{ route: string }> = ({ route }) => {
           key={i}
           text={link.text}
           link={link.link}
-          outgoingLink={!!link.outgoingLink ? link.outgoingLink : undefined}
-          border={i !== NUMBER_OF_DOCS - 1}
+          border={i !== NUM_DOCS - 1}
         />
       ))}
-      {/* <Button lightBlueGradient link="" */}
     </div>
   );
 };

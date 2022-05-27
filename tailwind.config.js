@@ -15,6 +15,13 @@ module.exports = {
       "4xl": "2560px",
       "5xl": "3840px",
     },
+    listStyleType: {
+      none: "none",
+      disc: "disc",
+      decimal: "decimal",
+      roman: "lower-roman",
+      alpha: "lower-alpha",
+    },
     extend: {
       colors: {
         tracer: {
