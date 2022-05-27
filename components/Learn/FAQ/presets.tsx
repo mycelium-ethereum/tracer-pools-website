@@ -11,7 +11,7 @@ export const faqQuestions = [
         derivatives, but, unlike perpetual swaps, you don’t need an account with
         an exchange to trade Perpetual Pool tokens. That’s because the tokens
         act most like a leveraged ETF, where positions are transferable. Read
-        more{" "}
+        more&nbsp;
         <a
           href="https://docs.tracer.finance/tracer-faqs/perpetual-pools-faqs#how-are-perpetual-pools-different-from-perpetual-swaps"
           target="_blank"
@@ -31,15 +31,15 @@ export const faqQuestions = [
         To use Perpetual Pools, you’ll need to be on a network called Arbitrum.
         Arbitrum is an Ethereum L2, which means it has the security of the
         Ethereum blockchain but is cheaper and faster to use. Once you’re
-        connected, minting leveraged tokens is a breeze. Check out our{" "}
+        connected, minting leveraged tokens is a breeze. Check out our&nbsp;
         <PageLink
           href="/radar/bridging-to-arbitrum/"
           className="text-blue-400 underline"
           // id = "faq-arbitrum-guide"
         >
           Arbitrum guide
-        </PageLink>{" "}
-        to get setup.
+        </PageLink>
+        &nbsp; to get setup.
       </p>
     ),
   },
@@ -52,7 +52,7 @@ export const faqQuestions = [
         capital, so, once the debt is paid off, any profits or losses you make
         are amplified. With Tracer, you can get leveraged exposure without
         borrowing or worrying about margin calls and liquidations. Read more
-        about Tracer’s Power Leverage{" "}
+        about Tracer’s Power Leverage&nbsp;
         <a
           href="https://docs.tracer.finance/market-types/perpetual-pools/mechanism-design"
           target="_blank"
@@ -64,5 +64,51 @@ export const faqQuestions = [
         .
       </p>
     ),
+  },
+];
+
+export const faqSchemaData = [
+  {
+    question: "Are Perpetual Pools Different from Perpetual Swaps?",
+    answer: `Yes. Perpetual Pools are a marketplace for leveraged tokens, while
+        perpetual swaps simulate spot trading with margin.They are both
+        derivatives, but, unlike perpetual swaps, you don’t need an account with
+        an exchange to trade Perpetual Pool tokens. That’s because the tokens
+        act most like a leveraged ETF, where positions are transferable. Read
+        more&nbsp;
+        <a
+          href="https://docs.tracer.finance/tracer-faqs/perpetual-pools-faqs#how-are-perpetual-pools-different-from-perpetual-swaps"
+        >
+          here
+        </a>
+        .`,
+  },
+  {
+    question: "How do I use Perpertual Pools on Arbitrum?",
+    answer: `To use Perpetual Pools, you’ll need to be on a network called Arbitrum.
+        Arbitrum is an Ethereum L2, which means it has the security of the
+        Ethereum blockchain but is cheaper and faster to use. Once you’re
+        connected, minting leveraged tokens is a breeze. Check out our&nbsp;
+        <a
+          href="https://tracer.finance/radar/bridging-to-arbitrum/"
+        >
+          Arbitrum guide
+        </a>
+        &nbsp; to get setup.`,
+  },
+  {
+    question: "How Does Leveraged Trading Work?",
+    answer: `Normally, to trade with leverage you need to borrow money. Borrowing
+        lets you take on a bigger position than you could get with your initial
+        capital, so, once the debt is paid off, any profits or losses you make
+        are amplified. With Tracer, you can get leveraged exposure without
+        borrowing or worrying about margin calls and liquidations. Read more
+        about Tracer’s Power Leverage&nbsp;
+        <a
+          href="https://docs.tracer.finance/market-types/perpetual-pools/mechanism-design"
+        >
+          here
+        </a>
+        .`,
   },
 ];

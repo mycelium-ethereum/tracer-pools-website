@@ -235,7 +235,13 @@ const Navbar: React.FC<{ route: string }> = ({ route }) => {
               ref={productDropdownRef}
               onMouseEnter={handleDesktopProductsDropdownOpen}
             >
-              <button className="text-sm">{links[1].label}</button>
+              <button
+                className={`text-sm transition-colors duration-300 ${
+                  desktopProductsDropdownOpen ? "text-tracer-lightblue" : ""
+                }`}
+              >
+                {links[1].label}
+              </button>
               <ProductsDropdown
                 desktopProductsDropdownOpen={desktopProductsDropdownOpen}
                 handleDesktopProductsDropdownClose={
