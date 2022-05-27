@@ -19,15 +19,16 @@ const Tokens: React.FC<{ position: number }> = ({ position }) => {
         className={`exposure-token btc-token absolute top-8 -right-24 max-w-[254px] md:top-24 md:max-w-[280px] lg:-right-12 lg:top-24 lg:max-w-[400px] 2xl:top-12 2xl:-right-52 2xl:max-w-[516px] 4xl:right-[200px] 4xl:top-auto 4xl:bottom-16 4xl:max-w-[602px] ${animationStyles}`}
       />
       {/* Render hidden elements to preload images */}
-      {shortTokens.concat(longTokens).map((token, index) => (
-        <img
-          src={`/img/pools/tokens/slider/${token}.png`}
-          className="w-0 h-0"
-          loading="eager"
-          key={index}
-          alt={token}
-        />
-      ))}
+      <div className="pointer-events-none absolute -bottom-1/2 -top-1/2">
+        {shortTokens.concat(longTokens).map((token, index) => (
+          <OptimisedImage
+            key={index}
+            src={`/img/pools/tokens/slider/${token}.png`}
+            className="h-[1px] w-[1px]"
+            alt={token}
+          />
+        ))}
+      </div>
     </div>
   );
 };
