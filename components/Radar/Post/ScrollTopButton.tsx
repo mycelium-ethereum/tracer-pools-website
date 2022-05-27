@@ -16,7 +16,7 @@ const ScrollTopButton: React.FC<{ className?: string }> = ({ className }) => {
         <img
           src="/img/icons/arrow-up.svg"
           alt="Back to Top"
-          className="ml-2.5 h-[15px] w-2.5 transition-[transform] duration-300 group-hover:-translate-y-[0.5]"
+          className="ml-2.5 h-[15px] w-2.5 transition-[margin] duration-150 group-hover:mb-1"
         />
       </button>
     </a>

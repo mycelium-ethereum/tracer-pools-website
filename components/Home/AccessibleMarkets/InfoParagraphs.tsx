@@ -7,7 +7,7 @@ const InfoParagraphs: React.FC<{}> = () => {
     <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:w-max lg:gap-9">
       {paragraphCopy.map((paragraph, i: number) => {
         return (
-          <AnimateIn delayLevel={2} key={i}>
+          <AnimateIn delayLevel={3} key={i}>
             <ParagraphBlock
               title={paragraph.title}
               text={paragraph.text}
