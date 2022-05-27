@@ -1,31 +1,31 @@
 export const exposureItems = [
     {
-        image: "/img/pools/mechanism-design-placeholder.png",
-        text: "A perpetual pool has long and short sides, where users can deposit ERC20 tokens.",
+        image: "/img/pools/mechanism-design/step-1.jpg",
+        text: "Deposit collateral into either the long or short side of a pool to mint a leveraged token.",
     },
     {
-        image: "/img/pools/mechanism-design-placeholder.png",
-        text: "Users are minted a pool token, representing their share of the side. This token can be burnt in exchange for the underlying at any time, which is where the pool token’s value is derived from.",
+        image: "/img/pools/mechanism-design/step-2.jpg",
+        text: "Your token represents your fractional share of the collateral in that side of the pool.",
     },
     {
-        image: "/img/pools/mechanism-design-placeholder.png",
-        text: "The pool tracks the movement of some underlying feed. This feed can go up or down. When the underlying feed increases, shorts pay longs, increasing the value of the Long Tokens.",
+        image: "/img/pools/mechanism-design/step-3.jpg",
+        text: "When the underlying feed increases, collateral is transferred from the shorts to the longs - increasing the value of the Long Tokens.",
     },
     {
-        image: "/img/pools/mechanism-design-placeholder.png",
-        text: "When the underlying feed decreases, longs pay shorts, increasing the value of the Short Tokens.",
+        image: "/img/pools/mechanism-design/step-4.jpg",
+        text: "When the underlying feed decreases, collateral is transferred from the longs to the shorts - increasing the value of the Short Tokens.",
     },
     {
-        image: "/img/pools/mechanism-design-placeholder.png",
-        text: "New entrants can deposit into the pool. Their tokens will be minted using the current value.",
+        image: "/img/pools/mechanism-design/step-5.jpg",
+        text: "The magnitude of the value transfer is determined by the magnitude of the price move and the pool’s target leverage.",
     },
     {
-        image: "/img/pools/mechanism-design-placeholder.png",
-        text: "The value in the long and short side may not always be equal. When the sides are skewed, the sides are not exposed to the same value of potential gains.",
+        image: "/img/pools/mechanism-design/step-6.jpg",
+        text: "The value transfer calculation prevents 100% of any traders collateral from ever being transferred away - preventing all pool participants from ever being liquidated.",
     },
     {
-        image: "/img/pools/mechanism-design-placeholder.png",
-        text: "Asymmetric upside as a result of the skew is a natural incentive for people to enter the side with less funds, bringing the sides closer to balanced.",
+        image: "/img/pools/mechanism-design/step-7.jpg",
+        text: "When there is more collateral in one side of the pool, traders taking the less popular position benefit from a greater effective leverage on gains than they experience on losses.",
     },
 ];
 
@@ -37,12 +37,12 @@ const sliderRootSettings = {
     autoplay: true,
     autoplaySpeed: 4000,
     speed: 500,
-    draggable: false,
+    draggable: true,
     focusOnSelect: true,
     pauseOnFocus: true,
     pauseOnHover: true,
-    swipe: false,
-    touchMove: false,
+    swipe: true,
+    touchMove: true,
 }
 
 export const sliderNavSettings = {

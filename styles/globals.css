@@ -81,19 +81,19 @@ input::placeholder {
   @apply delay-[300ms];
 }
 .active .nav-link:nth-child(2) {
-  @apply delay-[400ms];
+  @apply delay-[500ms];
 }
 /* .active .nav-link:nth-child(3) { // unused
   @apply delay-[500ms];
 } */
 .active .nav-link:nth-child(4) {
-  @apply delay-[500ms];
+  @apply delay-[700ms];
 }
 .active .nav-link:nth-child(5) {
-  @apply delay-[600ms];
+  @apply delay-[900ms];
 }
 .active .nav-link:nth-child(6) {
-  @apply delay-[700ms];
+  @apply delay-[1100ms];
 }
 
 /* Launch dropdown animations */
@@ -637,6 +637,12 @@ img.image-cover-right {
   .vertical-slider .slick-slide,
   .vertical-slider {
     width: 800px !important;
+  }
+  .mechanism-slider .slick-slide {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    width: 100% !important;
   }
 }
 /* 3XL */
