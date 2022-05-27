@@ -17,7 +17,7 @@ const MechanismSlider: React.FC<{}> = () => {
   const TOTAL_SLIDES = exposureItems.length;
 
   return (
-    <div className="relative z-10 -translate-x-6 flex w-[calc(100%+48px)] flex-col border-t border-b border-action-active bg-white [box-shadow:_0px_4px_10px_2px_rgba(26,85,245,0.1)] sm:ml-0 sm:w-full sm:flex-row sm:items-center sm:border xl:ml-12 xl:max-w-[767px] 4xl:max-w-[1477px] py-6">
+    <div className="relative z-10 -translate-x-6 flex w-[calc(100%+48px)] flex-col border-t border-b border-action-active bg-white [box-shadow:_0px_4px_10px_2px_rgba(26,85,245,0.1)] sm:translate-x-0 sm:w-full sm:flex-row sm:items-center sm:border xl:ml-12 xl:max-w-[767px] 4xl:max-w-[1477px] py-6">
       <SliderNav
         slider1={slider1}
         slider2={slider2}

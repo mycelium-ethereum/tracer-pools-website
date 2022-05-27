@@ -37,12 +37,22 @@ const sliderRootSettings = {
     autoplay: true,
     autoplaySpeed: 4000,
     speed: 500,
-    draggable: true,
     focusOnSelect: true,
     pauseOnFocus: true,
     pauseOnHover: true,
-    swipe: true,
-    touchMove: true,
+    draggable: false,
+    swipe: false,
+    touchMove: false,
+    responsive: [
+        {
+            breakpoint: 640,
+            settings: {
+                draggable: true,
+                swipe: true,
+                touchMove: true,
+            }
+        },
+    ]
 }
 
 export const sliderNavSettings = {
