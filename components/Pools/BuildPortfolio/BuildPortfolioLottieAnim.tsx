@@ -1,18 +1,28 @@
 import { useLottie } from "lottie-react";
-import diagram from "../../../public/img/pools/build-portfolio/diagram.json";
 
-const BuildPortfolioLottieAnim: React.FC<{ className?: string }> = ({
-  className,
-}) => {
+const BuildPortfolioLottieAnim: React.FC<{
+  file: any;
+  position?: number;
+  curPosition?: number;
+  className?: string;
+}> = ({ file, position, curPosition, className }) => {
   const options = {
-    animationData: diagram,
+    animationData: file,
     loop: true,
     autoplay: true,
   };
 
   const { View } = useLottie(options);
 
-  return <div className={`${className ? className : ""}`}>{View}</div>;
+  return (
+    <div
+      className={`transition-opacity duration-500 ${
+        position === curPosition ? "sm:opacity-100" : "sm:opacity-0"
+      } ${className ? className : ""}`}
+    >
+      {View}
+    </div>
+  );
 };
 
 export default BuildPortfolioLottieAnim;

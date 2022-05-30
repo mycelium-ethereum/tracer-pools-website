@@ -1,3 +1,15 @@
+import create from "../../../public/img/pools/build-portfolio/create.json";
+import redeem from "../../../public/img/pools/build-portfolio/redeem.json";
+import staking from "../../../public/img/pools/build-portfolio/staking.json";
+import trade from "../../../public/img/pools/build-portfolio/trade.json";
+
+export const lottieFiles = [
+    create,
+    redeem,
+    staking,
+    trade
+]
+
 export const portfolioCarouselItems = [
     { title: "Create", text: "Mint new long or short tokens with a single deposit." },
     { title: "Stake", text: "Native staking on Tracer to earn rewards." },
@@ -10,9 +22,9 @@ export const settings = {
     dots: false,
     arrows: false,
     vertical: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 3000,
-    speed: 500,
+    speed: 800,
     draggable: false,
     swipe: false,
     touchMove: false,

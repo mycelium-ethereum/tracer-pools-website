@@ -9,18 +9,25 @@ import {
 } from "@components/Pools/BuildPortfolio/presets";
 import { pauseSlider } from "@lib/helpers";
 
-const PortfolioCarousel: React.FC<{}> = () => {
+const PortfolioCarousel: React.FC<{
+  updatePosition: (newPosition: number) => void;
+}> = ({ updatePosition }) => {
   const [slider, setSlider] = useState(null);
+  const updatedSettings = {
+    ...settings,
+    beforeChange: (current, next) => updatePosition(next),
+  };
 
   return (
     <Slider
-      {...settings}
+      {...updatedSettings}
       ref={(slider) => setSlider(slider)}
       className="portfolio-slider h-[650px] sm:h-[400px] sm:w-[400px] 4xl:h-[460px] 4xl:w-[625px]"
     >
-      {portfolioCarouselItems.map((item) => (
+      {portfolioCarouselItems.map((item, i) => (
         <Slide
           key={item.title}
+          index={i}
           item={item}
           slider={slider}
           pauseSlider={pauseSlider}
