@@ -1,4 +1,5 @@
 import { capitaliseFirstLetter } from "lib/helpers";
+import PageLink from "./PageLink";
 
 const CategoryBubble: React.FC<{
   category: string;

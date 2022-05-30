@@ -43,7 +43,14 @@ const PostSidebarContent: React.FC<{
           smallerMargin
         />
         {currentArticle.category && (
-          <CategoryBubble category={currentArticle.category} />
+          <PageLink
+            href={{
+              pathname: "/radar",
+              query: { category: currentArticle.category },
+            }}
+          >
+            <CategoryBubble category={currentArticle.category} />
+          </PageLink>
         )}
       </div>
       <RelatedArticles currentArticle={currentArticle} articles={articles} />

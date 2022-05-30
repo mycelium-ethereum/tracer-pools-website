@@ -5,15 +5,33 @@ import Container from "@components/Shared/Container";
 import PageHeader from "@components/Shared/PageHeader";
 import PageSection from "@components/Shared/Section";
 import RadarPosts from "@components/Radar/RadarPosts";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { GetStaticProps } from "next";
 import { tags } from "@components/Radar/presets";
 import { blogSeoDesc } from "@components/Shared/presets";
 
+// type CategoryProps = {
+//   category: "announcements" | "education" | "partnerships" | "all"
+// }
+
 const BlogPage: React.FC<{ articles: any }> = ({ articles }) => {
+  const categories = ["announcements", "education", "partnerships", "all"];
   const [filteredArticles, setFilteredArticles] = useState(articles);
   const [category, setCategory] = useState<string>("all");
   const postContainerRef = useRef<HTMLDivElement>(null);
+
+  const getCategoryParam = () => {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const category = urlParams.get("category");
+    if (category && categories.includes(category)) {
+      setCategory(category);
+    }
+  };
+
+  useEffect(() => {
+    getCategoryParam();
+  }, []);
 
   return (
     <>

@@ -1,6 +1,7 @@
 import Moment from "react-moment";
 import CategoryBubble from "@components/Shared/CategoryBubble";
 import ShareButtons from "@components/Radar/Post/ShareButtons";
+import PageLink from "@components/Shared/PageLink";
 
 const PostHeader: React.FC<{
   data: any;
@@ -32,7 +33,11 @@ const PostHeader: React.FC<{
       </div>
       {data.category && (
         <div className="my-2.5">
-          <CategoryBubble category={data.category} large />
+          <PageLink
+            href={{ pathname: "/radar", query: { category: data.category } }}
+          >
+            <CategoryBubble category={data.category} large />
+          </PageLink>
         </div>
       )}
     </header>
