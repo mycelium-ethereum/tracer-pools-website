@@ -10,9 +10,9 @@ const Banner: React.FC<{}> = () => {
   return (
     <Section
       id="section-1"
-      className="h-[800px] bg-tracer-darkblue sm:h-screen 4xl:min-h-[1440px]"
+      className="bg-tracer-darkblue pt-[100px] pb-10 sm:min-h-screen sm:pt-40 sm:pb-36"
     >
-      <Container className="relative pt-[100px] pb-10 sm:pt-40 sm:pb-36">
+      <Container>
         <LargeHeader {...headerInfo} />
         <TokenSpread />
         <IntroText />
