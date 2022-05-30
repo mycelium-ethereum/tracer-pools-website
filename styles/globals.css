@@ -400,21 +400,27 @@ img.image-cover-right {
 .prose h1 strong,
 .prose h2 strong,
 .prose h3 strong {
-  @apply text-action-active;
+  @apply font-bold text-action-active;
 }
-.prose h1 strong,
-.prose h2 strong,
-.prose h3 strong {
-  font-weight: 400 !important;
+.prose h1 {
+  @apply text-2xl leading-[30px];
 }
-.prose h1,
-.prose h2,
+.prose h2 {
+  @apply text-xl leading-[30px];
+}
 .prose h3 {
-  @apply relative mb-4 mt-10 text-sm font-normal uppercase tracking-[0.15em] text-highlight;
+  @apply text-base leading-[24px];
 }
-.prose h1:after,
-.prose h2:after,
-.prose h3:after {
+.prose :where(h1):not(:where([class~="not-prose"] *)) {
+  @apply my-4;
+}
+.prose :where(h2):not(:where([class~="not-prose"] *)) {
+  @apply my-2;
+}
+/* .prose .special-heading {
+  @apply relative mb-4 mt-10 text-sm font-normal uppercase tracking-[0.15em] text-highlight;
+} */
+.prose .special-heading:after {
   content: "";
   position: absolute;
   bottom: -8px;

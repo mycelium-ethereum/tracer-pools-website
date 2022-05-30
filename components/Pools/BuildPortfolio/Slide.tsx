@@ -18,7 +18,7 @@ const Slide: React.FC<{
         {item.text}
       </span>
       <OptimisedImage
-        src="/img/pools/build-portfolio-diagram.png"
+        src="/img/pools/build-portfolio-diagram.jpg"
         alt="Perpetual Pools diagram"
         className="mx-auto my-2 block w-full sm:hidden"
       />

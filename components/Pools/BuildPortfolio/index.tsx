@@ -1,8 +1,8 @@
 import Section from "@components/Shared/Section";
 import Container from "@components/Shared/Container";
 import UnderlinedHeading from "@components/Shared/Heading/UnderlinedHeading";
-import OptimisedImage from "@components/Shared/OptimisedImage";
 import PortfolioCarousel from "@components/Pools/BuildPortfolio/PortfolioCarousel";
+import BuildPortfolioLottieAnim from "@components/Pools/BuildPortfolio/BuildPortfolioLottieAnim";
 
 const BuildPortfolio: React.FC<{}> = () => {
   return (
@@ -10,12 +10,8 @@ const BuildPortfolio: React.FC<{}> = () => {
       id="section-4"
       className="h-auto bg-white py-16 xl:py-20 4xl:h-[1000px]"
     >
-      <Container className="flex flex-col-reverse justify-center xl:flex-row xl:items-center">
-        <OptimisedImage
-          src="/img/pools/build-portfolio-diagram.png"
-          alt="Perpetual Pools diagram"
-          className="mx-auto mt-10 hidden max-h-[498px] max-w-[567px] sm:block lg:mx-0 lg:mt-0 lg:mr-[122px] 3xl:mr-[322px] 3xl:max-h-[768px] 3xl:max-w-[874px]"
-        />
+      <Container className="flex flex-col-reverse justify-center xl:flex-row xl:items-center xl:justify-between">
+        <BuildPortfolioLottieAnim className="w-[600px]" />
         <div>
           <UnderlinedHeading
             lineColor="blue"
