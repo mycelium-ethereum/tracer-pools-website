@@ -40,9 +40,7 @@ const QuestionDropdown: React.FC<{
       ${open ? "" : "hover:bg-action-cell"}`}
     >
       <button
-        className={`relative flex w-full cursor-pointer select-none items-center border-0 p-4 pr-10 text-left font-bold text-action-active outline-none transition-all duration-300 ${
-          open ? "pb-2" : ""
-        }`}
+        className="relative flex w-full cursor-pointer select-none items-center border-0 p-4 pr-10 pb-2 text-left font-bold text-action-active outline-none transition-all duration-300"
         onClick={handleClick}
       >
         {content.question}
