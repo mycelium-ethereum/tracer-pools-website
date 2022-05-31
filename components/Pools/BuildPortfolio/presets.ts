@@ -5,15 +5,15 @@ import trade from "../../../public/img/pools/build-portfolio/trade.json";
 
 export const lottieFiles = [
     create,
-    redeem,
+    trade,
     staking,
-    trade
+    redeem,
 ]
 
 export const portfolioCarouselItems = [
     { title: "Create", text: "Mint new long or short tokens with a single deposit." },
-    { title: "Stake", text: "Native staking on Tracer to earn rewards." },
     { title: "Trade", text: "Buy and sell leveraged tokens on Balancer/Curve etc." },
+    { title: "Stake", text: "Native staking on Tracer to earn rewards." },
     { title: "Redeem", text: "Burn long and short tokens to redeem your funds." },
 ];
 

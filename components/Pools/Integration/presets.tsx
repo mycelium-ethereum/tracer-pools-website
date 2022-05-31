@@ -4,6 +4,7 @@ const paragraphStyles = "text-base leading-[24px] lg:text-xl lg:leading-[28px]";
 
 export const integrationItems = [
   {
+    image: "/img/pools/integration/security.svg",
     title: "SECURITY FIRST",
     text: (
       <>
@@ -32,6 +33,7 @@ export const integrationItems = [
     ),
   },
   {
+    image: "/img/pools/integration/integration.svg",
     title: "INTEGRATION READY",
     text: (
       <>
@@ -47,6 +49,7 @@ export const integrationItems = [
     ),
   },
   {
+    image: "/img/pools/integration/permissionless.svg",
     title: "Permissionless",
     text: (
       <>
