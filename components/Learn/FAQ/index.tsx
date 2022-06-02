@@ -3,8 +3,10 @@ import Container from "@components/Shared/Container";
 import H2 from "@components/Shared/Heading/H2";
 import Section from "@components/Shared/Section";
 import HelpGovernBanner from "@components/Shared/Banners/HelpGovernBanner";
-import QuestionDropdown from "@components/Learn/FAQ/QuestionDropdown";
 import FAQSchema from "@components/Learn/FAQ/FAQSchema";
+import FourColumnLayout from "@components/Learn/FAQ/FourColumnLayout";
+import ThreeColumnLayout from "@components/Learn/FAQ/ThreeColumnLayout";
+import TwoColumnLayout from "@components/Learn/FAQ/TwoColumnLayout";
 import { faqQuestions, faqSchemaData } from "@components/Learn/FAQ/presets";
 
 const FAQ: React.FC<{}> = () => {
@@ -21,10 +23,13 @@ const FAQ: React.FC<{}> = () => {
             FAQs
           </UnderlinedHeading>
           <H2 className="mb-6 max-w-[767px]">
-            {`{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.}`}
+            The essentials to get started using Perpetual Pools
           </H2>
           <div className="mb-6 grid flex-wrap justify-between gap-x-4 sm:grid-cols-2 xl:max-w-[926px] 3xl:max-w-full 3xl:grid-cols-3 4xl:grid-cols-4">
-            <div>
+            <ThreeColumnLayout faqQuestions={faqQuestions} />
+            <FourColumnLayout faqQuestions={faqQuestions} />
+            <TwoColumnLayout faqQuestions={faqQuestions} />
+            {/* <div>
               {faqQuestions.map((content, i) => (
                 <QuestionDropdown key={i} content={content} />
               ))}
@@ -43,7 +48,7 @@ const FAQ: React.FC<{}> = () => {
               {faqQuestions.reverse().map((content, i) => (
                 <QuestionDropdown key={i} content={content} />
               ))}
-            </div>
+            </div> */}
           </div>
           <HelpGovernBanner />
         </Container>

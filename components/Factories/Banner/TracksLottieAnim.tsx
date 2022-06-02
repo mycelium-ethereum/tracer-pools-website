@@ -17,7 +17,7 @@ const TracksLottieAnim: React.FC<{}> = () => {
       opacityOnly
       className="pointer-events-none absolute top-0 left-0 h-full w-full"
     >
-      <div className="absolute bottom-[100px] left-0 h-auto w-full min-w-[2000px]">
+      <div className="absolute bottom-0 left-0 h-auto w-full min-w-[2000px] xl:bottom-[100px]">
         {View}
       </div>
     </AnimateIn>

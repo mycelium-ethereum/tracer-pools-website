@@ -4,6 +4,7 @@ const paragraphStyles = "text-base leading-[24px] lg:text-xl lg:leading-[28px]";
 
 export const integrationItems = [
   {
+    image: "/img/factories/points/create-markets.svg",
     title: "CREATE MARKETS",
     text: (
       <>
@@ -15,6 +16,7 @@ export const integrationItems = [
     ),
   },
   {
+    image: "/img/factories/points/integration-ready.svg",
     title: "INTEGRATION READY",
     text: (
       <>
@@ -29,6 +31,7 @@ export const integrationItems = [
     ),
   },
   {
+    image: "/img/factories/points/security-first.svg",
     title: "SECURITY FIRST",
     text: (
       <>

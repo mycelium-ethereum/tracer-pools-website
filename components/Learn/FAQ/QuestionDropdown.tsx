@@ -1,5 +1,5 @@
-import GradientLine from "@components/Shared/GradientLine";
 import { useEffect, useState, useRef } from "react";
+import GradientLine from "@components/Shared/GradientLine";
 
 const QuestionDropdown: React.FC<{
   content: {

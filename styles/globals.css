@@ -60,7 +60,6 @@ p {
 input::placeholder {
   @apply text-action-active;
 }
-
 /* Backdrop filter fallback for Firefox */
 @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
   .backdrop-blur-lg,

@@ -1,9 +1,8 @@
 import Button from "@components/Shared/Buttons/Button";
-import OptimisedImage from "@components/Shared/OptimisedImage";
 import CenteredHeading from "@components/Factories/CenteredHeading";
 
 const FactoryInfoCard: React.FC<{
-  image: boolean;
+  image: string;
   title: string;
   description: string;
   link: string;
@@ -18,10 +17,10 @@ const FactoryInfoCard: React.FC<{
         </div>
         <div className="relative z-10 flex flex-col items-center justify-center p-4 text-center">
           {image && (
-            <OptimisedImage
-              src="/img/shared/integration-placeholder.png"
-              alt=""
-              className="mb-4 max-h-[154px] max-w-[154px] rounded-lg"
+            <img
+              src={image}
+              alt={`${title} icon`}
+              className="mb-4 h-[120px] max-w-[120px] rounded-lg"
             />
           )}
           <CenteredHeading className={headingStyles}>{title}</CenteredHeading>

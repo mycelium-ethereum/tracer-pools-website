@@ -1,20 +1,19 @@
 import Section from "@components/Shared/Section";
 import Container from "@components/Shared/Container";
 import Header from "@components/Factories/Model/Header";
-import Graphics from "@components/Factories/Model/Graphics";
-import MoreInfoButtons from "./MoreInfoButtons";
+import MoreInfoButtons from "@components/Factories/Model/MoreInfoButtons";
+import ModelLottieAnim from "@components/Factories/Model/ModelLottieAnim";
 
 const Model: React.FC<{}> = () => {
   return (
-    <Section
-      id="section-2"
-      className="bg-white pt-16 pb-[320px] lg:h-[650px] lg:pb-0 lg:pt-0 4xl:h-[1000px]"
-    >
-      <Container className="flex h-full flex-col justify-center">
-        <Header />
-        <MoreInfoButtons />
+    <Section id="section-2" className="bg-white py-16 4xl:h-[1000px]">
+      <Container className="flex h-full flex-col justify-between lg:flex-row lg:items-center">
+        <div className="mr-10 flex flex-col justify-center">
+          <Header />
+          <MoreInfoButtons />
+        </div>
+        <ModelLottieAnim />
       </Container>
-      <Graphics />
     </Section>
   );
 };
