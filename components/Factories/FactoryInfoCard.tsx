@@ -20,7 +20,7 @@ const FactoryInfoCard: React.FC<{
             <img
               src={image}
               alt={`${title} icon`}
-              className="mb-4 h-[120px] max-w-[120px] rounded-lg"
+              className="mb-4 h-[120px] w-[120px] rounded-lg"
             />
           )}
           <CenteredHeading className={headingStyles}>{title}</CenteredHeading>

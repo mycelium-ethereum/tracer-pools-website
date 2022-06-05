@@ -3,7 +3,7 @@ import GradientLine from "@components/Shared/GradientLine";
 const UnderlinedHeading: React.FC<{
   lineColor: "blue" | "lightblue" | "purple" | "grey";
   hideBullet?: boolean;
-  children: string;
+  children: string | React.ReactNode;
   className?: string;
 }> = ({ lineColor, hideBullet, children, className }) => {
   return (

@@ -1,5 +1,6 @@
 import { GetStaticProps } from "next";
 import SEO from "@components/Shared/SEO";
+import Banner from "@components/Learn/Banner";
 import TracerLibrary from "@components/Learn/TracerLibrary";
 import UserGuides from "@components/Learn/UserGuides";
 import UserDocs from "@components/Learn/UserDocs";
@@ -17,6 +18,7 @@ const LearnPage: React.FC<{ dropVideoData: any; mediaVideoData: any }> = ({
   return (
     <>
       <SEO title="Learn" description={learnSeoDesc} />
+      <Banner />
       <UserGuides />
       <TracerLibrary />
       <UserDocs />

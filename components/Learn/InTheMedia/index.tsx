@@ -72,10 +72,7 @@ const InTheMedia: React.FC<{ mediaVideos: string[]; mediaVideoData: any }> = ({
         >
           IN THE MEDIA
         </UnderlinedHeading>
-        <H2 className="mb-8 max-w-[767px]">
-          The latest research from Tracer and the RMIT Blockchain Innovation
-          Hub. Every fortnight on Twitter and YouTube.
-        </H2>
+
         <div className="grid grid-cols-1 gap-x-4 sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 4xl:grid-cols-5">
           {
             {

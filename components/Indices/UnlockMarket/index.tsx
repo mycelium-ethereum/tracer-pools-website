@@ -1,6 +1,7 @@
 import Section from "@components/Shared/Section";
 import Container from "@components/Shared/Container";
 import Header from "@components/Indices/UnlockMarket/Header";
+import UnlockMarketLottieAnim from "@components/Indices/UnlockMarket/UnlockMarketLottieAnim";
 
 const UnlockMarket: React.FC<{}> = () => {
   return (
@@ -11,6 +12,7 @@ const UnlockMarket: React.FC<{}> = () => {
       <Container className="flex h-full items-center">
         <Header />
       </Container>
+      <UnlockMarketLottieAnim />
     </Section>
   );
 };

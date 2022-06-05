@@ -1,5 +1,5 @@
 import { useLottie } from "lottie-react";
-import mobileTracks from "../../../public/img/factories/tracks-lottie/tracks.json";
+import mobileTracks from "../../../public/img/home/factories/tracks-mobile.json";
 
 const MobileFactoriesLottieAnim: React.FC<{}> = () => {
   const options = {
@@ -11,8 +11,8 @@ const MobileFactoriesLottieAnim: React.FC<{}> = () => {
   const { View } = useLottie(options);
 
   return (
-    <div className="relative block h-[290px] w-full md:h-[400px] lg:hidden">
-      <div className="absolute top-0 left-0 h-full w-[1200px]">{View}</div>
+    <div className="relative mt-5 block h-[290px] w-full md:h-[400px] lg:hidden">
+      <div className="absolute top-0 left-0 h-full w-[1000px]">{View}</div>
     </div>
   );
 };

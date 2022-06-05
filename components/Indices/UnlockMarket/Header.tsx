@@ -6,8 +6,8 @@ const Header: React.FC<{}> = () => {
         <br className="block sm:hidden" /> access
       </h1>
       <p className="mx-auto max-w-[473px] text-tertiary">
-        Bring new data on-chain and create a derivative market in minutes via
-        the Tracer Factory
+        Bring new data on-chain and create a derivative
+        <br /> market in minutes via the Tracer Factory
       </p>
     </header>
   );
