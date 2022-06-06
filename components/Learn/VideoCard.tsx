@@ -17,7 +17,7 @@ const VideoCard: React.FC<{
     publishedAt = article.snippet.publishedAt;
   } else if (article.items) {
     // In the media, single videos
-    link = `https://www.youtube.com/watch?v=$article.items[0].id`;
+    link = `https://www.youtube.com/watch?v=${article.items[0].id}`;
     image = article.items[0].snippet.thumbnails.high.url;
     title = article.items[0].snippet.title;
     description = article.items[0].snippet.description;
