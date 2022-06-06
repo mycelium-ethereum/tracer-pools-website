@@ -7,7 +7,7 @@ const CreateStrategies: React.FC<{}> = () => {
   return (
     <Section
       id="section-2"
-      className="bg-secondary pt-16 lg:h-[650px] 4xl:h-[1000px]"
+      className="bg-secondary py-16 lg:h-[650px] lg:py-0 4xl:h-[1000px]"
     >
       <Container className="flex h-full flex-col justify-between lg:flex-row lg:items-center">
         <Header />
