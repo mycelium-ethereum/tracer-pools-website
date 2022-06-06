@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import UnderlinedHeading from "@components/Shared/Heading/UnderlinedHeading";
 import Container from "@components/Shared/Container";
-import H2 from "@components/Shared/Heading/H2";
 import Section from "@components/Shared/Section";
 import VideoCard from "@components/Learn/VideoCard";
 import FiveColumnLayout from "@components/Shared/Layouts/FiveColumnLayout";
@@ -9,8 +7,10 @@ import FourColumnLayout from "@components/Shared/Layouts/FourColumnLayout";
 import OneColumnLayout from "@components/Shared/Layouts/OneColumnLayout";
 import ThreeColumnLayout from "@components/Shared/Layouts/ThreeColumnLayout";
 import TwoColumnLayout from "@components/Shared/Layouts/TwoColumnLayout";
-import { filterArticles, handleLearnPageResize } from "@lib/helpers";
 import ViewAllButton from "@components/Learn/ViewAllButton";
+import LearnHeader from "@components/Learn/LearnHeader";
+import { headerContent } from "@components/Learn/presets";
+import { filterArticles, handleLearnPageResize } from "@lib/helpers";
 
 const InTheMedia: React.FC<{ mediaVideos: string[]; mediaVideoData: any }> = ({
   mediaVideos,
@@ -65,14 +65,7 @@ const InTheMedia: React.FC<{ mediaVideos: string[]; mediaVideoData: any }> = ({
   return (
     <Section className="bg-white py-16 sm:pt-16 sm:pb-12">
       <Container className="text-action-active">
-        <UnderlinedHeading
-          hideBullet
-          lineColor="lightblue"
-          className="max-w-[294px]"
-        >
-          IN THE MEDIA
-        </UnderlinedHeading>
-
+        <LearnHeader {...headerContent.inTheMedia} />
         <div className="grid grid-cols-1 gap-x-4 sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 4xl:grid-cols-5">
           {
             {

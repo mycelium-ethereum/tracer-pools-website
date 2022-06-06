@@ -29,7 +29,7 @@ export const headerContent = {
         <br /> documentation
       </>
     ),
-    icon: "/img/learn/user-guides.svg",
+    icon: "/img/learn/user-docs.svg",
   },
   tracerDrop: {
     title: (
@@ -44,7 +44,6 @@ export const headerContent = {
         <br className="hidden md:block" /> fortnight on Twitter and YouTube.
       </>
     ),
-    icon: "/img/learn/user-guides.svg",
   },
   inTheMedia: {
     title: "IN THE MEDIA",
@@ -54,17 +53,17 @@ export const headerContent = {
         <br className="hidden md:block" /> adipiscing elit. Malesuada nibh elit
       </>
     ),
-    icon: "/img/learn/user-guides.svg",
+    icon: "/img/learn/media.svg",
   },
   faq: {
-    title: "User Guides",
+    title: "FAQs",
     text: (
       <>
         The essentials to get started
         <br className="hidden md:block" /> using Perpetual Pools
       </>
     ),
-    icon: "/img/learn/user-guides.svg",
+    icon: "/img/learn/faq.svg",
   },
 };
 

@@ -1,24 +1,14 @@
-import UnderlinedHeading from "@components/Shared/Heading/UnderlinedHeading";
 import Container from "@components/Shared/Container";
-import H2 from "@components/Shared/Heading/H2";
 import Button from "@components/Shared/Buttons/Button";
 import Section from "@components/Shared/Section";
+import LearnHeader from "@components/Learn/LearnHeader";
+import { headerContent } from "@components/Learn/presets";
 
 const UserDocs: React.FC<{}> = () => {
   return (
     <Section className="bg-white py-16 sm:py-20">
       <Container className="text-action-active">
-        <UnderlinedHeading
-          hideBullet
-          lineColor="lightblue"
-          className="max-w-[294px]"
-        >
-          ACCESS USER DOCS
-        </UnderlinedHeading>
-        <H2 className="mb-6 max-w-[767px]">
-          The home of Tracer’s
-          <br /> documentation
-        </H2>
+        <LearnHeader {...headerContent.userDocs} />
         <Button
           lightBlueGradient
           outgoingLink="https://docs.tracer.finance/tracer/master"

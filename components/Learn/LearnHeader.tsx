@@ -4,7 +4,7 @@ import H2 from "@components/Shared/Heading/H2";
 const LearnHeader: React.FC<{
   title: string | React.ReactNode;
   text: string | React.ReactNode;
-  icon: string;
+  icon?: string;
 }> = ({ title, text, icon }) => {
   return (
     <div className="flex items-center justify-between text-action-active">
@@ -18,7 +18,9 @@ const LearnHeader: React.FC<{
         </UnderlinedHeading>
         <H2>{text}</H2>
       </div>
-      <img src={icon} alt={`${title} icon`} className="h-[120px] w-[120px]" />
+      {icon && (
+        <img src={icon} alt={`${title} icon`} className="h-[120px] w-[120px]" />
+      )}
     </div>
   );
 };

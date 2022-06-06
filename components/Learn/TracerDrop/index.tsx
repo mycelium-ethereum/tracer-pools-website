@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import UnderlinedHeading from "@components/Shared/Heading/UnderlinedHeading";
 import Container from "@components/Shared/Container";
-import H2 from "@components/Shared/Heading/H2";
 import Section from "@components/Shared/Section";
 import VideoCard from "@components/Learn/VideoCard";
 import { filterArticles, handleLearnPageResize } from "@lib/helpers";
@@ -11,6 +9,8 @@ import OneColumnLayout from "@components/Shared/Layouts/OneColumnLayout";
 import ThreeColumnLayout from "@components/Shared/Layouts/ThreeColumnLayout";
 import TwoColumnLayout from "@components/Shared/Layouts/TwoColumnLayout";
 import ViewAllButton from "@components/Learn/ViewAllButton";
+import LearnHeader from "@components/Learn/LearnHeader";
+import { headerContent } from "@components/Learn/presets";
 
 const TracerDrop: React.FC<{ dropVideoData: any }> = ({ dropVideoData }) => {
   const [columns, setColumns] = useState<number>(3);
@@ -37,19 +37,7 @@ const TracerDrop: React.FC<{ dropVideoData: any }> = ({ dropVideoData }) => {
   return (
     <Section className="bg-secondary py-16 sm:pt-16 sm:pb-12">
       <Container className="text-action-active">
-        <UnderlinedHeading
-          hideBullet
-          lineColor="lightblue"
-          className="max-w-[294px]"
-        >
-          IN THE MEDIA
-        </UnderlinedHeading>
-        <H2 className="mb-8">
-          The latest research from Tracer and the
-          <br className="hidden md:block" /> RMIT Blockchain Innovation Hub.
-          Every
-          <br className="hidden md:block" /> fortnight on Twitter and YouTube.
-        </H2>
+        <LearnHeader {...headerContent.tracerDrop} />
         <div className="grid grid-cols-1 gap-x-4 sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 4xl:grid-cols-5">
           {
             {
