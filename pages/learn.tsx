@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next";
+import { learnSeoDesc } from "@components/Shared/presets";
 import SEO from "@components/Shared/SEO";
 import Banner from "@components/Learn/Banner";
 import TracerLibrary from "@components/Learn/TracerLibrary";
@@ -7,9 +8,8 @@ import UserDocs from "@components/Learn/UserDocs";
 import TracerDrop from "@components/Learn/TracerDrop";
 import InTheMedia from "@components/Learn/InTheMedia";
 import FAQs from "@components/Learn/FAQ";
-import { getTracerDropPlaylistData, getVideoData } from "@lib/helpers";
 import { mediaVideos } from "@components/Learn/presets";
-import { learnSeoDesc } from "@components/Shared/presets";
+import { getTracerDropPlaylistData, getVideoData } from "@lib/helpers";
 
 const LearnPage: React.FC<{ dropVideoData: any; mediaVideoData: any }> = ({
   dropVideoData,

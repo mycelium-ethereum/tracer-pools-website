@@ -16,6 +16,7 @@ export const integrationItems = [
         </Button>
       </>
     ),
+    image: "/img/indices/security.svg",
   },
   {
     title: "CREATE MARKETS",
@@ -30,6 +31,7 @@ export const integrationItems = [
         </Button>
       </>
     ),
+    image: "/img/indices/create-markets.svg",
   },
   {
     title: "TAKE YOUR DATA ANYWHERE",
@@ -45,5 +47,6 @@ export const integrationItems = [
         </Button>
       </>
     ),
+    image: "/img/indices/oracle.svg",
   },
 ];
