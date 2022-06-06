@@ -1,6 +1,8 @@
-export const exposureItems = [
+import stepOne from "../../../public/img/pools/mechanism-design/step-1.json";
+
+export const slideItems = [
     {
-        image: "/img/pools/mechanism-design/step-1.jpg",
+        lottieFile: stepOne,
         text: "Deposit collateral into either the long or short side of a pool to mint a leveraged token.",
     },
     {
@@ -34,7 +36,7 @@ const sliderRootSettings = {
     dots: false,
     arrows: false,
     vertical: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 4000,
     speed: 500,
     focusOnSelect: true,
