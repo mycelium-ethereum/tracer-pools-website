@@ -11,8 +11,8 @@ const Indices: React.FC<{}> = () => {
     >
       <Container className="flex h-full items-center text-white">
         <Header />
-        <IndicesLottieAnim/>
       </Container>
+      <IndicesLottieAnim />
     </Section>
   );
 };

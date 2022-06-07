@@ -27,13 +27,16 @@ const IndicesLottieAnim: React.FC<{}> = ({}) => {
   }, []);
 
   return (
-    <div ref={containerRef} className="absolute bottom-0 translate-x-[20vw] right-0 h-[80%] max-h-[1000px] w-full">
+    <div
+      ref={containerRef}
+      className="absolute bottom-0 h-[80%] w-full 3xl:min-h-[1500px] 3xl:min-w-[3000px] 4xl:min-h-[2000px] 4xl:min-w-[4000px]"
+    >
       <Lottie
         lottieRef={lottieRef}
         animationData={indices}
         autoPlay={false}
         loop={false}
-        className="absolute top-0 left-0 h-full w-full"
+        className="absolute bottom-0 right-0 h-full w-auto"
       />
     </div>
   );
