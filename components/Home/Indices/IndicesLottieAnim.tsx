@@ -1,41 +1,13 @@
-import { useEffect, useRef } from "react";
 import Lottie from "lottie-react";
 import indices from "../../../public/img/home/indices.json";
-import { useOnScreen } from "hooks";
 
 const IndicesLottieAnim: React.FC<{}> = ({}) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const lottieRef = useRef(null);
-
-  const onScreen = useOnScreen(containerRef);
-
-  useEffect(() => {
-    let timeout = null;
-    if (onScreen) {
-      lottieRef.current.play();
-      setTimeout(() => {
-        lottieRef.current.pause();
-      }, 4900);
-    }
-    return () => {
-      timeout && clearTimeout(timeout);
-    };
-  }, [onScreen]);
-
-  useEffect(() => {
-    lottieRef.current.goToAndStop(0, true);
-  }, []);
-
   return (
-    <div
-      ref={containerRef}
-      className="absolute bottom-0 h-[80%] w-full 3xl:min-h-[1500px] 3xl:min-w-[3000px] 4xl:min-h-[2000px] 4xl:min-w-[4000px]"
-    >
+    <div className="absolute bottom-0 left-1/2 h-[80%] w-full -translate-x-1/2 3xl:min-h-[1500px] 3xl:min-w-[3000px] 4xl:min-h-[2000px] 4xl:min-w-[4000px]">
       <Lottie
-        lottieRef={lottieRef}
         animationData={indices}
-        autoPlay={false}
-        loop={false}
+        autoPlay={true}
+        loop={true}
         className="absolute bottom-0 right-0 h-full w-auto"
       />
     </div>
