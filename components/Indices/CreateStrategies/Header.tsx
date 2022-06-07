@@ -4,7 +4,7 @@ import H2 from "@components/Shared/Heading/H2";
 
 const Header: React.FC<{}> = () => {
   return (
-    <header className="text-action-active sm:max-w-[448px]">
+    <header className="mr-[120px] text-action-active sm:min-w-[448px]">
       <UnderlinedHeading
         lineColor="blue"
         className="max-w-[294px] text-action-active"

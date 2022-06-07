@@ -2,6 +2,7 @@ import Section from "@components/Shared/Section";
 import Container from "@components/Shared/Container";
 import OptimisedImage from "@components/Shared/OptimisedImage";
 import Header from "@components/Indices/CreateStrategies/Header";
+import StrategiesLottieAnim from "@components/Indices/CreateStrategies/StrategiesLottieAnim";
 
 const CreateStrategies: React.FC<{}> = () => {
   return (
@@ -11,13 +12,7 @@ const CreateStrategies: React.FC<{}> = () => {
     >
       <Container className="flex h-full flex-col justify-between lg:flex-row lg:items-center">
         <Header />
-        <div className="mt-6 mb-10 flex w-full justify-center lg:mt-0 lg:mb-0 lg:w-auto">
-          <OptimisedImage
-            src="/img/indices/diagram.png"
-            alt="Perpetual Pools Diagram"
-            className="mr-0 min-w-[498px] sm:min-w-[unset] sm:max-w-[427px] lg:min-w-[623px] 4xl:mr-[133px] 4xl:min-w-[940px]"
-          />
-        </div>
+        <StrategiesLottieAnim />
       </Container>
       <OptimisedImage
         src="/img/indices/mesh.png"

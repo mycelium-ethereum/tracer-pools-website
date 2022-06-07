@@ -2,7 +2,7 @@ import UnderlinedHeading from "@components/Shared/Heading/UnderlinedHeading";
 
 const Header: React.FC<{}> = () => {
   return (
-    <header className="text-action-active sm:max-w-[542px] 3xl:max-w-[720px]">
+    <header className="text-action-active sm:max-w-[455px] 4xl:max-w-[581px]">
       <UnderlinedHeading lineColor="blue" className="max-w-[294px]">
         GET PAID FOR YOUR CREATIVITY
       </UnderlinedHeading>

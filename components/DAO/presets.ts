@@ -1,27 +1,25 @@
 export const governanceCards = [
     {
-        image: true,
+        image: "/img/dao/tcr-token.svg",
         title: "TCR",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis mattis ornare suscipit in at. Consectetur facilisis pellentesque.",
         buttonText: "Learn about Tokenomics",
         buttonLink: "/",
     },
     {
-        image: true,
-        title: "Governance Forum",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis mattis ornare suscipit in at. Consectetur facilisis pellentesque.",
-        buttonText: "Join the Discussion",
-        buttonLink: "/",
-    },
-    {
-        image: true,
+        image: "/img/dao/governance-voting.svg",
         title: "Governance Voting",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis mattis ornare suscipit in at. Consectetur facilisis pellentesque.",
         buttonText: "View Live Proposal",
         buttonLink: "/",
     },
     {
-        image: true,
+        title: "Governance Forum",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis mattis ornare suscipit in at. Consectetur facilisis pellentesque.",
+        buttonText: "Join the Discussion",
+        buttonLink: "/",
+    },
+    {
         title: "Learn about Governance",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis mattis ornare suscipit in at. Consectetur facilisis pellentesque.",
         buttonText: "Launch Docs",
@@ -31,28 +29,26 @@ export const governanceCards = [
 
 export const communityCards = [
     {
-        image: true,
+        image: "/img/dao/contribute.svg",
         title: "Contribute",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis mattis ornare suscipit in at. Consectetur facilisis pellentesque.",
         buttonText: "View open tasks",
         buttonLink: "/",
     },
     {
-        image: true,
+        image: "/img/dao/join.svg",
         title: "Join the Core Team",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis mattis ornare suscipit in at. Consectetur facilisis pellentesque.",
         buttonText: "View Job Listings",
         buttonLink: "/careers",
     },
     {
-        image: true,
         title: "Become a Service Provider",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis mattis ornare suscipit in at. Consectetur facilisis pellentesque.",
         buttonText: "View Bounties",
         buttonLink: "/",
     },
     {
-        image: true,
         title: "Join the Discord",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis mattis ornare suscipit in at. Consectetur facilisis pellentesque.",
         buttonText: "Open Discord",

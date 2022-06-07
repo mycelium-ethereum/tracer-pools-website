@@ -5,7 +5,7 @@ const Header: React.FC<{}> = () => {
         Unlock market
         <br className="block sm:hidden" /> access
       </h1>
-      <p className="mx-auto max-w-[473px] text-tertiary">
+      <p className="mx-auto max-w-[326px] text-tertiary sm:max-w-[473px]">
         Bring new data on-chain and create a derivative
         <br /> market in minutes via the Tracer Factory
       </p>

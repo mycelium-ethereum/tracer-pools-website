@@ -1,9 +1,8 @@
 import Button from "@components/Shared/Buttons/Button";
 import UnderlinedHeading from "@components/Shared/Heading/UnderlinedHeading";
-import OptimisedImage from "@components/Shared/OptimisedImage";
 
 const InfoCard: React.FC<{
-  image: boolean;
+  image?: string;
   title: string;
   description: string;
   buttonText: string;
@@ -12,11 +11,7 @@ const InfoCard: React.FC<{
   return (
     <article className="min-w-[298px]">
       {image && (
-        <OptimisedImage
-          src="/img/shared/integration-placeholder.png"
-          alt=""
-          className="mb-4 max-h-[154px] max-w-[154px] rounded-lg"
-        />
+        <img src={image} alt={title} className="mb-4 h-[100px] w-[100px]" />
       )}
       <UnderlinedHeading lineColor="lightblue" className="text-action-active">
         {title}
