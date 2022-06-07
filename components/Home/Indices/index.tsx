@@ -1,7 +1,7 @@
 import Section from "@components/Shared/Section";
 import Container from "@components/Shared/Container";
 import Header from "@components/Home/Indices/Header";
-import Graphics from "@components/Home/Indices/Graphics";
+import IndicesLottieAnim from "./IndicesLottieAnim";
 
 const Indices: React.FC<{}> = () => {
   return (
@@ -11,8 +11,8 @@ const Indices: React.FC<{}> = () => {
     >
       <Container className="flex h-full items-center text-white">
         <Header />
+        <IndicesLottieAnim/>
       </Container>
-      <Graphics />
     </Section>
   );
 };
