@@ -1,27 +1,16 @@
-import SEO from "@components/Shared/SEO";
-import CareersBanner from "@components/Careers/CareersBanner";
-import CareersTable from "@components/Careers/CareersTable";
-import Container from "@components/Shared/Container";
-import PageHeader from "@components/Shared/PageHeader";
-import PageSection from "@components/Shared/Section";
-import { careersSeoDesc } from "@components/Shared/presets";
+import SEO from "@components/Shared/SEO"
+import { careersSeoDesc } from "@components/Shared/presets"
+import { Banner } from "@components/Careers/Banner"
+import { CareerList } from "@components/Careers/CareerList/CareerList"
 
 const CareersPage: React.FC<{}> = () => {
-  return (
-    <>
-      <SEO title="Careers" description={careersSeoDesc} />
-      <PageSection className="bg-white">
-        <Container>
-          <PageHeader
-            title="Job Listings"
-            subheading="View open roles for the Core Tracer team."
-          />
-          <CareersTable />
-          <CareersBanner />
-        </Container>
-      </PageSection>
-    </>
-  );
-};
+    return (
+        <>
+            <SEO title="Careers" description={careersSeoDesc} />
+            <Banner />
+            <CareerList />
+        </>
+    )
+}
 
-export default CareersPage;
+export default CareersPage
