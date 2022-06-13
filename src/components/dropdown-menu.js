@@ -28,7 +28,7 @@ const DropdownMenu = ({ dropdownOpen, darkerNav }) => {
     },
     {
       text: "Discord",
-      href: "https://discord.gg/7rhrmYkAJs",
+      href: "https://discord.com/invite/tracerdao",
       logo: DiscordLogo,
     },
   ];

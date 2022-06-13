@@ -47,7 +47,7 @@ export const socialLinks = [
     alt: "Github",
   },
   {
-    url: "https://discord.gg/cNUtXBkmNH",
+    url: "https://discord.com/invite/tracerdao",
     icon: Discord,
     alt: "Discord",
   },
@@ -147,7 +147,7 @@ export const governCategory = [
 export const connectCategory = [
   {
     text: "Discord",
-    url: "https://discord.gg/cNUtXBkmNH",
+    url: "https://discord.com/invite/tracerdao",
   },
   {
     text: "Twitter",

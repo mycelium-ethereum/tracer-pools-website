@@ -24,7 +24,7 @@ const Socials = () => {
           alt="Github"
         />
       </a>
-      <a href="https://discord.gg/cNUtXBkmNH" target="_blank">
+      <a href="https://discord.com/invite/tracerdao" target="_blank">
         <img
           className="absolute top-44 left-[23px] cursor-pointer"
           src={Discord}

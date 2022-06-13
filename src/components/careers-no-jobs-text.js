@@ -12,7 +12,7 @@ export default function NoJobsAvailable() {
         </small>
       </p>
       <SolidButton
-        link="https://discord.gg/cNUtXBkmNH"
+        link="https://discord.com/invite/tracerdao"
         blue
         className="mt-4 w-[149px]"
       >
