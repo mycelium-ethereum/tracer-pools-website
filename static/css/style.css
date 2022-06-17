@@ -811,6 +811,22 @@ footer {
 
 /* --------------- BLOG POSTS --------------- */
 
+/* Code blocks */
+code:not([class*="language-"]) {
+  padding: 4px 6px;
+  border-radius: 4px;
+  background-color: #e7e7e7;
+  color: #2b2b2b;
+  font-weight: normal;
+}
+code.hljs {
+  background: transparent;
+}
+/* Single code variables */
+.prose :where(code):not(:where([class~="not-prose"] *))::before,
+.prose :where(code):not(:where([class~="not-prose"] *))::after {
+  content: "";
+}
 .post-text img {
   display: none;
 }

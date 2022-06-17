@@ -1,12 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "gatsby";
 import Moment from "react-moment";
-import marked from "marked";
-import DOMPurify from "dompurify";
 import CallToAction from "./call-to-action";
 import TweetButton from "../tweet-button";
 import ShareButton from "../share-button";
 import Container from "../container";
+import MarkdownContent from "./markdown-content";
 
 // Images
 import Home from "../../../static/img/blog-posts/home.svg";
@@ -16,14 +15,6 @@ import Clock from "../../../static/img/blog-posts/clock.svg";
 const BlogText = ({ data }) => {
   const [currentURL, setCurrentURL] = useState("");
   const bodyText = useRef();
-  const setBodyText = () => {
-    bodyText.current.innerHTML = marked(
-      DOMPurify.sanitize(data.body_text, {
-        FORCE_BODY: true,
-        ADD_TAGS: ["script"],
-      })
-    );
-  };
 
   const applyStyles = (e) => {
     if (e.tagName === "OL") {
@@ -63,11 +54,12 @@ const BlogText = ({ data }) => {
       }
     });
   };
+
   useEffect(() => {
-    setBodyText();
     getTags();
     setCurrentURL(window.location.href);
-  });
+  }, []);
+
   return (
     <>
       <section className="select-dark relative z-20 mt-16 h-full w-full bg-white">
@@ -115,7 +107,9 @@ const BlogText = ({ data }) => {
             <small className="block text-base font-normal text-gray-500 sm:text-center sm:text-xl">
               {data.tagline}
             </small>
-            <div ref={bodyText} className="prose mx-auto mt-6 mb-10" />
+            <div ref={bodyText} className="prose mx-auto mt-6 mb-10">
+              {data.body_text && <MarkdownContent children={data.body_text} />}
+            </div>
             <div className="mx-auto flex w-min">
               <TweetButton url={currentURL} />
               <ShareButton url={currentURL} title={data.title} />
