@@ -302,9 +302,6 @@ const PrivacyPolicyText = () => {
         <li>writing to GPO Box 5218 Sydney NSW 2001; or </li>
         <li>contacting the Privacy Commissioner in your State or Territory.</li>
       </ol>
-      <h2 className="leading-[150%} text-highlight mb-4 mt-8 text-xl font-bold">
-        Effective
-      </h2>
       <h2 className="mb-4 mt-8 text-xl font-semibold text-black">Effective</h2>
       <p className="mb-4">23 April, 2021</p>
     </>
