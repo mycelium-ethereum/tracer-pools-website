@@ -4,13 +4,17 @@ import UnderlinedHeading from "@components/Shared/Heading/UnderlinedHeading"
 import PageSection from "@components/Shared/Section"
 import InfoCard from "@components/DAO/InfoCard"
 import GridContainer from "@components/DAO/GridContainer"
-import CommunityLottieAnim from "@components/DAO/Community/CommunityLottieAnim"
+import LottieAnim from "@components/Shared/LottieAnim"
 import { communityCards } from "@components/DAO/presets"
 
 export const Community: React.FC<{}> = () => {
     return (
         <PageSection className="bg-white pb-16 lg:py-[70px]">
-            <CommunityLottieAnim />
+            <LottieAnim
+                loop={true}
+                lottieFile={require("../../../public/img/dao/cubes.json")}
+                className="pointer-events-none absolute top-0 right-0 hidden md:block md:h-[200px] md:w-[200px] lg:h-[303px] lg:w-[337px] 3xl:h-[500px] 3xl:w-[500px]"
+            />
             <Container className="text-action-active">
                 <UnderlinedHeading
                     lineColor="lightblue"

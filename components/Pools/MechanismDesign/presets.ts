@@ -1,8 +1,6 @@
-import stepOne from "../../../public/img/pools/mechanism-design/step-1.json";
-
 export const slideItems = [
     {
-        lottieFile: stepOne,
+        lottieFile: require("../../../public/img/pools/mechanism-design/step-1.json"),
         text: "Deposit collateral into either the long or short side of a pool to mint a leveraged token.",
     },
     {
