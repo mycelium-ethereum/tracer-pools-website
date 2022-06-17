@@ -289,7 +289,7 @@ const PrivacyPolicyText = () => {
         think that we have failed to resolve the complaint satisfactorily, we
         will provide you with information about the further steps you can take.
       </p>
-      <ol className="list-alpha list-inside">
+      <ol className="list-inside list-alpha">
         <li>
           the Office of the Australian Information Commissioner by
           visiting&nbsp;
@@ -303,7 +303,7 @@ const PrivacyPolicyText = () => {
         <li>contacting the Privacy Commissioner in your State or Territory.</li>
       </ol>
       <h2 className="mb-4 mt-8 text-xl font-semibold text-black">Effective</h2>
-      <p className="mb-4">23 April, 2021</p>
+      <p className="mb-4">17 June 2022</p>
     </>
   );
 };
