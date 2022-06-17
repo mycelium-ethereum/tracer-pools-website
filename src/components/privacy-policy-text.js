@@ -293,7 +293,7 @@ const PrivacyPolicyText = () => {
         <li>
           the Office of the Australian Information Commissioner by
           visiting&nbsp;
-          <a href="www.oaic.gov.au" target="_blank">
+          <a href="https://www.oaic.gov.au" target="_blank">
             www.oaic.gov.au
           </a>
           , emailing&nbsp;
