@@ -1,8 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import marked from "marked";
-import DOMPurify from "dompurify";
-import Moment from "react-moment";
+import React, { useRef } from "react";
 import { Link } from "gatsby";
+import Moment from "react-moment";
+import MarkdownContent from "./markdown-content";
 
 const PostLink = ({ data, className }) => {
   const truncate = (str) => {
@@ -10,37 +9,34 @@ const PostLink = ({ data, className }) => {
     return str.length > maxLength ? str.substring(0, maxLength) + "..." : str;
   };
   const postDescription = useRef();
-  useEffect(() => {
-    postDescription.current.innerHTML = marked(
-      DOMPurify.sanitize(data.node.description)
-    );
-    postDescription.current.innerText = truncate(
-      postDescription.current.innerText
-    );
-  }, [data.node.description]);
+
   return (
     <Link
       to={`/radar/` + data.node.slug + "/"}
       className={
-        "post-link relative h-auto col-span-1 transition-shadow duration-700 shadow-lg hover:shadow-2xl rounded-bl-xl rounded-br-xl cursor-pointer " +
+        "post-link relative col-span-1 h-auto cursor-pointer rounded-bl-xl rounded-br-xl shadow-lg transition-shadow duration-700 hover:shadow-2xl " +
         (className ? className : "")
       }
     >
       <div className="h-52 overflow-hidden rounded-tl-xl rounded-tr-xl">
         <img
-          className="w-full h-full object-cover object-top"
+          className="h-full w-full object-cover object-top"
           src={data.node.image[0].formats.medium.url}
           alt="Post Header"
         />
       </div>
       {/* Set height is temporary */}
-      <div className="px-4 py-4 rounded-bl-xl rounded-br-xl flex flex-col transition-all duration-500 bg-white 2xl:h-60 lg:h-80 md:h-68 sm:h-80 h-auto">
-        <p className="font-semibold text-2xl mb-2">
+      <div className="md:h-68 flex h-auto flex-col rounded-bl-xl rounded-br-xl bg-white px-4 py-4 transition-all duration-500 sm:h-80 lg:h-80 2xl:h-60">
+        <p className="mb-2 text-2xl font-semibold">
           <b>{data.node.title}</b>
         </p>
-        <p ref={postDescription} className="post-text" />
+        <p ref={postDescription} className="post-text">
+          {data.node.description && (
+            <MarkdownContent children={truncate(data.node.description)} />
+          )}
+        </p>
         <Moment
-          className="font-semibold color-blue md:absolute bottom-4 sm:mt-auto mt-2 block"
+          className="color-blue bottom-4 mt-2 block font-semibold sm:mt-auto md:absolute"
           format="Do MMMM, YYYY"
         >
           {data.node.publish_date}
