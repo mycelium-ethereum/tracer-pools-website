@@ -2,6 +2,13 @@ module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   theme: {
     extend: {
+      listStyleType: {
+        none: "none",
+        disc: "disc",
+        decimal: "decimal",
+        roman: "lower-roman",
+        alpha: "lower-alpha",
+      },
       colors: {
         blue: {
           1000: "#0d2bd3",
