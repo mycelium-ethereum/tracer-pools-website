@@ -246,11 +246,12 @@ const PrivacyPolicyText = () => {
       </h2>
       <p className="mb-4">
         When you provide your personal information to us, you consent to the
-        disclosure of your information globally. We will, however, take
-        reasonable steps to ensure that any overseas recipient will deal with
-        such personal information in a way that is consistent with the OECD
-        Guidelines on the Protection of Privacy and Transborder Flows of
-        Personal Data.
+        disclosure of your information globally which may include countries in
+        the following jurisdictions: United States of America, British Virgin
+        Islands, United Kingdom and Europe. We will, however, take reasonable
+        steps to ensure that any overseas recipient will deal with such personal
+        information in a way that is consistent with the OECD Guidelines on the
+        Protection of Privacy and Transborder Flows of Personal Data.
       </p>
       <h2 className="mb-4 mt-8 text-xl font-semibold text-black">Security</h2>
       <p className="mb-4">
@@ -288,6 +289,22 @@ const PrivacyPolicyText = () => {
         think that we have failed to resolve the complaint satisfactorily, we
         will provide you with information about the further steps you can take.
       </p>
+      <ol className="list-alpha list-inside">
+        <li>
+          the Office of the Australian Information Commissioner by
+          visiting&nbsp;
+          <a href="www.oaic.gov.au" target="_blank">
+            www.oaic.gov.au
+          </a>
+          , emailing&nbsp;
+          <a href="mailto:enquiries@oaic.gov.au">enquiries@oaic.gov.au;</a>
+        </li>
+        <li>writing to GPO Box 5218 Sydney NSW 2001; or </li>
+        <li>contacting the Privacy Commissioner in your State or Territory.</li>
+      </ol>
+      <h2 className="leading-[150%} text-highlight mb-4 mt-8 text-xl font-bold">
+        Effective
+      </h2>
       <h2 className="mb-4 mt-8 text-xl font-semibold text-black">Effective</h2>
       <p className="mb-4">23 April, 2021</p>
     </>
