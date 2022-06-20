@@ -22,7 +22,7 @@ export const settings = {
     dots: false,
     arrows: false,
     vertical: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 3000,
     speed: 800,
     draggable: false,
