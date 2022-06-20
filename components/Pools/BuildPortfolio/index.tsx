@@ -18,7 +18,7 @@ const BuildPortfolio: React.FC<{}> = () => {
             id="section-4"
             className="h-auto bg-white py-20 4xl:h-[1000px]"
         >
-            <Container className="flex flex-col-reverse justify-center xl:flex-row xl:items-center xl:justify-between 3xl:justify-center">
+            <Container className="flex flex-col-reverse justify-center xl:flex-row xl:items-center xl:justify-start 3xl:justify-center">
                 <div className="relative mx-auto hidden h-[300px] w-full sm:block md:w-[640px] xl:mx-0 3xl:mr-[230px] 4xl:h-[360px] 4xl:w-[1000px]">
                     {lottieFiles.map((file, i) => (
                         <BuildPortfolioLottieAnim
@@ -30,7 +30,7 @@ const BuildPortfolio: React.FC<{}> = () => {
                         />
                     ))}
                 </div>
-                <div>
+                <div className="xl:ml-[230px]">
                     <div className="text-action-active">
                         {/* Desktop - left-aligned gradient line */}
                         <UnderlinedHeading
