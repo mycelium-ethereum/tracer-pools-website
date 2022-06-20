@@ -5,8 +5,7 @@ import CategoryBubble from "../Shared/CategoryBubble"
 
 const RadarPostCard: React.FC<{
     article: any
-    className?: string
-}> = ({ article, className }) => {
+}> = ({ article }) => {
     const postDescription = useRef<HTMLParagraphElement>(null)
 
     useEffect(() => {

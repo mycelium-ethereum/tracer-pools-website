@@ -33,4 +33,18 @@ export const settings = {
     pauseOnFocus: true,
     pauseOnHover: true,
     variableWidth: false,
+    responsive: [
+        {
+            breakpoint: 1280,
+            settings: {
+                vertical: false,
+            }
+        },
+        {
+            breakpoint: 640,
+            settings: {
+                vertical: true,
+            }
+        },
+    ]
 };

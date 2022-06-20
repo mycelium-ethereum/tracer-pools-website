@@ -39,7 +39,7 @@ const LottieAnim: React.FC<LottieAnimProps> = ({
         return () => instance && instance.destroy()
     }, [])
 
-    return <div ref={containerRef} className={className} />
+    return <div ref={containerRef} className={`lottie-anim ${className}`} />
 }
 
 export default LottieAnim

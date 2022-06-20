@@ -9,8 +9,6 @@ interface ButtonProps {
     type?: "navLauch" | "blueTransparent" | "purpleTransparent"
     navLaunchButton?: boolean
     blueTransparent?: boolean
-    purpleTransparent?: boolean
-    purpleGradient?: boolean
     lightBlueGradient?: boolean
     ultralightBlueGradient?: boolean
     darkBlueGradient?: boolean
@@ -20,13 +18,11 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({
-    className,
+    className = "",
     linkClassName,
     onClickAction,
     navLaunchButton,
     blueTransparent,
-    purpleTransparent,
-    purpleGradient,
     lightBlueGradient,
     ultralightBlueGradient,
     darkBlueGradient,
@@ -38,43 +34,34 @@ const Button: React.FC<ButtonProps> = ({
     return (
         <button
             className={`relative flex h-9 w-max items-center justify-center whitespace-nowrap rounded-[7px] border text-base leading-[24px] transition-all duration-500
-      ${
-          blueTransparent
-              ? "border-action-active text-action-active hover:bg-action-active hover:text-white "
-              : ""
-      }
-      ${
-          purpleTransparent
-              ? "border-tracer-purple-light text-tracer-purple-light "
-              : ""
-      }
-      ${
-          purpleGradient
-              ? "btn-gradient-purple border-tracer-purple-light text-white hover:bg-tracer-purple-light "
-              : ""
-      } 
-      ${
-          darkBlueGradient
-              ? "btn-gradient-blue-dark border-action-active text-white hover:bg-tracer-midblue hover:bg-opacity-80 hover:text-white "
-              : ""
-      } 
-      ${
-          navLaunchButton
-              ? "btn-gradient-blue-dark border-action-active hover:bg-tracer-midblue hover:bg-opacity-80 hover:text-white "
-              : ""
-      } 
-      ${
-          lightBlueGradient
-              ? "btn-gradient-blue-light border-action-active text-action-active hover:bg-action-active hover:text-white group-hover:bg-action-active group-hover:text-white "
-              : ""
-      } 
-      ${
-          ultralightBlueGradient
-              ? "btn-gradient-blue-ultralight border-alternative-active text-white "
-              : ""
-      } 
-      ${link || outgoingLink ? "p-0" : "px-6 py-2"}
-      ${className ? className : ""}`}
+                ${
+                    blueTransparent
+                        ? "border-action-active text-action-active hover:bg-action-active hover:text-white "
+                        : ""
+                }
+                ${
+                    darkBlueGradient
+                        ? "btn-gradient-blue-dark border-action-active text-white hover:bg-tracer-midblue hover:bg-opacity-80 hover:text-white "
+                        : ""
+                } 
+                ${
+                    navLaunchButton
+                        ? "btn-gradient-blue-dark border-action-active hover:bg-tracer-midblue hover:bg-opacity-80 hover:text-white "
+                        : ""
+                } 
+                ${
+                    lightBlueGradient
+                        ? "btn-gradient-blue-light border-action-active text-action-active hover:bg-action-active hover:text-white group-hover:bg-action-active group-hover:text-white "
+                        : ""
+                } 
+                ${
+                    ultralightBlueGradient
+                        ? "btn-gradient-blue-ultralight border-alternative-active text-white "
+                        : ""
+                }
+                ${link || outgoingLink ? "p-0 " : "px-6 py-2 "}
+                ${className}
+            `}
             onClick={onClickAction}
         >
             {outgoingLink && (

@@ -9,7 +9,7 @@ import { communityCards } from "@components/DAO/presets"
 
 export const Community: React.FC<{}> = () => {
     return (
-        <PageSection className="bg-white pb-16 lg:py-[70px]">
+        <PageSection className="bg-white py-20 lg:py-[70px]">
             <LottieAnim
                 loop={true}
                 lottieFile={require("../../../public/img/dao/cubes.json")}

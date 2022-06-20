@@ -164,7 +164,6 @@ input::placeholder {
 }
 
 /* Button hover classes */
-
 .btn-gradient,
 .btn-clear:hover {
     background: linear-gradient(
@@ -209,7 +208,15 @@ input::placeholder {
         rgba(61, 168, 245, 0)
     );
 }
-
+.line-gradient-lightblue-center {
+    background: linear-gradient(
+        270deg,
+        rgba(255, 255, 255, 0) 0%,
+        #3da8f5 40%,
+        #3da8f5 60%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
 .line-gradient-blue {
     background: linear-gradient(
         to right,
@@ -344,6 +351,13 @@ img.image-cover-right {
     }
 }
 
+/* Lottie anim fixes */
+.lottie-anim svg {
+    width: max-content !important;
+}
+
+/* Radar page */
+
 /* Limit blog post description length */
 .post-description {
     text-overflow: ellipsis;
@@ -416,9 +430,6 @@ img.image-cover-right {
 .prose :where(h2):not(:where([class~="not-prose"] *)) {
     @apply my-2;
 }
-/* .prose .special-heading {
-  @apply relative mb-4 mt-10 text-sm font-normal uppercase tracking-[0.15em] text-highlight;
-} */
 .prose .special-heading:after {
     content: "";
     position: absolute;
@@ -518,7 +529,16 @@ img.image-cover-right {
 }
 
 /* Build portfolio */
-
+.gradient-vertical-divider {
+    transform: translateZ(0) perspective(999px);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        #3da8f5 40%,
+        #3da8f5 60%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
 .portfolio-slider .slick-slide span {
     color: inherit;
 }
@@ -551,7 +571,6 @@ img.image-cover-right {
 /* Pools page */
 
 /* Exposure slider tokens */
-
 .animate-down {
     opacity: 1;
     animation: topDown 0.5s linear;
@@ -580,7 +599,6 @@ img.image-cover-right {
 }
 
 /* Legal pages */
-
 .legal-text p {
     @apply mb-4;
 }
@@ -681,7 +699,7 @@ img.image-cover-right {
 /* 3XL */
 @media only screen and (min-width: 1920px) {
     .portfolio-slider .slick-current .content {
-        max-height: 216px;
+        max-height: 230px;
     }
     .mechanism-slider .slick-slide {
         display: flex !important;
@@ -730,7 +748,7 @@ img.image-cover-right {
         );
     }
     .portfolio-slider .slick-current .content {
-        max-height: 240px;
+        max-height: 284px;
     }
     .slider-nav .slick-track {
         display: flex;

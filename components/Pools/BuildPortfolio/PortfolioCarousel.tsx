@@ -22,7 +22,7 @@ const PortfolioCarousel: React.FC<{
         <Slider
             {...updatedSettings}
             ref={(slider) => setSlider(slider)}
-            className="portfolio-slider h-[520px] sm:h-[400px] sm:w-[400px] 4xl:h-[460px] 4xl:w-[625px]"
+            className="portfolio-slider h-[550px] sm:h-[120px] sm:w-[470px] xl:h-[400px] xl:w-[400px] 4xl:h-[460px] 4xl:w-[625px]"
         >
             {portfolioCarouselItems.map((item, i) => (
                 <Slide
