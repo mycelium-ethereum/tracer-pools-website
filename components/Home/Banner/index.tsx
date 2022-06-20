@@ -3,7 +3,7 @@ import Container from "@components/Shared/Container"
 import Button from "@components/Shared/Buttons/Button"
 import AnimateIn from "@components/Shared/AnimateIn"
 import MeshUnderlay from "@components/Shared/Mesh/MeshUnderlay"
-import LottieAnim from "@components/Shared/LottieAnim"
+import BannerLottieAnim from "@components/Home/Banner/BannerLottieAnim"
 
 const Banner: React.FC<{}> = () => {
     return (
@@ -34,15 +34,9 @@ const Banner: React.FC<{}> = () => {
                         </Button>
                     </AnimateIn>
                 </header>
-                <div className="pointer-events-none absolute -left-[150px] top-0 z-0 h-full w-full translate-y-[25vh] transform transition-all duration-300 sm:left-[150px] sm:translate-y-[5vh] sm:scale-[1.75] md:left-[450px] lg:left-[600px] lg:scale-[2.0] xl:left-[800px] 3xl:left-[1100px] 3xl:translate-y-[10vh] 4xl:left-[3500px] 4xl:translate-y-[55vh] 4xl:scale-[4.0] 5xl:left-[3200px] 5xl:translate-y-[75vh] 5xl:scale-[4.0]">
-                    <LottieAnim
-                        lottieFile={require("../../../public/img/home/banner-lottie.json")}
-                        className="bannerDiscAnim absolute left-[1000px] top-1/4 h-[1920px] w-[1080px]"
-                    />
-                </div>
+                <BannerLottieAnim />
             </Container>
             <MeshUnderlay fullPage />
-            {/* <BackgroundVideo loop src="/img/home/banner.mp4" /> */}
         </Section>
     )
 }
