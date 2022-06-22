@@ -6,6 +6,7 @@ interface LottieAnimProps {
     lottieFile: any
     className?: string
     loop?: boolean
+    fullWidth?: boolean
     playImmediately?: boolean
 }
 
@@ -13,6 +14,7 @@ const LottieAnim: React.FC<LottieAnimProps> = ({
     lottieFile,
     className = "",
     loop = true,
+    fullWidth = true,
     playImmediately = false,
 }) => {
     const containerRef = useRef<HTMLDivElement>(null)
@@ -39,7 +41,14 @@ const LottieAnim: React.FC<LottieAnimProps> = ({
         return () => instance && instance.destroy()
     }, [])
 
-    return <div ref={containerRef} className={`lottie-anim ${className}`} />
+    return (
+        <div
+            ref={containerRef}
+            className={`${
+                fullWidth ? "lottie-anim-fullwidth" : ""
+            } ${className}`}
+        />
+    )
 }
 
 export default LottieAnim

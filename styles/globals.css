@@ -137,7 +137,7 @@ input::placeholder {
 
 /* Products Dropdown animation */
 .products-dropdown > a {
-    @apply translate-y-4 translate-x-4 bg-tracer-midblue bg-opacity-80 opacity-0 transition-all duration-500;
+    @apply translate-y-4 translate-x-4;
 }
 .products-dropdown.active > a {
     @apply translate-y-0 translate-x-0 opacity-100;
@@ -352,7 +352,7 @@ img.image-cover-right {
 }
 
 /* Lottie anim fixes */
-.lottie-anim svg {
+.lottie-anim-fullwidth svg {
     width: max-content !important;
 }
 
@@ -368,6 +368,23 @@ img.image-cover-right {
 }
 
 /* BLOG CONTENT PAGES */
+
+/* Code blocks */
+code:not([class*="language-"]) {
+    padding: 4px 6px;
+    border-radius: 4px;
+    background-color: #e7e7e7;
+    color: #2b2b2b;
+    font-weight: normal;
+}
+code.hljs {
+    background: transparent;
+}
+/* Single code variables */
+.prose :where(code):not(:where([class~="not-prose"] *))::before,
+.prose :where(code):not(:where([class~="not-prose"] *))::after {
+    content: "";
+}
 
 /* Show overflow for blog post drop shadow */
 .infinite-scroll-component {

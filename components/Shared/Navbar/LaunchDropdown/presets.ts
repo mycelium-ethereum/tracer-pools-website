@@ -7,22 +7,22 @@ import TwitterSVG from "@components/SVG/TwitterSVG"
 
 export const appButtonContent = [
     {
-        image: "/img/shared/navbar/placeholder-circle.svg",
+        image: "/img/shared/navbar/placeholder-bg.png",
         logo: "/img/logo.svg",
         logoClassName: "h-[17px] w-[72px]",
     },
     {
-        image: "/img/shared/navbar/placeholder-circle.svg",
+        image: "/img/shared/navbar/placeholder-bg.png",
         logo: "/img/logos/tracer-perpetual-pools-stacked.svg",
         logoClassName: "h-[30px] w-[100px]",
     },
     {
-        image: "/img/shared/navbar/placeholder-circle.svg",
+        image: "/img/shared/navbar/placeholder-bg.png",
         logo: "/img/logos/tracer-data-feeds-stacked.svg",
         logoClassName: "h-[26px] w-[71px]",
     },
     {
-        image: "/img/shared/navbar/placeholder-circle.svg",
+        image: "/img/shared/navbar/placeholder-bg.png",
         logo: "/img/logos/tracer-factories-stacked.svg",
         logoClassName: "h-[26px] w-[59px]",
     },

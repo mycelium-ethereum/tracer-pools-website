@@ -14,15 +14,16 @@ const Factories: React.FC<{}> = () => {
                 <Header />
                 {/* Desktop */}
                 <LottieAnim
-                    lottieFile={require("../../../public/img/home/factories/tracks.json")}
-                    className="-right-11 top-1/2 hidden -translate-y-1/2 lg:absolute lg:block lg:h-[120vh] lg:w-max"
+                    playImmediately
+                    lottieFile={require("/public/img/home/factories/tracks.json")}
+                    className="absolute -right-11 top-1/2 hidden h-[1200px] w-max -translate-y-1/2 lg:block"
                 />
             </Container>
 
             {/* Mobile */}
             <div className="relative mt-5 block h-[290px] w-full md:h-[400px] lg:hidden">
                 <LottieAnim
-                    lottieFile={require("../../../public/img/home/factories/tracks-mobile.json")}
+                    lottieFile={require("/public/img/home/factories/tracks-mobile.json")}
                     className="absolute top-0 -left-2 h-full w-[1000px]"
                 />
             </div>

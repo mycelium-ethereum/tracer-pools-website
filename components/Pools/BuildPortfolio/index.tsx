@@ -3,7 +3,7 @@ import Section from "@components/Shared/Section"
 import Container from "@components/Shared/Container"
 import UnderlinedHeading from "@components/Shared/Heading/UnderlinedHeading"
 import PortfolioCarousel from "@components/Pools/BuildPortfolio/PortfolioCarousel"
-import BuildPortfolioLottieAnim from "@components/Pools/BuildPortfolio/BuildPortfolioLottieAnim"
+import LottieAnim from "@components/Shared/LottieAnim"
 import { lottieFiles } from "@components/Pools/BuildPortfolio/presets"
 
 const BuildPortfolio: React.FC<{}> = () => {
@@ -21,12 +21,15 @@ const BuildPortfolio: React.FC<{}> = () => {
             <Container className="flex flex-col-reverse justify-center xl:flex-row xl:items-center xl:justify-start 3xl:justify-center">
                 <div className="relative mx-auto hidden h-[300px] w-full sm:block md:w-[640px] xl:mx-0 3xl:mr-[230px] 4xl:h-[360px] 4xl:w-[1000px]">
                     {lottieFiles.map((file, i) => (
-                        <BuildPortfolioLottieAnim
+                        <LottieAnim
                             key={i}
-                            file={file}
-                            position={i}
-                            curPosition={position}
-                            className="absolute top-1/2 left-0 w-full -translate-y-1/2"
+                            lottieFile={file}
+                            fullWidth={false}
+                            className={`absolute top-1/2 left-0 w-full -translate-y-1/2 ${
+                                i === position
+                                    ? "sm:opacity-100"
+                                    : "sm:opacity-0"
+                            }`}
                         />
                     ))}
                 </div>

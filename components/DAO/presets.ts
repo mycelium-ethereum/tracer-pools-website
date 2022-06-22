@@ -85,7 +85,7 @@ export const serviceProviders = [
         image: "flex-dapps-blue.svg",
         alt: "Flex Dapps logo",
         link: "https://github.com/flex-dapps",
-        logoStyles: "w-[75px] h-[55px] mr-0 mb-10 sm:mb-8 4xl:mr-12",
+        logoStyles: "w-[75px] h-[55px] mr-0 mb-10 sm:mb-8 sm:mr-12 lg:mr-0 4xl:mr-12",
     },
     {
         image: "immunefi-blue.svg",

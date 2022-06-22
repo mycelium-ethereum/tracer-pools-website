@@ -1,17 +1,21 @@
 import Section from "@components/Shared/Section"
 import Container from "@components/Shared/Container"
 import Header from "@components/Indices/GetPaid/Header"
-import TenPercentLottieAnim from "@components/Indices/GetPaid/TenPercentLottieAnim"
+import LottieAnim from "@components/Shared/LottieAnim"
 
 const GetPaid: React.FC<{}> = () => {
     return (
         <Section
             id="section-2"
-            className="h-[650px] bg-white pt-16 lg:pt-0 4xl:h-[1000px]"
+            className="bg-white py-20 xl:py-[142px] 4xl:py-[195px]"
         >
-            <Container className="flex h-full lg:items-center">
+            <Container className="flex h-full flex-col md:flex-row lg:items-center">
                 <Header />
-                <TenPercentLottieAnim />
+                <LottieAnim
+                    loop={false}
+                    lottieFile={require("/public/img/indices/ten-percent-lottie.json")}
+                    className="mx-auto min-w-[566px] md:mx-0 xl:w-[804px] 4xl:w-[1140px]"
+                />
             </Container>
         </Section>
     )

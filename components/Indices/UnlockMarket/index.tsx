@@ -15,18 +15,21 @@ const UnlockMarket: React.FC<{}> = () => {
             {/* Desktop */}
             <LottieAnim
                 loop={false}
+                fullWidth={false}
                 lottieFile={require("../../../public/img/indices/unlock-lottie.json")}
                 className="absolute top-1/2 left-1/2 hidden h-[650px] w-[1600px] -translate-x-1/2 -translate-y-1/2 lg:block 4xl:scale-150"
             />
             {/* Tablet */}
             <LottieAnim
                 loop={false}
+                fullWidth={false}
                 lottieFile={require("../../../public/img/indices/unlock-lottie-tablet.json")}
                 className="absolute top-1/2 left-1/2 hidden h-[415px] w-[1040px] -translate-x-1/2 -translate-y-1/2 scale-[1.35] sm:block lg:hidden"
             />
             {/* Phone */}
             <LottieAnim
                 loop={false}
+                fullWidth={false}
                 lottieFile={require("../../../public/img/indices/unlock-lottie-mobile.json")}
                 className="absolute top-1/2 left-1/2 block w-full -translate-x-1/2 -translate-y-1/2 sm:hidden"
             />

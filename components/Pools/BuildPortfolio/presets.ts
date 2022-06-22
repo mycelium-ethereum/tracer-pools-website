@@ -1,13 +1,8 @@
-import create from "../../../public/img/pools/build-portfolio/create.json";
-import redeem from "../../../public/img/pools/build-portfolio/redeem.json";
-import staking from "../../../public/img/pools/build-portfolio/staking.json";
-import trade from "../../../public/img/pools/build-portfolio/trade.json";
-
 export const lottieFiles = [
-    create,
-    trade,
-    staking,
-    redeem,
+    require("../../../public/img/pools/build-portfolio/create.json"),
+    require("../../../public/img/pools/build-portfolio/trade.json"),
+    require("../../../public/img/pools/build-portfolio/staking.json"),
+    require("../../../public/img/pools/build-portfolio/redeem.json"),
 ]
 
 export const portfolioCarouselItems = [
