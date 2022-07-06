@@ -15,7 +15,7 @@ export default function CareersTable() {
   const [worktypes, setWorktypes] = useState([]);
   const [showLoader, setShowLoader] = useState(true);
   const [showError, setError] = useState(false);
-  const [showNoJobs, setShowNoJobs] = useState(false);
+  const [noJobs, setNoJobs] = useState(false);
 
   //   Pull data from Lever API
   const getJobs = () => {
@@ -40,8 +40,7 @@ export default function CareersTable() {
     const allLocations = [];
     const allTeams = [];
     const allWorktypes = [];
-
-    if (_data.length) {
+    if (_data.length && _data.length > 0) {
       // Get each type of department
       for (let i = 0; i < _data.length; i++) {
         let posting = _data[i];
@@ -53,7 +52,6 @@ export default function CareersTable() {
 
       // Sort departments alphabetically
       const sortedDepartments = departments.sort((a, b) => a.localeCompare(b));
-      const departmentsListed = [];
       for (let j = 0; j < sortedDepartments.length; j++) {
         for (let k = 0; k < _data.length; k++) {
           let currentDept = sortedDepartments[j];
@@ -107,14 +105,19 @@ export default function CareersTable() {
           }
         }
       }
-      setJobRows(jobRowArr);
-      setJobDivs(jobDivArr);
-      setLocations(allLocations);
-      setTeams(allTeams);
-      setWorktypes(allWorktypes);
+      if (jobRowArr.length === 0) {
+        setNoJobs(true);
+        setShowLoader(false);
+      } else {
+        setJobRows(jobRowArr);
+        setJobDivs(jobDivArr);
+        setLocations(allLocations);
+        setTeams(allTeams);
+        setWorktypes(allWorktypes);
+      }
     } else {
+      setNoJobs(true);
       setShowLoader(false);
-      setShowNoJobs(true);
     }
   };
 
@@ -231,33 +234,31 @@ export default function CareersTable() {
         />
         <ErrorText showError={showError} />
         <Loader showLoader={showLoader} />
-        <table
-          id="careers-table"
-          ref={careerTable}
-          className={`mx-auto w-fit overflow-hidden ${
-            !showLoader && !showNoJobs ? "hidden lg:block" : "hidden"
-          }`}
-        >
-          <thead>
-            <tr className="border-tracer-darkgray [border-bottom-width:0.1px]">
-              <th className="px-10 py-3 text-left text-xl font-semibold text-tracer-800">
-                Role
-              </th>
-              <th className="px-10 py-3 text-left text-xl font-semibold text-tracer-800">
-                Location
-              </th>
-            </tr>
-          </thead>
-          <tbody>{jobRows}</tbody>
-        </table>
-        <div
-          className={`block w-full lg:hidden ${
-            showNoJobs ? "" : "border-tracer-darkgray [border-top-width:0.1px]"
-          }`}
-        >
-          {jobDivs}
-        </div>
-        {showNoJobs && <NoJobsAvailable />}
+        {!noJobs && (
+          <table
+            id="careers-table"
+            ref={careerTable}
+            className="mx-auto w-fit overflow-hidden"
+          >
+            <thead>
+              <tr className="border-tracer-darkgray [border-bottom-width:0.1px]">
+                <th className="px-10 py-3 text-left text-xl font-semibold text-tracer-800">
+                  Role
+                </th>
+                <th className="px-10 py-3 text-left text-xl font-semibold text-tracer-800">
+                  Location
+                </th>
+              </tr>
+            </thead>
+            <tbody>{jobRows}</tbody>
+          </table>
+        )}
+        {!noJobs && (
+          <div className="block w-full lg:hidden border-tracer-darkgray [border-top-width:0.1px]">
+            {jobDivs}
+          </div>
+        )}
+        {noJobs && <NoJobsAvailable />}
       </Container>
     </section>
   );
