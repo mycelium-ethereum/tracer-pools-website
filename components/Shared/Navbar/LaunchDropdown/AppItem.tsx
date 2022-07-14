@@ -9,7 +9,7 @@ const AppItem: React.FC<{
                 src={image}
                 className="absolute top-0 left-0 z-0 h-full w-full scale-110 opacity-0 transition-all duration-500 group-hover:scale-100 group-hover:opacity-100"
             />
-            <img src={logo} className={`relative z-10${logoClassName}`} />
+            <img src={logo} className={`relative z-10 ${logoClassName}`} />
         </button>
     )
 }

@@ -60,6 +60,6 @@ export const socialLinkContent = [
     },
     {
         LinkImage: DiscordSVG,
-        link: "https://discord.gg/cNUtXBkmNH",
+        link: "https://discord.com/invite/tracerdao",
     },
 ]
