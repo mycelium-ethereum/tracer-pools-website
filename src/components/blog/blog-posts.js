@@ -32,7 +32,6 @@ const query = graphql`
 `;
 
 const BlogPosts = () => {
-  const voyagePostSlug = "the-tracer-voyage";
   const [currentPage, setCurrentPage] = useState(0);
   const [currentPosts, setCurrentPosts] = useState([]);
   const [pageCount, setPageCount] = useState(0);
@@ -134,15 +133,9 @@ const BlogPosts = () => {
               query={query}
               render={(data) => {
                 setPosts(
-                  data.allStrapiTracerBlogs.edges
-                    .sort((a, b) => sortByDate(a, b))
-                    .sort((x, y) => {
-                      return x.node.slug == voyagePostSlug
-                        ? -1
-                        : y.node.slug == voyagePostSlug
-                        ? 1
-                        : 0;
-                    })
+                  data.allStrapiTracerBlogs.edges.sort((a, b) =>
+                    sortByDate(a, b)
+                  )
                 );
                 data.allStrapiTracerBlogs.edges.map((data) => {
                   const splitTitle = data.node.title
