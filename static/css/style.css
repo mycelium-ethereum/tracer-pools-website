@@ -940,6 +940,22 @@ button[data-category].category-dropdown.active {
 .twitter-tweet {
   margin: 0 auto !important;
 }
+
+.popup-input-container {
+  background: linear-gradient(
+    83.12deg,
+    rgba(9, 130, 0, 0.5) -208.54%,
+    rgba(9, 130, 0, 0) 159.09%
+  );
+}
+
+.popup-button {
+  background: linear-gradient(
+    267.35deg,
+    #38800a -63%,
+    rgba(56, 128, 10, 0) 233.88%
+  );
+}
 /* --------------- MEDIA QUERIES --------------- */
 
 @media only screen and (min-width: 1200px) and (max-height: 600px) {
