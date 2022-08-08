@@ -2,10 +2,16 @@ import React, { useState, useEffect } from "react";
 import CloseSVG from "../../static/img/general/menu-close.svg";
 import Mesh from "../../static/img/home-page/popup/popup-mesh.png";
 import MyceliumLogo from "../../static/img/home-page/popup/mycelium-logo.svg";
+import cx from "classnames";
 
 const POPUP_DELAY = 2000;
+
+const containerStyles = "absolute top-0 left-0 h-full w-full px-8 pt-12 pb-10";
+
 const MyceliumPopup = () => {
+  const [userInput, setUserInput] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const [stage, setStage] = useState(0);
 
   const activeStyles = "pointer-events-auto opacity-100";
   const inactiveStyles = "pointer-events-none opacity-0";
@@ -32,6 +38,34 @@ const MyceliumPopup = () => {
     window.localStorage.setItem("hasSeenPopup", "true");
   };
 
+  // const handleEnter = (e) => {
+  //   const keycode = e.keycode;
+  //   if (keycode == 13) {
+  //     handleSubmit(e);
+  //   }
+  // };
+  // const capitaliseString = (str) => {
+  //   return str.charAt(0).toUpperCase() + str.slice(1);
+  // };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   email &&
+  //     email.indexOf("@") > -1 &&
+  //     onValidated({
+  //       EMAIL: email,
+  //     });
+  // };
+  // useEffect(() => {
+  //   if (status === "success" && !contactForm) {
+  //     setTimeout(function () {
+  //       setIsFormVisible(false);
+  //     }, 2000);
+  //     setTimeout(function () {
+  //       setMobileNavOpen(false);
+  //     }, 2500);
+  //   }
+  // }, [status]);
+
   useEffect(() => {
     let timeout;
     if (!hasSeenPopup()) {
@@ -53,17 +87,72 @@ const MyceliumPopup = () => {
       }`}
     >
       <div className="relative w-full max-w-[644px] overflow-hidden rounded-lg bg-[#001700] px-8 pt-12 pb-10 font-aileron text-white">
-        <CloseButton handleClose={handleClose} />
-        <BackgroundMesh />
-        <div className="relative z-10">
-          <Header />
-          <Content />
-          <WaitlistInput />
-        </div>
+        <WaitlistForm
+          setStage={setStage}
+          userInput={userInput}
+          setUserInput={setUserInput}
+          handleClose={handleClose}
+        />
+        <LoadingSplash stage={stage} />
       </div>
     </div>
   );
 };
+
+const WaitlistForm = ({ setStage, userInput, setUserInput, handleClose }) => (
+  <>
+    <CloseButton handleClose={handleClose} />
+    <BackgroundMesh />
+    <div className="relative z-10">
+      <Header />
+      <Content />
+      <WaitlistInput
+        setStage={setStage}
+        userInput={userInput}
+        setUserInput={setUserInput}
+      />
+    </div>
+  </>
+);
+
+const LoadingSplash = ({ stage }) => (
+  <div
+    className={cx(
+      "z-10 flex items-center justify-center bg-[#001700] transition-opacity",
+      containerStyles,
+      {
+        "pointer-events-none opacity-0": stage === 0,
+        "pointer-events-auto opacity-100": stage > 0,
+      }
+    )}
+  >
+    <svg
+      version="1.1"
+      id="L9"
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      viewBox="0 0 100 100"
+      enableBackground="new 0 0 0 0"
+      className="mx-auto h-20 w-20"
+    >
+      <path
+        fill="#9ADA9A"
+        d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"
+      >
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="rotate"
+          dur="1s"
+          from="0 50 50"
+          to="360 50 50"
+          repeatCount="indefinite"
+        />
+      </path>
+    </svg>
+  </div>
+);
 
 const CloseButton = ({ handleClose }) => (
   <button className="absolute top-7 right-7 z-10" onClick={handleClose}>
@@ -118,8 +207,7 @@ const Content = () => {
   );
 };
 
-const WaitlistInput = () => {
-  const [userInput, setUserInput] = useState("");
+const WaitlistInput = ({ setStage, userInput, setUserInput }) => {
   const [error, setError] = useState(false);
 
   const handleChange = (event) => {
@@ -130,15 +218,16 @@ const WaitlistInput = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     event.stopPropagation();
-    if (isValidEmail(event.target.value)) {
+    if (isValidEmail(userInput)) {
       console.log(userInput); // handle submit logic here
+      setStage(1);
     } else {
       setError(true);
     }
   };
 
   const isValidEmail = (email) => {
-    return /\S+@\S+\.\S+/.test(email);
+    return /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/.test(email);
   };
 
   const errorStyles = "bg-[#191203] border-[#FF5621]";
