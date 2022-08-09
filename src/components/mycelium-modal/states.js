@@ -78,7 +78,7 @@ const Content = () => {
         .
       </p>
       <p className={paragraphStyles}>
-        If you are a TCR holder, you can convert your TCR to MYC 1:1{" "}
+        If you are a TCR holder, you can change your TCR to MYC 1:1{" "}
         <a
           href="https://migrate.mycelium.xyz/"
           target="_blank"
