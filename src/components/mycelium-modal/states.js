@@ -94,12 +94,19 @@ const Content = () => {
         developers work behind the scenes, you may notice our content looking a
         little different.
       </p>
-
       <p className={paragraphStyles}>
-        Are you a trader? Trade with liquidity, leverage, low fees, trade with
-        Mycelium
+        Are you a trader?
+        <br /> Trade with liquidity, leverage, low fees,&nbsp;
+        <span className="inline-flex items-center">
+          <span className="mr-2 inline-block text-[#C2E31C]">Trade with</span>
+          <img
+            src={MyceliumLogoGreen}
+            alt="Mycelium logo"
+            className="mb-0.5 h-[19px] w-[93px]"
+          />
+        </span>
       </p>
-      <p className="underline">
+      <p className="text-2xl leading-[30px]">
         <b>Join the waitlist to be early.</b>
       </p>
     </div>
