@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import cx from "classnames";
 import { CloseButton, BackgroundMesh } from "./";
 import { WaitlistInput } from "./waitlist-input";
@@ -110,25 +110,32 @@ export const LoadingSplash = ({ status }) => (
   </div>
 );
 
-export const SuccessSplash = ({ status, handleClose }) => (
-  <div
-    className={cx(
-      "absolute top-0 left-0 z-20 h-full w-full bg-[#001700] transition-opacity duration-300",
-      {
-        "pointer-events-none opacity-0": status !== "success",
-        "pointer-events-auto opacity-100": status === "success",
-      }
-    )}
-  >
-    <CloseButton handleClose={handleClose} />
-    <BackgroundMesh />
-    <div className="relative z-10 flex flex-col items-center px-8 pt-[14px] pb-10">
-      <img src={TickSVG} alt="Tick" />
-      <SuccessHeader />
-      <GradientCloseButton onClick={handleClose} />
+export const SuccessSplash = ({ status, handleClose, setHasSeenPopup }) => {
+  // Do not show popup if user reloads page after submitting
+  useEffect(() => {
+    if (status === "success") setHasSeenPopup();
+  }, [status]);
+
+  return (
+    <div
+      className={cx(
+        "absolute top-0 left-0 z-20 h-full w-full bg-[#001700] transition-opacity duration-300",
+        {
+          "pointer-events-none opacity-0": status !== "success",
+          "pointer-events-auto opacity-100": status === "success",
+        }
+      )}
+    >
+      <CloseButton handleClose={handleClose} />
+      <BackgroundMesh />
+      <div className="relative z-10 flex flex-col items-center px-8 pt-[14px] pb-10">
+        <img src={TickSVG} alt="Tick" />
+        <SuccessHeader />
+        <GradientCloseButton onClick={handleClose} />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const SuccessHeader = () => (
   <header className="mb-6 text-center">

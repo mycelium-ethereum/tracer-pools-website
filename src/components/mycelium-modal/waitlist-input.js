@@ -47,7 +47,7 @@ export const WaitlistInput = ({
       <input
         type="email"
         name="b_71f7321770f187b58dc7d4552_53e1b02275"
-        className="h-full w-full border-none bg-transparent px-4 py-2 text-white outline-none placeholder:text-opacity-30"
+        className="h-full min-h-[34px] w-full border-none bg-transparent px-4 py-2 text-white outline-none placeholder:text-opacity-30"
         onChange={handleChange}
         value={userInput}
         placeholder="Enter your email address"

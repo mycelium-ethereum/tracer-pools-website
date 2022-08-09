@@ -956,6 +956,22 @@ button[data-category].category-dropdown.active {
     rgba(56, 128, 10, 0) 233.88%
   );
 }
+
+/* Mycelium modal */
+.mycelium-modal *::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.mycelium-modal *::-webkit-scrollbar-thumb {
+  background-color: #098200;
+  border: 1px solid transparent;
+}
+
+.mycelium-modal *::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 /* --------------- MEDIA QUERIES --------------- */
 
 @media only screen and (min-width: 1200px) and (max-height: 600px) {
@@ -1183,22 +1199,6 @@ button[data-category].category-dropdown.active {
   }
 }
 @media only screen and (max-width: 767px) {
-  input[type="email"] {
-    transition: all 0.5s ease;
-  }
-  input[type="email"]:not(.active) {
-    overflow: hidden;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-bottom: 0;
-    max-height: 0;
-    opacity: 0;
-  }
-  input[type="email"].active {
-    max-height: 150px;
-    height: auto;
-    opacity: 1;
-  }
   .large-spacer {
     height: 250px;
   }

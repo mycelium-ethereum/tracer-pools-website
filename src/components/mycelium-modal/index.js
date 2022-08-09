@@ -54,11 +54,11 @@ const MyceliumPopup = () => {
       url={postUrl}
       render={({ subscribe, status, message }) => (
         <div
-          className={`fixed top-0 left-0 z-[51] flex h-full w-full items-center justify-center bg-[#001100]/80 transition-opacity duration-500 ${
+          className={`mycelium-modal fixed top-0 left-0 z-[51] flex h-screen w-full items-center justify-center bg-[#001100]/80 px-4 transition-opacity duration-500 md:px-0 ${
             isOpen ? activeStyles : inactiveStyles
           }`}
         >
-          <div className="relative w-full max-w-[644px] overflow-hidden rounded-lg bg-[#001700] px-8 pt-12 pb-10 font-aileron text-white">
+          <div className="relative max-h-[calc(100%-40px)] w-full max-w-[644px] overflow-y-auto overflow-x-hidden rounded-lg bg-[#001700] px-8 pt-12 pb-10 font-aileron text-white md:overflow-y-hidden">
             <WaitlistForm
               userInput={userInput}
               setUserInput={setUserInput}
@@ -68,7 +68,11 @@ const MyceliumPopup = () => {
               onValidated={(formData) => subscribe(formData)}
             />
             <LoadingSplash status={status} />
-            <SuccessSplash status={status} handleClose={handleClose} />
+            <SuccessSplash
+              status={status}
+              handleClose={handleClose}
+              setHasSeenPopup={setHasSeenPopup}
+            />
           </div>
         </div>
       )}
