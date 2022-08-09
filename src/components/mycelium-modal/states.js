@@ -56,7 +56,7 @@ const Header = () => (
 );
 
 const Content = () => {
-  const paragraphStyles = "mb-4";
+  const paragraphStyles = "mb-4 leading-6";
 
   return (
     <div className="mb-6">
