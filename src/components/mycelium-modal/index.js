@@ -10,8 +10,8 @@ const MyceliumPopup = () => {
   const [userInput, setUserInput] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
-  const activeStyles = "pointer-events-auto opacity-100";
-  const inactiveStyles = "pointer-events-none opacity-0";
+  const activeStyles = "pointer-events-auto opacity-100 h-full";
+  const inactiveStyles = "pointer-events-none opacity-0 h-0";
 
   const handleClose = () => {
     setIsOpen(false);
@@ -54,10 +54,10 @@ const MyceliumPopup = () => {
       render={({ subscribe, status, message }) => (
         <div
           className={cx(
-            "mycelium-modal fixed top-0 left-0 z-[51] flex h-screen w-full items-center justify-center bg-[#001100]/80 px-4 transition-opacity duration-500 md:px-0",
+            "mycelium-modal fixed top-0 left-0 z-[51] flex h-screen w-full items-center justify-center overflow-hidden bg-[#001100]/80 px-4 transition-opacity duration-500 md:px-0",
             {
-              activeStyles: isOpen,
-              inactiveStyles: !isOpen,
+              [activeStyles]: isOpen,
+              [inactiveStyles]: !isOpen,
             }
           )}
         >
