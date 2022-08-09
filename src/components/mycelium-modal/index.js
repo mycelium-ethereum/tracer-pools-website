@@ -19,11 +19,11 @@ const MyceliumPopup = () => {
   };
 
   const disableScroll = () => {
-    document.documentElement.style.overflow = "hidden";
+    document.documentElement.style.overflowY = "hidden";
   };
 
   const enableScroll = () => {
-    document.documentElement.style.overflow = "auto";
+    document.documentElement.style.overflowY = "auto";
   };
 
   const hasSeenPopup = () => {
