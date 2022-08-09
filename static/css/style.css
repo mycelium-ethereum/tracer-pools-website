@@ -941,6 +941,7 @@ button[data-category].category-dropdown.active {
   margin: 0 auto !important;
 }
 
+/* Mycelium modal */
 .popup-input-container {
   background: linear-gradient(
     83.12deg,
@@ -956,8 +957,6 @@ button[data-category].category-dropdown.active {
     rgba(56, 128, 10, 0) 233.88%
   );
 }
-
-/* Mycelium modal */
 .mycelium-modal *::-webkit-scrollbar {
   width: 8px;
   height: 8px;

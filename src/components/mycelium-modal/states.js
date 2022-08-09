@@ -63,22 +63,43 @@ const Content = () => {
       <p className={paragraphStyles}>
         We’re integrating with our core service provider Mycelium to expand our
         exchange platform and build the best trading experience in DeFi,
-        launching Perpetual Swaps in August 2022!
+        launching <b>Perpetual Swaps</b> in August 2022!
       </p>
       <p className={paragraphStyles}>
-        You can still trade now with Perpetual Pools here,
+        You can still trade now with Perpetual Pools{" "}
+        <a
+          href="https://pools.tracer.finance/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:no-underline"
+        >
+          here
+        </a>
+        .
       </p>
       <p className={paragraphStyles}>
-        PS. We're undergoing a full rebrand over the next short while. As our
+        If you are a TCR holder, you can convert your TCR to MYC 1:1{" "}
+        <a
+          href="https://migrate.mycelium.xyz/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:no-underline"
+        >
+          here
+        </a>
+        .
+      </p>
+      <p className={paragraphStyles}>
+        P.S. We're undergoing a full rebrand over the next short while. As our
         developers work behind the scenes, you may notice our content looking a
         little different.
       </p>
 
       <p className={paragraphStyles}>
-        Are you a trader? Trade with liquidity, leverage low fees, low latency,
-        Trade with Mycelium
+        Are you a trader? Trade with liquidity, leverage, low fees, trade with
+        Mycelium
       </p>
-      <p>
+      <p className="underline">
         <b>Join the waitlist to be early.</b>
       </p>
     </div>

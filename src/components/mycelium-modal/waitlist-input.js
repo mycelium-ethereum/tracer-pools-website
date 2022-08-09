@@ -59,7 +59,7 @@ export const WaitlistInput = ({
           className={`flex h-9 items-center justify-center rounded-[4px] border px-6 py-1.5 ${
             error
               ? "border-[#FF5621] bg-[#FF5621]"
-              : "popup-button border-[#38800A]"
+              : "popup-button border-[#38800A] hover:bg-[#098200]"
           }`}
         >
           Submit
