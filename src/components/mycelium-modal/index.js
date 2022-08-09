@@ -63,7 +63,7 @@ const MyceliumPopup = () => {
         >
           <div
             className={cx(
-              "relative max-h-[calc(100%-40px)] w-full max-w-[644px] overflow-x-hidden rounded-lg bg-[#001700] px-8 pt-12 pb-10 font-aileron text-white md:overflow-y-hidden"
+              "relative max-h-[calc(100%-40px)] w-full max-w-[644px] overflow-x-hidden rounded-lg bg-[#001700] px-8 pt-12 pb-10 font-aileron text-white"
             )}
           >
             <WaitlistForm
