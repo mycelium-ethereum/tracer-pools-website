@@ -9,7 +9,7 @@ import LeverageSteps from "../components/leverage-steps";
 import WalletAnimation from "../components/wallet-animation";
 import IntegrateAnimation from "../components/integrate-animation";
 import PartnersContributors from "../components/partners-contributors";
-import MyceliumPopup from "../components/mycelium-popup";
+import MyceliumPopup from "../components/mycelium-modal";
 
 const Index = () => {
   return (
