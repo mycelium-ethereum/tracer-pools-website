@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import CloseSVG from "../../../static/img/general/menu-close.svg";
-import Mesh from "../../../static/img/home-page/popup/popup-mesh.png";
 import { WaitlistForm, LoadingSplash, SuccessSplash } from "./states";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
@@ -79,19 +77,5 @@ const MyceliumPopup = () => {
     />
   );
 };
-
-export const CloseButton = ({ handleClose }) => (
-  <button className="absolute top-7 right-7 z-10" onClick={handleClose}>
-    <img src={CloseSVG} alt="Close" className="h-3 w-3" />
-  </button>
-);
-
-export const BackgroundMesh = () => (
-  <img
-    src={Mesh}
-    alt="Background mesh"
-    className="absolute top-0 right-0 h-[496px] w-[533px]"
-  />
-);
 
 export default MyceliumPopup;

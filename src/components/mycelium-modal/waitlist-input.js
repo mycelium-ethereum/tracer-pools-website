@@ -27,8 +27,7 @@ export const WaitlistInput = ({
   };
 
   useEffect(() => {
-    console.log(status);
-    console.log(message);
+    setError(status === "error");
   }, [status]);
 
   const isValidEmail = (email) => {
@@ -39,38 +38,40 @@ export const WaitlistInput = ({
   const normalStyles = "popup-input-container bg-[#191203] border-[#098200]";
 
   return (
-    <form
-      className={`relative flex h-9 w-full items-center justify-between rounded-[4px] border transition-colors duration-300 ${
-        error ? errorStyles : normalStyles
-      }`}
-    >
-      <input
-        type="email"
-        name="b_71f7321770f187b58dc7d4552_53e1b02275"
-        className="h-full min-h-[34px] w-full border-none bg-transparent px-4 py-2 text-white outline-none placeholder:text-opacity-30"
-        onChange={handleChange}
-        value={userInput}
-        placeholder="Enter your email address"
-      />
+    <>
+      <form
+        className={`relative flex h-9 w-full items-center justify-between rounded-[4px] border transition-colors duration-300 ${
+          error ? errorStyles : normalStyles
+        }`}
+      >
+        <input
+          type="email"
+          name="b_71f7321770f187b58dc7d4552_53e1b02275"
+          className="h-full min-h-[34px] w-full border-none bg-transparent px-4 py-2 text-white outline-none placeholder:text-opacity-30"
+          onChange={handleChange}
+          value={userInput}
+          placeholder="Enter your email address"
+        />
+        <button
+          aria-label="submit"
+          type="submit"
+          onClick={handleSubmit}
+          className={`flex h-9 items-center justify-center rounded-[4px] border px-6 py-1.5 ${
+            error
+              ? "border-[#FF5621] bg-[#FF5621]"
+              : "popup-button border-[#38800A]"
+          }`}
+        >
+          Submit
+        </button>
+      </form>
       <span
-        className={`pointer-events-none absolute left-0 -bottom-6 text-sm leading-5 text-[#FF5621] transition-opacity duration-500 ${
-          error ? "opacity-100" : "opacity-0"
+        className={`pointer-events-none mt-3 block text-sm leading-5 text-[#FF5621] transition-opacity duration-500 ${
+          error ? "block" : "hidden"
         }`}
       >
         {message || `This must be a valid email address.`}
       </span>
-      <button
-        aria-label="submit"
-        type="submit"
-        onClick={handleSubmit}
-        className={`flex h-9 items-center justify-center rounded-[4px] border px-6 py-1.5 ${
-          error
-            ? "border-[#FF5621] bg-[#FF5621]"
-            : "popup-button border-[#38800A]"
-        }`}
-      >
-        Submit
-      </button>
-    </form>
+    </>
   );
 };

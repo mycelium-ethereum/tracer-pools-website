@@ -1,10 +1,25 @@
 import React, { useEffect } from "react";
 import cx from "classnames";
-import { CloseButton, BackgroundMesh } from "./";
 import { WaitlistInput } from "./waitlist-input";
 import TickSVG from "../../../static/img/home-page/popup/tick.svg";
 import MyceliumLogo from "../../../static/img/home-page/popup/mycelium-logo.svg";
 import MyceliumLogoGreen from "../../../static/img/home-page/popup/mycelium-logo-green.svg";
+import CloseSVG from "../../../static/img/general/menu-close.svg";
+import Mesh from "../../../static/img/home-page/popup/popup-mesh.png";
+
+const CloseButton = ({ handleClose }) => (
+  <button className="absolute top-7 right-7 z-10" onClick={handleClose}>
+    <img src={CloseSVG} alt="Close" className="h-3 w-3" />
+  </button>
+);
+
+const BackgroundMesh = () => (
+  <img
+    src={Mesh}
+    alt="Background mesh"
+    className="absolute top-0 right-0 h-[496px] w-[533px]"
+  />
+);
 
 export const WaitlistForm = ({
   userInput,
@@ -73,7 +88,7 @@ const Content = () => {
 export const LoadingSplash = ({ status }) => (
   <div
     className={cx(
-      "absolute top-0 left-0 z-10 flex h-full w-full items-center justify-center bg-[#001700] px-8 pt-12 pb-10 transition-opacity",
+      "absolute top-0 left-0 z-20 flex h-full w-full items-center justify-center bg-[#001700] px-8 pt-12 pb-10 transition-opacity",
       {
         "pointer-events-none opacity-0":
           status !== "sending" && status !== "success",
@@ -119,7 +134,7 @@ export const SuccessSplash = ({ status, handleClose, setHasSeenPopup }) => {
   return (
     <div
       className={cx(
-        "absolute top-0 left-0 z-20 h-full w-full bg-[#001700] transition-opacity duration-300",
+        "absolute top-0 left-0 z-30 h-full w-full bg-[#001700] transition-opacity duration-300",
         {
           "pointer-events-none opacity-0": status !== "success",
           "pointer-events-auto opacity-100": status === "success",
