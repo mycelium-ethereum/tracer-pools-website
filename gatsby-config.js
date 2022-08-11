@@ -113,5 +113,8 @@ module.exports = {
     {
       resolve: `gatsby-transformer-sharp`,
     },
+    {
+      resolve: "gatsby-plugin-client-side-redirect",
+    },
   ],
 };
