@@ -6,12 +6,14 @@ import Footer from "./footer";
 import BackgroundParallax from "./parallax";
 import Scripts from "./scripts";
 import Socials from "./socials";
+import MyceliumPopup from "../components/mycelium-modal";
 
 const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
       <Socials />
+      <MyceliumPopup />
       <motion.main
         initial={{
           opacity: 0,
