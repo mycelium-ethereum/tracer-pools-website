@@ -20,7 +20,7 @@ exports.onCreateWebpackConfig = ({ getConfig, actions, plugins, stage }) => {
   }
 };
 
-exports.createPages = async ({ actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createRedirect } = actions;
 
   createRedirect({
