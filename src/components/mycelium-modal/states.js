@@ -185,7 +185,7 @@ const SuccessHeader = () => (
     <h1 className="mb-8 text-[40px] leading-[48px] [font-weight:400]">
       Thank you for signing up to the waitlist!
     </h1>
-    <span className="text-2xl leading-[150%]">We can't wait for you</span>
+    <span className="text-2xl leading-[150%]">We can't wait for you to</span>
     <div className="mx-auto mt-2 flex w-max items-center text-2xl leading-[150%]">
       <span>Trade with</span>{" "}
       <img
