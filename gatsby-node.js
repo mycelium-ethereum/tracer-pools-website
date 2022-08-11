@@ -1,5 +1,3 @@
-const { createFilePath } = require(`gatsby-source-filesystem`);
-
 exports.onCreateWebpackConfig = ({ getConfig, actions, plugins, stage }) => {
   actions.setWebpackConfig({
     resolve: {
@@ -20,4 +18,14 @@ exports.onCreateWebpackConfig = ({ getConfig, actions, plugins, stage }) => {
       "react-dom": "@hot-loader/react-dom",
     };
   }
+};
+
+exports.createPages = async ({ actions }) => {
+  const { createRedirect } = actions;
+
+  createRedirect({
+    fromPath: `/tokens`,
+    toPath: `https://raw.githubusercontent.com/dospore/tracer-balancer-token-list/master/tokens.json`,
+    statusCode: 200,
+  });
 };
